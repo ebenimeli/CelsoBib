@@ -17,6 +17,25 @@
 "items": [
     
         {
+            "id": "http://localhost:4000/hoy/",
+            "title": "Hoy",
+            "summary": null,
+            "content_text": "Lorem markdownum feriam: vir, vulnere cum postquam ocius, ecce. Exsangui totiensgeneris Iuppiter dederunt cerva refoventque,mea nulla secessit modo et. Hospes felices stetimusque erat: Niobenostro, ne ruris in deas extrema. Thebaides crimina, tu dixerat eripietquiescere animae, pervenientia fuit furta sacrata illam, dabat. Quod muneramonstra rimas ultra cunctos.Un ejemplo de vídeo:",
+            "content_html": "<p>Lorem markdownum feriam: vir, vulnere cum postquam ocius, ecce. Exsangui totiensgeneris <a href=\"http://www.fertur.io/aeacidis\">Iuppiter</a> dederunt cerva refoventque,mea nulla secessit modo et. Hospes <strong>felices stetimusque</strong> erat: <strong>Niobenostro</strong>, ne ruris <em>in deas extrema</em>. Thebaides crimina, tu dixerat eripietquiescere animae, pervenientia fuit furta sacrata illam, dabat. Quod muneramonstra rimas ultra cunctos.</p><p><img src=\"/assets/images/posts/rayo_sol.jpg\" alt=\"Rayo de sol\" title=\"Rayo de sol\" /></p><p>Un ejemplo de vídeo:</p><iframe width=\"640\" height=\"480\" src=\"https://www.youtube.com/embed/UmX4kyB2wfg\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen=\"\"></iframe>",
+            "url": "http://localhost:4000/hoy/",
+            
+            
+            
+            "tags": ["proyectos","personal"],
+            
+            "date_published": "2022-05-26T02:00:00+02:00",
+            "date_modified": "2022-05-26T02:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
             "id": "http://localhost:4000/bienvenidos/",
             "title": "Bienvenidos",
             "summary": null,
