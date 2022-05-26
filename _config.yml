@@ -1,29 +1,28 @@
 # Site settings
-site: Ephesus
-title: Ephesus - Minimalist Jekyll Theme
-keywords: ephesus, blog
+site: ebenimeli.org
+title: Enrique Benimeli
+keywords: ebenimeli, blog
 description: >-
-  Ephesus - Minimalist Jekyll Theme
-lang: en-US
-timezone:  Europe/Istanbul
-repo: https://github.com/onepase/Ephesus # site repo [optional]
+  Enrique Benimeli - web personal
+lang: es-ES
+timezone:  Europe/Madrid
+#repo: https://github.com/onepase/Ephesus # site repo [optional]
 google_verify:      XXX # Put your Google Verification here
 google_analytics:   UA-XXXXXXXX-00 # Put your Google Analytics code
-discus-identifier:  XXX
+#discus-identifier:  XXX
 
 # Author settings
 author:
-  name: Hakan Torun
-  bio: Computer Engineer @pardinus <br> Founder @zaqa <br> Open Source /#linux
-  picture: assets/images/profile.jpg 
-  github: onepase # github username
-  twitter: onepase # twitter username
-  facebook: onepase # facebook username
-  instagram: onepase # instagram username
-  youtube: https://www.youtube.com/channel/UCMmAto-wxBootXN91AzBiDg # youtube username
-  linkedin: hakantorun # linkedin username
-  email: your-email@email.com # email adress
-
+  name: Enrique Benimeli
+  bio: Ingeniero en Informática<br> Profesor · Papá<br> Informática · Educación · Productividad · Lenguas
+  picture: assets/images/profile.jpg
+  #github: onepase # github username
+  twitter: enriquebenimeli # twitter username
+  facebook: ebenimeli # facebook username
+  instagram: ebenimeli # instagram username
+  youtube: https://www.youtube.com/channel/UCcySEWq1InM_rbsvJY84zfQ # youtube username
+  linkedin: ebenimeli # linkedin username
+  #email: your-email@email.com # email adress
 
 # URL settings
 url: "http://127.0.0.1:4000" # Domain Name of host. [username].github.io for github pages
@@ -58,7 +57,7 @@ collections:
   posts:
     output: true
     permalink: /:slug
-  
+
 defaults:
   -
     scope:
@@ -81,3 +80,8 @@ defaults:
 relative_links:
   enabled:     true
   collections: false
+
+collections:
+  books:
+    output: true
+    permalink: /books/:title/

@@ -1,0 +1,64 @@
+---
+layout: default
+---
+<div class="blog-post-content">
+
+<div itemscope itemtype="http://schema.org/Review">
+<span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating"><meta content="1" itemprop="worstRating"><meta content="{{ book.rating }} itemprop=ratingValue"><meta content="5" itemprop="bestRating"></span>
+<div class="book" itemprop="itemReviewed" itemscope itemtype="http://schema.org/Book">
+
+  {% assign book = page %}
+  <h1 itemprop="name">{{ book.title | xml_escape }}</h1>
+  {% if book.subtitle %}
+    <h2 class="subtitle">{{ book.subtitle | xml_escape }}</h2>
+  {% endif %}
+
+  <h3>de <span class="author" itemprop="author">{{ book.author }}</span></h3>
+  {% if book.series %}<h4 class="series">part {{ book.part }} of <em>{{ book.series }}</em></h4>{% endif %}
+
+	{% if book.cover == true %}
+	<div>
+    <a href="{{ book.amazon_link }}" target="_blank">
+      <img class="book-full-img" src="{{ site.url }}/images/books/{{ book.slug }}.jpg" alt="{{ book.title }}" />
+    </a>
+  </div>
+  {% endif %}
+
+
+  <span class="book-meta">
+
+    {% if book.date_completed %}Completado: {{ book.date_completed | date: '%B %-d, %Y' }} {% endif %}
+    Publicado en <span itemprop="datePublished">{{ book.publish_year }}</span><br/>
+    Editorial: {{ book.publisher }}<br/>
+
+
+  <div class="book-data">
+    <ul>
+      <li>Tipo: {{ book.type | capitalize }}</li>
+      <li>Géneros: {{ book.genres | join: ", " }}</li>
+      <li>Número de páginas: <span itemprop="numberOfPages">{{ book.pages }}</span></li>
+      <li>ISBN: {% if book.isbn == blank %}None{% endif %}<a href="https://worldcat.org/isbn/{{ book.isbn }}"><span itemprop="isbn">{{ book.isbn }}</span></a> (<a href="https://www.goodreads.com/book/show/{{ book.goodreads_id }}" title="{{ book.title }}">Goodreads</a>)</li>
+      <li>Formato: {{ book.format | capitalize }}</li>
+      {% if book.amazon_link %}
+        <li><a href="{{ book.amazon_link }}" title="Comprar en Amazon">Comprar en Amazon</a></li>
+      {% endif %}
+
+
+      {% if book.current != true %}
+        Mi valoración: {% include book-rating.html %}
+      {% endif %}
+
+    </ul>
+  </div>
+  <div class="book-extra">{{ content }}</div>
+</div>
+<div itemprop="publisher" itemscope itemtype=http://schema.org/Organization>
+  <meta content="colemanm.org" itemprop="name">
+  <meta content="{{ site.url }}" itemprop="url">
+</div>
+<meta content="Enrique Benimeli" itemprop="author">
+<meta content="{{ site.url }}{{ book.url }}" itemprop="url">
+<meta content="{{ book.date_completed }}" itemprop="datePublished">
+<meta content="Una crítica de {{ book.title }}" itemprop="description">
+</div>
+</div>

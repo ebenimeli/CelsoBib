@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Libros"
+---
+<div class="w-100">
+
+<ul class="book-list">
+{% for book in site.data.books %}
+  <li>
+  <div class="book-item">
+    <a href="{{ book.link }}"><img class="cover" src="{{ book.image }}" alt="{{ book.title }}" /></a>
+    <div class="book-info">
+      <h2><cite><a class="book-title" href="{{ book.link }}">{{ book.title }}</a></cite></h2>
+      <p>{{ book.description }}</p>
+      <p class="post-meta">Date completed:
+        {% if book.completed == 'In progress' %}
+          <span style="color: #e71c4f">📖 {{ book.completed }}</span>
+        {% else %}
+          {{ book.completed | date: "%B %-d, %Y" }}
+        {% endif %}
+      </p>
+    </div>
+  </div>
+  </li>
+{% endfor %}
+</ul>
+</div>

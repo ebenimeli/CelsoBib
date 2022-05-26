@@ -1,0 +1,244 @@
+- title: La piel del tambor
+  author: Arturo Pérez-Reverte
+  link: books/la-piel-del-tambor/
+  image:
+  description:
+  genre: [novela]
+  completed: '2022'
+
+- title: El cerebro bilingüe. La neurociencia del lenguaje
+  author: Albert Costa
+  link:
+  image:
+  description:
+  genre: [ciencia]
+  completed: '2022'
+
+- title: En busca del origen del lenguaje
+  author: Sverker Johansson
+  link: books/en-busca-origen-lenguaje
+  image:
+  description:
+  genre: [ciencia]
+  completed: '2022'
+
+- title: Antiguo Egipto. Introducción a su historia y cultura
+  author: Salima Ikram
+  link: https://amzn.to/3qFKv2M
+  image:
+  description:
+  genre: [historia]
+  completed: '2022'
+
+- title: Imperios y espadazos. Una historia de la Antigüedad para no aburrir(te)
+  author: Andoni Garrido Fernández
+  link: https://amzn.to/3zifsxC
+  image:
+  description:
+  genre: [historia]
+  completed: '2022'
+
+- title: La huida de las ratas
+  author: Eric Frattini
+  link: https://amzn.to/3rRWCcu
+  image:
+  description:
+  genre: [historia]
+  completed: '2021'
+
+- title: El mensaje de Pandora
+  author: Javier Sierra (5)
+  completed: '2021'
+
+- title: La España vacía
+  author: Sergio del Molino (8)
+  completed: '2021'
+
+- title: La ciudad del vapor
+  author: Carlos Ruiz Zafón (9)
+  completed: '2021'
+
+- title: Loba negra
+  author: Juan Gómez-Jurado (7)
+  completed: '2021'
+
+- title: Ikigai. Los secretos de Japón para una vida larga y feliz
+  author: H. García y F. Miralles (8)
+  completed: '2021'
+
+- title: ¿Cuánta tierra necesita un hombre?
+  author: León Tolstói (7)
+  completed: '2021'
+
+- title: Aprendiendo de los mejores 2
+  author: Francisco Alcaide (8)
+  completed: '2021'
+
+- title: Mentes maravillosas
+  author: Ian Stewart (8)
+  completed: '2021'
+
+- title: En busca del fuego
+  author: José Antonio Cabezas (8)
+  completed: '2021'
+
+- title: El empleo del futuro
+  author: Manuel Hidalgo (7)
+  completed: '2021'
+
+- title: Rey blanco
+  author: Juan Gómez-Jurado (7)
+  completed: '2021'
+
+- title: La librera y el ladrón
+  author: Oliver Espinosa (6)
+  completed: '2021'
+
+- title: La traductora de Toledo
+  author: Pilar Cabrera Laguna (7)
+  completed: '2021'
+
+- title: Eso no estaba en mi libro de la Guerra Fría
+  author: Juan José Primo Jurado (8)
+  completed: '2021'
+
+- title: La ruta prohibida y otros enigmas de la historia
+  author: Javier Sierra (7)
+  completed: '2021'
+
+- title: Aprendiendo de los mejores 3
+  author: Francisco Alcaide (7)
+  completed: '2021'
+
+- title: El enigma de la habitación 622
+  author: Joël Dicker (8)
+  completed: '2021'
+
+- title: Una pequeña historia de la filosofía
+  author: Nigel Warburton (8)
+  completed: '2021'
+
+- title: La familia del Prado
+  author: Juan Eslava Galán (9)
+  completed: '2021'
+
+- title: Alan Turing. El pionero de la era de la información
+  author: Brian Jack Copeland (10)
+  completed: '2021'
+
+- title: Manipulando la historia. Operaciones de falsa bandera. Del Maine al golpe de Estado en Turquía
+  author: Eric Frattini (7)
+  completed: '2021'
+
+- title: Eso no estaba en mi libro de Japón
+  author: Beatriz Lizana (7)
+  completed: '2021'
+
+- title: Novela de ajedrez
+  author: Stefan Zweig (9)
+  completed: '2021'
+
+- title: Autorretrato sin mí
+  author: Fernando Aramburu (8)
+  completed: '2021'
+
+
+#2020
+- title: Una lengua muy muy larga
+  author: Lola Pons Rodríguez
+  completed: '2020'
+- title: Claves del lenguaje humano de María Victoria Escandell Vidal y otros
+- title: Somos lo que hablamos de Luis Rojas Marcos
+- title: Viviendo en el futuro de Enrique Dans
+- title: Ada Lovelace. La formación de una científica informática de C. Hollings, U. Martin y A. Rice
+- title: Teorías lingüísticas de Ricardo Mairal
+- title: Patria de Fernando Aramburu
+- title: Saber hablar de Instituto Cervantes
+- title: Lo imprevisible de Marta García Aller
+- title: Goodbye, Things. The New Japanese Minimalism de Fumio Sasaki
+- title: ¡Loca! Juana, reina de Castilla de Neus Arqués
+- title: It Doesn't Have to Be Crazy at Work de J. Fried y D. Heinemeier Hansson
+- title: La revolución de la productividad de Marc Reklau
+- title: El enemigo conoce el sistema de Marta Peirano
+- title: Babel. La vuelta al mundo en 20 idiomas de Gaston Dorren
+- title: Tierra firme de Matilde Asensi
+- title: El árbol de la lengua de Lola Pons Rodríguez
+- title: ¿Qué clase de criaturas somos? de Noam Chomsky
+- title: Hello World. How to be Human in the Age of the Machine de Hannah Fry
+- title: 500 años de frío de Javier Peláez
+- title: Poética de Aristóteles (Ed. trilingüe de Valentín García Yebra)
+- title: Cantar de Mío Cid
+- title: Reina Roja de Juan Gómez-Jurado
+- title: El enigma de Colón y los descubrimientos de América de Juan Eslava Galán
+
+#2019
+- title: 21 lecciones para el siglo XXI de Yuval Noah Harari
+- title: ¿Cuándo? La ciencia de encontrar el momento preciso de Daniel H. Pink
+- title: Por encima de la lluvia de Víctor del Árbol
+- title: Aprendiendo de los mejores de Francisco Alcaide
+- title: Desconecta de Marc Masip
+- title: El orden del día de Éric Vuillard
+- title: 50 líderes que hicieron historia de Luis Huete y Javier García
+- title: El alma de los pulpos de Sy Montgomery
+- title: La maleta de Ana de Celia Santos
+- title: ¿Qué haremos cuando las máquinas lo hagan todo? de M. Frank, P. Roehrig y B. Pring
+- title: Científicas de Jorge Bolívar
+- title: wabi sabi. Aprender a aceptar la imperfección de Tomás Navarro
+- title: Pretérito imperfecto de Nieves Concostrina
+- title: Conversaciones con mi enano de jardín de Jean-Paul Didierlaurent
+- title: Una historia de España de Arturo Pérez-Reverte
+- title: La influencia silenciosa de Roberto Brasero
+- title: Desde la sombra de Juan José Millás
+- title: La biblioteca secreta de Haruki Murakami
+- title: Hábitos atómicos de James Clear
+- title: Historia de España contada para escépticos de Juan Eslava Galán
+- title: Vigilancia permanente de Edward Snowden
+- title: Sidi de Arturo Pérez-Reverte
+- title: Reiníciate de Antonio Fornés
+- title: Anatomía de un instante de Javier Cercas
+
+#2018
+- title: «Los hombres que no amaban a las mujeres» de Stieg Larsson (8)
+- title: «El resto de sus vidas» de Jean-Paul Didierlaurent (10)
+- title: «El fuego invisible» de Javier Sierra (7)
+- title: «El Premio Nobel de Literatura» de Sture Allén y Kjell Espmark (6)
+- title: «Dublín de cerca» de Fionn Davenport (8)
+- title: «Falcó» de Arturo Pérez-Reverte
+- title: «Que nadie duerma» de Juan José Millás
+- title: «Eva» de Arturo Pérez-Reverte
+- title: «Historia mínima de España» de Juan Pablo Fusi
+- title: «Sabotaje» de Arturo Pérez-Reverte
+- title: «Sapiens. De animales a dioses» de Yuval Noah Harari
+- title: «Jacquard's Web» de James Essinger
+- title: «Momentos estelares de la historia de España» de José Calvo Poyato
+- title: «La librería» de Penelope Fitzgerald
+- title: «La vida secreta de las vacas» de Rosamund Young
+- title: «La semana laboral de 4 horas» de Timothy Ferriss
+- title: «Más tiempo para los más ocupados» de Berto Pena
+- title: «Breves respuestas a las grandes preguntas» de Stephen Hawking
+- title: «¿Qué es comer sano?» de J.M. Mulet
+- title: «Homo Deus. Breve historia del mañana» de Yuval Noah Harari
+
+#2017
+- title: «El laberinto de los espíritus» by Carlos Ruiz Zafón (8)
+- title: «Medicina sin engaños» by J.M. Mulet (8)
+- title: «Los nativos digitales no existen» by S. Lluna y J. Pedreira (8)
+- title: «La sociedad gaseosa» by Alberto Royo (10)
+- title: «El efecto matrimonio» de Graeme Simsion (7)
+- title: «Transgénicos sin miedo» de J.M. Mulet (9)
+- title: «Un año en Roma» de Anthony Doerr (7)
+- title: «Roma de cerca» de Duncan Garwood (8)
+- title: «Roma. Una historia cultural» de Robert Hughes (7)
+- title: «Los productos naturales ¡vaya timo!» de J.M. Mulet (8)
+- title: «Cuando llega la luz» de Clara Sánchez (9)
+- title: «Breve historia del mundo» de Ernst H. Gombrich (8)
+- title: «En la piel de una yihadista» de Anna Erelle (7)
+- title: «Historia y ciencia de los viajes en el tiempo» de José Antonio de la Peña (6)
+- title: «Cómo hacemos las cosas en IKEA» de Anders Dahlvig (7)
+- title: «Los secretos que jamás te contaron. Para vivir en este mundo y ser feliz cada día» de Albert Espinosa (6)
+- title: «Organízate con eficacia» de David Allen (9)
+- title: «Educative Innovéision» de Jordi Martí (7)
+- title: «La catedral de Turing» de George Dyson (8)
+- title: «No Plot? No Problem!» de Chris Baty (6)
+- title: «Las estrategias del narrador» de Silvia Adela Kohan (7)
+- title: «Estocolmo de cerca» de Becky Ohlsen (8)
