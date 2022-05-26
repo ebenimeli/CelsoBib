@@ -147,29 +147,75 @@
 - title: Una lengua muy muy larga
   author: Lola Pons Rodríguez
   completed: '2020'
-- title: Claves del lenguaje humano de María Victoria Escandell Vidal y otros
-- title: Somos lo que hablamos de Luis Rojas Marcos
-- title: Viviendo en el futuro de Enrique Dans
-- title: Ada Lovelace. La formación de una científica informática de C. Hollings, U. Martin y A. Rice
-- title: Teorías lingüísticas de Ricardo Mairal
-- title: Patria de Fernando Aramburu
-- title: Saber hablar de Instituto Cervantes
-- title: Lo imprevisible de Marta García Aller
-- title: Goodbye, Things. The New Japanese Minimalism de Fumio Sasaki
-- title: ¡Loca! Juana, reina de Castilla de Neus Arqués
-- title: It Doesn't Have to Be Crazy at Work de J. Fried y D. Heinemeier Hansson
-- title: La revolución de la productividad de Marc Reklau
-- title: El enemigo conoce el sistema de Marta Peirano
-- title: Babel. La vuelta al mundo en 20 idiomas de Gaston Dorren
-- title: Tierra firme de Matilde Asensi
-- title: El árbol de la lengua de Lola Pons Rodríguez
-- title: ¿Qué clase de criaturas somos? de Noam Chomsky
-- title: Hello World. How to be Human in the Age of the Machine de Hannah Fry
-- title: 500 años de frío de Javier Peláez
-- title: Poética de Aristóteles (Ed. trilingüe de Valentín García Yebra)
+- title: Claves del lenguaje humano
+  author: María Victoria Escandell Vidal y otros
+  completed: '2020'
+- title: Somos lo que hablamos
+  author: Luis Rojas Marcos
+  completed: '2020'
+- title: Viviendo en el futuro
+  author: Enrique Dans
+  completed: '2020'
+- title: Ada Lovelace. La formación de una científica informática
+  author: C. Hollings, U. Martin y A. Rice
+  completed: '2020'
+- title: Teorías lingüísticas
+  author: Ricardo Mairal
+  completed: '2020'
+- title: Patria
+  author: Fernando Aramburu
+  completed: '2020'
+- title: Saber hablar
+  author: Instituto Cervantes
+  completed: '2020'
+- title: Lo imprevisible
+  author: Marta García Aller
+  completed: '2020'
+- title: Goodbye, Things. The New Japanese Minimalism
+  author: Fumio Sasaki
+  completed: '2020'
+- title: ¡Loca! Juana, reina de Castilla
+  author: Neus Arqués
+  completed: '2020'
+- title: It Doesn't Have to Be Crazy at Work
+  author: J. Fried y D. Heinemeier Hansson
+  completed: '2020'
+- title: La revolución de la productividad
+  author: Marc Reklau
+  completed: '2020'
+- title: El enemigo conoce el sistema
+  author: Marta Peirano
+  completed: '2020'
+- title: Babel. La vuelta al mundo en 20 idiomas
+  author: Gaston Dorren
+  completed: '2020'
+- title: Tierra firme
+  author: Matilde Asensi
+  completed: '2020'
+- title: El árbol de la lengua
+  author: Lola Pons Rodríguez
+  completed: '2020'
+- title: ¿Qué clase de criaturas somos?
+  author: Noam Chomsky
+  completed: '2020'
+- title: Hello World. How to be Human in the Age of the Machine
+  author: Hannah Fry
+  completed: '2020'
+- title: 500 años de frío
+  author: Javier Peláez
+  completed: '2020'
+- title: Poética de Aristóteles (Ed. trilingüe)
+  author: Valentín García Yebra
+  completed: '2020'
 - title: Cantar de Mío Cid
-- title: Reina Roja de Juan Gómez-Jurado
-- title: El enigma de Colón y los descubrimientos de América de Juan Eslava Galán
+  author: Anónimo
+  completed: '2020'
+- title: Reina Roja
+  author: Juan Gómez-Jurado
+  completed: '2020'
+- title: El enigma de Colón y los descubrimientos de América
+  author: Juan Eslava Galán
+  completed: '2020'
 
 #2019
 - title: 21 lecciones para el siglo XXI de Yuval Noah Harari
