@@ -1,0 +1,54 @@
+---
+layout: page
+title: ""
+description: "Un log"
+---
+<div class="w-100">
+
+<h2>Log</h2>
+
+<div class="logs">
+
+{% assign nrecords = 0 %}
+{% for log in site.data.log %}
+  {% assign nrecords = nrecords | plus:1 %}
+{% endfor %}
+
+<ul>
+{% assign i = nrecords %}
+{% for log in site.data.log %}
+      <li class="logitem">
+      <span class="logid">[{{ i }}]</span>
+      {% if log.cat == 'thought' %}
+        <span>💭</span>
+      {% endif %}
+      {% if log.cat == 'read' %}
+        <span>📖</span>
+      {% endif %}
+      {% if log.cat == 'write' %}
+        <span>📝</span>
+      {% endif %}
+      {% if log.cat == 'video' %}
+        <span>📺</span>
+      {% endif %}
+      {% if log.cat == 'work' %}
+        <span>📥</span>
+      {% endif %}
+
+
+      <span class="logtext">{{ log.text }}</span>
+      {% if log.timestamp %}
+        <span class="timestamp">[{{ log.timestamp }}]</span>
+      {% endif %}
+
+      {%if log.link %}
+        <span class="loglink">
+          <a title="{{ log.timestamp }}" href="{{ log.link }}">→</a>
+        </span>
+      </li>
+      {% endif %}
+      {% assign i = i | minus:1 %}
+{% endfor %}
+</ul>
+</div>
+</div>

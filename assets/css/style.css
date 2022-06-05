@@ -28,7 +28,9 @@ body{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  /*width: 60%;*/
   width: 60%;
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -264,4 +266,29 @@ blockquote p {
   margin-left: -40px;
   font-style: italic;
   font-size: .9em;
+}
+
+div.logs {
+    text-align: justify;
+    font-size: .9em;
+}
+
+div.logs ul li {
+  list-style: none;
+  margin-left: -40px;
+
+}
+
+.logid {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.timestamp {
+  color: #696969;
+  font-size: .8em;
+}
+
+.logitem {
+  border-bottom: 1px dotted #000000;
 }

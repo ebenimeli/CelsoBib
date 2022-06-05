@@ -1,0 +1,58 @@
+- timestamp: 6/2/2022, 8:27:25 AM
+  text: "Muy interesante y curiosa la web www.oldmapsonline.org para buscar mapas antiguos."
+  link: https://www.oldmapsonline.org/
+  cat: resources
+
+- timestamp: 6/1/2022, 3:31:23 PM
+  text: "<i>Iunius</i>"
+  link: https://es.wikipedia.org/wiki/Junio
+  cat: thought
+
+- timestamp: 5/31/2022, 10:06:02 AM
+  text: "Hoy he escrito 567 palabras"
+  link:
+  cat: write
+
+- timestamp:
+  text: "Hoy hay que darle a la tecla un poco..."
+  link:
+  cat: work
+
+- timestamp: 5/31/2022, 8:15:17 AM
+  text: "Leyendo «La piel del tambor» de Arturo Pérez-Reverte"
+  link: https://amzn.to/3N6JtGU
+  cat: read
+
+- timestamp: 5/30/2022, 8:50:02 PM
+  text: Muy curiosa esta entrevista a Antonio Hidalgo (Globalia) en The Wild Project
+  link: https://www.youtube.com/watch?v=P7QNMCs-5zM&t=2767s
+  cat: video
+
+- timestamp: 5/30/2022, 4:14:24 PM
+  text: "Trabajando esta tarde con Notion"
+  link: https://www.notion.so/
+  cat: work
+
+- timestamp: 5/30/2022, 1:21:47 PM
+  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  link: http://www.wikipedia.org
+
+- timestamp: 5/30/2022, 1:22:32 PM
+  text: "He publicado en Ocho en punto algunos consejos para ganar tiempo: Cómo ahorrar tiempo (II): tu hora productiva y el consumo de televisión"
+  link: http://www.ochoenpunto.com/ahorrar-tiempo-tu-hora-productiva-consumo-tv/
+
+- timestamp: 5/30/2022, 1:21:47 PM
+  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  link: http://www.wikipedia.org
+
+- timestamp: 5/30/2022, 1:02:51 PM
+  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  link: http://www.wikipedia.org
+
+- timestamp: 5/30/2022, 12:21:49 PM
+  text: Un ejemplo de log
+  link: http://www.ebenimeli.org
+
+- timestamp: 5/30/2022, 12:23:48 PM
+  text: Otro ejemplo de log
+  link: http://www.ebenimeli.org

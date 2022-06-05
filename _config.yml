@@ -1,5 +1,5 @@
 # Site settings
-site: ebenimeli.org
+site: www.ebenimeli.org
 title: Enrique Benimeli
 keywords: ebenimeli, blog
 description: >-
@@ -14,9 +14,9 @@ google_analytics:   UA-XXXXXXXX-00 # Put your Google Analytics code
 # Author settings
 author:
   name: Enrique Benimeli
-  bio: Ingeniero en Informática<br> Profesor · Papá<br> Informática · Educación · Productividad · Lenguas
+  bio: Ingeniero en Informática · Profesor<br>Informática · Educación<br/>Productividad · Lenguas
   picture: assets/images/profile.jpg
-  #github: onepase # github username
+  github: ebenimeli # github username
   twitter: enriquebenimeli # twitter username
   facebook: ebenimeli # facebook username
   instagram: ebenimeli # instagram username
@@ -26,6 +26,8 @@ author:
 
 # URL settings
 url: "http://127.0.0.1:4000" # Domain Name of host. [username].github.io for github pages
+#url: "http://www.ebenimeli.org/beta" # Domain Name of host. [username].github.io for github pages
+
 permalink: pretty
 
 markdown: kramdown
@@ -85,3 +87,8 @@ collections:
   books:
     output: true
     permalink: /books/:title/
+  logs:
+    output: true
+  pages:
+    output: true
+    permalink: /pages/:title
