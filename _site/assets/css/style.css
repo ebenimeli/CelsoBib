@@ -30,6 +30,7 @@ body{
   justify-content: space-between;
   /*width: 60%;*/
   width: 60%;
+  text-align: justify;
 
   margin-left: auto;
   margin-right: auto;
@@ -229,6 +230,10 @@ div.book-data {
   float: left;
   width: 200px;
   padding-right: 25px;
+}
+
+h1 {
+  color: Steelblue;
 }
 
 .book h1 {

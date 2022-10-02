@@ -4,7 +4,7 @@
  <title>Enrique Benimeli</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2022-06-05T12:28:29+02:00</updated>
+ <updated>2022-10-02T13:41:55+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Enrique Benimeli</name>
@@ -14,7 +14,7 @@
  
  <entry>
    <title>Sábado, 4 de junio de 2022</title>
-   <link href="http://localhost:4000/hoy/"/>
+   <link href="http://localhost:4000/junio/"/>
    <updated>2022-06-04T02:00:00+02:00</updated>
    <id>http://localhost:4000/hoy</id>
    <content type="html">&lt;p&gt;Lorem markdownum feriam: vir, vulnere cum postquam ocius, ecce. Exsangui totiens
@@ -23,6 +23,18 @@ mea nulla secessit modo et. Hospes &lt;strong&gt;felices stetimusque&lt;/strong&
 nostro&lt;/strong&gt;, ne ruris &lt;em&gt;in deas extrema&lt;/em&gt;. Thebaides crimina, tu dixerat eripiet
 quiescere animae, pervenientia fuit furta sacrata illam, dabat. Quod munera
 monstra rimas ultra cunctos.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;und&quot; dir=&quot;ltr&quot;&gt;😅 ... &lt;a href=&quot;https://t.co/zZnijc7Nqb&quot;&gt;pic.twitter.com/zZnijc7Nqb&lt;/a&gt;&lt;/p&gt;&amp;mdash; Elliott 📖 | 🚀 (@elliottaleksndr) &lt;a href=&quot;https://twitter.com/elliottaleksndr/status/1531923521470926848?ref_src=twsrc%5Etfw&quot;&gt;June 1, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Texto.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Simple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]){&lt;/span&gt;  
+     &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello Java&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;  
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;  
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 </content>
  </entry>
  

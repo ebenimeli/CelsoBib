@@ -47,4 +47,32 @@ description: "Lo último que he leído"
 {% endfor %}
 </ol>
 
+<h2>2019</h2>
+<ol class="book-list">
+{% for book in site.data.books %}
+{% if book.completed == '2019' %}
+      <li>
+        <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}"><i>{{ book.title }}</i></a> de {{ book.author}}
+        {% if book.link %}
+          <a href="{{ book.link }}">→</a>
+        {% endif %}
+      </li>
+{% endif %}
+{% endfor %}
+</ol>
+
+<h2>2018</h2>
+<ol class="book-list">
+{% for book in site.data.books %}
+{% if book.completed == '2018' %}
+      <li>
+        <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}"><i>{{ book.title }}</i></a> de {{ book.author}}
+        {% if book.link %}
+          <a href="{{ book.link }}">→</a>
+        {% endif %}
+      </li>
+{% endif %}
+{% endfor %}
+</ol>
+
 </div>

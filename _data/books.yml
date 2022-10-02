@@ -38,6 +38,28 @@
   genre: [historia]
   completed: '2022'
 
+- title: "Céntrate (Deep Work)"
+  author: Cal Newport
+  completed: '2022'
+
+- title: "La Edad Media. Una historia gráfica"
+  author: Eleanor Janega y Neil Max Emmanuel
+  completed: '2022'
+
+- title: "Ajedrez y ciencia, pasiones mezcladas"
+  author: Leontxo García
+  completed: '2022'
+
+- title: "Nikola Tesla. El hombre que inventó el siglo XX"
+  author: Charo González Casas
+  completed: '2022'
+
+- title: "La fábrica de cretinos digitales"
+  author: Michel Desmurget
+  completed: '2022'
+
+#2021
+
 - title: La huida de las ratas
   author: Eric Frattini
   link: https://amzn.to/3rRWCcu
@@ -218,52 +240,183 @@
   completed: '2020'
 
 #2019
-- title: 21 lecciones para el siglo XXI de Yuval Noah Harari
-- title: ¿Cuándo? La ciencia de encontrar el momento preciso de Daniel H. Pink
-- title: Por encima de la lluvia de Víctor del Árbol
-- title: Aprendiendo de los mejores de Francisco Alcaide
-- title: Desconecta de Marc Masip
-- title: El orden del día de Éric Vuillard
-- title: 50 líderes que hicieron historia de Luis Huete y Javier García
-- title: El alma de los pulpos de Sy Montgomery
-- title: La maleta de Ana de Celia Santos
-- title: ¿Qué haremos cuando las máquinas lo hagan todo? de M. Frank, P. Roehrig y B. Pring
-- title: Científicas de Jorge Bolívar
-- title: wabi sabi. Aprender a aceptar la imperfección de Tomás Navarro
-- title: Pretérito imperfecto de Nieves Concostrina
-- title: Conversaciones con mi enano de jardín de Jean-Paul Didierlaurent
-- title: Una historia de España de Arturo Pérez-Reverte
-- title: La influencia silenciosa de Roberto Brasero
-- title: Desde la sombra de Juan José Millás
-- title: La biblioteca secreta de Haruki Murakami
-- title: Hábitos atómicos de James Clear
-- title: Historia de España contada para escépticos de Juan Eslava Galán
-- title: Vigilancia permanente de Edward Snowden
-- title: Sidi de Arturo Pérez-Reverte
-- title: Reiníciate de Antonio Fornés
-- title: Anatomía de un instante de Javier Cercas
+- title: 21 lecciones para el siglo XXI
+  author: Yuval Noah Harari
+  completed: '2019'
+
+- title: ¿Cuándo? La ciencia de encontrar el momento preciso
+  author: Daniel H. Pink
+  completed: '2019'
+
+- title: Por encima de la lluvia
+  author: Víctor del Árbol
+  completed: '2019'
+
+- title: Aprendiendo de los mejores
+  author: Francisco Alcaide
+  completed: '2019'
+
+- title: Desconecta
+  author: Marc Masip
+  completed: '2019'
+
+- title: El orden del día
+  author: Éric Vuillard
+  completed: '2019'
+
+- title: 50 líderes que hicieron historia
+  author: Luis Huete y Javier García
+  completed: '2019'
+
+- title: El alma de los pulpos
+  author: Sy Montgomery
+  completed: '2019'
+
+- title: La maleta de Ana
+  author: Celia Santos
+  completed: '2019'
+
+- title: ¿Qué haremos cuando las máquinas lo hagan todo?
+  author: M. Frank, P. Roehrig y B. Pring
+  completed: '2019'
+
+- title: Científicas
+  author: Jorge Bolívar
+  completed: '2019'
+
+- title: wabi sabi. Aprender a aceptar la imperfección
+  author: Tomás Navarro
+  completed: '2019'
+
+- title: Pretérito imperfecto
+  author: Nieves Concostrina
+  completed: '2019'
+
+- title: Conversaciones con mi enano de jardín
+  author: Jean-Paul Didierlaurent
+  completed: '2019'
+
+- title: Una historia de España
+  author: Arturo Pérez-Reverte
+  completed: '2019'
+
+- title: La influencia silenciosa
+  author: Roberto Brasero
+  completed: '2019'
+
+- title: Desde la sombra
+  author: Juan José Millás
+  completed: '2019'
+
+- title: La biblioteca secreta
+  author: Haruki Murakami
+  completed: '2019'
+
+- title: Hábitos atómicos
+  author: James Clear
+  completed: '2019'
+
+- title: Historia de España contada para escépticos
+  author: Juan Eslava Galán
+  completed: '2019'
+
+- title: Vigilancia permanente
+  author: Edward Snowden
+  completed: '2019'
+
+- title: Sidi
+  author: Arturo Pérez-Reverte
+  completed: '2019'
+
+- title: Reiníciate
+  author: Antonio Fornés
+  completed: '2019'
+
+- title: Anatomía de un instante
+  author: Javier Cercas
+  completed: '2019'
+
 
 #2018
-- title: «Los hombres que no amaban a las mujeres» de Stieg Larsson (8)
-- title: «El resto de sus vidas» de Jean-Paul Didierlaurent (10)
-- title: «El fuego invisible» de Javier Sierra (7)
-- title: «El Premio Nobel de Literatura» de Sture Allén y Kjell Espmark (6)
-- title: «Dublín de cerca» de Fionn Davenport (8)
-- title: «Falcó» de Arturo Pérez-Reverte
-- title: «Que nadie duerma» de Juan José Millás
-- title: «Eva» de Arturo Pérez-Reverte
-- title: «Historia mínima de España» de Juan Pablo Fusi
-- title: «Sabotaje» de Arturo Pérez-Reverte
-- title: «Sapiens. De animales a dioses» de Yuval Noah Harari
-- title: «Jacquard's Web» de James Essinger
-- title: «Momentos estelares de la historia de España» de José Calvo Poyato
-- title: «La librería» de Penelope Fitzgerald
-- title: «La vida secreta de las vacas» de Rosamund Young
-- title: «La semana laboral de 4 horas» de Timothy Ferriss
-- title: «Más tiempo para los más ocupados» de Berto Pena
-- title: «Breves respuestas a las grandes preguntas» de Stephen Hawking
-- title: «¿Qué es comer sano?» de J.M. Mulet
-- title: «Homo Deus. Breve historia del mañana» de Yuval Noah Harari
+- title: «Los hombres que no amaban a las mujeres»
+  author: Stieg Larsson (8)
+  completed: '2018'
+
+- title: «El resto de sus vidas»
+  author: Jean-Paul Didierlaurent (10)
+  completed: '2018'
+
+- title: «El fuego invisible»
+  author: Javier Sierra (7)
+  completed: '2018'
+
+- title: «El Premio Nobel de Literatura»
+  author: Sture Allén y Kjell Espmark (6)
+  completed: '2018'
+
+- title: «Dublín de cerca»
+  author: Fionn Davenport (8)
+  completed: '2018'
+
+- title: «Falcó»
+  author: Arturo Pérez-Reverte
+  completed: '2018'
+
+- title: «Que nadie duerma»
+  author: Juan José Millás
+  completed: '2018'
+
+- title: «Eva»
+  author: Arturo Pérez-Reverte
+  completed: '2018'
+
+- title: «Historia mínima de España»
+  author: Juan Pablo Fusi
+  completed: '2018'
+
+- title: «Sabotaje»
+  author: Arturo Pérez-Reverte
+  completed: '2018'
+
+- title: «Sapiens. De animales a dioses»
+  author: Yuval Noah Harari
+  completed: '2018'
+
+- title: «Jacquard's Web»
+  author: James Essinger
+  completed: '2018'
+
+- title: «Momentos estelares de la historia de España»
+  author: José Calvo Poyato
+  completed: '2018'
+
+- title: «La librería»
+  author: Penelope Fitzgerald
+  completed: '2018'
+
+- title: «La vida secreta de las vacas»
+  author: Rosamund Young
+  completed: '2018'
+
+- title: «La semana laboral de 4 horas»
+  author: Timothy Ferriss
+  completed: '2018'
+
+- title: «Más tiempo para los más ocupados»
+  author: Berto Pena
+  completed: '2018'
+
+- title: «Breves respuestas a las grandes preguntas»
+  author: Stephen Hawking
+  completed: '2018'
+
+- title: «¿Qué es comer sano?»
+  author: J.M. Mulet
+  completed: '2018'
+
+- title: «Homo Deus. Breve historia del mañana»
+  author: Yuval Noah Harari
+  completed: '2018'
 
 #2017
 - title: «El laberinto de los espíritus» by Carlos Ruiz Zafón (8)
