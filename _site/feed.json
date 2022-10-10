@@ -17,76 +17,19 @@
 "items": [
     
         {
-            "id": "http://localhost:4000/junio/",
-            "title": "Sábado, 4 de junio de 2022",
-            "summary": null,
-            "content_text": "Lorem markdownum feriam: vir, vulnere cum postquam ocius, ecce. Exsangui totiensgeneris Iuppiter dederunt cerva refoventque,mea nulla secessit modo et. Hospes felices stetimusque erat: Niobenostro, ne ruris in deas extrema. Thebaides crimina, tu dixerat eripietquiescere animae, pervenientia fuit furta sacrata illam, dabat. Quod muneramonstra rimas ultra cunctos.😅 ... pic.twitter.com/zZnijc7Nqb&mdash; Elliott 📖 | 🚀 (@elliottaleksndr) June 1, 2022Texto.class Simple{      public static void main(String args[]){       System.out.println(\"Hello Java\");      }  }  ",
-            "content_html": "<p>Lorem markdownum feriam: vir, vulnere cum postquam ocius, ecce. Exsangui totiensgeneris <a href=\"http://www.fertur.io/aeacidis\">Iuppiter</a> dederunt cerva refoventque,mea nulla secessit modo et. Hospes <strong>felices stetimusque</strong> erat: <strong>Niobenostro</strong>, ne ruris <em>in deas extrema</em>. Thebaides crimina, tu dixerat eripietquiescere animae, pervenientia fuit furta sacrata illam, dabat. Quod muneramonstra rimas ultra cunctos.</p><blockquote class=\"twitter-tweet\"><p lang=\"und\" dir=\"ltr\">😅 ... <a href=\"https://t.co/zZnijc7Nqb\">pic.twitter.com/zZnijc7Nqb</a></p>&mdash; Elliott 📖 | 🚀 (@elliottaleksndr) <a href=\"https://twitter.com/elliottaleksndr/status/1531923521470926848?ref_src=twsrc%5Etfw\">June 1, 2022</a></blockquote><script async=\"\" src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script><p>Texto.</p><figure class=\"highlight\"><pre><code class=\"language-java\" data-lang=\"java\"><span class=\"kd\">class</span> <span class=\"nc\">Simple</span><span class=\"o\">{</span>      <span class=\"kd\">public</span> <span class=\"kd\">static</span> <span class=\"kt\">void</span> <span class=\"nf\">main</span><span class=\"o\">(</span><span class=\"nc\">String</span> <span class=\"n\">args</span><span class=\"o\">[]){</span>       <span class=\"nc\">System</span><span class=\"o\">.</span><span class=\"na\">out</span><span class=\"o\">.</span><span class=\"na\">println</span><span class=\"o\">(</span><span class=\"s\">\"Hello Java\"</span><span class=\"o\">);</span>      <span class=\"o\">}</span>  <span class=\"o\">}</span>  </code></pre></figure>",
-            "url": "http://localhost:4000/junio/",
-            
-            
-            
-            
-            
-            "date_published": "2022-06-04T02:00:00+02:00",
-            "date_modified": "2022-06-04T02:00:00+02:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/ajedrez/",
-            "title": "Jaque",
+            "id": "http://localhost:4000/hola-mundo/",
+            "title": "Hola, mundo",
             "summary": null,
             "content_text": "Lorem markdownum feriam: vir, vulnere cum postquam ocius, ecce. Exsangui totiensgeneris Iuppiter dederunt cerva refoventque,mea nulla secessit modo et. Hospes felices stetimusque erat: Niobenostro, ne ruris in deas extrema. Thebaides crimina, tu dixerat eripietquiescere animae, pervenientia fuit furta sacrata illam, dabat. Quod muneramonstra rimas ultra cunctos.",
             "content_html": "<p>Lorem markdownum feriam: vir, vulnere cum postquam ocius, ecce. Exsangui totiensgeneris <a href=\"http://www.fertur.io/aeacidis\">Iuppiter</a> dederunt cerva refoventque,mea nulla secessit modo et. Hospes <strong>felices stetimusque</strong> erat: <strong>Niobenostro</strong>, ne ruris <em>in deas extrema</em>. Thebaides crimina, tu dixerat eripietquiescere animae, pervenientia fuit furta sacrata illam, dabat. Quod muneramonstra rimas ultra cunctos.</p>",
-            "url": "http://localhost:4000/ajedrez/",
+            "url": "http://localhost:4000/hola-mundo/",
             
             
             
-            "tags": ["personal","ajedrez","juegos"],
-            
-            "date_published": "2022-05-27T02:00:00+02:00",
-            "date_modified": "2022-05-27T02:00:00+02:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/hoy/",
-            "title": "Hoy",
-            "summary": null,
-            "content_text": "Lorem markdownum feriam: vir, vulnere cum postquam ocius, ecce. Exsangui totiensgeneris Iuppiter dederunt cerva refoventque,mea nulla secessit modo et. Hospes felices stetimusque erat: Niobenostro, ne ruris in deas extrema. Thebaides crimina, tu dixerat eripietquiescere animae, pervenientia fuit furta sacrata illam, dabat. Quod muneramonstra rimas ultra cunctos.Un ejemplo de vídeo:",
-            "content_html": "<p>Lorem markdownum feriam: vir, vulnere cum postquam ocius, ecce. Exsangui totiensgeneris <a href=\"http://www.fertur.io/aeacidis\">Iuppiter</a> dederunt cerva refoventque,mea nulla secessit modo et. Hospes <strong>felices stetimusque</strong> erat: <strong>Niobenostro</strong>, ne ruris <em>in deas extrema</em>. Thebaides crimina, tu dixerat eripietquiescere animae, pervenientia fuit furta sacrata illam, dabat. Quod muneramonstra rimas ultra cunctos.</p><p><img src=\"/assets/images/posts/rayo_sol.jpg\" alt=\"Rayo de sol\" title=\"Rayo de sol\" /></p><p>Un ejemplo de vídeo:</p><iframe width=\"640\" height=\"480\" src=\"https://www.youtube.com/embed/UmX4kyB2wfg\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen=\"\"></iframe>",
-            "url": "http://localhost:4000/hoy/",
             
             
-            
-            "tags": ["proyectos","personal"],
-            
-            "date_published": "2022-05-26T02:00:00+02:00",
-            "date_modified": "2022-05-26T02:00:00+02:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/bienvenidos/",
-            "title": "Bienvenidos",
-            "summary": null,
-            "content_text": "Lorem markdownum feriam: vir, vulnere cum postquam ocius, ecce. Exsangui totiensgeneris Iuppiter dederunt cerva refoventque,mea nulla secessit modo et. Hospes felices stetimusque erat: Niobenostro, ne ruris in deas extrema. Thebaides crimina, tu dixerat eripietquiescere animae, pervenientia fuit furta sacrata illam, dabat. Quod muneramonstra rimas ultra cunctos.Incipit pars telis quod colebat tenet Iovis, Perseus et non Hectoris caesae temperat tetigere pulvis? Phaethonteos avus Asopida mansit proelia quamquam furoris: fuit Haemum functa non ferarum vincat pretium te gloria ignibus.Potum maius urbemPolydori arvis. Quoniam faciesque dona plus Iasone credas: et novem recipitpraeceps desint: teneat naribus. AthamanasCupido, ureret gradere adapertaque nactaspargere pater et fata ferroveet loqui essem Tegeaea varios leviter. Et nymphis in exhibita villo!Sacra erat cuncta. Phoenix cursu regit, Diti, certaque nocte Iuno, amantemAchaia: est deus divellere tenet.Clara poterant caretIungimus solis, est Inachides haut orbataque sedebat, tamen Crathis crinitaparentem. Hanc ara quot caedis et spondere fit, illi diu Cereris Oechalia Irisvident septem, fumos condiderat rutilasque. Tenent instrumenta nudaverat dicta.Et et curis: quod Arcades ipsa: vellet, altius non madidos numina in.  Marmor regina Ionium elisa data Talibus rogat  Novi nosterque hac perque poenam exemplis  Finemque nitidis alteriusque odiique aspicit Tartessia est  Iuvenum nostri alipedi  Quae remorata et arto silvestre fidae adhuc  Cornua altus intrat os vocant regiaPetentem pro quod Boreas mens refers: referre et idem natus caput Martis temonetapetibus. Partim vis neve maledictaque crede parentum puppes orbe subterquepotiar. Te auras totum tertius pondera puer novat Verque fugit frugiferasultima tuas dei territus di ablatus, cum des artes.Socium est facti est enim neve patris facto Laertaque formam. E quoque manibusCecropio telorum ultima, est non est, sim desiluitsolida; fecit. Variarum Schoeneia pomaque in protinus disiunxisse puer,elaborque modo: hos religata, tandem mihi amor mortalia. Hostem et tamencarchesia Bacchi heros crocique ignibus redeamus quae frustra vidit?Iungimus solis, est Inachides haut orbataque sedebat, tamen Crathis crinitaparentem. Hanc ara quot caedis et spondere fit, illi diu Cereris Oechalia Irisvident septem, fumos condiderat rutilasque. Tenent instrumenta nudaverat dicta.Et et curis: quod Arcades ipsa: vellet, altius non madidos numina in.  Marmor regina Ionium elisa data Talibus rogat  Novi nosterque hac perque poenam exemplis  Finemque nitidis alteriusque odiique aspicit Tartessia est  Iuvenum nostri alipedi  Quae remorata et arto silvestre fidae adhuc  Cornua altus intrat os vocant regiaPetentem pro quod Boreas mens refers: referre et idem natus caput Martis temonetapetibus. Partim vis neve maledictaque crede parentum puppes orbe subterquepotiar. Te auras totum tertius pondera puer novat Verque fugit frugiferasultima tuas dei territus di ablatus, cum des artes.Socium est facti est enim neve patris facto Laertaque formam. E quoque manibusCecropio telorum ultima, est non est, sim desiluitsolida; fecit. Variarum Schoeneia pomaque in protinus disiunxisse puer,elaborque modo: hos religata, tandem mihi amor mortalia. Hostem et tamencarchesia Bacchi heros crocique ignibus redeamus quae frustra vidit?",
-            "content_html": "<p>Lorem markdownum feriam: vir, vulnere cum postquam ocius, ecce. Exsangui totiensgeneris <a href=\"http://www.fertur.io/aeacidis\">Iuppiter</a> dederunt cerva refoventque,mea nulla secessit modo et. Hospes <strong>felices stetimusque</strong> erat: <strong>Niobenostro</strong>, ne ruris <em>in deas extrema</em>. Thebaides crimina, tu dixerat eripietquiescere animae, pervenientia fuit furta sacrata illam, dabat. Quod muneramonstra rimas ultra cunctos.</p><p><img src=\"/assets/images/posts/montgo_denia.jpg\" alt=\"Rayo de sol\" title=\"Montgó\" /></p><p>Incipit pars telis quod colebat tenet Iovis, Perseus et non Hectoris caesae temperat tetigere pulvis? Phaethonteos avus Asopida mansit proelia quamquam furoris: fuit Haemum functa non ferarum vincat <em>pretium te gloria</em> ignibus.</p><h2 id=\"potum-maius-urbem\">Potum maius urbem</h2><p>Polydori arvis. Quoniam faciesque dona plus Iasone <strong>credas</strong>: et novem recipitpraeceps desint: teneat naribus. <a href=\"http://fierent.net/miserrimasecreta\">AthamanasCupido</a>, ureret gradere adapertaque nactaspargere pater et <a href=\"http://nocte-conclamat.org/indiciique-micant\">fata</a> ferrove<strong>et</strong> loqui essem Tegeaea varios leviter. Et nymphis in exhibita villo!</p><p><img src=\"/assets/images/ephesus.jpg\" alt=\"Ephesus\" title=\"Ephesus\" /></p><p>Sacra erat cuncta. Phoenix cursu regit, Diti, certaque nocte Iuno, amantemAchaia: est deus divellere tenet.</p><h2 id=\"clara-poterant-caret\">Clara poterant caret</h2><p>Iungimus solis, est Inachides haut orbataque sedebat, tamen Crathis crinitaparentem. Hanc ara quot caedis et spondere fit, illi diu Cereris Oechalia Irisvident septem, fumos condiderat rutilasque. Tenent instrumenta nudaverat dicta.Et et curis: quod Arcades ipsa: vellet, altius non madidos numina in.</p><ul>  <li>Marmor regina Ionium elisa data Talibus rogat</li>  <li>Novi nosterque hac perque poenam exemplis</li>  <li>Finemque nitidis alteriusque odiique aspicit Tartessia est</li>  <li>Iuvenum nostri alipedi</li>  <li>Quae remorata et arto silvestre fidae adhuc</li>  <li>Cornua altus intrat os vocant regia</li></ul><p>Petentem pro quod Boreas mens refers: referre et idem natus caput Martis temonetapetibus. Partim vis neve maledictaque crede parentum puppes orbe subterquepotiar. Te auras totum tertius pondera puer novat <strong>Verque</strong> fugit frugiferasultima tuas dei territus di ablatus, cum des artes.</p><p>Socium est facti est enim neve patris facto Laertaque formam. E quoque manibusCecropio telorum <em>ultima</em>, est non <a href=\"http://manus.io/est\">est</a>, sim desiluitsolida; fecit. Variarum <strong>Schoeneia</strong> pomaque in protinus disiunxisse puer,elaborque modo: hos religata, tandem mihi amor mortalia. Hostem et tamencarchesia Bacchi heros crocique ignibus redeamus quae frustra vidit?</p><p>Iungimus solis, est Inachides haut orbataque sedebat, tamen Crathis crinitaparentem. Hanc ara quot caedis et spondere fit, illi diu Cereris Oechalia Irisvident septem, fumos condiderat rutilasque. Tenent instrumenta nudaverat dicta.Et et curis: quod Arcades ipsa: vellet, altius non madidos numina in.</p><ul>  <li>Marmor regina Ionium elisa data Talibus rogat</li>  <li>Novi nosterque hac perque poenam exemplis</li>  <li>Finemque nitidis alteriusque odiique aspicit Tartessia est</li>  <li>Iuvenum nostri alipedi</li>  <li>Quae remorata et arto silvestre fidae adhuc</li>  <li>Cornua altus intrat os vocant regia</li></ul><p>Petentem pro quod Boreas mens refers: referre et idem natus caput Martis temonetapetibus. Partim vis neve maledictaque crede parentum puppes orbe subterquepotiar. Te auras totum tertius pondera puer novat <strong>Verque</strong> fugit frugiferasultima tuas dei territus di ablatus, cum des artes.</p><p>Socium est facti est enim neve patris facto Laertaque formam. E quoque manibusCecropio telorum <em>ultima</em>, est non <a href=\"http://manus.io/est\">est</a>, sim desiluitsolida; fecit. Variarum <strong>Schoeneia</strong> pomaque in protinus disiunxisse puer,elaborque modo: hos religata, tandem mihi amor mortalia. Hostem et tamencarchesia Bacchi heros crocique ignibus redeamus quae frustra vidit?</p>",
-            "url": "http://localhost:4000/bienvenidos/",
-            
-            
-            
-            "tags": ["proyectos","personal"],
-            
-            "date_published": "2022-05-22T02:00:00+02:00",
-            "date_modified": "2022-05-22T02:00:00+02:00",
+            "date_published": "2022-10-10T02:00:00+02:00",
+            "date_modified": "2022-10-10T02:00:00+02:00",
             
                 "author": "Enrique Benimeli"
             
