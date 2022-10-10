@@ -92,3 +92,4 @@ collections:
   pages:
     output: true
     permalink: /pages/:title
+    
