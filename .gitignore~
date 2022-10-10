@@ -2,3 +2,4 @@
 .jekyll-cache/Jekyll/Cache/Jekyll--Cache/
 generatesite.sh
 preview.sh
+_site/
