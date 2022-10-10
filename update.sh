@@ -1,0 +1,2 @@
+./generatesite.sh
+git pull
