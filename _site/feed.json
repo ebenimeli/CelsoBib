@@ -1,11 +1,11 @@
 {
     "version": "https://jsonfeed.org/version/1",
     "title": "Enrique Benimeli",
-    "home_page_url": "http://www.ebenimeli.org/",
-    "feed_url": "http://www.ebenimeli.org/feed.json",
+    "home_page_url": "http://localhost:4000/",
+    "feed_url": "http://localhost:4000/feed.json",
     "description": "Enrique Benimeli - web personal",
-    "icon": "http://www.ebenimeli.org/assets/images/apple-touch-icon.png",
-    "favicon": "http://www.ebenimeli.org/assets/images/favicon.png",
+    "icon": "http://localhost:4000/assets/images/apple-touch-icon.png",
+    "favicon": "http://localhost:4000/assets/images/favicon.png",
     "expired": false,
     
     "author":  {
@@ -17,12 +17,12 @@
 "items": [
     
         {
-            "id": "http://www.ebenimeli.org/hola-mundo/",
+            "id": "http://localhost:4000/hola-mundo/",
             "title": "Hola, mundo",
             "summary": null,
             "content_text": "Lorem markdownum feriam: vir, vulnere cum postquam ocius, ecce. Exsangui totiensgeneris Iuppiter dederunt cerva refoventque,mea nulla secessit modo et. Hospes felices stetimusque erat: Niobenostro, ne ruris in deas extrema. Thebaides crimina, tu dixerat eripietquiescere animae, pervenientia fuit furta sacrata illam, dabat. Quod muneramonstra rimas ultra cunctos.",
             "content_html": "<p>Lorem markdownum feriam: vir, vulnere cum postquam ocius, ecce. Exsangui totiensgeneris <a href=\"http://www.fertur.io/aeacidis\">Iuppiter</a> dederunt cerva refoventque,mea nulla secessit modo et. Hospes <strong>felices stetimusque</strong> erat: <strong>Niobenostro</strong>, ne ruris <em>in deas extrema</em>. Thebaides crimina, tu dixerat eripietquiescere animae, pervenientia fuit furta sacrata illam, dabat. Quod muneramonstra rimas ultra cunctos.</p>",
-            "url": "http://www.ebenimeli.org/hola-mundo/",
+            "url": "http://localhost:4000/hola-mundo/",
             
             
             
