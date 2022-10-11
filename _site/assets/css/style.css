@@ -233,7 +233,9 @@ div.book-data {
 }
 
 h1 {
-  color: Steelblue;
+  /*color: Steelblue;*/
+  color: White;
+
 }
 
 .book h1 {
