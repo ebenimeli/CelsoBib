@@ -21,7 +21,8 @@ echo "Pulling..."
 git pull
 
 echo "Building..."
-BUNDLE_GEMFILE=/home/ebenimeli/GitHub/CelsoBib/Gemfile bundle exec jekyll build /home/ebenimeli/GitHub/CelsoBib/
+/bin/bundle3.0 install
+BUNDLE_GEMFILE=/home/ebenimeli/GitHub/CelsoBib/Gemfile /bin/bundle3.0 exec jekyll build /home/ebenimeli/GitHub/CelsoBib/
 
 WEB=/var/www/vhosts/ebenimeli.org/httpdocs
 if [[ -d "$WEB" ]]; then
