@@ -21,7 +21,6 @@ echo "Pulling..."
 git pull
 
 echo "Building..."
-#/bin/bundle3.0 install
 
 if test -f "/bin/bundle3.0"; then
   BUNDLE_GEMFILE=/home/ebenimeli/GitHub/CelsoBib/Gemfile /bin/bundle3.0 exec jekyll build /home/ebenimeli/GitHub/CelsoBib/
