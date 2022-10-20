@@ -1,4 +1,9 @@
 - timestamp: 10/20/2022, 12:30:45 PM
+  text: "Test"
+  link: https://t.me/ochoenpunto
+  cat: blogging
+
+- timestamp: 10/20/2022, 12:30:45 PM
   text: "Ocho en punto en Telegram"
   link: https://t.me/ochoenpunto
   cat: blogging
