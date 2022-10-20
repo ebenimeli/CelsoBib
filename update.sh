@@ -22,7 +22,12 @@ git pull
 
 echo "Building..."
 #/bin/bundle3.0 install
-BUNDLE_GEMFILE=/home/ebenimeli/GitHub/CelsoBib/Gemfile /bin/bundle3.0 exec jekyll build /home/ebenimeli/GitHub/CelsoBib/
+
+if test -f "/bin/bundle3.0"; then
+  BUNDLE_GEMFILE=/home/ebenimeli/GitHub/CelsoBib/Gemfile /bin/bundle3.0 exec jekyll build /home/ebenimeli/GitHub/CelsoBib/
+else
+  BUNDLE_GEMFILE=/Users/ebenimeli/Documents/GitHub/CelsoBib/Gemfile bundle exec jekyll build /Users/ebenimeli/Documents/GitHub/CelsoBib/
+fi
 
 WEB=/var/www/vhosts/ebenimeli.org/httpdocs
 if [[ -d "$WEB" ]]; then

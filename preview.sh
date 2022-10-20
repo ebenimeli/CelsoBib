@@ -1,3 +1,2 @@
-bundle install
-./generatesite.sh
+#!/bin/bash
 bundle exec jekyll s
