@@ -35,9 +35,11 @@ description: "Recientemente..."
 
 
       <span class="logtext">{{ log.text }}</span>
+      {% comment %}
       {% if log.timestamp %}
-        <span class="timestamp">[{{ log.timestamp }}]</span>
+      <span class="timestamp">-->[{{ /**log.timestamp**/ }}]</span>
       {% endif %}
+      {% endcomment %}
 
       {%if log.link %}
         <span class="loglink">
