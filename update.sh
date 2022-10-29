@@ -26,6 +26,7 @@ if test -f "/bin/bundle3.0"; then
   BUNDLE_GEMFILE=/home/ebenimeli/GitHub/CelsoBib/Gemfile /bin/bundle3.0 exec jekyll build /home/ebenimeli/GitHub/CelsoBib/
 else
   BUNDLE_GEMFILE=/Users/ebenimeli/Documents/GitHub/CelsoBib/Gemfile bundle exec jekyll build /Users/ebenimeli/Documents/GitHub/CelsoBib/
+  BUNDLE_GEMFILE=/Users/Quique/Documents/GitHub/CelsoBib/Gemfile bundle exec jekyll build /Users/ebenimeli/Documents/GitHub/CelsoBib/
 fi
 
 WEB=/var/www/vhosts/ebenimeli.org/httpdocs
