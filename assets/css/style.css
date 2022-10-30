@@ -315,3 +315,18 @@ div.readprogress {
 .profile-about h2 {
   font-size: 1.5em;
 }
+
+.book-synopsis {
+  font-size: .9em;
+  font-style: italic;
+}
+
+.book-cover {
+  border: 1px solid #dcdcdc;
+  width: 150px;
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 5px;
+}
