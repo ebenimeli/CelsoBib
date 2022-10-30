@@ -299,3 +299,7 @@ div.logs ul li {
 .logitem {
   border-bottom: 1px dotted #000000;
 }
+
+h2.year {
+  font-size: 1.2em;
+}

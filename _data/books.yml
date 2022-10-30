@@ -1,3 +1,12 @@
+- title: Línea de fuego
+  author: Arturo Pérez-Reverte
+  link: https://amzn.to/3sIgjoV
+  image:
+  description:
+  genre: [novela]
+  completed: 'reading'
+  progress: '9%'
+
 - title: La piel del tambor
   author: Arturo Pérez-Reverte
   link: https://amzn.to/3rIRfhc
@@ -20,7 +29,8 @@
   image:
   description:
   genre: [ciencia]
-  completed: '2022'
+  completed: 'reading'
+  progress: '11%'
 
 - title: Antiguo Egipto. Introducción a su historia y cultura
   author: Salima Ikram
