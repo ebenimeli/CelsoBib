@@ -8,12 +8,14 @@ description: "Lo último que he leído"
 {% for book in site.data.books %}
 {% if book.completed == 'reading' %}
     <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}"><i>{{ book.title }}</i></a> de {{ book.author}}
-        {% if book.link %}
-    <a href="{{ book.link }}">→</a>
-    <div class="w3-light-grey w3-round w3-small w3-center w3-border">
+    {% if book.link %}
+      <a href="{{ book.link }}">→</a>
+    {% endif %}
+    {% if book.progress %}
+    <div class="w3-light-grey w3-round w3-small w3-center w3-border readprogress">
       <div class="w3-container w3-round w3-blue" style="width: {{ book.progress }}">{{ book.progress }}</div>
     </div>
-  {% endif %}
+    {% endif %}
 {% endif %}
 {% endfor %}
 </div>

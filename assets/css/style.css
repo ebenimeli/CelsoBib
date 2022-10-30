@@ -303,3 +303,7 @@ div.logs ul li {
 h2.year {
   font-size: 1.2em;
 }
+
+div.readprogress {
+  margin-bottom: 8px;
+}
