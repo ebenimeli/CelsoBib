@@ -307,3 +307,7 @@ h2.year {
 div.readprogress {
   margin-bottom: 8px;
 }
+
+.book-list {
+  font-size: .9em;
+}
