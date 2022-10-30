@@ -309,7 +309,7 @@ div.readprogress {
 }
 
 .book-list {
-  font-size: .9em;
+  font-size: 1em;
 }
 
 .profile-about h2 {
@@ -317,8 +317,8 @@ div.readprogress {
 }
 
 .book-synopsis {
-  font-size: .9em;
-  font-style: italic;
+  font-size: 1em;
+  font-style: normal;
 }
 
 .book-cover {
@@ -329,4 +329,17 @@ div.readprogress {
   margin-bottom: 10px;
   margin-top: 10px;
   padding: 5px;
+}
+
+.book-title {
+  font-size: 1em;
+  /**display: block;**/
+}
+
+.book-author {
+    font-size: .7em;
+}
+
+hr {
+  border-top: .5px dashed #dcdcdc;
 }
