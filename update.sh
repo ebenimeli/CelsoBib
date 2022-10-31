@@ -29,7 +29,7 @@ echo "Building..."
 if test -f "/bin/bundle3.0"; then
   BUNDLE_GEMFILE="$SERVER/Gemfile" /bin/bundle3.0 exec jekyll build /home/ebenimeli/GitHub/CelsoBib/
 else
-  if [[ "$IMAC/Gemfile" ]]; then
+  if [[ -d "$IMAC" ]]; then
     echo "iMac ..."
     BUNDLE_GEMFILE="$IMAC/Gemfile" bundle exec jekyll build $IMAC
   else
