@@ -1,6 +1,10 @@
 #!/bin/bash
 BASE=/home/ebenimeli/GitHub/CelsoBib
 SITEFOLDER="$BASE/_site/"
+IMAC="/Users/ebenimeli/Documents/GitHub/CelsoBib"
+MACBOOK="/Users/Quique/Documents/GitHub/CelsoBib"
+SERVER="/home/ebenimeli/GitHub/CelsoBib"
+
 echo "Site folder: $SITEFOLDER"
 if [[ -d "$SITEFOLDER" ]]; then
     echo "Removing site..."
@@ -23,10 +27,15 @@ git pull
 echo "Building..."
 
 if test -f "/bin/bundle3.0"; then
-  BUNDLE_GEMFILE=/home/ebenimeli/GitHub/CelsoBib/Gemfile /bin/bundle3.0 exec jekyll build /home/ebenimeli/GitHub/CelsoBib/
+  BUNDLE_GEMFILE="$SERVER/Gemfile" /bin/bundle3.0 exec jekyll build /home/ebenimeli/GitHub/CelsoBib/
 else
-  BUNDLE_GEMFILE=/Users/ebenimeli/Documents/GitHub/CelsoBib/Gemfile bundle exec jekyll build /Users/ebenimeli/Documents/GitHub/CelsoBib/
-  BUNDLE_GEMFILE=/Users/Quique/Documents/GitHub/CelsoBib/Gemfile bundle exec jekyll build /Users/ebenimeli/Documents/GitHub/CelsoBib/
+  if [[ "$IMAC/Gemfile" ]]; then
+    echo "iMac ..."
+    BUNDLE_GEMFILE="$IMAC/Gemfile" bundle exec jekyll build $IMAC
+  else
+    echo "MacBook ..."
+    BUNDLE_GEMFILE="$MACBOOK/Gemfile" bundle exec jekyll build $MACBOOK
+  fi
 fi
 
 WEB=/var/www/vhosts/ebenimeli.org/httpdocs
