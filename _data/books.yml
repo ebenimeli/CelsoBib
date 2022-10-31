@@ -1,3 +1,14 @@
+- title: Línea de fuego
+  author: Arturo Pérez-Reverte
+  link: https://amzn.to/3sIgjoV
+  image:
+  description:
+  genre: [novela]
+  completed: 'reading'
+  progress: '14%'
+  synopsis: "En la noche del 24 al 25 de julio de 1938, durante la batalla del Ebro, 2.890 hombres y 14 mujeres de la XI Brigada Mixta del ejército de la República cruzan el río para establecer la cabeza de puente de Castellets del Segre, donde combatirán durante diez días. Sin embargo, ni Castellets, ni la XI Brigada, ni las tropas que se le enfrentan en Línea de fuego existieron nunca. Las unidades militares, los lugares y los personajes que en esta novela aparecen son ficticios, aunque no lo sean los hechos ni los nombres reales en que se inspiran. Fue exactamente así como padres, abuelos y familiares de numerosos españoles de hoy combatieron en ambos bandos durante aquellos días y aquellos trágicos años.<br/>La batalla del Ebro fue la más dura y sangrienta de cuantas se han librado en nuestro suelo, y sobre ella hay abundante documentación, partes de guerra y testimonios personales. Con todo eso, combinando rigor e invención, el autor más leído de la literatura española actual ha construido, no ya una novela sobre la Guerra Civil, sino una formidable novela de hombres y mujeres en cualquier guerra: un relato ecuánime y fascinante donde se recupera la memoria de nuestros padres y abuelos, que es también nuestra propia historia.<br/>Con Línea de fuego, Arturo Pérez-Reverte sitúa con sobrecogedor realismo al lector entre quienes, voluntarios o a la fuerza, estuvieron no en la retaguardia, sino peleando en ambos bandos en los frentes de batalla. En España se han escrito muchas y excelentes novelas sobre esa contienda desde distintas posiciones ideológicas, pero ninguna como ésta. Nunca antes la Guerra Civil se había contado así."
+  cover: "lineadefuego.jpeg"
+
 - title: La piel del tambor
   author: Arturo Pérez-Reverte
   link: https://amzn.to/3rIRfhc
@@ -16,11 +27,20 @@
 
 - title: En busca del origen del lenguaje
   author: Sverker Johansson
-  link: books/en-busca-origen-lenguaje
+  link: https://amzn.to/3fhFRGt
   image:
   description:
   genre: [ciencia]
-  completed: '2022'
+  completed: 'reading'
+  progress: '11%'
+  synopsis: "Un libro fascinante sobre uno de los mayores misterios de la humanidad: el origen del lenguaje.<br/>
+―¿Por qué el mono no responde a lo que le digo? ―pregunta una niña de cuatro años.<br/>
+―Porque los animales no saben hablar ―contesta su papá.<br/>
+―Pero ayer dijiste que las personas también eran animales. Entonces ¿por qué hablan?<br/>
+Hace falta un libro entero para responder a esta última pregunta, y ese libro es el que tienes ahora en tus manos, una historia audaz y entretenida sobre uno de los mayores misterios de la humanidad: el origen del lenguaje.<br/>
+A partir de las investigaciones más recientes en disciplinas tan diversas como la biología evolutiva, la primatología, la neurociencia o la antropología social, Sverker Johansson expone las principales teorías sobre cómo y por qué los humanos comenzaron a hablar. Para ello explora la evolución histórica de las lenguas desde una perspectiva darwiniana, cuestiona las ideas de Chomsky y otros lingüistas reconocidos, compara las habilidades comunicativas de las personas y los animales, y aborda los rasgos característicos de los idiomas modernos.<br/>
+En busca del origen del lenguaje es el libro definitivo para entender cómo se originó el lenguaje humano y por qué hablamos de la manera en que lo hacemos."
+  cover: "origenlenguaje.jpeg"
 
 - title: Antiguo Egipto. Introducción a su historia y cultura
   author: Salima Ikram

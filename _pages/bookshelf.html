@@ -3,9 +3,39 @@ layout: page
 title: ""
 description: "Lo último que he leído"
 ---
+<div class="book-list">
+{% for book in site.data.books %}
+{% if book.completed == 'reading' %}
+    <h2 class="year">
+      <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}">
+        <span class="book-title">«{{ book.title }}»</span>
+      </a><br/>
+    <span class="book-author">{{ book.author}}</span>
+    {% if book.link %}
+      <a href="{{ book.link }}">→</a>
+    {% endif %}
+    </h2>
+
+    {% if book.progress %}
+    <div class="w3-light-grey w3-round w3-small w3-center w3-border readprogress">
+      <div class="w3-container w3-round w3-blue" style="width: {{ book.progress }}">{{ book.progress }}</div>
+    </div>
+    {% endif %}
+    {% if book.synopsis %}
+    {% if book.cover %}
+      <a href="{{ book.link }}"><img src="assets/images/books/{{book.cover}}" class="book-cover"/></a>
+    {% endif %}
+    <p class="book-synopsis">&laquo;{{ book.synopsis }}&raquo;</p>
+    {% endif %}
+    <hr/>
+{% endif %}
+{% endfor %}
+</div>
+
+
 <div class="w-100">
 
-<h2>2022</h2>
+<h2 class="year">2022</h2>
 <ol class="book-list">
 {% for book in site.data.books %}
 {% if book.completed == '2022' %}
@@ -19,7 +49,7 @@ description: "Lo último que he leído"
 {% endfor %}
 </ol>
 
-<h2>2021</h2>
+<h2 class="year">2021</h2>
 <ol class="book-list">
 {% for book in site.data.books %}
 {% if book.completed == '2021' %}
@@ -33,7 +63,7 @@ description: "Lo último que he leído"
 {% endfor %}
 </ol>
 
-<h2>2020</h2>
+<h2 class="year">2020</h2>
 <ol class="book-list">
 {% for book in site.data.books %}
 {% if book.completed == '2020' %}
@@ -47,7 +77,7 @@ description: "Lo último que he leído"
 {% endfor %}
 </ol>
 
-<h2>2019</h2>
+<h2 class="year">2019</h2>
 <ol class="book-list">
 {% for book in site.data.books %}
 {% if book.completed == '2019' %}
@@ -61,7 +91,7 @@ description: "Lo último que he leído"
 {% endfor %}
 </ol>
 
-<h2>2018</h2>
+<h2 class="year">2018</h2>
 <ol class="book-list">
 {% for book in site.data.books %}
 {% if book.completed == '2018' %}

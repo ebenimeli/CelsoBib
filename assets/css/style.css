@@ -299,3 +299,47 @@ div.logs ul li {
 .logitem {
   border-bottom: 1px dotted #000000;
 }
+
+h2.year {
+  font-size: 1.2em;
+}
+
+div.readprogress {
+  margin-bottom: 8px;
+}
+
+.book-list {
+  font-size: 1em;
+}
+
+.profile-about h2 {
+  font-size: 1.5em;
+}
+
+.book-synopsis {
+  font-size: 1em;
+  font-style: normal;
+}
+
+.book-cover {
+  border: 1px solid #dcdcdc;
+  width: 150px;
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.book-title {
+  font-size: 1em;
+  /**display: block;**/
+}
+
+.book-author {
+    font-size: .7em;
+}
+
+hr {
+  border-top: .5px dashed #dcdcdc;
+}
