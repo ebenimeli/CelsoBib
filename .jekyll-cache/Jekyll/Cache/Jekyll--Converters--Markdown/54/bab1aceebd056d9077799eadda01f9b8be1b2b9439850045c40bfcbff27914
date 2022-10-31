@@ -1,0 +1,26 @@
+I"�<p>Hola, mundo es …</p>
+
+<blockquote>
+  <p>En informática, “<a href="https://es.wikipedia.org/wiki/Hola_mundo">Hola, mundo</a>” o “Hello, World!”, en inglés es un programa que muestra el texto «¡Hola, mundo!» en un dispositivo de visualización, en la mayoría de los casos la pantalla de un monitor. Este programa suele ser usado como introducción al estudio de un lenguaje de programación, siendo un primer ejercicio típico, y se considera fundamental desde el punto de vista didáctico.</p>
+</blockquote>
+
+<p>C:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">main</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"Hola, mundo"</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Java:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hola, mundo"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Python:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="s">"Hola, mundo"</span><span class="p">)</span></code></pre></figure>
+
+<p><strong>Wikipedia</strong> | <a href="https://es.wikipedia.org/wiki/Hola_mundo"><em>Hola, mundo</em></a></p>
+:ET
