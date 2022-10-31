@@ -38,4 +38,5 @@ print("Hola, mundo")
 {% endhighlight %}
 
 
-**Wikipedia** \| [*Hola, mundo*](https://es.wikipedia.org/wiki/Hola_mundo)
+**Wikipedia** \| [*Hola, mundo*](https://es.wikipedia.org/wiki/Hola_mundo)<br/>
+**Fotografía** \| [*La Tierra*](https://pixabay.com/es/illustrations/tierra-espacio-luz-de-sol-1756274/)
