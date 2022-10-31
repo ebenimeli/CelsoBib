@@ -10,7 +10,7 @@ if [[ -d "$SITEFOLDER" ]]; then
     echo "Removing site..."
     rm -r "$SITEFOLDER"
 else
-    echo "No _site folder!"
+    echo "No _site folder found!"
 fi
 CACHE="$BASE/.jekyll-cache/"
 echo "Cache folder: $CACHE"
