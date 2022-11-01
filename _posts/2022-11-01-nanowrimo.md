@@ -7,7 +7,7 @@ permalink: /nanowrimo2022/
 categories: Literatura
 tags: [personal,escribir,NaNoWriMo,Scrivener]
 ---
-[![image](assets/images/posts/nanowrimo.png)](https://nanowrimo.org/)
+[![image](assets/images/posts/2022/11/nanowrimo.jpg)](https://nanowrimo.org/)
 
 Hoy empieza el NaNoWriMo. Un mes por delante para quienes desean empezar a escribir un novela y terminarla. Lógicamente y salvo casos muy excepcionales, el resultado no gozará de la calidad deseada. Sin embargo, es una gran oportunidad para juntar unas cuentas letras y hacerlo todos y cada uno de los días de noviembre. De esto va el NaNoWriMo: *National Novel Writing Month* que empezó allá por 1999.
 
