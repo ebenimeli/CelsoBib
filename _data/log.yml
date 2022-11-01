@@ -1,7 +1,12 @@
+- timestamp: 11/01/2022, 08:00:00 AM
+  text: "NaNoWriMo 2022"
+  link: nanowrimo2022
+  cat: blogging
+
 - timestamp: 10/31/2022, 20:53:00 AM
-  text: "Nuevo post: Hola, mundo"
+  text: "Hola, mundo"
   link: hola-mundo
-  cat: news
+  cat: blogging
 
 - timestamp: 10/31/2022, 11:19:00 AM
   text: "Mañana empieza el NaNoWriMo."
