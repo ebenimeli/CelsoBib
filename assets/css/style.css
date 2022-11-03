@@ -343,3 +343,7 @@ div.readprogress {
 hr {
   border-top: .5px dashed #dcdcdc;
 }
+
+strong {
+  font-weight: bold;
+}
