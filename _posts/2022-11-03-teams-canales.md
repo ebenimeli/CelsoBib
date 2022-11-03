@@ -7,9 +7,9 @@ permalink: /teams-canales/
 categories: Informática
 tags: [Teams,organización,comparrtir]
 ---
-![image](assets/images/posts/2022/11/teams_canales_compartidos.png)
-
 Microsoft Teams introduce cada mes muchas mejoras. Una de las últimas funciones es la posibilidad de crear un **canal compartido** en Teams. En general, recomiendo el uso de canales dentro de Teams para organizar mejor la información y, sobre todo, las conversaciones. En esta ocasión, parece que los canales compartidos solo están disponibles en los Teams de equipo (docentes) y no en los de tipo clase.
+
+![image](assets/images/posts/2022/11/teams_canales_compartidos.png)
  
 En un Teams de equipo (en en centro educativo los de nuestros equipos de coordinación) ahora hay 3 tipos de canal:
 -	**Canal estándar**: todos los miembros del equipo pueden acceder.
