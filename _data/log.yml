@@ -1,4 +1,17 @@
+- timestamp: 11/05/2022, 20:12:00 PM
+  text: "Nueva nota: «Otoño, supongo»"
+  link: otono-supongo
+  cat: blogging
 
+- timestamp: 11/05/2022, 20:07:00 PM
+  text: "Los activistas ecológicos (eso creen ellos) podrían dejar los museos en paz. Están asociando ecologismo con vandalismo. Es lo único que logran, poco más."
+  link: https://twitter.com/enriquebenimeli/status/1588891905332420608
+  cat: news
+
+- timestamp: 11/05/2022, 20:05:00 PM
+  text: "Nueva nota: «O'Reilly & Co.»"
+  link: oreillyandco
+  cat: blogging
 
 - timestamp: 11/04/2022, 19:50:00 PM
   text: "Ayer aprendí el adjetivo «inmarcesible». Ya está la lista de palabras favoritas."
