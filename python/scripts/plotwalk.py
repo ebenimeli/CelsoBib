@@ -7,6 +7,6 @@ x = data[0]
 y = data[1]
 plt.plot(x, y,'r--')
 plt.xlabel("días desde el 12/11/2022");
-plt.ylabel("pasos");
+plt.ylabel("km");
 
 plt.savefig('figures/walk.png')
