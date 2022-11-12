@@ -7,7 +7,7 @@ x = data[0]
 y = data[1]
 plt.plot(x, y,'r--')
 #plt.bar(x,y);
-plt.xlabel("días desde el 12/11/2022");
+plt.xlabel("días");
 plt.ylabel("páginas");
 
 plt.savefig('figures/reading.png')

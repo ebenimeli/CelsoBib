@@ -9,7 +9,7 @@ z = data[2]
 plt.bar(x,z);
 plt.plot(x, y,'r--')
 
-plt.xlabel("días desde el 12/11/2022");
+plt.xlabel("días");
 plt.ylabel("palabras");
 
 
