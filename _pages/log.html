@@ -3,6 +3,8 @@ layout: page
 title: ""
 description: "Recientemente..."
 ---
+
+
 <div class="w-100">
 
 <div class="logs">
@@ -13,6 +15,17 @@ description: "Recientemente..."
 {% endfor %}
 
 <ul>
+
+  {% for post in site.posts limit:1 %}
+    <li>📌&nbsp; <a class="post-title" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+    (<time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date: "%d.%m.%Y" }}</time>)
+    <span class="loglink">
+      <a href="{{ post.url }}">→</a>
+    </span>
+    </li>
+    <li>&nbsp;</li>
+  {% endfor %}
+
 {% assign i = nrecords %}
 {% for log in site.data.log %}
       <li class="logitem">
@@ -35,7 +48,7 @@ description: "Recientemente..."
 
 
       <span class="logtext">{{ log.text }}</span>
-      
+
       {%if log.link %}
         <span class="loglink">
           <a title="{{ log.timestamp }}" href="{{ log.link }}">→</a>
@@ -46,4 +59,4 @@ description: "Recientemente..."
 {% endfor %}
 </ul>
 </div>
-</div>
+</div
