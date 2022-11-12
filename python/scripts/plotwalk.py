@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 x = data[0]
 y = data[1]
 plt.plot(x, y,'r--')
-plt.xlabel("días desde el 12/11/2022");
+plt.xlabel("días desde el 01/11/2022");
 plt.ylabel("km");
 
 plt.savefig('figures/walk.png')
