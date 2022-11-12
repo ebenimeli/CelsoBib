@@ -1,5 +1,5 @@
 import pandas as pd
-data = pd.read_csv('writing.txt',sep='\s+',header=None)
+data = pd.read_csv('data/writing.txt',sep='\s+',header=None)
 data = pd.DataFrame(data)
 
 import matplotlib.pyplot as plt
@@ -13,5 +13,5 @@ plt.xlabel("días desde el 12/11/2022");
 plt.ylabel("palabras");
 
 
-plt.savefig('writing.png')
+plt.savefig('figures/writing.png')
 #plt.show();

@@ -1,5 +1,5 @@
 import pandas as pd
-data = pd.read_csv('elo.txt',sep='\s+',header=None)
+data = pd.read_csv('data/elo.txt',sep='\s+',header=None)
 data = pd.DataFrame(data)
 
 import matplotlib.pyplot as plt
@@ -9,4 +9,4 @@ plt.plot(x, y,'r--')
 plt.xlabel("Días");
 plt.ylabel("ELO");
 
-plt.savefig('evolution.png')
+plt.savefig('figures/evolution.png')
