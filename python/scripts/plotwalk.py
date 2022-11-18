@@ -10,3 +10,4 @@ plt.xlabel("días");
 plt.ylabel("km");
 
 plt.savefig('figures/walk.png')
+# plt.show()
