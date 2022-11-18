@@ -32,6 +32,19 @@ description: "Lo último que he leído"
 {% endfor %}
 </div>
 
+<div class="w-100">
+
+<h2 class="year">Mis favoritos ⭐️⭐️⭐️⭐️⭐️</h2>
+<ol class="book-list">
+{% for book in site.data.books %}
+{% if book.rating == 5 %}
+      <li>
+        <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}"><i>{{ book.title }}</i></a> de {{ book.author}}
+      </li>
+{% endif %}
+{% endfor %}
+</ol>
+
 
 <div class="w-100">
 
@@ -41,8 +54,10 @@ description: "Lo último que he leído"
 {% if book.completed == '2022' %}
       <li>
         <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}"><i>{{ book.title }}</i></a> de {{ book.author}}
-        {% if book.link %}
-          <a href="{{ book.link }}">→</a>
+        {% if book.rating %}
+          {% for y in (1..book.rating) %}
+          ⭐️
+          {% endfor %}
         {% endif %}
       </li>
 {% endif %}
@@ -55,8 +70,10 @@ description: "Lo último que he leído"
 {% if book.completed == '2021' %}
       <li>
         <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}"><i>{{ book.title }}</i></a> de {{ book.author}}
-        {% if book.link %}
-          <a href="{{ book.link }}">→</a>
+        {% if book.rating %}
+          {% for y in (1..book.rating) %}
+          ⭐️
+          {% endfor %}
         {% endif %}
       </li>
 {% endif %}
@@ -69,8 +86,10 @@ description: "Lo último que he leído"
 {% if book.completed == '2020' %}
       <li>
         <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}"><i>{{ book.title }}</i></a> de {{ book.author}}
-        {% if book.link %}
-          <a href="{{ book.link }}">→</a>
+        {% if book.rating %}
+          {% for y in (1..book.rating) %}
+          ⭐️
+          {% endfor %}
         {% endif %}
       </li>
 {% endif %}
@@ -83,8 +102,10 @@ description: "Lo último que he leído"
 {% if book.completed == '2019' %}
       <li>
         <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}"><i>{{ book.title }}</i></a> de {{ book.author}}
-        {% if book.link %}
-          <a href="{{ book.link }}">→</a>
+        {% if book.rating %}
+          {% for y in (1..book.rating) %}
+          ⭐️
+          {% endfor %}
         {% endif %}
       </li>
 {% endif %}
@@ -97,8 +118,26 @@ description: "Lo último que he leído"
 {% if book.completed == '2018' %}
       <li>
         <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}"><i>{{ book.title }}</i></a> de {{ book.author}}
-        {% if book.link %}
-          <a href="{{ book.link }}">→</a>
+        {% if book.rating %}
+          {% for y in (1..book.rating) %}
+          ⭐️
+          {% endfor %}
+        {% endif %}
+      </li>
+{% endif %}
+{% endfor %}
+</ol>
+
+<h2 class="year">2017</h2>
+<ol class="book-list">
+{% for book in site.data.books %}
+{% if book.completed == '2017' %}
+      <li>
+        <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}"><i>{{ book.title }}</i></a> de {{ book.author}}
+        {% if book.rating %}
+          {% for y in (1..book.rating) %}
+          ⭐️
+          {% endfor %}
         {% endif %}
       </li>
 {% endif %}
