@@ -16,7 +16,7 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   image:
   description:
   genre: [novela]
-  completed: '2022'
+  completed: 2022
   progress: '19%'
   synopsis: "En la noche del 24 al 25 de julio de 1938, durante la batalla del Ebro, 2.890 hombres y 14 mujeres de la XI Brigada Mixta del ejército de la República cruzan el río para establecer la cabeza de puente de Castellets del Segre, donde combatirán durante diez días. Sin embargo, ni Castellets, ni la XI Brigada, ni las tropas que se le enfrentan en Línea de fuego existieron nunca. Las unidades militares, los lugares y los personajes que en esta novela aparecen son ficticios, aunque no lo sean los hechos ni los nombres reales en que se inspiran. Fue exactamente así como padres, abuelos y familiares de numerosos españoles de hoy combatieron en ambos bandos durante aquellos días y aquellos trágicos años.<br/>La batalla del Ebro fue la más dura y sangrienta de cuantas se han librado en nuestro suelo, y sobre ella hay abundante documentación, partes de guerra y testimonios personales. Con todo eso, combinando rigor e invención, el autor más leído de la literatura española actual ha construido, no ya una novela sobre la Guerra Civil, sino una formidable novela de hombres y mujeres en cualquier guerra: un relato ecuánime y fascinante donde se recupera la memoria de nuestros padres y abuelos, que es también nuestra propia historia.<br/>Con Línea de fuego, Arturo Pérez-Reverte sitúa con sobrecogedor realismo al lector entre quienes, voluntarios o a la fuerza, estuvieron no en la retaguardia, sino peleando en ambos bandos en los frentes de batalla. En España se han escrito muchas y excelentes novelas sobre esa contienda desde distintas posiciones ideológicas, pero ninguna como ésta. Nunca antes la Guerra Civil se había contado así."
   cover: "lineadefuego.jpeg"
@@ -27,7 +27,7 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   image:
   description:
   genre: [novela]
-  completed: '2022'
+  completed: 2022
   rating:
 
 - title: El cerebro bilingüe. La neurociencia del lenguaje
@@ -36,7 +36,7 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   image:
   description:
   genre: [ciencia]
-  completed: '2022'
+  completed: 2022
 
 - title: En busca del origen del lenguaje
   author: Sverker Johansson
@@ -44,7 +44,7 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   image:
   description:
   genre: [ciencia]
-  completed: 'reading'
+  completed: '2022'
   progress: '16%'
   synopsis: "Un libro fascinante sobre uno de los mayores misterios de la humanidad: el origen del lenguaje.<br/>
 ―¿Por qué el mono no responde a lo que le digo? ―pregunta una niña de cuatro años.<br/>
@@ -61,7 +61,7 @@ En busca del origen del lenguaje es el libro definitivo para entender cómo se o
   image:
   description:
   genre: [historia]
-  completed: '2022'
+  completed: 2022
 
 - title: Imperios y espadazos. Una historia de la Antigüedad para no aburrir(te)
   author: Andoni Garrido Fernández
@@ -69,32 +69,32 @@ En busca del origen del lenguaje es el libro definitivo para entender cómo se o
   image:
   description:
   genre: [historia]
-  completed: '2022'
+  completed: 2022
 
 - title: "Céntrate (Deep Work)"
   author: Cal Newport
   link: https://amzn.to/3Xeb1iW
-  completed: '2022'
+  completed: 2022
 
 - title: "La Edad Media. Una historia gráfica"
   author: Eleanor Janega y Neil Max Emmanuel
   link: https://amzn.to/3hU1hKP
-  completed: '2022'
+  completed: 2022
 
 - title: "Ajedrez y ciencia, pasiones mezcladas"
   author: Leontxo García
   link: https://amzn.to/3EHrsgu
-  completed: '2022'
+  completed: 2022
 
 - title: "Nikola Tesla. El hombre que inventó el siglo XX"
   author: Charo González Casas
   link: https://amzn.to/3UT5ahI
-  completed: '2022'
+  completed: 2022
 
 - title: "La fábrica de cretinos digitales"
   author: Michel Desmurget
   link: https://amzn.to/3XddMkK
-  completed: '2022'
+  completed: 2022
 
 #2021
 
@@ -104,693 +104,703 @@ En busca del origen del lenguaje es el libro definitivo para entender cómo se o
   image:
   description:
   genre: [historia]
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: El mensaje de Pandora
   author: Javier Sierra
   link: https://amzn.to/3Xe4xRh
-  completed: '2021'
+  completed: 2021
   rating: 2
 
 - title: La España vacía
   author: Sergio del Molino
   link: https://amzn.to/3EiwKOd
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: La ciudad del vapor
   author: Carlos Ruiz Zafón
   link: https://amzn.to/3tE12WR
-  completed: '2021'
+  completed: 2021
   rating: 5
+  fav: 'yes'
 
 - title: Loba negra
   author: Juan Gómez-Jurado
   link: https://amzn.to/3GqCGHt
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: Ikigai. Los secretos de Japón para una vida larga y feliz
   author: H. García y F. Miralles
   link: https://amzn.to/3EHvR3a
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: ¿Cuánta tierra necesita un hombre?
   author: León Tolstói
   link: https://amzn.to/3giJv3j
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: Aprendiendo de los mejores 2
   author: Francisco Alcaide
   link: https://amzn.to/3ggkgPd
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: Mentes maravillosas
   author: Ian Stewart
   link: https://amzn.to/3UNgdJ2
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: En busca del fuego
   author: José Antonio Cabezas
   link: https://amzn.to/3tMVOry
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: El empleo del futuro
   author: Manuel Hidalgo
   link: https://amzn.to/3hZb56k
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: Rey blanco
   author: Juan Gómez-Jurado (7)
   link: https://amzn.to/3ggpPNs
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: La librera y el ladrón
   author: Oliver Espinosa
   link: https://amzn.to/3EJjXFS
-  completed: '2021'
+  completed: 2021
   rating: 3
 
 - title: La traductora de Toledo
   author: Pilar Cabrera Laguna
   link: https://amzn.to/3tEK62q
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: Eso no estaba en mi libro de la Guerra Fría
   author: Juan José Primo Jurado
   link: https://amzn.to/3GqDAnl
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: La ruta prohibida y otros enigmas de la historia
   author: Javier Sierra
   link: https://amzn.to/3EkT4qu
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: Aprendiendo de los mejores 3
   author: Francisco Alcaide
   link: https://amzn.to/3OlP25H
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: El enigma de la habitación 622
   author: Joël Dicker
   link: https://amzn.to/3GolRNw
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: Una pequeña historia de la filosofía
   author: Nigel Warburton
   link: https://amzn.to/3UZV7qG
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: La familia del Prado
   author: Juan Eslava Galán
   link: https://amzn.to/3EiuhmN
-  completed: '2021'
+  completed: 2021
   rating: 5
 
 - title: Alan Turing. El pionero de la era de la información
   author: Brian Jack Copeland
   link: https://amzn.to/3ArRuCa
-  completed: '2021'
+  completed: 2021
   rating: 5
+  fav: 'yes'
 
 - title: Manipulando la historia. Operaciones de falsa bandera. Del Maine al golpe de Estado en Turquía
   author: Eric Frattini
   link: https://amzn.to/3tGclgX
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: Eso no estaba en mi libro de Japón
   author: Beatriz Lizana
   link: https://amzn.to/3Xcry78
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 - title: Novela de ajedrez
   author: Stefan Zweig
   link: https://amzn.to/3Gom2IG
-  completed: '2021'
+  completed: 2021
   rating: 5
 
 - title: Autorretrato sin mí
   author: Fernando Aramburu
   link: https://amzn.to/3hZqt2c
-  completed: '2021'
+  completed: 2021
   rating: 4
 
 #2020
 - title: Una lengua muy muy larga
   author: Lola Pons Rodríguez
   link: https://amzn.to/3VefTDb
-  completed: '2020'
+  completed: 2020
   rating: 5
 
 - title: Claves del lenguaje humano
   author: María Victoria Escandell Vidal y otros
   link: https://amzn.to/3OqBNRq
-  completed: '2020'
+  completed: 2020
   rating: 3
 
 - title: Somos lo que hablamos
   author: Luis Rojas Marcos
   link: https://amzn.to/3XjQSIC
-  completed: '2020'
+  completed: 2020
   rating: 3
 
 - title: Viviendo en el futuro
   author: Enrique Dans
   link: https://amzn.to/3GvqO7m
-  completed: '2020'
+  completed: 2020
   rating: 3
 
 - title: Ada Lovelace. La formación de una científica informática
   author: C. Hollings, U. Martin y A. Rice
   link: https://amzn.to/3UQk0W8
-  completed: '2020'
+  completed: 2020
   rating: 4
 
 - title: Teorías lingüísticas
   author: Ricardo Mairal
   link: https://amzn.to/3AsGi8a
-  completed: '2020'
+  completed: 2020
   rating: 4
 
 - title: Patria
   author: Fernando Aramburu
   link: https://amzn.to/3V7HwOa
-  completed: '2020'
+  completed: 2020
   rating: 5
+  fav: 'yes'
 
 - title: Saber hablar
   author: Instituto Cervantes
   link: https://amzn.to/3ElzuKP
-  completed: '2020'
+  completed: 2020
   rating: 4
 
 - title: Lo imprevisible
   author: Marta García Aller
   link: https://amzn.to/3TUBm2B
-  completed: '2020'
+  completed: 2020
   rating: 3
 
 - title: Goodbye, Things. The New Japanese Minimalism
   author: Fumio Sasaki
   link: https://amzn.to/3hOdmkp
-  completed: '2020'
+  completed: 2020
   rating: 4
 
 - title: ¡Loca! Juana, reina de Castilla
   author: Neus Arqués
   link: https://amzn.to/3EoEuhP
-  completed: '2020'
+  completed: 2020
   rating: 3
 
 - title: It Doesn't Have to Be Crazy at Work
   author: J. Fried y D. Heinemeier Hansson
   link:
-  completed: '2020'
+  completed: 2020
   rating: 3
 
 - title: La revolución de la productividad
   author: Marc Reklau
   link: https://amzn.to/3tGjQo7
-  completed: '2020'
+  completed: 2020
   rating: 3
 
 - title: El enemigo conoce el sistema
   author: Marta Peirano
   link: https://amzn.to/3EJMATv
-  completed: '2020'
+  completed: 2020
   rating: 5
+  fav: 'yes'
 
 - title: Babel. La vuelta al mundo en 20 idiomas
   author: Gaston Dorren
   link: https://amzn.to/3OljOvB
-  completed: '2020'
+  completed: 2020
   rating: 5
+  fav: 'yes'
 
 - title: Tierra firme
   author: Matilde Asensi
   link: https://amzn.to/3EL9b1U
-  completed: '2020'
+  completed: 2020
   rating: 4
 
 - title: El árbol de la lengua
   author: Lola Pons Rodríguez
   link: https://amzn.to/3ELA85N
-  completed: '2020'
+  completed: 2020
   rating: 5
 
 - title: ¿Qué clase de criaturas somos?
   author: Noam Chomsky
   link: https://amzn.to/3V7cFkL
-  completed: '2020'
+  completed: 2020
   rating: 4
 
 - title: Hello World. How to be Human in the Age of the Machine
   author: Hannah Fry
   link: https://amzn.to/3As4jfJ
-  completed: '2020'
+  completed: 2020
   rating: 4
 
 - title: 500 años de frío
   author: Javier Peláez
   link: https://amzn.to/3hR5AX8
-  completed: '2020'
+  completed: 2020
   rating: 4
 
 - title: Poética de Aristóteles (Ed. trilingüe)
   author: Valentín García Yebra
   link: https://amzn.to/3hR5GxY
-  completed: '2020'
+  completed: 2020
   rating: 3
 
 - title: Cantar de Mío Cid
   author: Anónimo
   link: https://amzn.to/3OhmKcB
-  completed: '2020'
+  completed: 2020
   rating: 3
 
 - title: Reina Roja
   author: Juan Gómez-Jurado
   link: https://amzn.to/3EI3ZMm
-  completed: '2020'
+  completed: 2020
   rating: 4
 
 - title: El enigma de Colón y los descubrimientos de América
   author: Juan Eslava Galán
   link: https://amzn.to/3Xf6RaJ
-  completed: '2020'
+  completed: 2020
   rating: 3
 
 #2019
 - title: 21 lecciones para el siglo XXI
   author: Yuval Noah Harari
   link: https://amzn.to/3OiKe0W
-  completed: '2019'
+  completed: 2019
   rating: 5
 
 - title: ¿Cuándo? La ciencia de encontrar el momento preciso
   author: Daniel H. Pink
   link: https://amzn.to/3XeHplz
-  completed: '2019'
+  completed: 2019
   rating: 3
 
 - title: Por encima de la lluvia
   author: Víctor del Árbol
   link: https://amzn.to/3VcLkxq
-  completed: '2019'
+  completed: 2019
   rating: 3
 
 - title: Aprendiendo de los mejores
   author: Francisco Alcaide
   link: https://amzn.to/3V9o9Eb
-  completed: '2019'
+  completed: 2019
   rating: 3
 
 - title: Desconecta
   author: Marc Masip
   link: https://amzn.to/3gli1Ks
-  completed: '2019'
+  completed: 2019
   rating: 3
 
 - title: El orden del día
   author: Éric Vuillard
   link: https://amzn.to/3EM1XuH
-  completed: '2019'
+  completed: 2019
   rating: 3
 
 - title: 50 líderes que hicieron historia
   author: Luis Huete y Javier García
   link: https://amzn.to/3ghSSjI
-  completed: '2019'
+  completed: 2019
   rating: 3
 
 - title: El alma de los pulpos
   author: Sy Montgomery
   link: https://amzn.to/3tJSMEH
-  completed: '2019'
+  completed: 2019
   rating: 3
 
 - title: La maleta de Ana
   author: Celia Santos
   link: https://amzn.to/3Eoujty
-  completed: '2019'
+  completed: 2019
   rating: 3
 
 - title: ¿Qué haremos cuando las máquinas lo hagan todo?
   author: M. Frank, P. Roehrig y B. Pring
   link: https://amzn.to/3tGYUO3
-  completed: '2019'
+  completed: 2019
   rating: 3
 
 - title: Científicas
   author: Jorge Bolívar
   link: https://amzn.to/3XfRoHm
-  completed: '2019'
+  completed: 2019
   rating: 4
 
 - title: wabi sabi. Aprender a aceptar la imperfección
   author: Tomás Navarro
   link: https://amzn.to/3ge869C
-  completed: '2019'
+  completed: 2019
   rating: 4
 
 - title: Pretérito imperfecto
   author: Nieves Concostrina
   link: https://amzn.to/3hVXHjg
-  completed: '2019'
+  completed: 2019
   rating: 3
 
 - title: Conversaciones con mi enano de jardín
   author: Jean-Paul Didierlaurent
   link: https://amzn.to/3V9oy9F
-  completed: '2019'
+  completed: 2019
   rating: 5
+  fav: 'yes'
 
 - title: Una historia de España
   author: Arturo Pérez-Reverte
   link: https://amzn.to/3gmCTku
-  completed: '2019'
+  completed: 2019
   rating: 5
 
 - title: La influencia silenciosa
   author: Roberto Brasero
   link: https://amzn.to/3XlcUe2
-  completed: '2019'
+  completed: 2019
   rating: 4
 
 - title: Desde la sombra
   author: Juan José Millás
   link: https://amzn.to/3TOYgbN
-  completed: '2019'
+  completed: 2019
   rating: 5
 
 - title: La biblioteca secreta
   author: Haruki Murakami
-  link:
-  completed: '2019'
+  link: https://amzn.to/3VczF1O
+  completed: 2019
   rating: 3
 
 - title: Hábitos atómicos
   author: James Clear
-  link:
-  completed: '2019'
+  link: https://amzn.to/3Vedeci
+  completed: 2019
   rating: 4
 
 - title: Historia de España contada para escépticos
   author: Juan Eslava Galán
-  link:
-  completed: '2019'
+  link: https://amzn.to/3USw3SC
+  completed: 2019
   rating: 4
 
 - title: Vigilancia permanente
   author: Edward Snowden
-  link:
-  completed: '2019'
+  link: https://amzn.to/3Gx0Pwa
+  completed: 2019
   rating: 4
 
 - title: Sidi
   author: Arturo Pérez-Reverte
-  link:
-  completed: '2019'
+  link: https://amzn.to/3hMaqVs
+  completed: 2019
   rating: 4
 
 - title: Reiníciate
   author: Antonio Fornés
-  link:
-  completed: '2019'
+  link: https://amzn.to/3OkZiLu
+  completed: 2019
   rating: 2
 
 - title: Anatomía de un instante
   author: Javier Cercas
-  link:
-  completed: '2019'
+  link: https://amzn.to/3OmrvBx
+  completed: 2019
   rating: 5
 
 #2018
-- title: «Los hombres que no amaban a las mujeres»
+- title: Los hombres que no amaban a las mujeres
   author: Stieg Larsson
-  link:
-  completed: '2018'
+  link: https://amzn.to/3EM2mgz
+  completed: 2018
   rating: 4
 
 - title: «El resto de sus vidas»
   author: Jean-Paul Didierlaurent
   link:
-  completed: '2018'
+  completed: 2018
   rating: 5
+  fav: 'yes'
 
 - title: «El fuego invisible»
   author: Javier Sierra
   link:
-  completed: '2018'
+  completed: 2018
   rating: 4
 
 - title: «El Premio Nobel de Literatura»
   author: Sture Allén y Kjell Espmark
   link:
-  completed: '2018'
+  completed: 2018
   rating: 3
 
 - title: «Dublín de cerca»
   author: Fionn Davenport
   link:
-  completed: '2018'
+  completed: 2018
   rating: 4
 
 - title: «Falcó»
   author: Arturo Pérez-Reverte
   link:
-  completed: '2018'
+  completed: 2018
   rating: 5
 
 - title: «Que nadie duerma»
   author: Juan José Millás
   link:
-  completed: '2018'
+  completed: 2018
   rating: 4
 
 - title: «Eva»
   author: Arturo Pérez-Reverte
   link:
-  completed: '2018'
+  completed: 2018
   rating: 5
 
 - title: «Historia mínima de España»
   author: Juan Pablo Fusi
   link:
-  completed: '2018'
+  completed: 2018
   rating: 3
 
 - title: «Sabotaje»
   author: Arturo Pérez-Reverte
   link:
-  completed: '2018'
+  completed: 2018
   rating: 4
 
 - title: «Sapiens. De animales a dioses»
   author: Yuval Noah Harari
   link:
-  completed: '2018'
+  completed: 2018
   rating: 5
+  fav: 'yes'
 
 - title: «Jacquard's Web»
   author: James Essinger
   link:
-  completed: '2018'
+  completed: 2018
   rating: 5
 
 - title: «Momentos estelares de la historia de España»
   author: José Calvo Poyato
   link:
-  completed: '2018'
+  completed: 2018
   rating: 3
 
 - title: «La librería»
   author: Penelope Fitzgerald
   link:
-  completed: '2018'
+  completed: 2018
   rating: 2
 
 - title: «La vida secreta de las vacas»
   author: Rosamund Young
   link:
-  completed: '2018'
+  completed: 2018
   rating: 2
 
 - title: «La semana laboral de 4 horas»
   author: Timothy Ferriss
   link:
-  completed: '2018'
+  completed: 2018
   rating: 3
 
 - title: «Más tiempo para los más ocupados»
   author: Berto Pena
   link:
-  completed: '2018'
+  completed: 2018
   rating: 3
 
 - title: «Breves respuestas a las grandes preguntas»
   author: Stephen Hawking
   link:
-  completed: '2018'
+  completed: 2018
   rating: 3
 
 - title: «¿Qué es comer sano?»
   author: J.M. Mulet
   link:
-  completed: '2018'
+  completed: 2018
   rating: 4
 
 - title: «Homo Deus. Breve historia del mañana»
   author: Yuval Noah Harari
   link:
-  completed: '2018'
+  completed: 2018
   rating: 5
+  fav: 'yes'
 
 #2017
 - title: «El laberinto de los espíritus»
   author: Carlos Ruiz Zafón
   link:
-  completed: '2017'
+  completed: 2017
   rating: 4
 
 - title: «Medicina sin engaños»
   author: J.M. Mulet
   link:
-  completed: '2017'
+  completed: 2017
   rating: 4
 
 - title: «Los nativos digitales no existen»
   author: S. Lluna y J. Pedreira
   link:
-  completed: '2017'
+  completed: 2017
   rating: 4
 
 - title: «La sociedad gaseosa»
   author: Alberto Royo
   link:
-  completed: '2017'
+  completed: 2017
   rating: 5
+  fav: 'yes'
 
 - title: «El efecto matrimonio»
   author: Graeme Simsion
   link:
-  completed: '2017'
+  completed: 2017
   rating: 4
 
 - title: «Transgénicos sin miedo»
   author: J.M. Mulet
   link:
-  completed: '2017'
+  completed: 2017
   rating: 5
 
 - title: «Un año en Roma»
   author: Anthony Doerr
   link:
-  completed: '2017'
+  completed: 2017
   rating: 4
 
 - title: «Roma de cerca»
   author: Duncan Garwood
   link:
-  completed: '2017'
+  completed: 2017
   rating: 4
 
 - title: «Roma. Una historia cultural»
   author: Robert Hughes
   link:
-  completed: '2017'
+  completed: 2017
   rating: 4
 
 - title: «Los productos naturales ¡vaya timo!»
   author: J.M. Mulet
   link:
-  completed: '2017'
+  completed: 2017
   rating: 4
 
 - title: «Cuando llega la luz»
   author: Clara Sánchez
   link:
-  completed: '2017'
+  completed: 2017
   rating: 5
 
 - title: «Breve historia del mundo»
   author: Ernst H. Gombrich
   link:
-  completed: '2017'
+  completed: 2017
   rating: 4
 
 - title: «En la piel de una yihadista»
   author: Anna Erelle
   link:
-  completed: '2017'
+  completed: 2017
   rating: 4
 
 - title: «Historia y ciencia de los viajes en el tiempo»
   author: José Antonio de la Peña
   link:
-  completed: '2017'
+  completed: 2017
   rating: 3
 
 - title: «Cómo hacemos las cosas en IKEA»
   author: Anders Dahlvig
   link:
-  completed: '2017'
+  completed: 2017
   rating: 4
 
 - title: «Los secretos que jamás te contaron. Para vivir en este mundo y ser feliz cada día»
   author: Albert Espinosa
   link:
-  completed: '2017'
+  completed: 2017
   rating: 2
 
 - title: «Organízate con eficacia»
   author: David Allen
   link:
-  completed: '2017'
+  completed: 2017
   rating: 5
 
 - title: «Educative Innovéision»
   author: Jordi Martí
   link:
-  completed: '2017'
+  completed: 2017
   rating: 4
 
 - title: «La catedral de Turing»
   author: George Dyson
   link:
-  completed: '2017'
+  completed: 2017
   rating: 4
 
 - title: «No Plot? No Problem!»
   author: Chris Baty
   link:
-  completed: '2017'
+  completed: 2017
   rating: 3
 
 - title: «Las estrategias del narrador»
   author: Silvia Adela Kohan
   link:
-  completed: '2017'
+  completed: 2017
   rating: 4
 
 - title: «Estocolmo de cerca»
   author: Becky Ohlsen
   link:
-  completed: '2017'
+  completed: 2017
   rating: 4

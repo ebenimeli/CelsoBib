@@ -315,6 +315,7 @@ div.readprogress {
 .book-list li {
   list-style-type: none;
   margin-left: -40px;
+  text-align: left;
 }
 
 .profile-about h2 {
@@ -339,6 +340,13 @@ div.readprogress {
 .book-title {
   font-size: 1em;
   /**display: block;**/
+}
+
+.book-title:hover {
+  border-bottom: 1px solid Black;
+  font-weight: bold;
+  color: Black;
+  /*margin-left: 10px;*/
 }
 
 .book-author {
