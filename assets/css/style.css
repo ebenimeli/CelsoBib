@@ -343,9 +343,8 @@ div.readprogress {
 }
 
 .book-title:hover {
-  border-bottom: 1px solid Black;
+  border-bottom: 1px solid;
   font-weight: bold;
-  color: Black;
   /*margin-left: 10px;*/
 }
 
