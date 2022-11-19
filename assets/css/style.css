@@ -312,6 +312,11 @@ div.readprogress {
   font-size: 1em;
 }
 
+.book-list li {
+  list-style-type: none;
+  margin-left: -40px;
+}
+
 .profile-about h2 {
   font-size: 1.5em;
 }
@@ -349,5 +354,5 @@ strong {
 }
 
 .star-rating {
-  font-size: .7em;
+  font-size: .5em;
 }
