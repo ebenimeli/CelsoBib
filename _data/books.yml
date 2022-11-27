@@ -27,7 +27,7 @@
   image:
   description:
   genre: [novela]
-  completed: 'reading'
+  completed: 'next'
   progress: '10%'
   synopsis: "26 de noviembre de 1504. La reina Isabel la Católica acaba de morir y ya se empiezan a escuchar las voces de la mayoría de los nobles de Castilla, que reclaman a Juana la Loca como su verdadera reina. Fernando de Aragón intenta llegar hasta donde sea necesario para impedir que su yerno, Felipe el Hermoso, le arrebate el gobierno de las tierras castellanas.
 Entretanto, la casa de Austria, mediante una política de pactos y enlaces matrimoniales, pugna por convertirse en la familia más poderosa de Europa. Todos los países de la cristiandad, papado incluido, se enredan en una serie de luchas por el poder en las que el sexo, la violencia y el crimen se utilizan como armas para conseguir sus fines políticos. En medio de todos esos conflictos, una familia de judíos conversos, los Losantos, luchará por sobrevivir a la Inquisición, aunque para ello tenga que renunciar a sus propias raíces.<br/>Los Austrias. El vuelo del águila es la gran novela de un tiempo y de un imperio que sentó las bases de un mundo nuevo: nuestro mundo."
@@ -50,8 +50,9 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   image:
   description:
   genre: [novela]
-  completed: 2022
-  rating:
+  completed: '2022'
+  rating: 5
+  fav: 'yes'
 
 - title: El cerebro bilingüe. La neurociencia del lenguaje
   author: Albert Costa
@@ -178,6 +179,7 @@ En busca del origen del lenguaje es el libro definitivo para entender cómo se o
   link: https://amzn.to/3UNgdJ2
   completed: 2021
   rating: 4
+  fav: 'yes'
 
 - title: En busca del fuego
   author: José Antonio Cabezas
@@ -214,6 +216,7 @@ En busca del origen del lenguaje es el libro definitivo para entender cómo se o
   link: https://amzn.to/3GqDAnl
   completed: 2021
   rating: 4
+  fav: 'yes'
 
 - title: La ruta prohibida y otros enigmas de la historia
   author: Javier Sierra
@@ -282,6 +285,7 @@ En busca del origen del lenguaje es el libro definitivo para entender cómo se o
   link: https://amzn.to/3VefTDb
   completed: 2020
   rating: 5
+  fav: 'yes'
 
 - title: Claves del lenguaje humano
   author: María Victoria Escandell Vidal y otros
@@ -527,6 +531,7 @@ En busca del origen del lenguaje es el libro definitivo para entender cómo se o
   link: https://amzn.to/3TOYgbN
   completed: 2019
   rating: 5
+  fav: 'yes'
 
 - title: La biblioteca secreta
   author: Haruki Murakami
@@ -569,6 +574,7 @@ En busca del origen del lenguaje es el libro definitivo para entender cómo se o
   link: https://amzn.to/3OmrvBx
   completed: 2019
   rating: 5
+  fav: 'yes'
 
 #2018
 - title: Los hombres que no amaban a las mujeres
@@ -737,6 +743,7 @@ En busca del origen del lenguaje es el libro definitivo para entender cómo se o
   link: https://amzn.to/3TSzqYH
   completed: 2017
   rating: 4
+  fav: 'yes'
 
 - title: Roma de cerca
   author: Duncan Garwood

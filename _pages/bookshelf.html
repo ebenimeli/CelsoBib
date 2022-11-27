@@ -34,7 +34,7 @@ description: "Rincón de lectura"
 
 <div class="w-100">
 
-<h2 class="year">Mis favoritos ★★★★★</h2>
+<h2 class="year">★★★★★</h2>
 <ol class="book-list">
 {% for book in site.data.books %}
 {% if book.fav == 'yes' %}
@@ -74,13 +74,15 @@ description: "Rincón de lectura"
 
 <div class="w-100">
 
+<h2 class="year">Últimas lecturas</h2>
+
 {% assign y_start = 2021 %}
 {% assign y_end = 2017 %}
 
 {% assign years = {{y_start}} | minus: {{y_end}} %}
 {% for n in (0..{{years}}) %}
 {% assign ty = y_start | minus: {{n}} %}
-<h2 class="year">{{ ty }}</h2>
+<!--<h2 class="year">···</h2>-->
 <ol class="book-list">
 {% for book in site.data.books %}
 {% if book.completed == ty %}
@@ -102,29 +104,5 @@ description: "Rincón de lectura"
 {% endfor %}
 </ol>
 {% endfor %}
-
-<h2 class="year">Lecturas anteriores a 2017<sup>*</sup></h2>
-<ol class="book-list">
-{% for book in site.data.books %}
-{% if book.completed == nil %}
-      <li>
-        {% if book.rating %}
-        <span class="star-rating">
-        {% for y in (1..book.rating) %}
-        ★
-        {% endfor %}
-        {% for z in (book.rating..4) %}
-        ☆
-        {% endfor %}
-        &nbsp;
-        </span>
-        {% endif %}
-        <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}"><i>{{ book.title }}</i></a> de {{ book.author}}
-      </li>
-{% endif %}
-{% endfor %}
-    <li>···</li>
-</ol>
-<p>* Listado en construcción.</p>
 
 </div>
