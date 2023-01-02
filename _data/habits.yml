@@ -1,4 +1,4 @@
-- date: 2023/01/01
+- date: 01/01/2023
   sleep: 7
   riseearly: 6:00
   read: no
@@ -15,8 +15,8 @@
   journal: yes
   family:
 
-- date: 2023/01/02
-  sleep: 7
+- date: 02/01/2023
+  sleep:
   riseearly: 6:00
   read: 30
   chess: win
@@ -32,19 +32,19 @@
   journal: yes
   family: yes
 
-- date: 2023/01/03
-  sleep: 7
-  riseearly: 6:00
-  read: 30
+- date: 03/01/2023
+  sleep:
+  riseearly:
+  read:
   chess:
-  getridof: no
-  declutter: yes
-  deutsch: 30
-  uni: 25
-  walk: 3
+  getridof:
+  declutter:
+  deutsch:
+  uni:
+  walk:
   screentime:
-  gtd: yes
+  gtd:
   write:
-  clothes: yes
-  journal: yes
-  family: yes
+  clothes:
+  journal:
+  family:
