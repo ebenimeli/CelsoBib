@@ -367,6 +367,7 @@ strong {
 table.habits tr td {
   border: 1px dotted #696969;
   text-align: center;
+  font-size: 14px;
 }
 
 table.habits thead th {

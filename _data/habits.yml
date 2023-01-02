@@ -4,47 +4,47 @@
   read: no
   chess: win
   getridof: yes
-  declutter: yes
-  deutsch: 30
-  uni: 25
+  declutter: 'no'
+  deutsch: 0
+  uni: 0
   walk: 3
-  screentime: 2
-  gtd: yes
+  screentime: 3
+  gtd: 'no'
   write: 250
-  clothes: yes
-  journal: yes
+  clothes: 'no'
+  journal: 'no'
   family:
 
 - date: 02/01/2023
-  sleep:
-  riseearly: 6:00
+  sleep: 8
+  riseearly:
   read: 30
   chess: win
-  getridof:
-  declutter: yes
-  deutsch: 30
-  uni: 25
-  walk:
-  screentime: 2
-  gtd: no
-  write: 250
-  clothes: yes
-  journal: yes
+  getridof: 'no'
+  declutter: 'yes'
+  deutsch: 25
+  uni: 0
+  walk: 1.13
+  screentime: 3
+  gtd: 'no'
+  write: 'no'
+  clothes: 'no'
+  journal: 'no'
   family: yes
 
 - date: 03/01/2023
-  sleep:
+  sleep: 0
   riseearly:
   read:
   chess:
-  getridof:
-  declutter:
-  deutsch:
-  uni:
-  walk:
-  screentime:
-  gtd:
-  write:
-  clothes:
-  journal:
-  family:
+  getridof: 'no'
+  declutter: 'no'
+  deutsch: 0
+  uni: 0
+  walk: 0
+  screentime: 1.5
+  gtd: 'no'
+  write: 'no'
+  clothes: 'no'
+  journal: 'no'
+  family: 'no'

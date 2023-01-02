@@ -31,21 +31,21 @@ description: "Hábitos"
 {% for habits in site.data.habits %}
 <tr>
     <td><span title="{{habits.date}}">{{i}}</span></td>
-    <td>{% if habits.sleep == 'X'  %} ❌ {% elsif habits.sleep == nil %} 👆🏼 {% else %} <span title="Sleep">✅</span> {% endif %}</td>
-    <td>{% if habits.riseearly == 'X'  %} ❌ {% elsif habits.riseearly == nil %} 👆🏼  {% else %} ✅ {% endif %}</td>
-    <td>{% if habits.read == 'X'  %} ❌ {% elsif habits.read == nil %} 👆🏼  {% else %} ✅ {% endif %}</td>
-    <td>{% if habits.chess == 'X'  %} ❌ {% elsif habits.chess == nil %} 👆🏼  {% else %} ✅ {% endif %}</td>
-    <td>{% if habits.getridof == 'X'  %} ❌ {% elsif habits.sleep == getridof %} 👆🏼  {% else %} ✅ {% endif %}</td>
-    <td>{% if habits.declutter == 'X'  %} ❌ {% elsif habits.declutter == nil %} 👆🏼  {% else %} ✅ {% endif %}</td>
-    <td>{% if habits.deutsch == 'X'  %} ❌ {% elsif habits.deutsch == nil %} 👆🏼  {% else %} ✅ {% endif %}</td>
-    <td>{% if habits.uni == 'X'  %} ❌ {% elsif habits.uni == nil %} 👆🏼  {% else %} ✅ {% endif %}</td>
-    <td>{% if habits.walk == 'X'  %} ❌ {% elsif habits.walk == nil %} 👆🏼  {% else %} ✅ {% endif %}</td>
-    <td>{% if habits.screentime == 'X'  %} ❌ {% elsif habits.screentime == nil %} 👆🏼  {% else %} ✅ {% endif %}</td>
-    <td>{% if habits.gtd == 'X'  %} ❌ {% elsif habits.gtd == nil %} 👆🏼  {% else %} ✅ {% endif %}</td>
-    <td>{% if habits.write == 'X'  %} ❌ {% elsif habits.write == nil %} 👆🏼  {% else %} ✅ {% endif %}</td>
-    <td>{% if habits.clothes == 'X'  %} ❌ {% elsif habits.clothes == nil %} 👆🏼  {% else %} ✅ {% endif %}</td>
-    <td>{% if habits.journal == 'X'  %} ❌ {% elsif habits.journal == nil %} 👆🏼  {% else %} ✅ {% endif %}</td>
-    <td>{% if habits.family == 'X'  %} ❌ {% elsif habits.family == nil %} 👆🏼  {% else %} ✅ {% endif %}</td>
+    <td>{% if habits.sleep == 'X'  %} ❌ {% elsif habits.sleep < 7 %} · {% else %} <span title="Sleep">✅</span> {% endif %}</td>
+    <td>{% if habits.riseearly == 'X'  %} ❌ {% elsif habits.riseearly == nil %}·{% else %} ✅ {% endif %}</td>
+    <td>{% if habits.read == 'X'  %} ❌ {% elsif habits.read == nil %}·{% else %} ✅ {% endif %}</td>
+    <td>{% if habits.chess == 'X'  %} ❌ {% elsif habits.chess == nil %}·{% else %} ✅ {% endif %}</td>
+    <td>{% if habits.getridof == 'X'  %} ❌ {% elsif habits.getridof == 'no' %}·{% else %} ✅ {% endif %}</td>
+    <td>{% if habits.declutter == 'X'  %} ❌ {% elsif habits.declutter == 'no' %}·{% else %} ✅ {% endif %}</td>
+    <td>{% if habits.deutsch == 'X'  %} ❌ {% elsif habits.deutsch < 25 %}·{% else %} ✅ {% endif %}</td>
+    <td>{% if habits.uni == 'X'  %} ❌ {% elsif habits.uni < 25 %}·{% else %} ✅ {% endif %}</td>
+    <td>{% if habits.walk == 'X'  %} ❌ {% elsif habits.walk < 8 %}·{% else %} ✅ {% endif %}</td>
+    <td>{% if habits.screentime == 'X'  %} ❌ {% elsif habits.screentime > 2 %}·{% else %} ✅ {% endif %}</td>
+    <td>{% if habits.gtd == 'X'  %} ❌ {% elsif habits.gtd == 'no' %}·{% else %} ✅ {% endif %}</td>
+    <td>{% if habits.write == 'X'  %} ❌ {% elsif habits.write == 'no' %}·{% else %} ✅ {% endif %}</td>
+    <td>{% if habits.clothes == 'X'  %} ❌ {% elsif habits.clothes == 'no' %}·{% else %} ✅ {% endif %}</td>
+    <td>{% if habits.journal == 'X'  %} ❌ {% elsif habits.journal == 'no' %}·{% else %} ✅ {% endif %}</td>
+    <td>{% if habits.family == 'X'  %} ❌ {% elsif habits.family == 'no' %}·{% else %} ✅ {% endif %}</td>
 </tr>
 {% assign i = i | plus:1 %}
 {% endfor %}
