@@ -1,0 +1,53 @@
+---
+layout: page
+title: ""
+description: "Hábitos"
+---
+{% assign i = 1 %}
+
+<h1>Hábitos</h1>
+<div>
+<table class="habits">
+  <thead>
+    <tr>
+    <th>DAY</th>
+    <th>SLP</th>
+    <th>RIS</th>
+    <th>REA</th>
+    <th>CHS</th>
+    <th>GRO</th>
+    <th>DEC</th>
+    <th>DEU</th>
+    <th>UNI</th>
+    <th>WLK</th>
+    <th>SCR</th>
+    <th>GTD</th>
+    <th>WRT</th>
+    <th>CLT</th>
+    <th>JRN</th>
+    <th>FAM</th>
+    </tr>
+  </thead>
+{% for habits in site.data.habits %}
+<tr>
+    <td><span title="{{habits.date}}">{{i}}</span></td>
+    <td>{% if habits.sleep == nil  %} ❌ {% else %} <span title="Sleep">✅</span> {% endif %}</td>
+    <td>{% if habits.riseearly == nil  %} ❌ {% else %} ✅ {% endif %}</td>
+    <td>{% if habits.read == nil  %} ❌ {% else %} ✅ {% endif %}</td>
+    <td>{% if habits.chess == nil  %} ❌ {% else %} ✅ {% endif %}</td>
+    <td>{% if habits.getridof == nil  %} ❌ {% else %} ✅ {% endif %}</td>
+    <td>{% if habits.declutter == nil  %} ❌ {% else %} ✅ {% endif %}</td>
+    <td>{% if habits.deutsch == nil  %} ❌ {% else %} ✅ {% endif %}</td>
+    <td>{% if habits.uni == nil  %} ❌ {% else %} ✅ {% endif %}</td>
+    <td>{% if habits.walk == nil  %} ❌ {% else %} ✅ {% endif %}</td>
+    <td>{% if habits.screentime == nil  %} ❌ {% else %} ✅ {% endif %}</td>
+    <td>{% if habits.gtd == nil  %} ❌ {% else %} ✅ {% endif %}</td>
+    <td>{% if habits.write == nil  %} ❌ {% else %} ✅ {% endif %}</td>
+    <td>{% if habits.clothes == nil  %} ❌ {% else %} ✅ {% endif %}</td>
+    <td>{% if habits.journal == nil  %} ❌ {% else %} ✅ {% endif %}</td>
+    <td>{% if habits.family == nil  %} ❌ {% else %} ✅ {% endif %}</td>
+</tr>
+{% assign i = i | plus:1 %}
+{% endfor %}
+</table>
+</div>

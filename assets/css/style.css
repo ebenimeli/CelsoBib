@@ -363,3 +363,12 @@ strong {
 .star-rating {
   font-size: .5em;
 }
+
+table.habits tr td {
+  border: 1px dotted #696969;
+  text-align: center;
+}
+
+table.habits thead th {
+  font-size: 14px;
+}

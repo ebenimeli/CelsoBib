@@ -1,0 +1,50 @@
+- date: 2023/01/01
+  sleep: 7
+  riseearly: 6:00
+  read: no
+  chess: win
+  getridof: yes
+  declutter: yes
+  deutsch: 30
+  uni: 25
+  walk: 3
+  screentime: 2
+  gtd: yes
+  write: 250
+  clothes: yes
+  journal: yes
+  family:
+
+- date: 2023/01/02
+  sleep: 7
+  riseearly: 6:00
+  read: 30
+  chess: win
+  getridof:
+  declutter: yes
+  deutsch: 30
+  uni: 25
+  walk:
+  screentime: 2
+  gtd: no
+  write: 250
+  clothes: yes
+  journal: yes
+  family: yes
+
+- date: 2023/01/03
+  sleep: 7
+  riseearly: 6:00
+  read: 30
+  chess:
+  getridof: no
+  declutter: yes
+  deutsch: 30
+  uni: 25
+  walk: 3
+  screentime:
+  gtd: yes
+  write:
+  clothes: yes
+  journal: yes
+  family: yes
