@@ -1,7 +1,7 @@
 - date: 01/01/2023
   sleep: 7.0
   riseearly: '06:00'
-  read: 60
+  read: 1
   chess: 1
   getridof: 1
   declutter: 0
@@ -18,11 +18,11 @@
 - date: 02/01/2023
   sleep: 8.0
   riseearly: '08:05'
-  read: 60
+  read: 1
   chess: 1
   getridof: 1
   declutter: 10
-  lang: 25
+  lang: 0.5
   uni: 0
   walk: 1.27
   screentime: 7.0
@@ -35,16 +35,16 @@
 - date: 03/01/2023
   sleep: 7.5
   riseearly: '07:16'
-  read: 30
+  read: 0.5
   chess: 1
   getridof: 0
   declutter: 0
-  lang: 0
-  uni: 0
-  walk: 0.1
-  screentime: 0.5
+  lang: 0.5
+  uni: 1.5
+  walk: 5.9
+  screentime: 1.5
   gtd: 'no'
   write: 500
   clothes: 'no'
   journal: 'no'
-  family: 'no'
+  family: 'yes'

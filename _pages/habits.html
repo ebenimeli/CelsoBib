@@ -5,6 +5,11 @@ description: "Hábitos"
 ---
 {% assign i = 1 %}
 
+{% assign sum_uni = 0 %}
+{% assign sum_scr = 0 %}
+{% assign sum_walk = 0 %}
+
+
 <h1>Hábitos</h1>
 <div>
 <table class="habits">
@@ -30,24 +35,151 @@ description: "Hábitos"
   </thead>
 {% for habits in site.data.habits %}
 <tr>
-    <td><span title="{{habits.date}}">{{i}}</span></td>
-    <td>{% if habits.sleep == 'X'  %} ❌ {% elsif habits.sleep < 7 %} ⭕️ {{habits.sleep}} {% else %} <span title="Sleep">✅ {{habits.sleep}}</span> {% endif %}</td>
-    <td>{% if habits.riseearly == 'X'  %} ❌ {% elsif habits.riseearly == nil %}·{% else %} ✅ {{habits.riseearly}} {% endif %}</td>
-    <td>{% if habits.read == 'X'  %} ❌ {% elsif habits.read < 60 %}⭕️ {{habits.read}} {% else %} ✅ {{habits.read}} {% endif %}</td>
-    <td>{% if habits.chess == 'X'  %} ❌ {% elsif habits.chess == nil %}·{% else %} ✅ {{habits.chess}} {% endif %}</td>
-    <td>{% if habits.getridof == 'X'  %} ❌ {% elsif habits.getridof == 0 %}·{% else %} ✅ {{habits.getridof}} {% endif %}</td>
-    <td>{% if habits.declutter == 'X'  %} ❌ {% elsif habits.declutter < 10 %} ⭕️ {{habits.declutter}} {% else %} ✅ {{habits.declutter}} {% endif %}</td>
-    <td>{% if habits.lang == 'X'  %} ❌ {% elsif habits.lang < 25 %} ⭕️ {{habits.lang}} {% else %} ✅ {{habits.lang}} {% endif %}</td>
-    <td>{% if habits.uni == 'X'  %} ❌ {% elsif habits.uni < 25 %} ⭕️ {{habits.uni}} {% else %} ✅ {{habits.uni}} {% endif %}</td>
-    <td>{% if habits.walk == 'X'  %} ❌ {% elsif habits.walk < 8 %}⭕️ {{habits.walk}} {% else %} ✅ {% endif %}</td>
+    <td>
+      <span title="{{habits.date}}">{{i}}</span>
+    </td>
+    <!-- SLEEP -->
+    <td>
+      {% if habits.sleep == 'X'  %} ❌
+      {% elsif habits.sleep < 7 %} ⭕️ {{habits.sleep}}
+      {% else %}
+      <div class="tooltip">✅
+        <span class="tooltiptext">{{habits.sleep}}</span>
+      </div>
+      {% endif %}
+    </td>
+    <!-- EARLY RISER -->
+    <td>
+      {% if habits.riseearly == 'X'  %} ❌
+      {% elsif habits.riseearly == nil %}·
+      {% else %}
+      <div class="tooltip">✅
+        <span class="tooltiptext">{{habits.riseearly}}</span>
+      </div>
+      {% endif %}
+    </td>
+    <!-- READ -->
+    <td>
+      {% if habits.read == 'X'  %} ❌
+      {% elsif habits.read < 0.5 %}⭕️ {{habits.read}}
+      {% else %}
+      <div class="tooltip">✅
+        <span class="tooltiptext">{{habits.read}}</span>
+      </div>
+      {% endif %}
+    </td>
+    <!-- CHESS -->
+    <td>
+      {% if habits.chess == 'X'  %} ❌
+      {% elsif habits.chess == nil %} ⭕️
+      {% else %}
+      <div class="tooltip">✅
+        <span class="tooltiptext">{{habits.chess}}</span>
+      </div>
+      {% endif %}
+    </td>
+    <!-- GET RID OF -->
+    <td>
+      {% if habits.getridof == 'X'  %} ❌
+      {% elsif habits.getridof == 0 %} ⭕️
+      {% else %}
+      <div class="tooltip">✅
+        <span class="tooltiptext">{{habits.getridof}}</span>
+      </div>
+      {% endif %}
+    </td>
+    <!-- DECLUTTER -->
+    <td>
+      {% if habits.declutter == 'X'  %} ❌
+      {% elsif habits.declutter < 10 %}
+      <div class="tooltip"> ⭕️
+        <span class="tooltiptext">{{habits.declutter}}</span>
+      </div>
+      {% else %}
+      <div class="tooltip"> ✅
+        <span class="tooltiptext">{{habits.declutter}}</span>
+      </div>
+      {% endif %}
+    </td>
+    <!-- LANG -->
+    <td>
+      {% if habits.lang == 'X'  %} ❌
+      {% elsif habits.lang < 0.5 %}
+      <div class="tooltip"> ⭕️
+        <span class="tooltiptext">{{habits.lang}}</span>
+      </div>
+      {% else %}
+      <div class="tooltip"> ✅
+        <span class="tooltiptext">{{habits.lang}}</span>
+      </div>
+      {% endif %}
+    </td>
+    <!-- UNI -->
+    <td>
+      {% if habits.uni == 'X'  %} ❌
+      {% elsif habits.uni < 1 %}
+      <div class="tooltip"> ⭕️
+        <span class="tooltiptext">{{habits.uni}}</span>
+      </div>
+      {% else %}
+      <div class="tooltip"> ✅
+        <span class="tooltiptext">{{habits.uni}}</span>
+      </div>
+      {% endif %}
+    </td>
+    <!-- WALK -->
+    <td>
+      {% if habits.walk == 'X'  %} ❌
+      {% elsif habits.walk < 5 %}
+      <div class="tooltip"> ⭕️
+        <span class="tooltiptext">{{habits.walk}}</span>
+      </div>
+      {% else %}
+      <div class="tooltip"> ✅
+        <span class="tooltiptext">{{habits.walk}}</span>
+      </div>
+      {% endif %}
+    </td>
     <td>{% if habits.screentime == 'X'  %} ❌ {% elsif habits.screentime > 2 %} ⭕️ {{habits.screentime}} {% else %} ✅ {{habits.screentime}} {% endif %}</td>
-    <td>{% if habits.gtd == 'X'  %} ❌ {% elsif habits.gtd == 'no' %}·{% else %} ✅ {% endif %}</td>
+    <td>{% if habits.gtd == 'X'  %} ❌ {% elsif habits.gtd == 'no' %} ⭕️ {% else %} ✅ {% endif %}</td>
     <td>{% if habits.write == 'X'  %} ❌ {% elsif habits.write < 400 %} ⭕️ {{habits.write}} {% else %} ✅ {{habits.write}} {% endif %}</td>
-    <td>{% if habits.clothes == 'X'  %} ❌ {% elsif habits.clothes == 'no' %}·{% else %} ✅ {% endif %}</td>
-    <td>{% if habits.journal == 'X'  %} ❌ {% elsif habits.journal == 'no' %}·{% else %} ✅ {% endif %}</td>
-    <td>{% if habits.family == 'X'  %} ❌ {% elsif habits.family == 'no' %}·{% else %} ✅ {% endif %}</td>
+    <td>{% if habits.clothes == 'X'  %} ❌ {% elsif habits.clothes == 'no' %} ⭕️ {% else %} ✅ {% endif %}</td>
+    <td>{% if habits.journal == 'X'  %} ❌ {% elsif habits.journal == 'no' %} ⭕️ {% else %} ✅ {% endif %}</td>
+    <td>{% if habits.family == 'X'  %} ❌ {% elsif habits.family == 'no' %} ⭕️ {% else %} ✅ {% endif %}</td>
 </tr>
 {% assign i = i | plus:1 %}
+
+{% assign sum_uni = sum_uni | plus:{{habits.uni}} %}
+{% assign sum_scr = sum_scr | plus:{{habits.screentime}} %}
+{% assign sum_walk = sum_walk | plus:{{habits.walk}} %}
+
+
 {% endfor %}
+
+{% assign i = i | minus:1 %}
+{% assign avg_scr = sum_scr | divided_by:{{i}} %}
+{% assign avg_scr = avg_scr | round: 1 %}
+
+{% assign avg_walk = sum_walk | divided_by:{{i}} %}
+{% assign avg_walk = avg_walk | round: 1 %}
+
+<tr class="total">
+  <td>·</td>
+  <td>·</td>
+  <td>·</td>
+  <td>·</td>
+  <td>·</td>
+  <td>·</td>
+  <td>·</td>
+  <td>·</td>
+  <td>{{ sum_uni }}</td>
+  <td>{{ avg_walk }}</td>
+  <td>{{ avg_scr }}</td>
+  <td>·</td>
+  <td>·</td>
+  <td>·</td>
+  <td>·</td>
+  <td>·</td>
+</tr>
 </table>
 </div>
