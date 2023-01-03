@@ -1,14 +1,14 @@
 - date: 01/01/2023
   sleep: 7.0
   riseearly: '06:00'
-  read: 1
+  read: 1.0
   chess: 1
   getridof: 1
   declutter: 0
   lang: 0
   uni: 0
   walk: 3.24
-  screentime: 5.5
+  screentime: 5.25
   gtd: 'no'
   write: 0
   clothes: 'no'
@@ -17,15 +17,16 @@
 
 - date: 02/01/2023
   sleep: 8.0
-  riseearly: '08:05'
-  read: 1
+  riseearly: 'no'
+  riseearlytime: '08:05'
+  read: 1.0
   chess: 1
   getridof: 1
   declutter: 10
   lang: 0.5
   uni: 0
   walk: 1.27
-  screentime: 7.0
+  screentime: 4.75
   gtd: 'no'
   write: 0
   clothes: 'no'
@@ -35,16 +36,35 @@
 - date: 03/01/2023
   sleep: 7.5
   riseearly: '07:16'
-  read: 0.5
+  read: 1.0
   chess: 1
   getridof: 0
   declutter: 0
   lang: 0.5
-  uni: 1.5
-  walk: 5.9
-  screentime: 1.5
+  uni: 0.5
+  walk: 6.3
+  screentime: 1.83
   gtd: 86
   write: 552
   clothes: 'yes'
   journal: 'yes'
   family: 'yes'
+
+
+# TEMPLATE
+#- date: 04/01/2023
+#  sleep: 5
+#  riseearly: 'no'
+#  read: 0
+#  chess: 0
+#  getridof: 0
+#  declutter: 0
+#  lang: 0
+#  uni: 0
+#  walk: 0
+#  screentime: 3
+#  gtd: 'no'
+#  write: 0
+#  clothes: 'no'
+#  journal: 'no'
+#  family: 'no'

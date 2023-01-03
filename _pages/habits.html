@@ -6,6 +6,7 @@ description: "Hábitos"
 {% assign i = 1 %}
 
 {% assign sum_slp = 0 %}
+{% assign sum_read = 0 %}
 {% assign sum_uni = 0 %}
 {% assign sum_scr = 0 %}
 {% assign sum_walk = 0 %}
@@ -38,12 +39,17 @@ description: "Hábitos"
 {% for habits in site.data.habits %}
 <tr>
     <td>
-      <span title="{{habits.date}}">{{i}}</span>
+      <div class="tooltip">{{i}}
+        <span class="tooltiptext">{{habits.date}}</span>
+      </div>
     </td>
     <!-- SLEEP -->
     <td>
       {% if habits.sleep == 'X'  %} ❌
-      {% elsif habits.sleep < 7 %} ⭕️ {{habits.sleep}}
+      {% elsif habits.sleep < 7 %}
+      <div class="tooltip"> ⭕️
+        <span class="tooltiptext">{{habits.sleep}}</span>
+      </div>
       {% else %}
       <div class="tooltip">✅
         <span class="tooltiptext">{{habits.sleep}}</span>
@@ -53,7 +59,10 @@ description: "Hábitos"
     <!-- EARLY RISER -->
     <td>
       {% if habits.riseearly == 'X'  %} ❌
-      {% elsif habits.riseearly == nil %}·
+      {% elsif habits.riseearly == 'no' %}
+      <div class="tooltip">⭕️
+          <span class="tooltiptext">{{habits.riseearlytime}}</span>
+      </div>
       {% else %}
       <div class="tooltip">✅
         <span class="tooltiptext">{{habits.riseearly}}</span>
@@ -63,7 +72,10 @@ description: "Hábitos"
     <!-- READ -->
     <td>
       {% if habits.read == 'X'  %} ❌
-      {% elsif habits.read < 0.5 %}⭕️ {{habits.read}}
+      {% elsif habits.read < 0.5 %}
+      <div class="tooltip">⭕️
+        <span class="tooltiptext">{{habits.read}}</span>
+      </div>
       {% else %}
       <div class="tooltip">✅
         <span class="tooltiptext">{{habits.read}}</span>
@@ -73,7 +85,7 @@ description: "Hábitos"
     <!-- CHESS -->
     <td>
       {% if habits.chess == 'X'  %} ❌
-      {% elsif habits.chess == nil %} ⭕️
+      {% elsif habits.chess == 0 %} ⭕️
       {% else %}
       <div class="tooltip">✅
         <span class="tooltiptext">{{habits.chess}}</span>
@@ -119,7 +131,7 @@ description: "Hábitos"
     <!-- UNI -->
     <td>
       {% if habits.uni == 'X'  %} ❌
-      {% elsif habits.uni < 1 %}
+      {% elsif habits.uni < 0.5 %}
       <div class="tooltip"> ⭕️
         <span class="tooltiptext">{{habits.uni}}</span>
       </div>
@@ -186,6 +198,7 @@ description: "Hábitos"
 {% assign i = i | plus:1 %}
 
 {% assign sum_slp = sum_slp | plus:{{habits.sleep}} %}
+{% assign sum_read = sum_read | plus:{{habits.read}} %}
 {% assign sum_uni = sum_uni | plus:{{habits.uni}} %}
 {% assign sum_scr = sum_scr | plus:{{habits.screentime}} %}
 {% assign sum_walk = sum_walk | plus:{{habits.walk}} %}
@@ -209,7 +222,7 @@ description: "Hábitos"
   <td></td>
   <td>{{ avg_slp }}</td>
   <td>·</td>
-  <td>·</td>
+  <td>{{ sum_read }}</td>
   <td>·</td>
   <td>·</td>
   <td>·</td>
