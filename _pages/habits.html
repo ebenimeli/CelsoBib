@@ -17,7 +17,7 @@ description: "Hábitos"
     <th>CHS</th>
     <th>GRO</th>
     <th>DEC</th>
-    <th>DEU</th>
+    <th>LNG</th>
     <th>UNI</th>
     <th>WLK</th>
     <th>SCR</th>
@@ -31,18 +31,18 @@ description: "Hábitos"
 {% for habits in site.data.habits %}
 <tr>
     <td><span title="{{habits.date}}">{{i}}</span></td>
-    <td>{% if habits.sleep == 'X'  %} ❌ {% elsif habits.sleep < 7 %} · {% else %} <span title="Sleep">✅</span> {% endif %}</td>
-    <td>{% if habits.riseearly == 'X'  %} ❌ {% elsif habits.riseearly == nil %}·{% else %} ✅ {% endif %}</td>
-    <td>{% if habits.read == 'X'  %} ❌ {% elsif habits.read == nil %}·{% else %} ✅ {% endif %}</td>
-    <td>{% if habits.chess == 'X'  %} ❌ {% elsif habits.chess == nil %}·{% else %} ✅ {% endif %}</td>
-    <td>{% if habits.getridof == 'X'  %} ❌ {% elsif habits.getridof == 'no' %}·{% else %} ✅ {% endif %}</td>
-    <td>{% if habits.declutter == 'X'  %} ❌ {% elsif habits.declutter == 'no' %}·{% else %} ✅ {% endif %}</td>
-    <td>{% if habits.deutsch == 'X'  %} ❌ {% elsif habits.deutsch < 25 %}·{% else %} ✅ {% endif %}</td>
-    <td>{% if habits.uni == 'X'  %} ❌ {% elsif habits.uni < 25 %}·{% else %} ✅ {% endif %}</td>
-    <td>{% if habits.walk == 'X'  %} ❌ {% elsif habits.walk < 8 %}·{% else %} ✅ {% endif %}</td>
-    <td>{% if habits.screentime == 'X'  %} ❌ {% elsif habits.screentime > 2 %}·{% else %} ✅ {% endif %}</td>
+    <td>{% if habits.sleep == 'X'  %} ❌ {% elsif habits.sleep < 7 %} ⭕️ {{habits.sleep}} {% else %} <span title="Sleep">✅ {{habits.sleep}}</span> {% endif %}</td>
+    <td>{% if habits.riseearly == 'X'  %} ❌ {% elsif habits.riseearly == nil %}·{% else %} ✅ {{habits.riseearly}} {% endif %}</td>
+    <td>{% if habits.read == 'X'  %} ❌ {% elsif habits.read < 60 %}⭕️ {{habits.read}} {% else %} ✅ {{habits.read}} {% endif %}</td>
+    <td>{% if habits.chess == 'X'  %} ❌ {% elsif habits.chess == nil %}·{% else %} ✅ {{habits.chess}} {% endif %}</td>
+    <td>{% if habits.getridof == 'X'  %} ❌ {% elsif habits.getridof == 0 %}·{% else %} ✅ {{habits.getridof}} {% endif %}</td>
+    <td>{% if habits.declutter == 'X'  %} ❌ {% elsif habits.declutter < 10 %} ⭕️ {{habits.declutter}} {% else %} ✅ {{habits.declutter}} {% endif %}</td>
+    <td>{% if habits.lang == 'X'  %} ❌ {% elsif habits.lang < 25 %} ⭕️ {{habits.lang}} {% else %} ✅ {{habits.lang}} {% endif %}</td>
+    <td>{% if habits.uni == 'X'  %} ❌ {% elsif habits.uni < 25 %} ⭕️ {{habits.uni}} {% else %} ✅ {{habits.uni}} {% endif %}</td>
+    <td>{% if habits.walk == 'X'  %} ❌ {% elsif habits.walk < 8 %}⭕️ {{habits.walk}} {% else %} ✅ {% endif %}</td>
+    <td>{% if habits.screentime == 'X'  %} ❌ {% elsif habits.screentime > 2 %} ⭕️ {{habits.screentime}} {% else %} ✅ {{habits.screentime}} {% endif %}</td>
     <td>{% if habits.gtd == 'X'  %} ❌ {% elsif habits.gtd == 'no' %}·{% else %} ✅ {% endif %}</td>
-    <td>{% if habits.write == 'X'  %} ❌ {% elsif habits.write == 'no' %}·{% else %} ✅ {% endif %}</td>
+    <td>{% if habits.write == 'X'  %} ❌ {% elsif habits.write < 400 %} ⭕️ {{habits.write}} {% else %} ✅ {{habits.write}} {% endif %}</td>
     <td>{% if habits.clothes == 'X'  %} ❌ {% elsif habits.clothes == 'no' %}·{% else %} ✅ {% endif %}</td>
     <td>{% if habits.journal == 'X'  %} ❌ {% elsif habits.journal == 'no' %}·{% else %} ✅ {% endif %}</td>
     <td>{% if habits.family == 'X'  %} ❌ {% elsif habits.family == 'no' %}·{% else %} ✅ {% endif %}</td>
