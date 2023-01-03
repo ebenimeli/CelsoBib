@@ -5,9 +5,11 @@ description: "Hábitos"
 ---
 {% assign i = 1 %}
 
+{% assign sum_slp = 0 %}
 {% assign sum_uni = 0 %}
 {% assign sum_scr = 0 %}
 {% assign sum_walk = 0 %}
+{% assign sum_write = 0 %}
 
 
 <h1>Hábitos</h1>
@@ -140,23 +142,63 @@ description: "Hábitos"
       </div>
       {% endif %}
     </td>
-    <td>{% if habits.screentime == 'X'  %} ❌ {% elsif habits.screentime > 2 %} ⭕️ {{habits.screentime}} {% else %} ✅ {{habits.screentime}} {% endif %}</td>
-    <td>{% if habits.gtd == 'X'  %} ❌ {% elsif habits.gtd == 'no' %} ⭕️ {% else %} ✅ {% endif %}</td>
-    <td>{% if habits.write == 'X'  %} ❌ {% elsif habits.write < 400 %} ⭕️ {{habits.write}} {% else %} ✅ {{habits.write}} {% endif %}</td>
+    <!-- Screen time -->
+    <td>
+      {% if habits.screentime == 'X'  %} ❌
+      {% elsif habits.screentime > 2 %}
+      <div class="tooltip"> ⭕️
+        <span class="tooltiptext">{{habits.screentime}}</span>
+      </div>
+      {% else %}
+      <div class="tooltip"> ✅
+        <span class="tooltiptext">{{habits.screentime}}</span>
+      </div>      {% endif %}
+    </td>
+    <!-- GTD -->
+    <td>
+      {% if habits.gtd == 'X'  %} ❌
+      {% elsif habits.gtd == 'no' %}
+      <div class="tooltip"> ⭕️
+        <span class="tooltiptext">{{habits.gtd}}</span>
+      </div>
+      {% else %}
+      <div class="tooltip"> ✅
+        <span class="tooltiptext">{{habits.gtd}}</span>
+      </div>
+      {% endif %}</td>
+      <!-- WRITE -->
+    <td>
+      {% if habits.write == 'X'  %} ❌
+      {% elsif habits.write < 500 %}
+      <div class="tooltip"> ⭕️
+        <span class="tooltiptext">{{habits.write}}</span>
+      </div>
+      {% else %}
+      <div class="tooltip"> ✅
+        <span class="tooltiptext">{{habits.write}}</span>
+      </div>
+      {% endif %}
+    </td>
     <td>{% if habits.clothes == 'X'  %} ❌ {% elsif habits.clothes == 'no' %} ⭕️ {% else %} ✅ {% endif %}</td>
     <td>{% if habits.journal == 'X'  %} ❌ {% elsif habits.journal == 'no' %} ⭕️ {% else %} ✅ {% endif %}</td>
     <td>{% if habits.family == 'X'  %} ❌ {% elsif habits.family == 'no' %} ⭕️ {% else %} ✅ {% endif %}</td>
 </tr>
 {% assign i = i | plus:1 %}
 
+{% assign sum_slp = sum_slp | plus:{{habits.sleep}} %}
 {% assign sum_uni = sum_uni | plus:{{habits.uni}} %}
 {% assign sum_scr = sum_scr | plus:{{habits.screentime}} %}
 {% assign sum_walk = sum_walk | plus:{{habits.walk}} %}
+{% assign sum_write = sum_write | plus:{{habits.write}} %}
 
 
 {% endfor %}
 
 {% assign i = i | minus:1 %}
+
+{% assign avg_slp = sum_slp | divided_by:{{i}} %}
+{% assign avg_slp = avg_slp | round: 1 %}
+
 {% assign avg_scr = sum_scr | divided_by:{{i}} %}
 {% assign avg_scr = avg_scr | round: 1 %}
 
@@ -164,8 +206,8 @@ description: "Hábitos"
 {% assign avg_walk = avg_walk | round: 1 %}
 
 <tr class="total">
-  <td>·</td>
-  <td>·</td>
+  <td></td>
+  <td>{{ avg_slp }}</td>
   <td>·</td>
   <td>·</td>
   <td>·</td>
@@ -176,7 +218,7 @@ description: "Hábitos"
   <td>{{ avg_walk }}</td>
   <td>{{ avg_scr }}</td>
   <td>·</td>
-  <td>·</td>
+  <td>{{ sum_write }}</td>
   <td>·</td>
   <td>·</td>
   <td>·</td>

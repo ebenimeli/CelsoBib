@@ -10,7 +10,7 @@
   walk: 3.24
   screentime: 5.5
   gtd: 'no'
-  write: 250
+  write: 0
   clothes: 'no'
   journal: 'no'
   family:
@@ -43,8 +43,8 @@
   uni: 1.5
   walk: 5.9
   screentime: 1.5
-  gtd: 'no'
-  write: 500
-  clothes: 'no'
-  journal: 'no'
+  gtd: 86
+  write: 552
+  clothes: 'yes'
+  journal: 'yes'
   family: 'yes'
