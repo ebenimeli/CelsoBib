@@ -417,3 +417,34 @@ table.habits tr.total td {
   visibility: visible;
   opacity: 1;
 }
+
+
+.zoom {
+   transition: transform .2s;
+   width: 300px;
+   height: 300px;
+}
+
+.zoom:hover {
+   -ms-transform: scale(1.5); /* IE 9 */
+   -webkit-transform: scale(1.5); /* Safari 3-8 */
+   transform: scale(5.1);
+}
+
+.zoom {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        margin: 0 auto;
+        display: inline;
+    }
+
+    .zoom img {
+        /*width: 100%;*/
+        /*transition: 0.5s all ease-in-out;*/
+        transition: 0.5s;
+    }
+
+    .zoom:hover img {
+        transform: scale(4.0);
+    }
