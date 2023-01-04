@@ -201,26 +201,26 @@ description: "Hábitos"
 </tr>
 {% assign i = i | plus:1 %}
 
-{% assign sum_slp = sum_slp | plus:{{habits.sleep}} %}
-{% assign sum_read = sum_read | plus:{{habits.read}} %}
-{% assign sum_chess = sum_chess | plus:{{habits.chess}} %}
-{% assign sum_uni = sum_uni | plus:{{habits.uni}} %}
-{% assign sum_scr = sum_scr | plus:{{habits.screentime}} %}
-{% assign sum_walk = sum_walk | plus:{{habits.walk}} %}
-{% assign sum_write = sum_write | plus:{{habits.write}} %}
+{% assign sum_slp = sum_slp | plus:habits.sleep %}
+{% assign sum_read = sum_read | plus:habits.read %}
+{% assign sum_chess = sum_chess | plus:habits.chess %}
+{% assign sum_uni = sum_uni | plus:habits.uni %}
+{% assign sum_scr = sum_scr | plus:habits.screentime %}
+{% assign sum_walk = sum_walk | plus:habits.walk %}
+{% assign sum_write = sum_write | plus:habits.write %}
 
 
 {% endfor %}
 
 {% assign i = i | minus:1 %}
 
-{% assign avg_slp = sum_slp | divided_by:{{i}} %}
+{% assign avg_slp = sum_slp | divided_by:i %}
 {% assign avg_slp = avg_slp | round: 1 %}
 
-{% assign avg_scr = sum_scr | divided_by:{{i}} %}
+{% assign avg_scr = sum_scr | divided_by:i %}
 {% assign avg_scr = avg_scr | round: 1 %}
 
-{% assign avg_walk = sum_walk | divided_by:{{i}} %}
+{% assign avg_walk = sum_walk | divided_by:i %}
 {% assign avg_walk = avg_walk | round: 1 %}
 
 <tr class="total">

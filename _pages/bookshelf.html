@@ -79,9 +79,9 @@ description: "Rincón de lectura"
 {% assign y_start = 2021 %}
 {% assign y_end = 2017 %}
 
-{% assign years = {{y_start}} | minus: {{y_end}} %}
-{% for n in (0..{{years}}) %}
-{% assign ty = y_start | minus: {{n}} %}
+{% assign years = y_start | minus: y_end %}
+{% for n in (0..years) %}
+{% assign ty = y_start | minus: n %}
 <!--<h2 class="year">···</h2>-->
 <ol class="book-list">
 {% for book in site.data.books %}
