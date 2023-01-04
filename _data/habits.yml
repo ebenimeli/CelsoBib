@@ -3,10 +3,9 @@
   riseearly: '06:00'
   read: 1.0
   chess: 1
-  getridof: 1
+  getridof: 0
   declutter: 0
   lang: 0
-  uni: 0
   walk: 3.24
   screentime: 5.25
   gtd: 'no'
@@ -21,10 +20,9 @@
   riseearlytime: '08:05'
   read: 1.0
   chess: 1
-  getridof: 1
+  getridof: 0
   declutter: 10
   lang: 0.5
-  uni: 0
   walk: 1.27
   screentime: 4.75
   gtd: 'no'
@@ -38,10 +36,9 @@
   riseearly: '07:16'
   read: 1.0
   chess: 1
-  getridof: 0
+  getridof: 1
   declutter: 0
   lang: 0.5
-  uni: 0.5
   walk: 6.3
   screentime: 1.83
   gtd: 86
@@ -49,6 +46,24 @@
   clothes: 'yes'
   journal: 'yes'
   family: 'yes'
+
+- date: 04/01/2023
+  sleep: 9.0
+  riseearly: 'no'
+  riseearlytime: '08:24'
+  read: 0
+  chess: 3
+  getridof: 0
+  declutter: 0
+  lang: 0
+  uni: 0
+  walk: 0
+  screentime: 3
+  gtd: 'no'
+  write: 0
+  clothes: 'no'
+  journal: 'no'
+  family: 'no'
 
 
 # TEMPLATE

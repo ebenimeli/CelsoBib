@@ -7,11 +7,11 @@ description: "Hábitos"
 
 {% assign sum_slp = 0 %}
 {% assign sum_read = 0 %}
+{% assign sum_chess = 0 %}
 {% assign sum_uni = 0 %}
 {% assign sum_scr = 0 %}
 {% assign sum_walk = 0 %}
 {% assign sum_write = 0 %}
-
 
 <h1>Hábitos</h1>
 <div>
@@ -135,8 +135,12 @@ description: "Hábitos"
       <div class="tooltip"> ⭕️
         <span class="tooltiptext">{{habits.uni}}</span>
       </div>
-      {% else %}
+      {% elsif habits.uni >= 0.5 %}
       <div class="tooltip"> ✅
+        <span class="tooltiptext">{{habits.uni}}</span>
+      </div>
+      {% else %}
+      <div class="tooltip"> ·
         <span class="tooltiptext">{{habits.uni}}</span>
       </div>
       {% endif %}
@@ -199,6 +203,7 @@ description: "Hábitos"
 
 {% assign sum_slp = sum_slp | plus:{{habits.sleep}} %}
 {% assign sum_read = sum_read | plus:{{habits.read}} %}
+{% assign sum_chess = sum_chess | plus:{{habits.chess}} %}
 {% assign sum_uni = sum_uni | plus:{{habits.uni}} %}
 {% assign sum_scr = sum_scr | plus:{{habits.screentime}} %}
 {% assign sum_walk = sum_walk | plus:{{habits.walk}} %}
@@ -223,7 +228,7 @@ description: "Hábitos"
   <td>{{ avg_slp }}</td>
   <td>·</td>
   <td>{{ sum_read }}</td>
-  <td>·</td>
+  <td>{{ sum_chess }}</td>
   <td>·</td>
   <td>·</td>
   <td>·</td>
