@@ -70,7 +70,7 @@
 - date: 05/01/2023
   sleep: 8
   riseearly: '07:33'
-  read: 0
+  read: 0.5
   chess: 1
   getridof: 0
   declutter: 0

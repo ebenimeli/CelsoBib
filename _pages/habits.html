@@ -21,19 +21,20 @@ description: "Hábitos"
     <th>DAY</th>
     <th>SLP</th>
     <th>RIS</th>
+    <th>WLK</th>
+
     <th>REA</th>
     <th>CHS</th>
     <th>GRO</th>
     <th>DEC</th>
     <th>LNG</th>
-    <th>UNI</th>
-    <th>WLK</th>
     <th>SCR</th>
     <th>GTD</th>
     <th>WRT</th>
     <th>CLT</th>
     <th>JRN</th>
     <th>FAM</th>
+    <th>UNI</th>
     </tr>
   </thead>
 {% for habits in site.data.habits %}
@@ -43,32 +44,9 @@ description: "Hábitos"
         <span class="tooltiptext">{{habits.date}}</span>
       </div>
     </td>
-    <!-- SLEEP -->
-    <td>
-      {% if habits.sleep == 'X'  %} ❌
-      {% elsif habits.sleep < 7 %}
-      <div class="tooltip"> ⭕️
-        <span class="tooltiptext">{{habits.sleep}}</span>
-      </div>
-      {% else %}
-      <div class="tooltip">✅
-        <span class="tooltiptext">{{habits.sleep}}</span>
-      </div>
-      {% endif %}
-    </td>
-    <!-- EARLY RISER -->
-    <td>
-      {% if habits.riseearly == 'X'  %} ❌
-      {% elsif habits.riseearly == 'no' %}
-      <div class="tooltip">⭕️
-          <span class="tooltiptext">{{habits.riseearlytime}}</span>
-      </div>
-      {% else %}
-      <div class="tooltip">✅
-        <span class="tooltiptext">{{habits.riseearly}}</span>
-      </div>
-      {% endif %}
-    </td>
+
+    {% include_relative habits_health.html %}
+
     <!-- READ -->
     <td>
       {% if habits.read == 'X'  %} ❌
@@ -128,36 +106,7 @@ description: "Hábitos"
       </div>
       {% endif %}
     </td>
-    <!-- UNI -->
-    <td>
-      {% if habits.uni == 'X'  %} ❌
-      {% elsif habits.uni < 0.5 %}
-      <div class="tooltip"> ⭕️
-        <span class="tooltiptext">{{habits.uni}}</span>
-      </div>
-      {% elsif habits.uni >= 0.5 %}
-      <div class="tooltip"> ✅
-        <span class="tooltiptext">{{habits.uni}}</span>
-      </div>
-      {% else %}
-      <div class="tooltip"> ·
-        <span class="tooltiptext">{{habits.uni}}</span>
-      </div>
-      {% endif %}
-    </td>
-    <!-- WALK -->
-    <td>
-      {% if habits.walk == 'X'  %} ❌
-      {% elsif habits.walk < 5 %}
-      <div class="tooltip"> ⭕️
-        <span class="tooltiptext">{{habits.walk}}</span>
-      </div>
-      {% else %}
-      <div class="tooltip"> ✅
-        <span class="tooltiptext">{{habits.walk}}</span>
-      </div>
-      {% endif %}
-    </td>
+
     <!-- Screen time -->
     <td>
       {% if habits.screentime == 'X'  %} ❌
@@ -195,9 +144,27 @@ description: "Hábitos"
       </div>
       {% endif %}
     </td>
+
     <td>{% if habits.clothes == 'X'  %} ❌ {% elsif habits.clothes == 'no' %} ⭕️ {% else %} ✅ {% endif %}</td>
     <td>{% if habits.journal == 'X'  %} ❌ {% elsif habits.journal == 'no' %} ⭕️ {% else %} ✅ {% endif %}</td>
     <td>{% if habits.family == 'X'  %} ❌ {% elsif habits.family == 'no' %} ⭕️ {% else %} ✅ {% endif %}</td>
+    <!-- UNI -->
+    <td>
+      {% if habits.uni == 'X'  %} ❌
+      {% elsif habits.uni < 0.5 %}
+      <div class="tooltip"> ⭕️
+        <span class="tooltiptext">{{habits.uni}}</span>
+      </div>
+      {% elsif habits.uni >= 0.5 %}
+      <div class="tooltip"> ✅
+        <span class="tooltiptext">{{habits.uni}}</span>
+      </div>
+      {% else %}
+      <div class="tooltip"> ·
+        <span class="tooltiptext">{{habits.uni}}</span>
+      </div>
+      {% endif %}
+    </td>
 </tr>
 {% assign i = i | plus:1 %}
 
@@ -227,19 +194,19 @@ description: "Hábitos"
   <td></td>
   <td>{{ avg_slp }}</td>
   <td>·</td>
+  <td>{{ avg_walk }}</td>
   <td>{{ sum_read }}</td>
   <td>{{ sum_chess }}</td>
   <td>·</td>
   <td>·</td>
   <td>·</td>
-  <td>{{ sum_uni }}</td>
-  <td>{{ avg_walk }}</td>
   <td>{{ avg_scr }}</td>
   <td>·</td>
   <td>{{ sum_write }}</td>
   <td>·</td>
   <td>·</td>
   <td>·</td>
+  <td>{{ sum_uni }}</td>
 </tr>
 </table>
 </div>
