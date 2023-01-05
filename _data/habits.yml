@@ -52,21 +52,37 @@
   riseearly: 'no'
   riseearlytime: '?'
   # 08:24: llevo un par de días resfriado
-  read: 1
+  read: 1.5
   chess: 3
   getridof: 0
   declutter: 0
   lang: 0
   walk: 1.0
   # día en casa resfriado
-  screentime: 1.5
+  screentime: 1.75
   gtd: 4
   write: 525
   # escribí sobre la comunicación eficaz y he empezado a crear una lista de capítulos
   clothes: 'no'
   journal: 'yes'
-  family: 'no'
+  family: 'yes'
 
+- date: 05/01/2023
+  sleep: 8
+  riseearly: '07:33'
+  read: 0
+  chess: 1
+  getridof: 0
+  declutter: 0
+  lang: 0
+  uni: 0
+  walk: 0
+  screentime: 3
+  gtd: 'no'
+  write: 557
+  clothes: 'no'
+  journal: 'yes'
+  family: 'yes'
 
 # TEMPLATE
 #- date: 04/01/2023
