@@ -9,4 +9,4 @@ description: "Películas, series de TV y documentales"
 
 ### Series
 * Jaguar (2021) [→ S01E04](https://www.netflix.com/es/title/81122682)
-* El Gran Imperio Otomano [→ S02E01](https://www.netflix.com/es/title/80990771)
+* El Gran Imperio Otomano [→ S02E02](https://www.netflix.com/es/title/80990771)

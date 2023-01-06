@@ -94,10 +94,10 @@
   # Dos bolsas de ropa para Cáritas
   declutter: 1.0
   lang: 0
-  walk: 2.0
+  walk: 2.9
   screentime: 1.75
   gtd: '3'
-  write: 0
+  write: 520
   clothes: 'no'
   journal: 'yes'
   family: 'yes'
