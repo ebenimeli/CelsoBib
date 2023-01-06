@@ -21,7 +21,7 @@
   read: 1.0
   chess: 1
   getridof: 0
-  declutter: 10
+  declutter: 0.25
   lang: 0.5
   walk: 1.27
   screentime: 4.75
@@ -88,13 +88,12 @@
   riseearly: 'no'
   riseearlytime: ':('
   # 08:23
-  read: 0
+  read: 1.0
   chess: 1
   getridof: 2
   # Dos bolsas de ropa para Cáritas
-  declutter: 0
+  declutter: 1.0
   lang: 0
-  uni: 0
   walk: 2.0
   screentime: 1.75
   gtd: '3'
