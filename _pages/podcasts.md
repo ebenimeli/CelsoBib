@@ -6,6 +6,7 @@ description: "Una selección de podcasts"
 
 ### Noticias y actualidad
 * El orden mundial [→ 🎧](https://podcasts.apple.com/es/podcast/el-orden-mundial/id1462879154)
+* EL MUNDO al día [→ 🎧](https://podcasts.apple.com/es/podcast/el-mundo-al-d%C3%ADa/id1572264828)
 
 ### Historia
 * SER historia [→ 🎧](https://podcasts.apple.com/es/podcast/ser-historia/id356329864)
@@ -30,6 +31,9 @@ description: "Una selección de podcasts"
 
 ### Viajes y cultura
 * Podcast Japón - GAIKAN Japan Limited [→ 🎧](https://podcasts.apple.com/es/podcast/podcast-jap%C3%B3n-gaikan-japan-limited/id1450317356)
+
+### Entrevistas
+* The Wild Project [→ 🎧](https://podcasts.apple.com/es/podcast/the-wild-project/id1501968107)
 
 ### Humor
 * Nadie sabe nada [→ 🎧](https://podcasts.apple.com/es/podcast/nadie-sabe-nada/id665143133)
