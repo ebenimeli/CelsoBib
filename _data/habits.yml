@@ -107,14 +107,15 @@
   riseearly: '07:01'
   read: 0
   chess: 0
-  getridof: 0
-  #
-  declutter: 0
+  getridof: 1
+  # restos del montaje de muebles
+  declutter: 3.5
+  # montaje de muebles y organización
   lang: 0
-  walk: 0
-  screentime: 3
-  gtd: 'no'
-  write: 0
+  walk: 2.9
+  screentime: 1.25
+  gtd: 'yes'
+  write: 519
   clothes: 'no'
   journal: 'yes'
   family: 'yes'
