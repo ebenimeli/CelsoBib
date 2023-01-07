@@ -29,7 +29,11 @@ description: "Recientemente..."
 {% assign i = nrecords %}
 {% for log in site.data.log %}
       <li class="logitem">
-      <span class="logid">[{{ i }}]</span>
+        <div class="tooltip">
+          <span class="logid">[{{ i }}]</span>
+          <span class="tooltiptext">{{log.timestamp}}</span>
+        </div>
+
       {% if log.cat == 'thought' %}
         <span>💭</span>
       {% endif %}
@@ -45,7 +49,9 @@ description: "Recientemente..."
       {% if log.cat == 'work' %}
         <span>📥</span>
       {% endif %}
-
+      {% if log.cat == 'quote' %}
+        <span>💬</span>
+      {% endif %}
 
       <span class="logtext">{{ log.text }}</span>
 
