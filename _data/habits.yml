@@ -88,7 +88,7 @@
   riseearly: 'no'
   riseearlytime: ':('
   # 08:23
-  read: 1.0
+  read: 0.5
   chess: 1
   getridof: 2
   # Dos bolsas de ropa para Cáritas
@@ -98,6 +98,23 @@
   screentime: 1.75
   gtd: '3'
   write: 520
+  clothes: 'no'
+  journal: 'yes'
+  family: 'yes'
+
+- date: 07/01/2023
+  sleep: 7
+  riseearly: '07:01'
+  read: 0
+  chess: 0
+  getridof: 0
+  #
+  declutter: 0
+  lang: 0
+  walk: 0
+  screentime: 3
+  gtd: 'no'
+  write: 0
   clothes: 'no'
   journal: 'yes'
   family: 'yes'
