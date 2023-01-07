@@ -4,7 +4,7 @@ title: ""
 description: "Una selección de podcasts"
 ---
 
-¿Alguna recomendación?
+[¿Alguna recomendación? → 🎧](https://twitter.com/enriquebenimeli/status/1611473276945027074)
 
 ### Noticias y actualidad
 * El orden mundial [→ 🎧](https://podcasts.apple.com/es/podcast/el-orden-mundial/id1462879154)
@@ -26,6 +26,7 @@ description: "Una selección de podcasts"
 * 5.0 [→ 🎧](https://podcasts.apple.com/es/podcast/5-0/id296275960)
 * Software 2.0 [→ 🎧](https://podcasts.apple.com/es/podcast/software-2-0/id1488587713)
 * Hablando con Científicos - Cienciaes.com [→ 🎧](https://podcasts.apple.com/es/podcast/hablando-con-cient%C3%ADficos-cienciaes-com/id304214854)
+* Sapiens [→ 🎧](https://www.rtve.es/play/audios/sapiens/)
 
 ### Productividad
 * KENSO [→ 🎧](https://podcasts.apple.com/es/podcast/kenso/id1372855764)
