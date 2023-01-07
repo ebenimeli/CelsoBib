@@ -5,9 +5,13 @@ description: "Rincón de fotos"
 ---
 <div class="book-list">
 
-{% for i in (1..7) %}
-<a class="zoom" href="assets/images/pages/photos/photo_{{i}}.jpg">
-  <img class="gallerypic" src="assets/images/pages/photos/photo_{{i}}.jpg" width="80px"/>
+{% assign ndays = 7 %}
+
+{% assign j = ndays %}
+{% for i in (1..ndays) %}
+<a class="zoom" href="assets/images/pages/photos/photo_{{j}}.jpg">
+  <img class="gallerypic" src="assets/images/pages/photos/photo_{{j}}.jpg" width="80px"/>
 </a>
+{% assign j = j | minus: 1 %}
 {% endfor %}
 </div>
