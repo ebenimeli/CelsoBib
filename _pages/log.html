@@ -52,7 +52,9 @@ description: "Recientemente..."
       {% if log.cat == 'quote' %}
         <span>💬</span>
       {% endif %}
-
+      {% if log.cat == 'chess' %}
+        <span>♖</span>
+      {% endif %}
       <span class="logtext">{{ log.text }}</span>
 
       {%if log.link %}

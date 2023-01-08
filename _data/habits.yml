@@ -111,11 +111,28 @@
   # restos del montaje de muebles
   declutter: 3.5
   # montaje de muebles y organización
-  lang: 0
+  lang: 0.25
   walk: 2.9
   screentime: 1.25
   gtd: 'yes'
   write: 519
+  clothes: 'no'
+  journal: 'yes'
+  family: 'yes'
+
+- date: 08/01/2023
+  sleep: 8
+  riseearly: 'no'
+  # 08:12
+  read: 0
+  chess: 1
+  getridof: 0
+  declutter: 0
+  lang: 0
+  walk: 0
+  screentime: 0
+  gtd: 'no'
+  write: 0
   clothes: 'no'
   journal: 'yes'
   family: 'yes'
