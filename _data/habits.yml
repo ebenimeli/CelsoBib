@@ -132,11 +132,29 @@
   walk: 0
   screentime: 0
   gtd: 'no'
+  write: 1018
+  clothes: 'no'
+  journal: 'yes'
+  family: 'yes'
+  arb: 1.0
+
+- date: 09/01/2023
+  sleep: 6.5
+  riseearly: '06:32'
+  read: 0
+  chess: 1
+  getridof: 0
+  declutter: 0.5
+  lang: 0
+  walk: 10.9
+  screentime: 2.5
+  gtd: 'yes'
   write: 0
   clothes: 'no'
   journal: 'yes'
   family: 'yes'
-
+  arb: 5.75
+  
 # TEMPLATE
 #- date: 04/01/2023
 #  sleep: 5

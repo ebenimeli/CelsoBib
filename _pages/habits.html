@@ -12,6 +12,8 @@ description: "Hábitos"
 {% assign sum_scr = 0 %}
 {% assign sum_walk = 0 %}
 {% assign sum_write = 0 %}
+{% assign sum_arb = 0 %}
+
 
 <h1>Hábitos</h1>
 <div>
@@ -36,6 +38,7 @@ description: "Hábitos"
     <th>JRN</th>
     <th>FAM</th>
     <th>UNI</th>
+    <th>ARB</th>
     </tr>
   </thead>
 {% for habits in site.data.habits %}
@@ -166,6 +169,27 @@ description: "Hábitos"
       </div>
       {% endif %}
     </td>
+    <!-- ARB -->
+    <td>
+      {% if habits.arb == 'X'  %} ❌
+      {% elsif habits.arb > 8 %}
+        {% assign sum_arb = sum_arb | plus:habits.arb %}
+        {% assign workdays = workdays | plus:1.0 %}
+        <div class="tooltip"> ⭕️
+          <span class="tooltiptext">{{habits.arb}}</span>
+        </div>
+      {% elsif habits.arb <= 8 %}
+        {% assign sum_arb = sum_arb | plus:habits.arb %}
+        {% assign workdays = workdays | plus:1.0 %}
+        <div class="tooltip"> ✅
+          <span class="tooltiptext">{{habits.arb}}</span>
+        </div>
+      {% else %}
+      <div class="tooltip"> ·
+        <span class="tooltiptext">{{habits.arb}}</span>
+      </div>
+      {% endif %}
+    </td>
 </tr>
 {% assign i = i | plus:1 %}
 
@@ -176,7 +200,6 @@ description: "Hábitos"
 {% assign sum_scr = sum_scr | plus:habits.screentime %}
 {% assign sum_walk = sum_walk | plus:habits.walk %}
 {% assign sum_write = sum_write | plus:habits.write %}
-
 
 {% endfor %}
 
@@ -190,6 +213,9 @@ description: "Hábitos"
 
 {% assign avg_walk = sum_walk | divided_by:i %}
 {% assign avg_walk = avg_walk | round: 1 %}
+
+{% assign avg_arb = sum_arb | divided_by:workdays %}
+{% assign avg_arb = avg_arb | round: 2 %}
 
 <tr class="total">
   <td></td>
@@ -208,6 +234,7 @@ description: "Hábitos"
   <td>·</td>
   <td>·</td>
   <td>{{ sum_uni }}</td>
+  <td>{{ sum_ar }}</td>
 </tr>
 </table>
 </div>
