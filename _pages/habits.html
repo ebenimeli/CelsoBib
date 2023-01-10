@@ -14,6 +14,7 @@ description: "Hábitos"
 {% assign sum_write = 0 %}
 {% assign sum_arb = 0 %}
 
+{% assign sum_gro = 0 %}
 
 <h1>Hábitos</h1>
 <div>
@@ -80,7 +81,7 @@ description: "Hábitos"
       {% elsif habits.getridof == 0 %} ⭕️
       {% else %}
       <div class="tooltip">✅
-        <span class="tooltiptext">{{habits.getridof}}</span>
+        <span class="tooltiptext">{{habits.getridof_t}}</span>
       </div>
       {% endif %}
     </td>
@@ -200,6 +201,7 @@ description: "Hábitos"
 {% assign sum_scr = sum_scr | plus:habits.screentime %}
 {% assign sum_walk = sum_walk | plus:habits.walk %}
 {% assign sum_write = sum_write | plus:habits.write %}
+{% assign sum_gro = sum_gro | plus:habits.getridof %}
 
 {% endfor %}
 
@@ -253,7 +255,7 @@ description: "Hábitos"
   <td>{{ sum_walk }}</td>
   <td>{{ sum_read }}</td>
   <td>{{ sum_chess | round: 0 }}</td>
-  <td>·</td>
+  <td>{{ sum_gro }}</td>
   <td>·</td>
   <td>·</td>
   <td>{{ sum_scr }}</td>
