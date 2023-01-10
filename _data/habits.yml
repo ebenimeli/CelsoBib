@@ -141,20 +141,38 @@
 - date: 09/01/2023
   sleep: 6.5
   riseearly: '06:32'
-  read: 0
+  read: 0.5
   chess: 1
   getridof: 0
   declutter: 0.5
   lang: 0
-  walk: 10.9
-  screentime: 2.5
+  walk: 11.1
+  screentime: 2.75
+  gtd: 'yes'
+  write: 0
+  clothes: 'yes'
+  journal: 'yes'
+  family: 'yes'
+  arb: 5.75
+
+- date: 10/01/2023
+  sleep: 7.25
+  riseearly: '06:24'
+  read: 1.0
+  chess: 4.0
+  getridof: 0
+  declutter: 0
+  lang: 0
+  walk: 6.2
+  screentime: 1.75
   gtd: 'yes'
   write: 0
   clothes: 'no'
   journal: 'yes'
   family: 'yes'
-  arb: 5.75
-  
+  arb: 4.25
+
+
 # TEMPLATE
 #- date: 04/01/2023
 #  sleep: 5

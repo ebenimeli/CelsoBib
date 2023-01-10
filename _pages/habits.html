@@ -195,7 +195,7 @@ description: "Hábitos"
 
 {% assign sum_slp = sum_slp | plus:habits.sleep %}
 {% assign sum_read = sum_read | plus:habits.read %}
-{% assign sum_chess = sum_chess | plus:habits.chess %}
+{% assign sum_chess = sum_chess | plus:habits.chess | round: 1 %}
 {% assign sum_uni = sum_uni | plus:habits.uni %}
 {% assign sum_scr = sum_scr | plus:habits.screentime %}
 {% assign sum_walk = sum_walk | plus:habits.walk %}
@@ -208,33 +208,62 @@ description: "Hábitos"
 {% assign avg_slp = sum_slp | divided_by:i %}
 {% assign avg_slp = avg_slp | round: 1 %}
 
+{% assign avg_read = sum_read | divided_by:i %}
+{% assign avg_read = avg_read | round: 1 %}
+
+{% assign avg_chess = sum_chess | divided_by:i %}
+{% assign avg_chess = avg_chess | round: 1 %}
+
 {% assign avg_scr = sum_scr | divided_by:i %}
 {% assign avg_scr = avg_scr | round: 1 %}
 
 {% assign avg_walk = sum_walk | divided_by:i %}
 {% assign avg_walk = avg_walk | round: 1 %}
 
+{% assign avg_write = sum_write | divided_by:i %}
+{% assign avg_write = avg_write | round: 1 %}
+
 {% assign avg_arb = sum_arb | divided_by:workdays %}
 {% assign avg_arb = avg_arb | round: 2 %}
 
-<tr class="total">
+<tr class="avg">
   <td></td>
   <td>{{ avg_slp }}</td>
   <td>·</td>
   <td>{{ avg_walk }}</td>
-  <td>{{ sum_read }}</td>
-  <td>{{ sum_chess }}</td>
+  <td>{{ avg_read }}</td>
+  <td>{{ avg_chess}}</td>
   <td>·</td>
   <td>·</td>
   <td>·</td>
   <td>{{ avg_scr }}</td>
+  <td>·</td>
+  <td>{{ avg_write }}</td>
+  <td>·</td>
+  <td>·</td>
+  <td>·</td>
+  <td>·</td>
+  <td>{{ avg_arb }}</td>
+</tr>
+
+<tr class="total">
+  <td></td>
+  <td>·</td>
+  <td>·</td>
+  <td>{{ sum_walk }}</td>
+  <td>{{ sum_read }}</td>
+  <td>{{ sum_chess | round: 0 }}</td>
+  <td>·</td>
+  <td>·</td>
+  <td>·</td>
+  <td>{{ sum_scr }}</td>
   <td>·</td>
   <td>{{ sum_write }}</td>
   <td>·</td>
   <td>·</td>
   <td>·</td>
   <td>{{ sum_uni }}</td>
-  <td>{{ sum_ar }}</td>
+  <td>{{ sum_arb }}</td>
 </tr>
 </table>
 </div>
