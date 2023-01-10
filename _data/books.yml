@@ -28,8 +28,9 @@
   description:
   genre: [novela]
   completed: 'reading'
-  progress: '10%'
-  synopsis: "26 de noviembre de 1504. La reina Isabel la Católica acaba de morir y ya se empiezan a escuchar las voces de la mayoría de los nobles de Castilla, que reclaman a Juana la Loca como su verdadera reina. Fernando de Aragón intenta llegar hasta donde sea necesario para impedir que su yerno, Felipe el Hermoso, le arrebate el gobierno de las tierras castellanas.
+  onpage: 40.0
+  pages: 400.0
+  synopsis_hide: "26 de noviembre de 1504. La reina Isabel la Católica acaba de morir y ya se empiezan a escuchar las voces de la mayoría de los nobles de Castilla, que reclaman a Juana la Loca como su verdadera reina. Fernando de Aragón intenta llegar hasta donde sea necesario para impedir que su yerno, Felipe el Hermoso, le arrebate el gobierno de las tierras castellanas.
 Entretanto, la casa de Austria, mediante una política de pactos y enlaces matrimoniales, pugna por convertirse en la familia más poderosa de Europa. Todos los países de la cristiandad, papado incluido, se enredan en una serie de luchas por el poder en las que el sexo, la violencia y el crimen se utilizan como armas para conseguir sus fines políticos. En medio de todos esos conflictos, una familia de judíos conversos, los Losantos, luchará por sobrevivir a la Inquisición, aunque para ello tenga que renunciar a sus propias raíces.<br/>Los Austrias. El vuelo del águila es la gran novela de un tiempo y de un imperio que sentó las bases de un mundo nuevo: nuestro mundo."
   cover: "elvuelodelaguila.jpeg"
 
@@ -69,7 +70,6 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   description:
   genre: [ciencia]
   completed: '2022'
-  progress: '16%'
   synopsis: "Un libro fascinante sobre uno de los mayores misterios de la humanidad: el origen del lenguaje.<br/>
 ―¿Por qué el mono no responde a lo que le digo? ―pregunta una niña de cuatro años.<br/>
 ―Porque los animales no saben hablar ―contesta su papá.<br/>
@@ -98,6 +98,8 @@ En busca del origen del lenguaje es el libro definitivo para entender cómo se o
 - title: "Céntrate (Deep Work)"
   author: Cal Newport
   link: https://amzn.to/3Xeb1iW
+  onpage: 40.0
+  pages: 249.0
   completed: 2022
 
 - title: "La Edad Media. Una historia gráfica"
