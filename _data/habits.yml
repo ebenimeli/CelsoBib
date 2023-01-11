@@ -181,6 +181,23 @@
   family: 'yes'
   arb: 4.25
 
+- date: 11/01/2023
+  sleep: 7.25
+  riseearly: '06:28'
+  read: 0.0
+  chess: 0.0
+  getridof: 1
+  getridof_t: '(1) Libro Introducción a la Teoría de la Información y la Codificación (Ed.1996)'
+  declutter: 0.5
+  lang: 0.25
+  walk: 7.7
+  screentime: 2.0
+  gtd: 'yes'
+  write: 0
+  clothes: 'yes'
+  journal: 'no'
+  family: 'yes'
+  arb: 9.5
 
 # TEMPLATE
 #- date: 04/01/2023
