@@ -111,7 +111,7 @@
   sleep: 7
   riseearly: '07:01'
   read: 0
-  chess: 0
+  chess: 1
   getridof: 1
   getridof_t: '(1)'
   # restos del montaje de muebles
@@ -204,8 +204,8 @@
   riseearly: '07:01'
   read: 0.5
   chess: 1.0
-  getridof: 1
-  getridof_t: '(1)'
+  getridof: 0
+  getridof_t: '(0)'
   declutter: 0.5
   lang: 0.25
   walk: 6.4
@@ -216,6 +216,24 @@
   journal: 'yes'
   family: 'yes'
   arb: 8.5
+
+- date: 13/01/2023
+  sleep: 7.0
+  riseearly: '06:53'
+  read: 0.0
+  chess: 0.0
+  getridof: 0
+  getridof_t: '(0)'
+  declutter: 0.5
+  lang: 0.0
+  walk: 6.6
+  screentime: 3.25
+  gtd: 'yes'
+  write: 542
+  clothes: 'no'
+  journal: 'yes'
+  family: 'yes'
+  arb: 8.0
 
 # TEMPLATE
 #- date: 04/01/2023
