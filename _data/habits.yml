@@ -220,8 +220,8 @@
 - date: 13/01/2023
   sleep: 7.0
   riseearly: '06:53'
-  read: 0.0
-  chess: 0.0
+  read: 0.5
+  chess: 1.0
   getridof: 0
   getridof_t: '(0)'
   declutter: 0.5
@@ -234,6 +234,24 @@
   journal: 'yes'
   family: 'yes'
   arb: 8.0
+
+- date: 14/01/2023
+  sleep: 5.5
+  riseearly: '04:27'
+  read: 0.0
+  chess: 0.0
+  getridof: 0
+  getridof_t: '(0)'
+  declutter: 0.0
+  lang: 0.0
+  walk: 0.0
+  screentime: 5.0
+  gtd: 'no'
+  write: 661
+  clothes: 'no'
+  journal: 'yes'
+  family: 'yes'
+  arb: 0.0
 
 # TEMPLATE
 #- date: 04/01/2023

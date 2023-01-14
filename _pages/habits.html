@@ -101,12 +101,12 @@ description: "Hábitos"
     <!-- LANG -->
     <td>
       {% if habits.lang == 'X'  %} ❌
-      {% elsif habits.lang < 0.5 %}
-      <div class="tooltip"> ⭕️
+      {% elsif habits.lang >0 %}
+      <div class="tooltip"> ✅
         <span class="tooltiptext">{{habits.lang}}</span>
       </div>
       {% else %}
-      <div class="tooltip"> ✅
+      <div class="tooltip"> ⭕️
         <span class="tooltiptext">{{habits.lang}}</span>
       </div>
       {% endif %}
