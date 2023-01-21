@@ -5,7 +5,6 @@ description: "¿En qué ando?"
 ---
 
 🎨 Rediseñando y actualizando los contenidos de esta **web**  
-🗞 Preparando un **boletín quincenal** en [*Revue*](https://www.getrevue.co/profile/ebenimeli)  
 🖋 Escribiendo sobre **productividad** en [*Ocho en punto*](http://www.ochoenpunto.com/)  
 🎹 Aprendiendo a tocar el **piano**  
 📍 Viviendo en **España**  
