@@ -5,12 +5,12 @@ description: "Películas, series de TV y documentales"
 ---
 
 ### Cine
-* Ex machina (2014) [→ 🍿](https://www.imdb.com/title/tt0470752/) ★★★★☆
-* La piel del tambor (2022) [→ 🍿](https://www.primevideo.com/dp/0T42O5Z6QECZ4Q6CXW1D7OYTAY) ★★★★☆
+1. La piel del tambor (2022) [→ 🍿](https://www.primevideo.com/dp/0T42O5Z6QECZ4Q6CXW1D7OYTAY) ★★★★☆
+1. Ex machina (2014) [→ 🍿](https://www.imdb.com/title/tt0470752/) ★★★★☆
 
 ### Series
-* Jaguar (2021) [→ 🍿 S01E04](https://www.netflix.com/es/title/81122682) ★★★☆☆
-* El Gran Imperio Otomano [→ 🍿 S02E02](https://www.netflix.com/es/title/80990771) ★★★★☆
+1. El Gran Imperio Otomano [→ 🍿 S02E02](https://www.netflix.com/es/title/80990771) ★★★★☆
+1. Jaguar (2021) [→ 🍿 S01E04](https://www.netflix.com/es/title/81122682) ★★★☆☆
 
 ### Me recomendaron...
 * Arrival · La llegada (2016) [→ 🍿](https://www.imdb.com/title/tt2543164/)
