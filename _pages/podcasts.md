@@ -27,6 +27,7 @@ description: "Una selección de podcasts"
 * Software 2.0 [→ 🎧](https://podcasts.apple.com/es/podcast/software-2-0/id1488587713)
 * Hablando con Científicos - Cienciaes.com [→ 🎧](https://podcasts.apple.com/es/podcast/hablando-con-cient%C3%ADficos-cienciaes-com/id304214854)
 * Sapiens [→ 🎧](https://www.rtve.es/play/audios/sapiens/)
+* monos estocásticos [→ 🎧](https://podcasts.apple.com/es/podcast/monos-estoc%C3%A1sticos/id1665476262)
 
 ### Productividad
 * KENSO [→ 🎧](https://podcasts.apple.com/es/podcast/kenso/id1372855764)
