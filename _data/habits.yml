@@ -263,7 +263,7 @@
   declutter: 0.5
   lang: 0.25
   walk: 0.9
-  screentime: 2.25
+  screentime: 3.0
   gtd: 'yes'
   write: 0
   clothes: 'yes'
@@ -281,7 +281,7 @@
   declutter: 0.0
   lang: 0.0
   walk: 9.25
-  screentime: 2.5
+  screentime: 3.5
   gtd: 'yes'
   write: 0
   clothes: 'yes'
@@ -299,7 +299,7 @@
   declutter: 0.5
   lang: 0.25
   walk: 5.0
-  screentime: 2.0
+  screentime: 2.75
   gtd: 'yes'
   write: 0
   clothes: 'yes'
@@ -311,13 +311,13 @@
   sleep: 7.25
   riseearly: '06:21'
   read: 0.0
-  chess: 0.0
+  chess: 1.0
   getridof: 0
   getridof_t: '(0)'
   declutter: 0.5
   lang: 0.0
   walk: 11.0
-  screentime: 2.5
+  screentime: 4.0
   gtd: 'no'
   write: 0
   clothes: 'yes'
@@ -347,13 +347,13 @@
   sleep: 4.0
   riseearly: '02:44'
   read: 0.0
-  chess: 0.0
+  chess: 1.0
   getridof: 0
   getridof_t: '(0)'
   declutter: 0.0
   lang: 0.0
-  walk: 0.0
-  screentime: 2.5
+  walk: 7.9
+  screentime: 5.5
   gtd: 'yes'
   write: 911
   clothes: 'yes'
@@ -362,22 +362,40 @@
   arb: 0.0
 
 - date: 21/01/2023
-  sleep: 0.0
-  riseearly: ''
+  sleep: 6.5
+  riseearly: '06:42'
   read: 0.0
   chess: 3.0
   getridof: 0
   getridof_t: '(0)'
   declutter: 0.0
   lang: 0.0
-  walk: 0.0
-  screentime: 2.5
+  walk: 5.0
+  screentime: 4.75
   gtd: 'yes'
   write: 0.0
   clothes: 'yes'
   journal: 'yes'
   family: 'yes'
   arb: 0.0
+
+- date: 22/01/2023
+  sleep: 7.25
+  riseearly: '07:38'
+  read: 0.0
+  chess: 3.0
+  getridof: 0
+  getridof_t: '(0)'
+  declutter: 0.0
+  lang: 0.0
+  walk: 1.89
+  screentime: 1.25
+  gtd: 'no'
+  write: 0.0
+  clothes: 'yes'
+  journal: 'yes'
+  family: 'yes'
+  arb: 1.5
 
 # TEMPLATE
 #- date: 04/01/2023
