@@ -7,6 +7,7 @@ description: "Películas, series de TV y documentales"
 ### Cine
 1. La piel del tambor (2022) [→ 🍿](https://www.primevideo.com/dp/0T42O5Z6QECZ4Q6CXW1D7OYTAY) ★★★★☆
 1. Ex machina (2014) [→ 🍿](https://www.imdb.com/title/tt0470752/) ★★★★☆
+1. 70 binladens [→ 🍿](https://www.imdb.com/title/tt7972178/) ★★★★☆
 
 ### Series
 1. El Gran Imperio Otomano [→ 🍿 S02E02](https://www.netflix.com/es/title/80990771) ★★★★☆
