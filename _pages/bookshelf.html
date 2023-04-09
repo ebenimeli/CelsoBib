@@ -6,6 +6,8 @@ description: "Rincón de lectura"
 <div class="book-list">
 {% for book in site.data.books %}
 {% if book.onpage %}
+{% if book.completed != 'pause' %}
+
     <h2 class="year">
       <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}">
         <span class="book-title">«{{ book.title }}»</span>
@@ -30,6 +32,8 @@ description: "Rincón de lectura"
     {% endif %}
     <hr/>
 {% endif %}
+{% endif %}
+
 {% endfor %}
 </div>
 
@@ -53,7 +57,7 @@ description: "Rincón de lectura"
 <!--<h2 class="year">2022</h2>-->
 <ol class="book-list">
 {% for book in site.data.books %}
-{% if book.completed == '2023' %}
+{% if book.completed == '2025' %}
       <li>
         {% if book.rating %}
         <span class="star-rating">
