@@ -1,0 +1,18 @@
+- title: Hoy
+  done: 4
+  todo: 1
+  tasks: 5
+  time: 120
+
+- title: Siguientes
+  done: 1
+  todo: 168
+  tasks: 169
+  time: 95
+
+- title: Tal vez/algún día
+  done: 1
+  todo: 1
+  tasks: 2
+  time: 60
+
