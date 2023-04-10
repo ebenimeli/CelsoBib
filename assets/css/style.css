@@ -235,6 +235,7 @@ div.book-data {
 h1 {
   /*color: Steelblue;*/
   /*color: White;*/
+  border-bottom: .5px solid #dcdcdc;
 
 }
 
