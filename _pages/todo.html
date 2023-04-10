@@ -5,6 +5,12 @@ description: "Tareas"
 ---
 <div class="book-list">
 {% for item in site.data.todo %}
+    {% if item.title == "Inbox" %}
+    <h2 class="year">
+      <span class="book-title">{{ item.title }} ({{ item.todo }})</span>
+   </h2>
+   <p>Esta bandeja de entrada se procesa diariamente.</p>
+    {% else %}
     <h2 class="year">
         <span class="book-title">{{ item.title }} ({{ item.done}}/{{item.tasks}})</span>
     </h2>
@@ -15,6 +21,19 @@ description: "Tareas"
     <div class="w3-light-grey w3-round w3-small w3-center w3-border readprogress">
       <div class="w3-container w3-round w3-blue" style="width: {{ progress }}">{{ progress }}</div>
     </div>
+    {% if item.title == "Hoy" %}
+      <p>Las {{ ntasks | round: 0 }} tareas de hoy tienen una duración total estimada de {{ tt }} horas.</p>
+    {% endif %}
+
+    {% if item.title == "Siguientes" %}
+    <p>Las {{ ntasks | round: 0 }} tareas siguientes tienen una duración total estimada de {{ tt }} horas.</p>
+    {% endif %}
+
+    {% if item.title == "Tal vez/algún día" %}
+    <p>Las {{ ntasks | round: 0 }} tareas del tipo <i>tal vez/algún día</i> tienen una duración total estimada de {{ tt }} horas.</p>
+    {% endif %}
+
+    {% endif %}
 {% endfor %}
 </div>
 
