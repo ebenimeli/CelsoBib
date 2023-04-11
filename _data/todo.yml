@@ -5,16 +5,16 @@
   time: 0
 
 - title: Hoy
-  done: 4
-  todo: 1
-  tasks: 5
-  time: 120
+  done: 1
+  todo: 5
+  tasks: 6
+  time: 210
 
 - title: Siguientes
   done: 0
-  todo: 102
-  tasks: 102
-  time: 120
+  todo: 74
+  tasks: 74
+  time: 145
 
 - title: Tal vez/algún día
   done: 1
