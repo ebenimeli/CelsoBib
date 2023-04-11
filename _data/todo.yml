@@ -1,20 +1,20 @@
 - title: Inbox
   done: 0
-  todo: 150
-  tasks: 150
+  todo: 32
+  tasks: 32
   time: 0
 
 - title: Hoy
-  done: 1
-  todo: 5
-  tasks: 6
-  time: 210
+  done: 3
+  todo: 6
+  tasks: 9
+  time: 280
 
 - title: Siguientes
   done: 0
-  todo: 74
-  tasks: 74
-  time: 145
+  todo: 79
+  tasks: 79
+  time: 270
 
 - title: Tal vez/algún día
   done: 1

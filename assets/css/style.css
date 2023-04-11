@@ -454,3 +454,8 @@ img.gallerypic {
   padding: 2px;
   border: .25px solid #696969;
 }
+
+ul.tasks li {
+  list-style-type: none;
+  margin-left: -25px;
+}
