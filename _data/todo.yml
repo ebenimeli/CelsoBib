@@ -1,7 +1,7 @@
 - title: Inbox
   done: 0
-  todo: 192
-  tasks: 192
+  todo: 150
+  tasks: 150
   time: 0
 
 - title: Hoy
@@ -11,14 +11,14 @@
   time: 120
 
 - title: Siguientes
-  done: 1
-  todo: 165
-  tasks: 166
-  time: 135
+  done: 0
+  todo: 102
+  tasks: 102
+  time: 120
 
 - title: Tal vez/algún día
   done: 1
-  todo: 1
-  tasks: 2
+  todo: 4
+  tasks: 5
   time: 60
 
