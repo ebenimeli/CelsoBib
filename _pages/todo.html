@@ -12,7 +12,7 @@ description: "Tareas"
    <p>Esta bandeja de entrada se procesa y se vacía diariamente.</p>
     {% else %}
     <h2 class="year">
-        <span class="book-title">{{ item.title }} ({{ item.done}}/{{item.tasks}})</span>
+        <span class="book-title">{{ item.title }} ({{item.tasks}})</span>
     </h2>
     {% if item.title == "Hoy" %}
     {% assign ntasks = item.tasks | times: 1.0 %}
@@ -29,7 +29,6 @@ description: "Tareas"
       {% endfor %}
         <li><input type="checkbox"> ···</li>
       </ul>
-      <p>Las {{ ntasks | round: 0 }} tareas de hoy tienen una duración total estimada de {{ tt }} horas.</p>
     {% endif %}
 
     {% if item.title == "Siguientes" %}
@@ -40,14 +39,19 @@ description: "Tareas"
       {% endfor %}
       <li><input type="checkbox"> ···</li>
       </ul>
-    <p>Las {{ ntasks | round: 0 }} tareas siguientes tienen una duración total estimada de {{ tt }} horas.</p>
     {% endif %}
 
     {% if item.title == "Tal vez/algún día" %}
-    <p>Las {{ ntasks | round: 0 }} tareas del tipo <i>tal vez/algún día</i> tienen una duración total estimada de {{ tt }} horas.</p>
+    <p>Algunas próximas tareas que puedo compartir son:</p>
+    <ul class="tasks">
+    {% for task in site.data.maybe %}
+      <li><input type="checkbox"> {{ task.title }}</li>
+    {% endfor %}
+    <li><input type="checkbox"> ···</li>
+    </ul>
+    {% endif %}
     {% endif %}
 
-    {% endif %}
 {% endfor %}
 </div>
 
