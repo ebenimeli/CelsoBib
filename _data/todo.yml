@@ -5,10 +5,10 @@
   time: 0
 
 - title: Hoy
-  done: 5
-  todo: 4
-  tasks: 9
-  time: 280
+  done: 0
+  todo: 6
+  tasks: 6
+  time: 195
 
 - title: Siguientes
   done: 1
