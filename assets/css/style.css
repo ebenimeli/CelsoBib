@@ -459,3 +459,11 @@ ul.tasks li {
   list-style-type: none;
   margin-left: -25px;
 }
+
+/** Mine **/
+
+.blog-post-content a {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: #696969;
+}
