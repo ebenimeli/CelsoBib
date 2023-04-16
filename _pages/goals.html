@@ -1,0 +1,55 @@
+---
+layout: page
+title: "Objetivos"
+description: "Proyectos"
+---
+
+
+<!-- From 15.04.2023 until 31.12.2023-->
+{%  assign read = 0 %}
+{%  assign read_goal = 15600.0 %}
+
+{%  assign write = 0 %}
+{%  assign write_goal = 80000.0  %}
+
+{%  assign deutsch = 0 %}
+{%  assign deutsch_goal = 4000.0 %}
+
+<div class="book-list">
+  <h2 class="year">
+    <span class="book-title">Objetivos anuales</span>
+ </h2>
+<p>Nombres en clave</p>
+
+  {% for item in site.data.projects %}
+    {% assign read = read | plus: item.read %}
+    {% assign write = write | plus: item.write %}
+    {% assign deutsch = deutsch | plus: item.deutsch %}
+  {% endfor %}
+
+  <h2 class="year">
+    <span class="book-title">Read ({{ read }})</span>
+  </h2>
+  {% assign progress = read | divided_by: read_goal | times:100 | round: 1 | append: '%' %}
+  <div class="w3-light-grey w3-round w3-small w3-center w3-border readprogress">
+    <div class="w3-container w3-round w3-blue" style="width: {{ progress }}">{{ progress }}</div>
+  </div>
+  
+  <h2 class="year">
+    <span class="book-title">Write ({{ write }})</span>
+  </h2>
+  {% assign progress = write | divided_by: write_goal | times:100 | round: 1 | append: '%' %}
+  <div class="w3-light-grey w3-round w3-small w3-center w3-border readprogress">
+    <div class="w3-container w3-round w3-blue" style="width: {{ progress }}">{{ progress }}</div>
+  </div>
+
+  <h2 class="year">
+    <span class="book-title">Deutsch ({{ deutsch }})</span>
+  </h2>
+  {% assign progress = deutsch | divided_by: deutsch_goal | times:100 | round: 1 | append: '%' %}
+  <div class="w3-light-grey w3-round w3-small w3-center w3-border readprogress">
+    <div class="w3-container w3-round w3-blue" style="width: {{ progress }}">{{ progress }}</div>
+  </div>
+
+</div>
+
