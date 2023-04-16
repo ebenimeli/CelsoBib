@@ -1,9 +1,7 @@
-- title: 15/04/2023
-  read: 25
-  deutsch: 25
-  write: 245
-
-- title: 14/04/2023
-  read: 25
-  deutsch: 10
-  write: 189
+- date: 16/04/2023
+  day: Su
+  read: 60
+  lang: 25
+  write: 200
+  walk: 1.2
+ 

@@ -4,52 +4,89 @@ title: "Objetivos"
 description: "Proyectos"
 ---
 
+{%  assign read_w = 0 %}
+{%  assign read_w_goal = 7 %}
 
-<!-- From 15.04.2023 until 31.12.2023-->
-{%  assign read = 0 %}
-{%  assign read_goal = 15600.0 %}
+{%  assign write_w = 0 %}
+{%  assign write_w_goal = 2000.0  %}
 
-{%  assign write = 0 %}
-{%  assign write_goal = 80000.0  %}
+{%  assign lang_w = 0 %}
+{%  assign lang_w_goal = 7 %}
 
-{%  assign deutsch = 0 %}
-{%  assign deutsch_goal = 4000.0 %}
+<!-- 40 km -->
+{%  assign walk_w = 0 %}
+{%  assign walk_w_goal = 40.0 %}
 
 <div class="book-list">
-  <h2 class="year">
-    <span class="book-title">Objetivos anuales</span>
- </h2>
-<p>Nombres en clave</p>
 
-  {% for item in site.data.projects %}
-    {% assign read = read | plus: item.read %}
-    {% assign write = write | plus: item.write %}
-    {% assign deutsch = deutsch | plus: item.deutsch %}
-  {% endfor %}
+<p>Progreso semanal de algunos objetivos.</p>
+
+{% assign endweek = 0 %}
+{% assign ndays = 1 %}
+{% for item in site.data.projects %}
+  {% if endweek == 0 %}
+    {% if item.day == "Su" and ndays>1 %}
+        {% assign endweek = 1 %}
+    {% else %}
+      {% assign read_w = read_w | plus: item.read %}
+      {% assign write_w = write_w | plus: item.write %}
+      {% assign lang_w = lang_w | plus: item.lang %}
+      {% assign walk_w = walk_w | plus: item.walk %}
+    {% endif %}
+  {% endif %}
+  {% assign ndays = ndays | plus: 1 %}
+{% endfor %}
+
+{% assign read_w = read_w | divided_by: 60.0 | round: 1 %}
 
   <h2 class="year">
-    <span class="book-title">Read ({{ read }})</span>
+    <div class="tooltip">
+    <span class="book-title">📚</span>
+    <span class="tooltiptext">{{read_w}}</span>
+  </div>
   </h2>
-  {% assign progress = read | divided_by: read_goal | times:100 | round: 1 | append: '%' %}
+  {% assign progress = read_w | divided_by: read_w_goal | times:100 | round: 1 | append: '%' %}
   <div class="w3-light-grey w3-round w3-small w3-center w3-border readprogress">
     <div class="w3-container w3-round w3-blue" style="width: {{ progress }}">{{ progress }}</div>
   </div>
-  
+
   <h2 class="year">
-    <span class="book-title">Write ({{ write }})</span>
+    <div class="tooltip">
+
+    <span class="book-title">🖋️</span>
+    <span class="tooltiptext">{{write_w}}</span>
+  </div>
   </h2>
-  {% assign progress = write | divided_by: write_goal | times:100 | round: 1 | append: '%' %}
+  {% assign progress = write_w | divided_by: write_w_goal | times:100 | round: 1 | append: '%' %}
+
   <div class="w3-light-grey w3-round w3-small w3-center w3-border readprogress">
     <div class="w3-container w3-round w3-blue" style="width: {{ progress }}">{{ progress }}</div>
   </div>
 
+
+  {% assign lang_w = lang_w | divided_by: 60.0 | round: 1 %}
   <h2 class="year">
-    <span class="book-title">Deutsch ({{ deutsch }})</span>
+    <div class="tooltip">
+    <span class="book-title">🔠</span>
+    <span class="tooltiptext">{{lang_w}}</span>
+  </div>
   </h2>
-  {% assign progress = deutsch | divided_by: deutsch_goal | times:100 | round: 1 | append: '%' %}
+  {% assign progress = lang_w | divided_by: lang_w_goal | times:100 | round: 1 | append: '%' %}
   <div class="w3-light-grey w3-round w3-small w3-center w3-border readprogress">
     <div class="w3-container w3-round w3-blue" style="width: {{ progress }}">{{ progress }}</div>
   </div>
+ 
+  <h2 class="year">
+    <div class="tooltip">
+    <span class="book-title">🚶🏽‍♂️</span>
+    <span class="tooltiptext">{{walk_w}}</span>
+  </div>
+  </h2>
+  {% assign progress = walk_w | divided_by: walk_w_goal | times:100 | round: 1 | append: '%' %}
+  <div class="w3-light-grey w3-round w3-small w3-center w3-border readprogress">
+    <div class="w3-container w3-round w3-blue" style="width: {{ progress }}">{{ progress }}</div>
+  </div>
+
 
 </div>
 
