@@ -1,7 +1,17 @@
 - date: 16/04/2023
+  riseearly: '07:41'
+  sleep: 8.25
   day: Su
   read: 60
   lang: 25
   write: 200
   walk: 1.2
- 
+  read: 25
+  chess: 1
+  getridof: 1
+  getridof_t: '(0)'
+  declutter: 25
+  screentime: 10
+  gtd: 'no'
+  journal: 'no'
+  family: 'yes'
