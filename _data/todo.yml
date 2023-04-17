@@ -1,14 +1,14 @@
 - title: Inbox
   done: 0
-  todo: 0
-  tasks: 0
+  todo: 2
+  tasks: 2
   time: 0
 
 - title: Hoy
-  done: 1
-  todo: 5
-  tasks: 6
-  time: 195
+  done: 0
+  todo: 7
+  tasks: 7
+  time: 220
 
 - title: Siguientes
   done: 1
