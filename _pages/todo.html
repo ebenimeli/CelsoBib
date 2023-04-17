@@ -24,30 +24,40 @@ description: "Tareas"
     </div>
       <p>Algunas tareas para hoy y que puedo compartir son:</p>
       <ul class="tasks">
+      {% assign pub_tasks = 0 %}
       {% for task in site.data.today %}
         <li><input type="checkbox"> {{ task.title }}</li>
+        {% assign pub_tasks = pub_tasks | plus: 1 %}
       {% endfor %}
-        <li><input type="checkbox"> ···</li>
-      </ul>
+      {% assign r = item.tasks | minus: pub_tasks %}
+      <li><input type="checkbox">...y {{r}} tareas más</li>
+    </ul>
     {% endif %}
 
     {% if item.title == "Siguientes" %}
     <p>Algunas próximas tareas que puedo compartir son:</p>
       <ul class="tasks">
+      {% assign pub_tasks = 0 %}
       {% for task in site.data.next %}
         <li><input type="checkbox"> {{ task.title }}</li>
+        {% assign pub_tasks = pub_tasks | plus: 1 %}
       {% endfor %}
-      <li><input type="checkbox"> ···</li>
+      {% assign r = item.tasks | minus: pub_tasks %}
+      <li><input type="checkbox">...y {{r}} tareas más</li>
       </ul>
     {% endif %}
 
     {% if item.title == "Tal vez/algún día" %}
     <p>Algunas próximas tareas que puedo compartir son:</p>
     <ul class="tasks">
+    {% assign pub_tasks = 0 %}
     {% for task in site.data.maybe %}
       <li><input type="checkbox"> {{ task.title }}</li>
+      {% assign pub_tasks = pub_tasks | plus: 1 %}
     {% endfor %}
-    <li><input type="checkbox"> ···</li>
+    {% assign r = item.tasks | minus: pub_tasks %}
+
+    <li><input type="checkbox">...y {{r}} tareas más</li>
     </ul>
     {% endif %}
     {% endif %}
