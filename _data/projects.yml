@@ -1,3 +1,20 @@
+- date: 17/04/2023
+  riseearly: '06:05'
+  sleep: 7.5
+  day: Mo
+  read: 25
+  lang: 0
+  write: 0
+  walk: 0
+  chess: 0
+  getridof: 0
+  getridof_t: '(0)'
+  declutter: 0
+  screentime: 0
+  gtd: 'no'
+  journal: 'no'
+  family: 'no'
+
 - date: 16/04/2023
   riseearly: '07:41'
   sleep: 8.25
@@ -6,7 +23,6 @@
   lang: 25
   write: 200
   walk: 1.2
-  read: 25
   chess: 1
   getridof: 1
   getridof_t: '(0)'
