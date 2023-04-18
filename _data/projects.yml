@@ -2,7 +2,7 @@
   riseearly: '06:05'
   sleep: 7.5
   day: Mo
-  read: 25
+  read: 60
   lang: 0
   write: 243
   walk: 0
@@ -11,9 +11,9 @@
   getridof_t: '(0)'
   declutter: 0
   screentime: 0
-  gtd: 'no'
+  gtd: 'yes'
   journal: 'no'
-  family: 'no'
+  family: 'yes'
 
 - date: 16/04/2023
   riseearly: '07:41'
