@@ -1,11 +1,45 @@
+- date: 19/04/2023
+  day: We
+  riseearly: '06:13'
+  sleep: 7.5
+  read: 10
+  lang: 0
+  write: 0
+  walk: 9.05
+  chess: 0
+  getridof: 0
+  getridof_t: '(0)'
+  declutter: 0
+  screentime: 0
+  gtd: 'yes'
+  journal: 'no'
+  family: 'yes'
+
+- date: 18/04/2023
+  day: Tu
+  riseearly: '06:11'
+  sleep: 7.5
+  read: 10
+  lang: 0
+  write: 0
+  walk: 5.17
+  chess: 0
+  getridof: 0
+  getridof_t: '(0)'
+  declutter: 0
+  screentime: 0
+  gtd: 'yes'
+  journal: 'no'
+  family: 'yes'
+
 - date: 17/04/2023
+  day: Mo
   riseearly: '06:05'
   sleep: 7.5
-  day: Mo
   read: 60
   lang: 0
   write: 243
-  walk: 0
+  walk: 1.13
   chess: 0
   getridof: 0
   getridof_t: '(0)'
