@@ -13,6 +13,7 @@ description: "Productos que he comprado y recomiendo"
 
 ### Ajedrez
 - Aquamarine Games - Stauton 4, **piezas de ajedrez** (Compudid CP002) 👉🏼 [Comprar en Amazon](https://amzn.to/3MMAptq)
+- Ajedrez: 25 (Cuadrados de diversión) 👉🏼 [Comprar en Amazon](https://amzn.to/3oN7hZ7)
 
 ### Libros
 Visita la [sección dedicada a libros](https://www.ebenimeli.org/pages/bookshelf.html).
