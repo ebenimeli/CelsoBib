@@ -467,3 +467,7 @@ ul.tasks li {
   text-decoration-style: solid;
   text-decoration-thickness: 1px;
 }
+
+.book-list a {
+  text-decoration: none;
+}
