@@ -340,6 +340,7 @@ div.readprogress {
 
 .book-title {
   font-size: 1em;
+  font-style: italic;
   /**display: block;**/
 }
 
