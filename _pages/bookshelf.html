@@ -5,6 +5,7 @@ description: "Rincón de lectura"
 ---
 <div class="book-list">
 {% for book in site.data.books %}
+{% if book.highlight %}
 {% if book.onpage %}
 {% if book.completed != 'pause' %}
 
@@ -31,6 +32,7 @@ description: "Rincón de lectura"
     <p class="book-synopsis">&laquo;{{ book.synopsis }}&raquo;</p>
     {% endif %}
     <hr/>
+{% endif %}
 {% endif %}
 {% endif %}
 
@@ -71,6 +73,10 @@ description: "Rincón de lectura"
         </span>
         {% endif %}
         <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}"><i>{{ book.title }}</i></a> de {{ book.author}}
+        {% if book.onpage %}
+        {% assign progress = book.onpage | divided_by:book.pages | times:100 | round: 0 | append: '%' %}
+          <span>{{ progress }}</span>
+        {% endif %}      
       </li>
 {% endif %}
 {% endfor %}
@@ -81,7 +87,7 @@ description: "Rincón de lectura"
 
 <h2 class="year">Últimas lecturas</h2>
 
-{% assign y_start = 2021 %}
+{% assign y_start = 2023 %}
 {% assign y_end = 2017 %}
 
 {% assign years = y_start | minus: y_end %}
@@ -104,6 +110,10 @@ description: "Rincón de lectura"
         </span>
         {% endif %}
         <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}"><i>{{ book.title }}</i></a> de {{ book.author}}
+        {% if book.onpage %}
+        {% assign progress = book.onpage | times: 1.0 | divided_by:book.pages | times:100 | round: 0 | append: '%' %}
+          <span>({{ progress }})</span>
+        {% endif %}      
       </li>
 {% endif %}
 {% endfor %}

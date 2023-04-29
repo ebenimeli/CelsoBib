@@ -11,6 +11,7 @@
   Se encarga del caso Melchor Marín, un joven policía y lector voraz llegado desde Barcelona cuatro años atrás, con un oscuro pasado a cuestas que le ha convertido en una leyenda del cuerpo y que cree haber enterrado bajo su vida feliz como marido de la bibliotecaria del pueblo y padre de una niña llamada Cosette, igual que la hija de Jean Valjean, el protagonista de su novela favorita: Los miserables.
   Partiendo de ese suceso, y a través de una narración trepidante y repleta de personajes memorables, esta novela se convierte en una lúcida reflexión sobre el valor de la ley, la posibilidad de la justicia y la legitimidad de la venganza, pero sobre todo en la epopeya de un hombre en busca de su lugar en el mundo."
   cover: "terraalta.jpeg"
+  highlight: "yes"
 
 - title: Imperios y espadazos. Una historia de la Antigüedad para no aburrir(te)
   author: Andoni Garrido Fernández
@@ -18,19 +19,54 @@
   image:
   description:
   genre: [historia]
-  completed: 
-  onpage: 65.0
-  pages: 498.0
+  completed: 2023
+  onpage: 65
+  pages: 498
   synopsis: "Basado en el canal de Youtube Pero esto es otra historia.
 ¿Es aburrida la Historia? Eso depende de quién te la cuente. Con este libro te lo pasarás de lujo leyendo y adentrándote en la fascinante Antigüedad. Los hechos más importantes de este periodo reunidos en un único volumen lleno de curiosidades y anécdotas, y relatados en orden cronológico para que no te pierdas. Descubre a través de esta divertida lectura los misterios que esconden temas como el origen de la vida en la Tierra en el remoto mundo prehistórico, la fundación de la primera gran civilización en Sumeria, la construcción de las enormes pirámides del Antiguo Egipto, el colapso del Bronce por los Pueblos del Mar, el desarrollo de la democracia griega o la expansión de Roma por todo el Mediterráneo hasta la llegada de los temibles bárbaros germánicos."
   cover: "imperiosyespadazos.jpeg"
 
+- title: El cerebro bilingüe. La neurociencia del lenguaje
+  author: Albert Costa
+  link: https://amzn.to/3SSKWnf
+  image:
+  description:
+  genre: [ciencia]
+  completed: 2023
+  onpage: 17
+  pages: 243
+
 - title: "Céntrate (Deep Work)"
   author: Cal Newport
   link: https://amzn.to/3Xeb1iW
-  onpage: 62.0
+  onpage: 65.0
   pages: 249.0
-  completed: 'pause'
+  completed: 2023
+
+- title: En busca del origen del lenguaje
+  author: Sverker Johansson
+  link: https://amzn.to/3fhFRGt
+  image:
+  description:
+  genre: [ciencia]
+  completed: 2023
+  synopsis: "Un libro fascinante sobre uno de los mayores misterios de la humanidad: el origen del lenguaje.<br/>
+―¿Por qué el mono no responde a lo que le digo? ―pregunta una niña de cuatro años.<br/>
+―Porque los animales no saben hablar ―contesta su papá.<br/>
+―Pero ayer dijiste que las personas también eran animales. Entonces ¿por qué hablan?<br/>
+Hace falta un libro entero para responder a esta última pregunta, y ese libro es el que tienes ahora en tus manos, una historia audaz y entretenida sobre uno de los mayores misterios de la humanidad: el origen del lenguaje.<br/>
+A partir de las investigaciones más recientes en disciplinas tan diversas como la biología evolutiva, la primatología, la neurociencia o la antropología social, Sverker Johansson expone las principales teorías sobre cómo y por qué los humanos comenzaron a hablar. Para ello explora la evolución histórica de las lenguas desde una perspectiva darwiniana, cuestiona las ideas de Chomsky y otros lingüistas reconocidos, compara las habilidades comunicativas de las personas y los animales, y aborda los rasgos característicos de los idiomas modernos.<br/>
+En busca del origen del lenguaje es el libro definitivo para entender cómo se originó el lenguaje humano y por qué hablamos de la manera en que lo hacemos."
+  cover: "origenlenguaje.jpeg"
+  onpage: 10
+  pages: 400
+
+- title: "La Edad Media. Una historia gráfica"
+  author: Eleanor Janega y Neil Max Emmanuel
+  link: https://amzn.to/3hU1hKP
+  completed: 2023
+  onpage: 39.0
+  pages: 181.0
 
 - title: Los Austrias. El vuelo del águila
   author: José Luis Corral
@@ -63,11 +99,10 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   image:
   description:
   genre: [novela]
-  completed: '2023'
-  progress: '100%'
+  completed: 2023
   synopsis: "¿Quién escribió las obras de Shakespeare? ¿Qué libro perseguía el KGB? ¿Qué novela ocultó Hitler? ¿Quién pensó en el orden alfabético para organizar los libros? ¿Qué autor burló al índice de libros prohibidos de la Inquisición? Estos y otros enigmas literarios encuentran respuesta en las páginas de La noche en que Frankenstein leyó el Quijote, un viaje en el tiempo por la historia de la literatura universal de la mano de Santiago Posteguillo, uno de los novelistas históricos más reconocidos por la crítica y el público de los últimos años. Y un profesor de literatura… poco convencional."
   cover: "frankensteinquijote.jpeg"
-
+  rating: 4
 
 - title: Línea de fuego
   author: Arturo Pérez-Reverte
@@ -75,8 +110,7 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   image:
   description:
   genre: [novela]
-  completed: 2022
-  progress: '19%'
+  completed: 
   synopsis: "En la noche del 24 al 25 de julio de 1938, durante la batalla del Ebro, 2.890 hombres y 14 mujeres de la XI Brigada Mixta del ejército de la República cruzan el río para establecer la cabeza de puente de Castellets del Segre, donde combatirán durante diez días. Sin embargo, ni Castellets, ni la XI Brigada, ni las tropas que se le enfrentan en Línea de fuego existieron nunca. Las unidades militares, los lugares y los personajes que en esta novela aparecen son ficticios, aunque no lo sean los hechos ni los nombres reales en que se inspiran. Fue exactamente así como padres, abuelos y familiares de numerosos españoles de hoy combatieron en ambos bandos durante aquellos días y aquellos trágicos años.<br/>La batalla del Ebro fue la más dura y sangrienta de cuantas se han librado en nuestro suelo, y sobre ella hay abundante documentación, partes de guerra y testimonios personales. Con todo eso, combinando rigor e invención, el autor más leído de la literatura española actual ha construido, no ya una novela sobre la Guerra Civil, sino una formidable novela de hombres y mujeres en cualquier guerra: un relato ecuánime y fascinante donde se recupera la memoria de nuestros padres y abuelos, que es también nuestra propia historia.<br/>Con Línea de fuego, Arturo Pérez-Reverte sitúa con sobrecogedor realismo al lector entre quienes, voluntarios o a la fuerza, estuvieron no en la retaguardia, sino peleando en ambos bandos en los frentes de batalla. En España se han escrito muchas y excelentes novelas sobre esa contienda desde distintas posiciones ideológicas, pero ninguna como ésta. Nunca antes la Guerra Civil se había contado así."
   cover: "lineadefuego.jpeg"
 
@@ -86,33 +120,9 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   image:
   description:
   genre: [novela]
-  completed: '2022'
+  completed: 2022
   rating: 5
   fav: 'yes'
-
-- title: El cerebro bilingüe. La neurociencia del lenguaje
-  author: Albert Costa
-  link: https://amzn.to/3SSKWnf
-  image:
-  description:
-  genre: [ciencia]
-  completed: 2022
-
-- title: En busca del origen del lenguaje
-  author: Sverker Johansson
-  link: https://amzn.to/3fhFRGt
-  image:
-  description:
-  genre: [ciencia]
-  completed: '2022'
-  synopsis: "Un libro fascinante sobre uno de los mayores misterios de la humanidad: el origen del lenguaje.<br/>
-―¿Por qué el mono no responde a lo que le digo? ―pregunta una niña de cuatro años.<br/>
-―Porque los animales no saben hablar ―contesta su papá.<br/>
-―Pero ayer dijiste que las personas también eran animales. Entonces ¿por qué hablan?<br/>
-Hace falta un libro entero para responder a esta última pregunta, y ese libro es el que tienes ahora en tus manos, una historia audaz y entretenida sobre uno de los mayores misterios de la humanidad: el origen del lenguaje.<br/>
-A partir de las investigaciones más recientes en disciplinas tan diversas como la biología evolutiva, la primatología, la neurociencia o la antropología social, Sverker Johansson expone las principales teorías sobre cómo y por qué los humanos comenzaron a hablar. Para ello explora la evolución histórica de las lenguas desde una perspectiva darwiniana, cuestiona las ideas de Chomsky y otros lingüistas reconocidos, compara las habilidades comunicativas de las personas y los animales, y aborda los rasgos característicos de los idiomas modernos.<br/>
-En busca del origen del lenguaje es el libro definitivo para entender cómo se originó el lenguaje humano y por qué hablamos de la manera en que lo hacemos."
-  cover: "origenlenguaje.jpeg"
 
 - title: Antiguo Egipto. Introducción a su historia y cultura
   author: Salima Ikram
@@ -120,27 +130,22 @@ En busca del origen del lenguaje es el libro definitivo para entender cómo se o
   image:
   description:
   genre: [historia]
-  completed: 2022
-
-- title: "La Edad Media. Una historia gráfica"
-  author: Eleanor Janega y Neil Max Emmanuel
-  link: https://amzn.to/3hU1hKP
-  completed: 2022
+  completed: 
 
 - title: "Ajedrez y ciencia, pasiones mezcladas"
   author: Leontxo García
   link: https://amzn.to/3EHrsgu
-  completed: 2022
+  completed:
 
 - title: "Nikola Tesla. El hombre que inventó el siglo XX"
   author: Charo González Casas
   link: https://amzn.to/3UT5ahI
-  completed: 2022
+  completed: 
 
 - title: "La fábrica de cretinos digitales"
   author: Michel Desmurget
   link: https://amzn.to/3XddMkK
-  completed: 2022
+  completed: 
 
 #2021
 
