@@ -20,7 +20,7 @@ description: "Rincón de lectura"
     </h2>
 
     {% if book.onpage %}
-    {% assign progress = book.onpage | divided_by:book.pages | times:100 | round: 0 | append: '%' %}
+    {% assign progress = book.onpage | times: 1.0 | divided_by:book.pages | times:100 | round: 0 | append: '%' %}
     <div class="w3-light-grey w3-round w3-small w3-center w3-border readprogress">
       <div class="w3-container w3-round w3-blue" style="width: {{ progress }}">{{ progress }}</div>
     </div>
@@ -83,6 +83,8 @@ description: "Rincón de lectura"
 </ol>
 </div>
 
+<hr/>
+
 <div class="w-100">
 
 <h2 class="year">Últimas lecturas</h2>
@@ -109,15 +111,22 @@ description: "Rincón de lectura"
         &nbsp;
         </span>
         {% endif %}
-        <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}"><i>{{ book.title }}</i></a> de {{ book.author}}
         {% if book.onpage %}
         {% assign progress = book.onpage | times: 1.0 | divided_by:book.pages | times:100 | round: 0 | append: '%' %}
-          <span>({{ progress }})</span>
-        {% endif %}      
+        <div class="tooltip">
+          <span class="logid">📖</span>
+          <span class="tooltiptext">{{progress}}</span>
+        </div>
+        {% endif %}
+        <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}"><i>{{ book.title }}</i></a> de {{ book.author}}
+      
       </li>
 {% endif %}
 {% endfor %}
 </ol>
+{% if ty != 2022 %}
+<hr/>
+{% endif %}
 {% endfor %}
 
 </div>
