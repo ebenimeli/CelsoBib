@@ -6,14 +6,16 @@ description: "Productos que he comprado y recomiendo"
 
 ## 🛒 De compras
 
-### Multimedia
-- **Micrófono** de Solapa, omnidireccional lavalier Micrófono de Condensador de 5.6pies Audio Cables para Grabación Entrevista/Videoconferencia/Podcast/Dicción de Voz/Phone 👉🏼 [Comprar en Amazon](https://amzn.to/40etbBt)
-- **Wacom Intuos S** - **Tableta Gráfica Bluetooth** para pintar, dibujar y editar photos con 2 softwares creativos incluidos para descargar, óptima para la educación en línea y el teletrabajo, pistacho 👉🏼 [Comprar en Amazon](https://amzn.to/3UIfOs1)
-- Toshiba 2TB Canvio Basics Portable External Hard Drive, USB 3.2. Gen 1, Black (HDTB420EK3AA) 👉🏼 [Comprar en Amazon](https://amzn.to/3GOpD28)
+### Informática y electrónica
+- **Repetidor WiFi** TP-Link RE550 - Mesh Repetidor AC1900 👉🏼 [🛒](https://amzn.to/3ngHp7v)
+- **Micrófono** de solapa 👉🏼 [🛒](https://amzn.to/40etbBt)
+- **Tableta Gráfica** Bluetooth Wacom Intuos S 👉🏼 [🛒](https://amzn.to/3UIfOs1)
+- **Disco duro externo** Toshiba 2TB 👉🏼 [🛒](https://amzn.to/3GOpD28)
+- **Alfombrilla de ratón** 👉🏼 [🛒](https://amzn.to/40KT1xm)
 
 ### Ajedrez
-- Aquamarine Games - Stauton 4, **piezas de ajedrez** (Compudid CP002) 👉🏼 [Comprar en Amazon](https://amzn.to/3MMAptq)
-- Ajedrez: 25 (Cuadrados de diversión) 👉🏼 [Comprar en Amazon](https://amzn.to/3oN7hZ7)
+- **Piezas** de ajedrez Aquamarine Games - Stauton 4 👉🏼 [🛒](https://amzn.to/3MMAptq)
+- **Ejercicios** de ajedrez 👉🏼 [🛒](https://amzn.to/3oN7hZ7)
 
 ### Libros
 Visita la [sección dedicada a libros](https://www.ebenimeli.org/pages/bookshelf.html).
