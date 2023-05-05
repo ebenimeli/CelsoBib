@@ -14,9 +14,6 @@ description: "Rincón de lectura"
         <span class="book-title">{{ book.title }}</span>
       </a><br/>
     <span class="book-author">{{ book.author}}</span>
-    {% if book.link %}
-      <a href="{{ book.link }}">→</a>
-    {% endif %}
     </h2>
 
     {% if book.onpage %}
@@ -30,6 +27,9 @@ description: "Rincón de lectura"
       <a href="{{ book.link }}"><img src="assets/images/books/{{book.cover}}" class="book-cover"/></a>
     {% endif %}
     <p class="book-synopsis">&laquo;{{ book.synopsis }}&raquo;</p>
+    {% endif %}
+    {% if book.link %}
+    <p>🛒 <a href="{{ book.link }}">Comprar</a></p>
     {% endif %}
     <hr/>
 {% endif %}
