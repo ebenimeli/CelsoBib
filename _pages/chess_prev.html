@@ -1,0 +1,20 @@
+---
+layout: page
+title: ""
+description: "Rincón de ajedrez"
+---
+<div class="book-list">
+
+{% assign ndays = 30 %}
+
+{% assign j = ndays %}
+{% for i in (1..ndays) %}
+  {% assign str1 =  'assets/images/pages/chess/games/chess_' %}
+  {% assign str2 = '.jpg' %}
+  {% assign file_path = str1 | append: j | append: str2 %}
+    <a class="zoom" href="{{file_path}}">
+        <img src="{{file_path}}" width="80px"/>
+    </a>
+    {% assign j = j | minus: 1 %}
+{% endfor %}
+</div>
