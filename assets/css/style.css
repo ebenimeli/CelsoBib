@@ -466,7 +466,7 @@ ul.tasks li {
 .blog-post-content a {
   text-decoration: underline;
   text-decoration-style: solid;
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: 0.5px;
 }
 
 .book-list a {
