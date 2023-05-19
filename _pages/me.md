@@ -21,7 +21,7 @@ Mantengo una relación de amor-odio con las redes sociales. A veces paso por [Tw
 1. El mundo de la [productividad y la organización personal](https://www.ochoenpunto.com/).
 1. El noble arte del [ajedrez](pages/chess.html) y su rigurosa ciencia.
 1. Escribir. Lo hago de vez en cuando en mis blogs.
-1. La fascinante vida de [Ada Lovelace](https://es.wikipedia.org/wiki/Ada_Lovelace).
+1. La fascinante vida y legado de [Ada Lovelace](https://es.wikipedia.org/wiki/Ada_Lovelace).
 1. La automatización de procesos y otras formas de ahorrar tiempo.
 1. Correr. Una vez terminé una maratón en Barcelona.
 1. La [fotografía](https://www.instagram.com/ebenimeli/). Soy de Nikon.
@@ -38,3 +38,4 @@ Mantengo una relación de amor-odio con las redes sociales. A veces paso por [Tw
 - Mantener un control absoluto de mi lista de tareas.
 - Aprender otro idioma, francés quizá.
 - Volver a Japón.
+- Grabar un podcast.
