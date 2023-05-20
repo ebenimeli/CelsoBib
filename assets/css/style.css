@@ -34,7 +34,10 @@ body{
 
   margin-left: auto;
   margin-right: auto;
+  padding-left: 7px;
+  padding-right: 7px;
 }
+
 .post-container{
   display: flex;
   flex-direction: row;
