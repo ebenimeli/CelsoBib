@@ -4,11 +4,9 @@ title: ""
 description: "Puedes ver mis fotografías en Instagram (@ebenimeli), pero aquí tienes una foto al azar"
 ---
 
-{% assign min = 1 %}
-{% assign max = 3 %}
-{% assign diff = max | minus: min %}
-{% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+{% capture time_seed %}{{ 'now' | date: "%s" }}{% endcapture %}
+{% assign random = time_seed | times: 1103515245 | plus: 12345 | divided_by: 65536 | modulo: 32768 | modulo: 4 %}
 
 [
-![image](images/misc/foto{{randomNumber}}.jpg)
+![image](images/misc/foto{{random}}.jpg)
 ](https://www.instagram.com/ebenimeli/)
