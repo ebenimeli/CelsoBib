@@ -4,9 +4,9 @@ title: ""
 description: "Enrique"
 ---
 
-### 🙋🏻‍♂️ Hola
+### 🙋🏻‍♂️ Hola, mundo
 
-Soy Enrique, informático, profesor y *blogger* (no necesariamente en este orden). Trabajo como profesor de informática en la Educación Secundaria Obligatoria. Actualmente, imparto en inglés asignaturas relacionadas con la *Inteligencia Artificial, Programación y Robótica*, las *Tecnologías de la Información y la Comunicación* y las *Relaciones Digitales Responsables*. Además, soy coordinador TIC del centro.
+Soy Enrique. Trabajo como profesor de informática en la Educación Secundaria Obligatoria. Actualmente, imparto en inglés asignaturas relacionadas con la *Inteligencia Artificial, Programación y Robótica*, las *Tecnologías de la Información y la Comunicación* y las *Relaciones Digitales Responsables*. Además, soy coordinador TIC del centro.
 
 Estudié Ingeniería Informática y cursé dos años de doctorado en el área de procesamiento del lenguaje natural. En la misma universidad, trabajé en un grupo de investigación de traducción automática. Estudié mi último año de carrera en Austria y trabajé en investigación educativa en la misma universidad. También he ejercido en ella como profesor de Español como Lengua Extranjera (ELE). Actualmente, estudio el Grado de Lengua y Literatura Españolas. Puedes leer algunos detalles sobre formación y experiencia profesional en [mi perfil de LinkedIn](https://www.linkedin.com/in/ebenimeli/?locale=es_ES).
 
