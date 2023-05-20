@@ -12,7 +12,7 @@ Estudié Ingeniería Informática y cursé dos años de doctorado en el área de
 
 Mantengo una relación de amor-odio con las redes sociales. A veces paso por [Twitter](https://twitter.com/enriquebenimeli) para compartir. En [Instagram](https://www.instagram.com/ebenimeli/) publico algunas fotos, después de algún viaje sobre todo. Tengo [Facebook](https://www.facebook.com/ebenimeli/) prácticamente abandonado. Prefiero dedicar el tiempo a escribir en blogs, especialmente en [*Ocho en punto*](https://www.ochoenpunto.com) donde comparto algunas reflexiones sobre productividad y organización personal. Hace poco publiqué el [artículo n.º 150](https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/).
 
-### 💡 13 cosas que me interesa(n)
+### 💡 13 cosas que me interesan
 1. La informática. En especial las tecnologías del lenguaje.
 1. Las lenguas y culturas del mundo. Y viajar para descubrirlas.
 1. La enseñanza del español como lengua extranjera.
