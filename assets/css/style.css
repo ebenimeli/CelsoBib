@@ -481,8 +481,8 @@ ul.tasks li {
 }
 
 img.profile {
-  width: 120px;
-  float: left;
+  width: 150px;
+  float: right;
   padding-left: 10px;
 
   display: inline;
