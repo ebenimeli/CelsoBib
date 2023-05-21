@@ -6,6 +6,8 @@ description: "Enrique"
 
 ### 🙋🏻‍♂️ Hola, mundo
 
+<img src="assets/images/profile.jpg" class="profile image-cropper">
+
 Soy Enrique. Trabajo como profesor de informática en la Educación Secundaria Obligatoria. Actualmente, imparto en inglés asignaturas relacionadas con la *Inteligencia Artificial, Programación y Robótica*, las *Tecnologías de la Información y la Comunicación* y las *Relaciones Digitales Responsables*. Además, soy coordinador TIC del centro.
 
 Estudié **Ingeniería Informática** y cursé dos años de doctorado en el área de procesamiento del lenguaje natural. En la misma universidad, trabajé en un grupo de investigación de traducción automática. Así que me interesa la inteligencia artificial en general y las **tecnologías del lenguaje** en particular. Cursé mi último año de carrera en Austria y trabajé en un proyecto europeo de **investigación educativa** en la misma universidad. También he ejercido en ella como profesor de Español como Lengua Extranjera (ELE). Actualmente, estudio el Grado de Lengua y Literatura Españolas. Puedes leer algunos detalles sobre formación y experiencia profesional en [mi perfil de LinkedIn](https://www.linkedin.com/in/ebenimeli/?locale=es_ES).
@@ -27,10 +29,12 @@ Mantengo una relación de amor-odio con las redes sociales. A veces paso por [Tw
 1. La [fotografía](https://www.instagram.com/ebenimeli/). Soy de Nikon.
 1. Las listas de cosas.
 
+<!--
 ### ❌ No me interesa(n)
 - Perder el tiempo.
 - La televisión.
 - El fútbol.
+-->
 
 ### 🏁 Tal vez/algún día
 - Correr una segunda maratón.
@@ -40,6 +44,7 @@ Mantengo una relación de amor-odio con las redes sociales. A veces paso por [Tw
 - Volver a Japón.
 - Grabar un podcast.
 
+<!--
 ### 📦 De la A a la Z
 **A** · 
 [Ada Lovelace](https://es.wikipedia.org/wiki/Ada_Lovelace) · 
@@ -72,4 +77,5 @@ Python ·
 **T** · 
 traducción automática · 
 **W** · 
-WordPress · 
+WordPress
+-->
