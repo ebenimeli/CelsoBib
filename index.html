@@ -3,11 +3,14 @@ layout: default
 ---
 
 <div class="post-container">
-    {% for msg in site.data.log limit:1 %}
-    {% if msg.cat == 'status' %}
+    {% assign statok = 0 %}
+    {% for msg in site.data.log %}
+    {% if msg.cat == 'status' and statok == 0 %}
     <div class="post-list status">
         <a class="post-title" href="{{ msg.link }}">{{ msg.text }}</a>
+        <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">Hace un rato</time>
     </div>
+    {% assign statok = 1 %}
     {% endif %}
     {% endfor %}
 	{% for post in paginator.posts %}
