@@ -6,7 +6,11 @@ layout: default
     {% assign statok = 0 %}
     {% for msg in site.data.log %}
     {% if msg.cat == 'status' and statok == 0 %}
-    <div class="post-list status">
+        {% if msg.priority == 'urgent' %}
+            <div class="post-list urgent">
+        {% else %}
+            <div class="post-list status">
+        {% endif %}
         <a class="post-title" href="{{ msg.link }}">{{ msg.text }}</a>
         <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">Hace un rato</time>
     </div>
