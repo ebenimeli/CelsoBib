@@ -9,15 +9,16 @@ layout: default
 
     {% assign date2 = 'now' | date: "%s" %}
     {% assign date1 = msg.timestamp | date: "%s" %}
-    {% assign ago = date2 | minus: date1 | times: 1.0 | divided_by: 60 | divided_by: 60 | round: 0 %}
+    {% assign ago_min = date2 | minus: date1 | times: 1.0 | divided_by: 60 | round: 0 %}
+    {% assign ago_h = date2 | minus: date1 | times: 1.0 | divided_by: 60 | divided_by: 60 | round: 0 %}
 
-    {% if ago == 0 %}
-        {% assign agotext = "hace unos minutos" %}
+    {% if ago_h == 0 %}
+        {% assign agotext = "hace " | append: {{ago_min}} | append: " min" %}
     {% else %}
-        {% assign agotext = "hace " | append: {{ago}} | append: " h" %}
+        {% assign agotext = "hace " | append: {{ago_h}} | append: " h" %}
     {% endif %}
 
-    {% if ago < 24 %}
+    {% if ago_h < 24 %}
     <div class="post-list {{ msg.cat }}">
         <a class="post-title" href="{{ msg.link }}">{{ msg.text }}</a>
         <time datetime="{{ msg.timestamp | date_to_xmlschema }}" class="post-date">{{ agotext }}</time>
