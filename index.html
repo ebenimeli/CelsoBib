@@ -3,6 +3,13 @@ layout: default
 ---
 
 <div class="post-container">
+    {% for msg in site.data.log limit:1 %}
+    {% if msg.cat == 'status' %}
+    <div class="post-list status">
+        <a class="post-title" href="{{ msg.link }}">{{ msg.text }}</a>
+    </div>
+    {% endif %}
+    {% endfor %}
 	{% for post in paginator.posts %}
         <div class="post-list">
             <a class="post-title" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
