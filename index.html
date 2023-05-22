@@ -14,7 +14,7 @@ layout: default
     {% if ago == 0 %}
         {% assign agotext = "hace unos minutos" %}
     {% else %}
-        {% assign agotext = "hace " | append: {{ago}} | append: " horas" %}
+        {% assign agotext = "hace " | append: {{ago}} | append: " h" %}
     {% endif %}
 
     {% if ago < 24 %}
@@ -23,7 +23,7 @@ layout: default
         <time datetime="{{ msg.timestamp | date_to_xmlschema }}" class="post-date">{{ agotext }}</time>
     </div>
     {% endif %}
-    
+
     {% assign statok = 1 %}
     {% endif %}
     {% endfor %}
