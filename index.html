@@ -6,14 +6,24 @@ layout: default
     {% assign statok = 0 %}
     {% for msg in site.data.log %}
     {% if msg.cat == 'status' and statok == 0 %}
-        {% if msg.priority == 'urgent' %}
-            <div class="post-list urgent">
-        {% else %}
-            <div class="post-list status">
-        {% endif %}
+
+    {% assign date2 = 'now' | date: "%s" %}
+    {% assign date1 = msg.timestamp | date: "%s" %}
+    {% assign ago = date2 | minus: date1 | times: 1.0 | divided_by: 60 | divided_by: 60 | round: 0 %}
+
+    {% if ago == 0 %}
+        {% assign agotext = "hace unos minutos" %}
+    {% else %}
+        {% assign agotext = "hace " | append: {{ago}} | append: " horas" %}
+    {% endif %}
+
+    {% if ago < 24 %}
+    <div class="post-list {{ msg.cat }}">
         <a class="post-title" href="{{ msg.link }}">{{ msg.text }}</a>
-        <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">Hace un rato</time>
+        <time datetime="{{ msg.timestamp | date_to_xmlschema }}" class="post-date">{{ agotext }}</time>
     </div>
+    {% endif %}
+    
     {% assign statok = 1 %}
     {% endif %}
     {% endfor %}
