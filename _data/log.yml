@@ -1,7 +1,7 @@
 - timestamp: 2023-05-23 07:20
-  text: "Algunos centros de la Comunidad Valenciana cancelan su actividad docente.”
-  link: 'https://twitter.com/gvaeducacio/status/1660750103945117696?s=46'
-  cat: 'urgent’
+  text: "Algunos centros de la Comunidad Valenciana cancelan su actividad docente."
+  link: https://twitter.com/gvaeducacio/status/1660750103945117696?s=46
+  cat: 'urgent'
 
 - timestamp: 2023-05-22 22:26
   text: "Leyendo el capítulo sobre Atapuerca del libro «España y su herencia invisible». José Carlos Gracia recuerda su visita al yacimiento que tuvo oportunidad de grabar para su podcast."
