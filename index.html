@@ -5,7 +5,7 @@ layout: default
 <div class="post-container">
     {% assign statok = 0 %}
     {% for msg in site.data.log %}
-    {% if msg.cat == 'status' and statok == 0 %}
+    {% if (msg.cat == 'status' or msg.cat == 'urgent') and statok == 0 %}
 
     {% assign date2 = 'now' | date: "%s" %}
     {% assign date1 = msg.timestamp | date: "%s" %}
