@@ -18,7 +18,7 @@ layout: default
         {% assign agotext = "hace " | append: {{ago_h}} | append: " h" %}
     {% endif %}
 
-    {% if ago_h < 24 %}
+    {% if ago_h < 12 %}
     <div class="post-list {{ msg.cat }}">
         <a class="post-title" href="{{ msg.link }}">{{ msg.text }}</a>
         <time datetime="{{ msg.timestamp | date_to_xmlschema }}" class="post-date">{{ agotext }}</time>
