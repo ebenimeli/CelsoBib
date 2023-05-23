@@ -5,7 +5,7 @@ layout: default
 <div class="post-container">
     {% assign statok = 0 %}
     {% for msg in site.data.log %}
-    {% if (msg.cat == 'status' or msg.cat == 'urgent') and statok == 0 %}
+    {% if statok == 0 and (msg.cat == 'status' or msg.cat == 'urgent') %}
 
     {% assign date2 = 'now' | date: "%s" %}
     {% assign date1 = msg.timestamp | date: "%s" %}
@@ -28,6 +28,7 @@ layout: default
     {% assign statok = 1 %}
     {% endif %}
     {% endfor %}
+
 	{% for post in paginator.posts %}
         <div class="post-list">
             <a class="post-title" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
