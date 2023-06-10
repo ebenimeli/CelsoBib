@@ -6,6 +6,11 @@ description: "Productos que he comprado y recomiendo"
 
 ## 🛒 De compras
 
+<!--
+## Material de oficina ##
+-
+-->
+
 ### Informática y electrónica
 - **Repetidor WiFi** TP-Link RE550 - Mesh Repetidor AC1900 👉🏼 [🛒](https://amzn.to/3ngHp7v)
 - **Micrófono** de solapa 👉🏼 [🛒](https://amzn.to/40etbBt)
