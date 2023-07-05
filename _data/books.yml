@@ -1,17 +1,3 @@
-- title: España y su herencia invisible
-  author: José Carlos Gracia
-  link: https://amzn.to/3Bvng17
-  image:
-  description:
-  genre: [historia]
-  completed: 
-  onpage: 163
-  pages: 256
-  synopsis: "Una narración sencilla y natural de los acontecimientos de la Historia de España, buscando una relación entre nuestros orígenes y lo que hoy somos individualmente y como comunidad.  Un trayecto a través de etapas vitales de nuestra historia, persiguiendo siempre una conexión con la actualidad. Desde los primeros homínidos, pasando por los marineros que descubrieron el Nuevo Mundo, hasta llegar a nuestros días, hemos recibido una herencia intangible que debemos hacer llegar a las futuras generaciones. 
-  José Carlos Gracia es el creador y director del podcast de historia de España “Memorias de un Tambor”. A lo largo de su trayectoria, en su empeño por difundir la historia y las humanidades, ha sido merecedor de varios premios y nominaciones de prestigio, como el premio Bitácoras al Mejor Podcast Nacional y el Premio de la Asociación de Escuchas de Podcasting (ASESPOD). Está avalado por decenas de miles de seguidores, y varios de sus audios han logrado más de 500.000 descargas, lo que le convierte en un referente del podcasting nacional."
-  cover: "espana_herencia.jpeg"
-  highlight: "yes"
-  
 - title: Los Austrias. El vuelo del águila
   author: José Luis Corral
   link: https://amzn.to/3tHI29E
@@ -25,7 +11,7 @@
 Entretanto, la casa de Austria, mediante una política de pactos y enlaces matrimoniales, pugna por convertirse en la familia más poderosa de Europa. Todos los países de la cristiandad, papado incluido, se enredan en una serie de luchas por el poder en las que el sexo, la violencia y el crimen se utilizan como armas para conseguir sus fines políticos. En medio de todos esos conflictos, una familia de judíos conversos, los Losantos, luchará por sobrevivir a la Inquisición, aunque para ello tenga que renunciar a sus propias raíces.<br/>Los Austrias. El vuelo del águila es la gran novela de un tiempo y de un imperio que sentó las bases de un mundo nuevo: nuestro mundo."
   cover: "elvuelodelaguila.jpeg"
   highlight: "yes"
-  
+
 - title: Imperios y espadazos. Una historia de la Antigüedad para no aburrir(te)
   author: Andoni Garrido Fernández
   link: https://amzn.to/3zifsxC
@@ -91,6 +77,21 @@ En busca del origen del lenguaje es el libro definitivo para entender cómo se o
   progress: '5%'
   synopsis: "Clarissa, hija de un militar austríaco, conoce en Lucerna a Léonard, un joven socialista francés del que se enamora. El estallido de la Gran Guerra separa a los amantes y la joven, que ha quedado embarazada, debe volver a Austria en medio de una Europa que se desgarra, donde toma la decisión de tener y criar a un hijo del enemigo. Esta conmovedora novela tardía de Zweig es hoy considerada el testamento en el que el extraordinario escritor austríaco condensó los ideales humanísticos que abrazó durante toda su vida."
   cover: "clarissa.jpeg"
+
+- title: España y su herencia invisible
+  author: José Carlos Gracia
+  link: https://amzn.to/3Bvng17
+  image:
+  description:
+  genre: [historia]
+  completed: 2023
+  #onpage: 256
+  pages: 256
+  synopsis: "Una narración sencilla y natural de los acontecimientos de la Historia de España, buscando una relación entre nuestros orígenes y lo que hoy somos individualmente y como comunidad.  Un trayecto a través de etapas vitales de nuestra historia, persiguiendo siempre una conexión con la actualidad. Desde los primeros homínidos, pasando por los marineros que descubrieron el Nuevo Mundo, hasta llegar a nuestros días, hemos recibido una herencia intangible que debemos hacer llegar a las futuras generaciones. 
+  José Carlos Gracia es el creador y director del podcast de historia de España “Memorias de un Tambor”. A lo largo de su trayectoria, en su empeño por difundir la historia y las humanidades, ha sido merecedor de varios premios y nominaciones de prestigio, como el premio Bitácoras al Mejor Podcast Nacional y el Premio de la Asociación de Escuchas de Podcasting (ASESPOD). Está avalado por decenas de miles de seguidores, y varios de sus audios han logrado más de 500.000 descargas, lo que le convierte en un referente del podcasting nacional."
+  cover: "espana_herencia.jpeg"
+  highlight: "yes"
+  rating: 3
 
 - title: Terra alta
   author: Javier Cercas
