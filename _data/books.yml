@@ -12,6 +12,17 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   cover: "elvuelodelaguila.jpeg"
   highlight: "yes"
 
+- title: "Céntrate (Deep Work)"
+  author: Cal Newport
+  link: https://amzn.to/3Xeb1iW
+  genre: [productividad]
+  onpage: 65
+  pages: 249
+  completed: 2023
+  synopsis: "El «Deep Work» es la capacidad de concentrarse sin distracciones en una tarea cognitivamente exigente. En un mundo altamente competitivo que además incentiva la hiperconexión y la multitarea, la atención se ha convertido en un activo extremadamente valioso.  A partir de cuatro reglas prácticas, Carl Newport demuestra que reforzar nuestra capacidad de concentración y saber alejarse de las distracciones tecnológicas son los primeros pasos para lograr la felicidad y el éxito profesional."
+  cover: "deepwork.jpeg"
+  highlight: "yes"
+
 - title: Imperios y espadazos. Una historia de la Antigüedad para no aburrir(te)
   author: Andoni Garrido Fernández
   link: https://amzn.to/3zifsxC
@@ -34,13 +45,6 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   completed: 2023
   onpage: 17
   pages: 243
-
-- title: "Céntrate (Deep Work)"
-  author: Cal Newport
-  link: https://amzn.to/3Xeb1iW
-  onpage: 65.0
-  pages: 249.0
-  completed: 2023
 
 - title: En busca del origen del lenguaje
   author: Sverker Johansson
