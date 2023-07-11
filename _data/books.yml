@@ -12,6 +12,18 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   cover: "elvuelodelaguila.jpeg"
   highlight: "yes"
 
+
+- title: "Breve historia de la literatura española"
+  author: Alberto de Frutos Dávalos
+  link: https://amzn.to/43qyY8x
+  genre: [literatura]
+  onpage: 36
+  pages: 211
+  completed: 2023
+  synopsis: "Una completa historia de la literatura española desde sus orígenes hasta la actualidad: Las jarchas, el mester de clerecía, el romance, los pícaros y el Conde Lucanor para llegar al Quijote, Quevedo, Góngora, la poesía social, la generación del 98, Gerardo Diego, Lorca y hasta Francisco Umbral, Mayorga y el desarrollo de las nuevas tecnologías.Acérquese a la historia de la literatura española, a la situación social de España así como sus anhelos y esperanzas, expresados a través de la palabra escrita en las grandes obras de la literatura. Desde la aparición de los primeros textos en castellano, las glosas emilianenses, hasta los grandes genios como Quevedo, Lope de vega o Cervantes y llegando hasta hoy con grandes autores como Arturo Pérez-Reverte, Javier Marías o las nuevas generaciones que se consagrarán como Juan Mayorga o Ignacio Martínez de Pisón. Breve historia de la literatura española le explicará el proceso por el cual surgió la literatura en castellano. Para ello, se hará especial hincapié en las vicisitudes políticas y sociales a las que han tenido que hacer frente los principales autores que han pergeñado nuestras letras. El autor, Alberto de Frutos, con un estilo riguroso, ameno y bebiendo de las citas literarias de los grandes genios de la literatura, hará un recorrido por los orígenes de las formas literarias, su evolución posterior, el estado actual y las perspectivas para el siglo XXI, además de investigar el desarrollo de las nuevas tecnologías y el cultivo en las otras lenguas de la península como la gallega, la vasca y la catalana que han surtido de grandes obras a nuestra cultura."
+  cover: "breve_hist_literatura.jpeg"
+  #highlight: "yes"
+
 - title: "Céntrate (Deep Work)"
   author: Cal Newport
   link: https://amzn.to/3Xeb1iW
@@ -21,7 +33,6 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   completed: 2023
   synopsis: "El «Deep Work» es la capacidad de concentrarse sin distracciones en una tarea cognitivamente exigente. En un mundo altamente competitivo que además incentiva la hiperconexión y la multitarea, la atención se ha convertido en un activo extremadamente valioso.  A partir de cuatro reglas prácticas, Carl Newport demuestra que reforzar nuestra capacidad de concentración y saber alejarse de las distracciones tecnológicas son los primeros pasos para lograr la felicidad y el éxito profesional."
   cover: "deepwork.jpeg"
-  highlight: "yes"
 
 - title: Imperios y espadazos. Una historia de la Antigüedad para no aburrir(te)
   author: Andoni Garrido Fernández
