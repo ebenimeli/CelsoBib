@@ -1,0 +1,51 @@
+---
+layout: page
+title: "Escribir"
+description: "Escribir"
+---
+
+{%  assign write_w = 0 %}
+{%  assign write_w_goal = 2500.0  %}
+
+<div class="book-list">
+
+<p>Progreso semanal de algunos objetivos.</p>
+
+{% assign endweek = 0 %}
+{% assign ndays = 1 %}
+{% for item in site.data.projects %}
+  {% if endweek == 0 %}
+    {% if item.day == "Su" and ndays>1 %}
+        {% assign endweek = 1 %}
+    {% else %}
+      {% assign read_w = read_w | plus: item.read %}
+      {% assign write_w = write_w | plus: item.write %}
+      {% assign lang_w = lang_w | plus: item.lang %}
+      {% assign walk_w = walk_w | plus: item.walk %}
+    {% endif %}
+  {% endif %}
+  {% assign ndays = ndays | plus: 1 %}
+{% endfor %}
+
+{% assign read_w = read_w | divided_by: 60.0 | round: 1 %}
+
+
+  <h2 class="year">
+    <div class="tooltip">
+
+    <span class="book-title">🖋️</span>
+    <span class="tooltiptext">{{write_w}}</span>
+  </div>
+  </h2>
+  {% assign progress = write_w | divided_by: write_w_goal | times:100 | round: 1 | append: '%' %}
+
+  <div class="w3-light-grey w3-round w3-small w3-center w3-border readprogress">
+    <div class="w3-container w3-round w3-blue" style="width: {{ progress }}">{{ progress }}</div>
+  </div>
+
+
+  <div class="graphic">
+  <img src="assets/images/pages/habits/writing.png"/>
+</div>
+</div>
+

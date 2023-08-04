@@ -705,3 +705,7 @@ img.profile {
   color: white;
   padding-right: 15px;
 }
+
+div.graphic {
+  text-align: center;
+}
