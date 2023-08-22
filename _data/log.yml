@@ -1,7 +1,12 @@
+- timestamp: 2023-08-22 20:15
+  text: "El Rey designa a Alberto Núñez Feijóo como candidato a la Presidencia del Gobierno"
+  link: https://www.abc.es/espana/rey-candidato-investidura-20230822192405-nt.html
+  cat: 'urgent'
+
 - timestamp: 2023-08-20 14:30
   text: "España se proclama campeona del mundo de fútbol femenino"
   link: https://www.elmundo.es/deportes/futbol/futbol-femenino/mundial/2023/08/20/64e20587fdddfff9058b45b8.html
-  cat: 'urgent'
+  cat: 'news'
 
 - timestamp: 2023-08-15 20:40
   text: "España gana 2-1 a Suecia y jugará la final del Mundial Femenino de fútbol"
