@@ -1,7 +1,12 @@
+- timestamp: 2023-08-23 20:15
+  text: "La India conquista el polo sur de la Luna"
+  link: https://www.elmundo.es/ciencia-y-salud/ciencia/2023/08/23/64e5fabae85ece7b248b4589.html
+  cat: 'urgent'
+
 - timestamp: 2023-08-22 20:15
   text: "El Rey designa a Alberto Núñez Feijóo como candidato a la Presidencia del Gobierno"
   link: https://www.abc.es/espana/rey-candidato-investidura-20230822192405-nt.html
-  cat: 'urgent'
+  cat: 'news'
 
 - timestamp: 2023-08-20 14:30
   text: "España se proclama campeona del mundo de fútbol femenino"
@@ -21,7 +26,7 @@
 - timestamp: 2023-07-12 11:15
   text: "Hoy es el último día de PrimeDay y no os voy a recomendar cacharros que nunca usaréis. Mejor os dejo algunas recomendaciones de libros 👉🏼 📚"
   link: https://www.ebenimeli.org/pages/bookshelf.html
-  cat: 'urgent'
+  cat: 'news'
 
 - timestamp: 2023-07-05 18:52
   text: "Cuenta atrás..."
