@@ -698,11 +698,11 @@ img.profile {
   color: white;
   font-weight: bold;
   font-size: .9em;
-  border: 0.5px solid;
+  border: 0.5px solid white;
 }
 
 .urgent a.post-title {
-  color: white;
+  color: #FFFFE0;
   padding-right: 15px;
 }
 
