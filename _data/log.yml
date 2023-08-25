@@ -1,7 +1,12 @@
+- timestamp: 2023-08-25 08:00
+  text: "Herramientas, métodos y enfoque"
+  link: https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/
+  cat: 'status'
+
 - timestamp: 2023-08-23 20:15
   text: "La India conquista el polo sur de la Luna"
   link: https://www.elmundo.es/ciencia-y-salud/ciencia/2023/08/23/64e5fabae85ece7b248b4589.html
-  cat: 'urgent'
+  cat: 'news'
 
 - timestamp: 2023-08-22 20:15
   text: "El Rey designa a Alberto Núñez Feijóo como candidato a la Presidencia del Gobierno"
