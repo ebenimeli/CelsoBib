@@ -1,7 +1,13 @@
+
+- timestamp: 2023-08-29 15:30
+  text: "Partida de ajedrez del 29 de agosto. Gano con negras."
+  link: https://twitter.com/enriquebenimeli/status/1696521108055556309
+  cat: 'status'
+
 - timestamp: 2023-08-25 08:00
   text: "Nuevo artículo en el blog: «Herramientas, métodos y enfoque»"
   link: https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/
-  cat: 'status'
+  cat: 'writing'
 
 - timestamp: 2023-08-23 20:15
   text: "La India conquista el polo sur de la Luna"
