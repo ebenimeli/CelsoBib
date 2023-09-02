@@ -16,6 +16,7 @@ Sinopsis:
 
 > *Thriller* de ficción ambientado en España en el año 2013. Tras la derogación de la doctrina “Parot” por el Tribunal Europeo de Estrasburgo, decenas de terroristas presos han sido puestos en libertad. Pocos días después, algunos excarcelados empiezan a aparecer asesinados de la misma forma en que lo fueron sus víctimas. Isabel Mora (Adriana Ugarte), es una policía íntegra y perseverante que tendrá que asumir la investigación de los asesinatos mientras se enfrenta al intento de venganza por parte de uno de los excarcelados.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xfmQ9MgFRps?si=wA8UFJbgX3hUxFdj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 **Filmaffinity** · [*Parot*](https://www.filmaffinity.com/es/film518139.html)
 
