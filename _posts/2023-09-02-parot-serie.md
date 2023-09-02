@@ -1,6 +1,6 @@
 ---
 title: "Parot"
-date: 2023-09-02T00:08:00+00:00
+date: 2023-09-02T08:00:00+00:00
 author: Enrique Benimeli
 layout: post
 permalink: /parot-serie/
