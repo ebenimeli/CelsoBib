@@ -1,8 +1,12 @@
+- timestamp: 2023-09-02 08:00
+  text: "Nuevo post: Parot"
+  link: https://www.ebenimeli.org/parot-serie/
+  cat: 'status'
 
 - timestamp: 2023-08-29 15:30
   text: "Partida de ajedrez del 29 de agosto. Gano con negras."
   link: https://twitter.com/enriquebenimeli/status/1696521108055556309
-  cat: 'status'
+  cat: 'chess'
 
 - timestamp: 2023-08-25 08:00
   text: "Nuevo artículo en el blog: «Herramientas, métodos y enfoque»"
