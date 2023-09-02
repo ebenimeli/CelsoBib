@@ -10,6 +10,7 @@ description: "Películas, series de TV y documentales"
 1. 70 binladens [→ 🍿](https://www.imdb.com/title/tt7972178/) ★★★★☆
 
 ### Series
+1. Parot (2021) [→ 🍿 S01E04](https://www.ebenimeli.org/parot-serie/)
 1. El Gran Imperio Otomano [→ 🍿 S02E02](https://www.netflix.com/es/title/80990771) ★★★★☆
 1. Jaguar (2021) [→ 🍿 S01E04](https://www.netflix.com/es/title/81122682) ★★★☆☆
 
