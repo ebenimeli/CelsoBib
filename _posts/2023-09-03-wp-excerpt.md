@@ -1,6 +1,6 @@
 ---
 title: "Entradillas en el blog: WordPress excerpt"
-date: 2023-09-03T07:00:00+00:00
+date: 2023-09-03T05:00:00+00:00
 author: Enrique Benimeli
 layout: post
 permalink: /entradillas-8am/
