@@ -10,21 +10,19 @@ tags: [informática,WordPress,programación,8am]
 
 [![image](assets/images/posts/2023/08/wp_post_excerpt.png)](https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/)
 
-Los detalles marcan la diferencia. Me gusta la idea de que los artículos de *Ocho en punto* tengan una especie de encabezamiento, como las entradillas de los artículos en los periódicos y que actúan como un resumen.
+Los detalles marcan la diferencia. Me gusta la idea de que los artículos de *Ocho en punto* tengan una especie de encabezamiento, como las **entradillas** de los artículos en los periódicos y que actúan como un resumen.
 
-En WordPress se puede utilizar la función <code>the_excerpt()</code> o <code>get_the_excerpt()</code> para obtener el extracto (*excerpt*) del *post*. Este extracto es un campo especial que quien escribe puede rellenar cuando redacta el artículo. No me extrañaría, sin embargo, que alguien haya integrado ya alguna IA para hacer el resumen automáticamente.
+En WordPress se puede utilizar la función <code>the_excerpt()</code> o <code>get_the_excerpt()</code> para obtener el extracto (*excerpt*) del *post*. Este **extracto** es un campo especial que quien escribe puede rellenar cuando redacta el artículo. No me extrañaría, sin embargo, que alguien haya integrado ya alguna IA para hacer el resumen automáticamente.
 
-El problema es que, cuando se utilizan estas funciones, se obtiene también en el extracto un enlace <code>a</code> en HTML del tipo *Read more*. Con un filtro y personalizando alguna función se puede lograr que no aparezca este texto. En este caso, no necesitamos un enlace *leer más* porque ya estamos en el propio artículo.
-
-Una solución de andar por casa es utilizar una expresión regular para identificar enlaces de tipo:
+El problema es que, cuando se utilizan estas funciones, se obtiene también un enlace <code>a</code> en HTML del tipo *Read more*. En este caso, no necesitamos un enlace *leer más* porque ya estamos en el propio artículo. Con un filtro y personalizando alguna función se puede lograr que no aparezca este añadido. Una solución relativamente es utilizar una **expresión regular** para identificar enlaces HTML de tipo:
 
 {% highlight html %}
 <a href="">...</a>
 {% endhighlight %}
 
-y eliminarlos. No es probablemente la solución más elegante, pero funciona. Y si WordPress integra algún sistema de caché para las páginas, apenas supone una carga. De todos modos, tarde o temprano, aplicaré alguna solución más adecuada.
+para posteriormente eliminarlos. No es probablemente la solución más elegante, pero funciona. Y si WordPress integra algún sistema de caché para las páginas, apenas debería suponer una carga. De todos modos, tarde o temprano, convendría aplicar alguna solución más adecuada.
 
-Con PHP la cosa se soluciona más o menos así:
+Con PHP la cosa se soluciona así:
 
 {% highlight php %}
 <?php 
@@ -44,6 +42,18 @@ p.summary {
     font-style: normal;
     color: DarkSlateGray;
 }
+{% endhighlight %}
+
+De esta forma, el código HTML que teníamos **antes**:
+
+{% highlight html %}
+<div class="more-link-wrapper"><a class="more-link" href="https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/">Seguir leyendo<span class="screen-reader-text">Herramientas, métodos y enfoque</span> <i class="fas fa-angle-right"></i></a></div>
+{% endhighlight %}
+
+Aparece así **después**:
+
+{% highlight html %}
+<div class="more-link-wrapper"></div>
 {% endhighlight %}
 
 Ahora queda revisar los más de 150 artículos y sus entradillas porque, como en este *post* que comparto, será necesario reducirlo en extensión y hacer un buen resumen.
