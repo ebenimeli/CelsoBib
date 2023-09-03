@@ -713,3 +713,12 @@ div.graphic {
 div.chess {
   text-align: center;
 }
+
+pre {
+  white-space: pre-wrap;
+}
+
+code {
+  font-size: .9em;
+  font-family: 'Courier New', Courier, monospace;
+}
