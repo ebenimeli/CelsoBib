@@ -1,5 +1,5 @@
 ---
-title: "Entradillas en el blog: WordPress excerpt"
+title: "Entradillas en el blog: WP excerpt"
 date: 2023-09-03T05:00:00+00:00
 author: Enrique Benimeli
 layout: post
