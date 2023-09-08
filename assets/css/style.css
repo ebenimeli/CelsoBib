@@ -37,10 +37,12 @@ body {
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 10px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-bottom: 10px;
   border: 1px dashed #696969;
-
+  border-radius: 2%;
 }
 
 .post-container {
