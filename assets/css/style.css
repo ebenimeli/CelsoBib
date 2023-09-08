@@ -23,6 +23,7 @@ body {
   color: var(--primary-font-color);
   margin: 0;
   padding: 5px;
+ /* background-color: #dcdcdc;*/
 }
 
 .container {
@@ -33,11 +34,13 @@ body {
   /*width: 60%;*/
   width: 50%;
   /*text-align: justify;*/
-
+  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 7px;
-  padding-right: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px dashed #696969;
+
 }
 
 .post-container {
