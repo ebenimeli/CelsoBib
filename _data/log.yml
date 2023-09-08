@@ -1,12 +1,17 @@
-#- timestamp: 2023-09-03 07:00
-#  text: "Nuevo post: «Entradillas en el blog: WordPress excerpt»"
-#  link: https://www.ebenimeli.org/entradillas-8am
-#  cat: 'status'
+- timestamp: 2023-09-08 08:00
+  text: "Nuevo post: «31 consejos TIC para un primer día de clase sin sorpresas»"
+  link: https://www.ochoenpunto.com/31-consejos-tic-profesores-checklist-primer-dia-clase/
+  cat: 'status'
+
+- timestamp: 2023-09-03 07:00
+  text: "Nuevo post: «Entradillas en el blog: WordPress excerpt»"
+  link: https://www.ebenimeli.org/entradillas-8am
+  cat: 'writing'
 
 - timestamp: 2023-09-02 08:00
   text: "Viendo «Parot»: El Traslado (S01E04)"
   link: https://www.ebenimeli.org/parot-serie/
-  cat: 'status'
+  cat: 'movies'
 
 - timestamp: 2023-08-29 15:30
   text: "Partida de ajedrez del 29 de agosto. Gano con negras."
