@@ -709,6 +709,10 @@ img.profile {
   border: 0.5px solid white;
 }
 
+.urgent:hover {
+  background-color: black;
+}
+
 .urgent a.post-title {
   color: #FFFFE0;
   padding-right: 15px;
