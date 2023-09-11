@@ -1,0 +1,476 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Enrique Benimeli",
+    "home_page_url": "http://localhost:4000/",
+    "feed_url": "http://localhost:4000/feed.json",
+    "description": "Enrique Benimeli - web personal",
+    "icon": "http://localhost:4000/assets/images/apple-touch-icon.png",
+    "favicon": "http://localhost:4000/assets/images/favicon.png",
+    "expired": false,
+    
+    "author":  {
+        "name": "Enrique Benimeli",
+        "url": null,
+        "avatar": null
+    },
+    
+"items": [
+    
+        {
+            "id": "http://localhost:4000/fabula-colibri/",
+            "title": "La fábula del colibrí",
+            "summary": null,
+            "content_text": "Antes de empezar un nuevo curso, siempre conviene detenerse para reflexionar sobre nuestro papel como docentes. En unos días la rutina probablemente no nos deje pensar con tanta claridad.Los profesores tenemos por delante enormes desafíos, muchos de ellos globales. Y la fábula del colibrí siempre me parece inspiradora y alentadora. Os la cuento en Esfera TIC.Esfera TIC · Cómo cambiar el mundo: la fábula del colibrí",
+            "content_html": "<p><a href=\"https://www.esferatic.com/2023/09/como-cambiar-el-mundo-la-fabula-del-colibri/\"><img src=\"assets/images/posts/2023/09/colibri_edu.jpg\" alt=\"image\" /></a></p><p>Antes de empezar un <strong>nuevo curso</strong>, siempre conviene detenerse para reflexionar sobre nuestro papel como docentes. En unos días la rutina probablemente no nos deje pensar con tanta claridad.</p><p>Los <strong>profesores</strong> tenemos por delante enormes <strong>desafíos</strong>, muchos de ellos globales. Y la <strong>fábula del colibrí</strong> siempre me parece inspiradora y alentadora. Os la cuento en <a href=\"https://www.esferatic.com/2023/09/como-cambiar-el-mundo-la-fabula-del-colibri/\">Esfera TIC</a>.</p><p><strong>Esfera TIC</strong> · <a href=\"https://www.esferatic.com/2023/09/como-cambiar-el-mundo-la-fabula-del-colibri/\">Cómo cambiar el mundo: la fábula del colibrí</a></p>",
+            "url": "http://localhost:4000/fabula-colibri/",
+            
+            
+            
+            "tags": ["profesores","educación","fábula"],
+            
+            "date_published": "2023-09-10T08:00:00+02:00",
+            "date_modified": "2023-09-10T08:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/miee-23-24/",
+            "title": "MIEE: educación, innovación y tecnología",
+            "summary": null,
+            "content_text": "Un año más (y empiezo a perder la cuenta), es un placer haber sido seleccionado como Microsoft Innovative Educator Expert (MIEE) para el curso 2023-2024. Cuando la educación, la innovación y la tecnología van de la mano, el camino siempre es más sencillo.Microsoft · Microsoft’s 2023-2024 MIE Experts",
+            "content_html": "<p><a href=\"https://educationblog.microsoft.com/en-us/2023/09/microsofts-2023-2024-mie-experts-and-showcase-schools-fostering-a-culture-of-innovation\"><img src=\"assets/images/posts/2023/09/ebenimeli_MIEE_23-24.png\" alt=\"image\" /></a></p><p>Un año más (y empiezo a perder la cuenta), es un placer haber sido seleccionado como <em>Microsoft Innovative Educator Expert</em> (MIEE) para el curso 2023-2024. Cuando la educación, la innovación y la tecnología van de la mano, el camino siempre es más sencillo.</p><p><strong>Microsoft</strong> · <a href=\"https://educationblog.microsoft.com/en-us/2023/09/microsofts-2023-2024-mie-experts-and-showcase-schools-fostering-a-culture-of-innovation\">Microsoft’s 2023-2024 MIE Experts</a></p>",
+            "url": "http://localhost:4000/miee-23-24/",
+            
+            
+            
+            "tags": ["TIC","profesores","educación","tecnología","MIEE","Microsoft"],
+            
+            "date_published": "2023-09-09T08:00:00+02:00",
+            "date_modified": "2023-09-09T08:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/tic-vueltaalcole/",
+            "title": "Un checklist TIC para el primer día de clase",
+            "summary": null,
+            "content_text": "He compartido en Ocho en punto un checklist especialmente diseñado para profesores en su primer día de clase. Una serie de 31 consejos TIC organizados en 8 bloques para empezar el curso con buen pie: dispositivos, conectividad, plataformas y servicios, comunicaciones, multimedia, aplicaciones y gestión de incidencias. La clave está en una buena previsión y organización.Ocho en punto · 31 consejos TIC para un primer día de clase sin sorpresas",
+            "content_html": "<p><a href=\"https://www.ochoenpunto.com/31-consejos-tic-profesores-checklist-primer-dia-clase/\"><img src=\"assets/images/posts/2023/09/ordenador_libros.jpg\" alt=\"image\" /></a></p><p>He compartido en <em>Ocho en punto</em> un <em>checklist</em> especialmente diseñado para profesores en su primer día de clase. Una serie de <strong>31 consejos TIC</strong> organizados en 8 bloques para empezar el curso con buen pie: dispositivos, conectividad, plataformas y servicios, comunicaciones, multimedia, aplicaciones y gestión de incidencias. La clave está en una buena <strong>previsión</strong> y <strong>organización</strong>.</p><p><strong>Ocho en punto</strong> · <a href=\"https://www.ochoenpunto.com/31-consejos-tic-profesores-checklist-primer-dia-clase/\">31 consejos TIC para un primer día de clase sin sorpresas</a></p>",
+            "url": "http://localhost:4000/tic-vueltaalcole/",
+            
+            
+            
+            "tags": ["TIC","profesores","educación","tecnología"],
+            
+            "date_published": "2023-09-08T10:00:00+02:00",
+            "date_modified": "2023-09-08T10:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/entradillas-8am/",
+            "title": "Entradillas en el blog: WP excerpt",
+            "summary": null,
+            "content_text": "Los detalles marcan la diferencia. Me gusta la idea de que los artículos de Ocho en punto tengan una especie de encabezamiento, como las entradillas de los artículos en los periódicos y que actúan como un resumen.En WordPress se puede utilizar la función the_excerpt() o get_the_excerpt() para obtener el extracto (excerpt) del post. Este extracto es un campo especial que quien escribe puede rellenar cuando redacta el artículo. No me extrañaría, sin embargo, que alguien haya integrado ya alguna IA para hacer el resumen automáticamente.El problema es que, cuando se utilizan estas funciones, se obtiene también un enlace a en HTML del tipo Read more. En este caso, no necesitamos un enlace leer más porque ya estamos en el propio artículo. Con un filtro y personalizando alguna función se puede lograr que no aparezca este añadido. Una solución relativamente es utilizar una expresión regular para identificar enlaces HTML de tipo:&lt;a href=\"\"&gt;...&lt;/a&gt;para posteriormente eliminarlos. No es probablemente la solución más elegante, pero funciona. Y si WordPress integra algún sistema de caché para las páginas, apenas debería suponer una carga. De todos modos, tarde o temprano, convendría aplicar alguna solución más adecuada.Con PHP la cosa se soluciona así:&lt;?php     $summary = get_the_excerpt();    $pattern = '/&lt;a\\b[^&gt;]*&gt;.*?&lt;\\/a&gt;/i';    $cleanSummary = preg_replace($pattern, '$1', $summary);    echo '&lt;p class=\"summary\"&gt;'.$cleanSummary.'&lt;/p&gt;';?&gt;Y la hoja de estilo CSS podemos personalizar el formato de la entradilla:p.summary {    font-size: 1.2em;    font-weight: normal;    font-style: normal;    color: DarkSlateGray;}De esta forma, el código HTML que teníamos antes:&lt;div class=\"more-link-wrapper\"&gt;&lt;a class=\"more-link\" href=\"https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/\"&gt;Seguir leyendo&lt;span class=\"screen-reader-text\"&gt;Herramientas, métodos y enfoque&lt;/span&gt; &lt;i class=\"fas fa-angle-right\"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt;Aparece así después:&lt;div class=\"more-link-wrapper\"&gt;&lt;/div&gt;Ahora queda revisar los más de 150 artículos y sus entradillas porque, como en este post que comparto, será necesario reducirlo en extensión y hacer un buen resumen.Ocho en punto · Herramientas, métodos y enfoque",
+            "content_html": "<p><a href=\"https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/\"><img src=\"assets/images/posts/2023/08/wp_post_excerpt.png\" alt=\"image\" /></a></p><p>Los detalles marcan la diferencia. Me gusta la idea de que los artículos de <em>Ocho en punto</em> tengan una especie de encabezamiento, como las <strong>entradillas</strong> de los artículos en los periódicos y que actúan como un resumen.</p><p>En WordPress se puede utilizar la función <code>the_excerpt()</code> o <code>get_the_excerpt()</code> para obtener el extracto (<em>excerpt</em>) del <em>post</em>. Este <strong>extracto</strong> es un campo especial que quien escribe puede rellenar cuando redacta el artículo. No me extrañaría, sin embargo, que alguien haya integrado ya alguna IA para hacer el resumen automáticamente.</p><p>El problema es que, cuando se utilizan estas funciones, se obtiene también un enlace <code>a</code> en HTML del tipo <em>Read more</em>. En este caso, no necesitamos un enlace <em>leer más</em> porque ya estamos en el propio artículo. Con un filtro y personalizando alguna función se puede lograr que no aparezca este añadido. Una solución relativamente es utilizar una <strong>expresión regular</strong> para identificar enlaces HTML de tipo:</p><figure class=\"highlight\"><pre><code class=\"language-html\" data-lang=\"html\"><span class=\"nt\">&lt;a</span> <span class=\"na\">href=</span><span class=\"s\">\"\"</span><span class=\"nt\">&gt;</span>...<span class=\"nt\">&lt;/a&gt;</span></code></pre></figure><p>para posteriormente eliminarlos. No es probablemente la solución más elegante, pero funciona. Y si WordPress integra algún sistema de caché para las páginas, apenas debería suponer una carga. De todos modos, tarde o temprano, convendría aplicar alguna solución más adecuada.</p><p>Con PHP la cosa se soluciona así:</p><figure class=\"highlight\"><pre><code class=\"language-php\" data-lang=\"php\"><span class=\"cp\">&lt;?php</span>     <span class=\"nv\">$summary</span> <span class=\"o\">=</span> <span class=\"nf\">get_the_excerpt</span><span class=\"p\">();</span>    <span class=\"nv\">$pattern</span> <span class=\"o\">=</span> <span class=\"s1\">'/&lt;a\\b[^&gt;]*&gt;.*?&lt;\\/a&gt;/i'</span><span class=\"p\">;</span>    <span class=\"nv\">$cleanSummary</span> <span class=\"o\">=</span> <span class=\"nb\">preg_replace</span><span class=\"p\">(</span><span class=\"nv\">$pattern</span><span class=\"p\">,</span> <span class=\"s1\">'$1'</span><span class=\"p\">,</span> <span class=\"nv\">$summary</span><span class=\"p\">);</span>    <span class=\"k\">echo</span> <span class=\"s1\">'&lt;p class=\"summary\"&gt;'</span><span class=\"mf\">.</span><span class=\"nv\">$cleanSummary</span><span class=\"mf\">.</span><span class=\"s1\">'&lt;/p&gt;'</span><span class=\"p\">;</span><span class=\"cp\">?&gt;</span></code></pre></figure><p>Y la hoja de estilo CSS podemos personalizar el formato de la entradilla:</p><figure class=\"highlight\"><pre><code class=\"language-css\" data-lang=\"css\"><span class=\"nt\">p</span><span class=\"nc\">.summary</span> <span class=\"p\">{</span>    <span class=\"nl\">font-size</span><span class=\"p\">:</span> <span class=\"m\">1.2em</span><span class=\"p\">;</span>    <span class=\"nl\">font-weight</span><span class=\"p\">:</span> <span class=\"nb\">normal</span><span class=\"p\">;</span>    <span class=\"nl\">font-style</span><span class=\"p\">:</span> <span class=\"nb\">normal</span><span class=\"p\">;</span>    <span class=\"nl\">color</span><span class=\"p\">:</span> <span class=\"n\">DarkSlateGray</span><span class=\"p\">;</span><span class=\"p\">}</span></code></pre></figure><p>De esta forma, el código HTML que teníamos <strong>antes</strong>:</p><figure class=\"highlight\"><pre><code class=\"language-html\" data-lang=\"html\"><span class=\"nt\">&lt;div</span> <span class=\"na\">class=</span><span class=\"s\">\"more-link-wrapper\"</span><span class=\"nt\">&gt;&lt;a</span> <span class=\"na\">class=</span><span class=\"s\">\"more-link\"</span> <span class=\"na\">href=</span><span class=\"s\">\"https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/\"</span><span class=\"nt\">&gt;</span>Seguir leyendo<span class=\"nt\">&lt;span</span> <span class=\"na\">class=</span><span class=\"s\">\"screen-reader-text\"</span><span class=\"nt\">&gt;</span>Herramientas, métodos y enfoque<span class=\"nt\">&lt;/span&gt;</span> <span class=\"nt\">&lt;i</span> <span class=\"na\">class=</span><span class=\"s\">\"fas fa-angle-right\"</span><span class=\"nt\">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt;</span></code></pre></figure><p>Aparece así <strong>después</strong>:</p><figure class=\"highlight\"><pre><code class=\"language-html\" data-lang=\"html\"><span class=\"nt\">&lt;div</span> <span class=\"na\">class=</span><span class=\"s\">\"more-link-wrapper\"</span><span class=\"nt\">&gt;&lt;/div&gt;</span></code></pre></figure><p>Ahora queda revisar los más de 150 artículos y sus entradillas porque, como en este <em>post</em> que comparto, será necesario reducirlo en extensión y hacer un buen resumen.</p><p><strong>Ocho en punto</strong> · <a href=\"https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/\"><em>Herramientas, métodos y enfoque</em></a></p>",
+            "url": "http://localhost:4000/entradillas-8am/",
+            
+            
+            
+            "tags": ["informática","WordPress","programación","8am"],
+            
+            "date_published": "2023-09-03T07:00:00+02:00",
+            "date_modified": "2023-09-03T07:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/parot-serie/",
+            "title": "Parot",
+            "summary": null,
+            "content_text": "Un thriller que plantea varios dilemas morales. He visto de momento 3 episodios de los 10 que componen la serie. Buen papel de Adriana Ugarte y, sobre todo, de Ivan Massagué. Se puede ver en Amazon Prime Video.Sinopsis:  Thriller de ficción ambientado en España en el año 2013. Tras la derogación de la doctrina “Parot” por el Tribunal Europeo de Estrasburgo, decenas de terroristas presos han sido puestos en libertad. Pocos días después, algunos excarcelados empiezan a aparecer asesinados de la misma forma en que lo fueron sus víctimas. Isabel Mora (Adriana Ugarte), es una policía íntegra y perseverante que tendrá que asumir la investigación de los asesinatos mientras se enfrenta al intento de venganza por parte de uno de los excarcelados.Filmaffinity · ParotAmazon Prime Video · ParotTrailer · Parot – Tráiler Oficial · Prime Video España",
+            "content_html": "<p><a href=\"https://www.filmaffinity.com/es/film518139.html\"><img src=\"assets/images/posts/2023/09/parot_serie.jpeg\" alt=\"image\" /></a></p><p>Un <em>thriller</em> que plantea varios dilemas morales. He visto de momento 3 episodios de los 10 que componen la serie. Buen papel de Adriana Ugarte y, sobre todo, de Ivan Massagué. Se puede ver en <a href=\"https://www.primevideo.com/region/eu/detail/0FNXJP89UN4U3FQ6ALKVQMYMTL/ref=atv_dp_share_cu_r\">Amazon Prime Video</a>.</p><p>Sinopsis:</p><blockquote>  <p><em>Thriller</em> de ficción ambientado en España en el año 2013. Tras la derogación de la doctrina “Parot” por el Tribunal Europeo de Estrasburgo, decenas de terroristas presos han sido puestos en libertad. Pocos días después, algunos excarcelados empiezan a aparecer asesinados de la misma forma en que lo fueron sus víctimas. Isabel Mora (Adriana Ugarte), es una policía íntegra y perseverante que tendrá que asumir la investigación de los asesinatos mientras se enfrenta al intento de venganza por parte de uno de los excarcelados.</p></blockquote><p><strong>Filmaffinity</strong> · <a href=\"https://www.filmaffinity.com/es/film518139.html\"><em>Parot</em></a></p><p><strong>Amazon Prime Video</strong> · <a href=\"https://www.primevideo.com/region/eu/detail/0FNXJP89UN4U3FQ6ALKVQMYMTL/ref=atv_dp_share_cu_r\">Parot</a></p><p><strong>Trailer</strong> · <a href=\"https://www.youtube.com/watch?v=xfmQ9MgFRps\">Parot – Tráiler Oficial · Prime Video España</a></p>",
+            "url": "http://localhost:4000/parot-serie/",
+            
+            
+            
+            "tags": ["series","cine","ley","justicia"],
+            
+            "date_published": "2023-09-02T10:00:00+02:00",
+            "date_modified": "2023-09-02T10:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/vuelta-trabajo-desconecta/",
+            "title": "Desconectar antes de empezar",
+            "summary": null,
+            "content_text": "Agosto termina y en unos días muchos nos incorporamos de nuevo a nuestro trabajo tras unas vacaciones. Por el motivo que sea, la vuelta al trabajo produce en algunas personas cierta ansiedad. Desde luego, la noticia estrella por esta época en todos los informativos es la del síndrome postvacacional. En estos casos, dedicar la víspera a desconectar (más todavía si cabe) parece una gran idea.Se me ocurren varias cosas que podemos hacer justo el día antes de incorporarnos al trabajo. La cuestión es estar ocupado en otros asuntos y evitar la tentación de echar un vistazo a cualquier asunto de trabajo. Os lo cuento en el último artículo de Ocho en punto.www.ochoenpunto.com · La vuelta al trabajo: 10 ideas para una víspera desconectada",
+            "content_html": "<p><a href=\"https://www.ochoenpunto.com/vuelta-al-trabajo-10-ideas-vispera-desconectada/\"><img src=\"assets/images/posts/2023/08/hombre_naturaleza.jpeg\" alt=\"image\" /></a></p><p>Agosto termina y en unos días muchos nos incorporamos de nuevo a nuestro <strong>trabajo tras unas vacaciones</strong>. Por el motivo que sea, la vuelta al trabajo produce en algunas personas cierta ansiedad. Desde luego, la noticia estrella por esta época en todos los informativos es la del síndrome postvacacional. En estos casos, dedicar la víspera a <strong>desconectar</strong> (más todavía si cabe) parece una gran idea.</p><p>Se me ocurren varias cosas que podemos hacer justo el día antes de incorporarnos al trabajo. La cuestión es estar ocupado en otros asuntos y evitar la tentación de echar un vistazo a cualquier asunto de trabajo. Os lo cuento en el <a href=\"https://www.ochoenpunto.com/vuelta-al-trabajo-10-ideas-vispera-desconectada/\">último artículo de <em>Ocho en punto</em></a>.</p><p><strong>www.ochoenpunto.com</strong> · <a href=\"https://www.ochoenpunto.com/vuelta-al-trabajo-10-ideas-vispera-desconectada/\"><em>La vuelta al trabajo: 10 ideas para una víspera desconectada</em></a></p>",
+            "url": "http://localhost:4000/vuelta-trabajo-desconecta/",
+            
+            
+            
+            "tags": ["organización","vacaciones","desconexión","descanso","trabajo"],
+            
+            "date_published": "2023-08-30T02:16:00+02:00",
+            "date_modified": "2023-08-30T02:16:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/fiel-things-gtd/",
+            "title": "Fiel a Things y GTD",
+            "summary": null,
+            "content_text": "En unos días despedimos el mes de agosto. Esto significa la vuelta (oficial) al trabajo en unos días y que el inicio de curso asoma por la esquina. Para muchos (que levanten la mano los docentes), el nuevo año lo marca el calendario académico. Esto es así.Con el nuevo curso, llegan también nuevos artículos al blog de Ocho en punto, después del tiempo de desconexión suficiente (y necesario) para volver con energía y escribir dejar de vez en cuando algunas líneas por aquí. La parada técnica significa que he estado en otros asuntos y eso, casi siempre, es buena noticia.Con el artículo Herramientas, métodos y enfoque reconecto con el blog y, sobre todo, con quienes lo leéis. Os cuento en qué punto estoy en términos de organización personal, de métodos y de herramientas. Y aprovecho también para compartir algunas novedades, recursos y recordatorios. ¡Ya estamos de vuelta!www.ochoenpunto.com · Herramientas, métodos y enfoque",
+            "content_html": "<p><a href=\"https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/\"><img src=\"assets/images/posts/2023/08/things_app.jpeg\" alt=\"image\" /></a></p><p>En unos días despedimos el mes de agosto. Esto significa la vuelta (oficial) al trabajo en unos días y que el <strong>inicio de curso</strong> asoma por la esquina. Para muchos (que levanten la mano los docentes), el nuevo año lo marca el calendario académico. Esto es así.</p><p>Con el nuevo curso, llegan también <strong>nuevos artículos</strong> al blog de <em>Ocho en punto</em>, después del tiempo de desconexión suficiente (y necesario) para volver con energía y escribir dejar de vez en cuando algunas líneas por aquí. La parada técnica significa que he estado en otros asuntos y eso, casi siempre, es buena noticia.</p><p>Con el artículo <a href=\"https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/\"><em>Herramientas, métodos y enfoque</em></a> reconecto con el blog y, sobre todo, con quienes lo leéis. Os cuento en qué punto estoy en términos de organización personal, de métodos y de herramientas. Y aprovecho también para compartir algunas novedades, recursos y recordatorios. ¡Ya estamos de vuelta!</p><p><strong>www.ochoenpunto.com</strong> · <a href=\"https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/\"><em>Herramientas, métodos y enfoque</em></a></p>",
+            "url": "http://localhost:4000/fiel-things-gtd/",
+            
+            
+            
+            "tags": ["efectividad","organización","herramientas.GTD"],
+            
+            "date_published": "2023-08-29T02:08:00+02:00",
+            "date_modified": "2023-08-29T02:08:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/elecciones-23j/",
+            "title": "23j",
+            "summary": null,
+            "content_text": "🗳️ Puedes seguir los resultados de las Elecciones Generales del 23J en esta web:👉🏼 resultados.generales23j.es⬇️ También puedes descargar las aplicaciones oficiales:📱 iOS📱 Android#Elecciones2023 #23J",
+            "content_html": "<p><a href=\"https://resultados.generales23j.es/es\"><img src=\"assets/images/posts/2023/07/elecciones23j.png\" alt=\"image\" /></a></p><p>🗳️ Puedes seguir los resultados de las Elecciones Generales del 23J en esta web:👉🏼 <a href=\"https://resultados.generales23j.es/es\">resultados.generales23j.es</a></p><p>⬇️ También puedes descargar las aplicaciones oficiales:📱 <a href=\"https://apps.apple.com/es/app/23j-elecciones-generales-2023/id6451315925\">iOS</a>📱 <a href=\"https://play.google.com/store/apps/details?id=com.generales23.app\">Android</a></p><p>#Elecciones2023 #23J</p>",
+            "url": "http://localhost:4000/elecciones-23j/",
+            
+            
+            
+            "tags": ["política","actualidad","estadística"],
+            
+            "date_published": "2023-07-21T02:08:00+02:00",
+            "date_modified": "2023-07-21T02:08:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/resumen-chatgpt/",
+            "title": "Resumiendo con ChatGPT",
+            "summary": null,
+            "content_text": "Este fin de semana, he leído en Xataka que el chatbot Claude de Anthropic es capaz de leer una novela en menos de un minuto, lo que deja a ChatGPT muy por detrás.Me preguntaba qué tal hacía los resúmenes ChatGPT y he probado con mi último artículo sobre comunicación digital efectiva, que tiene alrededor de 800 palabras.Así quedaría en 10 palabras:  Comunicar en horarios adecuados muestra respeto y eficacia profesional.En 25 palabras:  Comunicar en horarios adecuados es crucial. Respetar los horarios laborales propios y del receptor muestra profesionalismo y consideración. Elegir el canal y momento adecuados es esencial para una comunicación eficaz.En 50 palabras:  Enviar mensajes en momentos inoportunos puede tener un efecto negativo. Es esencial considerar los horarios laborales propios y de los destinatarios. Respetar los límites de trabajo muestra profesionalismo y consideración. El canal y el momento adecuados son cruciales. La comunicación eficaz refleja organización y eficiencia.En 100 palabras:  Enviar mensajes en momentos inoportunos puede tener efectos inesperados. Es fundamental considerar el horario de trabajo propio y del receptor antes de enviar un mensaje. Respetar los límites laborales es importante para demostrar profesionalismo y consideración hacia los demás. Elegir el canal adecuado también es relevante. Los correos electrónicos pueden enviarse en cualquier momento, pero es preferible hacerlo durante el horario laboral para mantener una imagen profesional. En el caso de mensajes instantáneos, es crucial tener en cuenta los horarios del receptor y evitar interrupciones fuera de su horario de trabajo. Una comunicación efectiva demuestra organización y eficacia.ChatGPT | chat.openai.comImagen | ChatGPT",
+            "content_html": "<p><a href=\"https://chat.openai.com/\"><img src=\"assets/images/posts/2023/05/chatgpt.jpg\" alt=\"image\" /></a></p><p>Este fin de semana, <a href=\"https://www.xataka.com/robotica-e-ia/anthropic-deja-ridiculo-a-chatgpt-su-chatbot-claude-capaz-leer-novela-minuto\">he leído en Xataka</a> que el chatbot <a href=\"https://www.anthropic.com/product\">Claude de Anthropic</a> es capaz de leer una novela en menos de un minuto, lo que deja a <a href=\"https://chat.openai.com/\">ChatGPT</a> muy por detrás.</p><p>Me preguntaba qué tal hacía los resúmenes ChatGPT y he probado con <a href=\"https://www.ochoenpunto.com/cuando-la-hora-importa/\">mi último artículo</a> sobre comunicación digital efectiva, que tiene alrededor de 800 palabras.</p><p>Así quedaría en 10 palabras:</p><blockquote>  <p>Comunicar en horarios adecuados muestra respeto y eficacia profesional.</p></blockquote><p>En 25 palabras:</p><blockquote>  <p>Comunicar en horarios adecuados es crucial. Respetar los horarios laborales propios y del receptor muestra profesionalismo y consideración. Elegir el canal y momento adecuados es esencial para una comunicación eficaz.</p></blockquote><p>En 50 palabras:</p><blockquote>  <p>Enviar mensajes en momentos inoportunos puede tener un efecto negativo. Es esencial considerar los horarios laborales propios y de los destinatarios. Respetar los límites de trabajo muestra profesionalismo y consideración. El canal y el momento adecuados son cruciales. La comunicación eficaz refleja organización y eficiencia.</p></blockquote><p>En 100 palabras:</p><blockquote>  <p>Enviar mensajes en momentos inoportunos puede tener efectos inesperados. Es fundamental considerar el horario de trabajo propio y del receptor antes de enviar un mensaje. Respetar los límites laborales es importante para demostrar profesionalismo y consideración hacia los demás. Elegir el canal adecuado también es relevante. Los correos electrónicos pueden enviarse en cualquier momento, pero es preferible hacerlo durante el horario laboral para mantener una imagen profesional. En el caso de mensajes instantáneos, es crucial tener en cuenta los horarios del receptor y evitar interrupciones fuera de su horario de trabajo. Una comunicación efectiva demuestra organización y eficacia.</p></blockquote><p><strong>ChatGPT</strong> | <a href=\"https://chat.openai.com/\">chat.openai.com</a><br /><strong>Imagen</strong> | <a href=\"https://pixabay.com/illustrations/chatgpt-ai-artificial-intelligence-7902213/\">ChatGPT</a></p>",
+            "url": "http://localhost:4000/resumen-chatgpt/",
+            
+            
+            
+            "tags": ["blog","ia","chatgpt"],
+            
+            "date_published": "2023-05-21T02:08:00+02:00",
+            "date_modified": "2023-05-21T02:08:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/ochoenpunto150/",
+            "title": "150 artículos sobre productividad",
+            "summary": null,
+            "content_text": "Es cierto que los números no importan; a mí, desde luego, no me importan. Sin embargo, alcanzar cualquier meta es siempre una buena excusa para hacer una parada, mirar hacia atrás y echar un vistazo al camino recorrido.Me detuve cuando escribí 50 artículos en el blog y también cuando llegué al centenar. Ahora es momento de hacer balance después de añadir otras 50 publicaciones al blog.No diré aquello de que he llegado hasta este punto sin apenas darme cuenta o que, como quien no quiere la cosa, este es el artículo número 150 en Ocho en punto.Ocho en punto | Un tercer alto en el camino: 150 artículos sobre organización personal",
+            "content_html": "<p><a href=\"https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/\"><img src=\"assets/images/posts/2023/05/escritorio_ordenador.jpg\" alt=\"image\" /></a></p><p>Es cierto que los números no importan; a mí, desde luego, no me importan. Sin embargo, alcanzar cualquier meta es siempre una buena excusa para hacer una parada, mirar hacia atrás y echar un vistazo al camino recorrido.</p><p>Me detuve cuando escribí 50 artículos en el blog y también cuando llegué al centenar. Ahora es momento de hacer balance después de añadir otras 50 publicaciones al blog.</p><p>No diré aquello de que he llegado hasta este punto sin apenas darme cuenta o que, como quien no quiere la cosa, <a href=\"https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/\">este es el artículo número 150</a> en <em>Ocho en punto</em>.</p><p><strong>Ocho en punto</strong> | <a href=\"https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/\">Un tercer alto en el camino: 150 artículos sobre organización personal</a></p>",
+            "url": "http://localhost:4000/ochoenpunto150/",
+            
+            
+            
+            "tags": ["blog","8am"],
+            
+            "date_published": "2023-05-16T02:08:00+02:00",
+            "date_modified": "2023-05-16T02:08:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/letracapitalcss/",
+            "title": "Letra capital con CSS (y en WordPress)",
+            "summary": null,
+            "content_text": "Lo que me gusta a mí una letra capital. Las he vuelto a utilizar en el blog de Ocho en punto.El siguiente código CSS funciona aunque no se utilice WordPress, pero el caso particular que comparto explica cómo mostrar una letra capital (o capitular) personalizando el tema activo de WordPress (Apariencia &gt; Temas &gt; Personalizar) y añadiendo el siguiente código en el apartado CSS adicional.Con este código hacemos capital la primera letra del primer párrafo del post: div.post-content p:first-child:first-letter {\tfloat: left;\tfont-size: 6em;\tfont-weight: 900;\tcolor: #000000;\tmargin-right: 0.10em;\tline-height: 90%;\ttext-shadow: 0.05em 0.05em #c1c1c1c1;\tfont-family: Times New Roman;}Con el siguiente código, hacemos capital la primera letra del segundo párrafo del post. Este es el código que aplico en mis artículos del blog Ocho en punto porque el primer párrafo está reservado para el tiempo estimado de lectura.Por cierto, nth-child es una pseudoclase de CSS que permite seleccionar varios elementos hijos de la clase indicando su posición. div.post-content p:nth-child(2):first-letter {    float: left;    font-size: 6em;    font-weight: 900;    color: #000000;    margin-right: 0.10em;    line-height: 90%;    text-shadow: 0.05em 0.05em #c1c1c1c1;    font-family: Times New Roman; }Ocho en punto | www.ochoenpunto.com",
+            "content_html": "<p>Lo que me gusta a mí una <a href=\"https://es.wikipedia.org/wiki/Letra_capital\"><strong>letra capital</strong></a>. Las he vuelto a utilizar en el <a href=\"https://www.ochoenpunto.com/cajon-de-sastre-16-ideas-mejorar-productividad/\">blog de <em>Ocho en punto</em></a>.</p><p><a href=\"https://www.ochoenpunto.com/cajon-de-sastre-16-ideas-mejorar-productividad/\"><img src=\"assets/images/posts/2023/04/letra_capital_8am.png\" alt=\"image\" /></a></p><p>El siguiente código CSS funciona aunque no se utilice WordPress, pero el caso particular que comparto explica cómo mostrar una letra capital (o capitular) personalizando el tema activo de WordPress (<em>Apariencia &gt; Temas &gt; Personalizar)</em> y añadiendo el siguiente código en el apartado <em>CSS adicional</em>.</p><p>Con este código hacemos capital la primera letra del primer párrafo del <em>post</em>:</p><figure class=\"highlight\"><pre><code class=\"language-css\" data-lang=\"css\"> <span class=\"nt\">div</span><span class=\"nc\">.post-content</span> <span class=\"nt\">p</span><span class=\"nd\">:first-child:first-letter</span> <span class=\"p\">{</span>\t<span class=\"nl\">float</span><span class=\"p\">:</span> <span class=\"nb\">left</span><span class=\"p\">;</span>\t<span class=\"nl\">font-size</span><span class=\"p\">:</span> <span class=\"m\">6em</span><span class=\"p\">;</span>\t<span class=\"nl\">font-weight</span><span class=\"p\">:</span> <span class=\"m\">900</span><span class=\"p\">;</span>\t<span class=\"nl\">color</span><span class=\"p\">:</span> <span class=\"m\">#000000</span><span class=\"p\">;</span>\t<span class=\"nl\">margin-right</span><span class=\"p\">:</span> <span class=\"m\">0.10em</span><span class=\"p\">;</span>\t<span class=\"nl\">line-height</span><span class=\"p\">:</span> <span class=\"m\">90%</span><span class=\"p\">;</span>\t<span class=\"nl\">text-shadow</span><span class=\"p\">:</span> <span class=\"m\">0.05em</span> <span class=\"m\">0.05em</span> <span class=\"m\">#c1c1c1</span><span class=\"n\">c1</span><span class=\"p\">;</span>\t<span class=\"nl\">font-family</span><span class=\"p\">:</span> <span class=\"n\">Times</span> <span class=\"n\">New</span> <span class=\"n\">Roman</span><span class=\"p\">;</span><span class=\"p\">}</span></code></pre></figure><p>Con el siguiente código, hacemos capital la primera letra del <strong>segundo párrafo</strong> del <em>post</em>. Este es el código que aplico en mis artículos del <a href=\"https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/\">blog <em>Ocho en punto</em></a> porque el primer párrafo está reservado para el tiempo estimado de lectura.</p><p>Por cierto, <strong>nth-child</strong> es una pseudoclase de CSS que permite seleccionar varios elementos hijos de la clase indicando su posición.</p><figure class=\"highlight\"><pre><code class=\"language-css\" data-lang=\"css\"> <span class=\"nt\">div</span><span class=\"nc\">.post-content</span> <span class=\"nt\">p</span><span class=\"nd\">:nth-child</span><span class=\"o\">(</span><span class=\"err\">2</span><span class=\"o\">)</span><span class=\"nd\">:first-letter</span> <span class=\"p\">{</span>    <span class=\"nl\">float</span><span class=\"p\">:</span> <span class=\"nb\">left</span><span class=\"p\">;</span>    <span class=\"nl\">font-size</span><span class=\"p\">:</span> <span class=\"m\">6em</span><span class=\"p\">;</span>    <span class=\"nl\">font-weight</span><span class=\"p\">:</span> <span class=\"m\">900</span><span class=\"p\">;</span>    <span class=\"nl\">color</span><span class=\"p\">:</span> <span class=\"m\">#000000</span><span class=\"p\">;</span>    <span class=\"nl\">margin-right</span><span class=\"p\">:</span> <span class=\"m\">0.10em</span><span class=\"p\">;</span>    <span class=\"nl\">line-height</span><span class=\"p\">:</span> <span class=\"m\">90%</span><span class=\"p\">;</span>    <span class=\"nl\">text-shadow</span><span class=\"p\">:</span> <span class=\"m\">0.05em</span> <span class=\"m\">0.05em</span> <span class=\"m\">#c1c1c1</span><span class=\"n\">c1</span><span class=\"p\">;</span>    <span class=\"nl\">font-family</span><span class=\"p\">:</span> <span class=\"n\">Times</span> <span class=\"n\">New</span> <span class=\"n\">Roman</span><span class=\"p\">;</span> <span class=\"p\">}</span></code></pre></figure><p><strong>Ocho en punto</strong> | <a href=\"https://www.ochoenpunto.com\">www.ochoenpunto.com</a></p>",
+            "url": "http://localhost:4000/letracapitalcss/",
+            
+            
+            
+            "tags": ["programación","css","WordPress","blog","8am"],
+            
+            "date_published": "2023-04-30T02:08:00+02:00",
+            "date_modified": "2023-04-30T02:08:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/shuffled/",
+            "title": "Shuffled!",
+            "summary": null,
+            "content_text": "He creado esta aplicación web para jugar un poco con las palabras. Sirve para el aula, pero también para pasar el rato y aprender de todo un poco en cualquier momento.La aplicación muestra algunas palabras al azar sobre un tema determinado (geografía, inglés, informática, ciencias, etc.), pero con las letras desordenadas. El objetivo es ordenar las letras para desenmascarar la palabra. Esta puede ser una traducción, una capital de una ciudad, el apellido de algún actor conocido, etc., según la pista que aparece sobre las letras desordenadas. Cuando se inicia el juego, aparece una temática al azar.De momento, tan solo es una versión preliminar y sigo añadiendo más temas y nuevas opciones. Espero que os guste.Artículo en Esfera TIC | www.esferatic.com/shuffledShuffled! | www.esferatic.com/shuffled",
+            "content_html": "<p><img src=\"assets/images/posts/2023/04/shuffled_polonia.png\" alt=\"image\" /></p><p>He creado <a href=\"https://www.esferatic.com/shuffled/\">esta aplicación web</a> para jugar un poco con las palabras. Sirve para el aula, pero también para pasar el rato y aprender de todo un poco en cualquier momento.</p><p>La aplicación muestra algunas palabras al azar sobre un tema determinado (geografía, inglés, informática, ciencias, etc.), pero con las letras desordenadas. El objetivo es ordenar las letras para desenmascarar la palabra. Esta puede ser una traducción, una capital de una ciudad, el apellido de algún actor conocido, etc., según la pista que aparece sobre las letras desordenadas. Cuando se inicia el juego, aparece una temática al azar.</p><p>De momento, tan solo es una versión preliminar y sigo añadiendo más temas y nuevas opciones. Espero que os guste.</p><p><strong>Artículo en Esfera TIC</strong> | <a href=\"https://www.esferatic.com/2023/04/shuffled/\">www.esferatic.com/shuffled</a></p><p><strong>Shuffled!</strong> | <a href=\"https://www.esferatic.com/shuffled/\">www.esferatic.com/shuffled</a></p>",
+            "url": "http://localhost:4000/shuffled/",
+            
+            
+            
+            "tags": ["Educación","Gamificación","Juegos","Cultura"],
+            
+            "date_published": "2023-04-15T02:08:00+02:00",
+            "date_modified": "2023-04-15T02:08:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/tarifa-2022/",
+            "title": "Tarifa",
+            "summary": null,
+            "content_text": "Hace tiempo publiqué en Instagram algunas fotografías de Tarifa, una ciudad ubicada en la costa sur de España, en la provincia de Cádiz, Andalucía. Es conocida por ser uno de los mejores lugares para practicar deportes acuáticos como el windsurf, kitesurf y el surf. Me sorprendió el espectacular entorno natural. Hay que tener en cuenta que se encuentra en el estrecho de Gibraltar, donde se unen el mar Mediterráneo y el océano Atlántico.Instagram | @ebenimeli",
+            "content_html": "<p><img src=\"assets/images/posts/2023/04/tarifa_ebenimeli.jpg\" alt=\"image\" /></p><p>Hace tiempo publiqué en Instagram algunas <a href=\"https://www.instagram.com/p/CmZvvsWDPJH/\">fotografías de Tarifa</a>, una ciudad ubicada en la costa sur de España, en la provincia de Cádiz, Andalucía. Es conocida por ser uno de los mejores lugares para practicar deportes acuáticos como el windsurf, kitesurf y el surf. Me sorprendió el espectacular entorno natural. Hay que tener en cuenta que se encuentra en el estrecho de Gibraltar, donde se unen el mar Mediterráneo y el océano Atlántico.</p><p><strong>Instagram</strong> | <a href=\"https://www.instagram.com/p/CkB0dFfD7H2/\">@ebenimeli</a></p>",
+            "url": "http://localhost:4000/tarifa-2022/",
+            
+            
+            
+            "tags": ["viajes","Tarifa","historia","naturaleza"],
+            
+            "date_published": "2023-04-10T02:08:00+02:00",
+            "date_modified": "2023-04-10T02:08:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/observaciones/",
+            "title": "Observaciones",
+            "summary": null,
+            "content_text": "He programado este asistente para la redacción de observaciones e informes sobre el rendimiento académico de los alumnos. Se puede utilizar como guía o plantilla para no pasar por alto ningún aspecto relevante que convenga incluir en una observación académica. La aplicación va generando el texto a medida que marcamos algunos valores.Asistente para informes académicos | www.esferatic.com/obsMás en Esfera TIC | www.esferatic.com",
+            "content_html": "<p><img src=\"assets/images/posts/2023/03/esferatic_obs.png\" alt=\"image\" /></p><p>He programado este asistente para la redacción de observaciones e informes sobre el rendimiento académico de los alumnos. Se puede utilizar como guía o plantilla para no pasar por alto ningún aspecto relevante que convenga incluir en una observación académica. La aplicación va generando el texto a medida que marcamos algunos valores.</p><p><strong>Asistente para informes académicos</strong> | <a href=\"https://www.esferatic.com/obs\">www.esferatic.com/obs</a></p><p><strong>Más en Esfera TIC</strong> | <a href=\"https://www.esferatic.com/2023/03/asistente-redactar-informes-rendimiento-academico/\">www.esferatic.com</a></p>",
+            "url": "http://localhost:4000/observaciones/",
+            
+            
+            
+            
+            
+            "date_published": "2023-03-18T09:00:00+01:00",
+            "date_modified": "2023-03-18T09:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/feliz2023/",
+            "title": "Feliz y próspero 2023",
+            "summary": null,
+            "content_text": "Os deseo un 2023 lleno de felicidad y prosperidad.",
+            "content_html": "<p><img src=\"assets/images/posts/2022/12/feliz_2023_ebenimeli.jpg\" alt=\"image\" /></p><p>Os deseo un 2023 lleno de felicidad y prosperidad.</p>",
+            "url": "http://localhost:4000/feliz2023/",
+            
+            
+            
+            "tags": ["fotografía","creatividad"],
+            
+            "date_published": "2022-12-31T21:00:00+01:00",
+            "date_modified": "2022-12-31T21:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/150fotoshablan/",
+            "title": "150 fotografías que hablan",
+            "summary": null,
+            "content_text": "He rescatado este proyecto que hice con una selección de mis fotografías. Nueva música. Más fotos en 2023, espero.YouTube | 150 fotografías que hablan",
+            "content_html": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/G7Ppl3DXuok\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"></iframe><p>He rescatado este proyecto que hice con una selección de mis fotografías. Nueva música. Más fotos en 2023, espero.</p><p><strong>YouTube</strong> | <a href=\"https://youtu.be/G7Ppl3DXuok/\">150 fotografías que hablan</a></p>",
+            "url": "http://localhost:4000/150fotoshablan/",
+            
+            
+            
+            "tags": ["fotografía","arte","creatividad"],
+            
+            "date_published": "2022-12-25T09:00:00+01:00",
+            "date_modified": "2022-12-25T09:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/feliznavidad22/",
+            "title": "Feliz Navidad",
+            "summary": null,
+            "content_text": "Feliz Navidad y próspero año nuevo.",
+            "content_html": "<p><img src=\"assets/images/posts/2022/12/navidad_2022_ebenimeli.png\" alt=\"image\" /></p><p>Feliz Navidad y próspero año nuevo.</p>",
+            "url": "http://localhost:4000/feliznavidad22/",
+            
+            
+            
+            
+            
+            "date_published": "2022-12-24T09:00:00+01:00",
+            "date_modified": "2022-12-24T09:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/linuxlite/",
+            "title": "Linux Lite",
+            "summary": null,
+            "content_text": "Acabo de devolverle la vida a un antiguo HP Pavilion con procesador Intel Centrino Duo y 2 GB de memoria RAM. Ya no cuenta con los requisitos mínimos para un sistema operativo como Windows 11 e incluso los de algunas distribuciones de Linux. El rendimiento no sería suficiente para poder trabajar con él. Solución: Linux Lite. Después de haberlo instalado, el portátil vuelve a respirar.  Linux Lite es una distribución Linux de la familia de Sistemas Operativos GNU/Linux, basada en Ubuntu, orientada al escritorio y desarrollada en Nueva Zelanda por Jerry Bezencon. Se caracteriza por ofrecer una experiencia de escritorio liviana y amigable con el usuario novato, por su facilidad de uso y por el poco consumo de recursos, gracias a su escritorio XFCE, un entorno personalizado, sencillo y ligero.Linux Lite | www.linuxliteos.com",
+            "content_html": "<p><img src=\"assets/images/posts/2022/11/linuxlite.png\" alt=\"image\" /></p><p>Acabo de devolverle la vida a un antiguo HP Pavilion con procesador Intel Centrino Duo y 2 GB de memoria RAM. Ya no cuenta con los requisitos mínimos para un sistema operativo como Windows 11 e incluso los de algunas distribuciones de Linux. El rendimiento no sería suficiente para poder trabajar con él. Solución: Linux Lite. Después de haberlo instalado, el portátil vuelve a respirar.</p><blockquote>  <p>Linux Lite es una distribución Linux de la familia de Sistemas Operativos GNU/Linux, basada en Ubuntu, orientada al escritorio y desarrollada en Nueva Zelanda por Jerry Bezencon. Se caracteriza por ofrecer una experiencia de escritorio liviana y amigable con el usuario novato, por su facilidad de uso y por el poco consumo de recursos, gracias a su escritorio XFCE, un entorno personalizado, sencillo y ligero.</p></blockquote><p><strong>Linux Lite</strong> | <a href=\"https://www.linuxliteos.com/\">www.linuxliteos.com</a></p>",
+            "url": "http://localhost:4000/linuxlite/",
+            
+            
+            
+            "tags": ["OS","Linux"],
+            
+            "date_published": "2022-11-12T09:00:00+01:00",
+            "date_modified": "2022-11-12T09:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/otono-supongo/",
+            "title": "Otoño, supongo",
+            "summary": null,
+            "content_text": "No es por hablar del tiempo, pero parece que por fin llega algo de frío.Instagram | @ebenimeli",
+            "content_html": "<p><img src=\"assets/images/posts/2022/11/marquesdc_noviembre_22.jpg\" alt=\"image\" /></p><p>No es por hablar del tiempo, pero parece que por fin llega algo de frío.</p><p><strong>Instagram</strong> | <a href=\"https://www.instagram.com/p/CkjVUPKjH-b/\">@ebenimeli</a></p>",
+            "url": "http://localhost:4000/otono-supongo/",
+            
+            
+            
+            "tags": ["otoño","calles"],
+            
+            "date_published": "2022-11-05T01:00:00+01:00",
+            "date_modified": "2022-11-05T01:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/oreillyandco/",
+            "title": "O'Reilly & Co.",
+            "summary": null,
+            "content_text": "Recientemente he jubilado varios libros. Me resistía a ello, pero hace ya tiempo que había llegado su momento. Son libros que tuvieron su tiempo, hicieron su función que cumplieron con creces. La mayoría son manuales de informática con los que aprendí determinadas tecnologías, lenguajes de programación o herramientas que ya han evolucionado mucho. Si quiero aprender algo nuevo sobre ellas, no consultaría esos libros, sino que buscaría la información en Internet. Sentía especial apego a los manuales de O’Reilly, eso es cierto.",
+            "content_html": "<p><img src=\"assets/images/posts/2022/11/libros_informatica.jpg\" alt=\"image\" /></p><p>Recientemente he jubilado varios libros. Me resistía a ello, pero hace ya tiempo que había llegado su momento. Son libros que tuvieron su tiempo, hicieron su función que cumplieron con creces. La mayoría son manuales de informática con los que aprendí determinadas tecnologías, lenguajes de programación o herramientas que ya han evolucionado mucho. Si quiero aprender algo nuevo sobre ellas, no consultaría esos libros, sino que buscaría la información en Internet. Sentía especial apego a los manuales de O’Reilly, eso es cierto.</p>",
+            "url": "http://localhost:4000/oreillyandco/",
+            
+            
+            
+            "tags": ["libros","informática","organización"],
+            
+            "date_published": "2022-11-04T01:00:00+01:00",
+            "date_modified": "2022-11-04T01:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/teams-canales/",
+            "title": "Canales compartidos en Teams",
+            "summary": null,
+            "content_text": "Microsoft Teams introduce cada mes muchas mejoras. Una de las últimas funciones es la posibilidad de crear un canal compartido en Teams. En general, recomiendo el uso de canales dentro de Teams para organizar mejor la información y, sobre todo, las conversaciones. En esta ocasión, parece que los canales compartidos solo están disponibles en los Teams de equipo (docentes) y no en los de tipo clase. En un Teams de equipo (en en centro educativo los de nuestros equipos de coordinación) ahora hay 3 tipos de canal:  Canal estándar: todos los miembros del equipo pueden acceder.  Canal privado: solo determinados miembros del equipo pueden acceder  Canal compartido: pueden acceder los miembros del equipo, pero también otros usuarios que no pertenecen al Teams (porque no pertenecen a ese equipo de trabajo/etapa) y que invitamos para que accedan exclusivamente a ese canal. Es decir, verán el Teams en su lista, pero solo podrán acceder a ese canal y no podrán ver el resto. Son los propietarios del Teams los que pueden añadir miembros a un canal compartido.El canal compartido es una forma de invitar a otros profesores a participar en un pequeño espacio de nuestro equipo. Si se crea un canal compartido, conviene asignarle un nombre que podáis reconocer como compartido: invitados, compartido, buzón, etc. No obstante, aparece un pequeño icono a la derecha del nombre del canal.Más | Microsoft Teams para Educación",
+            "content_html": "<p>Microsoft Teams introduce cada mes muchas mejoras. Una de las últimas funciones es la posibilidad de crear un <strong>canal compartido</strong> en Teams. En general, recomiendo el uso de canales dentro de Teams para organizar mejor la información y, sobre todo, las conversaciones. En esta ocasión, parece que los canales compartidos solo están disponibles en los Teams de equipo (docentes) y no en los de tipo clase.</p><p><img src=\"assets/images/posts/2022/11/teams_canales_compartidos.png\" alt=\"image\" /> En un Teams de equipo (en en centro educativo los de nuestros equipos de coordinación) ahora hay 3 tipos de canal:</p><ul>  <li><strong>Canal estándar</strong>: todos los miembros del equipo pueden acceder.</li>  <li><strong>Canal privado</strong>: solo determinados miembros del equipo pueden acceder</li>  <li><strong>Canal compartido</strong>: pueden acceder los miembros del equipo, pero también otros usuarios que no pertenecen al Teams (porque no pertenecen a ese equipo de trabajo/etapa) y que invitamos para que accedan exclusivamente a ese canal. Es decir, verán el Teams en su lista, pero solo podrán acceder a ese canal y no podrán ver el resto. Son los propietarios del Teams los que pueden añadir miembros a un canal compartido.</li></ul><p>El canal compartido es una forma de invitar a otros profesores a <strong>participar</strong> en un pequeño espacio de nuestro equipo. Si se crea un canal compartido, conviene asignarle un nombre que podáis reconocer como compartido: invitados, compartido, buzón, etc. No obstante, aparece un pequeño icono a la derecha del nombre del canal.</p><p>Más | <a href=\"https://www.microsoft.com/es-es/education/products/teams\">Microsoft Teams para Educación</a></p>",
+            "url": "http://localhost:4000/teams-canales/",
+            
+            
+            
+            "tags": ["Teams","organización","comparrtir"],
+            
+            "date_published": "2022-11-03T01:00:00+01:00",
+            "date_modified": "2022-11-03T01:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/zaragoza-2022/",
+            "title": "Caesaraugusta",
+            "summary": null,
+            "content_text": "He publicado en Instagram algunas fotografías de Zaragoza.Instagram | @ebenimeli",
+            "content_html": "<p><img src=\"assets/images/posts/2022/11/zaragoza_ebenimeli_ig.jpg\" alt=\"image\" /></p><p>He publicado en Instagram algunas <a href=\"https://www.instagram.com/p/CkB0dFfD7H2/\">fotografías de Zaragoza</a>.</p><p><strong>Instagram</strong> | <a href=\"https://www.instagram.com/p/CkB0dFfD7H2/\">@ebenimeli</a></p>",
+            "url": "http://localhost:4000/zaragoza-2022/",
+            
+            
+            
+            "tags": ["viajes","zaragoza","historia"],
+            
+            "date_published": "2022-11-02T01:00:00+01:00",
+            "date_modified": "2022-11-02T01:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/nanowrimo2022/",
+            "title": "NaNoWriMo 2022",
+            "summary": null,
+            "content_text": "Hoy empieza el NaNoWriMo. Un mes por delante para quienes desean empezar a escribir un novela y terminarla. Lógicamente y salvo casos muy excepcionales, el resultado no gozará de la calidad deseada. Sin embargo, es una gran oportunidad para juntar unas cuentas letras y hacerlo todos y cada uno de los días de noviembre. De esto va el NaNoWriMo: National Novel Writing Month que empezó allá por 1999.NaNoWriMo es una iniciativa que ayuda a hacer un seguimiento del progreso de escritura. Además, facilita la conexión con otros escritores de todo el mundo. También se organizan distintos eventos para no perder la motivación de terminar el manuscrito.  NaNoWriMo is a 501(c)(3) nonprofit organization that provides tools, structure, community, and encouragement to help people find their voices, achieve creative goals, and build new worlds — on and off the page.Escribir es una cuestión de conocimiento y práctica (¿talento?), pero también de hábito. Si uno tiene una buena historia que contar pero no se sienta a hacerlo, no hay novela. En ocasiones es necesario el empuje de otros para no abandonar. NaNoWriMo es la excusa perfecta para sentarse cada mañana, tarde, noche o madrugada a escribir unas líneas.Participé hace unos años y escribí alrededor de 30000 palabras. No alcancé el objetivo de palabras que me había propuesto, fallé algún día a mi cita con Scrivener y, por supuesto, no terminé el manuscrito. Sin embargo, mereció la pena: terminé muchísimas páginas, algo que nunca hubiera imaginado, pero sobre todo disfruté escribiendo, que de eso se trata al fin y al cabo.NaNoWriMo | www.nanowrimo.org",
+            "content_html": "<p><a href=\"https://nanowrimo.org/\"><img src=\"assets/images/posts/2022/11/nanowrimo.jpg\" alt=\"image\" /></a></p><p>Hoy empieza el NaNoWriMo. Un mes por delante para quienes desean empezar a escribir un novela y terminarla. Lógicamente y salvo casos muy excepcionales, el resultado no gozará de la calidad deseada. Sin embargo, es una gran oportunidad para juntar unas cuentas letras y hacerlo todos y cada uno de los días de noviembre. De esto va el NaNoWriMo: <em>National Novel Writing Month</em> que empezó allá por 1999.</p><p>NaNoWriMo es una iniciativa que ayuda a hacer un seguimiento del progreso de escritura. Además, facilita la conexión con otros escritores de todo el mundo. También se organizan distintos eventos para no perder la motivación de terminar el manuscrito.</p><blockquote>  <p>NaNoWriMo is a 501(c)(3) nonprofit organization that provides tools, structure, community, and encouragement to help people find their voices, achieve creative goals, and build new worlds — on and off the page.</p></blockquote><p>Escribir es una cuestión de conocimiento y práctica (¿talento?), pero también de hábito. Si uno tiene una buena historia que contar pero no se sienta a hacerlo, no hay novela. En ocasiones es necesario el empuje de otros para no abandonar. NaNoWriMo es la excusa perfecta para sentarse cada mañana, tarde, noche o madrugada a escribir unas líneas.</p><p>Participé hace unos años y escribí alrededor de 30000 palabras. No alcancé el objetivo de palabras que me había propuesto, fallé algún día a mi cita con <a href=\"https://www.literatureandlatte.com/scrivener/overview\">Scrivener</a> y, por supuesto, no terminé el manuscrito. Sin embargo, mereció la pena: terminé muchísimas páginas, algo que nunca hubiera imaginado, pero sobre todo disfruté escribiendo, que de eso se trata al fin y al cabo.</p><p><strong>NaNoWriMo</strong> | <a href=\"https://nanowrimo.org/\">www.nanowrimo.org</a></p>",
+            "url": "http://localhost:4000/nanowrimo2022/",
+            
+            
+            
+            "tags": ["personal","escribir","NaNoWriMo","Scrivener"],
+            
+            "date_published": "2022-11-01T01:00:00+01:00",
+            "date_modified": "2022-11-01T01:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/hola-mundo/",
+            "title": "Hola, mundo",
+            "summary": null,
+            "content_text": "En el ámbito de la Informática, lo primero que uno hace cuando empieza con un lenguaje de programación nuevo es imprimir por pantalla un Hola, mundo. Es más una tradición que algo útil o necesario. No este espacio un lenguaje por descubrir, pero si un lugar nuevo donde escribir.  En informática, “Hola, mundo” o “Hello, World!”, en inglés es un programa que muestra el texto «¡Hola, mundo!» en un dispositivo de visualización, en la mayoría de los casos la pantalla de un monitor. Este programa suele ser usado como introducción al estudio de un lenguaje de programación, siendo un primer ejercicio típico, y se considera fundamental desde el punto de vista didáctico.En lenguaje C sería la bienvenida así:main( ) {        printf(\"Hola, mundo\");}La versión en Java tendría esta pinta:class HelloWorld {    public static void main(String[] args) {        System.out.println(\"Hola, mundo\");    }}Y su variante en Python esta:print(\"Hola, mundo\")Wikipedia | Hola, mundoFotografía | La Tierra",
+            "content_html": "<p><img src=\"assets/images/posts/2022/10/hola-mundo.jpg\" alt=\"image\" /></p><p>En el ámbito de la Informática, lo primero que uno hace cuando empieza con un lenguaje de programación nuevo es imprimir por pantalla un <em>Hola, mundo</em>. Es más una tradición que algo útil o necesario. No este espacio un lenguaje por descubrir, pero si un lugar nuevo donde escribir.</p><blockquote>  <p>En informática, “<a href=\"https://es.wikipedia.org/wiki/Hola_mundo\">Hola, mundo</a>” o “Hello, World!”, en inglés es un programa que muestra el texto «¡Hola, mundo!» en un dispositivo de visualización, en la mayoría de los casos la pantalla de un monitor. Este programa suele ser usado como introducción al estudio de un lenguaje de programación, siendo un primer ejercicio típico, y se considera fundamental desde el punto de vista didáctico.</p></blockquote><p>En lenguaje C sería la bienvenida así:</p><figure class=\"highlight\"><pre><code class=\"language-c\" data-lang=\"c\"><span class=\"n\">main</span><span class=\"p\">(</span> <span class=\"p\">)</span> <span class=\"p\">{</span>        <span class=\"n\">printf</span><span class=\"p\">(</span><span class=\"s\">\"Hola, mundo\"</span><span class=\"p\">);</span><span class=\"p\">}</span></code></pre></figure><p>La versión en Java tendría esta pinta:</p><figure class=\"highlight\"><pre><code class=\"language-java\" data-lang=\"java\"><span class=\"kd\">class</span> <span class=\"nc\">HelloWorld</span> <span class=\"o\">{</span>    <span class=\"kd\">public</span> <span class=\"kd\">static</span> <span class=\"kt\">void</span> <span class=\"nf\">main</span><span class=\"o\">(</span><span class=\"nc\">String</span><span class=\"o\">[]</span> <span class=\"n\">args</span><span class=\"o\">)</span> <span class=\"o\">{</span>        <span class=\"nc\">System</span><span class=\"o\">.</span><span class=\"na\">out</span><span class=\"o\">.</span><span class=\"na\">println</span><span class=\"o\">(</span><span class=\"s\">\"Hola, mundo\"</span><span class=\"o\">);</span>    <span class=\"o\">}</span><span class=\"o\">}</span></code></pre></figure><p>Y su variante en Python esta:</p><figure class=\"highlight\"><pre><code class=\"language-python\" data-lang=\"python\"><span class=\"k\">print</span><span class=\"p\">(</span><span class=\"s\">\"Hola, mundo\"</span><span class=\"p\">)</span></code></pre></figure><p><strong>Wikipedia</strong> | <a href=\"https://es.wikipedia.org/wiki/Hola_mundo\"><em>Hola, mundo</em></a><br /><strong>Fotografía</strong> | <a href=\"https://pixabay.com/es/illustrations/tierra-espacio-luz-de-sol-1756274/\"><em>La Tierra</em></a></p>",
+            "url": "http://localhost:4000/hola-mundo/",
+            
+            
+            
+            
+            
+            "date_published": "2022-10-31T01:00:00+01:00",
+            "date_modified": "2022-10-31T01:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        }
+    
+    ]
+}

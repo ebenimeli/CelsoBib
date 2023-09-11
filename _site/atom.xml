@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Enrique Benimeli</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2023-09-11T07:02:21+02:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name>Enrique Benimeli</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>La fábula del colibrí</title>
+   <link href="http://localhost:4000/fabula-colibri/"/>
+   <updated>2023-09-10T08:00:00+02:00</updated>
+   <id>http://localhost:4000/fabula-colibri</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.esferatic.com/2023/09/como-cambiar-el-mundo-la-fabula-del-colibri/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/colibri_edu.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Antes de empezar un &lt;strong&gt;nuevo curso&lt;/strong&gt;, siempre conviene detenerse para reflexionar sobre nuestro papel como docentes. En unos días la rutina probablemente no nos deje pensar con tanta claridad.&lt;/p&gt;
+
+&lt;p&gt;Los &lt;strong&gt;profesores&lt;/strong&gt; tenemos por delante enormes &lt;strong&gt;desafíos&lt;/strong&gt;, muchos de ellos globales. Y la &lt;strong&gt;fábula del colibrí&lt;/strong&gt; siempre me parece inspiradora y alentadora. Os la cuento en &lt;a href=&quot;https://www.esferatic.com/2023/09/como-cambiar-el-mundo-la-fabula-del-colibri/&quot;&gt;Esfera TIC&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Esfera TIC&lt;/strong&gt; · &lt;a href=&quot;https://www.esferatic.com/2023/09/como-cambiar-el-mundo-la-fabula-del-colibri/&quot;&gt;Cómo cambiar el mundo: la fábula del colibrí&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>MIEE: educación, innovación y tecnología</title>
+   <link href="http://localhost:4000/miee-23-24/"/>
+   <updated>2023-09-09T08:00:00+02:00</updated>
+   <id>http://localhost:4000/miee-23-24</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://educationblog.microsoft.com/en-us/2023/09/microsofts-2023-2024-mie-experts-and-showcase-schools-fostering-a-culture-of-innovation&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/ebenimeli_MIEE_23-24.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Un año más (y empiezo a perder la cuenta), es un placer haber sido seleccionado como &lt;em&gt;Microsoft Innovative Educator Expert&lt;/em&gt; (MIEE) para el curso 2023-2024. Cuando la educación, la innovación y la tecnología van de la mano, el camino siempre es más sencillo.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Microsoft&lt;/strong&gt; · &lt;a href=&quot;https://educationblog.microsoft.com/en-us/2023/09/microsofts-2023-2024-mie-experts-and-showcase-schools-fostering-a-culture-of-innovation&quot;&gt;Microsoft’s 2023-2024 MIE Experts&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Un checklist TIC para el primer día de clase</title>
+   <link href="http://localhost:4000/tic-vueltaalcole/"/>
+   <updated>2023-09-08T10:00:00+02:00</updated>
+   <id>http://localhost:4000/tic-vueltaalcole</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.ochoenpunto.com/31-consejos-tic-profesores-checklist-primer-dia-clase/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/ordenador_libros.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;He compartido en &lt;em&gt;Ocho en punto&lt;/em&gt; un &lt;em&gt;checklist&lt;/em&gt; especialmente diseñado para profesores en su primer día de clase. Una serie de &lt;strong&gt;31 consejos TIC&lt;/strong&gt; organizados en 8 bloques para empezar el curso con buen pie: dispositivos, conectividad, plataformas y servicios, comunicaciones, multimedia, aplicaciones y gestión de incidencias. La clave está en una buena &lt;strong&gt;previsión&lt;/strong&gt; y &lt;strong&gt;organización&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ocho en punto&lt;/strong&gt; · &lt;a href=&quot;https://www.ochoenpunto.com/31-consejos-tic-profesores-checklist-primer-dia-clase/&quot;&gt;31 consejos TIC para un primer día de clase sin sorpresas
+&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Entradillas en el blog: WP excerpt</title>
+   <link href="http://localhost:4000/entradillas-8am/"/>
+   <updated>2023-09-03T07:00:00+02:00</updated>
+   <id>http://localhost:4000/wp-excerpt</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/08/wp_post_excerpt.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Los detalles marcan la diferencia. Me gusta la idea de que los artículos de &lt;em&gt;Ocho en punto&lt;/em&gt; tengan una especie de encabezamiento, como las &lt;strong&gt;entradillas&lt;/strong&gt; de los artículos en los periódicos y que actúan como un resumen.&lt;/p&gt;
+
+&lt;p&gt;En WordPress se puede utilizar la función &lt;code&gt;the_excerpt()&lt;/code&gt; o &lt;code&gt;get_the_excerpt()&lt;/code&gt; para obtener el extracto (&lt;em&gt;excerpt&lt;/em&gt;) del &lt;em&gt;post&lt;/em&gt;. Este &lt;strong&gt;extracto&lt;/strong&gt; es un campo especial que quien escribe puede rellenar cuando redacta el artículo. No me extrañaría, sin embargo, que alguien haya integrado ya alguna IA para hacer el resumen automáticamente.&lt;/p&gt;
+
+&lt;p&gt;El problema es que, cuando se utilizan estas funciones, se obtiene también un enlace &lt;code&gt;a&lt;/code&gt; en HTML del tipo &lt;em&gt;Read more&lt;/em&gt;. En este caso, no necesitamos un enlace &lt;em&gt;leer más&lt;/em&gt; porque ya estamos en el propio artículo. Con un filtro y personalizando alguna función se puede lograr que no aparezca este añadido. Una solución relativamente es utilizar una &lt;strong&gt;expresión regular&lt;/strong&gt; para identificar enlaces HTML de tipo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;...&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;para posteriormente eliminarlos. No es probablemente la solución más elegante, pero funciona. Y si WordPress integra algún sistema de caché para las páginas, apenas debería suponer una carga. De todos modos, tarde o temprano, convendría aplicar alguna solución más adecuada.&lt;/p&gt;
+
+&lt;p&gt;Con PHP la cosa se soluciona así:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt; 
+    &lt;span class=&quot;nv&quot;&gt;$summary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;get_the_excerpt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;$pattern&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;/&amp;lt;a\b[^&amp;gt;]*&amp;gt;.*?&amp;lt;\/a&amp;gt;/i&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;$cleanSummary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;preg_replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$pattern&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;$1&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&amp;lt;p class=&quot;summary&quot;&amp;gt;&apos;&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$cleanSummary&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;&amp;lt;/p&amp;gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Y la hoja de estilo CSS podemos personalizar el formato de la entradilla:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.summary&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1.2em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-weight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DarkSlateGray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;De esta forma, el código HTML que teníamos &lt;strong&gt;antes&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;more-link-wrapper&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;more-link&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Seguir leyendo&lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;screen-reader-text&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Herramientas, métodos y enfoque&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;i&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fas fa-angle-right&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Aparece así &lt;strong&gt;después&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;more-link-wrapper&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Ahora queda revisar los más de 150 artículos y sus entradillas porque, como en este &lt;em&gt;post&lt;/em&gt; que comparto, será necesario reducirlo en extensión y hacer un buen resumen.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ocho en punto&lt;/strong&gt; · &lt;a href=&quot;https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/&quot;&gt;&lt;em&gt;Herramientas, métodos y enfoque&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Parot</title>
+   <link href="http://localhost:4000/parot-serie/"/>
+   <updated>2023-09-02T10:00:00+02:00</updated>
+   <id>http://localhost:4000/parot-serie</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.filmaffinity.com/es/film518139.html&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/parot_serie.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Un &lt;em&gt;thriller&lt;/em&gt; que plantea varios dilemas morales. He visto de momento 3 episodios de los 10 que componen la serie. Buen papel de Adriana Ugarte y, sobre todo, de Ivan Massagué. Se puede ver en &lt;a href=&quot;https://www.primevideo.com/region/eu/detail/0FNXJP89UN4U3FQ6ALKVQMYMTL/ref=atv_dp_share_cu_r&quot;&gt;Amazon Prime Video&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sinopsis:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Thriller&lt;/em&gt; de ficción ambientado en España en el año 2013. Tras la derogación de la doctrina “Parot” por el Tribunal Europeo de Estrasburgo, decenas de terroristas presos han sido puestos en libertad. Pocos días después, algunos excarcelados empiezan a aparecer asesinados de la misma forma en que lo fueron sus víctimas. Isabel Mora (Adriana Ugarte), es una policía íntegra y perseverante que tendrá que asumir la investigación de los asesinatos mientras se enfrenta al intento de venganza por parte de uno de los excarcelados.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Filmaffinity&lt;/strong&gt; · &lt;a href=&quot;https://www.filmaffinity.com/es/film518139.html&quot;&gt;&lt;em&gt;Parot&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Amazon Prime Video&lt;/strong&gt; · &lt;a href=&quot;https://www.primevideo.com/region/eu/detail/0FNXJP89UN4U3FQ6ALKVQMYMTL/ref=atv_dp_share_cu_r&quot;&gt;Parot&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Trailer&lt;/strong&gt; · &lt;a href=&quot;https://www.youtube.com/watch?v=xfmQ9MgFRps&quot;&gt;Parot – Tráiler Oficial · Prime Video España&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Desconectar antes de empezar</title>
+   <link href="http://localhost:4000/vuelta-trabajo-desconecta/"/>
+   <updated>2023-08-30T02:16:00+02:00</updated>
+   <id>http://localhost:4000/vuelta-al-trabajo</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.ochoenpunto.com/vuelta-al-trabajo-10-ideas-vispera-desconectada/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/08/hombre_naturaleza.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Agosto termina y en unos días muchos nos incorporamos de nuevo a nuestro &lt;strong&gt;trabajo tras unas vacaciones&lt;/strong&gt;. Por el motivo que sea, la vuelta al trabajo produce en algunas personas cierta ansiedad. Desde luego, la noticia estrella por esta época en todos los informativos es la del síndrome postvacacional. En estos casos, dedicar la víspera a &lt;strong&gt;desconectar&lt;/strong&gt; (más todavía si cabe) parece una gran idea.&lt;/p&gt;
+
+&lt;p&gt;Se me ocurren varias cosas que podemos hacer justo el día antes de incorporarnos al trabajo. La cuestión es estar ocupado en otros asuntos y evitar la tentación de echar un vistazo a cualquier asunto de trabajo. Os lo cuento en el &lt;a href=&quot;https://www.ochoenpunto.com/vuelta-al-trabajo-10-ideas-vispera-desconectada/&quot;&gt;último artículo de &lt;em&gt;Ocho en punto&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;www.ochoenpunto.com&lt;/strong&gt; · &lt;a href=&quot;https://www.ochoenpunto.com/vuelta-al-trabajo-10-ideas-vispera-desconectada/&quot;&gt;&lt;em&gt;La vuelta al trabajo: 10 ideas para una víspera desconectada&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Fiel a Things y GTD</title>
+   <link href="http://localhost:4000/fiel-things-gtd/"/>
+   <updated>2023-08-29T02:08:00+02:00</updated>
+   <id>http://localhost:4000/fiel-things-gtd</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/08/things_app.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;En unos días despedimos el mes de agosto. Esto significa la vuelta (oficial) al trabajo en unos días y que el &lt;strong&gt;inicio de curso&lt;/strong&gt; asoma por la esquina. Para muchos (que levanten la mano los docentes), el nuevo año lo marca el calendario académico. Esto es así.&lt;/p&gt;
+
+&lt;p&gt;Con el nuevo curso, llegan también &lt;strong&gt;nuevos artículos&lt;/strong&gt; al blog de &lt;em&gt;Ocho en punto&lt;/em&gt;, después del tiempo de desconexión suficiente (y necesario) para volver con energía y escribir dejar de vez en cuando algunas líneas por aquí. La parada técnica significa que he estado en otros asuntos y eso, casi siempre, es buena noticia.&lt;/p&gt;
+
+&lt;p&gt;Con el artículo &lt;a href=&quot;https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/&quot;&gt;&lt;em&gt;Herramientas, métodos y enfoque&lt;/em&gt;&lt;/a&gt; reconecto con el blog y, sobre todo, con quienes lo leéis. Os cuento en qué punto estoy en términos de organización personal, de métodos y de herramientas. Y aprovecho también para compartir algunas novedades, recursos y recordatorios. ¡Ya estamos de vuelta!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;www.ochoenpunto.com&lt;/strong&gt; · &lt;a href=&quot;https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/&quot;&gt;&lt;em&gt;Herramientas, métodos y enfoque&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>23j</title>
+   <link href="http://localhost:4000/elecciones-23j/"/>
+   <updated>2023-07-21T02:08:00+02:00</updated>
+   <id>http://localhost:4000/elecciones23j</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://resultados.generales23j.es/es&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/07/elecciones23j.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;🗳️ Puedes seguir los resultados de las Elecciones Generales del 23J en esta web:
+👉🏼 &lt;a href=&quot;https://resultados.generales23j.es/es&quot;&gt;resultados.generales23j.es&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;⬇️ También puedes descargar las aplicaciones oficiales:
+📱 &lt;a href=&quot;https://apps.apple.com/es/app/23j-elecciones-generales-2023/id6451315925&quot;&gt;iOS&lt;/a&gt;
+📱 &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.generales23.app&quot;&gt;Android&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;#Elecciones2023 #23J&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Resumiendo con ChatGPT</title>
+   <link href="http://localhost:4000/resumen-chatgpt/"/>
+   <updated>2023-05-21T02:08:00+02:00</updated>
+   <id>http://localhost:4000/post</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://chat.openai.com/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/05/chatgpt.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Este fin de semana, &lt;a href=&quot;https://www.xataka.com/robotica-e-ia/anthropic-deja-ridiculo-a-chatgpt-su-chatbot-claude-capaz-leer-novela-minuto&quot;&gt;he leído en Xataka&lt;/a&gt; que el chatbot &lt;a href=&quot;https://www.anthropic.com/product&quot;&gt;Claude de Anthropic&lt;/a&gt; es capaz de leer una novela en menos de un minuto, lo que deja a &lt;a href=&quot;https://chat.openai.com/&quot;&gt;ChatGPT&lt;/a&gt; muy por detrás.&lt;/p&gt;
+
+&lt;p&gt;Me preguntaba qué tal hacía los resúmenes ChatGPT y he probado con &lt;a href=&quot;https://www.ochoenpunto.com/cuando-la-hora-importa/&quot;&gt;mi último artículo&lt;/a&gt; sobre comunicación digital efectiva, que tiene alrededor de 800 palabras.&lt;/p&gt;
+
+&lt;p&gt;Así quedaría en 10 palabras:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Comunicar en horarios adecuados muestra respeto y eficacia profesional.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;En 25 palabras:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Comunicar en horarios adecuados es crucial. Respetar los horarios laborales propios y del receptor muestra profesionalismo y consideración. Elegir el canal y momento adecuados es esencial para una comunicación eficaz.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;En 50 palabras:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Enviar mensajes en momentos inoportunos puede tener un efecto negativo. Es esencial considerar los horarios laborales propios y de los destinatarios. Respetar los límites de trabajo muestra profesionalismo y consideración. El canal y el momento adecuados son cruciales. La comunicación eficaz refleja organización y eficiencia.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;En 100 palabras:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Enviar mensajes en momentos inoportunos puede tener efectos inesperados. Es fundamental considerar el horario de trabajo propio y del receptor antes de enviar un mensaje. Respetar los límites laborales es importante para demostrar profesionalismo y consideración hacia los demás. Elegir el canal adecuado también es relevante. Los correos electrónicos pueden enviarse en cualquier momento, pero es preferible hacerlo durante el horario laboral para mantener una imagen profesional. En el caso de mensajes instantáneos, es crucial tener en cuenta los horarios del receptor y evitar interrupciones fuera de su horario de trabajo. Una comunicación efectiva demuestra organización y eficacia.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;ChatGPT&lt;/strong&gt; | &lt;a href=&quot;https://chat.openai.com/&quot;&gt;chat.openai.com&lt;/a&gt;&lt;br /&gt;
+&lt;strong&gt;Imagen&lt;/strong&gt; | &lt;a href=&quot;https://pixabay.com/illustrations/chatgpt-ai-artificial-intelligence-7902213/&quot;&gt;ChatGPT&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>150 artículos sobre productividad</title>
+   <link href="http://localhost:4000/ochoenpunto150/"/>
+   <updated>2023-05-16T02:08:00+02:00</updated>
+   <id>http://localhost:4000/ochoenpunto-150</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/05/escritorio_ordenador.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Es cierto que los números no importan; a mí, desde luego, no me importan. Sin embargo, alcanzar cualquier meta es siempre una buena excusa para hacer una parada, mirar hacia atrás y echar un vistazo al camino recorrido.&lt;/p&gt;
+
+&lt;p&gt;Me detuve cuando escribí 50 artículos en el blog y también cuando llegué al centenar. Ahora es momento de hacer balance después de añadir otras 50 publicaciones al blog.&lt;/p&gt;
+
+&lt;p&gt;No diré aquello de que he llegado hasta este punto sin apenas darme cuenta o que, como quien no quiere la cosa, &lt;a href=&quot;https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/&quot;&gt;este es el artículo número 150&lt;/a&gt; en &lt;em&gt;Ocho en punto&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ocho en punto&lt;/strong&gt; | &lt;a href=&quot;https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/&quot;&gt;Un tercer alto en el camino: 150 artículos sobre organización personal&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Letra capital con CSS (y en WordPress)</title>
+   <link href="http://localhost:4000/letracapitalcss/"/>
+   <updated>2023-04-30T02:08:00+02:00</updated>
+   <id>http://localhost:4000/letracapitalcss</id>
+   <content type="html">&lt;p&gt;Lo que me gusta a mí una &lt;a href=&quot;https://es.wikipedia.org/wiki/Letra_capital&quot;&gt;&lt;strong&gt;letra capital&lt;/strong&gt;&lt;/a&gt;. Las he vuelto a utilizar en el &lt;a href=&quot;https://www.ochoenpunto.com/cajon-de-sastre-16-ideas-mejorar-productividad/&quot;&gt;blog de &lt;em&gt;Ocho en punto&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ochoenpunto.com/cajon-de-sastre-16-ideas-mejorar-productividad/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/04/letra_capital_8am.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;El siguiente código CSS funciona aunque no se utilice WordPress, pero el caso particular que comparto explica cómo mostrar una letra capital (o capitular) personalizando el tema activo de WordPress (&lt;em&gt;Apariencia &amp;gt; Temas &amp;gt; Personalizar)&lt;/em&gt; y añadiendo el siguiente código en el apartado &lt;em&gt;CSS adicional&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Con este código hacemos capital la primera letra del primer párrafo del &lt;em&gt;post&lt;/em&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt; &lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.post-content&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:first-child:first-letter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;font-weight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;900&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;margin-right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.10em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;line-height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;90%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;text-shadow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.05em&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.05em&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#c1c1c1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Times&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;New&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Roman&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Con el siguiente código, hacemos capital la primera letra del &lt;strong&gt;segundo párrafo&lt;/strong&gt; del &lt;em&gt;post&lt;/em&gt;. Este es el código que aplico en mis artículos del &lt;a href=&quot;https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/&quot;&gt;blog &lt;em&gt;Ocho en punto&lt;/em&gt;&lt;/a&gt; porque el primer párrafo está reservado para el tiempo estimado de lectura.&lt;/p&gt;
+
+&lt;p&gt;Por cierto, &lt;strong&gt;nth-child&lt;/strong&gt; es una pseudoclase de CSS que permite seleccionar varios elementos hijos de la clase indicando su posición.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt; &lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.post-content&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:nth-child&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:first-letter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;6em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-weight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;900&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#000000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;margin-right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.10em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;line-height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;90%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;text-shadow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.05em&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.05em&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#c1c1c1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Times&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;New&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Roman&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Ocho en punto&lt;/strong&gt; | &lt;a href=&quot;https://www.ochoenpunto.com&quot;&gt;www.ochoenpunto.com&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Shuffled!</title>
+   <link href="http://localhost:4000/shuffled/"/>
+   <updated>2023-04-15T02:08:00+02:00</updated>
+   <id>http://localhost:4000/shuffled</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;assets/images/posts/2023/04/shuffled_polonia.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;He creado &lt;a href=&quot;https://www.esferatic.com/shuffled/&quot;&gt;esta aplicación web&lt;/a&gt; para jugar un poco con las palabras. Sirve para el aula, pero también para pasar el rato y aprender de todo un poco en cualquier momento.&lt;/p&gt;
+
+&lt;p&gt;La aplicación muestra algunas palabras al azar sobre un tema determinado (geografía, inglés, informática, ciencias, etc.), pero con las letras desordenadas. El objetivo es ordenar las letras para desenmascarar la palabra. Esta puede ser una traducción, una capital de una ciudad, el apellido de algún actor conocido, etc., según la pista que aparece sobre las letras desordenadas. Cuando se inicia el juego, aparece una temática al azar.&lt;/p&gt;
+
+&lt;p&gt;De momento, tan solo es una versión preliminar y sigo añadiendo más temas y nuevas opciones. Espero que os guste.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Artículo en Esfera TIC&lt;/strong&gt; | &lt;a href=&quot;https://www.esferatic.com/2023/04/shuffled/&quot;&gt;www.esferatic.com/shuffled&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Shuffled!&lt;/strong&gt; | &lt;a href=&quot;https://www.esferatic.com/shuffled/&quot;&gt;www.esferatic.com/shuffled&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Tarifa</title>
+   <link href="http://localhost:4000/tarifa-2022/"/>
+   <updated>2023-04-10T02:08:00+02:00</updated>
+   <id>http://localhost:4000/tarifa</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;assets/images/posts/2023/04/tarifa_ebenimeli.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hace tiempo publiqué en Instagram algunas &lt;a href=&quot;https://www.instagram.com/p/CmZvvsWDPJH/&quot;&gt;fotografías de Tarifa&lt;/a&gt;, una ciudad ubicada en la costa sur de España, en la provincia de Cádiz, Andalucía. Es conocida por ser uno de los mejores lugares para practicar deportes acuáticos como el windsurf, kitesurf y el surf. Me sorprendió el espectacular entorno natural. Hay que tener en cuenta que se encuentra en el estrecho de Gibraltar, donde se unen el mar Mediterráneo y el océano Atlántico.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Instagram&lt;/strong&gt; | &lt;a href=&quot;https://www.instagram.com/p/CkB0dFfD7H2/&quot;&gt;@ebenimeli&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Observaciones</title>
+   <link href="http://localhost:4000/observaciones/"/>
+   <updated>2023-03-18T09:00:00+01:00</updated>
+   <id>http://localhost:4000/observaciones</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;assets/images/posts/2023/03/esferatic_obs.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;He programado este asistente para la redacción de observaciones e informes sobre el rendimiento académico de los alumnos. Se puede utilizar como guía o plantilla para no pasar por alto ningún aspecto relevante que convenga incluir en una observación académica. La aplicación va generando el texto a medida que marcamos algunos valores.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Asistente para informes académicos&lt;/strong&gt; | &lt;a href=&quot;https://www.esferatic.com/obs&quot;&gt;www.esferatic.com/obs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Más en Esfera TIC&lt;/strong&gt; | &lt;a href=&quot;https://www.esferatic.com/2023/03/asistente-redactar-informes-rendimiento-academico/&quot;&gt;www.esferatic.com&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Feliz y próspero 2023</title>
+   <link href="http://localhost:4000/feliz2023/"/>
+   <updated>2022-12-31T21:00:00+01:00</updated>
+   <id>http://localhost:4000/feliz2023</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;assets/images/posts/2022/12/feliz_2023_ebenimeli.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Os deseo un 2023 lleno de felicidad y prosperidad.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>150 fotografías que hablan</title>
+   <link href="http://localhost:4000/150fotoshablan/"/>
+   <updated>2022-12-25T09:00:00+01:00</updated>
+   <id>http://localhost:4000/150fotos</id>
+   <content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/G7Ppl3DXuok&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;He rescatado este proyecto que hice con una selección de mis fotografías. Nueva música. Más fotos en 2023, espero.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;YouTube&lt;/strong&gt; | &lt;a href=&quot;https://youtu.be/G7Ppl3DXuok/&quot;&gt;150 fotografías que hablan&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Feliz Navidad</title>
+   <link href="http://localhost:4000/feliznavidad22/"/>
+   <updated>2022-12-24T09:00:00+01:00</updated>
+   <id>http://localhost:4000/navidad-2022</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;assets/images/posts/2022/12/navidad_2022_ebenimeli.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Feliz Navidad y próspero año nuevo.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Linux Lite</title>
+   <link href="http://localhost:4000/linuxlite/"/>
+   <updated>2022-11-12T09:00:00+01:00</updated>
+   <id>http://localhost:4000/linux-lite</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;assets/images/posts/2022/11/linuxlite.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Acabo de devolverle la vida a un antiguo HP Pavilion con procesador Intel Centrino Duo y 2 GB de memoria RAM. Ya no cuenta con los requisitos mínimos para un sistema operativo como Windows 11 e incluso los de algunas distribuciones de Linux. El rendimiento no sería suficiente para poder trabajar con él. Solución: Linux Lite. Después de haberlo instalado, el portátil vuelve a respirar.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Linux Lite es una distribución Linux de la familia de Sistemas Operativos GNU/Linux, basada en Ubuntu, orientada al escritorio y desarrollada en Nueva Zelanda por Jerry Bezencon. Se caracteriza por ofrecer una experiencia de escritorio liviana y amigable con el usuario novato, por su facilidad de uso y por el poco consumo de recursos, gracias a su escritorio XFCE, un entorno personalizado, sencillo y ligero.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Linux Lite&lt;/strong&gt; | &lt;a href=&quot;https://www.linuxliteos.com/&quot;&gt;www.linuxliteos.com&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Otoño, supongo</title>
+   <link href="http://localhost:4000/otono-supongo/"/>
+   <updated>2022-11-05T01:00:00+01:00</updated>
+   <id>http://localhost:4000/otono</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;assets/images/posts/2022/11/marquesdc_noviembre_22.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;No es por hablar del tiempo, pero parece que por fin llega algo de frío.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Instagram&lt;/strong&gt; | &lt;a href=&quot;https://www.instagram.com/p/CkjVUPKjH-b/&quot;&gt;@ebenimeli&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>O&apos;Reilly &amp; Co.</title>
+   <link href="http://localhost:4000/oreillyandco/"/>
+   <updated>2022-11-04T01:00:00+01:00</updated>
+   <id>http://localhost:4000/oreilly</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;assets/images/posts/2022/11/libros_informatica.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Recientemente he jubilado varios libros. Me resistía a ello, pero hace ya tiempo que había llegado su momento. Son libros que tuvieron su tiempo, hicieron su función que cumplieron con creces. La mayoría son manuales de informática con los que aprendí determinadas tecnologías, lenguajes de programación o herramientas que ya han evolucionado mucho. Si quiero aprender algo nuevo sobre ellas, no consultaría esos libros, sino que buscaría la información en Internet. Sentía especial apego a los manuales de O’Reilly, eso es cierto.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Canales compartidos en Teams</title>
+   <link href="http://localhost:4000/teams-canales/"/>
+   <updated>2022-11-03T01:00:00+01:00</updated>
+   <id>http://localhost:4000/teams-canales</id>
+   <content type="html">&lt;p&gt;Microsoft Teams introduce cada mes muchas mejoras. Una de las últimas funciones es la posibilidad de crear un &lt;strong&gt;canal compartido&lt;/strong&gt; en Teams. En general, recomiendo el uso de canales dentro de Teams para organizar mejor la información y, sobre todo, las conversaciones. En esta ocasión, parece que los canales compartidos solo están disponibles en los Teams de equipo (docentes) y no en los de tipo clase.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/posts/2022/11/teams_canales_compartidos.png&quot; alt=&quot;image&quot; /&gt;
+ 
+En un Teams de equipo (en en centro educativo los de nuestros equipos de coordinación) ahora hay 3 tipos de canal:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Canal estándar&lt;/strong&gt;: todos los miembros del equipo pueden acceder.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Canal privado&lt;/strong&gt;: solo determinados miembros del equipo pueden acceder&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Canal compartido&lt;/strong&gt;: pueden acceder los miembros del equipo, pero también otros usuarios que no pertenecen al Teams (porque no pertenecen a ese equipo de trabajo/etapa) y que invitamos para que accedan exclusivamente a ese canal. Es decir, verán el Teams en su lista, pero solo podrán acceder a ese canal y no podrán ver el resto. Son los propietarios del Teams los que pueden añadir miembros a un canal compartido.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;El canal compartido es una forma de invitar a otros profesores a &lt;strong&gt;participar&lt;/strong&gt; en un pequeño espacio de nuestro equipo. Si se crea un canal compartido, conviene asignarle un nombre que podáis reconocer como compartido: invitados, compartido, buzón, etc. No obstante, aparece un pequeño icono a la derecha del nombre del canal.&lt;/p&gt;
+
+&lt;p&gt;Más | &lt;a href=&quot;https://www.microsoft.com/es-es/education/products/teams&quot;&gt;Microsoft Teams para Educación&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Caesaraugusta</title>
+   <link href="http://localhost:4000/zaragoza-2022/"/>
+   <updated>2022-11-02T01:00:00+01:00</updated>
+   <id>http://localhost:4000/zaragoza</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;assets/images/posts/2022/11/zaragoza_ebenimeli_ig.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;He publicado en Instagram algunas &lt;a href=&quot;https://www.instagram.com/p/CkB0dFfD7H2/&quot;&gt;fotografías de Zaragoza&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Instagram&lt;/strong&gt; | &lt;a href=&quot;https://www.instagram.com/p/CkB0dFfD7H2/&quot;&gt;@ebenimeli&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>NaNoWriMo 2022</title>
+   <link href="http://localhost:4000/nanowrimo2022/"/>
+   <updated>2022-11-01T01:00:00+01:00</updated>
+   <id>http://localhost:4000/nanowrimo</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://nanowrimo.org/&quot;&gt;&lt;img src=&quot;assets/images/posts/2022/11/nanowrimo.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hoy empieza el NaNoWriMo. Un mes por delante para quienes desean empezar a escribir un novela y terminarla. Lógicamente y salvo casos muy excepcionales, el resultado no gozará de la calidad deseada. Sin embargo, es una gran oportunidad para juntar unas cuentas letras y hacerlo todos y cada uno de los días de noviembre. De esto va el NaNoWriMo: &lt;em&gt;National Novel Writing Month&lt;/em&gt; que empezó allá por 1999.&lt;/p&gt;
+
+&lt;p&gt;NaNoWriMo es una iniciativa que ayuda a hacer un seguimiento del progreso de escritura. Además, facilita la conexión con otros escritores de todo el mundo. También se organizan distintos eventos para no perder la motivación de terminar el manuscrito.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;NaNoWriMo is a 501(c)(3) nonprofit organization that provides tools, structure, community, and encouragement to help people find their voices, achieve creative goals, and build new worlds — on and off the page.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Escribir es una cuestión de conocimiento y práctica (¿talento?), pero también de hábito. Si uno tiene una buena historia que contar pero no se sienta a hacerlo, no hay novela. En ocasiones es necesario el empuje de otros para no abandonar. NaNoWriMo es la excusa perfecta para sentarse cada mañana, tarde, noche o madrugada a escribir unas líneas.&lt;/p&gt;
+
+&lt;p&gt;Participé hace unos años y escribí alrededor de 30000 palabras. No alcancé el objetivo de palabras que me había propuesto, fallé algún día a mi cita con &lt;a href=&quot;https://www.literatureandlatte.com/scrivener/overview&quot;&gt;Scrivener&lt;/a&gt; y, por supuesto, no terminé el manuscrito. Sin embargo, mereció la pena: terminé muchísimas páginas, algo que nunca hubiera imaginado, pero sobre todo disfruté escribiendo, que de eso se trata al fin y al cabo.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NaNoWriMo&lt;/strong&gt; | &lt;a href=&quot;https://nanowrimo.org/&quot;&gt;www.nanowrimo.org&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Hola, mundo</title>
+   <link href="http://localhost:4000/hola-mundo/"/>
+   <updated>2022-10-31T01:00:00+01:00</updated>
+   <id>http://localhost:4000/hola-mundo</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;assets/images/posts/2022/10/hola-mundo.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En el ámbito de la Informática, lo primero que uno hace cuando empieza con un lenguaje de programación nuevo es imprimir por pantalla un &lt;em&gt;Hola, mundo&lt;/em&gt;. Es más una tradición que algo útil o necesario. No este espacio un lenguaje por descubrir, pero si un lugar nuevo donde escribir.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;En informática, “&lt;a href=&quot;https://es.wikipedia.org/wiki/Hola_mundo&quot;&gt;Hola, mundo&lt;/a&gt;” o “Hello, World!”, en inglés es un programa que muestra el texto «¡Hola, mundo!» en un dispositivo de visualización, en la mayoría de los casos la pantalla de un monitor. Este programa suele ser usado como introducción al estudio de un lenguaje de programación, siendo un primer ejercicio típico, y se considera fundamental desde el punto de vista didáctico.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;En lenguaje C sería la bienvenida así:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hola, mundo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;La versión en Java tendría esta pinta:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hola, mundo&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Y su variante en Python esta:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hola, mundo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Wikipedia&lt;/strong&gt; | &lt;a href=&quot;https://es.wikipedia.org/wiki/Hola_mundo&quot;&gt;&lt;em&gt;Hola, mundo&lt;/em&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;strong&gt;Fotografía&lt;/strong&gt; | &lt;a href=&quot;https://pixabay.com/es/illustrations/tierra-espacio-luz-de-sol-1756274/&quot;&gt;&lt;em&gt;La Tierra&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
