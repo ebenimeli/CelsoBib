@@ -4,7 +4,7 @@
  <title>Enrique Benimeli</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-09-12T19:05:26+02:00</updated>
+ <updated>2023-09-12T19:12:02+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Enrique Benimeli</name>
@@ -13,13 +13,19 @@
 
  
  <entry>
-   <title>Faros</title>
+   <title>No cualquier luz es faro</title>
    <link href="http://localhost:4000/faros-arte/"/>
    <updated>2023-09-12T08:00:00+02:00</updated>
    <id>http://localhost:4000/faros-arte</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/cafetera.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Llegué a esta ilustración a través de &lt;a href=&quot;https://twitter.com/IrenaBuzarewicz/status/1700365876803903937&quot;&gt;&lt;em&gt;Irena Buzarewicz&lt;/em&gt;&lt;/a&gt;. Es obra de &lt;a href=&quot;https://www.instagram.com/iconeo/&quot;&gt;&lt;strong&gt;Steffen Kraft aka ICONEO&lt;/strong&gt;&lt;/a&gt; y tiene publicadas en su cuenta una original colección de ilustraciones. Creo que le gustan los &lt;a href=&quot;https://www.instagram.com/p/B2txPo7ImtL/&quot;&gt;&lt;strong&gt;faros&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Me viene a la memoria esta frase:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Se necesitará naufragar alguna vez para entender que no cualquier luz es faro&lt;/p&gt;
+&lt;/blockquote&gt;
 
 </content>
  </entry>
