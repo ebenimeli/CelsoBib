@@ -4,13 +4,65 @@
  <title>Enrique Benimeli</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-09-11T07:02:21+02:00</updated>
+ <updated>2023-09-12T19:05:26+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Enrique Benimeli</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Faros</title>
+   <link href="http://localhost:4000/faros-arte/"/>
+   <updated>2023-09-12T08:00:00+02:00</updated>
+   <id>http://localhost:4000/faros-arte</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/cafetera.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Llegué a esta ilustración a través de &lt;a href=&quot;https://twitter.com/IrenaBuzarewicz/status/1700365876803903937&quot;&gt;&lt;em&gt;Irena Buzarewicz&lt;/em&gt;&lt;/a&gt;. Es obra de &lt;a href=&quot;https://www.instagram.com/iconeo/&quot;&gt;&lt;strong&gt;Steffen Kraft aka ICONEO&lt;/strong&gt;&lt;/a&gt; y tiene publicadas en su cuenta una original colección de ilustraciones. Creo que le gustan los &lt;a href=&quot;https://www.instagram.com/p/B2txPo7ImtL/&quot;&gt;&lt;strong&gt;faros&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>La maravillosa historia de Sandmann</title>
+   <link href="http://localhost:4000/sandmann/"/>
+   <updated>2023-09-11T19:00:00+02:00</updated>
+   <id>http://localhost:4000/sandmann</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/sandmann.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Jorge Corrales nos cuenta en un fantástico &lt;a href=&quot;https://twitter.com/Yosoycorra/status/1699385619716194457&quot;&gt;hilo de Twitter&lt;/a&gt; una historia sobre Berlin cuando la Guerra Fría enfrentó a dos muñecos: el &lt;strong&gt;&lt;em&gt;Sandmann&lt;/em&gt;&lt;/strong&gt; del este contra el &lt;strong&gt;&lt;em&gt;Sandmann&lt;/em&gt;&lt;/strong&gt; del oeste. Cuenta que durante años se enfrentaron hasta que uno acabó con el otro. Leedlo, porque es maravilloso.&lt;/p&gt;
+
+&lt;p&gt;Un poco de contexto:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Sandmännchen&lt;/em&gt; (en alemán, literalmente hombrecito de la arena) es una famosa serie de televisión alemana para niños. Está basada en el sujeto del Sandman (literalmente hombre de arena), una figura de cuento que arroja arena mágica a los ojos de los niños para que se duerman. Los episodios se han emitido desde 1959 diariamente en varios canales de televisión alemana sobre las seis o siete de la tarde y se suponen ser cuentos para dormir.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Y por eso en alemán la legaña adquiere el nombre de arena, arena mágica o arena de sueño (&lt;a href=&quot;https://dict.leo.org/alem%C3%A1n-espa%C3%B1ol/Schlafsand&quot;&gt;&lt;em&gt;Schlafsand&lt;/em&gt;&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;En la fotografía, nuestro &lt;em&gt;Sandmann&lt;/em&gt; familiar posando para la ocasión. Nos cuenta cuentos por la noche y empieza siempre con &lt;a href=&quot;https://www.youtube.com/watch?v=T7z8Id9eJx0&quot;&gt;esta canción&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Sandmann, lieber Sandmann&lt;br /&gt;
+es ist noch nicht soweit.&lt;br /&gt;
+Wir sehen erst den Abendgruß,&lt;br /&gt;
+ehe jedes Kind ins Bettchen muss.&lt;br /&gt;
+Du hast gewiss noch Zeit.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Kinder, liebe Kinder,&lt;br /&gt;
+es hat mir Spaß gemacht.&lt;br /&gt;
+Nun schnell ins Bett&lt;br /&gt;
+und schlaft recht schön.&lt;br /&gt;
+Dann will auch ich zur Ruhe geh’n.&lt;br /&gt;
+Ich wünsch’ euch gute Nacht.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Sandmann&lt;/strong&gt; · &lt;a href=&quot;https://twitter.com/Yosoycorra/status/1699385619716194457&quot;&gt;&lt;em&gt;Sandmann&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>La fábula del colibrí</title>

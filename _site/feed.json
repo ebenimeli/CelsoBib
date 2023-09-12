@@ -17,6 +17,44 @@
 "items": [
     
         {
+            "id": "http://localhost:4000/faros-arte/",
+            "title": "Faros",
+            "summary": null,
+            "content_text": "Llegué a esta ilustración a través de Irena Buzarewicz. Es obra de Steffen Kraft aka ICONEO y tiene publicadas en su cuenta una original colección de ilustraciones. Creo que le gustan los faros.",
+            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/09/cafetera.jpg\" alt=\"image\" /></a></p><p>Llegué a esta ilustración a través de <a href=\"https://twitter.com/IrenaBuzarewicz/status/1700365876803903937\"><em>Irena Buzarewicz</em></a>. Es obra de <a href=\"https://www.instagram.com/iconeo/\"><strong>Steffen Kraft aka ICONEO</strong></a> y tiene publicadas en su cuenta una original colección de ilustraciones. Creo que le gustan los <a href=\"https://www.instagram.com/p/B2txPo7ImtL/\"><strong>faros</strong></a>.</p>",
+            "url": "http://localhost:4000/faros-arte/",
+            
+            
+            
+            "tags": ["arte","diseño","creatividad","café","ilustración","faro","luna"],
+            
+            "date_published": "2023-09-12T08:00:00+02:00",
+            "date_modified": "2023-09-12T08:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/sandmann/",
+            "title": "La maravillosa historia de Sandmann",
+            "summary": null,
+            "content_text": "Jorge Corrales nos cuenta en un fantástico hilo de Twitter una historia sobre Berlin cuando la Guerra Fría enfrentó a dos muñecos: el Sandmann del este contra el Sandmann del oeste. Cuenta que durante años se enfrentaron hasta que uno acabó con el otro. Leedlo, porque es maravilloso.Un poco de contexto:  Sandmännchen (en alemán, literalmente hombrecito de la arena) es una famosa serie de televisión alemana para niños. Está basada en el sujeto del Sandman (literalmente hombre de arena), una figura de cuento que arroja arena mágica a los ojos de los niños para que se duerman. Los episodios se han emitido desde 1959 diariamente en varios canales de televisión alemana sobre las seis o siete de la tarde y se suponen ser cuentos para dormir.Y por eso en alemán la legaña adquiere el nombre de arena, arena mágica o arena de sueño (Schlafsand).En la fotografía, nuestro Sandmann familiar posando para la ocasión. Nos cuenta cuentos por la noche y empieza siempre con esta canción:  Sandmann, lieber Sandmannes ist noch nicht soweit.Wir sehen erst den Abendgruß,ehe jedes Kind ins Bettchen muss.Du hast gewiss noch Zeit.  Kinder, liebe Kinder,es hat mir Spaß gemacht.Nun schnell ins Bettund schlaft recht schön.Dann will auch ich zur Ruhe geh’n.Ich wünsch’ euch gute Nacht.Sandmann · Sandmann",
+            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/09/sandmann.jpg\" alt=\"image\" /></a></p><p>Jorge Corrales nos cuenta en un fantástico <a href=\"https://twitter.com/Yosoycorra/status/1699385619716194457\">hilo de Twitter</a> una historia sobre Berlin cuando la Guerra Fría enfrentó a dos muñecos: el <strong><em>Sandmann</em></strong> del este contra el <strong><em>Sandmann</em></strong> del oeste. Cuenta que durante años se enfrentaron hasta que uno acabó con el otro. Leedlo, porque es maravilloso.</p><p>Un poco de contexto:</p><blockquote>  <p><em>Sandmännchen</em> (en alemán, literalmente hombrecito de la arena) es una famosa serie de televisión alemana para niños. Está basada en el sujeto del Sandman (literalmente hombre de arena), una figura de cuento que arroja arena mágica a los ojos de los niños para que se duerman. Los episodios se han emitido desde 1959 diariamente en varios canales de televisión alemana sobre las seis o siete de la tarde y se suponen ser cuentos para dormir.</p></blockquote><p>Y por eso en alemán la legaña adquiere el nombre de arena, arena mágica o arena de sueño (<a href=\"https://dict.leo.org/alem%C3%A1n-espa%C3%B1ol/Schlafsand\"><em>Schlafsand</em></a>).</p><p>En la fotografía, nuestro <em>Sandmann</em> familiar posando para la ocasión. Nos cuenta cuentos por la noche y empieza siempre con <a href=\"https://www.youtube.com/watch?v=T7z8Id9eJx0\">esta canción</a>:</p><blockquote>  <p>Sandmann, lieber Sandmann<br />es ist noch nicht soweit.<br />Wir sehen erst den Abendgruß,<br />ehe jedes Kind ins Bettchen muss.<br />Du hast gewiss noch Zeit.</p></blockquote><blockquote>  <p>Kinder, liebe Kinder,<br />es hat mir Spaß gemacht.<br />Nun schnell ins Bett<br />und schlaft recht schön.<br />Dann will auch ich zur Ruhe geh’n.<br />Ich wünsch’ euch gute Nacht.</p></blockquote><p><strong>Sandmann</strong> · <a href=\"https://twitter.com/Yosoycorra/status/1699385619716194457\"><em>Sandmann</em></a></p>",
+            "url": "http://localhost:4000/sandmann/",
+            
+            
+            
+            "tags": ["Sandmann","Alemania","historia","Berlín","Guerra Fría","alemán"],
+            
+            "date_published": "2023-09-11T19:00:00+02:00",
+            "date_modified": "2023-09-11T19:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
             "id": "http://localhost:4000/fabula-colibri/",
             "title": "La fábula del colibrí",
             "summary": null,
