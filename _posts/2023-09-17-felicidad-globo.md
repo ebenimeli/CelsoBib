@@ -15,3 +15,5 @@ tags: [felicidad,reflexión,globos]
 *En ese momento, el profesor les dijo a los estudiantes que tomaran el primer globo que encontraran y se lo entregaran a la persona cuyo nombre estaba escrito en él. En 5 minutos cada uno tenía su propio globo.*
 
 *El profesor dijo a los estudiantes: «Estos globos son como la felicidad. Nunca la encontraremos si todo el mundo está buscando la suya. Pero si nos preocupamos por la felicidad de los demás... también encontraremos la nuestra».*
+
+Feliz domingo.
