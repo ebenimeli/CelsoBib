@@ -1,11 +1,11 @@
 ---
 title: "Desinformados"
-date: 2023-09-19T06:00:00+00:00
+date: 2023-09-21T05:00:00+00:00
 author: Enrique Benimeli
 layout: post
 permalink: /desinformacion/
 categories: Actualidad
-tags: [informativos,periodismo,TV]
+tags: [informativos,periodismo,TV,fake news]
 ---
 
 [![image](assets/images/posts/2023/09/newspaper.png)]()
