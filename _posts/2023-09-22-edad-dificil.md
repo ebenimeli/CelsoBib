@@ -1,6 +1,6 @@
 ---
 title: "Una edad difícil"
-date: 2023-09-22T06:00:00+00:00
+date: 2023-09-22T05:00:00+00:00
 author: Enrique Benimeli
 layout: post
 permalink: /edad-dificil/
