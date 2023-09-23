@@ -8,11 +8,11 @@ description: "Enrique"
 
 <img src="assets/images/profile.jpg" class="profile image-cropper">
 
-Soy Enrique. Trabajo como profesor de informática en la Educación Secundaria Obligatoria. Actualmente, imparto en inglés asignaturas relacionadas con la *Inteligencia Artificial, Programación y Robótica*, las *Tecnologías de la Información y la Comunicación* y las *Relaciones Digitales Responsables*. Además, soy coordinador TIC del centro.
+Soy Enrique, profesor de informática en la Educación Secundaria Obligatoria. Actualmente, imparto en inglés asignaturas relacionadas con la *Inteligencia Artificial, Programación y Robótica*, las *Tecnologías de la Información y la Comunicación* y las *Relaciones Digitales Responsables*. Además, soy coordinador TIC del centro.
 
 Estudié **Ingeniería Informática** y cursé dos años de doctorado en el área de procesamiento del lenguaje natural. En la misma universidad, trabajé en un grupo de investigación de traducción automática. Así que me interesa la inteligencia artificial en general y las **tecnologías del lenguaje** en particular. Cursé mi último año de carrera en Austria y trabajé en un proyecto europeo de **investigación educativa** en la misma universidad. También he ejercido en ella como profesor de Español como Lengua Extranjera (ELE). Actualmente, estudio el Grado de Lengua y Literatura Españolas. Puedes leer algunos detalles sobre formación y experiencia profesional en [mi perfil de LinkedIn](https://www.linkedin.com/in/ebenimeli/?locale=es_ES).
 
-Mantengo una relación de amor-odio con las redes sociales. A veces paso por [Twitter](https://twitter.com/enriquebenimeli) para compartir. En [Instagram](https://www.instagram.com/ebenimeli/) publico algunas fotos, después de algún viaje sobre todo. Tengo [Facebook](https://www.facebook.com/ebenimeli/) prácticamente abandonado. Prefiero dedicar el tiempo a escribir en **blogs**, especialmente en [*Ocho en punto*](https://www.ochoenpunto.com) donde comparto algunas reflexiones sobre **productividad y organización personal**. Hace poco publiqué el [artículo n.º 150](https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/).
+Mantengo una relación de amor-odio con las redes sociales. A veces paso por ~~Twitter~~ [X](https://twitter.com/enriquebenimeli) para compartir. En [Instagram](https://www.instagram.com/ebenimeli/) publico algunas fotos, después de algún viaje sobre todo. Tengo [Facebook](https://www.facebook.com/ebenimeli/) prácticamente abandonado. Prefiero dedicar el tiempo a escribir en **blogs**, especialmente en [*Ocho en punto*](https://www.ochoenpunto.com) donde comparto algunas reflexiones sobre **productividad y organización personal**. Hace poco publiqué el [artículo n.º 150](https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/).
 
 ### 💡 Cosas que me interesan
 1. La informática. En especial las tecnologías del lenguaje.
@@ -37,13 +37,13 @@ Mantengo una relación de amor-odio con las redes sociales. A veces paso por [Tw
 -->
 
 ### 🏁 Tal vez/algún día
-- Correr una segunda maratón.
+- Correr una segunda [maratón](https://www.instagram.com/p/nWF5XLvh-W/).
 - ~~Empezar a~~ Terminar de escribir un libro.
 - Mantener un control absoluto de mi lista de tareas.
 - Aprender otro idioma, francés quizá.
-- Volver a Japón.
+- [Volver a Japón](https://www.instagram.com/p/B0HeC5koqZO/)
 - Grabar un podcast.
-- Comprar una máquina de escribir *Underwood*.
+- Comprar una máquina de escribir [*Underwood*](https://en.wikipedia.org/wiki/Underwood_Typewriter_Company)
 
 <!--
 ### 📦 De la A a la Z

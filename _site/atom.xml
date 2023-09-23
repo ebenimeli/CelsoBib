@@ -4,7 +4,7 @@
  <title>Enrique Benimeli</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-09-12T19:12:02+02:00</updated>
+ <updated>2023-09-23T19:31:04+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Enrique Benimeli</name>
@@ -13,13 +13,210 @@
 
  
  <entry>
+   <title>Otoño</title>
+   <link href="http://localhost:4000/otono/"/>
+   <updated>2023-09-23T09:00:00+02:00</updated>
+   <id>http://localhost:4000/otono</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/otono.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Qué ganas tenía de otoño.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Una edad difícil</title>
+   <link href="http://localhost:4000/edad-dificil/"/>
+   <updated>2023-09-22T07:00:00+02:00</updated>
+   <id>http://localhost:4000/edad-dificil</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/awkward_age.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Está en una edad difícil.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Matt Percival&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.instagram.com/p/CxYKZAtMElQ&quot;&gt;@percivalcartoons&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Desinformados</title>
+   <link href="http://localhost:4000/desinformacion/"/>
+   <updated>2023-09-21T07:00:00+02:00</updated>
+   <id>http://localhost:4000/desinformación</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/newspaper.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;El ciudadano que no ve los informativos y no lee los periódicos no está informado. Pero el que lo hace, acaba &lt;strong&gt;desinformado&lt;/strong&gt;, que no es lo mismo y en ocasiones es peor.&lt;/p&gt;
+
+&lt;p&gt;Todos los informativos y periódicos tienen una &lt;strong&gt;línea editorial&lt;/strong&gt;, pero lo de algunos medios es escandaloso, sobre todo en televisión. Según el canal que elijamos para seguir la actualidad, la noticia parece una y la contraria. Además, ¿quién elige qué es noticia y lo que no? Los informativos vuelven cada día con el monotema que está en boca de todos y lo hacen porque que vende.&lt;/p&gt;
+
+&lt;p&gt;La lucha contra las &lt;strong&gt;noticias falsas&lt;/strong&gt; (o medias verdades) habrá que librarla también en los grandes medios considerados «serios». Hace tiempo que dejó de ser solo un problema de plataformas &lt;em&gt;online&lt;/em&gt; minoritarias que solo buscan el &lt;em&gt;clickbait&lt;/em&gt;. Los periódicos de tirada nacional e informativos generalistas ya siguen la misma línea con algunos temas.&lt;/p&gt;
+
+&lt;p&gt;Por eso hace tiempo que empecé a leer la información en otras fuentes, también con su línea editorial, pero honestos al menos. Una buena selección de &lt;strong&gt;blogs y &lt;em&gt;podcasts&lt;/em&gt;&lt;/strong&gt; siempre es mejor opción para estar verdaderamente informados.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Tengo una agenda</title>
+   <link href="http://localhost:4000/agenda2024/"/>
+   <updated>2023-09-20T08:00:00+02:00</updated>
+   <id>http://localhost:4000/agenda-2024</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/miagenda.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Organizo mis tareas con &lt;a href=&quot;https://www.ebenimeli.org/things-widgets/&quot;&gt;Things&lt;/a&gt; y con la aplicación &lt;a href=&quot;https://support.apple.com/es-es/guide/calendar&quot;&gt;&lt;em&gt;Calendario&lt;/em&gt;&lt;/a&gt; de Apple cualquier cita, evento o cuestión que tenga lugar a una determinada hora. Ese es el tipo de compromisos que deberíamos registrar en un calendario, aunque también me consta que algunos utilizan las agendas para mantener listas de tareas.&lt;/p&gt;
+
+&lt;p&gt;Este año voy a intentar organizar las semanas también en &lt;strong&gt;papel&lt;/strong&gt;. Y me he comprado un agenda, de esas de página por día. Con este formato se puede escribir en ella muchas otras cosas. Puede ser incluso hasta una especie de diario. O páginas «en blanco» para anotar ideas. Pero nunca listas de &lt;em&gt;cosas que hacer&lt;/em&gt;. Nunca.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Widgets interactivos en Things</title>
+   <link href="http://localhost:4000/things-widgets/"/>
+   <updated>2023-09-19T08:00:00+02:00</updated>
+   <id>http://localhost:4000/things-widgets</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://culturedcode.com/things/blog/2023/09/interactive-widgets-and-more/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/things_widgets.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ayer &lt;a href=&quot;https://www.ebenimeli.org/ios17/&quot;&gt;Apple lanzó iOS 17&lt;/a&gt; con muchas novedades. Ya está corriendo el sistema en mi iPhone, uno de los modelos afortunados todavía, porque &lt;a href=&quot;https://www.applesfera.com/ios/malas-noticias-llegada-ios-17-estos-tres-iphones-se-quedaran-recibir-actualizaciones-oficiales&quot;&gt;otros más antiguos&lt;/a&gt; no podrán instalarlo.&lt;/p&gt;
+
+&lt;p&gt;Coincidiendo con el lanzamiento de iOS 17, Cultured Code ha sacado la versión 3.19 de &lt;strong&gt;Things&lt;/strong&gt; con una gran variedad de mejoras para los widgets y, por supuesto, soporte completo para iOS 17, iPadOS 17 y watchOS 10.&lt;/p&gt;
+
+&lt;p&gt;La primera mejora de los &lt;em&gt;widgets&lt;/em&gt; es que son &lt;strong&gt;interactivos&lt;/strong&gt;. Ahora ya no es necesario abrir Things para completar una tarea pendiente, simplemente basta con tocar la casilla de verificación en la pantalla de inicio.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://culturedcode.com/things/blog/2023/09/interactive-widgets-and-more/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/standby-iphone.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;También podemos probar la función &lt;strong&gt;&lt;em&gt;StandBy&lt;/em&gt;&lt;/strong&gt;, que muestra los &lt;em&gt;widgets&lt;/em&gt; de Things mientras el iPhone está de lado y conectado a la corriente. Con esta opción, los &lt;em&gt;widgets&lt;/em&gt; son más grandes, ya que están diseñados para ser vistos desde lejos.&lt;/p&gt;
+
+&lt;p&gt;Things es &lt;a href=&quot;https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/&quot;&gt;la aplicación que utilizo&lt;/a&gt; para administrar mis tareas y proyectos. La uso en iOS, macOS y iPadOS y es sencillamente fantástica.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cultured Code&lt;/strong&gt; · &lt;a href=&quot;https://culturedcode.com/things/blog/2023/09/interactive-widgets-and-more/&quot;&gt;Interactive Widgets and More&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Llega iOS 17</title>
+   <link href="http://localhost:4000/ios17/"/>
+   <updated>2023-09-18T14:00:00+02:00</updated>
+   <id>http://localhost:4000/ios17</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/ios17_apple.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Si todo va según lo previsto, &lt;strong&gt;iOS 17&lt;/strong&gt; estará disponible hoy a partir de las 19:00 (hora peninsular de España).&lt;/p&gt;
+
+&lt;p&gt;Puedes descarga e instalar la actualización en:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Ajustes &amp;gt; General &amp;gt; Actualización de software&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.applesfera.com/ios/hoy-llega-ios-17-prepara-tu-iphone-actualizacion-sea-rapida-sencilla-posible&quot;&gt;En Applesfera&lt;/a&gt; nos dan unos &lt;strong&gt;sabios consejos&lt;/strong&gt; antes de lanzarnos a instalar esta nueva versión en nuestro dispositivo. Las sugerencias son de sentido común, pero a en ocasiones las ganas de probar lo nuevo puede con nosotros. Más vale prevenir que lamentar.&lt;/p&gt;
+
+&lt;p&gt;Básicamente, deberíamos tener a mano nuestras contraseñas y códigos de bloqueo, asegurarnos de que tendremos espacio suficiente para instalar iOS 17 (más de 6 GB probablemente) y hacer una copia de seguridad, por si las moscas. Por cierto, no todos los modelos de iPhone pueden aplicar esta actualización (iPhone 8, iPhone 8 Plus y iPhone X &lt;a href=&quot;https://www.applesfera.com/ios/malas-noticias-llegada-ios-17-estos-tres-iphones-se-quedaran-recibir-actualizaciones-oficiales&quot;&gt;se quedan fuera&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;En la &lt;a href=&quot;https://www.apple.com/es/ios/ios-17-preview/&quot;&gt;web oficial de Apple&lt;/a&gt; tenéis un avance de las nuevas características en iOS 17.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>La felicidad es un globo</title>
+   <link href="http://localhost:4000/felicidad-globo/"/>
+   <updated>2023-09-17T10:00:00+02:00</updated>
+   <id>http://localhost:4000/felicidad-globo</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/globos.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Un profesor le dio un globo a cada estudiante, que tuvo que inflarlo, escribir su nombre en él y tirarlo en el pasillo. El profesor entonces mezcló todos los globos. A los estudiantes se les dio 5 minutos para encontrar su propio globo. A pesar de una agitada búsqueda, nadie encontró su globo.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;En ese momento, el profesor les dijo a los estudiantes que tomaran el primer globo que encontraran y se lo entregaran a la persona cuyo nombre estaba escrito en él. En 5 minutos cada uno tenía su propio globo.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;El profesor dijo a los estudiantes: «Estos globos son como la felicidad. Nunca la encontraremos si todo el mundo está buscando la suya. Pero si nos preocupamos por la felicidad de los demás… también encontraremos la nuestra».&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Feliz domingo.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Primero, orden físico</title>
+   <link href="http://localhost:4000/orden-fisico/"/>
+   <updated>2023-09-16T22:00:00+02:00</updated>
+   <id>http://localhost:4000/orden-fisico</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.ochoenpunto.com/orden-fisico-y-ergonomia-12-consejos-practicos/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/escritorio_mac.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;No puede haber orden digital si no existe también un &lt;strong&gt;orden físico&lt;/strong&gt; a nuestro alrededor. Es difícil sentirse totalmente satisfecho por una buena organización de las tareas si el lugar de trabajo no goza también de un orden. El escenario también importa.&lt;/p&gt;
+
+&lt;p&gt;Os dejo algunas reflexiones sobre ello en &lt;a href=&quot;https://www.ochoenpunto.com/orden-fisico-y-ergonomia-12-consejos-practicos/&quot;&gt;&lt;em&gt;Ocho en punto&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Una mente extendida</title>
+   <link href="http://localhost:4000/mente-extendida/"/>
+   <updated>2023-09-15T08:00:00+02:00</updated>
+   <id>http://localhost:4000/mente-extendida</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://amzn.to/46d24tT&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/mente_extendida.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/enriquebenimeli/status/1695038581591421027&quot;&gt;Esperaba con interés&lt;/a&gt; el nuevo libro de José Miguel Bolivar y Jordi Fortun que salió ayer jueves: &lt;a href=&quot;https://amzn.to/46d24tT&quot;&gt;&lt;em&gt;Recupera tu vida con una mente extendida&lt;/em&gt;&lt;/a&gt;. Ya estoy leyendo las primeras páginas.&lt;/p&gt;
+
+&lt;p&gt;Nunca recomiendo libros que todavía no he leído, pero estoy seguro de que este en particular está lleno de grandes consejos y reflexiones. Llevo años leyendo a ambos autores en sus respectivos blogs, &lt;a href=&quot;https://optimainfinito.com/&quot;&gt;Optima Infinito&lt;/a&gt; y &lt;a href=&quot;https://efectivitat.com/&quot;&gt;Efectivitat&lt;/a&gt;, y saben de lo que hablan. Mucho de lo que sé de GTD (y del concepto efectividad) lo aprendí de sus artículos. Pero tengo la sensación de que este libro trae algo diferente.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Después de más de diez años ayudando a personas y organizaciones a ser más efectivas y lograr resultados, José Miguel Bolívar y Jordi Fortuny han creado OPTIMA3®, el método definitivo de efectividad personal.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;En este libro, los autores combinan todo su conocimiento y saber hacer con su experiencia como formadores certificados en GTD® de David Allen para diseñar una nueva metodología: un enfoque sencillo y flexible que elimina las complicaciones y se adapta a las necesidades y retos de los profesionales de hoy.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Con OPTIMA3® aprenderás a vivir sin estrés y sin olvidos, recuperar la sensación de tener todos tus asuntos bajo control, priorizar qué hacer y qué no hacer en cada instante y aumentar tu productividad en un 40%&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Prepárate a descubrir una forma más sostenible de efectividad, basada en evidencias y centrada en el bienestar de las personas. Te cambiará la vida.&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Sobre el amor incondicional</title>
+   <link href="http://localhost:4000/amor-incondicional/"/>
+   <updated>2023-09-14T08:00:00+02:00</updated>
+   <id>http://localhost:4000/amor-incondicional</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.instagram.com/p/B8jFUoPApHD/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/amorincondicional.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Siempre es un buen día para compartir &lt;a href=&quot;https://www.instagram.com/p/B8jFUoPApHD/&quot;&gt;esta maravillosa ilustración&lt;/a&gt; de &lt;a href=&quot;https://www.instagram.com/decade2doodles/&quot;&gt;Steph Ferrell Crigler&lt;/a&gt;. Poco más hay que añadir; quizá está frase de Mario Vargas Llosa sobre el &lt;strong&gt;amor incondicional&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;«Nunca digas que amas a alguien si nunca has visto su ira, sus malos hábitos, sus creencias absurdas y sus contradicciones. Todos pueden amar una puesta de sol y la alegría, solo algunos son capaces de amar el caos y la decadencia»&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>IA en clase</title>
+   <link href="http://localhost:4000/ia-eso/"/>
+   <updated>2023-09-13T08:00:00+02:00</updated>
+   <id>http://localhost:4000/ia-eso</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/aipr2.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Este curso 2023/2024 impartiré la asignatura de &lt;em&gt;Artificial Intelligence, Programming and Robotics&lt;/em&gt; en 2.º y 3.º de ESO. Una es «continuación» de la otra, o al menos se necesitan dos cursos para alcanzar los objetivos de esta materia. Con la nueva ley educativa LOMLOE, el entrar primero los cursos impares (1.º y 3.º), los alumnos de 3.º del curso pasado solo tuvieron oportunidad de aprender durante un año este tipo de contenidos sobre desarrollo de software, IA y robótica.&lt;/p&gt;
+
+&lt;p&gt;Este año se incorporan a la LOMLOE los cursos pares, 2.º y 4.º, de modo que los alumnos ya cursarán esta materia durante 2 años seguidos. Esto facilita mucho la programación y secuenciación de actividades y, además, se puede profundizar en varios temas y proponer proyectos más ambiciosos.&lt;/p&gt;
+
+&lt;p&gt;Aprovechemos hasta que vuelvan a cambiar la ley.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
    <title>No cualquier luz es faro</title>
    <link href="http://localhost:4000/faros-arte/"/>
    <updated>2023-09-12T08:00:00+02:00</updated>
    <id>http://localhost:4000/faros-arte</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/cafetera.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Llegué a esta ilustración a través de &lt;a href=&quot;https://twitter.com/IrenaBuzarewicz/status/1700365876803903937&quot;&gt;&lt;em&gt;Irena Buzarewicz&lt;/em&gt;&lt;/a&gt;. Es obra de &lt;a href=&quot;https://www.instagram.com/iconeo/&quot;&gt;&lt;strong&gt;Steffen Kraft aka ICONEO&lt;/strong&gt;&lt;/a&gt; y tiene publicadas en su cuenta una original colección de ilustraciones. Creo que le gustan los &lt;a href=&quot;https://www.instagram.com/p/B2txPo7ImtL/&quot;&gt;&lt;strong&gt;faros&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Llegué a esta ilustración a través de &lt;a href=&quot;https://twitter.com/IrenaBuzarewicz/status/1700365876803903937&quot;&gt;&lt;em&gt;Irena Buzarewicz&lt;/em&gt;&lt;/a&gt;. Es obra de &lt;strong&gt;Steffen Kraft aka ICONEO&lt;/strong&gt; y tiene publicada en &lt;a href=&quot;(https://www.instagram.com/iconeo/)&quot;&gt;su cuenta de Instagram&lt;/a&gt; una original colección de ilustraciones. Creo que le gustan los &lt;a href=&quot;https://www.instagram.com/p/B2txPo7ImtL/&quot;&gt;&lt;strong&gt;faros&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Me viene a la memoria esta frase:&lt;/p&gt;
 

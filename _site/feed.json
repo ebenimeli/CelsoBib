@@ -17,11 +17,220 @@
 "items": [
     
         {
+            "id": "http://localhost:4000/otono/",
+            "title": "Otoño",
+            "summary": null,
+            "content_text": "Qué ganas tenía de otoño.",
+            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/09/otono.jpg\" alt=\"image\" /></a></p><p>Qué ganas tenía de otoño.</p>",
+            "url": "http://localhost:4000/otono/",
+            
+            
+            
+            "tags": ["tiempo","año","estaciones"],
+            
+            "date_published": "2023-09-23T09:00:00+02:00",
+            "date_modified": "2023-09-23T09:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/edad-dificil/",
+            "title": "Una edad difícil",
+            "summary": null,
+            "content_text": "Está en una edad difícil.            Matt Percival      @percivalcartoons      ",
+            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/09/awkward_age.png\" alt=\"image\" /></a></p><p>Está en una edad difícil.</p><table>  <tbody>    <tr>      <td><strong>Matt Percival</strong></td>      <td><a href=\"https://www.instagram.com/p/CxYKZAtMElQ\">@percivalcartoons</a></td>    </tr>  </tbody></table>",
+            "url": "http://localhost:4000/edad-dificil/",
+            
+            
+            
+            "tags": ["ilustración","humor","viñeta"],
+            
+            "date_published": "2023-09-22T07:00:00+02:00",
+            "date_modified": "2023-09-22T07:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/desinformacion/",
+            "title": "Desinformados",
+            "summary": null,
+            "content_text": "El ciudadano que no ve los informativos y no lee los periódicos no está informado. Pero el que lo hace, acaba desinformado, que no es lo mismo y en ocasiones es peor.Todos los informativos y periódicos tienen una línea editorial, pero lo de algunos medios es escandaloso, sobre todo en televisión. Según el canal que elijamos para seguir la actualidad, la noticia parece una y la contraria. Además, ¿quién elige qué es noticia y lo que no? Los informativos vuelven cada día con el monotema que está en boca de todos y lo hacen porque que vende.La lucha contra las noticias falsas (o medias verdades) habrá que librarla también en los grandes medios considerados «serios». Hace tiempo que dejó de ser solo un problema de plataformas online minoritarias que solo buscan el clickbait. Los periódicos de tirada nacional e informativos generalistas ya siguen la misma línea con algunos temas.Por eso hace tiempo que empecé a leer la información en otras fuentes, también con su línea editorial, pero honestos al menos. Una buena selección de blogs y podcasts siempre es mejor opción para estar verdaderamente informados.",
+            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/09/newspaper.png\" alt=\"image\" /></a></p><p>El ciudadano que no ve los informativos y no lee los periódicos no está informado. Pero el que lo hace, acaba <strong>desinformado</strong>, que no es lo mismo y en ocasiones es peor.</p><p>Todos los informativos y periódicos tienen una <strong>línea editorial</strong>, pero lo de algunos medios es escandaloso, sobre todo en televisión. Según el canal que elijamos para seguir la actualidad, la noticia parece una y la contraria. Además, ¿quién elige qué es noticia y lo que no? Los informativos vuelven cada día con el monotema que está en boca de todos y lo hacen porque que vende.</p><p>La lucha contra las <strong>noticias falsas</strong> (o medias verdades) habrá que librarla también en los grandes medios considerados «serios». Hace tiempo que dejó de ser solo un problema de plataformas <em>online</em> minoritarias que solo buscan el <em>clickbait</em>. Los periódicos de tirada nacional e informativos generalistas ya siguen la misma línea con algunos temas.</p><p>Por eso hace tiempo que empecé a leer la información en otras fuentes, también con su línea editorial, pero honestos al menos. Una buena selección de <strong>blogs y <em>podcasts</em></strong> siempre es mejor opción para estar verdaderamente informados.</p>",
+            "url": "http://localhost:4000/desinformacion/",
+            
+            
+            
+            "tags": ["informativos","periodismo","TV","fake news"],
+            
+            "date_published": "2023-09-21T07:00:00+02:00",
+            "date_modified": "2023-09-21T07:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/agenda2024/",
+            "title": "Tengo una agenda",
+            "summary": null,
+            "content_text": "Organizo mis tareas con Things y con la aplicación Calendario de Apple cualquier cita, evento o cuestión que tenga lugar a una determinada hora. Ese es el tipo de compromisos que deberíamos registrar en un calendario, aunque también me consta que algunos utilizan las agendas para mantener listas de tareas.Este año voy a intentar organizar las semanas también en papel. Y me he comprado un agenda, de esas de página por día. Con este formato se puede escribir en ella muchas otras cosas. Puede ser incluso hasta una especie de diario. O páginas «en blanco» para anotar ideas. Pero nunca listas de cosas que hacer. Nunca.",
+            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/09/miagenda.jpg\" alt=\"image\" /></a></p><p>Organizo mis tareas con <a href=\"https://www.ebenimeli.org/things-widgets/\">Things</a> y con la aplicación <a href=\"https://support.apple.com/es-es/guide/calendar\"><em>Calendario</em></a> de Apple cualquier cita, evento o cuestión que tenga lugar a una determinada hora. Ese es el tipo de compromisos que deberíamos registrar en un calendario, aunque también me consta que algunos utilizan las agendas para mantener listas de tareas.</p><p>Este año voy a intentar organizar las semanas también en <strong>papel</strong>. Y me he comprado un agenda, de esas de página por día. Con este formato se puede escribir en ella muchas otras cosas. Puede ser incluso hasta una especie de diario. O páginas «en blanco» para anotar ideas. Pero nunca listas de <em>cosas que hacer</em>. Nunca.</p>",
+            "url": "http://localhost:4000/agenda2024/",
+            
+            
+            
+            "tags": ["organización","productividad","agenda"],
+            
+            "date_published": "2023-09-20T08:00:00+02:00",
+            "date_modified": "2023-09-20T08:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/things-widgets/",
+            "title": "Widgets interactivos en Things",
+            "summary": null,
+            "content_text": "Ayer Apple lanzó iOS 17 con muchas novedades. Ya está corriendo el sistema en mi iPhone, uno de los modelos afortunados todavía, porque otros más antiguos no podrán instalarlo.Coincidiendo con el lanzamiento de iOS 17, Cultured Code ha sacado la versión 3.19 de Things con una gran variedad de mejoras para los widgets y, por supuesto, soporte completo para iOS 17, iPadOS 17 y watchOS 10.La primera mejora de los widgets es que son interactivos. Ahora ya no es necesario abrir Things para completar una tarea pendiente, simplemente basta con tocar la casilla de verificación en la pantalla de inicio.También podemos probar la función StandBy, que muestra los widgets de Things mientras el iPhone está de lado y conectado a la corriente. Con esta opción, los widgets son más grandes, ya que están diseñados para ser vistos desde lejos.Things es la aplicación que utilizo para administrar mis tareas y proyectos. La uso en iOS, macOS y iPadOS y es sencillamente fantástica.Cultured Code · Interactive Widgets and More",
+            "content_html": "<p><a href=\"https://culturedcode.com/things/blog/2023/09/interactive-widgets-and-more/\"><img src=\"assets/images/posts/2023/09/things_widgets.png\" alt=\"image\" /></a></p><p>Ayer <a href=\"https://www.ebenimeli.org/ios17/\">Apple lanzó iOS 17</a> con muchas novedades. Ya está corriendo el sistema en mi iPhone, uno de los modelos afortunados todavía, porque <a href=\"https://www.applesfera.com/ios/malas-noticias-llegada-ios-17-estos-tres-iphones-se-quedaran-recibir-actualizaciones-oficiales\">otros más antiguos</a> no podrán instalarlo.</p><p>Coincidiendo con el lanzamiento de iOS 17, Cultured Code ha sacado la versión 3.19 de <strong>Things</strong> con una gran variedad de mejoras para los widgets y, por supuesto, soporte completo para iOS 17, iPadOS 17 y watchOS 10.</p><p>La primera mejora de los <em>widgets</em> es que son <strong>interactivos</strong>. Ahora ya no es necesario abrir Things para completar una tarea pendiente, simplemente basta con tocar la casilla de verificación en la pantalla de inicio.</p><p><a href=\"https://culturedcode.com/things/blog/2023/09/interactive-widgets-and-more/\"><img src=\"assets/images/posts/2023/09/standby-iphone.png\" alt=\"image\" /></a></p><p>También podemos probar la función <strong><em>StandBy</em></strong>, que muestra los <em>widgets</em> de Things mientras el iPhone está de lado y conectado a la corriente. Con esta opción, los <em>widgets</em> son más grandes, ya que están diseñados para ser vistos desde lejos.</p><p>Things es <a href=\"https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/\">la aplicación que utilizo</a> para administrar mis tareas y proyectos. La uso en iOS, macOS y iPadOS y es sencillamente fantástica.</p><p><strong>Cultured Code</strong> · <a href=\"https://culturedcode.com/things/blog/2023/09/interactive-widgets-and-more/\">Interactive Widgets and More</a></p>",
+            "url": "http://localhost:4000/things-widgets/",
+            
+            
+            
+            "tags": ["productividad","Things"],
+            
+            "date_published": "2023-09-19T08:00:00+02:00",
+            "date_modified": "2023-09-19T08:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/ios17/",
+            "title": "Llega iOS 17",
+            "summary": null,
+            "content_text": "Si todo va según lo previsto, iOS 17 estará disponible hoy a partir de las 19:00 (hora peninsular de España).Puedes descarga e instalar la actualización en:Ajustes &gt; General &gt; Actualización de softwareEn Applesfera nos dan unos sabios consejos antes de lanzarnos a instalar esta nueva versión en nuestro dispositivo. Las sugerencias son de sentido común, pero a en ocasiones las ganas de probar lo nuevo puede con nosotros. Más vale prevenir que lamentar.Básicamente, deberíamos tener a mano nuestras contraseñas y códigos de bloqueo, asegurarnos de que tendremos espacio suficiente para instalar iOS 17 (más de 6 GB probablemente) y hacer una copia de seguridad, por si las moscas. Por cierto, no todos los modelos de iPhone pueden aplicar esta actualización (iPhone 8, iPhone 8 Plus y iPhone X se quedan fuera).En la web oficial de Apple tenéis un avance de las nuevas características en iOS 17.",
+            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/09/ios17_apple.jpg\" alt=\"image\" /></a></p><p>Si todo va según lo previsto, <strong>iOS 17</strong> estará disponible hoy a partir de las 19:00 (hora peninsular de España).</p><p>Puedes descarga e instalar la actualización en:</p><p><code>Ajustes &gt; General &gt; Actualización de software</code></p><p><a href=\"https://www.applesfera.com/ios/hoy-llega-ios-17-prepara-tu-iphone-actualizacion-sea-rapida-sencilla-posible\">En Applesfera</a> nos dan unos <strong>sabios consejos</strong> antes de lanzarnos a instalar esta nueva versión en nuestro dispositivo. Las sugerencias son de sentido común, pero a en ocasiones las ganas de probar lo nuevo puede con nosotros. Más vale prevenir que lamentar.</p><p>Básicamente, deberíamos tener a mano nuestras contraseñas y códigos de bloqueo, asegurarnos de que tendremos espacio suficiente para instalar iOS 17 (más de 6 GB probablemente) y hacer una copia de seguridad, por si las moscas. Por cierto, no todos los modelos de iPhone pueden aplicar esta actualización (iPhone 8, iPhone 8 Plus y iPhone X <a href=\"https://www.applesfera.com/ios/malas-noticias-llegada-ios-17-estos-tres-iphones-se-quedaran-recibir-actualizaciones-oficiales\">se quedan fuera</a>).</p><p>En la <a href=\"https://www.apple.com/es/ios/ios-17-preview/\">web oficial de Apple</a> tenéis un avance de las nuevas características en iOS 17.</p>",
+            "url": "http://localhost:4000/ios17/",
+            
+            
+            
+            "tags": ["Apple","iOS","smartphone"],
+            
+            "date_published": "2023-09-18T14:00:00+02:00",
+            "date_modified": "2023-09-18T14:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/felicidad-globo/",
+            "title": "La felicidad es un globo",
+            "summary": null,
+            "content_text": "Un profesor le dio un globo a cada estudiante, que tuvo que inflarlo, escribir su nombre en él y tirarlo en el pasillo. El profesor entonces mezcló todos los globos. A los estudiantes se les dio 5 minutos para encontrar su propio globo. A pesar de una agitada búsqueda, nadie encontró su globo.En ese momento, el profesor les dijo a los estudiantes que tomaran el primer globo que encontraran y se lo entregaran a la persona cuyo nombre estaba escrito en él. En 5 minutos cada uno tenía su propio globo.El profesor dijo a los estudiantes: «Estos globos son como la felicidad. Nunca la encontraremos si todo el mundo está buscando la suya. Pero si nos preocupamos por la felicidad de los demás… también encontraremos la nuestra».Feliz domingo.",
+            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/09/globos.jpeg\" alt=\"image\" /></a></p><p><em>Un profesor le dio un globo a cada estudiante, que tuvo que inflarlo, escribir su nombre en él y tirarlo en el pasillo. El profesor entonces mezcló todos los globos. A los estudiantes se les dio 5 minutos para encontrar su propio globo. A pesar de una agitada búsqueda, nadie encontró su globo.</em></p><p><em>En ese momento, el profesor les dijo a los estudiantes que tomaran el primer globo que encontraran y se lo entregaran a la persona cuyo nombre estaba escrito en él. En 5 minutos cada uno tenía su propio globo.</em></p><p><em>El profesor dijo a los estudiantes: «Estos globos son como la felicidad. Nunca la encontraremos si todo el mundo está buscando la suya. Pero si nos preocupamos por la felicidad de los demás… también encontraremos la nuestra».</em></p><p>Feliz domingo.</p>",
+            "url": "http://localhost:4000/felicidad-globo/",
+            
+            
+            
+            "tags": ["felicidad","reflexión","globos"],
+            
+            "date_published": "2023-09-17T10:00:00+02:00",
+            "date_modified": "2023-09-17T10:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/orden-fisico/",
+            "title": "Primero, orden físico",
+            "summary": null,
+            "content_text": "No puede haber orden digital si no existe también un orden físico a nuestro alrededor. Es difícil sentirse totalmente satisfecho por una buena organización de las tareas si el lugar de trabajo no goza también de un orden. El escenario también importa.Os dejo algunas reflexiones sobre ello en Ocho en punto",
+            "content_html": "<p><a href=\"https://www.ochoenpunto.com/orden-fisico-y-ergonomia-12-consejos-practicos/\"><img src=\"assets/images/posts/2023/09/escritorio_mac.jpg\" alt=\"image\" /></a></p><p>No puede haber orden digital si no existe también un <strong>orden físico</strong> a nuestro alrededor. Es difícil sentirse totalmente satisfecho por una buena organización de las tareas si el lugar de trabajo no goza también de un orden. El escenario también importa.</p><p>Os dejo algunas reflexiones sobre ello en <a href=\"https://www.ochoenpunto.com/orden-fisico-y-ergonomia-12-consejos-practicos/\"><em>Ocho en punto</em></a></p>",
+            "url": "http://localhost:4000/orden-fisico/",
+            
+            
+            
+            "tags": ["orden","organización","ergonomía","8am"],
+            
+            "date_published": "2023-09-16T22:00:00+02:00",
+            "date_modified": "2023-09-16T22:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/mente-extendida/",
+            "title": "Una mente extendida",
+            "summary": null,
+            "content_text": "Esperaba con interés el nuevo libro de José Miguel Bolivar y Jordi Fortun que salió ayer jueves: Recupera tu vida con una mente extendida. Ya estoy leyendo las primeras páginas.Nunca recomiendo libros que todavía no he leído, pero estoy seguro de que este en particular está lleno de grandes consejos y reflexiones. Llevo años leyendo a ambos autores en sus respectivos blogs, Optima Infinito y Efectivitat, y saben de lo que hablan. Mucho de lo que sé de GTD (y del concepto efectividad) lo aprendí de sus artículos. Pero tengo la sensación de que este libro trae algo diferente.  Después de más de diez años ayudando a personas y organizaciones a ser más efectivas y lograr resultados, José Miguel Bolívar y Jordi Fortuny han creado OPTIMA3®, el método definitivo de efectividad personal.  En este libro, los autores combinan todo su conocimiento y saber hacer con su experiencia como formadores certificados en GTD® de David Allen para diseñar una nueva metodología: un enfoque sencillo y flexible que elimina las complicaciones y se adapta a las necesidades y retos de los profesionales de hoy.  Con OPTIMA3® aprenderás a vivir sin estrés y sin olvidos, recuperar la sensación de tener todos tus asuntos bajo control, priorizar qué hacer y qué no hacer en cada instante y aumentar tu productividad en un 40%  Prepárate a descubrir una forma más sostenible de efectividad, basada en evidencias y centrada en el bienestar de las personas. Te cambiará la vida.",
+            "content_html": "<p><a href=\"https://amzn.to/46d24tT\"><img src=\"assets/images/posts/2023/09/mente_extendida.jpg\" alt=\"image\" /></a></p><p><a href=\"https://twitter.com/enriquebenimeli/status/1695038581591421027\">Esperaba con interés</a> el nuevo libro de José Miguel Bolivar y Jordi Fortun que salió ayer jueves: <a href=\"https://amzn.to/46d24tT\"><em>Recupera tu vida con una mente extendida</em></a>. Ya estoy leyendo las primeras páginas.</p><p>Nunca recomiendo libros que todavía no he leído, pero estoy seguro de que este en particular está lleno de grandes consejos y reflexiones. Llevo años leyendo a ambos autores en sus respectivos blogs, <a href=\"https://optimainfinito.com/\">Optima Infinito</a> y <a href=\"https://efectivitat.com/\">Efectivitat</a>, y saben de lo que hablan. Mucho de lo que sé de GTD (y del concepto efectividad) lo aprendí de sus artículos. Pero tengo la sensación de que este libro trae algo diferente.</p><blockquote>  <p>Después de más de diez años ayudando a personas y organizaciones a ser más efectivas y lograr resultados, José Miguel Bolívar y Jordi Fortuny han creado OPTIMA3®, el método definitivo de efectividad personal.</p></blockquote><blockquote>  <p>En este libro, los autores combinan todo su conocimiento y saber hacer con su experiencia como formadores certificados en GTD® de David Allen para diseñar una nueva metodología: un enfoque sencillo y flexible que elimina las complicaciones y se adapta a las necesidades y retos de los profesionales de hoy.</p></blockquote><blockquote>  <p>Con OPTIMA3® aprenderás a vivir sin estrés y sin olvidos, recuperar la sensación de tener todos tus asuntos bajo control, priorizar qué hacer y qué no hacer en cada instante y aumentar tu productividad en un 40%</p></blockquote><blockquote>  <p>Prepárate a descubrir una forma más sostenible de efectividad, basada en evidencias y centrada en el bienestar de las personas. Te cambiará la vida.</p></blockquote>",
+            "url": "http://localhost:4000/mente-extendida/",
+            
+            
+            
+            "tags": ["efectividad","organización","productividad"],
+            
+            "date_published": "2023-09-15T08:00:00+02:00",
+            "date_modified": "2023-09-15T08:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/amor-incondicional/",
+            "title": "Sobre el amor incondicional",
+            "summary": null,
+            "content_text": "Siempre es un buen día para compartir esta maravillosa ilustración de Steph Ferrell Crigler. Poco más hay que añadir; quizá está frase de Mario Vargas Llosa sobre el amor incondicional.  «Nunca digas que amas a alguien si nunca has visto su ira, sus malos hábitos, sus creencias absurdas y sus contradicciones. Todos pueden amar una puesta de sol y la alegría, solo algunos son capaces de amar el caos y la decadencia»",
+            "content_html": "<p><a href=\"https://www.instagram.com/p/B8jFUoPApHD/\"><img src=\"assets/images/posts/2023/09/amorincondicional.jpg\" alt=\"image\" /></a></p><p>Siempre es un buen día para compartir <a href=\"https://www.instagram.com/p/B8jFUoPApHD/\">esta maravillosa ilustración</a> de <a href=\"https://www.instagram.com/decade2doodles/\">Steph Ferrell Crigler</a>. Poco más hay que añadir; quizá está frase de Mario Vargas Llosa sobre el <strong>amor incondicional</strong>.</p><blockquote>  <p>«Nunca digas que amas a alguien si nunca has visto su ira, sus malos hábitos, sus creencias absurdas y sus contradicciones. Todos pueden amar una puesta de sol y la alegría, solo algunos son capaces de amar el caos y la decadencia»</p></blockquote>",
+            "url": "http://localhost:4000/amor-incondicional/",
+            
+            
+            
+            "tags": ["amor","Mario Vargas Llosa","ilustración","frases"],
+            
+            "date_published": "2023-09-14T08:00:00+02:00",
+            "date_modified": "2023-09-14T08:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/ia-eso/",
+            "title": "IA en clase",
+            "summary": null,
+            "content_text": "Este curso 2023/2024 impartiré la asignatura de Artificial Intelligence, Programming and Robotics en 2.º y 3.º de ESO. Una es «continuación» de la otra, o al menos se necesitan dos cursos para alcanzar los objetivos de esta materia. Con la nueva ley educativa LOMLOE, el entrar primero los cursos impares (1.º y 3.º), los alumnos de 3.º del curso pasado solo tuvieron oportunidad de aprender durante un año este tipo de contenidos sobre desarrollo de software, IA y robótica.Este año se incorporan a la LOMLOE los cursos pares, 2.º y 4.º, de modo que los alumnos ya cursarán esta materia durante 2 años seguidos. Esto facilita mucho la programación y secuenciación de actividades y, además, se puede profundizar en varios temas y proponer proyectos más ambiciosos.Aprovechemos hasta que vuelvan a cambiar la ley.",
+            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/09/aipr2.png\" alt=\"image\" /></a></p><p>Este curso 2023/2024 impartiré la asignatura de <em>Artificial Intelligence, Programming and Robotics</em> en 2.º y 3.º de ESO. Una es «continuación» de la otra, o al menos se necesitan dos cursos para alcanzar los objetivos de esta materia. Con la nueva ley educativa LOMLOE, el entrar primero los cursos impares (1.º y 3.º), los alumnos de 3.º del curso pasado solo tuvieron oportunidad de aprender durante un año este tipo de contenidos sobre desarrollo de software, IA y robótica.</p><p>Este año se incorporan a la LOMLOE los cursos pares, 2.º y 4.º, de modo que los alumnos ya cursarán esta materia durante 2 años seguidos. Esto facilita mucho la programación y secuenciación de actividades y, además, se puede profundizar en varios temas y proponer proyectos más ambiciosos.</p><p>Aprovechemos hasta que vuelvan a cambiar la ley.</p>",
+            "url": "http://localhost:4000/ia-eso/",
+            
+            
+            
+            "tags": ["programación","IA","robótica"],
+            
+            "date_published": "2023-09-13T08:00:00+02:00",
+            "date_modified": "2023-09-13T08:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
             "id": "http://localhost:4000/faros-arte/",
             "title": "No cualquier luz es faro",
             "summary": null,
-            "content_text": "Llegué a esta ilustración a través de Irena Buzarewicz. Es obra de Steffen Kraft aka ICONEO y tiene publicadas en su cuenta una original colección de ilustraciones. Creo que le gustan los faros.Me viene a la memoria esta frase:  Se necesitará naufragar alguna vez para entender que no cualquier luz es faro",
-            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/09/cafetera.jpg\" alt=\"image\" /></a></p><p>Llegué a esta ilustración a través de <a href=\"https://twitter.com/IrenaBuzarewicz/status/1700365876803903937\"><em>Irena Buzarewicz</em></a>. Es obra de <a href=\"https://www.instagram.com/iconeo/\"><strong>Steffen Kraft aka ICONEO</strong></a> y tiene publicadas en su cuenta una original colección de ilustraciones. Creo que le gustan los <a href=\"https://www.instagram.com/p/B2txPo7ImtL/\"><strong>faros</strong></a>.</p><p>Me viene a la memoria esta frase:</p><blockquote>  <p>Se necesitará naufragar alguna vez para entender que no cualquier luz es faro</p></blockquote>",
+            "content_text": "Llegué a esta ilustración a través de Irena Buzarewicz. Es obra de Steffen Kraft aka ICONEO y tiene publicada en su cuenta de Instagram una original colección de ilustraciones. Creo que le gustan los faros.Me viene a la memoria esta frase:  Se necesitará naufragar alguna vez para entender que no cualquier luz es faro",
+            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/09/cafetera.jpg\" alt=\"image\" /></a></p><p>Llegué a esta ilustración a través de <a href=\"https://twitter.com/IrenaBuzarewicz/status/1700365876803903937\"><em>Irena Buzarewicz</em></a>. Es obra de <strong>Steffen Kraft aka ICONEO</strong> y tiene publicada en <a href=\"(https://www.instagram.com/iconeo/)\">su cuenta de Instagram</a> una original colección de ilustraciones. Creo que le gustan los <a href=\"https://www.instagram.com/p/B2txPo7ImtL/\"><strong>faros</strong></a>.</p><p>Me viene a la memoria esta frase:</p><blockquote>  <p>Se necesitará naufragar alguna vez para entender que no cualquier luz es faro</p></blockquote>",
             "url": "http://localhost:4000/faros-arte/",
             
             
@@ -486,25 +695,6 @@
             
             "date_published": "2022-11-01T01:00:00+01:00",
             "date_modified": "2022-11-01T01:00:00+01:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/hola-mundo/",
-            "title": "Hola, mundo",
-            "summary": null,
-            "content_text": "En el ámbito de la Informática, lo primero que uno hace cuando empieza con un lenguaje de programación nuevo es imprimir por pantalla un Hola, mundo. Es más una tradición que algo útil o necesario. No este espacio un lenguaje por descubrir, pero si un lugar nuevo donde escribir.  En informática, “Hola, mundo” o “Hello, World!”, en inglés es un programa que muestra el texto «¡Hola, mundo!» en un dispositivo de visualización, en la mayoría de los casos la pantalla de un monitor. Este programa suele ser usado como introducción al estudio de un lenguaje de programación, siendo un primer ejercicio típico, y se considera fundamental desde el punto de vista didáctico.En lenguaje C sería la bienvenida así:main( ) {        printf(\"Hola, mundo\");}La versión en Java tendría esta pinta:class HelloWorld {    public static void main(String[] args) {        System.out.println(\"Hola, mundo\");    }}Y su variante en Python esta:print(\"Hola, mundo\")Wikipedia | Hola, mundoFotografía | La Tierra",
-            "content_html": "<p><img src=\"assets/images/posts/2022/10/hola-mundo.jpg\" alt=\"image\" /></p><p>En el ámbito de la Informática, lo primero que uno hace cuando empieza con un lenguaje de programación nuevo es imprimir por pantalla un <em>Hola, mundo</em>. Es más una tradición que algo útil o necesario. No este espacio un lenguaje por descubrir, pero si un lugar nuevo donde escribir.</p><blockquote>  <p>En informática, “<a href=\"https://es.wikipedia.org/wiki/Hola_mundo\">Hola, mundo</a>” o “Hello, World!”, en inglés es un programa que muestra el texto «¡Hola, mundo!» en un dispositivo de visualización, en la mayoría de los casos la pantalla de un monitor. Este programa suele ser usado como introducción al estudio de un lenguaje de programación, siendo un primer ejercicio típico, y se considera fundamental desde el punto de vista didáctico.</p></blockquote><p>En lenguaje C sería la bienvenida así:</p><figure class=\"highlight\"><pre><code class=\"language-c\" data-lang=\"c\"><span class=\"n\">main</span><span class=\"p\">(</span> <span class=\"p\">)</span> <span class=\"p\">{</span>        <span class=\"n\">printf</span><span class=\"p\">(</span><span class=\"s\">\"Hola, mundo\"</span><span class=\"p\">);</span><span class=\"p\">}</span></code></pre></figure><p>La versión en Java tendría esta pinta:</p><figure class=\"highlight\"><pre><code class=\"language-java\" data-lang=\"java\"><span class=\"kd\">class</span> <span class=\"nc\">HelloWorld</span> <span class=\"o\">{</span>    <span class=\"kd\">public</span> <span class=\"kd\">static</span> <span class=\"kt\">void</span> <span class=\"nf\">main</span><span class=\"o\">(</span><span class=\"nc\">String</span><span class=\"o\">[]</span> <span class=\"n\">args</span><span class=\"o\">)</span> <span class=\"o\">{</span>        <span class=\"nc\">System</span><span class=\"o\">.</span><span class=\"na\">out</span><span class=\"o\">.</span><span class=\"na\">println</span><span class=\"o\">(</span><span class=\"s\">\"Hola, mundo\"</span><span class=\"o\">);</span>    <span class=\"o\">}</span><span class=\"o\">}</span></code></pre></figure><p>Y su variante en Python esta:</p><figure class=\"highlight\"><pre><code class=\"language-python\" data-lang=\"python\"><span class=\"k\">print</span><span class=\"p\">(</span><span class=\"s\">\"Hola, mundo\"</span><span class=\"p\">)</span></code></pre></figure><p><strong>Wikipedia</strong> | <a href=\"https://es.wikipedia.org/wiki/Hola_mundo\"><em>Hola, mundo</em></a><br /><strong>Fotografía</strong> | <a href=\"https://pixabay.com/es/illustrations/tierra-espacio-luz-de-sol-1756274/\"><em>La Tierra</em></a></p>",
-            "url": "http://localhost:4000/hola-mundo/",
-            
-            
-            
-            
-            
-            "date_published": "2022-10-31T01:00:00+01:00",
-            "date_modified": "2022-10-31T01:00:00+01:00",
             
                 "author": "Enrique Benimeli"
             
