@@ -17,6 +17,25 @@
 "items": [
     
         {
+            "id": "http://localhost:4000/theofficeatnight/",
+            "title": "The Office at Night",
+            "summary": null,
+            "content_text": "En esta obra del pintor británico Phil Lockwood (1941) encontrarás pinturas de Edward Hopper.Buscando información sobre la obra, veo que el diario [El País] se hizo eco de la noticia en 2018.Phil Lockwood · The Office at Night",
+            "content_html": "<p><a href=\"https://www.phil-lockwood.com/paintings/latestTown/office.htm\"><img src=\"assets/images/posts/2023/09/lockwood-hopper.jpeg\" alt=\"image\" /></a></p><p>En esta obra del pintor británico Phil Lockwood (1941) encontrarás pinturas de Edward Hopper.</p><p>Buscando información sobre la obra, veo que el diario [<em>El País</em>] se hizo eco de <a href=\"https://verne.elpais.com/verne/2018/01/21/articulo/1516550142_092019.html\">la noticia</a> en 2018.</p><p><strong>Phil Lockwood</strong> · <a href=\"https://www.phil-lockwood.com/paintings/latestTown/office.htm\"><em>The Office at Night</em></a></p>",
+            "url": "http://localhost:4000/theofficeatnight/",
+            
+            
+            
+            "tags": ["pintura","Hopper","Lockwood","metapintura"],
+            
+            "date_published": "2023-09-25T17:00:00+02:00",
+            "date_modified": "2023-09-25T17:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
             "id": "http://localhost:4000/asturias24/",
             "title": "Asturias",
             "summary": null,
@@ -676,25 +695,6 @@
             
             "date_published": "2022-11-03T01:00:00+01:00",
             "date_modified": "2022-11-03T01:00:00+01:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/zaragoza-2022/",
-            "title": "Caesaraugusta",
-            "summary": null,
-            "content_text": "He publicado en Instagram algunas fotografías de Zaragoza.Instagram | @ebenimeli",
-            "content_html": "<p><img src=\"assets/images/posts/2022/11/zaragoza_ebenimeli_ig.jpg\" alt=\"image\" /></p><p>He publicado en Instagram algunas <a href=\"https://www.instagram.com/p/CkB0dFfD7H2/\">fotografías de Zaragoza</a>.</p><p><strong>Instagram</strong> | <a href=\"https://www.instagram.com/p/CkB0dFfD7H2/\">@ebenimeli</a></p>",
-            "url": "http://localhost:4000/zaragoza-2022/",
-            
-            
-            
-            "tags": ["viajes","zaragoza","historia"],
-            
-            "date_published": "2022-11-02T01:00:00+01:00",
-            "date_modified": "2022-11-02T01:00:00+01:00",
             
                 "author": "Enrique Benimeli"
             
