@@ -17,6 +17,25 @@
 "items": [
     
         {
+            "id": "http://localhost:4000/graciasporestar/",
+            "title": "Gracias por estar",
+            "summary": null,
+            "content_text": "A veces no hace falta ni decir ni hacer. Estar es suficiente.",
+            "content_html": "<p><a href=\"https://www.instagram.com/p/CxS6rhMOC37/\"><img src=\"assets/images/posts/2023/09/graciasporestar.jpg\" alt=\"image\" /></a></p><p>A veces no hace falta ni decir ni hacer. <strong>Estar</strong> es suficiente.</p>",
+            "url": "http://localhost:4000/graciasporestar/",
+            
+            
+            
+            "tags": ["ilustración","reflexión"],
+            
+            "date_published": "2023-09-26T17:00:00+02:00",
+            "date_modified": "2023-09-26T17:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
             "id": "http://localhost:4000/theofficeatnight/",
             "title": "The Office at Night",
             "summary": null,
@@ -676,25 +695,6 @@
             
             "date_published": "2022-11-04T01:00:00+01:00",
             "date_modified": "2022-11-04T01:00:00+01:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/teams-canales/",
-            "title": "Canales compartidos en Teams",
-            "summary": null,
-            "content_text": "Microsoft Teams introduce cada mes muchas mejoras. Una de las últimas funciones es la posibilidad de crear un canal compartido en Teams. En general, recomiendo el uso de canales dentro de Teams para organizar mejor la información y, sobre todo, las conversaciones. En esta ocasión, parece que los canales compartidos solo están disponibles en los Teams de equipo (docentes) y no en los de tipo clase. En un Teams de equipo (en en centro educativo los de nuestros equipos de coordinación) ahora hay 3 tipos de canal:  Canal estándar: todos los miembros del equipo pueden acceder.  Canal privado: solo determinados miembros del equipo pueden acceder  Canal compartido: pueden acceder los miembros del equipo, pero también otros usuarios que no pertenecen al Teams (porque no pertenecen a ese equipo de trabajo/etapa) y que invitamos para que accedan exclusivamente a ese canal. Es decir, verán el Teams en su lista, pero solo podrán acceder a ese canal y no podrán ver el resto. Son los propietarios del Teams los que pueden añadir miembros a un canal compartido.El canal compartido es una forma de invitar a otros profesores a participar en un pequeño espacio de nuestro equipo. Si se crea un canal compartido, conviene asignarle un nombre que podáis reconocer como compartido: invitados, compartido, buzón, etc. No obstante, aparece un pequeño icono a la derecha del nombre del canal.Más | Microsoft Teams para Educación",
-            "content_html": "<p>Microsoft Teams introduce cada mes muchas mejoras. Una de las últimas funciones es la posibilidad de crear un <strong>canal compartido</strong> en Teams. En general, recomiendo el uso de canales dentro de Teams para organizar mejor la información y, sobre todo, las conversaciones. En esta ocasión, parece que los canales compartidos solo están disponibles en los Teams de equipo (docentes) y no en los de tipo clase.</p><p><img src=\"assets/images/posts/2022/11/teams_canales_compartidos.png\" alt=\"image\" /> En un Teams de equipo (en en centro educativo los de nuestros equipos de coordinación) ahora hay 3 tipos de canal:</p><ul>  <li><strong>Canal estándar</strong>: todos los miembros del equipo pueden acceder.</li>  <li><strong>Canal privado</strong>: solo determinados miembros del equipo pueden acceder</li>  <li><strong>Canal compartido</strong>: pueden acceder los miembros del equipo, pero también otros usuarios que no pertenecen al Teams (porque no pertenecen a ese equipo de trabajo/etapa) y que invitamos para que accedan exclusivamente a ese canal. Es decir, verán el Teams en su lista, pero solo podrán acceder a ese canal y no podrán ver el resto. Son los propietarios del Teams los que pueden añadir miembros a un canal compartido.</li></ul><p>El canal compartido es una forma de invitar a otros profesores a <strong>participar</strong> en un pequeño espacio de nuestro equipo. Si se crea un canal compartido, conviene asignarle un nombre que podáis reconocer como compartido: invitados, compartido, buzón, etc. No obstante, aparece un pequeño icono a la derecha del nombre del canal.</p><p>Más | <a href=\"https://www.microsoft.com/es-es/education/products/teams\">Microsoft Teams para Educación</a></p>",
-            "url": "http://localhost:4000/teams-canales/",
-            
-            
-            
-            "tags": ["Teams","organización","comparrtir"],
-            
-            "date_published": "2022-11-03T01:00:00+01:00",
-            "date_modified": "2022-11-03T01:00:00+01:00",
             
                 "author": "Enrique Benimeli"
             
