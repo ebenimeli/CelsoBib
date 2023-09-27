@@ -4,13 +4,24 @@
  <title>Enrique Benimeli</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-09-26T19:07:34+02:00</updated>
+ <updated>2023-09-27T20:00:04+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Enrique Benimeli</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>What a week, huh?</title>
+   <link href="http://localhost:4000/haddock-tintin-week/"/>
+   <updated>2023-09-27T17:00:00+02:00</updated>
+   <id>http://localhost:4000/haddock-tintin-week</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/whataweek.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;El perfil de Twitter &lt;em&gt;What a week, huh? all Wednesdays&lt;/em&gt; (&lt;a href=&quot;https://twitter.com/whataweekhuh&quot;&gt;@whataweekhuh&lt;/a&gt;) publica cada miércoles la misma imagen, que siempre &lt;del&gt;retuiteo&lt;/del&gt; &lt;a href=&quot;https://twitter.com/whataweekhuh/status/1706964903641202947&quot;&gt;reposteo&lt;/a&gt; cuando me representa.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Gracias por estar</title>

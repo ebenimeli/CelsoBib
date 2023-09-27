@@ -17,6 +17,25 @@
 "items": [
     
         {
+            "id": "http://localhost:4000/haddock-tintin-week/",
+            "title": "What a week, huh?",
+            "summary": null,
+            "content_text": "El perfil de Twitter What a week, huh? all Wednesdays (@whataweekhuh) publica cada miércoles la misma imagen, que siempre retuiteo reposteo cuando me representa.",
+            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/09/whataweek.jpeg\" alt=\"image\" /></a></p><p>El perfil de Twitter <em>What a week, huh? all Wednesdays</em> (<a href=\"https://twitter.com/whataweekhuh\">@whataweekhuh</a>) publica cada miércoles la misma imagen, que siempre <del>retuiteo</del> <a href=\"https://twitter.com/whataweekhuh/status/1706964903641202947\">reposteo</a> cuando me representa.</p>",
+            "url": "http://localhost:4000/haddock-tintin-week/",
+            
+            
+            
+            "tags": ["comic","miércoles","Tintín","Capitán Haddock"],
+            
+            "date_published": "2023-09-27T17:00:00+02:00",
+            "date_modified": "2023-09-27T17:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
             "id": "http://localhost:4000/graciasporestar/",
             "title": "Gracias por estar",
             "summary": null,
@@ -676,25 +695,6 @@
             
             "date_published": "2022-11-05T01:00:00+01:00",
             "date_modified": "2022-11-05T01:00:00+01:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/oreillyandco/",
-            "title": "O'Reilly & Co.",
-            "summary": null,
-            "content_text": "Recientemente he jubilado varios libros. Me resistía a ello, pero hace ya tiempo que había llegado su momento. Son libros que tuvieron su tiempo, hicieron su función que cumplieron con creces. La mayoría son manuales de informática con los que aprendí determinadas tecnologías, lenguajes de programación o herramientas que ya han evolucionado mucho. Si quiero aprender algo nuevo sobre ellas, no consultaría esos libros, sino que buscaría la información en Internet. Sentía especial apego a los manuales de O’Reilly, eso es cierto.",
-            "content_html": "<p><img src=\"assets/images/posts/2022/11/libros_informatica.jpg\" alt=\"image\" /></p><p>Recientemente he jubilado varios libros. Me resistía a ello, pero hace ya tiempo que había llegado su momento. Son libros que tuvieron su tiempo, hicieron su función que cumplieron con creces. La mayoría son manuales de informática con los que aprendí determinadas tecnologías, lenguajes de programación o herramientas que ya han evolucionado mucho. Si quiero aprender algo nuevo sobre ellas, no consultaría esos libros, sino que buscaría la información en Internet. Sentía especial apego a los manuales de O’Reilly, eso es cierto.</p>",
-            "url": "http://localhost:4000/oreillyandco/",
-            
-            
-            
-            "tags": ["libros","informática","organización"],
-            
-            "date_published": "2022-11-04T01:00:00+01:00",
-            "date_modified": "2022-11-04T01:00:00+01:00",
             
                 "author": "Enrique Benimeli"
             
