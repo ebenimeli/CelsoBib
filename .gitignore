@@ -1,5 +1,5 @@
-.jekyll-cache/**
+.jekyll-cache/*
 .DS_Store
 assets/.DS_Store
 assets/images/.DS_Store
-_site/**
+_site/*
