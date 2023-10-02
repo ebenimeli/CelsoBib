@@ -17,6 +17,82 @@
 "items": [
     
         {
+            "id": "http://localhost:4000/miee-credly/",
+            "title": "MIEE en Credly",
+            "summary": null,
+            "content_text": "Ahora sí que sí. Después de algunas semanas, por fin ha llegado la certificación MIE Expert 2023-2024 a Credly.Microsoft Innovative Educator Expert 2023-2024  Earners of this badge are educators who have been selected as Microsoft Innovative Educator (MIE) Experts for 2023-2024. They are self-driven educators who are passionate about teaching and learning. They inspire students with creative thinking, and work in a collaborative spirit to share their learning with the world. Resourceful and entrepreneurial, they relish the role of change agent, and work to achieve excellence in education using Microsoft technologies paired with innovative teaching.",
+            "content_html": "<p><a href=\"https://www.credly.com/badges/47c1aec7-57d0-4377-b183-9f22b4c8b680/public_url\"><img src=\"assets/images/posts/2023/10/miee2324_credly.png\" alt=\"image\" /></a></p><p>Ahora sí que sí. <a href=\"https://www.ebenimeli.org/miee-23-24/\">Después de algunas semanas</a>, por fin ha llegado la certificación MIE Expert 2023-2024 a <a href=\"https://www.credly.com/badges/47c1aec7-57d0-4377-b183-9f22b4c8b680/public_url\">Credly</a>.</p><p><em>Microsoft Innovative Educator Expert 2023-2024</em></p><blockquote>  <p>Earners of this badge are educators who have been selected as Microsoft Innovative Educator (MIE) Experts for 2023-2024. They are self-driven educators who are passionate about teaching and learning. They inspire students with creative thinking, and work in a collaborative spirit to share their learning with the world. Resourceful and entrepreneurial, they relish the role of change agent, and work to achieve excellence in education using Microsoft technologies paired with innovative teaching.</p></blockquote>",
+            "url": "http://localhost:4000/miee-credly/",
+            
+            
+            
+            "tags": ["mar","naturaleza","Denia"],
+            
+            "date_published": "2023-10-02T17:00:00+02:00",
+            "date_modified": "2023-10-02T17:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/mar-domingo/",
+            "title": "Sabor a domingo",
+            "summary": null,
+            "content_text": "Un domingo con sabor a domingo.",
+            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/09/elmar.jpg\" alt=\"image\" /></a></p><p>Un domingo con sabor a domingo.</p>",
+            "url": "http://localhost:4000/mar-domingo/",
+            
+            
+            
+            "tags": ["mar","naturaleza","Denia"],
+            
+            "date_published": "2023-10-01T17:00:00+02:00",
+            "date_modified": "2023-10-01T17:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/jueves-revision/",
+            "title": "Cerrar el jueves",
+            "summary": null,
+            "content_text": "Cerrar la semana no significa simplemente «bajar la persiana» y detener la actividad hasta el lunes siguiente, sino que también implica una revisión de la agenda y una comprobación del estado de las tareas. Cerrar un viernes tiene sus inconvenientes. Elegir el último día de trabajo para hacer una revisión general puede parecer lo más natural, pero hay alternativas: hacerlo un jueves, por ejemplo. Os lo cuento en Ocho en puntoOcho en punto · Jueves de revisión y viernes de progreso",
+            "content_html": "<p><a href=\"https://www.ochoenpunto.com/jueves-revision-y-viernes-progreso/\"><img src=\"assets/images/posts/2023/09/calendario_mes.png\" alt=\"image\" /></a></p><p>Cerrar la semana no significa simplemente «bajar la persiana» y detener la actividad hasta el lunes siguiente, sino que también implica una revisión de la <strong>agenda</strong> y una comprobación del estado de las <strong>tareas</strong>. Cerrar un viernes tiene sus inconvenientes. Elegir el último día de trabajo para hacer una revisión general puede parecer lo más natural, pero hay alternativas: hacerlo un <strong>jueves</strong>, por ejemplo. Os lo cuento en <a href=\"https://www.ochoenpunto.com/jueves-revision-y-viernes-progreso/\"><em>Ocho en punto</em></a></p><p><strong>Ocho en punto</strong> · <a href=\"https://www.ochoenpunto.com/jueves-revision-y-viernes-progreso/\"><em>Jueves de revisión y viernes de progreso</em></a></p>",
+            "url": "http://localhost:4000/jueves-revision/",
+            
+            
+            
+            "tags": ["organización","semana"],
+            
+            "date_published": "2023-09-30T12:00:00+02:00",
+            "date_modified": "2023-09-30T12:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/viaje-largo/",
+            "title": "El viaje es largo",
+            "summary": null,
+            "content_text": "El viaje es largo. Solo hay que tener paciencia y comprobar que el balance es positivo.@momentum.value · The Journey",
+            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/09/indecades.jpg\" alt=\"image\" /></a></p><p>El viaje es largo. Solo hay que tener <strong>paciencia</strong> y comprobar que el balance es positivo.</p><p><strong>@momentum.value</strong> · <a href=\"https://www.instagram.com/p/Cxg84bKNk3z/\"><em>The Journey</em></a></p>",
+            "url": "http://localhost:4000/viaje-largo/",
+            
+            
+            
+            "tags": ["reflexión","vida","viaje","tiempo"],
+            
+            "date_published": "2023-09-29T17:00:00+02:00",
+            "date_modified": "2023-09-29T17:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
             "id": "http://localhost:4000/sentarse-pensar/",
             "title": "Sentarse a pensar",
             "summary": null,
@@ -619,82 +695,6 @@
             
             "date_published": "2023-03-18T09:00:00+01:00",
             "date_modified": "2023-03-18T09:00:00+01:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/feliz2023/",
-            "title": "Feliz y próspero 2023",
-            "summary": null,
-            "content_text": "Os deseo un 2023 lleno de felicidad y prosperidad.",
-            "content_html": "<p><img src=\"assets/images/posts/2022/12/feliz_2023_ebenimeli.jpg\" alt=\"image\" /></p><p>Os deseo un 2023 lleno de felicidad y prosperidad.</p>",
-            "url": "http://localhost:4000/feliz2023/",
-            
-            
-            
-            "tags": ["fotografía","creatividad"],
-            
-            "date_published": "2022-12-31T21:00:00+01:00",
-            "date_modified": "2022-12-31T21:00:00+01:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/150fotoshablan/",
-            "title": "150 fotografías que hablan",
-            "summary": null,
-            "content_text": "He rescatado este proyecto que hice con una selección de mis fotografías. Nueva música. Más fotos en 2023, espero.YouTube | 150 fotografías que hablan",
-            "content_html": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/G7Ppl3DXuok\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"></iframe><p>He rescatado este proyecto que hice con una selección de mis fotografías. Nueva música. Más fotos en 2023, espero.</p><p><strong>YouTube</strong> | <a href=\"https://youtu.be/G7Ppl3DXuok/\">150 fotografías que hablan</a></p>",
-            "url": "http://localhost:4000/150fotoshablan/",
-            
-            
-            
-            "tags": ["fotografía","arte","creatividad"],
-            
-            "date_published": "2022-12-25T09:00:00+01:00",
-            "date_modified": "2022-12-25T09:00:00+01:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/feliznavidad22/",
-            "title": "Feliz Navidad",
-            "summary": null,
-            "content_text": "Feliz Navidad y próspero año nuevo.",
-            "content_html": "<p><img src=\"assets/images/posts/2022/12/navidad_2022_ebenimeli.png\" alt=\"image\" /></p><p>Feliz Navidad y próspero año nuevo.</p>",
-            "url": "http://localhost:4000/feliznavidad22/",
-            
-            
-            
-            
-            
-            "date_published": "2022-12-24T09:00:00+01:00",
-            "date_modified": "2022-12-24T09:00:00+01:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/linuxlite/",
-            "title": "Linux Lite",
-            "summary": null,
-            "content_text": "Acabo de devolverle la vida a un antiguo HP Pavilion con procesador Intel Centrino Duo y 2 GB de memoria RAM. Ya no cuenta con los requisitos mínimos para un sistema operativo como Windows 11 e incluso los de algunas distribuciones de Linux. El rendimiento no sería suficiente para poder trabajar con él. Solución: Linux Lite. Después de haberlo instalado, el portátil vuelve a respirar.  Linux Lite es una distribución Linux de la familia de Sistemas Operativos GNU/Linux, basada en Ubuntu, orientada al escritorio y desarrollada en Nueva Zelanda por Jerry Bezencon. Se caracteriza por ofrecer una experiencia de escritorio liviana y amigable con el usuario novato, por su facilidad de uso y por el poco consumo de recursos, gracias a su escritorio XFCE, un entorno personalizado, sencillo y ligero.Linux Lite | www.linuxliteos.com",
-            "content_html": "<p><img src=\"assets/images/posts/2022/11/linuxlite.png\" alt=\"image\" /></p><p>Acabo de devolverle la vida a un antiguo HP Pavilion con procesador Intel Centrino Duo y 2 GB de memoria RAM. Ya no cuenta con los requisitos mínimos para un sistema operativo como Windows 11 e incluso los de algunas distribuciones de Linux. El rendimiento no sería suficiente para poder trabajar con él. Solución: Linux Lite. Después de haberlo instalado, el portátil vuelve a respirar.</p><blockquote>  <p>Linux Lite es una distribución Linux de la familia de Sistemas Operativos GNU/Linux, basada en Ubuntu, orientada al escritorio y desarrollada en Nueva Zelanda por Jerry Bezencon. Se caracteriza por ofrecer una experiencia de escritorio liviana y amigable con el usuario novato, por su facilidad de uso y por el poco consumo de recursos, gracias a su escritorio XFCE, un entorno personalizado, sencillo y ligero.</p></blockquote><p><strong>Linux Lite</strong> | <a href=\"https://www.linuxliteos.com/\">www.linuxliteos.com</a></p>",
-            "url": "http://localhost:4000/linuxlite/",
-            
-            
-            
-            "tags": ["OS","Linux"],
-            
-            "date_published": "2022-11-12T09:00:00+01:00",
-            "date_modified": "2022-11-12T09:00:00+01:00",
             
                 "author": "Enrique Benimeli"
             

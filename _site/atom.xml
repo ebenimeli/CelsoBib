@@ -4,13 +4,69 @@
  <title>Enrique Benimeli</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-09-28T21:29:16+02:00</updated>
+ <updated>2023-10-02T20:36:41+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Enrique Benimeli</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>MIEE en Credly</title>
+   <link href="http://localhost:4000/miee-credly/"/>
+   <updated>2023-10-02T17:00:00+02:00</updated>
+   <id>http://localhost:4000/miee-credly</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.credly.com/badges/47c1aec7-57d0-4377-b183-9f22b4c8b680/public_url&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/miee2324_credly.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora sí que sí. &lt;a href=&quot;https://www.ebenimeli.org/miee-23-24/&quot;&gt;Después de algunas semanas&lt;/a&gt;, por fin ha llegado la certificación MIE Expert 2023-2024 a &lt;a href=&quot;https://www.credly.com/badges/47c1aec7-57d0-4377-b183-9f22b4c8b680/public_url&quot;&gt;Credly&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Microsoft Innovative Educator Expert 2023-2024&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Earners of this badge are educators who have been selected as Microsoft Innovative Educator (MIE) Experts for 2023-2024. They are self-driven educators who are passionate about teaching and learning. They inspire students with creative thinking, and work in a collaborative spirit to share their learning with the world. Resourceful and entrepreneurial, they relish the role of change agent, and work to achieve excellence in education using Microsoft technologies paired with innovative teaching.&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Sabor a domingo</title>
+   <link href="http://localhost:4000/mar-domingo/"/>
+   <updated>2023-10-01T17:00:00+02:00</updated>
+   <id>http://localhost:4000/mar-domingo</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/elmar.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Un domingo con sabor a domingo.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Cerrar el jueves</title>
+   <link href="http://localhost:4000/jueves-revision/"/>
+   <updated>2023-09-30T12:00:00+02:00</updated>
+   <id>http://localhost:4000/revision-jueves</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.ochoenpunto.com/jueves-revision-y-viernes-progreso/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/calendario_mes.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Cerrar la semana no significa simplemente «bajar la persiana» y detener la actividad hasta el lunes siguiente, sino que también implica una revisión de la &lt;strong&gt;agenda&lt;/strong&gt; y una comprobación del estado de las &lt;strong&gt;tareas&lt;/strong&gt;. Cerrar un viernes tiene sus inconvenientes. Elegir el último día de trabajo para hacer una revisión general puede parecer lo más natural, pero hay alternativas: hacerlo un &lt;strong&gt;jueves&lt;/strong&gt;, por ejemplo. Os lo cuento en &lt;a href=&quot;https://www.ochoenpunto.com/jueves-revision-y-viernes-progreso/&quot;&gt;&lt;em&gt;Ocho en punto&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ocho en punto&lt;/strong&gt; · &lt;a href=&quot;https://www.ochoenpunto.com/jueves-revision-y-viernes-progreso/&quot;&gt;&lt;em&gt;Jueves de revisión y viernes de progreso&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>El viaje es largo</title>
+   <link href="http://localhost:4000/viaje-largo/"/>
+   <updated>2023-09-29T17:00:00+02:00</updated>
+   <id>http://localhost:4000/viaje-largo</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/indecades.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;El viaje es largo. Solo hay que tener &lt;strong&gt;paciencia&lt;/strong&gt; y comprobar que el balance es positivo.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;@momentum.value&lt;/strong&gt; · &lt;a href=&quot;https://www.instagram.com/p/Cxg84bKNk3z/&quot;&gt;&lt;em&gt;The Journey&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Sentarse a pensar</title>
