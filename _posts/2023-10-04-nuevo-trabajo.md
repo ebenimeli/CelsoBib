@@ -12,7 +12,7 @@ tags: [efectividad,trabajo,tiempo]
 
 Sigo leyendo (estudiando) el libro José Miguel Bolivar y Jordi Fortuny sobre el método definitivo de efectividad personal que proponen. El *nuevo trabajo* tiene unas características muy particulares, que explican los autores de forma muy esclarecedora.
 
-> La conclusión [...] es la tercera característica del **nuevo trabajo**: siempre hay más por hacer que tiempo para hacerlo. [...] ¿qué ocurrirá, inevitablemente, con algunas de esas cosas? Cierto, que se quedarán si hacer. Da igual las muchas horas que trabajes, lo muy eficiente que seas o lo sólido que sea tu compromiso. **Nunca conseguirás que todo esté hecho porque es imposible**.
+> [...] la tercera característica del **nuevo trabajo**: siempre hay más por hacer que tiempo para hacerlo. [...] ¿qué ocurrirá, inevitablemente, con algunas de esas cosas? Cierto, que se quedarán si hacer. Da igual las muchas horas que trabajes, lo muy eficiente que seas o lo sólido que sea tu compromiso. **Nunca conseguirás que todo esté hecho porque es imposible**.
 
 De algún modo, este pasaje me tranquiliza.
 
