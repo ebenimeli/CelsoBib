@@ -10,6 +10,6 @@ tags: [cultura,Asia,Europa,Alemania]
 
 [![image](assets/images/posts/2023/10/puntualidad.jpeg)](https://thelanguagenerds.com/2023/24-funny-illustrations-that-show-the-cultural-differences-between-the-east-and-the-west/)
 
-En *The Language Nerds* comparten 24 ilustraciones que muestran las diferencias culturales entre China y Alemania, aunque en el título generalizan con *este y oeste*. Algunas son simples estereotipos, pero otras son un claro ejemplo de lo que nos hace distintos: la puntualidad, los medios de transporte, el modo de expresar una opinión o un sentimiento o las relaciones familiares.
+*The Language Nerds* comparte 24 ilustraciones que muestran las diferencias culturales entre China y Alemania, aunque en el título generalizan con *este y oeste*. Algunas son simples estereotipos, pero otras son un claro ejemplo de lo que nos hace distintos: la puntualidad, los medios de transporte, el modo de expresar una opinión o un sentimiento o las relaciones familiares.
 
-The Language Nerds · [*24 Funny Illustrations That Show The Cultural Differences Between The East And The West*](https://thelanguagenerds.com/2023/24-funny-illustrations-that-show-the-cultural-differences-between-the-east-and-the-west/)
+***The Language Nerds*** · [*24 Funny Illustrations That Show The Cultural Differences Between The East And The West*](https://thelanguagenerds.com/2023/24-funny-illustrations-that-show-the-cultural-differences-between-the-east-and-the-west/)
