@@ -17,6 +17,25 @@
 "items": [
     
         {
+            "id": "http://localhost:4000/dia-docentes/",
+            "title": "Día mundial de los docentes",
+            "summary": null,
+            "content_text": "Hoy se celebra el Día Mundial de los Docentes. Felicidades a todos los que cada día estáis a pie de aula.",
+            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/10/educacion.jpg\" alt=\"image\" /></a></p><p>Hoy se celebra el <a href=\"https://www.unesco.org/es/days/teachers\">Día Mundial de los Docentes</a>. Felicidades a todos los que cada día estáis a pie de aula.</p>",
+            "url": "http://localhost:4000/dia-docentes/",
+            
+            
+            
+            "tags": ["profesor","educación"],
+            
+            "date_published": "2023-10-05T17:00:00+02:00",
+            "date_modified": "2023-10-05T17:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
             "id": "http://localhost:4000/cultura-este-oeste/",
             "title": "Este y oeste",
             "summary": null,
@@ -676,25 +695,6 @@
             
             "date_published": "2023-04-30T02:08:00+02:00",
             "date_modified": "2023-04-30T02:08:00+02:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/shuffled/",
-            "title": "Shuffled!",
-            "summary": null,
-            "content_text": "He creado esta aplicación web para jugar un poco con las palabras. Sirve para el aula, pero también para pasar el rato y aprender de todo un poco en cualquier momento.La aplicación muestra algunas palabras al azar sobre un tema determinado (geografía, inglés, informática, ciencias, etc.), pero con las letras desordenadas. El objetivo es ordenar las letras para desenmascarar la palabra. Esta puede ser una traducción, una capital de una ciudad, el apellido de algún actor conocido, etc., según la pista que aparece sobre las letras desordenadas. Cuando se inicia el juego, aparece una temática al azar.De momento, tan solo es una versión preliminar y sigo añadiendo más temas y nuevas opciones. Espero que os guste.Artículo en Esfera TIC | www.esferatic.com/shuffledShuffled! | www.esferatic.com/shuffled",
-            "content_html": "<p><img src=\"assets/images/posts/2023/04/shuffled_polonia.png\" alt=\"image\" /></p><p>He creado <a href=\"https://www.esferatic.com/shuffled/\">esta aplicación web</a> para jugar un poco con las palabras. Sirve para el aula, pero también para pasar el rato y aprender de todo un poco en cualquier momento.</p><p>La aplicación muestra algunas palabras al azar sobre un tema determinado (geografía, inglés, informática, ciencias, etc.), pero con las letras desordenadas. El objetivo es ordenar las letras para desenmascarar la palabra. Esta puede ser una traducción, una capital de una ciudad, el apellido de algún actor conocido, etc., según la pista que aparece sobre las letras desordenadas. Cuando se inicia el juego, aparece una temática al azar.</p><p>De momento, tan solo es una versión preliminar y sigo añadiendo más temas y nuevas opciones. Espero que os guste.</p><p><strong>Artículo en Esfera TIC</strong> | <a href=\"https://www.esferatic.com/2023/04/shuffled/\">www.esferatic.com/shuffled</a></p><p><strong>Shuffled!</strong> | <a href=\"https://www.esferatic.com/shuffled/\">www.esferatic.com/shuffled</a></p>",
-            "url": "http://localhost:4000/shuffled/",
-            
-            
-            
-            "tags": ["Educación","Gamificación","Juegos","Cultura"],
-            
-            "date_published": "2023-04-15T02:08:00+02:00",
-            "date_modified": "2023-04-15T02:08:00+02:00",
             
                 "author": "Enrique Benimeli"
             
