@@ -17,6 +17,25 @@
 "items": [
     
         {
+            "id": "http://localhost:4000/solo-empezar/",
+            "title": "Empezar",
+            "summary": null,
+            "content_text": "Simplementar empezar. Es el método que nunca falla. Lanza tu proyecto.Ilustración · @victor_bigfield en X",
+            "content_html": "<p><a href=\"https://twitter.com/victor_bigfield/status/1700132451241087046?s=12\"><img src=\"assets/images/posts/2023/10/ship_first.jpeg\" alt=\"image\" /></a></p><p>Simplementar empezar. Es el método que nunca falla. Lanza tu proyecto.</p><p><strong>Ilustración</strong> · <a href=\"https://twitter.com/victor_bigfield/status/1700132451241087046?s=12\">@victor_bigfield</a> en <strong>X</strong></p>",
+            "url": "http://localhost:4000/solo-empezar/",
+            
+            
+            
+            "tags": ["proyectos","objetivos","metas"],
+            
+            "date_published": "2023-10-06T17:00:00+02:00",
+            "date_modified": "2023-10-06T17:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
             "id": "http://localhost:4000/dia-docentes/",
             "title": "Día mundial de los docentes",
             "summary": null,
@@ -676,25 +695,6 @@
             
             "date_published": "2023-05-16T02:08:00+02:00",
             "date_modified": "2023-05-16T02:08:00+02:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/letracapitalcss/",
-            "title": "Letra capital con CSS (y en WordPress)",
-            "summary": null,
-            "content_text": "Lo que me gusta a mí una letra capital. Las he vuelto a utilizar en el blog de Ocho en punto.El siguiente código CSS funciona aunque no se utilice WordPress, pero el caso particular que comparto explica cómo mostrar una letra capital (o capitular) personalizando el tema activo de WordPress (Apariencia &gt; Temas &gt; Personalizar) y añadiendo el siguiente código en el apartado CSS adicional.Con este código hacemos capital la primera letra del primer párrafo del post: div.post-content p:first-child:first-letter {\tfloat: left;\tfont-size: 6em;\tfont-weight: 900;\tcolor: #000000;\tmargin-right: 0.10em;\tline-height: 90%;\ttext-shadow: 0.05em 0.05em #c1c1c1c1;\tfont-family: Times New Roman;}Con el siguiente código, hacemos capital la primera letra del segundo párrafo del post. Este es el código que aplico en mis artículos del blog Ocho en punto porque el primer párrafo está reservado para el tiempo estimado de lectura.Por cierto, nth-child es una pseudoclase de CSS que permite seleccionar varios elementos hijos de la clase indicando su posición. div.post-content p:nth-child(2):first-letter {    float: left;    font-size: 6em;    font-weight: 900;    color: #000000;    margin-right: 0.10em;    line-height: 90%;    text-shadow: 0.05em 0.05em #c1c1c1c1;    font-family: Times New Roman; }Ocho en punto | www.ochoenpunto.com",
-            "content_html": "<p>Lo que me gusta a mí una <a href=\"https://es.wikipedia.org/wiki/Letra_capital\"><strong>letra capital</strong></a>. Las he vuelto a utilizar en el <a href=\"https://www.ochoenpunto.com/cajon-de-sastre-16-ideas-mejorar-productividad/\">blog de <em>Ocho en punto</em></a>.</p><p><a href=\"https://www.ochoenpunto.com/cajon-de-sastre-16-ideas-mejorar-productividad/\"><img src=\"assets/images/posts/2023/04/letra_capital_8am.png\" alt=\"image\" /></a></p><p>El siguiente código CSS funciona aunque no se utilice WordPress, pero el caso particular que comparto explica cómo mostrar una letra capital (o capitular) personalizando el tema activo de WordPress (<em>Apariencia &gt; Temas &gt; Personalizar)</em> y añadiendo el siguiente código en el apartado <em>CSS adicional</em>.</p><p>Con este código hacemos capital la primera letra del primer párrafo del <em>post</em>:</p><figure class=\"highlight\"><pre><code class=\"language-css\" data-lang=\"css\"> <span class=\"nt\">div</span><span class=\"nc\">.post-content</span> <span class=\"nt\">p</span><span class=\"nd\">:first-child:first-letter</span> <span class=\"p\">{</span>\t<span class=\"nl\">float</span><span class=\"p\">:</span> <span class=\"nb\">left</span><span class=\"p\">;</span>\t<span class=\"nl\">font-size</span><span class=\"p\">:</span> <span class=\"m\">6em</span><span class=\"p\">;</span>\t<span class=\"nl\">font-weight</span><span class=\"p\">:</span> <span class=\"m\">900</span><span class=\"p\">;</span>\t<span class=\"nl\">color</span><span class=\"p\">:</span> <span class=\"m\">#000000</span><span class=\"p\">;</span>\t<span class=\"nl\">margin-right</span><span class=\"p\">:</span> <span class=\"m\">0.10em</span><span class=\"p\">;</span>\t<span class=\"nl\">line-height</span><span class=\"p\">:</span> <span class=\"m\">90%</span><span class=\"p\">;</span>\t<span class=\"nl\">text-shadow</span><span class=\"p\">:</span> <span class=\"m\">0.05em</span> <span class=\"m\">0.05em</span> <span class=\"m\">#c1c1c1</span><span class=\"n\">c1</span><span class=\"p\">;</span>\t<span class=\"nl\">font-family</span><span class=\"p\">:</span> <span class=\"n\">Times</span> <span class=\"n\">New</span> <span class=\"n\">Roman</span><span class=\"p\">;</span><span class=\"p\">}</span></code></pre></figure><p>Con el siguiente código, hacemos capital la primera letra del <strong>segundo párrafo</strong> del <em>post</em>. Este es el código que aplico en mis artículos del <a href=\"https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/\">blog <em>Ocho en punto</em></a> porque el primer párrafo está reservado para el tiempo estimado de lectura.</p><p>Por cierto, <strong>nth-child</strong> es una pseudoclase de CSS que permite seleccionar varios elementos hijos de la clase indicando su posición.</p><figure class=\"highlight\"><pre><code class=\"language-css\" data-lang=\"css\"> <span class=\"nt\">div</span><span class=\"nc\">.post-content</span> <span class=\"nt\">p</span><span class=\"nd\">:nth-child</span><span class=\"o\">(</span><span class=\"err\">2</span><span class=\"o\">)</span><span class=\"nd\">:first-letter</span> <span class=\"p\">{</span>    <span class=\"nl\">float</span><span class=\"p\">:</span> <span class=\"nb\">left</span><span class=\"p\">;</span>    <span class=\"nl\">font-size</span><span class=\"p\">:</span> <span class=\"m\">6em</span><span class=\"p\">;</span>    <span class=\"nl\">font-weight</span><span class=\"p\">:</span> <span class=\"m\">900</span><span class=\"p\">;</span>    <span class=\"nl\">color</span><span class=\"p\">:</span> <span class=\"m\">#000000</span><span class=\"p\">;</span>    <span class=\"nl\">margin-right</span><span class=\"p\">:</span> <span class=\"m\">0.10em</span><span class=\"p\">;</span>    <span class=\"nl\">line-height</span><span class=\"p\">:</span> <span class=\"m\">90%</span><span class=\"p\">;</span>    <span class=\"nl\">text-shadow</span><span class=\"p\">:</span> <span class=\"m\">0.05em</span> <span class=\"m\">0.05em</span> <span class=\"m\">#c1c1c1</span><span class=\"n\">c1</span><span class=\"p\">;</span>    <span class=\"nl\">font-family</span><span class=\"p\">:</span> <span class=\"n\">Times</span> <span class=\"n\">New</span> <span class=\"n\">Roman</span><span class=\"p\">;</span> <span class=\"p\">}</span></code></pre></figure><p><strong>Ocho en punto</strong> | <a href=\"https://www.ochoenpunto.com\">www.ochoenpunto.com</a></p>",
-            "url": "http://localhost:4000/letracapitalcss/",
-            
-            
-            
-            "tags": ["programación","css","WordPress","blog","8am"],
-            
-            "date_published": "2023-04-30T02:08:00+02:00",
-            "date_modified": "2023-04-30T02:08:00+02:00",
             
                 "author": "Enrique Benimeli"
             
