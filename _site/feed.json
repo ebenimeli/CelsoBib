@@ -17,6 +17,25 @@
 "items": [
     
         {
+            "id": "http://localhost:4000/shuffled-hwsw/",
+            "title": "Hardware y software en Shuffled!",
+            "summary": null,
+            "content_text": "Acabo de actualizar Shuffled! con vocabulario básico en inglés para los primeros temas de introducción a la informática. Cuidado, que engancha.Shuffled! · Hardware &amp; Software",
+            "content_html": "<p><a href=\"https://bit.ly/shuffled-hwsw\"><img src=\"assets/images/posts/2023/10/shuffled_computer.png\" alt=\"image\" /></a></p><p>Acabo de actualizar <a href=\"https://bit.ly/shuffled-hwsw\">Shuffled!</a> con vocabulario básico en inglés para los primeros temas de introducción a la informática. Cuidado, que engancha.</p><p><strong>Shuffled!</strong> · <a href=\"https://bit.ly/shuffled-hwsw\"><em>Hardware &amp; Software</em></a></p>",
+            "url": "http://localhost:4000/shuffled-hwsw/",
+            
+            
+            
+            "tags": ["Shuffled","inglés","informática"],
+            
+            "date_published": "2023-10-07T13:00:00+02:00",
+            "date_modified": "2023-10-07T13:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
             "id": "http://localhost:4000/solo-empezar/",
             "title": "Empezar",
             "summary": null,
@@ -676,25 +695,6 @@
             
             "date_published": "2023-05-21T02:08:00+02:00",
             "date_modified": "2023-05-21T02:08:00+02:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/ochoenpunto150/",
-            "title": "150 artículos sobre productividad",
-            "summary": null,
-            "content_text": "Es cierto que los números no importan; a mí, desde luego, no me importan. Sin embargo, alcanzar cualquier meta es siempre una buena excusa para hacer una parada, mirar hacia atrás y echar un vistazo al camino recorrido.Me detuve cuando escribí 50 artículos en el blog y también cuando llegué al centenar. Ahora es momento de hacer balance después de añadir otras 50 publicaciones al blog.No diré aquello de que he llegado hasta este punto sin apenas darme cuenta o que, como quien no quiere la cosa, este es el artículo número 150 en Ocho en punto.Ocho en punto | Un tercer alto en el camino: 150 artículos sobre organización personal",
-            "content_html": "<p><a href=\"https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/\"><img src=\"assets/images/posts/2023/05/escritorio_ordenador.jpg\" alt=\"image\" /></a></p><p>Es cierto que los números no importan; a mí, desde luego, no me importan. Sin embargo, alcanzar cualquier meta es siempre una buena excusa para hacer una parada, mirar hacia atrás y echar un vistazo al camino recorrido.</p><p>Me detuve cuando escribí 50 artículos en el blog y también cuando llegué al centenar. Ahora es momento de hacer balance después de añadir otras 50 publicaciones al blog.</p><p>No diré aquello de que he llegado hasta este punto sin apenas darme cuenta o que, como quien no quiere la cosa, <a href=\"https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/\">este es el artículo número 150</a> en <em>Ocho en punto</em>.</p><p><strong>Ocho en punto</strong> | <a href=\"https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/\">Un tercer alto en el camino: 150 artículos sobre organización personal</a></p>",
-            "url": "http://localhost:4000/ochoenpunto150/",
-            
-            
-            
-            "tags": ["blog","8am"],
-            
-            "date_published": "2023-05-16T02:08:00+02:00",
-            "date_modified": "2023-05-16T02:08:00+02:00",
             
                 "author": "Enrique Benimeli"
             
