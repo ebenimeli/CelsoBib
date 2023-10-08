@@ -17,6 +17,25 @@
 "items": [
     
         {
+            "id": "http://localhost:4000/creador-consumidor/",
+            "title": "¿Creas o consumes?",
+            "summary": null,
+            "content_text": "La proliferación de creadores de contenidos online coincide con una disminución de publicaciones en el medio escrito frente a medios audiovisuales llamativos. Además, el exceso en el uso de dispositivos y el consumo de información en redes sociales promueve en muchos casos la adicción en detrimento de la creación. ¿Tú creas o consumes? Tus aplicaciones te delatan.Ocho en punto · Tus apps te delatan: ¿creas o consumes?",
+            "content_html": "<p><a href=\"https://www.ochoenpunto.com/tus-apps-te-delatan-creas-o-consumes/\"><img src=\"assets/images/posts/2023/10/consumer_creator.jpg\" alt=\"image\" /></a></p><p>La proliferación de creadores de contenidos online coincide con una disminución de publicaciones en el medio escrito frente a medios audiovisuales llamativos. Además, el exceso en el uso de dispositivos y el consumo de información en redes sociales promueve en muchos casos la adicción en detrimento de la creación. ¿Tú creas o consumes? Tus aplicaciones te delatan.</p><p><strong>Ocho en punto</strong> · <a href=\"https://www.ochoenpunto.com/tus-apps-te-delatan-creas-o-consumes/\"><em>Tus apps te delatan: ¿creas o consumes?</em></a></p>",
+            "url": "http://localhost:4000/creador-consumidor/",
+            
+            
+            
+            "tags": ["redes sociales","medios","contenidos","digital","creatividad"],
+            
+            "date_published": "2023-10-08T17:00:00+02:00",
+            "date_modified": "2023-10-08T17:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
             "id": "http://localhost:4000/shuffled-hwsw/",
             "title": "Hardware y software en Shuffled!",
             "summary": null,
@@ -676,25 +695,6 @@
             
             "date_published": "2023-07-21T02:08:00+02:00",
             "date_modified": "2023-07-21T02:08:00+02:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/resumen-chatgpt/",
-            "title": "Resumiendo con ChatGPT",
-            "summary": null,
-            "content_text": "Este fin de semana, he leído en Xataka que el chatbot Claude de Anthropic es capaz de leer una novela en menos de un minuto, lo que deja a ChatGPT muy por detrás.Me preguntaba qué tal hacía los resúmenes ChatGPT y he probado con mi último artículo sobre comunicación digital efectiva, que tiene alrededor de 800 palabras.Así quedaría en 10 palabras:  Comunicar en horarios adecuados muestra respeto y eficacia profesional.En 25 palabras:  Comunicar en horarios adecuados es crucial. Respetar los horarios laborales propios y del receptor muestra profesionalismo y consideración. Elegir el canal y momento adecuados es esencial para una comunicación eficaz.En 50 palabras:  Enviar mensajes en momentos inoportunos puede tener un efecto negativo. Es esencial considerar los horarios laborales propios y de los destinatarios. Respetar los límites de trabajo muestra profesionalismo y consideración. El canal y el momento adecuados son cruciales. La comunicación eficaz refleja organización y eficiencia.En 100 palabras:  Enviar mensajes en momentos inoportunos puede tener efectos inesperados. Es fundamental considerar el horario de trabajo propio y del receptor antes de enviar un mensaje. Respetar los límites laborales es importante para demostrar profesionalismo y consideración hacia los demás. Elegir el canal adecuado también es relevante. Los correos electrónicos pueden enviarse en cualquier momento, pero es preferible hacerlo durante el horario laboral para mantener una imagen profesional. En el caso de mensajes instantáneos, es crucial tener en cuenta los horarios del receptor y evitar interrupciones fuera de su horario de trabajo. Una comunicación efectiva demuestra organización y eficacia.ChatGPT | chat.openai.comImagen | ChatGPT",
-            "content_html": "<p><a href=\"https://chat.openai.com/\"><img src=\"assets/images/posts/2023/05/chatgpt.jpg\" alt=\"image\" /></a></p><p>Este fin de semana, <a href=\"https://www.xataka.com/robotica-e-ia/anthropic-deja-ridiculo-a-chatgpt-su-chatbot-claude-capaz-leer-novela-minuto\">he leído en Xataka</a> que el chatbot <a href=\"https://www.anthropic.com/product\">Claude de Anthropic</a> es capaz de leer una novela en menos de un minuto, lo que deja a <a href=\"https://chat.openai.com/\">ChatGPT</a> muy por detrás.</p><p>Me preguntaba qué tal hacía los resúmenes ChatGPT y he probado con <a href=\"https://www.ochoenpunto.com/cuando-la-hora-importa/\">mi último artículo</a> sobre comunicación digital efectiva, que tiene alrededor de 800 palabras.</p><p>Así quedaría en 10 palabras:</p><blockquote>  <p>Comunicar en horarios adecuados muestra respeto y eficacia profesional.</p></blockquote><p>En 25 palabras:</p><blockquote>  <p>Comunicar en horarios adecuados es crucial. Respetar los horarios laborales propios y del receptor muestra profesionalismo y consideración. Elegir el canal y momento adecuados es esencial para una comunicación eficaz.</p></blockquote><p>En 50 palabras:</p><blockquote>  <p>Enviar mensajes en momentos inoportunos puede tener un efecto negativo. Es esencial considerar los horarios laborales propios y de los destinatarios. Respetar los límites de trabajo muestra profesionalismo y consideración. El canal y el momento adecuados son cruciales. La comunicación eficaz refleja organización y eficiencia.</p></blockquote><p>En 100 palabras:</p><blockquote>  <p>Enviar mensajes en momentos inoportunos puede tener efectos inesperados. Es fundamental considerar el horario de trabajo propio y del receptor antes de enviar un mensaje. Respetar los límites laborales es importante para demostrar profesionalismo y consideración hacia los demás. Elegir el canal adecuado también es relevante. Los correos electrónicos pueden enviarse en cualquier momento, pero es preferible hacerlo durante el horario laboral para mantener una imagen profesional. En el caso de mensajes instantáneos, es crucial tener en cuenta los horarios del receptor y evitar interrupciones fuera de su horario de trabajo. Una comunicación efectiva demuestra organización y eficacia.</p></blockquote><p><strong>ChatGPT</strong> | <a href=\"https://chat.openai.com/\">chat.openai.com</a><br /><strong>Imagen</strong> | <a href=\"https://pixabay.com/illustrations/chatgpt-ai-artificial-intelligence-7902213/\">ChatGPT</a></p>",
-            "url": "http://localhost:4000/resumen-chatgpt/",
-            
-            
-            
-            "tags": ["blog","ia","chatgpt"],
-            
-            "date_published": "2023-05-21T02:08:00+02:00",
-            "date_modified": "2023-05-21T02:08:00+02:00",
             
                 "author": "Enrique Benimeli"
             
