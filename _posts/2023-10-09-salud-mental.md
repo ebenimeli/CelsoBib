@@ -10,5 +10,5 @@ tags: [salud,mental,plantas]
 
 [![image](assets/images/posts/2023/10/riega_tus_plantas.jpg)](https://www.instagram.com/p/CvGjmRrME8x/)
 
-Mañana es el [Día Mundial de la Salud Mental](https://consaludmental.org/dia-mundial-de-la-salud-mental/) y creo que [esta viñeta de Karen Kastilla](https://www.instagram.com/p/CvGjmRrME8x/) es necesaria.
+Mañana es el [Día Mundial de la Salud Mental](https://consaludmental.org/dia-mundial-de-la-salud-mental/) y creo que [esta viñeta de Karen Castilla](https://www.instagram.com/p/CvGjmRrME8x/) es necesaria.
 
