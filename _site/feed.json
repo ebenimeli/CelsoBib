@@ -17,6 +17,25 @@
 "items": [
     
         {
+            "id": "http://localhost:4000/salud-mental/",
+            "title": "Riega todas tus plantitas",
+            "summary": null,
+            "content_text": "Mañana es el Día Mundial de la Salud Mental y creo que esta viñeta de Karen Kastilla es necesaria.",
+            "content_html": "<p><a href=\"https://www.instagram.com/p/CvGjmRrME8x/\"><img src=\"assets/images/posts/2023/10/riega_tus_plantas.jpg\" alt=\"image\" /></a></p><p>Mañana es el <a href=\"https://consaludmental.org/dia-mundial-de-la-salud-mental/\">Día Mundial de la Salud Mental</a> y creo que <a href=\"https://www.instagram.com/p/CvGjmRrME8x/\">esta viñeta de Karen Kastilla</a> es necesaria.</p>",
+            "url": "http://localhost:4000/salud-mental/",
+            
+            
+            
+            "tags": ["salud","mental","plantas"],
+            
+            "date_published": "2023-10-09T17:00:00+02:00",
+            "date_modified": "2023-10-09T17:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
             "id": "http://localhost:4000/creador-consumidor/",
             "title": "¿Creas o consumes?",
             "summary": null,
@@ -676,25 +695,6 @@
             
             "date_published": "2023-08-29T02:08:00+02:00",
             "date_modified": "2023-08-29T02:08:00+02:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/elecciones-23j/",
-            "title": "23j",
-            "summary": null,
-            "content_text": "🗳️ Puedes seguir los resultados de las Elecciones Generales del 23J en esta web:👉🏼 resultados.generales23j.es⬇️ También puedes descargar las aplicaciones oficiales:📱 iOS📱 Android#Elecciones2023 #23J",
-            "content_html": "<p><a href=\"https://resultados.generales23j.es/es\"><img src=\"assets/images/posts/2023/07/elecciones23j.png\" alt=\"image\" /></a></p><p>🗳️ Puedes seguir los resultados de las Elecciones Generales del 23J en esta web:👉🏼 <a href=\"https://resultados.generales23j.es/es\">resultados.generales23j.es</a></p><p>⬇️ También puedes descargar las aplicaciones oficiales:📱 <a href=\"https://apps.apple.com/es/app/23j-elecciones-generales-2023/id6451315925\">iOS</a>📱 <a href=\"https://play.google.com/store/apps/details?id=com.generales23.app\">Android</a></p><p>#Elecciones2023 #23J</p>",
-            "url": "http://localhost:4000/elecciones-23j/",
-            
-            
-            
-            "tags": ["política","actualidad","estadística"],
-            
-            "date_published": "2023-07-21T02:08:00+02:00",
-            "date_modified": "2023-07-21T02:08:00+02:00",
             
                 "author": "Enrique Benimeli"
             
