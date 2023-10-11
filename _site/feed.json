@@ -17,6 +17,25 @@
 "items": [
     
         {
+            "id": "http://localhost:4000/escritorio-pc/",
+            "title": "¿Cuál es tu escritorio productivo?",
+            "summary": null,
+            "content_text": "A veces soy 9 y a veces soy 1. También soy 1+9. En alguna ocasión he necesitado ser 3 y una vez fui 4.Vía · @gtdfocus",
+            "content_html": "<p><a href=\"https://www.instagram.com/p/CyOPRzBOIlK/\"><img src=\"assets/images/posts/2023/10/escritorio_pc.jpg\" alt=\"image\" /></a></p><p>A veces soy 9 y a veces soy 1. También soy 1+9. En alguna ocasión he necesitado ser 3 y una vez fui 4.</p><p><strong>Vía</strong> · <a href=\"https://www.instagram.com/p/CyOPRzBOIlK/\"><em>@gtdfocus</em></a></p>",
+            "url": "http://localhost:4000/escritorio-pc/",
+            
+            
+            
+            "tags": ["escritorio","ordenador"],
+            
+            "date_published": "2023-10-11T17:00:00+02:00",
+            "date_modified": "2023-10-11T17:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
             "id": "http://localhost:4000/ada-lovelace-day/",
             "title": "Día de Ada Lovelace",
             "summary": null,
@@ -676,25 +695,6 @@
             
             "date_published": "2023-09-02T10:00:00+02:00",
             "date_modified": "2023-09-02T10:00:00+02:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/vuelta-trabajo-desconecta/",
-            "title": "Desconectar antes de empezar",
-            "summary": null,
-            "content_text": "Agosto termina y en unos días muchos nos incorporamos de nuevo a nuestro trabajo tras unas vacaciones. Por el motivo que sea, la vuelta al trabajo produce en algunas personas cierta ansiedad. Desde luego, la noticia estrella por esta época en todos los informativos es la del síndrome postvacacional. En estos casos, dedicar la víspera a desconectar (más todavía si cabe) parece una gran idea.Se me ocurren varias cosas que podemos hacer justo el día antes de incorporarnos al trabajo. La cuestión es estar ocupado en otros asuntos y evitar la tentación de echar un vistazo a cualquier asunto de trabajo. Os lo cuento en el último artículo de Ocho en punto.www.ochoenpunto.com · La vuelta al trabajo: 10 ideas para una víspera desconectada",
-            "content_html": "<p><a href=\"https://www.ochoenpunto.com/vuelta-al-trabajo-10-ideas-vispera-desconectada/\"><img src=\"assets/images/posts/2023/08/hombre_naturaleza.jpeg\" alt=\"image\" /></a></p><p>Agosto termina y en unos días muchos nos incorporamos de nuevo a nuestro <strong>trabajo tras unas vacaciones</strong>. Por el motivo que sea, la vuelta al trabajo produce en algunas personas cierta ansiedad. Desde luego, la noticia estrella por esta época en todos los informativos es la del síndrome postvacacional. En estos casos, dedicar la víspera a <strong>desconectar</strong> (más todavía si cabe) parece una gran idea.</p><p>Se me ocurren varias cosas que podemos hacer justo el día antes de incorporarnos al trabajo. La cuestión es estar ocupado en otros asuntos y evitar la tentación de echar un vistazo a cualquier asunto de trabajo. Os lo cuento en el <a href=\"https://www.ochoenpunto.com/vuelta-al-trabajo-10-ideas-vispera-desconectada/\">último artículo de <em>Ocho en punto</em></a>.</p><p><strong>www.ochoenpunto.com</strong> · <a href=\"https://www.ochoenpunto.com/vuelta-al-trabajo-10-ideas-vispera-desconectada/\"><em>La vuelta al trabajo: 10 ideas para una víspera desconectada</em></a></p>",
-            "url": "http://localhost:4000/vuelta-trabajo-desconecta/",
-            
-            
-            
-            "tags": ["organización","vacaciones","desconexión","descanso","trabajo"],
-            
-            "date_published": "2023-08-30T02:16:00+02:00",
-            "date_modified": "2023-08-30T02:16:00+02:00",
             
                 "author": "Enrique Benimeli"
             
