@@ -17,6 +17,25 @@
 "items": [
     
         {
+            "id": "http://localhost:4000/copia-pega-productivo/",
+            "title": "Atajos superproductivos",
+            "summary": null,
+            "content_text": "¿Sabías que puedes copiar primero los fragmentos de texto que necesitas y después pegarlos en el orden que quieras? ¿Y que lo puedes hacer sin el ratón, simplemente con el teclado? En un nuevo artículo de Ocho en punto presento varios atajos productivos para seleccionar, copiar y pegar texto. Y emojis.Ocho en punto · Atajos superproductivos para el texto: mucho más que copiar y pegar",
+            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/10/windows_insertar_emoji.png\" alt=\"image\" /></a></p><p>¿Sabías que puedes copiar primero los fragmentos de texto que necesitas y después pegarlos en el orden que quieras? ¿Y que lo puedes hacer sin el ratón, simplemente con el teclado? En un <a href=\"https://www.ochoenpunto.com/atajos-productivos-texto-copiar-pegar/\">nuevo artículo de <em>Ocho en punto</em></a> presento varios atajos productivos para seleccionar, copiar y pegar texto. Y <em>emojis</em>.</p><p><strong>Ocho en punto</strong> · <a href=\"https://www.ochoenpunto.com/atajos-productivos-texto-copiar-pegar/\"><em>Atajos superproductivos para el texto: mucho más que copiar y pegar</em></a></p>",
+            "url": "http://localhost:4000/copia-pega-productivo/",
+            
+            
+            
+            "tags": ["teclado","productividad","texto","Windows","Word","Microsoft"],
+            
+            "date_published": "2023-10-13T17:00:00+02:00",
+            "date_modified": "2023-10-13T17:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
             "id": "http://localhost:4000/faros-espana/",
             "title": "Faros de España",
             "summary": null,
@@ -676,25 +695,6 @@
             
             "date_published": "2023-09-08T10:00:00+02:00",
             "date_modified": "2023-09-08T10:00:00+02:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/entradillas-8am/",
-            "title": "Entradillas en el blog: WP excerpt",
-            "summary": null,
-            "content_text": "Los detalles marcan la diferencia. Me gusta la idea de que los artículos de Ocho en punto tengan una especie de encabezamiento, como las entradillas de los artículos en los periódicos y que actúan como un resumen.En WordPress se puede utilizar la función the_excerpt() o get_the_excerpt() para obtener el extracto (excerpt) del post. Este extracto es un campo especial que quien escribe puede rellenar cuando redacta el artículo. No me extrañaría, sin embargo, que alguien haya integrado ya alguna IA para hacer el resumen automáticamente.El problema es que, cuando se utilizan estas funciones, se obtiene también un enlace a en HTML del tipo Read more. En este caso, no necesitamos un enlace leer más porque ya estamos en el propio artículo. Con un filtro y personalizando alguna función se puede lograr que no aparezca este añadido. Una solución relativamente es utilizar una expresión regular para identificar enlaces HTML de tipo:&lt;a href=\"\"&gt;...&lt;/a&gt;para posteriormente eliminarlos. No es probablemente la solución más elegante, pero funciona. Y si WordPress integra algún sistema de caché para las páginas, apenas debería suponer una carga. De todos modos, tarde o temprano, convendría aplicar alguna solución más adecuada.Con PHP la cosa se soluciona así:&lt;?php     $summary = get_the_excerpt();    $pattern = '/&lt;a\\b[^&gt;]*&gt;.*?&lt;\\/a&gt;/i';    $cleanSummary = preg_replace($pattern, '$1', $summary);    echo '&lt;p class=\"summary\"&gt;'.$cleanSummary.'&lt;/p&gt;';?&gt;Y la hoja de estilo CSS podemos personalizar el formato de la entradilla:p.summary {    font-size: 1.2em;    font-weight: normal;    font-style: normal;    color: DarkSlateGray;}De esta forma, el código HTML que teníamos antes:&lt;div class=\"more-link-wrapper\"&gt;&lt;a class=\"more-link\" href=\"https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/\"&gt;Seguir leyendo&lt;span class=\"screen-reader-text\"&gt;Herramientas, métodos y enfoque&lt;/span&gt; &lt;i class=\"fas fa-angle-right\"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt;Aparece así después:&lt;div class=\"more-link-wrapper\"&gt;&lt;/div&gt;Ahora queda revisar los más de 150 artículos y sus entradillas porque, como en este post que comparto, será necesario reducirlo en extensión y hacer un buen resumen.Ocho en punto · Herramientas, métodos y enfoque",
-            "content_html": "<p><a href=\"https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/\"><img src=\"assets/images/posts/2023/08/wp_post_excerpt.png\" alt=\"image\" /></a></p><p>Los detalles marcan la diferencia. Me gusta la idea de que los artículos de <em>Ocho en punto</em> tengan una especie de encabezamiento, como las <strong>entradillas</strong> de los artículos en los periódicos y que actúan como un resumen.</p><p>En WordPress se puede utilizar la función <code>the_excerpt()</code> o <code>get_the_excerpt()</code> para obtener el extracto (<em>excerpt</em>) del <em>post</em>. Este <strong>extracto</strong> es un campo especial que quien escribe puede rellenar cuando redacta el artículo. No me extrañaría, sin embargo, que alguien haya integrado ya alguna IA para hacer el resumen automáticamente.</p><p>El problema es que, cuando se utilizan estas funciones, se obtiene también un enlace <code>a</code> en HTML del tipo <em>Read more</em>. En este caso, no necesitamos un enlace <em>leer más</em> porque ya estamos en el propio artículo. Con un filtro y personalizando alguna función se puede lograr que no aparezca este añadido. Una solución relativamente es utilizar una <strong>expresión regular</strong> para identificar enlaces HTML de tipo:</p><figure class=\"highlight\"><pre><code class=\"language-html\" data-lang=\"html\"><span class=\"nt\">&lt;a</span> <span class=\"na\">href=</span><span class=\"s\">\"\"</span><span class=\"nt\">&gt;</span>...<span class=\"nt\">&lt;/a&gt;</span></code></pre></figure><p>para posteriormente eliminarlos. No es probablemente la solución más elegante, pero funciona. Y si WordPress integra algún sistema de caché para las páginas, apenas debería suponer una carga. De todos modos, tarde o temprano, convendría aplicar alguna solución más adecuada.</p><p>Con PHP la cosa se soluciona así:</p><figure class=\"highlight\"><pre><code class=\"language-php\" data-lang=\"php\"><span class=\"cp\">&lt;?php</span>     <span class=\"nv\">$summary</span> <span class=\"o\">=</span> <span class=\"nf\">get_the_excerpt</span><span class=\"p\">();</span>    <span class=\"nv\">$pattern</span> <span class=\"o\">=</span> <span class=\"s1\">'/&lt;a\\b[^&gt;]*&gt;.*?&lt;\\/a&gt;/i'</span><span class=\"p\">;</span>    <span class=\"nv\">$cleanSummary</span> <span class=\"o\">=</span> <span class=\"nb\">preg_replace</span><span class=\"p\">(</span><span class=\"nv\">$pattern</span><span class=\"p\">,</span> <span class=\"s1\">'$1'</span><span class=\"p\">,</span> <span class=\"nv\">$summary</span><span class=\"p\">);</span>    <span class=\"k\">echo</span> <span class=\"s1\">'&lt;p class=\"summary\"&gt;'</span><span class=\"mf\">.</span><span class=\"nv\">$cleanSummary</span><span class=\"mf\">.</span><span class=\"s1\">'&lt;/p&gt;'</span><span class=\"p\">;</span><span class=\"cp\">?&gt;</span></code></pre></figure><p>Y la hoja de estilo CSS podemos personalizar el formato de la entradilla:</p><figure class=\"highlight\"><pre><code class=\"language-css\" data-lang=\"css\"><span class=\"nt\">p</span><span class=\"nc\">.summary</span> <span class=\"p\">{</span>    <span class=\"nl\">font-size</span><span class=\"p\">:</span> <span class=\"m\">1.2em</span><span class=\"p\">;</span>    <span class=\"nl\">font-weight</span><span class=\"p\">:</span> <span class=\"nb\">normal</span><span class=\"p\">;</span>    <span class=\"nl\">font-style</span><span class=\"p\">:</span> <span class=\"nb\">normal</span><span class=\"p\">;</span>    <span class=\"nl\">color</span><span class=\"p\">:</span> <span class=\"n\">DarkSlateGray</span><span class=\"p\">;</span><span class=\"p\">}</span></code></pre></figure><p>De esta forma, el código HTML que teníamos <strong>antes</strong>:</p><figure class=\"highlight\"><pre><code class=\"language-html\" data-lang=\"html\"><span class=\"nt\">&lt;div</span> <span class=\"na\">class=</span><span class=\"s\">\"more-link-wrapper\"</span><span class=\"nt\">&gt;&lt;a</span> <span class=\"na\">class=</span><span class=\"s\">\"more-link\"</span> <span class=\"na\">href=</span><span class=\"s\">\"https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/\"</span><span class=\"nt\">&gt;</span>Seguir leyendo<span class=\"nt\">&lt;span</span> <span class=\"na\">class=</span><span class=\"s\">\"screen-reader-text\"</span><span class=\"nt\">&gt;</span>Herramientas, métodos y enfoque<span class=\"nt\">&lt;/span&gt;</span> <span class=\"nt\">&lt;i</span> <span class=\"na\">class=</span><span class=\"s\">\"fas fa-angle-right\"</span><span class=\"nt\">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt;</span></code></pre></figure><p>Aparece así <strong>después</strong>:</p><figure class=\"highlight\"><pre><code class=\"language-html\" data-lang=\"html\"><span class=\"nt\">&lt;div</span> <span class=\"na\">class=</span><span class=\"s\">\"more-link-wrapper\"</span><span class=\"nt\">&gt;&lt;/div&gt;</span></code></pre></figure><p>Ahora queda revisar los más de 150 artículos y sus entradillas porque, como en este <em>post</em> que comparto, será necesario reducirlo en extensión y hacer un buen resumen.</p><p><strong>Ocho en punto</strong> · <a href=\"https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/\"><em>Herramientas, métodos y enfoque</em></a></p>",
-            "url": "http://localhost:4000/entradillas-8am/",
-            
-            
-            
-            "tags": ["informática","WordPress","programación","8am"],
-            
-            "date_published": "2023-09-03T07:00:00+02:00",
-            "date_modified": "2023-09-03T07:00:00+02:00",
             
                 "author": "Enrique Benimeli"
             
