@@ -1,0 +1,15 @@
+---
+title: "Miércoles"
+date: 2024-10-18T15:00:00+00:00
+author: Enrique Benimeli
+layout: post
+permalink: /XXX/
+categories: General
+tags: []
+---
+
+[![image](assets/images/posts/post03.jpg)]()
+
+Texto.
+
+**Fuente** · [*Fuente*]()
