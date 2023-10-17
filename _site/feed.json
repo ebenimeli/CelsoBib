@@ -17,6 +17,63 @@
 "items": [
     
         {
+            "id": "http://localhost:4000/ganar-aprender/",
+            "title": "Unas veces se gana y otras se aprende",
+            "summary": null,
+            "content_text": "Unas veces se gana y otras se aprende. Hoy jugaba con negras y aprendí.",
+            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/10/perder_aprender.png\" alt=\"image\" /></a></p><p>Unas veces se gana y otras se aprende. Hoy jugaba con negras y aprendí.</p>",
+            "url": "http://localhost:4000/ganar-aprender/",
+            
+            
+            
+            "tags": ["ajedrez","aprendizaje"],
+            
+            "date_published": "2023-10-16T22:00:00+02:00",
+            "date_modified": "2023-10-16T22:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/premio-planeta-2023/",
+            "title": "Premio Planeta 2023",
+            "summary": null,
+            "content_text": "Este año, la 72ª edición del Premio Planeta tendrá lugar en el Museu Nacional d’Art de Catalunya y el fallo se podrá ver en streaming en el canal de YouTube de Planeta de libros hoy domingo 15 de octubre a partir de las 23:15h. También se podrá seguir en las páginas web: premioplaneta.es, planetadelibros.com y casadellibro.com.El Premio Planeta es el de mayor dotación económica en el mundo, superando al Premio Nobel. La novela ganadora es premiada con 1.000.000€ y la novela finalista con 200.000€. La novela ganadora de la pasada edición Lejos de Luisiana de Luz Gabás, y la finalista, Historias de mujeres casadas de Cristina Campos.¿Quién ganó el Premio Planeta el año que naciste?    YouTube · Acto de entrega del Premio Planeta 2023Premio Planeta · premioplaneta.es · Instagram · #PremioPlaneta2023 en X",
+            "content_html": "<p><a href=\"https://www.instagram.com/p/CyBAZxnI7Qi/\"><img src=\"assets/images/posts/2023/10/premio_planeta_1952-2022.jpg\" alt=\"image\" /></a></p><p>Este año, la 72ª edición del Premio Planeta tendrá lugar en el <a href=\"https://www.museunacional.cat/es\">Museu Nacional d’Art de Catalunya</a> y el fallo se podrá ver en <em>streaming</em> en el <a href=\"https://www.youtube.com/watch?v=zYoK0bYlrjY\">canal de YouTube de <em>Planeta de libros</em></a> hoy domingo 15 de octubre a partir de las 23:15h. También se podrá seguir en las páginas web: <a href=\"https://www.premioplaneta.es/\">premioplaneta.es</a>, <a href=\"https://www.planetadelibros.com/\">planetadelibros.com</a> y <a href=\"https://www.casadellibro.com/\">casadellibro.com</a>.</p><p>El Premio Planeta es el de mayor dotación económica en el mundo, superando al Premio Nobel. La novela ganadora es premiada con 1.000.000€ y la novela finalista con 200.000€. La novela ganadora de la pasada edición <a href=\"https://amzn.to/3M1DPrf\"><em>Lejos de Luisiana</em></a> de Luz Gabás, y la finalista, <a href=\"https://amzn.to/46PjWvq\"><em>Historias de mujeres casadas</em></a> de Cristina Campos.</p><p>¿Quién ganó el Premio Planeta <a href=\"https://www.instagram.com/p/CyBAZxnI7Qi/\">el año que naciste</a>?</p><div class=\"embed-container\">    <iframe src=\"https://www.youtube.com/embed/zYoK0bYlrjY\" frameborder=\"0\" allowfullscreen=\"\"></iframe></div><p><strong>YouTube</strong> · <a href=\"https://www.youtube.com/watch?v=zYoK0bYlrjY\"><em>Acto de entrega del Premio Planeta 2023</em></a></p><p><strong>Premio Planeta</strong> · <a href=\"https://www.premioplaneta.es/\">premioplaneta.es</a> · <a href=\"https://www.instagram.com/premioplaneta/\">Instagram</a> · <a href=\"https://twitter.com/hashtag/PremioPlaneta2023\">#PremioPlaneta2023</a> en X</p>",
+            "url": "http://localhost:4000/premio-planeta-2023/",
+            
+            
+            
+            "tags": ["Premio Planeta","libros","premios","literatura"],
+            
+            "date_published": "2023-10-15T08:00:00+02:00",
+            "date_modified": "2023-10-15T08:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/esferatic-tema/",
+            "title": "Nuevo diseño para Esfera TIC",
+            "summary": null,
+            "content_text": "He cambiado el diseño de Esfera TIC, mi blog sobre educación y TIC. Creo que necesitaba algo más de espacio para algunos contenidos. Aunque faltan algunos detalles, este es el estilo que quiero mantener de momento.Esfera TIC · www.esferatic.com",
+            "content_html": "<p><a href=\"\"><img src=\"assets/images/posts/2023/10/esferatic_tema.jpg\" alt=\"image\" /></a></p><p>He cambiado el diseño de <a href=\"https://www.esferatic.com\">Esfera TIC</a>, mi blog sobre educación y TIC. Creo que necesitaba algo más de espacio para algunos contenidos. Aunque faltan algunos detalles, este es el estilo que quiero mantener de momento.</p><p><strong>Esfera TIC</strong> · <a href=\"https://www.esferatic.com/\">www.esferatic.com</a></p>",
+            "url": "http://localhost:4000/esferatic-tema/",
+            
+            
+            
+            "tags": ["Esfera TIC","blog","diseño"],
+            
+            "date_published": "2023-10-14T22:00:00+02:00",
+            "date_modified": "2023-10-14T22:00:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
             "id": "http://localhost:4000/copia-pega-productivo/",
             "title": "Atajos superproductivos",
             "summary": null,
@@ -638,63 +695,6 @@
             
             "date_published": "2023-09-11T19:00:00+02:00",
             "date_modified": "2023-09-11T19:00:00+02:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/fabula-colibri/",
-            "title": "La fábula del colibrí",
-            "summary": null,
-            "content_text": "Antes de empezar un nuevo curso, siempre conviene detenerse para reflexionar sobre nuestro papel como docentes. En unos días la rutina probablemente no nos deje pensar con tanta claridad.Los profesores tenemos por delante enormes desafíos, muchos de ellos globales. Y la fábula del colibrí siempre me parece inspiradora y alentadora. Os la cuento en Esfera TIC.Esfera TIC · Cómo cambiar el mundo: la fábula del colibrí",
-            "content_html": "<p><a href=\"https://www.esferatic.com/2023/09/como-cambiar-el-mundo-la-fabula-del-colibri/\"><img src=\"assets/images/posts/2023/09/colibri_edu.jpg\" alt=\"image\" /></a></p><p>Antes de empezar un <strong>nuevo curso</strong>, siempre conviene detenerse para reflexionar sobre nuestro papel como docentes. En unos días la rutina probablemente no nos deje pensar con tanta claridad.</p><p>Los <strong>profesores</strong> tenemos por delante enormes <strong>desafíos</strong>, muchos de ellos globales. Y la <strong>fábula del colibrí</strong> siempre me parece inspiradora y alentadora. Os la cuento en <a href=\"https://www.esferatic.com/2023/09/como-cambiar-el-mundo-la-fabula-del-colibri/\">Esfera TIC</a>.</p><p><strong>Esfera TIC</strong> · <a href=\"https://www.esferatic.com/2023/09/como-cambiar-el-mundo-la-fabula-del-colibri/\">Cómo cambiar el mundo: la fábula del colibrí</a></p>",
-            "url": "http://localhost:4000/fabula-colibri/",
-            
-            
-            
-            "tags": ["profesores","educación","fábula"],
-            
-            "date_published": "2023-09-10T08:00:00+02:00",
-            "date_modified": "2023-09-10T08:00:00+02:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/miee-23-24/",
-            "title": "MIEE: educación, innovación y tecnología",
-            "summary": null,
-            "content_text": "Un año más (y empiezo a perder la cuenta), es un placer haber sido seleccionado como Microsoft Innovative Educator Expert (MIEE) para el curso 2023-2024. Cuando la educación, la innovación y la tecnología van de la mano, el camino siempre es más sencillo.Microsoft · Microsoft’s 2023-2024 MIE Experts",
-            "content_html": "<p><a href=\"https://educationblog.microsoft.com/en-us/2023/09/microsofts-2023-2024-mie-experts-and-showcase-schools-fostering-a-culture-of-innovation\"><img src=\"assets/images/posts/2023/09/ebenimeli_MIEE_23-24.png\" alt=\"image\" /></a></p><p>Un año más (y empiezo a perder la cuenta), es un placer haber sido seleccionado como <em>Microsoft Innovative Educator Expert</em> (MIEE) para el curso 2023-2024. Cuando la educación, la innovación y la tecnología van de la mano, el camino siempre es más sencillo.</p><p><strong>Microsoft</strong> · <a href=\"https://educationblog.microsoft.com/en-us/2023/09/microsofts-2023-2024-mie-experts-and-showcase-schools-fostering-a-culture-of-innovation\">Microsoft’s 2023-2024 MIE Experts</a></p>",
-            "url": "http://localhost:4000/miee-23-24/",
-            
-            
-            
-            "tags": ["TIC","profesores","educación","tecnología","MIEE","Microsoft"],
-            
-            "date_published": "2023-09-09T08:00:00+02:00",
-            "date_modified": "2023-09-09T08:00:00+02:00",
-            
-                "author": "Enrique Benimeli"
-            
-        },
-    
-        {
-            "id": "http://localhost:4000/tic-vueltaalcole/",
-            "title": "Un checklist TIC para el primer día de clase",
-            "summary": null,
-            "content_text": "He compartido en Ocho en punto un checklist especialmente diseñado para profesores en su primer día de clase. Una serie de 31 consejos TIC organizados en 8 bloques para empezar el curso con buen pie: dispositivos, conectividad, plataformas y servicios, comunicaciones, multimedia, aplicaciones y gestión de incidencias. La clave está en una buena previsión y organización.Ocho en punto · 31 consejos TIC para un primer día de clase sin sorpresas",
-            "content_html": "<p><a href=\"https://www.ochoenpunto.com/31-consejos-tic-profesores-checklist-primer-dia-clase/\"><img src=\"assets/images/posts/2023/09/ordenador_libros.jpg\" alt=\"image\" /></a></p><p>He compartido en <em>Ocho en punto</em> un <em>checklist</em> especialmente diseñado para profesores en su primer día de clase. Una serie de <strong>31 consejos TIC</strong> organizados en 8 bloques para empezar el curso con buen pie: dispositivos, conectividad, plataformas y servicios, comunicaciones, multimedia, aplicaciones y gestión de incidencias. La clave está en una buena <strong>previsión</strong> y <strong>organización</strong>.</p><p><strong>Ocho en punto</strong> · <a href=\"https://www.ochoenpunto.com/31-consejos-tic-profesores-checklist-primer-dia-clase/\">31 consejos TIC para un primer día de clase sin sorpresas</a></p>",
-            "url": "http://localhost:4000/tic-vueltaalcole/",
-            
-            
-            
-            "tags": ["TIC","profesores","educación","tecnología"],
-            
-            "date_published": "2023-09-08T10:00:00+02:00",
-            "date_modified": "2023-09-08T10:00:00+02:00",
             
                 "author": "Enrique Benimeli"
             
