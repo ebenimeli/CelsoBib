@@ -4,13 +4,232 @@
  <title>Enrique Benimeli</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-10-02T20:36:41+02:00</updated>
+ <updated>2023-10-18T21:51:38+02:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Enrique Benimeli</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Máster en hábitos</title>
+   <link href="http://localhost:4000/repeat-habitos/"/>
+   <updated>2023-10-18T17:00:00+02:00</updated>
+   <id>http://localhost:4000/repeat-habitos</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/repeat_habitos.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hace tiempo que utilizo &lt;a href=&quot;https://apps.apple.com/us/app/repeat-habits-wellbeing/id1546204928&quot;&gt;Repeat&lt;/a&gt; en mi teléfono para hacer el seguimiento de varios &lt;strong&gt;hábitos&lt;/strong&gt; y &lt;strong&gt;rutinas&lt;/strong&gt;. &lt;a href=&quot;https://twitter.com/enriquebenimeli/status/1714728880508944599&quot;&gt;Hoy&lt;/a&gt; he alcanzado el nivel &lt;em&gt;master&lt;/em&gt;, que parece ser el máximo nivel. No entiendo muy bien qué significa, pero celebrémoslo. La aplicación es sencilla, de estilo minimalista, sin complicaciones y hace lo que tiene que hacer.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>El Puente de la Torre de Londres (por Gaudí)</title>
+   <link href="http://localhost:4000/torre-londres-gaudi/"/>
+   <updated>2023-10-17T17:00:00+02:00</updated>
+   <id>http://localhost:4000/torre-londres-gaudi</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/london_bridge_gaudi.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Será cosa de la inteligencia artificial, pero &lt;a href=&quot;https://www.instagram.com/p/CyOGhoWLvyu/?img_index=3&quot;&gt;así&lt;/a&gt; luce el Puente de la Torre de Londres si la hubiera diseñado Gaudí.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Unas veces se gana y otras se aprende</title>
+   <link href="http://localhost:4000/ganar-aprender/"/>
+   <updated>2023-10-16T22:00:00+02:00</updated>
+   <id>http://localhost:4000/ganar-aprender</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/perder_aprender.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Unas veces se gana y otras se aprende. Hoy jugaba con negras y aprendí.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Premio Planeta 2023</title>
+   <link href="http://localhost:4000/premio-planeta-2023/"/>
+   <updated>2023-10-15T08:00:00+02:00</updated>
+   <id>http://localhost:4000/premio-planeta-2023</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.instagram.com/p/CyBAZxnI7Qi/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/premio_planeta_1952-2022.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Este año, la 72ª edición del Premio Planeta tendrá lugar en el &lt;a href=&quot;https://www.museunacional.cat/es&quot;&gt;Museu Nacional d’Art de Catalunya&lt;/a&gt; y el fallo se podrá ver en &lt;em&gt;streaming&lt;/em&gt; en el &lt;a href=&quot;https://www.youtube.com/watch?v=zYoK0bYlrjY&quot;&gt;canal de YouTube de &lt;em&gt;Planeta de libros&lt;/em&gt;&lt;/a&gt; hoy domingo 15 de octubre a partir de las 23:15h. También se podrá seguir en las páginas web: &lt;a href=&quot;https://www.premioplaneta.es/&quot;&gt;premioplaneta.es&lt;/a&gt;, &lt;a href=&quot;https://www.planetadelibros.com/&quot;&gt;planetadelibros.com&lt;/a&gt; y &lt;a href=&quot;https://www.casadellibro.com/&quot;&gt;casadellibro.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;El Premio Planeta es el de mayor dotación económica en el mundo, superando al Premio Nobel. La novela ganadora es premiada con 1.000.000€ y la novela finalista con 200.000€. La novela ganadora de la pasada edición &lt;a href=&quot;https://amzn.to/3M1DPrf&quot;&gt;&lt;em&gt;Lejos de Luisiana&lt;/em&gt;&lt;/a&gt; de Luz Gabás, y la finalista, &lt;a href=&quot;https://amzn.to/46PjWvq&quot;&gt;&lt;em&gt;Historias de mujeres casadas&lt;/em&gt;&lt;/a&gt; de Cristina Campos.&lt;/p&gt;
+
+&lt;p&gt;¿Quién ganó el Premio Planeta &lt;a href=&quot;https://www.instagram.com/p/CyBAZxnI7Qi/&quot;&gt;el año que naciste&lt;/a&gt;?&lt;/p&gt;
+
+&lt;div class=&quot;embed-container&quot;&gt;
+    &lt;iframe src=&quot;https://www.youtube.com/embed/zYoK0bYlrjY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;YouTube&lt;/strong&gt; · &lt;a href=&quot;https://www.youtube.com/watch?v=zYoK0bYlrjY&quot;&gt;&lt;em&gt;Acto de entrega del Premio Planeta 2023&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Premio Planeta&lt;/strong&gt; · &lt;a href=&quot;https://www.premioplaneta.es/&quot;&gt;premioplaneta.es&lt;/a&gt; · &lt;a href=&quot;https://www.instagram.com/premioplaneta/&quot;&gt;Instagram&lt;/a&gt; · &lt;a href=&quot;https://twitter.com/hashtag/PremioPlaneta2023&quot;&gt;#PremioPlaneta2023&lt;/a&gt; en X&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Nuevo diseño para Esfera TIC</title>
+   <link href="http://localhost:4000/esferatic-tema/"/>
+   <updated>2023-10-14T22:00:00+02:00</updated>
+   <id>http://localhost:4000/esferatic-tema</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/esferatic_tema.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;He cambiado el diseño de &lt;a href=&quot;https://www.esferatic.com&quot;&gt;Esfera TIC&lt;/a&gt;, mi blog sobre educación y TIC. Creo que necesitaba algo más de espacio para algunos contenidos. Aunque faltan algunos detalles, este es el estilo que quiero mantener de momento.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Esfera TIC&lt;/strong&gt; · &lt;a href=&quot;https://www.esferatic.com/&quot;&gt;www.esferatic.com&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Atajos superproductivos</title>
+   <link href="http://localhost:4000/copia-pega-productivo/"/>
+   <updated>2023-10-13T17:00:00+02:00</updated>
+   <id>http://localhost:4000/copia-pega</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/windows_insertar_emoji.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;¿Sabías que puedes copiar primero los fragmentos de texto que necesitas y después pegarlos en el orden que quieras? ¿Y que lo puedes hacer sin el ratón, simplemente con el teclado? En un &lt;a href=&quot;https://www.ochoenpunto.com/atajos-productivos-texto-copiar-pegar/&quot;&gt;nuevo artículo de &lt;em&gt;Ocho en punto&lt;/em&gt;&lt;/a&gt; presento varios atajos productivos para seleccionar, copiar y pegar texto. Y &lt;em&gt;emojis&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ocho en punto&lt;/strong&gt; · &lt;a href=&quot;https://www.ochoenpunto.com/atajos-productivos-texto-copiar-pegar/&quot;&gt;&lt;em&gt;Atajos superproductivos para el texto: mucho más que copiar y pegar&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Faros de España</title>
+   <link href="http://localhost:4000/faros-espana/"/>
+   <updated>2023-10-12T17:00:00+02:00</updated>
+   <id>http://localhost:4000/faros-espana</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://twitter.com/tiempobrasero/status/1710203442373796046&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/faros_es.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Sé un faro en lugar de un bote salvavidas. Ayudar a otros a encontrar su camino a la orilla siempre es mejor que tener que rescatarlos.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Vía&lt;/strong&gt; · &lt;a href=&quot;https://twitter.com/tiempobrasero/status/1710203442373796046&quot;&gt;@tiempobrasero&lt;/a&gt; en X&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>¿Cuál es tu escritorio productivo?</title>
+   <link href="http://localhost:4000/escritorio-pc/"/>
+   <updated>2023-10-11T17:00:00+02:00</updated>
+   <id>http://localhost:4000/escritorio-pc</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.instagram.com/p/CyOPRzBOIlK/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/escritorio_pc.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A veces soy 9 y a veces soy 1. También soy 1+9. En alguna ocasión he necesitado ser 3 y una vez fui 4.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Vía&lt;/strong&gt; · &lt;a href=&quot;https://www.instagram.com/p/CyOPRzBOIlK/&quot;&gt;&lt;em&gt;@gtdfocus&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Día de Ada Lovelace</title>
+   <link href="http://localhost:4000/ada-lovelace-day/"/>
+   <updated>2023-10-10T15:00:00+02:00</updated>
+   <id>http://localhost:4000/ada-lovelace-day</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.telefonica.com/es/sala-comunicacion/blog/dia-ada-lovelace/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/AdaLovelaceDay.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Desde 2009, el segundo martes de octubre (hoy) se celebra &lt;strong&gt;&lt;em&gt;El día de Ada Lovelace&lt;/em&gt;&lt;/strong&gt; para visibilizar el trabajo de las mujeres &lt;strong&gt;STEM&lt;/strong&gt; (ciencia, tecnología, ingeniería y matemáticas). Esta mañana he compartido con mis alumnos este evento y algunos recursos para conocer la aportación de Ada Lovelace al mundo de la informática.&lt;/p&gt;
+
+&lt;p&gt;En la web de Telefónica han publicado un &lt;a href=&quot;https://www.telefonica.com/es/sala-comunicacion/blog/dia-ada-lovelace/&quot;&gt;artículo&lt;/a&gt; para conocer más sobre &lt;em&gt;El día de Ada Lovelace&lt;/em&gt; y también sobre su protagonista.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Telefónica&lt;/strong&gt; · &lt;a href=&quot;https://www.telefonica.com/es/sala-comunicacion/blog/dia-ada-lovelace/&quot;&gt;&lt;em&gt;El día de Ada Lovelace&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Riega todas tus plantitas</title>
+   <link href="http://localhost:4000/salud-mental/"/>
+   <updated>2023-10-09T17:00:00+02:00</updated>
+   <id>http://localhost:4000/salud-mental</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.instagram.com/p/CvGjmRrME8x/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/riega_tus_plantas.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Mañana es el &lt;a href=&quot;https://consaludmental.org/dia-mundial-de-la-salud-mental/&quot;&gt;Día Mundial de la Salud Mental&lt;/a&gt; y creo que &lt;a href=&quot;https://www.instagram.com/p/CvGjmRrME8x/&quot;&gt;esta viñeta de Karen Castilla&lt;/a&gt; es necesaria.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>¿Creas o consumes?</title>
+   <link href="http://localhost:4000/creador-consumidor/"/>
+   <updated>2023-10-08T17:00:00+02:00</updated>
+   <id>http://localhost:4000/creas-consumes</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.ochoenpunto.com/tus-apps-te-delatan-creas-o-consumes/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/consumer_creator.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;La proliferación de creadores de contenidos online coincide con una disminución de publicaciones en el medio escrito frente a medios audiovisuales llamativos. Además, el exceso en el uso de dispositivos y el consumo de información en redes sociales promueve en muchos casos la adicción en detrimento de la creación. ¿Tú creas o consumes? Tus aplicaciones te delatan.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ocho en punto&lt;/strong&gt; · &lt;a href=&quot;https://www.ochoenpunto.com/tus-apps-te-delatan-creas-o-consumes/&quot;&gt;&lt;em&gt;Tus apps te delatan: ¿creas o consumes?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Hardware y software en Shuffled!</title>
+   <link href="http://localhost:4000/shuffled-hwsw/"/>
+   <updated>2023-10-07T13:00:00+02:00</updated>
+   <id>http://localhost:4000/shuffled-hwsw</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://bit.ly/shuffled-hwsw&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/shuffled_computer.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Acabo de actualizar &lt;a href=&quot;https://bit.ly/shuffled-hwsw&quot;&gt;Shuffled!&lt;/a&gt; con vocabulario básico en inglés para los primeros temas de introducción a la informática. Cuidado, que engancha.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Shuffled!&lt;/strong&gt; · &lt;a href=&quot;https://bit.ly/shuffled-hwsw&quot;&gt;&lt;em&gt;Hardware &amp;amp; Software&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Empezar</title>
+   <link href="http://localhost:4000/solo-empezar/"/>
+   <updated>2023-10-06T17:00:00+02:00</updated>
+   <id>http://localhost:4000/empezar</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://twitter.com/victor_bigfield/status/1700132451241087046?s=12&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/ship_first.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Simplementar empezar. Es el método que nunca falla. Lanza tu proyecto.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ilustración&lt;/strong&gt; · &lt;a href=&quot;https://twitter.com/victor_bigfield/status/1700132451241087046?s=12&quot;&gt;@victor_bigfield&lt;/a&gt; en &lt;strong&gt;X&lt;/strong&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Día mundial de los docentes</title>
+   <link href="http://localhost:4000/dia-docentes/"/>
+   <updated>2023-10-05T17:00:00+02:00</updated>
+   <id>http://localhost:4000/dia-docentes</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/educacion.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hoy se celebra el &lt;a href=&quot;https://www.unesco.org/es/days/teachers&quot;&gt;Día Mundial de los Docentes&lt;/a&gt;. Felicidades a todos los que cada día estáis a pie de aula.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Este y oeste</title>
+   <link href="http://localhost:4000/cultura-este-oeste/"/>
+   <updated>2023-10-04T14:00:00+02:00</updated>
+   <id>http://localhost:4000/miercoles</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://thelanguagenerds.com/2023/24-funny-illustrations-that-show-the-cultural-differences-between-the-east-and-the-west/&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/puntualidad.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The Language Nerds&lt;/em&gt; comparte 24 ilustraciones que muestran las diferencias culturales entre China y Alemania, aunque en el título generalizan con &lt;em&gt;este y oeste&lt;/em&gt;. Algunas son simples estereotipos, pero otras son un claro ejemplo de lo que nos hace distintos: la puntualidad, los medios de transporte, el modo de expresar una opinión o un sentimiento o las relaciones familiares.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;The Language Nerds&lt;/em&gt;&lt;/strong&gt; · &lt;a href=&quot;https://thelanguagenerds.com/2023/24-funny-illustrations-that-show-the-cultural-differences-between-the-east-and-the-west/&quot;&gt;&lt;em&gt;24 Funny Illustrations That Show The Cultural Differences Between The East And The West&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>El nuevo trabajo</title>
+   <link href="http://localhost:4000/nuevo-trabajo/"/>
+   <updated>2023-10-03T17:00:00+02:00</updated>
+   <id>http://localhost:4000/nuevo-trabajo</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://amzn.to/46d24tT&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/09/mente_extendida.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Sigo leyendo (estudiando) el libro José Miguel Bolivar y Jordi Fortuny sobre el método definitivo de efectividad personal que proponen. El &lt;em&gt;nuevo trabajo&lt;/em&gt; tiene unas características muy particulares, que explican los autores de forma muy esclarecedora.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;[…] la tercera característica del &lt;strong&gt;nuevo trabajo&lt;/strong&gt;: siempre hay más por hacer que tiempo para hacerlo. […] ¿qué ocurrirá, inevitablemente, con algunas de esas cosas? Cierto, que se quedarán sin hacer. Da igual las muchas horas que trabajes, lo muy eficiente que seas o lo sólido que sea tu compromiso. &lt;strong&gt;Nunca conseguirás que todo esté hecho porque es imposible&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;De algún modo, este pasaje me tranquiliza.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Libro&lt;/strong&gt; · &lt;a href=&quot;https://amzn.to/46d24tT&quot;&gt;&lt;em&gt;Recupera tu vida con una mente extendida&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>MIEE en Credly</title>
