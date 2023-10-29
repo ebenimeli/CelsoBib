@@ -1,7 +1,12 @@
+- timestamp: 2023-10-29 07:15
+  text: "Cronovisor: Antoni Gaudí, el arquitecto revolucionario"
+  link: https://podcasts.apple.com/es/podcast/cronovisor-antoni-gaud%C3%AD-el-arquitecto-revolucionario/id356329864?i=1000632955665
+  cat: 'podcast'
+
 - timestamp: 2023-09-09 09:07
   text: "Al menos 1.037 muertos y 1.204 heridos en un terremoto de magnitud 7 en Marruecos"
   link: https://www.elmundo.es/internacional/2023/09/09/64fbb2aefdddff3fb48b458e.html
-  cat: 'urgent'
+  cat: 'news'
 
 - timestamp: 2023-09-08 08:00
   text: "Nuevo post: «31 consejos TIC para un primer día de clase sin sorpresas»"
