@@ -4,13 +4,59 @@
  <title>Enrique Benimeli</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-10-19T16:04:43+02:00</updated>
+ <updated>2023-11-02T20:02:59+01:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Enrique Benimeli</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>¡Cambia la hora!</title>
+   <link href="http://localhost:4000/cambio-de-hora-2023/"/>
+   <updated>2023-10-28T17:00:00+02:00</updated>
+   <id>http://localhost:4000/cambio-de-hora</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.elmundo.es/como/2023/10/28/653bc0cbe9cf4a877c8b45b2.html&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/cambiohora.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Lo del cambio de hora es como lo de las campanadas de fin de año: siempre hay que volverlo a explicar. El resumen: a las 3 de la madrugada del domingo serán las 2. Pero mejor cambiar la hora ya, si es que conservamos algún reloj que no lo cambia automáticamente.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;El Mundo&lt;/strong&gt; · &lt;a href=&quot;https://www.elmundo.es/como/2023/10/28/653bc0cbe9cf4a877c8b45b2.html&quot;&gt;&lt;em&gt;Cambio de hora octubre 2023: ¿hoy hay que adelantar o atrasar el reloj?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Fotografía · &lt;a href=&quot;https://pixabay.com/es/photos/invierno-reloj-cambio-de-tiempo-2896597/&quot;&gt;&lt;em&gt;Reloj de invierno&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>De haberlo sabido</title>
+   <link href="http://localhost:4000/de-haberlo-sabido/"/>
+   <updated>2023-10-26T17:00:00+02:00</updated>
+   <id>http://localhost:4000/de-haberlo-sabido</id>
+   <content type="html">&lt;style&gt;.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }&lt;/style&gt;
+&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe src=&quot;https://www.youtube.com/embed/gLn3oNOTo_A&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;p&gt;Quique González &amp;amp; Los Detectives con Nina Morgan. Directo de la canción &lt;em&gt;De Haberlo Sabido&lt;/em&gt; en Mad Cool Live Sessions 2017. Está incluido en su álbum &lt;em&gt;En Vivo Desde Radio Station&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Es la música y es la letra.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Quique González&lt;/strong&gt; · &lt;a href=&quot;https://www.youtube.com/watch?v=gLn3oNOTo_A&quot;&gt;&lt;em&gt;Quique González &amp;amp; Los Detectives - De Haberlo Sabido (Live)&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Steve Jobs (1981)</title>
+   <link href="http://localhost:4000/steve-jobs-pc-1981/"/>
+   <updated>2023-10-20T17:00:00+02:00</updated>
+   <id>http://localhost:4000/steve-jobs-1981</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=WVvpCpDDui0&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/10/steve_jobs_1981_int.jpeg&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;En 1981, un joven &lt;strong&gt;Steve Jobs&lt;/strong&gt; de apenas 25 años &lt;a href=&quot;https://www.youtube.com/watch?v=WVvpCpDDui0&quot;&gt;explicaba en una entrevista&lt;/a&gt; cómo el ordenador se concebía como una herramienta capaz de &lt;strong&gt;potenciar las habilidades&lt;/strong&gt; intelectuales de las personas.&lt;/p&gt;
+
+&lt;p&gt;Desde esta perspectiva, destacaba la capacidad de la &lt;strong&gt;tecnología&lt;/strong&gt; para &lt;strong&gt;ampliar y mejorar&lt;/strong&gt; nuestras &lt;strong&gt;facultades cognitivas&lt;/strong&gt;, lo que nos permitía alcanzar objetivos y abordar problemas de manera más efectiva. En aquel momento, Apple era una empresa con menos de cinco años de existencia, y Jobs aún no tenía la fama que posteriormente alcanzaría. Lo cuento en mi último &lt;a href=&quot;https://www.esferatic.com/2023/10/steve-jobs-ia-analogia-1981/&quot;&gt;artículo&lt;/a&gt; de Esfera TIC.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Esfera TIC&lt;/strong&gt; · &lt;a href=&quot;https://www.esferatic.com/2023/10/steve-jobs-ia-analogia-1981/&quot;&gt;&lt;em&gt;Steve Jobs, la IA y una analogía en 1981&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Personas creativas</title>
