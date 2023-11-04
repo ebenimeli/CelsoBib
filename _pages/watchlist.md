@@ -4,6 +4,14 @@ title: ""
 description: "Películas, series de TV y documentales"
 ---
 
+### Ahora estoy viendo...
+
+![Memento Mori](images/misc/mementomori.jpeg)
+
+[*Memento Mori* en Prime Video](https://www.primevideo.com/detail/0H69GXL24UNDZNY2OBJKH5QWOL/ref=atv_dp_share_cu_r)
+
+Justo cuando estaba a punto de abandonar Valladolid, el inspector Ramiro Sancho se enfrenta a un asesino en serie que está dejando un reguero de cadáveres en la ciudad. Con la ayuda de “Carapocha”, un psicólogo criminalista, perseguirá a Augusto, un sociópata que convierte cada crimen en una obra de arte. Lo que no sabe Sancho es que la persecución se convertirá en un duelo muy “personal”...
+
 ### Cine
 1. La piel del tambor (2022) [→ 🍿](https://www.primevideo.com/dp/0T42O5Z6QECZ4Q6CXW1D7OYTAY) ★★★★☆
 1. Ex machina (2014) [→ 🍿](https://www.imdb.com/title/tt0470752/) ★★★★☆
