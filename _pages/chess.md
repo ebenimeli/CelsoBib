@@ -7,6 +7,6 @@ description: "Rincón de ajedrez"
 <div class="chess">
     <img src="assets/images/pages/chess/games/board.gif"/>
     <br/><br/>
-    02.11.2023 / Enrique (N) vs (B) PC
+    05.11.2023 · Tablas · Enrique (N) vs (B) PC
 <br/>
 </div>
