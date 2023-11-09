@@ -1,10 +1,24 @@
+- title: Cartografía de la sociedad y educación digital
+  author: Sonia Santoveña-Casal
+  link: https://amzn.to/3FSFvzO
+  image:
+  description:
+  genre: [educación]
+  completed: 2023
+  onpage: 49
+  pages: 402
+  synopsis: "A través de una revisión de la producción científica y académica se presenta un análisis de la sociedad y la educación digital y, por ende, de las tecnologías. En la primera parte del libro se exploran los principales hitos y transformaciones sociales, unidos inexorablemente a las innovaciones tecnológicas. Posteriormente, se realiza un recorrido desde la sociología, filosofía, antropología y educación sobre qué significa vivir en la sociedad actual: se inicia en la sociedad en red, para acudir posteriormente, a enfoques que hacen referencia al aumento del desconocimiento o la ignorancia, la incertidumbre, lo fluido y líquido, el riesgo, la complejidad, la transparencia, la decepción y la falta de certeza absoluta. Todas ellas características que definen la sociedad digital, en parte complementarias, en parte contradictorias. Finalmente, en la tercera parte del libro se estudia la educación digital. La educación en el siglo XXI que desenvuelve en un contexto donde nada perdura y todo está en continuo cambio y en este marco aparecen nuevas formas de aprender, nuevos enfoques teóricos que buscan aproximarse a la realidad para analizarla."
+  cover: "socedudig.jpg"
+  highlight:
+  updated: "9 nov."
+
 - title: Hombres buenos
   author: Arturo Pérez-Reverte
   link: https://amzn.to/3P7kzKE
   image:
   description:
   genre: [novela]
-  completed: 2023
+  completed: 
   onpage: 287
   pages: 582
   synopsis: "A finales del siglo XVIII, cuando dos miembros de la Real Academia Española, el bibliotecario don Hermógenes Molina y el almirante don Pedro Zárate, recibieron de sus compañeros el encargo de viajar a París para conseguir de forma casi clandestina los 28 volúmenes de la Encyclopédie de D'Alembert y Diderot, que estaba prohibida en España, nadie podía sospechar que los dos académicos iban a enfrentarse a una peligrosa sucesión de intrigas, a un viaje de incertidumbres y sobresaltos que los llevaría, por caminos infestados de bandoleros e incómodas ventas y posadas, desde el Madrid ilustrado de Carlos III al París de los cafés, los salones, las tertulias filosóficas, la vida libertina y las agitaciones políticas en vísperas de la Revolución francesa. Basada en hechos y personajes reales, documentada con extremo rigor, conmovedora y fascinante en cada página, Hombres buenos narra la heroica aventura de quienes, orientados por las luces de la Razón, quisieron cambiar el mundo con libros, cuando el futuro arrinconaba las viejas ideas y el ansia de libertad hacía tambalearse tronos y mundos establecidos."
@@ -23,7 +37,7 @@
   pages: 272
   synopsis: "Después de más de diez años ayudando a personas y organizaciones a ser más efectivas y lograr resultados, José Miguel Bolívar y Jordi Fortuny han creado OPTIMA3®, el método definitivo de efectividad personal. En este libro, los autores combinan todo su conocimiento y saber hacer con su experiencia como formadores certificados en GTD® de David Allen para diseñar una nueva metodología: un enfoque sencillo y flexible que elimina las complicaciones y se adapta a las necesidades y retos de los profesionales de hoy. Con OPTIMA3® aprenderás a: vivir sin estrés y sin olvidos, recuperar la sensación de tenertodos tus asuntos bajo control, priorizar qué hacer y qué no hacer en cada instante, y aumentar tu productividad en un 40%. Prepárate a descubrir una forma más sostenible de efectividad, basada en evidencias y centrada en el bienestar de las personas. Te cambiará la vida."
   cover: "recuperatuvida.jpg"
-  highlight: "yes"
+  highlight:
   updated: "28 oct."
 
 - title: Los Austrias. El vuelo del águila
