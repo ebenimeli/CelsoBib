@@ -60,7 +60,7 @@
   image:
   description:
   genre: [novela]
-  completed: 2023
+  completed:
   onpage: 134
   pages: 756
   synopsis: "26 de noviembre de 1504. La reina Isabel la Católica acaba de morir y ya se empiezan a escuchar las voces de la mayoría de los nobles de Castilla, que reclaman a Juana la Loca como su verdadera reina. Fernando de Aragón intenta llegar hasta donde sea necesario para impedir que su yerno, Felipe el Hermoso, le arrebate el gobierno de las tierras castellanas.
@@ -85,7 +85,7 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   genre: [productividad]
   onpage: 65
   pages: 249
-  completed: 2023
+  completed: 
   synopsis: "El «Deep Work» es la capacidad de concentrarse sin distracciones en una tarea cognitivamente exigente. En un mundo altamente competitivo que además incentiva la hiperconexión y la multitarea, la atención se ha convertido en un activo extremadamente valioso.  A partir de cuatro reglas prácticas, Carl Newport demuestra que reforzar nuestra capacidad de concentración y saber alejarse de las distracciones tecnológicas son los primeros pasos para lograr la felicidad y el éxito profesional."
   cover: "deepwork.jpeg"
   #highlight: "yes"
@@ -109,7 +109,7 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   image:
   description:
   genre: [ciencia]
-  completed: 2023
+  completed: 
   onpage: 17
   pages: 243
 
@@ -119,7 +119,7 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   image:
   description:
   genre: [ciencia]
-  completed: 2023
+  completed: 
   synopsis: "Un libro fascinante sobre uno de los mayores misterios de la humanidad: el origen del lenguaje.<br/>
 ―¿Por qué el mono no responde a lo que le digo? ―pregunta una niña de cuatro años.<br/>
 ―Porque los animales no saben hablar ―contesta su papá.<br/>
@@ -134,7 +134,7 @@ En busca del origen del lenguaje es el libro definitivo para entender cómo se o
 - title: "La Edad Media. Una historia gráfica"
   author: Eleanor Janega y Neil Max Emmanuel
   link: https://amzn.to/3hU1hKP
-  completed: 2023
+  completed: 
   onpage: 39.0
   pages: 181.0
 
@@ -144,7 +144,7 @@ En busca del origen del lenguaje es el libro definitivo para entender cómo se o
   image:
   description:
   genre: [novela]
-  completed: 'next'
+  completed: 
   progress: '5%'
   synopsis: "Clarissa, hija de un militar austríaco, conoce en Lucerna a Léonard, un joven socialista francés del que se enamora. El estallido de la Gran Guerra separa a los amantes y la joven, que ha quedado embarazada, debe volver a Austria en medio de una Europa que se desgarra, donde toma la decisión de tener y criar a un hijo del enemigo. Esta conmovedora novela tardía de Zweig es hoy considerada el testamento en el que el extraordinario escritor austríaco condensó los ideales humanísticos que abrazó durante toda su vida."
   cover: "clarissa.jpeg"
