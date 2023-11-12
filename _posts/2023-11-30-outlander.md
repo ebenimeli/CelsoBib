@@ -1,6 +1,6 @@
 ---
 title: "Outlander"
-date: 2023-11-12T08:00:00+00:00
+date: 2024-11-12T08:00:00+00:00
 author: Enrique Benimeli
 layout: post
 permalink: /outlander/
