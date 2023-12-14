@@ -4,13 +4,26 @@
  <title>Enrique Benimeli</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2023-11-12T19:04:52+01:00</updated>
+ <updated>2023-12-14T21:10:36+01:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Enrique Benimeli</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Hola, Threads</title>
+   <link href="http://localhost:4000/threads/"/>
+   <updated>2023-12-14T21:00:00+01:00</updated>
+   <id>http://localhost:4000/threads</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;assets/images/posts/2023/12/threads_ebenimeli.png&quot; alt=&quot;image&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ya está aquí Threads. Anunciaron que estaría disponible en diciembre en Europa y han cumplido. Y ahí va mi primera publicación. Como no podía ser de otra forma, un clásico &lt;a href=&quot;https://www.threads.net/@ebenimeli/post/C02C6N7MXh7&quot;&gt;&lt;em&gt;Hola, mundo&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Threads&lt;/strong&gt; · &lt;a href=&quot;https://www.threads.net/@ebenimeli&quot;&gt;&lt;em&gt;@ebenimeli&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>¡Cambia la hora!</title>
