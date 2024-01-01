@@ -7,6 +7,6 @@ description: "Rincón de ajedrez"
 <div class="chess">
     <img src="assets/images/pages/chess/games/board.gif"/>
     <br/><br/>
-    31.12.2023 · Enrique (N) vs (B) PC
+    01.01.2024 · Enrique (N) vs (B) PC
 <br/>
 </div>
