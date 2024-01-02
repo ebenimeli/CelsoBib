@@ -1,6 +1,6 @@
 ---
 title: "La piel del tambor"
-date: 2024-01-02T08:00:00+00:00
+date: 2025-01-02T08:00:00+00:00
 author: Enrique Benimeli
 layout: post
 permalink: /la-piel-del-tambor/
