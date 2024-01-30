@@ -14,4 +14,7 @@ Asómate a *La ventana digital*, mi [boletín en Substack](https://ebenimeli.sub
 
 En realidad, esta *newsletter* empieza como un experimento (como todo en la vida), sin grandes pretensiones, pero con muchas ganas de compartir. Lo haré cada 15 días, tiempo suficiente para recargar el boletín de novedades y poneros al día.
 
+<center>
+<iframe src="https://ebenimeli.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+</center>
 **Suscríbete** · [*La ventana digital*](https://ebenimeli.substack.com/)
