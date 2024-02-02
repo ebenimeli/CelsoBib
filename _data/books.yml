@@ -1,10 +1,37 @@
+- title: Clarissa
+  author: Stefan Zweig
+  link: https://amzn.to/3TPmaUz
+  image:
+  description:
+  genre: [novela]
+  completed: 
+  onpage: 25
+  pages: 199
+  synopsis: "Clarissa, hija de un militar austríaco, conoce en Lucerna a Léonard, un joven socialista francés del que se enamora. El estallido de la Gran Guerra separa a los amantes y la joven, que ha quedado embarazada, debe volver a Austria en medio de una Europa que se desgarra, donde toma la decisión de tener y criar a un hijo del enemigo. Esta conmovedora novela tardía de Zweig es hoy considerada el testamento en el que el extraordinario escritor austríaco condensó los ideales humanísticos que abrazó durante toda su vida."
+  cover: "clarissa.jpeg"
+  highlight: 'yes'
+
+- title: Invitación al aprendizaje
+  author: Eduardo Sáenz de Cabezón
+  link: https://amzn.to/42nos32
+  image:
+  description:
+  genre: [novela]
+  completed: 
+  onpage: 50
+  pages: 320
+  synopsis: "Un libro que hace homenaje al aprendizaje constante y vital. Invitación al aprendizaje es el libro que necesitas para darte cuenta que nunca es tarde para adquirir nuevos conocimientos y que puedes enriquecerte cada día si estás dispuesto a aprender durante toda tu vida. A través de diferentes procesos personales de varios personajes célebres, el profesor Eduardo Sáenz de Cabezón te hará entender que cualquiera puede aprender si los procedimientos son los correctos, que más importante que la edad es la motivación para ello y que la creatividad juega siempre un papel fundamental a la hora de optimizar tu aprendizaje. Y tú, ¿estás dispuesto a seguir aprendiendo?"
+  cover: "invitacion-al-aprendizaje.jpg"
+  highlight: 'yes'
+
+
 - title: Cartografía de la sociedad y educación digital
   author: Sonia Santoveña-Casal
   link: https://amzn.to/3FSFvzO
   image:
   description:
   genre: [educación]
-  completed: 2023
+  #completed: 2023
   onpage: 49
   pages: 402
   synopsis: "A través de una revisión de la producción científica y académica se presenta un análisis de la sociedad y la educación digital y, por ende, de las tecnologías. En la primera parte del libro se exploran los principales hitos y transformaciones sociales, unidos inexorablemente a las innovaciones tecnológicas. Posteriormente, se realiza un recorrido desde la sociología, filosofía, antropología y educación sobre qué significa vivir en la sociedad actual: se inicia en la sociedad en red, para acudir posteriormente, a enfoques que hacen referencia al aumento del desconocimiento o la ignorancia, la incertidumbre, lo fluido y líquido, el riesgo, la complejidad, la transparencia, la decepción y la falta de certeza absoluta. Todas ellas características que definen la sociedad digital, en parte complementarias, en parte contradictorias. Finalmente, en la tercera parte del libro se estudia la educación digital. La educación en el siglo XXI que desenvuelve en un contexto donde nada perdura y todo está en continuo cambio y en este marco aparecen nuevas formas de aprender, nuevos enfoques teóricos que buscan aproximarse a la realidad para analizarla."
@@ -18,7 +45,7 @@
   image:
   description:
   genre: [educación]
-  completed: 2023
+  #completed: 2023
   onpage: 19
   pages: 405
   synopsis: "El desarrollo psicológico a lo largo de la vida ofrece al lector-alumno un panorama actual, a la vez que comprensible y de fácil acceso, sobre la evolución psicológica del ser humano desde su nacimiento (incluso antes) hasta el final de la vida. La Psicología Evolutiva o Psicología del Desarrollo es una disciplina compleja que abarca los principales procesos de desarrollo que tienen lugar durante todo el ciclo vital. Los autores de esta obra han optado por una organización evolutiva de los contenidos, es decir, lejos de separar el desarrollo cognitivo-lingüístico por un lado y el desarrollo emocional y afectivo por otro, como es habitual en estos manuales, se presenta una sucesión de bloques relativos a las distintas etapas: el desarrollo temprano (del nacimiento hasta los dos años), la primera infancia (de los tres a los seis años), la etapa escolar y adolescencia y, finalmente, la vida adulta y la vejez. Dentro de cada bloque se diferencian los procesos de desarrollo: cognitivo, lingüístico, afectivo y social. Tras la lectura y estudio de los temas, el lector podrá elaborar el curso de desarrollo en sus distintas facetas dentro de cada etapa y, sobre todo, encontar las relaciones entre unas y otras."
@@ -26,28 +53,13 @@
   highlight:
   updated: "9 nov."
 
-- title: Hombres buenos
-  author: Arturo Pérez-Reverte
-  link: https://amzn.to/3P7kzKE
-  image:
-  description:
-  genre: [novela]
-  completed: 2023
-  #onpage: 572
-  pages: 582
-  synopsis: "A finales del siglo XVIII, cuando dos miembros de la Real Academia Española, el bibliotecario don Hermógenes Molina y el almirante don Pedro Zárate, recibieron de sus compañeros el encargo de viajar a París para conseguir de forma casi clandestina los 28 volúmenes de la Encyclopédie de D'Alembert y Diderot, que estaba prohibida en España, nadie podía sospechar que los dos académicos iban a enfrentarse a una peligrosa sucesión de intrigas, a un viaje de incertidumbres y sobresaltos que los llevaría, por caminos infestados de bandoleros e incómodas ventas y posadas, desde el Madrid ilustrado de Carlos III al París de los cafés, los salones, las tertulias filosóficas, la vida libertina y las agitaciones políticas en vísperas de la Revolución francesa. Basada en hechos y personajes reales, documentada con extremo rigor, conmovedora y fascinante en cada página, Hombres buenos narra la heroica aventura de quienes, orientados por las luces de la Razón, quisieron cambiar el mundo con libros, cuando el futuro arrinconaba las viejas ideas y el ansia de libertad hacía tambalearse tronos y mundos establecidos."
-  cover: "hombres_buenos.jpeg"
-  highlight: "yes"
-  #updated: "28 oct."
-  rating: 4
-
 - title: Recupera tu vida con una mente extendida
   author: José Miguel Bolívar y Jordi Fortuny
   link: https://amzn.to/3MmvWMZ
   image:
   description:
   genre: [productividad]
-  completed: 2023
+  #completed: 2023
   onpage: 145
   pages: 272
   synopsis: "Después de más de diez años ayudando a personas y organizaciones a ser más efectivas y lograr resultados, José Miguel Bolívar y Jordi Fortuny han creado OPTIMA3®, el método definitivo de efectividad personal. En este libro, los autores combinan todo su conocimiento y saber hacer con su experiencia como formadores certificados en GTD® de David Allen para diseñar una nueva metodología: un enfoque sencillo y flexible que elimina las complicaciones y se adapta a las necesidades y retos de los profesionales de hoy. Con OPTIMA3® aprenderás a: vivir sin estrés y sin olvidos, recuperar la sensación de tenertodos tus asuntos bajo control, priorizar qué hacer y qué no hacer en cada instante, y aumentar tu productividad en un 40%. Prepárate a descubrir una forma más sostenible de efectividad, basada en evidencias y centrada en el bienestar de las personas. Te cambiará la vida."
@@ -61,7 +73,7 @@
   image:
   description:
   genre: [novela]
-  completed:
+  #completed:
   onpage: 134
   pages: 756
   synopsis: "26 de noviembre de 1504. La reina Isabel la Católica acaba de morir y ya se empiezan a escuchar las voces de la mayoría de los nobles de Castilla, que reclaman a Juana la Loca como su verdadera reina. Fernando de Aragón intenta llegar hasta donde sea necesario para impedir que su yerno, Felipe el Hermoso, le arrebate el gobierno de las tierras castellanas.
@@ -75,7 +87,7 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   genre: [literatura]
   onpage: 49
   pages: 211
-  completed: 2023
+  #completed: 2023
   synopsis: "Una completa historia de la literatura española desde sus orígenes hasta la actualidad: Las jarchas, el mester de clerecía, el romance, los pícaros y el Conde Lucanor para llegar al Quijote, Quevedo, Góngora, la poesía social, la generación del 98, Gerardo Diego, Lorca y hasta Francisco Umbral, Mayorga y el desarrollo de las nuevas tecnologías.Acérquese a la historia de la literatura española, a la situación social de España así como sus anhelos y esperanzas, expresados a través de la palabra escrita en las grandes obras de la literatura. Desde la aparición de los primeros textos en castellano, las glosas emilianenses, hasta los grandes genios como Quevedo, Lope de vega o Cervantes y llegando hasta hoy con grandes autores como Arturo Pérez-Reverte, Javier Marías o las nuevas generaciones que se consagrarán como Juan Mayorga o Ignacio Martínez de Pisón. Breve historia de la literatura española le explicará el proceso por el cual surgió la literatura en castellano. Para ello, se hará especial hincapié en las vicisitudes políticas y sociales a las que han tenido que hacer frente los principales autores que han pergeñado nuestras letras. El autor, Alberto de Frutos, con un estilo riguroso, ameno y bebiendo de las citas literarias de los grandes genios de la literatura, hará un recorrido por los orígenes de las formas literarias, su evolución posterior, el estado actual y las perspectivas para el siglo XXI, además de investigar el desarrollo de las nuevas tecnologías y el cultivo en las otras lenguas de la península como la gallega, la vasca y la catalana que han surtido de grandes obras a nuestra cultura."
   cover: "breve_hist_literatura.jpeg"
   #highlight: "yes"
@@ -97,7 +109,7 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   image:
   description:
   genre: [historia]
-  completed: 2023
+  #completed: 2023
   onpage: 65
   pages: 498
   synopsis: "Basado en el canal de Youtube Pero esto es otra historia.
@@ -139,16 +151,51 @@ En busca del origen del lenguaje es el libro definitivo para entender cómo se o
   onpage: 39.0
   pages: 181.0
 
-- title: Clarissa
-  author: Stefan Zweig
-  link: https://amzn.to/3TPmaUz
+- title: No te enroques
+  author: María Rodrigo Yanguas
+  link: https://amzn.to/3SnT1kO
   image:
   description:
   genre: [novela]
-  completed: 
-  progress: '5%'
-  synopsis: "Clarissa, hija de un militar austríaco, conoce en Lucerna a Léonard, un joven socialista francés del que se enamora. El estallido de la Gran Guerra separa a los amantes y la joven, que ha quedado embarazada, debe volver a Austria en medio de una Europa que se desgarra, donde toma la decisión de tener y criar a un hijo del enemigo. Esta conmovedora novela tardía de Zweig es hoy considerada el testamento en el que el extraordinario escritor austríaco condensó los ideales humanísticos que abrazó durante toda su vida."
-  cover: "clarissa.jpeg"
+  completed: 2024
+  #onpage: 
+  pages: 240
+  synopsis: ""
+  #cover: ".jpeg"
+  #highlight: "yes"
+  #updated: ""
+  rating: 3
+
+- title: ¿Será buena persona el cocinero?
+  author: Javier Marías
+  link: https://amzn.to/48hkHOh
+  image:
+  description:
+  genre: [novela]
+  completed: 2024
+  #onpage: 
+  pages: 304
+  synopsis: ""
+  #cover: ".jpeg"
+  #highlight: "yes"
+  #updated: "28 oct."
+  rating: 4
+
+- title: Hombres buenos
+  author: Arturo Pérez-Reverte
+  link: https://amzn.to/3P7kzKE
+  image:
+  description:
+  genre: [novela]
+  completed: 2024
+  #onpage: 572
+  pages: 582
+  synopsis: "A finales del siglo XVIII, cuando dos miembros de la Real Academia Española, el bibliotecario don Hermógenes Molina y el almirante don Pedro Zárate, recibieron de sus compañeros el encargo de viajar a París para conseguir de forma casi clandestina los 28 volúmenes de la Encyclopédie de D'Alembert y Diderot, que estaba prohibida en España, nadie podía sospechar que los dos académicos iban a enfrentarse a una peligrosa sucesión de intrigas, a un viaje de incertidumbres y sobresaltos que los llevaría, por caminos infestados de bandoleros e incómodas ventas y posadas, desde el Madrid ilustrado de Carlos III al París de los cafés, los salones, las tertulias filosóficas, la vida libertina y las agitaciones políticas en vísperas de la Revolución francesa. Basada en hechos y personajes reales, documentada con extremo rigor, conmovedora y fascinante en cada página, Hombres buenos narra la heroica aventura de quienes, orientados por las luces de la Razón, quisieron cambiar el mundo con libros, cuando el futuro arrinconaba las viejas ideas y el ansia de libertad hacía tambalearse tronos y mundos establecidos."
+  cover: "hombres_buenos.jpeg"
+  highlight: "yes"
+  #updated: "28 oct."
+  rating: 4
+
 
 - title: España y su herencia invisible
   author: José Carlos Gracia
