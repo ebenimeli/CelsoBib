@@ -8,12 +8,12 @@ categories: Ciencia
 tags: [mujer,ciencia,educación,investigación]
 ---
 
-[![image](assets/images/posts/2024/02/mujer_ciencia.jpg)]()
+[![image](assets/images/posts/2024/02/mujer_ciencia.jpg)](https://amzn.to/3waG7PA)
 
 En el [*Día Internacional de la Mujer y la Niña en la Ciencia*](https://www.un.org/es/observances/women-and-girls-in-science-day), celebramos los logros y contribuciones valiosas de las mujeres en el ámbito científico.
 
-***Pequeña y grande*** (editorial Alba) es una colección pionera de biografías ilustradas de grandes figuras de la historia, personas extraordinarias del mundo del arte, la música, la literatura, y, por supuesto, de la ciencia, con las que niñas y niños puedan identificarse.
+***Pequeña y grande*** (editorial Alba) es una colección pionera de biografías ilustradas de grandes figuras de la historia, personas extraordinarias del mundo del arte, la música, la literatura, y, por supuesto, la **ciencia**, con las que niñas y niños puedan identificarse.
 
-Hoy hemos añadido a la colección la biografía de **Marie Curie** para acompañar la de **Ada Lovelace**.
+Hoy hemos añadido a la colección la biografía de [**Marie Curie**](https://amzn.to/3SVNJyu) para acompañar a la de [**Ada Lovelace**](https://amzn.to/3waG7PA).
 
 **Naciones Unidas** · [*Día Internacional de la Mujer y la Niña en la Ciencia*](https://www.un.org/es/observances/women-and-girls-in-science-day)
