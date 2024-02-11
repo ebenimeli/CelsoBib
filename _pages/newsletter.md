@@ -12,5 +12,6 @@ Lo recibirás cada 15 días, tiempo suficiente para recargar el boletín de nove
 
 * 15.02.2024 · Próximamente
 * 30.01.2024 · [Algoritmos para todos, letras digitales y unos hombres buenos (#1)](https://ebenimeli.substack.com/p/algoritmos-para-todos-letras-digitales) 
+* 21.01.2024 · Bienvenida: [Asómate a la ventana digital](https://ebenimeli.substack.com/p/asomate-a-la-ventana-digital)
 
 **Suscríbete** · [*La ventana digital*](https://ebenimeli.substack.com/)
