@@ -1,7 +1,12 @@
+- timestamp: 2024-02-15 15:00
+  text: "La ventana digital #2"
+  link: https://ebenimeli.substack.com/p/rubik-educativo-un-sapo-con-escudo
+  cat: 'status'
+
 - timestamp: 2024-01-30 14:00
   text: "La ventana digital #1"
   link: https://ebenimeli.substack.com/p/algoritmos-para-todos-letras-digitales
-  cat: 'status'
+  cat: 'write'
 
 - timestamp: 2024-01-24 19:00
   text: "Nuevo post: «Automatización con Power Automate: cómo transformar publicaciones de Teams en tareas de Microsoft To Do»"
