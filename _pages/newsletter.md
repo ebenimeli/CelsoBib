@@ -10,8 +10,10 @@ Asómate a *La ventana digital*, mi [boletín en Substack](https://ebenimeli.sub
 
 Lo recibirás cada 15 días, tiempo suficiente para recargar el boletín de novedades y poneros al día.
 
-* 15.02.2024 · Próximamente
-* 30.01.2024 · [Algoritmos para todos, letras digitales y unos hombres buenos (#1)](https://ebenimeli.substack.com/p/algoritmos-para-todos-letras-digitales) 
-* 21.01.2024 · Bienvenida: [Asómate a la ventana digital](https://ebenimeli.substack.com/p/asomate-a-la-ventana-digital)
+* #04 / 15.03.2024 · Próximamente 
+* #o3 / 29.02.2024 · [La historia del ordenador, un poema sin IA y un rey atrapado (#3)](https://ebenimeli.substack.com/p/la-historia-del-ordenador-un-poema)
+* #02 / 15.02.204 · [Rubik educativo, un sapo con escudo y una reina roja (#2)](https://ebenimeli.substack.com/p/rubik-educativo-un-sapo-con-escudo)
+* #01 / 30.01.2024 · [Algoritmos para todos, letras digitales y unos hombres buenos (#1)](https://ebenimeli.substack.com/p/algoritmos-para-todos-letras-digitales) 
+* #00 / 21.01.2024 · Bienvenida: [Asómate a la ventana digital](https://ebenimeli.substack.com/p/asomate-a-la-ventana-digital)
 
 **Suscríbete** · [*La ventana digital*](https://ebenimeli.substack.com/)
