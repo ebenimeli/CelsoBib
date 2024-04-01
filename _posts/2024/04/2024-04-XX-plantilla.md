@@ -1,6 +1,6 @@
 ---
 title: "Plantilla"
-date: 2025-03-XXT15:00:00+00:00
+date: 2025-04-XXT08:00:00+00:00
 author: Enrique Benimeli
 layout: post
 permalink: /XXX/
