@@ -14,4 +14,4 @@ Tal día como hoy de 1805, nació en Odense (Dinarmarca) [Hans Christian Anderse
 
 En casa hemos ampliado la colección de *Pequeña&Grande* con el libro sobre **Albert Einstein**.
 
-**Amazon** · [*Pequeño&Grande Albert Einstein*](https://amzn.to/3J0SNfa)
+**Libro** · [*Pequeño&Grande Albert Einstein*](https://amzn.to/3J0SNfa)
