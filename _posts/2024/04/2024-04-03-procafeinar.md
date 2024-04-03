@@ -8,6 +8,6 @@ categories: Lenguas
 tags: [café,procrastinación]
 ---
 
-[![image](assets/images/posts/2024/04/cafe.jpg)]()
+[![image](assets/images/posts/2024/04/be_strong_coffee.jpg)]()
 
 **Procafeinar**. Atrasar una decisión o la ejecución de cualquier tarea hasta después de haber tomado una taza de café.
