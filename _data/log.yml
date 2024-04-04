@@ -1,10 +1,20 @@
+- timestamp: 2024-03-31 15:00
+  text: "Innovación educativa sin pantallas, los supermercados del futuro y un libro jamás leído (#4)"
+  link: https://ebenimeli.substack.com/p/innovacion-educativa-sin-pantallas
+  cat: 'write'
+
+- timestamp: 2024-02-29 15:00
+  text: "La historia del ordenador, un poema sin IA y un rey atrapado (#3)"
+  link: https://ebenimeli.substack.com/p/la-historia-del-ordenador-un-poema
+  cat: 'write'
+
 - timestamp: 2024-02-15 15:00
-  text: "La ventana digital #2"
+  text: "Rubik educativo, un sapo con escudo y una reina roja (#2)"
   link: https://ebenimeli.substack.com/p/rubik-educativo-un-sapo-con-escudo
-  cat: 'status'
+  cat: 'write'
 
 - timestamp: 2024-01-30 14:00
-  text: "La ventana digital #1"
+  text: "Algoritmos para todos, letras digitales y unos hombres buenos (#1)"
   link: https://ebenimeli.substack.com/p/algoritmos-para-todos-letras-digitales
   cat: 'write'
 
