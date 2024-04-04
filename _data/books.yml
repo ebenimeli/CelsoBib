@@ -1,16 +1,3 @@
-- title: Clarissa
-  author: Stefan Zweig
-  link: https://amzn.to/3TPmaUz
-  image:
-  description:
-  genre: [novela]
-  completed: 
-  onpage: 25
-  pages: 199
-  synopsis: "Clarissa, hija de un militar austríaco, conoce en Lucerna a Léonard, un joven socialista francés del que se enamora. El estallido de la Gran Guerra separa a los amantes y la joven, que ha quedado embarazada, debe volver a Austria en medio de una Europa que se desgarra, donde toma la decisión de tener y criar a un hijo del enemigo. Esta conmovedora novela tardía de Zweig es hoy considerada el testamento en el que el extraordinario escritor austríaco condensó los ideales humanísticos que abrazó durante toda su vida."
-  cover: "clarissa.jpeg"
-  highlight: 'yes'
-
 - title: Invitación al aprendizaje
   author: Eduardo Sáenz de Cabezón
   link: https://amzn.to/42nos32
@@ -23,7 +10,6 @@
   synopsis: "Un libro que hace homenaje al aprendizaje constante y vital. Invitación al aprendizaje es el libro que necesitas para darte cuenta que nunca es tarde para adquirir nuevos conocimientos y que puedes enriquecerte cada día si estás dispuesto a aprender durante toda tu vida. A través de diferentes procesos personales de varios personajes célebres, el profesor Eduardo Sáenz de Cabezón te hará entender que cualquiera puede aprender si los procedimientos son los correctos, que más importante que la edad es la motivación para ello y que la creatividad juega siempre un papel fundamental a la hora de optimizar tu aprendizaje. Y tú, ¿estás dispuesto a seguir aprendiendo?"
   cover: "invitacion-al-aprendizaje.jpg"
   highlight: 'yes'
-
 
 - title: Cartografía de la sociedad y educación digital
   author: Sonia Santoveña-Casal
@@ -59,13 +45,28 @@
   image:
   description:
   genre: [productividad]
-  #completed: 2023
-  onpage: 145
+  completed: 2024
+  #onpage: 272
   pages: 272
   synopsis: "Después de más de diez años ayudando a personas y organizaciones a ser más efectivas y lograr resultados, José Miguel Bolívar y Jordi Fortuny han creado OPTIMA3®, el método definitivo de efectividad personal. En este libro, los autores combinan todo su conocimiento y saber hacer con su experiencia como formadores certificados en GTD® de David Allen para diseñar una nueva metodología: un enfoque sencillo y flexible que elimina las complicaciones y se adapta a las necesidades y retos de los profesionales de hoy. Con OPTIMA3® aprenderás a: vivir sin estrés y sin olvidos, recuperar la sensación de tenertodos tus asuntos bajo control, priorizar qué hacer y qué no hacer en cada instante, y aumentar tu productividad en un 40%. Prepárate a descubrir una forma más sostenible de efectividad, basada en evidencias y centrada en el bienestar de las personas. Te cambiará la vida."
   cover: "recuperatuvida.jpg"
   highlight:
   updated: "28 oct."
+  rating: 4
+
+- title: Clarissa
+  author: Stefan Zweig
+  link: https://amzn.to/3TPmaUz
+  image:
+  description:
+  genre: [novela]
+  completed: 2024
+  #onpage: 199
+  pages: 199
+  synopsis: "Clarissa, hija de un militar austríaco, conoce en Lucerna a Léonard, un joven socialista francés del que se enamora. El estallido de la Gran Guerra separa a los amantes y la joven, que ha quedado embarazada, debe volver a Austria en medio de una Europa que se desgarra, donde toma la decisión de tener y criar a un hijo del enemigo. Esta conmovedora novela tardía de Zweig es hoy considerada el testamento en el que el extraordinario escritor austríaco condensó los ideales humanísticos que abrazó durante toda su vida."
+  cover: "clarissa.jpeg"
+  highlight: 'yes'
+  rating: 4
 
 - title: Los Austrias. El vuelo del águila
   author: José Luis Corral
