@@ -1,11 +1,11 @@
 ---
 title: "Echando el resto"
-date: 2024-05-26T20:00:00+00:00
+date: 2024-05-26T19:00:00+00:00
 author: Enrique Benimeli
 layout: post
 permalink: /echando-el-resto/
 categories: Educación
-tags: [escuela,curso,año,boletín]
+tags: [escuela,curso,boletín]
 ---
 
 [![image](assets/images/posts/2024/01/post.jpg)]()
