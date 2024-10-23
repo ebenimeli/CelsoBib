@@ -1,3 +1,16 @@
+- title: El juego de la vida
+  author: Adriana Hernández Planillas
+  link: https://amzn.to/42nos32
+  image:
+  description:
+  genre: [ajedrez]
+  completed: 
+  onpage: 314
+  pages: 314
+  synopsis: "El tablero de ajedrez es una lúcida representación del juego de la vida. Hay logros que precisan avances pequeños y humildes, como los del peón; otros que solicitan pasos seguros y contundentes, como los de la reina. Hay perdidas y retrocesos, pero tambien cambios de estrategia que nos devuelven el control de la partida, el poder sobre nuestro destino. En este libro, cada una de las 64 casillas del tablero nos ofrece una lección vital."
+  cover: "eljuegodelavida.jpg"
+  highlight: 'yes'
+
 - title: Invitación al aprendizaje
   author: Eduardo Sáenz de Cabezón
   link: https://amzn.to/42nos32
@@ -9,7 +22,7 @@
   pages: 320
   synopsis: "Un libro que hace homenaje al aprendizaje constante y vital. Invitación al aprendizaje es el libro que necesitas para darte cuenta que nunca es tarde para adquirir nuevos conocimientos y que puedes enriquecerte cada día si estás dispuesto a aprender durante toda tu vida. A través de diferentes procesos personales de varios personajes célebres, el profesor Eduardo Sáenz de Cabezón te hará entender que cualquiera puede aprender si los procedimientos son los correctos, que más importante que la edad es la motivación para ello y que la creatividad juega siempre un papel fundamental a la hora de optimizar tu aprendizaje. Y tú, ¿estás dispuesto a seguir aprendiendo?"
   cover: "invitacion-al-aprendizaje.jpg"
-  highlight: 'yes'
+  #highlight: 'no'
 
 - title: Cartografía de la sociedad y educación digital
   author: Sonia Santoveña-Casal
