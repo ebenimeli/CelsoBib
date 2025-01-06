@@ -8,7 +8,7 @@ description: "Boletín quincenal"
 
 Asómate a *La ventana digital*, mi [boletín en Substack](https://ebenimeli.substack.com/), para conocer la novedades en tecnología educativa, informática, organización personal y otros temas.
 
-* #05 / 31.05.2024 · Próximamente
+* #05 / 04.01.2025 · [Una IA prometedora, un viaje al futuro en 1582 y un príncipe de Persia muy real (#5)](https://ebenimeli.substack.com/p/una-ia-prometedora-un-viaje-al-futuro)
 * #04 / 31.03.2024 · [Innovación educativa sin pantallas, los supermercados del futuro y un libro jamás leído (#4)](https://ebenimeli.substack.com/p/innovacion-educativa-sin-pantallas)
 * #o3 / 29.02.2024 · [La historia del ordenador, un poema sin IA y un rey atrapado (#3)](https://ebenimeli.substack.com/p/la-historia-del-ordenador-un-poema)
 * #02 / 15.02.204 · [Rubik educativo, un sapo con escudo y una reina roja (#2)](https://ebenimeli.substack.com/p/rubik-educativo-un-sapo-con-escudo)
