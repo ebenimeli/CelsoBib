@@ -1,6 +1,6 @@
 ---
 title: "Invitación al aprendizaje"
-date: 2025-02-03T08:00:00+00:00
+date: 2030-02-03T08:00:00+00:00
 author: Enrique Benimeli
 layout: post
 permalink: /invitacion-aprendizaje/
