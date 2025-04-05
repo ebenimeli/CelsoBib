@@ -240,6 +240,14 @@ body {
   border-radius: 50%;
   transition: transform .2s;
   border: 0px dashed #696969;
+}
+
+.profile-image-old {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  transition: transform .2s;
+  border: 0px dashed #696969;
   box-shadow: 5px 5px 5px #ccc;
   -moz-box-shadow: 5px 5px 5px #ccc;
   -webkit-box-shadow: 5px 5px 5px #ccc;
