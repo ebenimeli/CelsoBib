@@ -23,6 +23,7 @@ Asómate a *La ventana digital*, mi [boletín en Substack](https://ebenimeli.sub
 
 Este es mi boletín más personal. Encontrarás reflexiones al paso y escritos a vuelapluma, retales de ideas y notas al margen del día a día.
 
+* #8 / 21.04.2025 · [Una lectura exigente](https://notasalvuelo.substack.com/p/una-lectura-exigente)
 * #7 / 20.04.2025 · [Una biblioteca personal](https://notasalvuelo.substack.com/p/una-biblioteca-personal)
 * #6 / 19.04.2025 · [Una lengua olvidada](https://notasalvuelo.substack.com/p/una-lengua-olvidada)
 * #5 / 14.04.2025 · [Un segundo artificial](https://notasalvuelo.substack.com/p/un-segundo-artificial)
