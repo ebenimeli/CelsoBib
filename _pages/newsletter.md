@@ -8,6 +8,7 @@ description: "Publicaciones"
 
 Asómate a *La ventana digital*, mi [boletín en Substack](https://ebenimeli.substack.com/), para conocer la novedades en tecnología educativa, informática, organización personal y otros temas.
 
+* #8 / 27.04.2025 · [Un hombre de 200 años, un cielo conectado y una expedición en jaque (#8)](https://ebenimeli.substack.com/p/un-hombre-de-200-anos-un-cielo-conectado)
 * #07 / 01.02.2025 · [Una canica azul, un universo a escala y un recuerdo para Plutón (#7)](https://ebenimeli.substack.com/p/una-canica-azul-un-universo-a-escala)
 * #06 / 12.01.2025 · [Una ciudad subterránea, influencers de lectura y un peón que quiso ser caballo (#6)](https://ebenimeli.substack.com/p/una-ciudad-subterranea-influencers)
 * #05 / 04.01.2025 · [Una IA prometedora, un viaje al futuro en 1582 y un príncipe de Persia muy real (#5)](https://ebenimeli.substack.com/p/una-ia-prometedora-un-viaje-al-futuro)
@@ -23,6 +24,10 @@ Asómate a *La ventana digital*, mi [boletín en Substack](https://ebenimeli.sub
 
 Este es mi boletín más personal. Encontrarás reflexiones al paso y escritos a vuelapluma, retales de ideas y notas al margen del día a día.
 
+* #12 / 25.04.2025 · [Una visita inmersiva](https://notasalvuelo.substack.com/p/una-visita-inmersiva)
+* #11 / 24.04.2025 · [Una crónica negra](https://notasalvuelo.substack.com/p/una-cronica-negra)
+* #10 / 23.04.2025 · [Un viaje lector](https://notasalvuelo.substack.com/p/un-viaje-lector)
+* #9 / 22.04.2025 · [Una expedición en jaque](https://notasalvuelo.substack.com/p/una-expedicion-en-jaque)
 * #8 / 21.04.2025 · [Una lectura exigente](https://notasalvuelo.substack.com/p/una-lectura-exigente)
 * #7 / 20.04.2025 · [Una biblioteca personal](https://notasalvuelo.substack.com/p/una-biblioteca-personal)
 * #6 / 19.04.2025 · [Una lengua olvidada](https://notasalvuelo.substack.com/p/una-lengua-olvidada)
