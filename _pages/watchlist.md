@@ -6,11 +6,11 @@ description: "Películas, series de TV y documentales"
 
 ### Ahora estoy viendo...
 
-![Memento Mori](images/misc/mementomori.jpeg)
+![Memento Mori](images/misc/rematch.jpg)
 
-Memento Mori (2023) [→ 🍿 S01E3](https://www.primevideo.com/detail/0H69GXL24UNDZNY2OBJKH5QWOL/ref=atv_dp_share_cu_r)
+Rematch (2024) [→ 🍿 S01E2](https://play.max.com/show/9683b77e-3bb4-43bd-b0b0-faaf4a534974)
 
-Justo cuando estaba a punto de abandonar Valladolid, el inspector Ramiro Sancho se enfrenta a un asesino en serie que está dejando un reguero de cadáveres en la ciudad. Con la ayuda de “Carapocha”, un psicólogo criminalista, perseguirá a Augusto, un sociópata que convierte cada crimen en una obra de arte. Lo que no sabe Sancho es que la persecución se convertirá en un duelo muy “personal”...
+En 1997, IBM convenció al campeón mundial de ajedrez Gary Kasparov, que había vencido al superordenador Deep Blue, para jugar la revancha. Esta cautivadora serie convierte el duelo entre el hombre y la IA en un thriller psicológico con resonancias contemporáneas
 
 ### Cine
 1. La piel del tambor (2022) [→ 🍿](https://www.primevideo.com/dp/0T42O5Z6QECZ4Q6CXW1D7OYTAY) ★★★★☆
@@ -18,10 +18,11 @@ Justo cuando estaba a punto de abandonar Valladolid, el inspector Ramiro Sancho 
 1. 70 binladens [→ 🍿](https://www.imdb.com/title/tt7972178/) ★★★★☆
 
 ### Series
-1. Memento Mori (2023) [→ 🍿 S01E3](https://www.primevideo.com/detail/0H69GXL24UNDZNY2OBJKH5QWOL/ref=atv_dp_share_cu_r)
-2. Parot (2021) [→ 🍿 S01E04](https://www.ebenimeli.org/parot-serie/)
-3. El Gran Imperio Otomano [→ 🍿 S02E02](https://www.netflix.com/es/title/80990771) ★★★★☆
-4. Jaguar (2021) [→ 🍿 S01E04](https://www.netflix.com/es/title/81122682) ★★★☆☆
+1. Revancha (2024) [→ 🍿 S01E2](https://play.max.com/show/9683b77e-3bb4-43bd-b0b0-faaf4a534974)
+2. Memento Mori (2023) [→ 🍿 S01E3](https://www.primevideo.com/detail/0H69GXL24UNDZNY2OBJKH5QWOL/ref=atv_dp_share_cu_r)
+3. Parot (2021) [→ 🍿 S01E04](https://www.ebenimeli.org/parot-serie/)
+4. El Gran Imperio Otomano [→ 🍿 S02E02](https://www.netflix.com/es/title/80990771) ★★★★☆
+5. Jaguar (2021) [→ 🍿 S01E04](https://www.netflix.com/es/title/81122682) ★★★☆☆
 
 ### Me recomendaron...
 * Arrival · La llegada (2016) [→ 🍿](https://www.imdb.com/title/tt2543164/)
