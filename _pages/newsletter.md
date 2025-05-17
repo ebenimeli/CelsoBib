@@ -24,6 +24,12 @@ Asómate a *La ventana digital*, mi [boletín en Substack](https://ebenimeli.sub
 
 Este es mi boletín más personal. Encontrarás reflexiones al paso y escritos a vuelapluma, retales de ideas y notas al margen del día a día.
 
+* #18 / 16.05.2025 · [Una revancha histórica](https://notasalvuelo.substack.com/p/una-revancha-historica)
+* #17 / 12.05.2025 · [Una fumata blanca](https://notasalvuelo.substack.com/p/una-fumata-blanca)
+* #16 / 08.05.2025 · [Una historia en persona](https://notasalvuelo.substack.com/p/una-historia-en-persona)
+* #15 / 05.05.2025 · [Una lengua movediza](https://notasalvuelo.substack.com/p/una-lengua-movediza)
+* #14 / 04.05.2025 · [Un mensaje submarino](https://notasalvuelo.substack.com/p/un-mensaje-submarino)
+* #13 / 28.04.2025 · [Un planeta de libros](https://notasalvuelo.substack.com/p/un-planeta-de-libros)
 * #12 / 25.04.2025 · [Una visita inmersiva](https://notasalvuelo.substack.com/p/una-visita-inmersiva)
 * #11 / 24.04.2025 · [Una crónica negra](https://notasalvuelo.substack.com/p/una-cronica-negra)
 * #10 / 23.04.2025 · [Un viaje lector](https://notasalvuelo.substack.com/p/un-viaje-lector)
