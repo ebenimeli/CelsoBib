@@ -8,6 +8,7 @@ description: "Publicaciones"
 
 Asómate a *La ventana digital*, mi [boletín en Substack](https://ebenimeli.substack.com/), para conocer la novedades en tecnología educativa, informática, organización personal y otros temas.
 
+* #9 / Muy pronto
 * #8 / 27.04.2025 · [Un hombre de 200 años, un cielo conectado y una expedición en jaque (#8)](https://ebenimeli.substack.com/p/un-hombre-de-200-anos-un-cielo-conectado)
 * #07 / 01.02.2025 · [Una canica azul, un universo a escala y un recuerdo para Plutón (#7)](https://ebenimeli.substack.com/p/una-canica-azul-un-universo-a-escala)
 * #06 / 12.01.2025 · [Una ciudad subterránea, influencers de lectura y un peón que quiso ser caballo (#6)](https://ebenimeli.substack.com/p/una-ciudad-subterranea-influencers)
@@ -24,6 +25,8 @@ Asómate a *La ventana digital*, mi [boletín en Substack](https://ebenimeli.sub
 
 Este es mi boletín más personal. Encontrarás reflexiones al paso y escritos a vuelapluma, retales de ideas y notas al margen del día a día.
 
+* #20 / 24.05.2025 · [Una mente perezosa](https://notasalvuelo.substack.com/p/una-mente-perezosa)
+* #19 / 18.05.2025 · [Un libro voraz](https://notasalvuelo.substack.com/p/un-libro-voraz)
 * #18 / 16.05.2025 · [Una revancha histórica](https://notasalvuelo.substack.com/p/una-revancha-historica)
 * #17 / 12.05.2025 · [Una fumata blanca](https://notasalvuelo.substack.com/p/una-fumata-blanca)
 * #16 / 08.05.2025 · [Una historia en persona](https://notasalvuelo.substack.com/p/una-historia-en-persona)
