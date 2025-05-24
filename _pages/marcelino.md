@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ""
-description: "San Marcelino Champagnat"
+description: "Un eje cronológico y un juego de palabras"
 ---
 
 # San Marcelino Champagnat · Apps
