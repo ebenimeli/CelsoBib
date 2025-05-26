@@ -12,6 +12,8 @@ Con motivo de la festividad de **San Marcelino Champagnat**, he creado un par de
 
 ### La historia en persona: San Marcelino Champagnat
 
+![image](assets/images/pages/marcelino/sanmarcelino_bio.jpg)
+
 El primero es un **eje cronológico** para descubrir personajes relevantes que vivieron en la misma época (podéis hacer clic en cualquier personaje). El proyecto lo actualizo permanentemente
 
 He integrado en él un resumen de la **biografía y misión de Marcelino Champagnat**, desde su nacimiento hasta el día de hoy. Si pasáis el ratón por encima de cada evento, aparece una breve descripción. Cualquier aportación o corrección será bienvenida. Hay que acceder <u>desde el navegador web del ordenador</u>.
@@ -19,6 +21,8 @@ He integrado en él un resumen de la **biografía y misión de Marcelino Champag
 > [La historia en persona: San Marcelino Champagnat](https://docs.esferatic.com/timeline/index.php?id=sanmabiogr1789)
 
 ### Un juego de palabras
+
+![image](assets/images/pages/marcelino/shuffled_marcelino.jpg)
 
 El segundo recurso es un **juego dinámico** en el que hay que **adivinar palabras** relacionadas con Marcelino Champagnat, su vida y su misión. Las letras aparecen desordenadas y, mientras el tiempo corre, hay que formar la palabra correcta. Las letras ya colocadas correctamente aparecen en verde.
 
