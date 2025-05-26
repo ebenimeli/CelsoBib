@@ -1,10 +1,19 @@
 ---
 layout: page
 title: ""
-description: "Publicaciones"
+description: "Blogs y boletines"
 ---
 
-# La ventana digital
+# Publicaciones
+
+Actualmente, escribo en varios blogs y boletines:
+* [La ventana digital](https://ebenimeli.substack.com/)
+* [Notas al vuelo](https://notasalvuelo.substack.com/)
+* [Esfera TIC](https://www.esferatic.com/)
+* [Ocho en punto](https://www.ochoenpunto.com/)
+* [Blog personal](https://www.ebenimeli.org/)
+
+## La ventana digital
 
 Asómate a *La ventana digital*, mi [boletín en Substack](https://ebenimeli.substack.com/), para conocer la novedades en tecnología educativa, informática, organización personal y otros temas.
 
@@ -21,7 +30,7 @@ Asómate a *La ventana digital*, mi [boletín en Substack](https://ebenimeli.sub
 
 **Suscríbete** · [*La ventana digital*](https://ebenimeli.substack.com/)
 
-# Notas al vuelo
+## Notas al vuelo
 
 Este es mi boletín más personal. Encontrarás reflexiones al paso y escritos a vuelapluma, retales de ideas y notas al margen del día a día.
 
