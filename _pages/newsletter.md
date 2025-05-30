@@ -34,6 +34,7 @@ Asómate a *La ventana digital*, mi [boletín en Substack](https://ebenimeli.sub
 
 Este es mi boletín más personal. Encontrarás reflexiones al paso y escritos a vuelapluma, retales de ideas y notas al margen del día a día.
 
+* #21 / 29.05.2025 · [Un cero energético](https://notasalvuelo.substack.com/p/un-cero-energetico)
 * #20 / 24.05.2025 · [Una mente perezosa](https://notasalvuelo.substack.com/p/una-mente-perezosa)
 * #19 / 18.05.2025 · [Un libro voraz](https://notasalvuelo.substack.com/p/un-libro-voraz)
 * #18 / 16.05.2025 · [Una revancha histórica](https://notasalvuelo.substack.com/p/una-revancha-historica)
