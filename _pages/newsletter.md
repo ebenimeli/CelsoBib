@@ -17,7 +17,7 @@ Actualmente, escribo en varios blogs y boletines:
 
 Asómate a *La ventana digital*, mi [boletín en Substack](https://ebenimeli.substack.com/), para conocer la novedades en tecnología educativa, informática, organización personal y otros temas.
 
-* #9 / Muy pronto
+* #9 / 01.06.2025 · [Una mente perezosa, una revancha histórica y un apagón general (#9)](https://ebenimeli.substack.com/p/una-mente-perezosa-una-revancha-historica)
 * #8 / 27.04.2025 · [Un hombre de 200 años, un cielo conectado y una expedición en jaque (#8)](https://ebenimeli.substack.com/p/un-hombre-de-200-anos-un-cielo-conectado)
 * #07 / 01.02.2025 · [Una canica azul, un universo a escala y un recuerdo para Plutón (#7)](https://ebenimeli.substack.com/p/una-canica-azul-un-universo-a-escala)
 * #06 / 12.01.2025 · [Una ciudad subterránea, influencers de lectura y un peón que quiso ser caballo (#6)](https://ebenimeli.substack.com/p/una-ciudad-subterranea-influencers)
@@ -34,6 +34,7 @@ Asómate a *La ventana digital*, mi [boletín en Substack](https://ebenimeli.sub
 
 Este es mi boletín más personal. Encontrarás reflexiones al paso y escritos a vuelapluma, retales de ideas y notas al margen del día a día.
 
+* #22 / 31.05.2025 · [Una radio sin pilas](https://notasalvuelo.substack.com/p/una-radio-sin-pilas)
 * #21 / 29.05.2025 · [Un cero energético](https://notasalvuelo.substack.com/p/un-cero-energetico)
 * #20 / 24.05.2025 · [Una mente perezosa](https://notasalvuelo.substack.com/p/una-mente-perezosa)
 * #19 / 18.05.2025 · [Un libro voraz](https://notasalvuelo.substack.com/p/un-libro-voraz)

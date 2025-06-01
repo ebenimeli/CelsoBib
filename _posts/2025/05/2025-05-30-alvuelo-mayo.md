@@ -10,6 +10,7 @@ tags: [organización,educación,lenguas]
 
 En mayo escribí algunas [notas al vuelo](https://notasalvuelo.substack.com/):
 
+* #22 / 31.05.2025 · [Una radio sin pilas](https://notasalvuelo.substack.com/p/una-radio-sin-pilas)
 * #21 / 29.05.2025 · [Un cero energético](https://notasalvuelo.substack.com/p/un-cero-energetico)
 * #20 / 24.05.2025 · [Una mente perezosa](https://notasalvuelo.substack.com/p/una-mente-perezosa)
 * #19 / 18.05.2025 · [Un libro voraz](https://notasalvuelo.substack.com/p/un-libro-voraz)
