@@ -2,7 +2,7 @@
 
 :root {
   --bg-color: #fafafa;
-  --bg-hover-color: #ececec;
+  --bg-hover-color: Steelblue;
   --body-bg: #fff;
   --primary-font-color: #000;
   --border-color: #dadada;
@@ -10,9 +10,11 @@
 
 [data-theme="dark"] {
   --bg-color: #161f29;
-  --bg-hover-color: #36404c;
+  /*--bg-hover-color: #36404c;*/
+  --bg-hover-color: Steelblue;
   --body-bg: #10171e;
-  --primary-font-color: #bfbfbf;
+  /*--primary-font-color: #bfbfbf;*/
+  --primary-font-color: White;
   --border-color: #6a6a6a;
 }
 
@@ -80,7 +82,9 @@ body {
 
 .post-list:hover {
   background: var(--bg-hover-color);
+  color: white;
 }
+
 
 .post-list .post-title {
   width: 80%;
@@ -88,9 +92,17 @@ body {
   font-weight: 600;
 }
 
+.post-title:hover {
+  color: white;
+}
+
 .post-list .post-date {
   width: 20%;
   text-align: right;
+}
+
+.post-date:hover {
+  color: white;
 }
 
 .post-header {
@@ -704,10 +716,17 @@ img.profile {
 
 .status {
   background: var(--bg-hover-color);
+  color: white;
   font-weight: bold;
   font-size: .9em;
   border: 0.5px solid;
 }
+
+.status a.post-title {
+  color: white;
+  font-weight: normal;
+}
+
 
 .urgent {
   background: #DC143C;
