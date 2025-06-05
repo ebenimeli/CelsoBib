@@ -13,8 +13,8 @@
   /*--bg-hover-color: #36404c;*/
   --bg-hover-color: Steelblue;
   --body-bg: #10171e;
-  /*--primary-font-color: #bfbfbf;*/
-  --primary-font-color: White;
+  --primary-font-color: #bfbfbf;
+  /**--primary-font-color: White;**/
   --border-color: #6a6a6a;
 }
 
@@ -89,7 +89,7 @@ body {
 .post-list .post-title {
   width: 80%;
   color: var(--primary-font-color);
-  font-weight: 600;
+  font-weight: normal;
 }
 
 .post-title:hover {
@@ -717,7 +717,7 @@ img.profile {
 .status {
   background: var(--bg-hover-color);
   color: white;
-  font-weight: bold;
+  /*font-weight: bold;*/
   font-size: .9em;
   border: 0.5px solid;
 }
