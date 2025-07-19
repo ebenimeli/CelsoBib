@@ -10,3 +10,5 @@ function toggleNightMode(){
 		localStorage.setItem("theme","");
 	}
 }
+
+
