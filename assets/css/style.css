@@ -770,4 +770,16 @@ code {
   position: absolute; top: 0; left: 0; width: 100%; height: 100%;
 }
 
+/** Marquee style **/
 
+.post-list.status {
+  position: relative;
+  overflow: hidden;
+  height: 1.5em;        /* ajusta a la altura de tu línea */
+}
+.post-list.status .marquee {
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  will-change: transform;
+}
