@@ -28,21 +28,21 @@ description: "Curriculum Vitae"
 
 ### 🎓 Formación académica
 
-* Ingeniero en Informática. Escuela Politécnica Superior. Universidad de Alicante (España).<!--[(→ lista de asignaturas cursadas)](pages/inginf.html)-->
-* Telekommunikationstechnik & -systeme (TKS). Programa ERASMUS. Fachchochschule Salzburg, Austria.
-* Programa de Doctorado *Aplicaciones de la Informática*. Periodo de Docencia de Tercer Ciclo de Estudios Universitarios. Dpto. Lenguajes y Sistemas Informáticos. Universidad de Alicante.
-* Certificado de Aptitud Pedagógica (CAP). Instituto de Ciencias de la Educación · Universidad de Alicante.
-* Inicié en 2019 el Grado de Lengua y Literatura Españolas. Facultad de Filología. Universidad Nacional de Educación a Distancia (UNED).
+* **Ingeniero en Informática**. Escuela Politécnica Superior. Universidad de Alicante (España).<!--[(→ lista de asignaturas cursadas)](pages/inginf.html)-->
+* Telekommunikationstechnik & -systeme (TKS). **Programa ERASMUS**. Fachchochschule Salzburg, Austria.
+* **Programa de Doctorado** *Aplicaciones de la Informática*. Periodo de Docencia de Tercer Ciclo de Estudios Universitarios. Dpto. Lenguajes y Sistemas Informáticos. Universidad de Alicante.
+* **Certificado de Aptitud Pedagógica** (CAP). Instituto de Ciencias de la Educación · Universidad de Alicante.
+* Inicié en 2019 el **Grado de Lengua y Literatura Españolas**. Facultad de Filología. Universidad Nacional de Educación a Distancia (UNED).
 <!--* Actualmente, estoy cursando el Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas. Vía investigadora en tratamiento de lenguas. Facultad de Filología. Universidad Nacional de Educación a Distancia (UNED).-->
 
 ---
 
 ### 💼 Experiencia profesional
 
-* Profesor de Informática – Educación Secundaria Obligatoria. Colegio San Juan Bautista – HH. Maristas Denia (España) (2009 - actualidad)
-* Profesor de Español como Lengua Extranjera (ELE). Fachhochschule Salzburg (Austria) · www.fh-salzburg.ac.at (2020-2022)
-* Investigación: Traducción Automática. Grupo de investigación TRANSDUCENS. Departamento de Lenguajes y Sistemas Informáticos. Universidad de Alicante (2006-2009)
-* Investigación: Proyecto Europeo de Investigación Educativa. Fachhochschule Salzburg (2004-2006)
+* **Profesor de Informática – Educación Secundaria Obligatoria**. Colegio San Juan Bautista – HH. Maristas Denia (España) · (2009 - actualidad)
+* **Profesor de Español como Lengua Extranjera (ELE)**. Fachhochschule Salzburg (Austria) · (2020-2022)
+* **Investigación: Traducción Automática**. Grupo de investigación TRANSDUCENS. Departamento de Lenguajes y Sistemas Informáticos. Universidad de Alicante · (2006-2009)
+* **Investigación: Proyecto Europeo de Investigación Educativa**. Fachhochschule Salzburg · (2004-2006)
 
 ---
 
