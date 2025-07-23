@@ -48,6 +48,8 @@ description: "Curriculum Vitae"
 
 ### 📘 Cursos de formación
 
+Se muestran los más recientes.
+
 * Profesor@s entre bits y bots: Taller de fomento de la lectura a través de la literatura digital
 * Los desafíos del bilingüismo y la educación bilingüe: Del contexto educativo al contexto familiar
 * Como hacer una programación didáctica para educación primaria, secundaria y bachillerato
