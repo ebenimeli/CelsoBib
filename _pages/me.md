@@ -8,11 +8,13 @@ description: "Enrique"
 
 <img src="assets/images/profile.jpg" class="profile image-cropper">
 
-Soy Enrique, profesor de informática en la Educación Secundaria Obligatoria. Actualmente, imparto en inglés asignaturas relacionadas con la *Inteligencia Artificial, Programación y Robótica*, las *Tecnologías de la Información y la Comunicación* y las *Relaciones Digitales Responsables*. Además, soy coordinador TIC del centro.
+Soy Enrique, papá de dos y profesor de informática en la Educación Secundaria Obligatoria. Actualmente, imparto en inglés asignaturas relacionadas con la *Inteligencia Artificial, Programación y Robótica*, las *Tecnologías de la Información y la Comunicación* y las *Relaciones Digitales Responsables*. Además, soy coordinador TIC del centro.
 
-Estudié **Ingeniería Informática** y cursé dos años de doctorado en el área de procesamiento del lenguaje natural. En la misma universidad, trabajé en un grupo de investigación de traducción automática. Así que me interesa la inteligencia artificial en general y las **tecnologías del lenguaje** en particular. Cursé mi último año de carrera en Austria y trabajé en un proyecto europeo de **investigación educativa** en la misma universidad. También he ejercido en ella como profesor de Español como Lengua Extranjera (ELE). Actualmente, estudio el Grado de Lengua y Literatura Españolas. Puedes leer algunos detalles sobre formación y experiencia profesional en [mi perfil de LinkedIn](https://www.linkedin.com/in/ebenimeli/?locale=es_ES).
+Estudié **Ingeniería Informática** y cursé dos años de doctorado en el área de procesamiento del lenguaje natural. En la misma universidad, trabajé en un grupo de investigación de traducción automática. Así que me interesa la inteligencia artificial en general y las **tecnologías del lenguaje** en particular.
 
-Mantengo una relación de amor-odio con las redes sociales. A veces paso por ~~Twitter~~ [X](https://twitter.com/enriquebenimeli) para compartir. En [Instagram](https://www.instagram.com/ebenimeli/) publico algunas fotos, después de algún viaje sobre todo. Tengo [Facebook](https://www.facebook.com/ebenimeli/) prácticamente abandonado. Prefiero dedicar el tiempo a escribir en **blogs**, especialmente en [*Ocho en punto*](https://www.ochoenpunto.com) donde comparto algunas reflexiones sobre **productividad y organización personal**. Hace poco publiqué el [artículo n.º 150](https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/).
+Cursé mi último año de carrera en Austria y trabajé en un proyecto europeo de **investigación educativa** en la misma universidad. También he ejercido en ella como profesor de Español como Lengua Extranjera (ELE). En 2019 empecé a estudiar el Grado en Lengua y Literatura Españolas. Puedes leer algunos detalles sobre formación y experiencia profesional en la sección [CV](pages/cv.html) o en [mi perfil de LinkedIn](https://www.linkedin.com/in/ebenimeli/?locale=es_ES).
+
+Mantengo una relación de amor-odio con las redes sociales. A veces paso por ~~Twitter~~ [X](https://twitter.com/enriquebenimeli) para compartir. En [Instagram](https://www.instagram.com/ebenimeli/) publico algunas fotos, después de algún viaje sobre todo. Tengo [Facebook](https://www.facebook.com/ebenimeli/) prácticamente abandonado. Prefiero dedicar el tiempo a escribir en mis **blogs** [*Ocho en punto*](https://www.ochoenpunto.com) y [*Esfera TIC*](https://www.esferatic.com) y en mis **boletines** [*La ventana digital*](https://ebenimeli.substack.com/) y [*Notas al vuelo*](https://notasalvuelo.substack.com/)
 
 ### 💡 Cosas que me interesan
 1. La informática. En especial las tecnologías del lenguaje.
@@ -25,7 +27,7 @@ Mantengo una relación de amor-odio con las redes sociales. A veces paso por ~~T
 1. Escribir. Lo hago de vez en cuando en mis blogs.
 1. La fascinante vida y legado de [Ada Lovelace](https://es.wikipedia.org/wiki/Ada_Lovelace).
 1. La automatización de procesos y otras formas de ahorrar tiempo.
-1. Correr. Una vez terminé una maratón en Barcelona.
+1. ~~Correr~~Andar. Una vez terminé una maratón en Barcelona.
 1. La [fotografía](https://www.instagram.com/ebenimeli/). Soy de Nikon.
 1. Las listas de cosas.
 
@@ -37,12 +39,11 @@ Mantengo una relación de amor-odio con las redes sociales. A veces paso por ~~T
 -->
 
 ### 🏁 Tal vez/algún día
-- Correr una segunda [maratón](https://www.instagram.com/p/nWF5XLvh-W/).
 - ~~Empezar a~~ Terminar de escribir un libro.
-- Mantener un control absoluto de mi lista de tareas.
-- Aprender otro idioma, francés quizá.
+- Controlar mi lista de tareas.
+- Aprender otro idioma. Japonés, quizá.
 - [Volver a Japón](https://www.instagram.com/p/B0HeC5koqZO/)
-- Grabar un podcast.
+- Grabar un *podcast*.
 - Comprar una máquina de escribir [*Underwood*](https://en.wikipedia.org/wiki/Underwood_Typewriter_Company)
 
 <!--
