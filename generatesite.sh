@@ -1,1 +1,3 @@
-bundle exec jekyll build
+#!/usr/bin/env bash
+set -e
+bundle exec jekyll build "$@"
