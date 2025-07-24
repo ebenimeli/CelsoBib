@@ -1,21 +1,21 @@
 ---
 layout: page
-title: "Objetivos"
+title: "Objetivos semanales"
 description: "Proyectos"
 ---
 
 {%  assign read_w = 0 %}
-{%  assign read_w_goal = 7 %}
+{%  assign read_w_goal = 7 %} <!-- horas -->
 
 {%  assign write_w = 0 %}
-{%  assign write_w_goal = 2000.0  %}
+{%  assign write_w_goal = 1400.0  %} <!-- palabras -->
 
 {%  assign lang_w = 0 %}
-{%  assign lang_w_goal = 7 %}
+{%  assign lang_w_goal = 7 %} <!-- horas -->
 
 <!-- 40 km -->
 {%  assign walk_w = 0 %}
-{%  assign walk_w_goal = 40.0 %}
+{%  assign walk_w_goal = 40.0 %} <!-- km -->
 
 <div class="book-list">
 
@@ -41,8 +41,8 @@ description: "Proyectos"
 
   <h2 class="year">
     <div class="tooltip">
-    <span class="book-title">📚</span>
-    <span class="tooltiptext">{{read_w}}</span>
+    <span class="">📚</span>
+    <span class="tooltiptext">{{read_w}} h</span>
   </div>
   </h2>
   {% assign progress = read_w | divided_by: read_w_goal | times:100 | round: 1 | append: '%' %}
@@ -52,9 +52,8 @@ description: "Proyectos"
 
   <h2 class="year">
     <div class="tooltip">
-
-    <span class="book-title">🖋️</span>
-    <span class="tooltiptext">{{write_w}}</span>
+    <span class="">🖋️</span>
+    <span class="tooltiptext">{{write_w}} w</span>
   </div>
   </h2>
   {% assign progress = write_w | divided_by: write_w_goal | times:100 | round: 1 | append: '%' %}
@@ -67,8 +66,8 @@ description: "Proyectos"
   {% assign lang_w = lang_w | divided_by: 60.0 | round: 1 %}
   <h2 class="year">
     <div class="tooltip">
-    <span class="book-title">🔠</span>
-    <span class="tooltiptext">{{lang_w}}</span>
+    <span class="">🔠</span>
+    <span class="tooltiptext">{{lang_w}} h</span>
   </div>
   </h2>
   {% assign progress = lang_w | divided_by: lang_w_goal | times:100 | round: 1 | append: '%' %}
@@ -79,7 +78,7 @@ description: "Proyectos"
   <h2 class="year">
     <div class="tooltip">
     <span class="book-title">🚶🏽‍♂️</span>
-    <span class="tooltiptext">{{walk_w}}</span>
+    <span class="tooltiptext">{{walk_w}} km</span>
   </div>
   </h2>
   {% assign progress = walk_w | divided_by: walk_w_goal | times:100 | round: 1 | append: '%' %}
@@ -87,6 +86,4 @@ description: "Proyectos"
     <div class="w3-container w3-round w3-blue" style="width: {{ progress }}">{{ progress }}</div>
   </div>
 
-
 </div>
-
