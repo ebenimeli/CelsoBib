@@ -5,7 +5,7 @@ description: "Curriculum Vitae"
 ---
 
 ## Formación, experiencia e intereses
-Hola
+
 <a href="https://www.linkedin.com/in/ebenimeli/?locale=es_ES" target="_blank">Ver perfil en LinkedIn</a>
 
 <img src="assets/images/profile.jpg" class="profile image-cropper">
