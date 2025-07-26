@@ -783,3 +783,10 @@ code {
   white-space: nowrap;
   will-change: transform;
 }
+
+
+/* Fija el scope al bloque XML */
+
+code.language-xml span.nt {
+  color: gray;
+}
