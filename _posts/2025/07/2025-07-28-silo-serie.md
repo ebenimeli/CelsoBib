@@ -16,6 +16,4 @@ Hace unos meses, empecé a ver la serie ***Silo*** [en Apple TV+](https://tv.app
 
 El eslogan promocional de la serie, *The Truth Will Surface* (La verdad saldrá a la luz), nos da un idea del tema de fondo. El trailer está [disponible en YouTube](https://www.youtube.com/watch?v=8ZYhuvIv1pA).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8ZYhuvIv1pA?si=bXze_BEnlHq9JrWf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 Serie para lo que queda de verano.
