@@ -797,7 +797,9 @@ code.language-xml span.nt {
 }
 
 div.bio {
-  border: 1px dashed var(--border-color);
+  /*border: 1px dashed var(--border-color);*/
+  border: 1px dashed #696969;
+
   padding: 5px;
   font-size: .9em;
   border-radius: 10px;
