@@ -790,3 +790,30 @@ code {
 code.language-xml span.nt {
   color: gray;
 }
+
+
+.profile-image-container {
+  width: 40%;
+}
+
+div.bio {
+  border: 1px dashed var(--border-color);
+  padding: 5px;
+  font-size: .9em;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+div.bio a {
+  text-decoration:underline !important;
+}
+
+img.bio-profile {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  transition: transform .2s;
+  border: 0px dashed #696969;
+
+  float: right;
+}
