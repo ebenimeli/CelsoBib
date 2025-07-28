@@ -6,11 +6,11 @@ description: "Películas, series de TV y documentales"
 
 ### Ahora estoy viendo...
 
-![Memento Mori](images/misc/rematch.jpg)
+![Silo](assets/images/posts/2025/07/silo.jpg)
 
-Rematch (2024) [→ 🍿 S01E2](https://play.max.com/show/9683b77e-3bb4-43bd-b0b0-faaf4a534974)
+Silo (2023) [→ 🍿 S01E2]()
 
-En 1997, IBM convenció al campeón mundial de ajedrez Gary Kasparov, que había vencido al superordenador Deep Blue, para jugar la revancha. Esta cautivadora serie convierte el duelo entre el hombre y la IA en un thriller psicológico con resonancias contemporáneas
+En un futuro tóxico y en ruinas, miles de personas viven en un gigantesco silo bajo tierra. Después de que su sheriff incumpla una regla cardinal y los residentes mueran misteriosamente, la ingeniera Juliette empieza a descubrir secretos espeluznantes y la verdad sobre el silo.
 
 ### Cine
 1. La piel del tambor (2022) [→ 🍿](https://www.primevideo.com/dp/0T42O5Z6QECZ4Q6CXW1D7OYTAY) ★★★★☆
