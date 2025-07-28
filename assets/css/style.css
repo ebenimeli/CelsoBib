@@ -814,6 +814,5 @@ img.bio-profile {
   border-radius: 50%;
   transition: transform .2s;
   border: 0px dashed #696969;
-
   float: right;
 }
