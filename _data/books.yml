@@ -1,3 +1,22 @@
+- title: En busca del origen del lenguaje
+  author: Sverker Johansson
+  link: https://amzn.to/3fhFRGt
+  image:
+  description:
+  genre: [ciencia]
+  completed: 
+  synopsis: "Un libro fascinante sobre uno de los mayores misterios de la humanidad: el origen del lenguaje.<br/>
+―¿Por qué el mono no responde a lo que le digo? ―pregunta una niña de cuatro años.<br/>
+―Porque los animales no saben hablar ―contesta su papá.<br/>
+―Pero ayer dijiste que las personas también eran animales. Entonces ¿por qué hablan?<br/>
+Hace falta un libro entero para responder a esta última pregunta, y ese libro es el que tienes ahora en tus manos, una historia audaz y entretenida sobre uno de los mayores misterios de la humanidad: el origen del lenguaje.<br/>
+A partir de las investigaciones más recientes en disciplinas tan diversas como la biología evolutiva, la primatología, la neurociencia o la antropología social, Sverker Johansson expone las principales teorías sobre cómo y por qué los humanos comenzaron a hablar. Para ello explora la evolución histórica de las lenguas desde una perspectiva darwiniana, cuestiona las ideas de Chomsky y otros lingüistas reconocidos, compara las habilidades comunicativas de las personas y los animales, y aborda los rasgos característicos de los idiomas modernos.<br/>
+En busca del origen del lenguaje es el libro definitivo para entender cómo se originó el lenguaje humano y por qué hablamos de la manera en que lo hacemos."
+  cover: "origenlenguaje.jpeg"
+  onpage: 10
+  pages: 400
+  highlight: yes
+  
 - title: La vacuna contra la insensatez. Tratado de inmunología mental
   author: José Antonio Marina
   link: https://amzn.to/4lCvM3I
@@ -165,24 +184,6 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   completed: 
   onpage: 17
   pages: 243
-
-- title: En busca del origen del lenguaje
-  author: Sverker Johansson
-  link: https://amzn.to/3fhFRGt
-  image:
-  description:
-  genre: [ciencia]
-  completed: 
-  synopsis: "Un libro fascinante sobre uno de los mayores misterios de la humanidad: el origen del lenguaje.<br/>
-―¿Por qué el mono no responde a lo que le digo? ―pregunta una niña de cuatro años.<br/>
-―Porque los animales no saben hablar ―contesta su papá.<br/>
-―Pero ayer dijiste que las personas también eran animales. Entonces ¿por qué hablan?<br/>
-Hace falta un libro entero para responder a esta última pregunta, y ese libro es el que tienes ahora en tus manos, una historia audaz y entretenida sobre uno de los mayores misterios de la humanidad: el origen del lenguaje.<br/>
-A partir de las investigaciones más recientes en disciplinas tan diversas como la biología evolutiva, la primatología, la neurociencia o la antropología social, Sverker Johansson expone las principales teorías sobre cómo y por qué los humanos comenzaron a hablar. Para ello explora la evolución histórica de las lenguas desde una perspectiva darwiniana, cuestiona las ideas de Chomsky y otros lingüistas reconocidos, compara las habilidades comunicativas de las personas y los animales, y aborda los rasgos característicos de los idiomas modernos.<br/>
-En busca del origen del lenguaje es el libro definitivo para entender cómo se originó el lenguaje humano y por qué hablamos de la manera en que lo hacemos."
-  cover: "origenlenguaje.jpeg"
-  onpage: 10
-  pages: 400
 
 - title: "La Edad Media. Una historia gráfica"
   author: Eleanor Janega y Neil Max Emmanuel
