@@ -23,10 +23,10 @@ Mantengo una relación de amor-odio con las redes sociales. A veces paso por ~~T
 1. La informática. En especial las tecnologías del lenguaje.
 1. Las lenguas y culturas del mundo. Y viajar para descubrirlas.
 2. El mundo de la educación y las TIC. Reflexionar y [escribir](http://www.esferatic.com) sobre ello.
-3. La [lectura](pages/bookshelf.html), especialmente sobre divulgación científica y la historia.
+3. La [lectura](pages/bookshelf.html), especialmente sobre divulgación científica e historia.
 4. El mundo de la [productividad y la organización personal](https://www.ochoenpunto.com/).
 5. El arte del [ajedrez](pages/chess.html) y su ciencia.
-6. Escribir. Lo hago de vez en cuando en mis blogs.
+6. Escribir.
 7. La fascinante vida y legado de [Ada Lovelace](https://es.wikipedia.org/wiki/Ada_Lovelace).
 8. La automatización de procesos y otras formas de ahorrar tiempo.
 9. ~~Correr~~Andar (una vez terminé una maratón).
