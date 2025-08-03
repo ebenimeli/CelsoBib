@@ -19,7 +19,10 @@
 }
 
 body {
-  font-family: 'Catamaran', sans-serif;
+  /*font-family: 'Catamaran', sans-serif;*/
+  /*font-family: "American Typewriter", serif;*/
+  font-family: "Prestige Elite", monospace;
+  font-size: 1em;
   font-weight: 300;
   background: var(--body-bg);
   color: var(--primary-font-color);
@@ -90,6 +93,7 @@ body {
   width: 80%;
   color: var(--primary-font-color);
   font-weight: normal;
+  font-size: 1em;
 }
 
 .post-title:hover {
@@ -222,7 +226,26 @@ body {
 
 .blog-post-content {
   width: 100%;
-  font-size: 18px;
+  font-size: 1em;
+  text-align: justify;
+  font-family: "Prestige Elite", monospace;
+}
+
+.blog-post-content h1 {
+  font-family: "Prestige Elite", monospace;
+  font-size: 1.6em;
+  text-align: left;
+}
+
+.blog-post-content h2 {
+  font-family: "Prestige Elite", monospace;
+  font-size: 1.4em;
+  text-align: left;
+}
+
+.blog-post-content h3 {
+  font-family: "Prestige Elite", monospace;
+  font-size: 1.2em;
 }
 
 .post-tag {
@@ -321,6 +344,15 @@ pre {
   font-size: 14px;
   max-width: 90vw;
   overflow: auto;
+}
+
+ul {
+  list-style-type: square;
+  font-size: 1em;
+}
+
+ul.courses {
+  font-size: 1em;
 }
 
 .social-icon {
@@ -584,7 +616,7 @@ strong {
 }
 
 .star-rating {
-  font-size: .5em;
+  font-size: 1em;
 }
 
 table.habits tr td {
@@ -685,6 +717,12 @@ ul.tasks li {
 }
 
 /** Mine **/
+
+.blog-name {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-family: "Prestige Elite", monospace;
+}
 
 .blog-post-content a {
   text-decoration: underline;
@@ -816,4 +854,35 @@ img.bio-profile {
   transition: transform .2s;
   border: 0px dashed #696969;
   float: right;
+}
+
+/** Style for courses **/
+
+span.organizer {
+}
+
+span.course-title {
+  /*font-style: italic;*/
+    color: steelblue;
+
+  font-weight: bold;
+}
+
+span.course-description {
+}
+
+details.course ul.details {
+  font-size: .9em;
+}
+
+details.course {
+  text-align: justify;
+}
+
+p.post-by {
+  font-size: .8em;
+}
+
+p.post-by a {
+  text-decoration: none;
 }
