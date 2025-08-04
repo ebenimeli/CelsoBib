@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700&subset=latin-ext');
 
 :root {
+  --primary-font: "Prestige Elite", monospace;
   --bg-color: #fafafa;
   --bg-hover-color: Steelblue;
   --body-bg: #fff;
@@ -21,7 +22,7 @@
 body {
   /*font-family: 'Catamaran', sans-serif;*/
   /*font-family: "American Typewriter", serif;*/
-  font-family: "Prestige Elite", monospace;
+  font-family: var(--primary-font);
   font-size: 1em;
   font-weight: 300;
   background: var(--body-bg);
@@ -103,6 +104,8 @@ body {
 .post-list .post-date {
   width: 20%;
   text-align: right;
+  padding-left: 5px;
+  font-size: .8em;
 }
 
 .post-date:hover {
@@ -228,23 +231,23 @@ body {
   width: 100%;
   font-size: 1em;
   text-align: justify;
-  font-family: "Prestige Elite", monospace;
+  font-family: var(--primary-font);
 }
 
 .blog-post-content h1 {
-  font-family: "Prestige Elite", monospace;
+  font-family: var(--primary-font);
   font-size: 1.6em;
   text-align: left;
 }
 
 .blog-post-content h2 {
-  font-family: "Prestige Elite", monospace;
+  font-family: var(--primary-font);
   font-size: 1.4em;
   text-align: left;
 }
 
 .blog-post-content h3 {
-  font-family: "Prestige Elite", monospace;
+  font-family: var(--primary-font);
   font-size: 1.2em;
 }
 
@@ -721,7 +724,7 @@ ul.tasks li {
 .blog-name {
   margin-bottom: 0;
   font-weight: 700;
-  font-family: "Prestige Elite", monospace;
+  font-family: var(--primary-font);
 }
 
 .blog-post-content a {
@@ -837,11 +840,11 @@ code.language-xml span.nt {
 div.bio {
   /*border: 1px dashed var(--border-color);*/
   border: 1px dashed #696969;
-
-  padding: 5px;
-  font-size: .9em;
+  padding: 10px;
+  font-size: .8em;
   border-radius: 10px;
   margin-bottom: 5px;
+  text-align: justify;
 }
 
 div.bio a {
@@ -868,8 +871,10 @@ span.course-title {
   font-weight: bold;
 }
 
+/**
 span.course-description {
 }
+**/
 
 details.course ul.details {
   font-size: .9em;
