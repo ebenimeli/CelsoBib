@@ -36,6 +36,7 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  footnote_nr: 1
 
 exclude:
   - .jekyll-cache

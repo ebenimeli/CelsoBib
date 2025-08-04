@@ -891,3 +891,8 @@ p.post-by {
 p.post-by a {
   text-decoration: none;
 }
+
+#footnotes {
+  font-size: .8em;
+  text-align: left;
+}
