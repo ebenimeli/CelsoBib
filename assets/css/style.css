@@ -978,5 +978,5 @@ table.products tr td {
 
 table.products tr td.img-product {
   padding-right: 15px;
-  min-width: 100px;
+  width: 20%;
 }
