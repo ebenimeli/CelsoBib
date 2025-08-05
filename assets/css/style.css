@@ -971,6 +971,20 @@ img.product {
   margin-right: 17px;
 }
 
+table.products {
+  width: 100%;
+  table-layout: fixed; /* fuerza a respetar los anchos */
+}
+
+table.products tr td.img-product {
+    width: 30%;    /* columna izquierda */
+}
+
+table.products tr td:not(.img-product) {
+  width: 70%;    /* cualquier otra columna */
+}
+
+/* tus reglas existentes */
 table.products tr td {
   padding: 5px;
   border-bottom: 1px solid;
@@ -978,5 +992,6 @@ table.products tr td {
 
 table.products tr td.img-product {
   padding-right: 15px;
-  width: 20%;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
