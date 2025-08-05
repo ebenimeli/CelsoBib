@@ -817,16 +817,31 @@ code {
 
 /** Marquee style **/
 
+/*
 .post-list.status {
   position: relative;
   overflow: hidden;
-  height: 1.5em;        /* ajusta a la altura de tu línea */
+  height: 1.5em;      
 }
 .post-list.status .marquee {
   position: absolute;
   top: 0;
   white-space: nowrap;
   will-change: transform;
+}
+*/
+
+
+/* CSS */
+.post-list.status,
+.post-list.urgent {
+  position: relative;   /* Para que el .marquee pos absolute se refiera a este contenedor */
+  overflow: hidden;     /* Oculta todo lo que sobresalga */
+}
+
+.marquee {
+  position: absolute;   /* Nos permite moverlo con transform sin que afecte al documento */
+  white-space: nowrap;  /* Impide que el texto haga wrap */
 }
 
 
