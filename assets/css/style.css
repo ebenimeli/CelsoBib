@@ -138,7 +138,7 @@ body {
 }
 
 .post-date {
-  font-weight: 300;
+  font-weight: normal;
 }
 
 .post-header .post-share a {
@@ -759,36 +759,9 @@ img.profile {
   border-radius: 50%;
 }
 
-.status {
-  background: var(--bg-hover-color);
-  color: white;
-  /*font-weight: bold;*/
-  font-size: .9em;
-  border: 0.5px solid;
-}
-
-.status a.post-title {
-  color: white;
-  font-weight: normal;
-}
 
 
-.urgent {
-  background: #DC143C;
-  color: white;
-  font-weight: bold;
-  font-size: .9em;
-  border: 0.5px solid white;
-}
 
-.urgent:hover {
-  background-color: black;
-}
-
-.urgent a.post-title {
-  color: #FFFFE0;
-  padding-right: 15px;
-}
 
 div.graphic {
   text-align: center;
@@ -817,31 +790,102 @@ code {
 
 /** Marquee style **/
 
-/*
-.post-list.status {
-  position: relative;
-  overflow: hidden;
-  height: 1.5em;      
-}
-.post-list.status .marquee {
-  position: absolute;
-  top: 0;
-  white-space: nowrap;
-  will-change: transform;
-}
-*/
 
-
-/* CSS */
-.post-list.status,
-.post-list.urgent {
-  position: relative;   /* Para que el .marquee pos absolute se refiera a este contenedor */
-  overflow: hidden;     /* Oculta todo lo que sobresalga */
-}
-
+/* El contenedor tiene el fondo fijo y oculta el overflow */
+.marquee-container,
 .marquee {
-  position: absolute;   /* Nos permite moverlo con transform sin que afecte al documento */
-  white-space: nowrap;  /* Impide que el texto haga wrap */
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: steelblue;      /* tu color de fondo */
+  color: #fff;           /* color del texto */
+  min-height: 2em;       /* altura de línea */
+  display: flex;
+  align-items: center;   /* centra verticalmente el texto */
+}
+
+/* El texto que se va a mover */
+.marquee-text {
+  white-space: nowrap;
+  display: inline-block;
+  padding-top: 4px;
+}
+
+/* Ocultar los elementos origen */
+.marquee-items {
+  display: none;
+}
+
+/* Quita el border de .post-list sólo dentro de la marquesina */
+.marquee-container .post-list {
+  border: none !important;
+  box-shadow: none !important;  /* por si hubiera sombra */
+  padding: 0;                    /* opcional, si quieres ajustar */
+}
+
+/* Quita subrayado/borde de los enlaces */
+.marquee-container .post-list .post-title {
+  text-decoration: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/* Si al hacer foco o hover sigue saliendo */
+.marquee-container .post-list .post-title:hover,
+.marquee-container .post-list .post-title:focus {
+  text-decoration: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.marquee-container,
+.marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  color: #fff;
+  min-height: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.marquee.status {
+  background-color: steelblue;
+  color: white;
+  font-size: 1em;
+  border: 0.5px solid;
+}
+
+.marquee.status .text-item {
+  background-color: steelblue;
+  color: white;
+}
+
+.marquee.status a.post-title {
+  color: white;
+  font-weight: normal;
+}
+
+.marquee.urgent {
+  background-color: #DC143C;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  border: 0.5px solid #ffffff;
+}
+
+.marquee.urgent a.post-title {
+  color: #FFFFE0;
+  padding-right: 15px;
+}
+
+.marquee.urgent .text-item {
+  background-color: #DC143C;
+  color: white;
+}
+
+.text-item .post-list {
+  background-color: none;
 }
 
 

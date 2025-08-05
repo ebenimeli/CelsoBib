@@ -1,47 +1,62 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const container = document.querySelector('.post-list.status, .post-list.urgent');
-  const marquee   = container.querySelector('.marquee');
-  const speed     = 80; // px/s
+  const container = document.querySelector('.marquee-container');
+  if (!container) return;
 
-  // --- estilos necesarios desde JS ---
-  container.style.position = 'relative';
-  container.style.overflow = 'hidden';
+  const marquee    = container.querySelector('.marquee');
+  const textHolder = marquee.querySelector('.marquee-text');
+  const items      = Array.from(
+    container.querySelectorAll('.marquee-items .text-item')
+  );
+  if (items.length === 0) return;
 
-  marquee.style.position    = 'absolute';
-  marquee.style.whiteSpace  = 'nowrap';
-  marquee.style.display     = 'inline-block';   // shrink-to-fit + padding
-  marquee.style.padding     = '5px';             // 5px alrededor
-  marquee.style.boxSizing   = 'content-box';     // padding suma al ancho/alto
-  // ------------------------------------------
+  const speed = 80; // px/seg
+  let current = 0, contW, textW, x, lastTime;
 
-  let contW, textW, x, lastTime;
+  function showText(idx) {
+    // Limpia y clona
+    textHolder.innerHTML = '';
+    const clone = items[idx].cloneNode(true);
+    textHolder.appendChild(clone);
 
-  function init() {
-    // recalcula anchos teniendo en cuenta el padding
-    contW = container.clientWidth;
-    textW = marquee.scrollWidth;                 // ancho real del contenido + padding
-    x     = contW;                               // arrancamos desde la derecha
+    // Detecta categoría y ajústala en la clase de marquee
+    marquee.classList.remove('status','urgent');
+    if (clone.classList.contains('urgent')) {
+      marquee.classList.add('urgent');
+    } else {
+      marquee.classList.add('status');
+    }
 
-    // ajusta la altura del contenedor para mostrar el padding vertical
-    container.style.height = marquee.clientHeight + 'px';
+    // Recalculamos dimensiones
+    contW = marquee.clientWidth;
+    textW = textHolder.scrollWidth;
+    x     = contW;
+    textHolder.style.transform = `translateX(${x}px)`;
 
-    marquee.style.transform = `translateX(${x}px)`;
+    // Preparar animación
     lastTime = null;
-    requestAnimationFrame(step);
   }
 
   function step(ts) {
     if (!lastTime) lastTime = ts;
     const delta = ts - lastTime;
-    lastTime    = ts;
+    lastTime = ts;
 
     x -= speed * (delta / 1000);
-    if (x < -textW) x = contW;                   // cuando sale, vuelve a la derecha
-
-    marquee.style.transform = `translateX(${x}px)`;
+    if (x < -textW) {
+      current = (current + 1) % items.length;
+      showText(current);
+    } else {
+      textHolder.style.transform = `translateX(${x}px)`;
+    }
     requestAnimationFrame(step);
   }
 
-  init();
-  window.addEventListener('resize', init);
+  // Arranca
+  showText(current);
+  requestAnimationFrame(step);
+
+  // Reinicia al redimensionar
+  window.addEventListener('resize', () => {
+    showText(current);
+  });
 });

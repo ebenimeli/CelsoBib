@@ -1,29 +1,46 @@
-    {% assign statok = 0 %}
-    {% for msg in site.data.log %}
-    {% if statok == 0 and (msg.cat == 'status' or msg.cat == 'urgent') %}
+{%- comment -%}
+  Igual que antes, pero generamos solo el texto dentro de .marquee-items
+{%- endcomment -%}
 
-    {% assign date2 = 'now' | date: "%s" %}
-    {% assign date1 = msg.timestamp | date: "%s" %}
-    {% assign ago_min = date2 | minus: date1 | times: 1.0 | divided_by: 60 | round: 0 %}
-    {% assign ago_h = date2 | minus: date1 | times: 1.0 | divided_by: 60 | divided_by: 60 | round: 0 %}
+{%- assign now_ts    = 'now'      | date: '%s' | plus: 0      -%}
+{%- assign cutoff_ts = now_ts     | minus: 86400            -%}
+{%- assign filtered  = site.data.log
+     | where_exp: "item", "item.cat == 'status' or item.cat == 'urgent'"
+     | sort:     "timestamp"
+     | reverse                                -%}
 
-    {% if ago_h == 0 %}
-        {% assign agotext = "hace " | append: {{ago_min}} | append: " min" %}
-    {% else %}
-        {% assign agotext = "hace " | append: {{ago_h}} | append: " h" %}
-    {% endif %}
+<div class="marquee-container">
+  <!-- Este es el fondo fijo -->
+  <div class="marquee">
+    <div class="marquee-text"></div>
+  </div>
 
-    {% if ago_h < 18 %}
-    <div class="post-list {{ msg.cat }}">
-        <div class="marquee">
-            <a class="post-title" href="{{ msg.link }}">{{ msg.text }}</a>
-            <time datetime="{{ msg.timestamp | date_to_xmlschema }}" class="post-date">{{ agotext }}</time>
-        </div>
-    </div>
-    {% endif %}
+  <!-- Ocultos: solo el contenido textual -->
+  <div class="marquee-items" style="display:none;">
+    {%- assign count = 0 -%}
+    {%- for msg in filtered -%}
+      {%- if count < 3 -%}
+        {%- assign ts = msg.timestamp | date: '%s' | plus: 0 -%}
+        {%- if ts >= cutoff_ts -%}
+          {%- assign diff    = now_ts | minus: ts                             -%}
+          {%- assign ago_min = diff    | divided_by: 60   | round: 0          -%}
+          {%- assign ago_h   = diff    | divided_by: 3600 | round: 0          -%}
+          {%- if ago_h == 0 -%}
+            {%- assign agotext = "hace " | append: ago_min | append: " min" -%}
+          {%- else -%}
+            {%- assign agotext = "hace " | append: ago_h   | append: " h"   -%}
+          {%- endif -%}
 
-    {% assign statok = 1 %}
-    {% endif %}
-    {% endfor %}
+          <div class="text-item post-list {{ msg.cat }}">
+            <a class="post-title" href="{{ msg.link }}">{{ msg.text }} · {{ agotext }}</a>
+            <!--<time class="post-date" datetime="{{ msg.timestamp | date_to_xmlschema }}"></time>-->
+          </div>
 
-    <script src="assets/js/marquee.js"></script>
+          {%- assign count = count | plus: 1 -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+<script defer src="{{ '/assets/js/marquee.js' | relative_url }}"></script>
