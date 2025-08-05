@@ -8,7 +8,7 @@ categories: Actualidad
 tags: [política,formación,cv]
 ---
 
-[![image](assets/images/posts/2024/01/post.jpg)](https://ebenimeli.substack.com/p/una-mente-perezosa-una-revancha-historica)
+[![image](assets/images/posts/2024/01/post.jpg)]()
 
 Esta semana, la formación de nuestros diputados es [tema de conversación](https://www.ondacero.es/noticias/espana/que-titulacion-necesaria-ser-diputado-congreso_2025072368809008ffbf4a1a6740f497.html).
 
