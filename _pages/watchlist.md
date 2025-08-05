@@ -13,9 +13,10 @@ Silo (2023) [→ 🍿 S01E2]()
 En un futuro tóxico y en ruinas, miles de personas viven en un gigantesco silo bajo tierra. Después de que su sheriff incumpla una regla cardinal y los residentes mueran misteriosamente, la ingeniera Juliette empieza a descubrir secretos espeluznantes y la verdad sobre el silo.
 
 ### Cine
-1. La piel del tambor (2022) [→ 🍿](https://www.primevideo.com/dp/0T42O5Z6QECZ4Q6CXW1D7OYTAY) ★★★★☆
-1. Ex machina (2014) [→ 🍿](https://www.imdb.com/title/tt0470752/) ★★★★☆
-1. 70 binladens [→ 🍿](https://www.imdb.com/title/tt7972178/) ★★★★☆
+1. La frontera: del documental (2025) [→ 🍿](https://www.primevideo.com/-/es/detail/La-Frontera-El-Documental/0KXDM0QCFFBIAT519VJQQWJMM6) ★★★★☆
+2. La piel del tambor (2022) [→ 🍿](https://www.primevideo.com/dp/0T42O5Z6QECZ4Q6CXW1D7OYTAY) ★★★★☆
+3. Ex machina (2014) [→ 🍿](https://www.imdb.com/title/tt0470752/) ★★★★☆
+4. 70 binladens [→ 🍿](https://www.imdb.com/title/tt7972178/) ★★★★☆
 
 ### Series
 1. Revancha (2024) [→ 🍿 S01E2](https://play.max.com/show/9683b77e-3bb4-43bd-b0b0-faaf4a534974)
