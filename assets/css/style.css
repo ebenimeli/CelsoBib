@@ -917,23 +917,20 @@ p.post-by a {
 }
 
 img.product {
-  width: 80%;
+  width: 100%;
   aspect-ratio: 1 / 1; /* asegura que sea un cuadrado */
   object-fit: cover;   /* recorta la imagen para que llene el espacio */
   border-radius: 50%;  /* hace que sea redonda */
-  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.3); /* sombra suave */
-  padding: 7px;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.3); /* sombra suave */
+  padding: 2px;
+  margin-right: 17px;
 }
-
 
 table.products tr td {
   padding: 5px;
   border-bottom: 1px solid;
 }
 
-table.products tr td {
-  padding-top: 20px;
-
-  padding-bottom: 20px;
-
+table.products tr td.img-product {
+  padding-right: 15px;
 }

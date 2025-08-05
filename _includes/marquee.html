@@ -1,0 +1,27 @@
+    {% assign statok = 0 %}
+    {% for msg in site.data.log %}
+    {% if statok == 0 and (msg.cat == 'status' or msg.cat == 'urgent') %}
+
+    {% assign date2 = 'now' | date: "%s" %}
+    {% assign date1 = msg.timestamp | date: "%s" %}
+    {% assign ago_min = date2 | minus: date1 | times: 1.0 | divided_by: 60 | round: 0 %}
+    {% assign ago_h = date2 | minus: date1 | times: 1.0 | divided_by: 60 | divided_by: 60 | round: 0 %}
+
+    {% if ago_h == 0 %}
+        {% assign agotext = "hace " | append: {{ago_min}} | append: " min" %}
+    {% else %}
+        {% assign agotext = "hace " | append: {{ago_h}} | append: " h" %}
+    {% endif %}
+
+    {% if ago_h < 18 %}
+    <div class="post-list {{ msg.cat }}">
+        <div class="marquee">
+            <a class="post-title" href="{{ msg.link }}">{{ msg.text }}</a>
+            <time datetime="{{ msg.timestamp | date_to_xmlschema }}" class="post-date">{{ agotext }}</time>
+        </div>
+    </div>
+    {% endif %}
+
+    {% assign statok = 1 %}
+    {% endif %}
+    {% endfor %}
