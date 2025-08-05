@@ -8,7 +8,7 @@ description: "Algunas recomendaciones"
 <table class="products">
   {% for product in site.data.shop %}
   <tr>
-  <td>
+  <td class="img-product">
 <a href="{{ product.link }}" target="_blank"><img class="product" src="assets/images/pages/shop/{{ product.image }}" alt="{{ product.title }}"></a>
 </td>
 <td>
