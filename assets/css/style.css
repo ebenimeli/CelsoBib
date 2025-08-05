@@ -903,9 +903,13 @@ p.post-by a {
 
 img.product {
   width: 80%;
+  aspect-ratio: 1 / 1; /* asegura que sea un cuadrado */
+  object-fit: cover;   /* recorta la imagen para que llene el espacio */
+  border-radius: 50%;  /* hace que sea redonda */
   box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.3); /* sombra suave */
-  border-radius: 8px; /* opcional: esquinas redondeadas */
+  padding: 7px;
 }
+
 
 table.products tr td {
   padding: 5px;
