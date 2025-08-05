@@ -1,0 +1,17 @@
+- name: Cámara de seguridad Tapo 125
+  description: "Tapo C125 - Cámara de Seguridad WiFi Resolución 2k QHD, Visión Nocturna con Sistema IR Dual, IA Mejorada, Modo Privacidad Física, Sensor Starlight, Compatible con Alexa&Google Assistant, Home Kit"
+  link: https://amzn.to/45m278c
+  cat: electronics
+  image: tapo125.jpg
+
+- name: TP-Link RE550 - Mesh AC1900 Repeater
+  description: "TP-Link RE550 - Mesh AC1900 Repeater, Dual Band WiFi, 1300Mbps/in 5GHz + 600Mbps/in 2.4GHz, WiFi Amplifier, App Control, Compatible with All WiFi Devices, Cranberry"
+  link: https://amzn.to/4ft7qaA
+  cat: electronics
+  image: tplinkre550.jpg
+
+- name: KOKOKA Funda de Silicona Compatible con AirPods 4
+  description: "KOKOKA Funda de Silicona Compatible con AirPods 4 2024 Case, LED Frontal Visible, Anti-rasguños, Anti-Polvo, Funda Protectora de Silicona para AirPods 4.ª Generación con Kit de Limpiador, Cloud Grey"
+  link: https://amzn.to/4fqNeG8
+  cat: electronics
+  image: kokoka_airpods.jpg

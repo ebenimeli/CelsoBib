@@ -109,7 +109,7 @@ body {
 }
 
 .post-date:hover {
-  color: white;
+  /*color: white;*/
 }
 
 .post-header {
@@ -133,8 +133,12 @@ body {
   align-items: center;
 }
 
-.post-header .post-date {
+.post-header {
   font-weight: 600;
+}
+
+.post-date {
+  font-weight: 300;
 }
 
 .post-header .post-share a {
@@ -895,4 +899,22 @@ p.post-by a {
 #footnotes {
   font-size: .8em;
   text-align: left;
+}
+
+img.product {
+  width: 80%;
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.3); /* sombra suave */
+  border-radius: 8px; /* opcional: esquinas redondeadas */
+}
+
+table.products tr td {
+  padding: 5px;
+  border-bottom: 1px solid;
+}
+
+table.products tr td {
+  padding-top: 20px;
+
+  padding-bottom: 20px;
+
 }
