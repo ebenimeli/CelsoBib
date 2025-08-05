@@ -4,7 +4,26 @@ title: ""
 description: "Ingeniería Informática"
 ---
 
-# Ingeniería en Informática
+## Ingeniería en Informática
+
+  {% for curso in site.data.inginf %}
+<details class="course">
+  <summary>
+  <span class="course-title">{{ curso.name }}</span>. <span class="organizer">{{ curso.organizer }}</span>. {% if curso.credits %} {{ curso.credits }} ECTS {% endif %} / {% if curso.hours %} {{ curso.hours }} horas {% endif %} [+ info]
+  </summary>
+    <ul class="details">
+     <li><strong>Resumen: </strong><span class="course-description">{{ curso.description }}</span></li>
+     <li><strong>Contenidos:</strong> {{ curso.contents }}</li>
+     <li><strong>+ info: </strong> <a href="{{ curso.url }}" target="_blank">{{ curso.url | truncate: 50}} </a></li>
+      {% if curso.observations %}
+        <li><strong>Observaciones:</strong> {{ curso.observations }}</li>
+      {% endif %}
+      </ul>
+      </details>
+  {% endfor %}
+
+
+## Lista completa
 
 <!--
 * Plan de estudios: [Ingeniería en Informática - plan 1993](http://cv1.cpd.ua.es/consplanesestudio/cvAsignaturas.asp?wCodEst=35&scaca=2003-04)
