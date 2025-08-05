@@ -1,0 +1,9 @@
+- name: "Álgebra y Teoría de Matrices"
+  description: "Teoría de conjuntos y estructuras algebraicas. Computación matricial. Álgebra."
+  department: Ciencia de la Computación e Inteligencia Artificial 
+  credits: 7,5 (4,5 + 3)
+  hours: 
+  contents: "1. Sistemas de ecuaciones lineales 2. Matrices 3. Determinantes 4. Espacios vectoriales 5. Espacio euclideo 6. Diagonalización de matrices reales 7. Aplicaciones lineales"
+  url: http://cv1.cpd.ua.es/consplanesestudio/cvFichaAsi.asp?wCodEst=35&wcodasi=6626&wLengua=C&scaca=2003-04
+  observations: Observaciones
+
