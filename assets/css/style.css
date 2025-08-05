@@ -809,6 +809,7 @@ code {
   white-space: nowrap;
   display: inline-block;
   padding-top: 4px;
+  font-size: .8em;
 }
 
 /* Ocultar los elementos origen */
