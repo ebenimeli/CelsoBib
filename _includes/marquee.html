@@ -19,7 +19,7 @@
   <div class="marquee-items" style="display:none;">
     {%- assign count = 0 -%}
     {%- for msg in filtered -%}
-      {%- if count < 3 -%}
+      {%- if count < 10 -%}
         {%- assign ts = msg.timestamp | date: '%s' | plus: 0 -%}
         {%- if ts >= cutoff_ts -%}
           {%- assign diff    = now_ts | minus: ts                             -%}
