@@ -1,5 +1,6 @@
 {%- comment -%}
   Igual que antes, pero generamos solo el texto dentro de .marquee-items
+  y descartamos cualquier log cuya timestamp sea posterior a now.
 {%- endcomment -%}
 
 {%- assign now_ts    = 'now'      | date: '%s' | plus: 0      -%}
@@ -21,7 +22,11 @@
     {%- for msg in filtered -%}
       {%- if count < 10 -%}
         {%- assign ts = msg.timestamp | date: '%s' | plus: 0 -%}
-        {%- if ts >= cutoff_ts -%}
+        {%- comment -%}
+          Solo si está dentro de las últimas 24 h **y**
+          no es una marca de tiempo futura
+        {%- endcomment -%}
+        {%- if ts >= cutoff_ts and ts <= now_ts -%}
           {%- assign diff    = now_ts | minus: ts                             -%}
           {%- assign ago_min = diff    | divided_by: 60   | round: 0          -%}
           {%- assign ago_h   = diff    | divided_by: 3600 | round: 0          -%}
@@ -33,7 +38,6 @@
 
           <div class="text-item post-list {{ msg.cat }}">
             <a class="post-title" href="{{ msg.link }}">{{ msg.text }} · {{ agotext }}</a>
-            <!--<time class="post-date" datetime="{{ msg.timestamp | date_to_xmlschema }}"></time>-->
           </div>
 
           {%- assign count = count | plus: 1 -%}

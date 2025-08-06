@@ -6,75 +6,74 @@ description: "Lo más reciente"
 
 <div class="w-100">
 
-<div class="logs">
+  <div class="logs">
 
-{% assign nrecords = 0 %}
-{% for log in site.data.log %}
-  {% assign nrecords = nrecords | plus:1 %}
-{% endfor %}
+    {% assign nrecords = site.data.log | size %}
+    {% assign now_ts   = 'now' | date: '%s' | plus: 0 %}
 
-<ul>
-  {% for post in site.posts limit:1 %}
-    <!--<li>📌&nbsp; <a class="post-title" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-    (<time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date: "%d.%m.%Y" }}</time>)
-    <span class="loglink">
-      <a href="{{ post.url }}">→</a>
-    </span>
-    </li>
-    <li>&nbsp;</li>-->
-  {% endfor %}
+    <ul>
+      {% assign first = true %}
+      {% assign i     = nrecords %}
 
-{% assign first = true %}
-{% assign i = nrecords %}
-{% for log in site.data.log %}
-    {% if first %}
-    <div class="lastlog {{ log.cat }}log">
-    <a href="{{ log.link }}">
-      <p>«{{ log.text }}»</p>
-    </a>
-    </div>
-      {% assign first = false %}
-    {% endif %}
-      <li class="logitem">
-        <div class="tooltip">
-          <span class="logid">[{{ i }}]</span>
-          <span class="tooltiptext">{{log.timestamp}}</span>
-        </div>
+      {% for log in site.data.log %}
+        {%- comment -%}
+          Convertimos la marca de tiempo de este log a segundos
+        {%- endcomment -%}
+        {% assign ts = log.timestamp | date: '%s' | plus: 0 %}
 
-      {% if log.cat == 'thought' %}
-        <span>💭</span>
-      {% endif %}
-      {% if log.cat == 'read' %}
-        <span>📖</span>
-      {% endif %}
-      {% if log.cat == 'write' %}
-        <span>📝</span>
-      {% endif %}
-      {% if log.cat == 'podcast' %}
-        <span>🎧</span>
-      {% endif %}
-      {% if log.cat == 'video' %}
-        <span>📺</span>
-      {% endif %}
-      {% if log.cat == 'work' %}
-        <span>📥</span>
-      {% endif %}
-      {% if log.cat == 'quote' %}
-        <span>💬</span>
-      {% endif %}
-      {% if log.cat == 'chess' %}
-        <span>♖</span>
-      {% endif %}
-      <span class="logtext">{{ log.text }}</span>
+        {%- comment -%}
+          Solo mostramos los logs cuya ts sea menor o igual a now_ts
+        {%- endcomment -%}
+        {% if ts <= now_ts %}
 
-      {%if log.link %}
-        <span class="loglink">
-          <a title="{{ log.timestamp }}" href="{{ log.link }}">→</a>
-        </span>
-      </li>
-      {% endif %}
-      {% assign i = i | minus:1 %}
-{% endfor %}
-</ul>
+          {%- comment -%}
+            Este es el “lastlog”: el primer log anterior a ahora
+          {%- endcomment -%}
+          {% if first %}
+            <div class="lastlog {{ log.cat }}log">
+              <a href="{{ log.link }}">
+                <p>«{{ log.text }}»</p>
+              </a>
+            </div>
+            {% assign first = false %}
+          {% endif %}
+
+          <li class="logitem">
+            <div class="tooltip">
+              <span class="logid">[{{ i }}]</span>
+              <span class="tooltiptext">{{ log.timestamp }}</span>
+            </div>
+
+            {% case log.cat %}
+              {% when 'thought'  %}<span>💭</span>
+              {% when 'read'     %}<span>📖</span>
+              {% when 'write'    %}<span>📝</span>
+              {% when 'podcast'  %}<span>🎧</span>
+              {% when 'video'    %}<span>📺</span>
+              {% when 'work'     %}<span>📥</span>
+              {% when 'quote'    %}<span>💬</span>
+              {% when 'chess'    %}<span>♖</span>
+            {% endcase %}
+
+            <span class="logtext">{{ log.text }}</span>
+
+            {% if log.link %}
+              <span class="loglink">
+                <a title="{{ log.timestamp }}" href="{{ log.link }}">→</a>
+              </span>
+            {% endif %}
+          </li>
+
+        {% endif %}
+
+        {%- comment -%}
+          Siempre decrementamos el contador, aunque el log se salte
+        {%- endcomment -%}
+        {% assign i = i | minus: 1 %}
+      {% endfor %}
+
+    </ul>
+
+  </div>
+
 </div>
-</div
