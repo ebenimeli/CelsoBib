@@ -1019,3 +1019,13 @@ div.lastlog p:hover {
   color: white;
   text-decoration: none;
 }
+
+.lastlog.statuslog p {
+  background-color: steelblue;
+  color: white;
+}
+
+.lastlog.urgentlog p {
+  background-color: #DC143C;
+  color: white;
+}

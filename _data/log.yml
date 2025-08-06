@@ -1,7 +1,7 @@
 - timestamp: 2025-08-06 17:30
   text: "La Aemet lanza un nuevo aviso especial por la ola de calor en España: hasta cuándo durará y zonas a las que más afectará"
   link: https://www.abc.es/sociedad/aemet-lanza-nuevo-aviso-especial-alarga-ola-20250806144927-nt.html
-  cat: 'urgent'
+  cat: 'status'
 
 - timestamp: 2025-08-06 13:00
   text: "Los accionistas del Sabadell aprueban la venta de TSB y BBVA decidirá ahora si retira la opa"

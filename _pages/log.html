@@ -28,7 +28,7 @@ description: "Lo más reciente"
 {% assign i = nrecords %}
 {% for log in site.data.log %}
     {% if first %}
-    <div class="lastlog">
+    <div class="lastlog {{ log.cat }}log">
     <a href="{{ log.link }}">
       <p>«{{ log.text }}»</p>
     </a>
