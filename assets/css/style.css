@@ -997,8 +997,8 @@ table.products tr td.img-product {
 }
 
 .lastlog {
-  border: 4px solid;
-  font-size: 1.4em;
+  border: 2px dotted;
+  font-size: 1.3em;
   padding: 10px;
   margin-left: -40px;
   border-radius: 8px; /* Ajusta este valor para más o menos curvatura */
