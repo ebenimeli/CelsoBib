@@ -500,7 +500,7 @@ ul.courses {
   background-color: steelblue;
   color: white;
   */
-  background-color: #dcdcdc;
+  /*background-color: #dcdcdc;*/
   font-size: .9em;
   display: none;         /* oculto por defecto */
   flex-wrap: wrap;
@@ -508,7 +508,7 @@ ul.courses {
   width: 100%;           /* fuerza línea nueva */
   clear: both;           /* limpia floats si los hubiera */
   margin-top: 0.5rem;    /* separación extra */
-  border: 1px dotted #ddd;
+  border: 1px solid #ddd;
   border-radius: 4px;
   padding: 0.5rem 1rem;
   margin-bottom: 5px;
