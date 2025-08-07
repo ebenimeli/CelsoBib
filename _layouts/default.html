@@ -39,7 +39,7 @@
 		</div>
 	</div>
 
-	<div class="navmenu">
+  <nav class="navmenu" id="main-menu">
 			<a href="/">✏️</a>
 			<a href="pages/log.html">💬</a>
 			<!--<a href="pages/photo">Fotografía</a>·-->
@@ -60,14 +60,37 @@
 			<a href="http://www.ochoenpunto.com" target="_blank">🕗</a>·
 			<a href="http://www.esferatic.com" target="_blank">👨🏻‍💻</a>
 			-->
-			<a href="pages/cv.html">💼</a>
-			<a href="pages/me.html">👦🏻</a>
-			<a href="pages/shop.html">❤️</a>
-	</div>
+			<a href="pages/cv.html" data-submenu="cv">💼</a>
+    		<a href="pages/me.html">👦🏻</a>
+    		<a href="pages/shop.html">❤️</a>
+  </nav>
 
+  <div id="submenu"></div>
+
+  <!-- Submenús (ocultos por defecto) -->
+  <div class="navmenu sub" id="cv">
+    <a href="pages/cv_topics.html">🧭</a>
+    <a href="pages/cv_work.html">💼</a>
+    <a href="pages/cv_edu.html">🎓</a>
+</div>
+
+  <div class="navmenu sub" id="me">
+    <a href="pages/me.html">Sobre mí</a>
+  </div>
+
+  <div class="navmenu sub" id="shop">
+    <a href="pages/shop.html">Todo</a> ·
+	<a href="#">Electrónica</a> ·
+    <a href="#">Libros</a> ·
+    <a href="#">0-3 años</a>
+  </div>
+  
 	{{ content }}
 	<div class="footer">
 		<span>Jekyll Theme by <a href="https://hakan.io"><b>Hakan</b></a></span>
 	</div>
 </div>
 {% include footer.html %}
+
+<script src="/assets/js/submenus.js" defer></script>
+
