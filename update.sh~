@@ -1,4 +1,6 @@
-/bin/env bash
+#/bin/env bash
+!/usr/bin/env bash
+
 set -euo pipefail
 
 export PATH="/home/ebenimeli/.rbenv/bin:/home/ebenimeli/.rbenv/shims:/home/ebenimeli/.gem/ruby/3.0.0/bin:$PATH"
