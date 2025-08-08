@@ -1,45 +1,45 @@
-#!/bin/bash
-BASE=/home/ebenimeli/GitHub/CelsoBib
-SITEFOLDER="$BASE/_site/"
-IMAC="/Users/ebenimeli/Documents/GitHub/CelsoBib"
-MACBOOK="/Users/Quique/Documents/GitHub/CelsoBib"
-SERVER="/home/ebenimeli/GitHub/CelsoBib"
+#/bin/env bash
+!/usr/bin/env bash
 
-echo "Site folder: $SITEFOLDER"
-if [[ -d "$SITEFOLDER" ]]; then
-    echo "Removing site..."
-    rm -r "$SITEFOLDER"
-else
-    echo "No _site folder found!"
-fi
-CACHE="$BASE/.jekyll-cache/"
-echo "Cache folder: $CACHE"
-if [[ -d "$CACHE" ]]; then
-   echo "Deleting cache..."
-   rm -r "$CACHE"
-else
-    echo "No cache folder!"
-fi
+set -euo pipefail
 
-echo "Pulling..."
-git pull
+export PATH="/home/ebenimeli/.rbenv/bin:/home/ebenimeli/.rbenv/shims:/home/ebenimeli/.gem/ruby/3.0.0/bin:$PATH"
 
-echo "Building..."
+# 1) Carga tu entorno Ruby (rbenv ó rvm). Ajusta según lo que uses:
+# Si usas rbenv:
+#export RBENV_ROOT="$HOME/.rbenv"
+#export PATH="$RBENV_ROOT/bin:$PATH"
+#eval "$(rbenv init -)"
 
-if test -f "/bin/bundle3.0"; then
-  BUNDLE_GEMFILE="$SERVER/Gemfile" /bin/bundle3.0 exec jekyll build /home/ebenimeli/GitHub/CelsoBib/
-else
-  if [[ -d "$IMAC" ]]; then
-    echo "iMac ..."
-    BUNDLE_GEMFILE="$IMAC/Gemfile" bundle exec jekyll build $IMAC
-  else
-    echo "MacBook ..."
-    BUNDLE_GEMFILE="$MACBOOK/Gemfile" bundle exec jekyll build $MACBOOK
-  fi
-fi
+# Si usas RVM, descomenta la siguiente línea en lugar de lo anterior:
+# source "$HOME/.rvm/scripts/rvm"
 
-WEB=/var/www/vhosts/ebenimeli.org/httpdocs
+# 2) Variables base
+BASE="/home/ebenimeli/GitHub/CelsoBib"
+SITEFOLDER="$BASE/_site"
+CACHE="$BASE/.jekyll-cache"
+WEB="/var/www/vhosts/ebenimeli.org/httpdocs"
+
+# 3) Trabaja siempre desde el proyecto
+cd "$BASE"
+
+echo "==> Limpiando _site y caché..."
+rm -rf "$SITEFOLDER" "$CACHE"
+
+echo "==> Tirando cambios desde Git..."
+git pull --ff-only
+
+echo "==> Ejecutando Jekyll via Bundler..."
+# Asegúrate de que Gemfile.lock tenga jekyll-sass-converter (2.2.0)
+/bin/bundle3.0 install --jobs 4 --retry 3
+/bin/bundle3.0 exec jekyll build --destination "$SITEFOLDER"
+
+echo "==> Desplegando en el servidor web..."
 if [[ -d "$WEB" ]]; then
-  echo "Copying web to $WEB ..."
-  cp -r /home/ebenimeli/GitHub/CelsoBib/_site/* "$WEB"
+  rsync -a --delete "$SITEFOLDER"/ "$WEB"/
+else
+  echo "!! Directorio web no existe: $WEB"
+  exit 1
 fi
+
+echo "==> ¡Hecho!"
