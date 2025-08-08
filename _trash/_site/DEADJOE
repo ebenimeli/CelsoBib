@@ -1,0 +1,62 @@
+
+*** These modified files were found in JOE when it aborted on Thu Oct 20 10:53:19 2022
+*** JOE was aborted by UNIX signal 1
+
+*** File 'update.sh'
+#!/bin/bash
+
+BUNDLE_GEMFILE="$(dirname $0)"/Gemfile bundle exec ruby "$(dirname $0)"/app.rb $*
+
+
+SITEFOLDER=_/site/
+if test -f "$SITEFOLDER"; then
+    echo "Removing site..."
+    rm -r "$FILE"
+fi
+CACHE=./jekyll-cache/
+if test -f "$CACHE"; then
+   echo "Deleting cache..."
+   rm -r .jekyll-cache/
+fi
+
+echo "Pulling..."
+git pull
+
+echo "Building..."
+BUNDLE_GEMFILE=/home/ebenimeli/GitHub/CelsoBib  bundle exec jekyll build /home/ebenimeli/GitHub/CelsoBib/
+
+WEB=/var/www/vhosts/ebenimeli.org/httpdocs/
+if test -f "$WEB"; then
+  cp -r _site/* "$WEB"
+fi
+
+*** File '(Unnamed)'
+search
+Continue
+buyme
+Continue
+ul 
+ul
+ ul 
+li 
+post-content
+Be First
+
+*** File '(Unnamed)'
+update.sh
+_data/log.yml
+update.sh
+.gitignore
+update.sh
+update.sh
+update.sh
+update.sh
+/home/ebenimeli/GitHub/CelsoBib/update.sh
+update.sh
+update.sh
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc

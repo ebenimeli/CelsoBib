@@ -1,0 +1,4 @@
+#!/bin/bash
+git add log.yml
+git -a commit -m "Actualiza log.yml con nuevos registros"
+git push

@@ -1,0 +1,39 @@
+<!-- SLEEP -->
+<td>
+  {% if habits.sleep == 'X'  %} ❌
+  {% elsif habits.sleep < 7 %}
+  <div class="tooltip"> ⭕️
+    <span class="tooltiptext">{{habits.sleep}}</span>
+  </div>
+  {% else %}
+  <div class="tooltip">✅
+    <span class="tooltiptext">{{habits.sleep}}</span>
+  </div>
+  {% endif %}
+</td>
+<!-- EARLY RISER -->
+<td>
+  {% if habits.riseearly == 'X'  %} ❌
+  {% elsif habits.riseearly == 'no' %}
+  <div class="tooltip">⭕️
+      <span class="tooltiptext">{{habits.riseearlytime}}</span>
+  </div>
+  {% else %}
+  <div class="tooltip">✅
+    <span class="tooltiptext">{{habits.riseearly}}</span>
+  </div>
+  {% endif %}
+</td>
+<!-- WALK -->
+<td>
+  {% if habits.walk == 'X'  %} ❌
+  {% elsif habits.walk < 5 %}
+  <div class="tooltip"> ⭕️
+    <span class="tooltiptext">{{habits.walk}}</span>
+  </div>
+  {% else %}
+  <div class="tooltip"> ✅
+    <span class="tooltiptext">{{habits.walk}}</span>
+  </div>
+  {% endif %}
+</td>

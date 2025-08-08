@@ -1,0 +1,324 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Enrique Benimeli",
+    "home_page_url": "https://www.ebenimeli.org/",
+    "feed_url": "https://www.ebenimeli.org/feed.json",
+    "description": "Enrique Benimeli - web personal",
+    "icon": "https://www.ebenimeli.org/assets/images/apple-touch-icon.png",
+    "favicon": "https://www.ebenimeli.org/assets/images/favicon.png",
+    "expired": false,
+    
+    "author":  {
+        "name": "Enrique Benimeli",
+        "url": null,
+        "avatar": null
+    },
+    
+"items": [
+    
+        {
+            "id": "https://www.ebenimeli.org/resumen-chatgpt/",
+            "title": "Resumiendo con ChatGPT",
+            "summary": null,
+            "content_text": "Este fin de semana, he leído en Xataka que el chatbot Claude de Anthropic es capaz de leer una novela en menos de un minuto, lo que deja a ChatGPT muy por detrás.Me preguntaba qué tal hacía los resúmenes ChatGPT y he probado con mi último artículo sobre comunicación digital efectiva, que tiene alrededor de 800 palabras.Así quedaría en 10 palabras:  Comunicar en horarios adecuados muestra respeto y eficacia profesional.En 25 palabras:  Comunicar en horarios adecuados es crucial. Respetar los horarios laborales propios y del receptor muestra profesionalismo y consideración. Elegir el canal y momento adecuados es esencial para una comunicación eficaz.En 50 palabras:  Enviar mensajes en momentos inoportunos puede tener un efecto negativo. Es esencial considerar los horarios laborales propios y de los destinatarios. Respetar los límites de trabajo muestra profesionalismo y consideración. El canal y el momento adecuados son cruciales. La comunicación eficaz refleja organización y eficiencia.En 100 palabras:  Enviar mensajes en momentos inoportunos puede tener efectos inesperados. Es fundamental considerar el horario de trabajo propio y del receptor antes de enviar un mensaje. Respetar los límites laborales es importante para demostrar profesionalismo y consideración hacia los demás. Elegir el canal adecuado también es relevante. Los correos electrónicos pueden enviarse en cualquier momento, pero es preferible hacerlo durante el horario laboral para mantener una imagen profesional. En el caso de mensajes instantáneos, es crucial tener en cuenta los horarios del receptor y evitar interrupciones fuera de su horario de trabajo. Una comunicación efectiva demuestra organización y eficacia.ChatGPT | chat.openai.comImagen | ChatGPT",
+            "content_html": "<p><a href=\"https://chat.openai.com/\"><img src=\"assets/images/posts/2023/05/chatgpt.jpg\" alt=\"image\" /></a></p><p>Este fin de semana, <a href=\"https://www.xataka.com/robotica-e-ia/anthropic-deja-ridiculo-a-chatgpt-su-chatbot-claude-capaz-leer-novela-minuto\">he leído en Xataka</a> que el chatbot <a href=\"https://www.anthropic.com/product\">Claude de Anthropic</a> es capaz de leer una novela en menos de un minuto, lo que deja a <a href=\"https://chat.openai.com/\">ChatGPT</a> muy por detrás.</p><p>Me preguntaba qué tal hacía los resúmenes ChatGPT y he probado con <a href=\"https://www.ochoenpunto.com/cuando-la-hora-importa/\">mi último artículo</a> sobre comunicación digital efectiva, que tiene alrededor de 800 palabras.</p><p>Así quedaría en 10 palabras:</p><blockquote>  <p>Comunicar en horarios adecuados muestra respeto y eficacia profesional.</p></blockquote><p>En 25 palabras:</p><blockquote>  <p>Comunicar en horarios adecuados es crucial. Respetar los horarios laborales propios y del receptor muestra profesionalismo y consideración. Elegir el canal y momento adecuados es esencial para una comunicación eficaz.</p></blockquote><p>En 50 palabras:</p><blockquote>  <p>Enviar mensajes en momentos inoportunos puede tener un efecto negativo. Es esencial considerar los horarios laborales propios y de los destinatarios. Respetar los límites de trabajo muestra profesionalismo y consideración. El canal y el momento adecuados son cruciales. La comunicación eficaz refleja organización y eficiencia.</p></blockquote><p>En 100 palabras:</p><blockquote>  <p>Enviar mensajes en momentos inoportunos puede tener efectos inesperados. Es fundamental considerar el horario de trabajo propio y del receptor antes de enviar un mensaje. Respetar los límites laborales es importante para demostrar profesionalismo y consideración hacia los demás. Elegir el canal adecuado también es relevante. Los correos electrónicos pueden enviarse en cualquier momento, pero es preferible hacerlo durante el horario laboral para mantener una imagen profesional. En el caso de mensajes instantáneos, es crucial tener en cuenta los horarios del receptor y evitar interrupciones fuera de su horario de trabajo. Una comunicación efectiva demuestra organización y eficacia.</p></blockquote><p><strong>ChatGPT</strong> | <a href=\"https://chat.openai.com/\">chat.openai.com</a><br /><strong>Imagen</strong> | <a href=\"https://pixabay.com/illustrations/chatgpt-ai-artificial-intelligence-7902213/\">ChatGPT</a></p>",
+            "url": "https://www.ebenimeli.org/resumen-chatgpt/",
+            
+            
+            
+            "tags": ["blog","ia","chatgpt"],
+            
+            "date_published": "2023-05-21T02:08:00+02:00",
+            "date_modified": "2023-05-21T02:08:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "https://www.ebenimeli.org/ochoenpunto150/",
+            "title": "150 artículos sobre productividad",
+            "summary": null,
+            "content_text": "Es cierto que los números no importan; a mí, desde luego, no me importan. Sin embargo, alcanzar cualquier meta es siempre una buena excusa para hacer una parada, mirar hacia atrás y echar un vistazo al camino recorrido.Me detuve cuando escribí 50 artículos en el blog y también cuando llegué al centenar. Ahora es momento de hacer balance después de añadir otras 50 publicaciones al blog.No diré aquello de que he llegado hasta este punto sin apenas darme cuenta o que, como quien no quiere la cosa, este es el artículo número 150 en Ocho en punto.Ocho en punto | Un tercer alto en el camino: 150 artículos sobre organización personal",
+            "content_html": "<p><a href=\"https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/\"><img src=\"assets/images/posts/2023/05/escritorio_ordenador.jpg\" alt=\"image\" /></a></p><p>Es cierto que los números no importan; a mí, desde luego, no me importan. Sin embargo, alcanzar cualquier meta es siempre una buena excusa para hacer una parada, mirar hacia atrás y echar un vistazo al camino recorrido.</p><p>Me detuve cuando escribí 50 artículos en el blog y también cuando llegué al centenar. Ahora es momento de hacer balance después de añadir otras 50 publicaciones al blog.</p><p>No diré aquello de que he llegado hasta este punto sin apenas darme cuenta o que, como quien no quiere la cosa, <a href=\"https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/\">este es el artículo número 150</a> en <em>Ocho en punto</em>.</p><p><strong>Ocho en punto</strong> | <a href=\"https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/\">Un tercer alto en el camino: 150 artículos sobre organización personal</a></p>",
+            "url": "https://www.ebenimeli.org/ochoenpunto150/",
+            
+            
+            
+            "tags": ["blog","8am"],
+            
+            "date_published": "2023-05-16T02:08:00+02:00",
+            "date_modified": "2023-05-16T02:08:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "https://www.ebenimeli.org/letracapitalcss/",
+            "title": "Letra capital con CSS (y en WordPress)",
+            "summary": null,
+            "content_text": "Lo que me gusta a mí una letra capital. Las he vuelto a utilizar en el blog de Ocho en punto.El siguiente código CSS funciona aunque no se utilice WordPress, pero el caso particular que comparto explica cómo mostrar una letra capital (o capitular) personalizando el tema activo de WordPress (Apariencia &gt; Temas &gt; Personalizar) y añadiendo el siguiente código en el apartado CSS adicional.Con este código hacemos capital la primera letra del primer párrafo del post: div.post-content p:first-child:first-letter {\tfloat: left;\tfont-size: 6em;\tfont-weight: 900;\tcolor: #000000;\tmargin-right: 0.10em;\tline-height: 90%;\ttext-shadow: 0.05em 0.05em #c1c1c1c1;\tfont-family: Times New Roman;}Con el siguiente código, hacemos capital la primera letra del segundo párrafo del post. Este es el código que aplico en mis artículos del blog Ocho en punto porque el primer párrafo está reservado para el tiempo estimado de lectura.Por cierto, nth-child es una pseudoclase de CSS que permite seleccionar varios elementos hijos de la clase indicando su posición. div.post-content p:nth-child(2):first-letter {    float: left;    font-size: 6em;    font-weight: 900;    color: #000000;    margin-right: 0.10em;    line-height: 90%;    text-shadow: 0.05em 0.05em #c1c1c1c1;    font-family: Times New Roman; }Ocho en punto | www.ochoenpunto.com",
+            "content_html": "<p>Lo que me gusta a mí una <a href=\"https://es.wikipedia.org/wiki/Letra_capital\"><strong>letra capital</strong></a>. Las he vuelto a utilizar en el <a href=\"https://www.ochoenpunto.com/cajon-de-sastre-16-ideas-mejorar-productividad/\">blog de <em>Ocho en punto</em></a>.</p><p><a href=\"https://www.ochoenpunto.com/cajon-de-sastre-16-ideas-mejorar-productividad/\"><img src=\"assets/images/posts/2023/04/letra_capital_8am.png\" alt=\"image\" /></a></p><p>El siguiente código CSS funciona aunque no se utilice WordPress, pero el caso particular que comparto explica cómo mostrar una letra capital (o capitular) personalizando el tema activo de WordPress (<em>Apariencia &gt; Temas &gt; Personalizar)</em> y añadiendo el siguiente código en el apartado <em>CSS adicional</em>.</p><p>Con este código hacemos capital la primera letra del primer párrafo del <em>post</em>:</p><figure class=\"highlight\"><pre><code class=\"language-css\" data-lang=\"css\"> <span class=\"nt\">div</span><span class=\"nc\">.post-content</span> <span class=\"nt\">p</span><span class=\"nd\">:first-child:first-letter</span> <span class=\"p\">{</span>\t<span class=\"nl\">float</span><span class=\"p\">:</span> <span class=\"nb\">left</span><span class=\"p\">;</span>\t<span class=\"nl\">font-size</span><span class=\"p\">:</span> <span class=\"m\">6em</span><span class=\"p\">;</span>\t<span class=\"nl\">font-weight</span><span class=\"p\">:</span> <span class=\"m\">900</span><span class=\"p\">;</span>\t<span class=\"nl\">color</span><span class=\"p\">:</span> <span class=\"m\">#000000</span><span class=\"p\">;</span>\t<span class=\"nl\">margin-right</span><span class=\"p\">:</span> <span class=\"m\">0.10em</span><span class=\"p\">;</span>\t<span class=\"nl\">line-height</span><span class=\"p\">:</span> <span class=\"m\">90%</span><span class=\"p\">;</span>\t<span class=\"nl\">text-shadow</span><span class=\"p\">:</span> <span class=\"m\">0.05em</span> <span class=\"m\">0.05em</span> <span class=\"m\">#c1c1c1</span><span class=\"n\">c1</span><span class=\"p\">;</span>\t<span class=\"nl\">font-family</span><span class=\"p\">:</span> <span class=\"n\">Times</span> <span class=\"n\">New</span> <span class=\"n\">Roman</span><span class=\"p\">;</span><span class=\"p\">}</span></code></pre></figure><p>Con el siguiente código, hacemos capital la primera letra del <strong>segundo párrafo</strong> del <em>post</em>. Este es el código que aplico en mis artículos del <a href=\"https://www.ochoenpunto.com/tercer-alto-camino-150-articulos-organizacion-personal/\">blog <em>Ocho en punto</em></a> porque el primer párrafo está reservado para el tiempo estimado de lectura.</p><p>Por cierto, <strong>nth-child</strong> es una pseudoclase de CSS que permite seleccionar varios elementos hijos de la clase indicando su posición.</p><figure class=\"highlight\"><pre><code class=\"language-css\" data-lang=\"css\"> <span class=\"nt\">div</span><span class=\"nc\">.post-content</span> <span class=\"nt\">p</span><span class=\"nd\">:nth-child</span><span class=\"o\">(</span><span class=\"err\">2</span><span class=\"o\">)</span><span class=\"nd\">:first-letter</span> <span class=\"p\">{</span>    <span class=\"nl\">float</span><span class=\"p\">:</span> <span class=\"nb\">left</span><span class=\"p\">;</span>    <span class=\"nl\">font-size</span><span class=\"p\">:</span> <span class=\"m\">6em</span><span class=\"p\">;</span>    <span class=\"nl\">font-weight</span><span class=\"p\">:</span> <span class=\"m\">900</span><span class=\"p\">;</span>    <span class=\"nl\">color</span><span class=\"p\">:</span> <span class=\"m\">#000000</span><span class=\"p\">;</span>    <span class=\"nl\">margin-right</span><span class=\"p\">:</span> <span class=\"m\">0.10em</span><span class=\"p\">;</span>    <span class=\"nl\">line-height</span><span class=\"p\">:</span> <span class=\"m\">90%</span><span class=\"p\">;</span>    <span class=\"nl\">text-shadow</span><span class=\"p\">:</span> <span class=\"m\">0.05em</span> <span class=\"m\">0.05em</span> <span class=\"m\">#c1c1c1</span><span class=\"n\">c1</span><span class=\"p\">;</span>    <span class=\"nl\">font-family</span><span class=\"p\">:</span> <span class=\"n\">Times</span> <span class=\"n\">New</span> <span class=\"n\">Roman</span><span class=\"p\">;</span> <span class=\"p\">}</span></code></pre></figure><p><strong>Ocho en punto</strong> | <a href=\"https://www.ochoenpunto.com\">www.ochoenpunto.com</a></p>",
+            "url": "https://www.ebenimeli.org/letracapitalcss/",
+            
+            
+            
+            "tags": ["programación","css","WordPress","blog","8am"],
+            
+            "date_published": "2023-04-30T02:08:00+02:00",
+            "date_modified": "2023-04-30T02:08:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "https://www.ebenimeli.org/shuffled/",
+            "title": "Shuffled!",
+            "summary": null,
+            "content_text": "He creado esta aplicación web para jugar un poco con las palabras. Sirve para el aula, pero también para pasar el rato y aprender de todo un poco en cualquier momento.La aplicación muestra algunas palabras al azar sobre un tema determinado (geografía, inglés, informática, ciencias, etc.), pero con las letras desordenadas. El objetivo es ordenar las letras para desenmascarar la palabra. Esta puede ser una traducción, una capital de una ciudad, el apellido de algún actor conocido, etc., según la pista que aparece sobre las letras desordenadas. Cuando se inicia el juego, aparece una temática al azar.De momento, tan solo es una versión preliminar y sigo añadiendo más temas y nuevas opciones. Espero que os guste.Artículo en Esfera TIC | www.esferatic.com/shuffledShuffled! | www.esferatic.com/shuffled",
+            "content_html": "<p><img src=\"assets/images/posts/2023/04/shuffled_polonia.png\" alt=\"image\" /></p><p>He creado <a href=\"https://www.esferatic.com/shuffled/\">esta aplicación web</a> para jugar un poco con las palabras. Sirve para el aula, pero también para pasar el rato y aprender de todo un poco en cualquier momento.</p><p>La aplicación muestra algunas palabras al azar sobre un tema determinado (geografía, inglés, informática, ciencias, etc.), pero con las letras desordenadas. El objetivo es ordenar las letras para desenmascarar la palabra. Esta puede ser una traducción, una capital de una ciudad, el apellido de algún actor conocido, etc., según la pista que aparece sobre las letras desordenadas. Cuando se inicia el juego, aparece una temática al azar.</p><p>De momento, tan solo es una versión preliminar y sigo añadiendo más temas y nuevas opciones. Espero que os guste.</p><p><strong>Artículo en Esfera TIC</strong> | <a href=\"https://www.esferatic.com/2023/04/shuffled/\">www.esferatic.com/shuffled</a></p><p><strong>Shuffled!</strong> | <a href=\"https://www.esferatic.com/shuffled/\">www.esferatic.com/shuffled</a></p>",
+            "url": "https://www.ebenimeli.org/shuffled/",
+            
+            
+            
+            "tags": ["Educación","Gamificación","Juegos","Cultura"],
+            
+            "date_published": "2023-04-15T02:08:00+02:00",
+            "date_modified": "2023-04-15T02:08:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "https://www.ebenimeli.org/tarifa-2022/",
+            "title": "Tarifa",
+            "summary": null,
+            "content_text": "Hace tiempo publiqué en Instagram algunas fotografías de Tarifa, una ciudad ubicada en la costa sur de España, en la provincia de Cádiz, Andalucía. Es conocida por ser uno de los mejores lugares para practicar deportes acuáticos como el windsurf, kitesurf y el surf. Me sorprendió el espectacular entorno natural. Hay que tener en cuenta que se encuentra en el estrecho de Gibraltar, donde se unen el mar Mediterráneo y el océano Atlántico.Instagram | @ebenimeli",
+            "content_html": "<p><img src=\"assets/images/posts/2023/04/tarifa_ebenimeli.jpg\" alt=\"image\" /></p><p>Hace tiempo publiqué en Instagram algunas <a href=\"https://www.instagram.com/p/CmZvvsWDPJH/\">fotografías de Tarifa</a>, una ciudad ubicada en la costa sur de España, en la provincia de Cádiz, Andalucía. Es conocida por ser uno de los mejores lugares para practicar deportes acuáticos como el windsurf, kitesurf y el surf. Me sorprendió el espectacular entorno natural. Hay que tener en cuenta que se encuentra en el estrecho de Gibraltar, donde se unen el mar Mediterráneo y el océano Atlántico.</p><p><strong>Instagram</strong> | <a href=\"https://www.instagram.com/p/CkB0dFfD7H2/\">@ebenimeli</a></p>",
+            "url": "https://www.ebenimeli.org/tarifa-2022/",
+            
+            
+            
+            "tags": ["viajes","Tarifa","historia","naturaleza"],
+            
+            "date_published": "2023-04-10T02:08:00+02:00",
+            "date_modified": "2023-04-10T02:08:00+02:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "https://www.ebenimeli.org/observaciones/",
+            "title": "Observaciones",
+            "summary": null,
+            "content_text": "He programado este asistente para la redacción de observaciones e informes sobre el rendimiento académico de los alumnos. Se puede utilizar como guía o plantilla para no pasar por alto ningún aspecto relevante que convenga incluir en una observación académica. La aplicación va generando el texto a medida que marcamos algunos valores.Asistente para informes académicos | www.esferatic.com/obsMás en Esfera TIC | www.esferatic.com",
+            "content_html": "<p><img src=\"assets/images/posts/2023/03/esferatic_obs.png\" alt=\"image\" /></p><p>He programado este asistente para la redacción de observaciones e informes sobre el rendimiento académico de los alumnos. Se puede utilizar como guía o plantilla para no pasar por alto ningún aspecto relevante que convenga incluir en una observación académica. La aplicación va generando el texto a medida que marcamos algunos valores.</p><p><strong>Asistente para informes académicos</strong> | <a href=\"https://www.esferatic.com/obs\">www.esferatic.com/obs</a></p><p><strong>Más en Esfera TIC</strong> | <a href=\"https://www.esferatic.com/2023/03/asistente-redactar-informes-rendimiento-academico/\">www.esferatic.com</a></p>",
+            "url": "https://www.ebenimeli.org/observaciones/",
+            
+            
+            
+            
+            
+            "date_published": "2023-03-18T09:00:00+01:00",
+            "date_modified": "2023-03-18T09:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "https://www.ebenimeli.org/feliz2023/",
+            "title": "Feliz y próspero 2023",
+            "summary": null,
+            "content_text": "Os deseo un 2023 lleno de felicidad y prosperidad.",
+            "content_html": "<p><img src=\"assets/images/posts/2022/12/feliz_2023_ebenimeli.jpg\" alt=\"image\" /></p><p>Os deseo un 2023 lleno de felicidad y prosperidad.</p>",
+            "url": "https://www.ebenimeli.org/feliz2023/",
+            
+            
+            
+            "tags": ["fotografía","creatividad"],
+            
+            "date_published": "2022-12-31T21:00:00+01:00",
+            "date_modified": "2022-12-31T21:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "https://www.ebenimeli.org/150fotoshablan/",
+            "title": "150 fotografías que hablan",
+            "summary": null,
+            "content_text": "He rescatado este proyecto que hice con una selección de mis fotografías. Nueva música. Más fotos en 2023, espero.YouTube | 150 fotografías que hablan",
+            "content_html": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/G7Ppl3DXuok\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"></iframe><p>He rescatado este proyecto que hice con una selección de mis fotografías. Nueva música. Más fotos en 2023, espero.</p><p><strong>YouTube</strong> | <a href=\"https://youtu.be/G7Ppl3DXuok/\">150 fotografías que hablan</a></p>",
+            "url": "https://www.ebenimeli.org/150fotoshablan/",
+            
+            
+            
+            "tags": ["fotografía","arte","creatividad"],
+            
+            "date_published": "2022-12-25T09:00:00+01:00",
+            "date_modified": "2022-12-25T09:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "https://www.ebenimeli.org/feliznavidad22/",
+            "title": "Feliz Navidad",
+            "summary": null,
+            "content_text": "Feliz Navidad y próspero año nuevo.",
+            "content_html": "<p><img src=\"assets/images/posts/2022/12/navidad_2022_ebenimeli.png\" alt=\"image\" /></p><p>Feliz Navidad y próspero año nuevo.</p>",
+            "url": "https://www.ebenimeli.org/feliznavidad22/",
+            
+            
+            
+            
+            
+            "date_published": "2022-12-24T09:00:00+01:00",
+            "date_modified": "2022-12-24T09:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "https://www.ebenimeli.org/linuxlite/",
+            "title": "Linux Lite",
+            "summary": null,
+            "content_text": "Acabo de devolverle la vida a un antiguo HP Pavilion con procesador Intel Centrino Duo y 2 GB de memoria RAM. Ya no cuenta con los requisitos mínimos para un sistema operativo como Windows 11 e incluso los de algunas distribuciones de Linux. El rendimiento no sería suficiente para poder trabajar con él. Solución: Linux Lite. Después de haberlo instalado, el portátil vuelve a respirar.  Linux Lite es una distribución Linux de la familia de Sistemas Operativos GNU/Linux, basada en Ubuntu, orientada al escritorio y desarrollada en Nueva Zelanda por Jerry Bezencon. Se caracteriza por ofrecer una experiencia de escritorio liviana y amigable con el usuario novato, por su facilidad de uso y por el poco consumo de recursos, gracias a su escritorio XFCE, un entorno personalizado, sencillo y ligero.Linux Lite | www.linuxliteos.com",
+            "content_html": "<p><img src=\"assets/images/posts/2022/11/linuxlite.png\" alt=\"image\" /></p><p>Acabo de devolverle la vida a un antiguo HP Pavilion con procesador Intel Centrino Duo y 2 GB de memoria RAM. Ya no cuenta con los requisitos mínimos para un sistema operativo como Windows 11 e incluso los de algunas distribuciones de Linux. El rendimiento no sería suficiente para poder trabajar con él. Solución: Linux Lite. Después de haberlo instalado, el portátil vuelve a respirar.</p><blockquote>  <p>Linux Lite es una distribución Linux de la familia de Sistemas Operativos GNU/Linux, basada en Ubuntu, orientada al escritorio y desarrollada en Nueva Zelanda por Jerry Bezencon. Se caracteriza por ofrecer una experiencia de escritorio liviana y amigable con el usuario novato, por su facilidad de uso y por el poco consumo de recursos, gracias a su escritorio XFCE, un entorno personalizado, sencillo y ligero.</p></blockquote><p><strong>Linux Lite</strong> | <a href=\"https://www.linuxliteos.com/\">www.linuxliteos.com</a></p>",
+            "url": "https://www.ebenimeli.org/linuxlite/",
+            
+            
+            
+            "tags": ["OS","Linux"],
+            
+            "date_published": "2022-11-12T09:00:00+01:00",
+            "date_modified": "2022-11-12T09:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "https://www.ebenimeli.org/otono-supongo/",
+            "title": "Otoño, supongo",
+            "summary": null,
+            "content_text": "No es por hablar del tiempo, pero parece que por fin llega algo de frío.Instagram | @ebenimeli",
+            "content_html": "<p><img src=\"assets/images/posts/2022/11/marquesdc_noviembre_22.jpg\" alt=\"image\" /></p><p>No es por hablar del tiempo, pero parece que por fin llega algo de frío.</p><p><strong>Instagram</strong> | <a href=\"https://www.instagram.com/p/CkjVUPKjH-b/\">@ebenimeli</a></p>",
+            "url": "https://www.ebenimeli.org/otono-supongo/",
+            
+            
+            
+            "tags": ["otoño","calles"],
+            
+            "date_published": "2022-11-05T01:00:00+01:00",
+            "date_modified": "2022-11-05T01:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "https://www.ebenimeli.org/oreillyandco/",
+            "title": "O'Reilly & Co.",
+            "summary": null,
+            "content_text": "Recientemente he jubilado varios libros. Me resistía a ello, pero hace ya tiempo que había llegado su momento. Son libros que tuvieron su tiempo, hicieron su función que cumplieron con creces. La mayoría son manuales de informática con los que aprendí determinadas tecnologías, lenguajes de programación o herramientas que ya han evolucionado mucho. Si quiero aprender algo nuevo sobre ellas, no consultaría esos libros, sino que buscaría la información en Internet. Sentía especial apego a los manuales de O’Reilly, eso es cierto.",
+            "content_html": "<p><img src=\"assets/images/posts/2022/11/libros_informatica.jpg\" alt=\"image\" /></p><p>Recientemente he jubilado varios libros. Me resistía a ello, pero hace ya tiempo que había llegado su momento. Son libros que tuvieron su tiempo, hicieron su función que cumplieron con creces. La mayoría son manuales de informática con los que aprendí determinadas tecnologías, lenguajes de programación o herramientas que ya han evolucionado mucho. Si quiero aprender algo nuevo sobre ellas, no consultaría esos libros, sino que buscaría la información en Internet. Sentía especial apego a los manuales de O’Reilly, eso es cierto.</p>",
+            "url": "https://www.ebenimeli.org/oreillyandco/",
+            
+            
+            
+            "tags": ["libros","informática","organización"],
+            
+            "date_published": "2022-11-04T01:00:00+01:00",
+            "date_modified": "2022-11-04T01:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "https://www.ebenimeli.org/teams-canales/",
+            "title": "Canales compartidos en Teams",
+            "summary": null,
+            "content_text": "Microsoft Teams introduce cada mes muchas mejoras. Una de las últimas funciones es la posibilidad de crear un canal compartido en Teams. En general, recomiendo el uso de canales dentro de Teams para organizar mejor la información y, sobre todo, las conversaciones. En esta ocasión, parece que los canales compartidos solo están disponibles en los Teams de equipo (docentes) y no en los de tipo clase. En un Teams de equipo (en en centro educativo los de nuestros equipos de coordinación) ahora hay 3 tipos de canal:  Canal estándar: todos los miembros del equipo pueden acceder.  Canal privado: solo determinados miembros del equipo pueden acceder  Canal compartido: pueden acceder los miembros del equipo, pero también otros usuarios que no pertenecen al Teams (porque no pertenecen a ese equipo de trabajo/etapa) y que invitamos para que accedan exclusivamente a ese canal. Es decir, verán el Teams en su lista, pero solo podrán acceder a ese canal y no podrán ver el resto. Son los propietarios del Teams los que pueden añadir miembros a un canal compartido.El canal compartido es una forma de invitar a otros profesores a participar en un pequeño espacio de nuestro equipo. Si se crea un canal compartido, conviene asignarle un nombre que podáis reconocer como compartido: invitados, compartido, buzón, etc. No obstante, aparece un pequeño icono a la derecha del nombre del canal.Más | Microsoft Teams para Educación",
+            "content_html": "<p>Microsoft Teams introduce cada mes muchas mejoras. Una de las últimas funciones es la posibilidad de crear un <strong>canal compartido</strong> en Teams. En general, recomiendo el uso de canales dentro de Teams para organizar mejor la información y, sobre todo, las conversaciones. En esta ocasión, parece que los canales compartidos solo están disponibles en los Teams de equipo (docentes) y no en los de tipo clase.</p><p><img src=\"assets/images/posts/2022/11/teams_canales_compartidos.png\" alt=\"image\" /> En un Teams de equipo (en en centro educativo los de nuestros equipos de coordinación) ahora hay 3 tipos de canal:</p><ul>  <li><strong>Canal estándar</strong>: todos los miembros del equipo pueden acceder.</li>  <li><strong>Canal privado</strong>: solo determinados miembros del equipo pueden acceder</li>  <li><strong>Canal compartido</strong>: pueden acceder los miembros del equipo, pero también otros usuarios que no pertenecen al Teams (porque no pertenecen a ese equipo de trabajo/etapa) y que invitamos para que accedan exclusivamente a ese canal. Es decir, verán el Teams en su lista, pero solo podrán acceder a ese canal y no podrán ver el resto. Son los propietarios del Teams los que pueden añadir miembros a un canal compartido.</li></ul><p>El canal compartido es una forma de invitar a otros profesores a <strong>participar</strong> en un pequeño espacio de nuestro equipo. Si se crea un canal compartido, conviene asignarle un nombre que podáis reconocer como compartido: invitados, compartido, buzón, etc. No obstante, aparece un pequeño icono a la derecha del nombre del canal.</p><p>Más | <a href=\"https://www.microsoft.com/es-es/education/products/teams\">Microsoft Teams para Educación</a></p>",
+            "url": "https://www.ebenimeli.org/teams-canales/",
+            
+            
+            
+            "tags": ["Teams","organización","comparrtir"],
+            
+            "date_published": "2022-11-03T01:00:00+01:00",
+            "date_modified": "2022-11-03T01:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "https://www.ebenimeli.org/zaragoza-2022/",
+            "title": "Caesaraugusta",
+            "summary": null,
+            "content_text": "He publicado en Instagram algunas fotografías de Zaragoza.Instagram | @ebenimeli",
+            "content_html": "<p><img src=\"assets/images/posts/2022/11/zaragoza_ebenimeli_ig.jpg\" alt=\"image\" /></p><p>He publicado en Instagram algunas <a href=\"https://www.instagram.com/p/CkB0dFfD7H2/\">fotografías de Zaragoza</a>.</p><p><strong>Instagram</strong> | <a href=\"https://www.instagram.com/p/CkB0dFfD7H2/\">@ebenimeli</a></p>",
+            "url": "https://www.ebenimeli.org/zaragoza-2022/",
+            
+            
+            
+            "tags": ["viajes","zaragoza","historia"],
+            
+            "date_published": "2022-11-02T01:00:00+01:00",
+            "date_modified": "2022-11-02T01:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "https://www.ebenimeli.org/nanowrimo2022/",
+            "title": "NaNoWriMo 2022",
+            "summary": null,
+            "content_text": "Hoy empieza el NaNoWriMo. Un mes por delante para quienes desean empezar a escribir un novela y terminarla. Lógicamente y salvo casos muy excepcionales, el resultado no gozará de la calidad deseada. Sin embargo, es una gran oportunidad para juntar unas cuentas letras y hacerlo todos y cada uno de los días de noviembre. De esto va el NaNoWriMo: National Novel Writing Month que empezó allá por 1999.NaNoWriMo es una iniciativa que ayuda a hacer un seguimiento del progreso de escritura. Además, facilita la conexión con otros escritores de todo el mundo. También se organizan distintos eventos para no perder la motivación de terminar el manuscrito.  NaNoWriMo is a 501(c)(3) nonprofit organization that provides tools, structure, community, and encouragement to help people find their voices, achieve creative goals, and build new worlds — on and off the page.Escribir es una cuestión de conocimiento y práctica (¿talento?), pero también de hábito. Si uno tiene una buena historia que contar pero no se sienta a hacerlo, no hay novela. En ocasiones es necesario el empuje de otros para no abandonar. NaNoWriMo es la excusa perfecta para sentarse cada mañana, tarde, noche o madrugada a escribir unas líneas.Participé hace unos años y escribí alrededor de 30000 palabras. No alcancé el objetivo de palabras que me había propuesto, fallé algún día a mi cita con Scrivener y, por supuesto, no terminé el manuscrito. Sin embargo, mereció la pena: terminé muchísimas páginas, algo que nunca hubiera imaginado, pero sobre todo disfruté escribiendo, que de eso se trata al fin y al cabo.NaNoWriMo | www.nanowrimo.org",
+            "content_html": "<p><a href=\"https://nanowrimo.org/\"><img src=\"assets/images/posts/2022/11/nanowrimo.jpg\" alt=\"image\" /></a></p><p>Hoy empieza el NaNoWriMo. Un mes por delante para quienes desean empezar a escribir un novela y terminarla. Lógicamente y salvo casos muy excepcionales, el resultado no gozará de la calidad deseada. Sin embargo, es una gran oportunidad para juntar unas cuentas letras y hacerlo todos y cada uno de los días de noviembre. De esto va el NaNoWriMo: <em>National Novel Writing Month</em> que empezó allá por 1999.</p><p>NaNoWriMo es una iniciativa que ayuda a hacer un seguimiento del progreso de escritura. Además, facilita la conexión con otros escritores de todo el mundo. También se organizan distintos eventos para no perder la motivación de terminar el manuscrito.</p><blockquote>  <p>NaNoWriMo is a 501(c)(3) nonprofit organization that provides tools, structure, community, and encouragement to help people find their voices, achieve creative goals, and build new worlds — on and off the page.</p></blockquote><p>Escribir es una cuestión de conocimiento y práctica (¿talento?), pero también de hábito. Si uno tiene una buena historia que contar pero no se sienta a hacerlo, no hay novela. En ocasiones es necesario el empuje de otros para no abandonar. NaNoWriMo es la excusa perfecta para sentarse cada mañana, tarde, noche o madrugada a escribir unas líneas.</p><p>Participé hace unos años y escribí alrededor de 30000 palabras. No alcancé el objetivo de palabras que me había propuesto, fallé algún día a mi cita con <a href=\"https://www.literatureandlatte.com/scrivener/overview\">Scrivener</a> y, por supuesto, no terminé el manuscrito. Sin embargo, mereció la pena: terminé muchísimas páginas, algo que nunca hubiera imaginado, pero sobre todo disfruté escribiendo, que de eso se trata al fin y al cabo.</p><p><strong>NaNoWriMo</strong> | <a href=\"https://nanowrimo.org/\">www.nanowrimo.org</a></p>",
+            "url": "https://www.ebenimeli.org/nanowrimo2022/",
+            
+            
+            
+            "tags": ["personal","escribir","NaNoWriMo","Scrivener"],
+            
+            "date_published": "2022-11-01T01:00:00+01:00",
+            "date_modified": "2022-11-01T01:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        },
+    
+        {
+            "id": "https://www.ebenimeli.org/hola-mundo/",
+            "title": "Hola, mundo",
+            "summary": null,
+            "content_text": "En el ámbito de la Informática, lo primero que uno hace cuando empieza con un lenguaje de programación nuevo es imprimir por pantalla un Hola, mundo. Es más una tradición que algo útil o necesario. No este espacio un lenguaje por descubrir, pero si un lugar nuevo donde escribir.  En informática, “Hola, mundo” o “Hello, World!”, en inglés es un programa que muestra el texto «¡Hola, mundo!» en un dispositivo de visualización, en la mayoría de los casos la pantalla de un monitor. Este programa suele ser usado como introducción al estudio de un lenguaje de programación, siendo un primer ejercicio típico, y se considera fundamental desde el punto de vista didáctico.En lenguaje C sería la bienvenida así:main( ) {        printf(\"Hola, mundo\");}La versión en Java tendría esta pinta:class HelloWorld {    public static void main(String[] args) {        System.out.println(\"Hola, mundo\");    }}Y su variante en Python esta:print(\"Hola, mundo\")Wikipedia | Hola, mundoFotografía | La Tierra",
+            "content_html": "<p><img src=\"assets/images/posts/2022/10/hola-mundo.jpg\" alt=\"image\" /></p><p>En el ámbito de la Informática, lo primero que uno hace cuando empieza con un lenguaje de programación nuevo es imprimir por pantalla un <em>Hola, mundo</em>. Es más una tradición que algo útil o necesario. No este espacio un lenguaje por descubrir, pero si un lugar nuevo donde escribir.</p><blockquote>  <p>En informática, “<a href=\"https://es.wikipedia.org/wiki/Hola_mundo\">Hola, mundo</a>” o “Hello, World!”, en inglés es un programa que muestra el texto «¡Hola, mundo!» en un dispositivo de visualización, en la mayoría de los casos la pantalla de un monitor. Este programa suele ser usado como introducción al estudio de un lenguaje de programación, siendo un primer ejercicio típico, y se considera fundamental desde el punto de vista didáctico.</p></blockquote><p>En lenguaje C sería la bienvenida así:</p><figure class=\"highlight\"><pre><code class=\"language-c\" data-lang=\"c\"><span class=\"n\">main</span><span class=\"p\">(</span> <span class=\"p\">)</span> <span class=\"p\">{</span>        <span class=\"n\">printf</span><span class=\"p\">(</span><span class=\"s\">\"Hola, mundo\"</span><span class=\"p\">);</span><span class=\"p\">}</span></code></pre></figure><p>La versión en Java tendría esta pinta:</p><figure class=\"highlight\"><pre><code class=\"language-java\" data-lang=\"java\"><span class=\"kd\">class</span> <span class=\"nc\">HelloWorld</span> <span class=\"o\">{</span>    <span class=\"kd\">public</span> <span class=\"kd\">static</span> <span class=\"kt\">void</span> <span class=\"nf\">main</span><span class=\"o\">(</span><span class=\"nc\">String</span><span class=\"o\">[]</span> <span class=\"n\">args</span><span class=\"o\">)</span> <span class=\"o\">{</span>        <span class=\"nc\">System</span><span class=\"o\">.</span><span class=\"na\">out</span><span class=\"o\">.</span><span class=\"na\">println</span><span class=\"o\">(</span><span class=\"s\">\"Hola, mundo\"</span><span class=\"o\">);</span>    <span class=\"o\">}</span><span class=\"o\">}</span></code></pre></figure><p>Y su variante en Python esta:</p><figure class=\"highlight\"><pre><code class=\"language-python\" data-lang=\"python\"><span class=\"k\">print</span><span class=\"p\">(</span><span class=\"s\">\"Hola, mundo\"</span><span class=\"p\">)</span></code></pre></figure><p><strong>Wikipedia</strong> | <a href=\"https://es.wikipedia.org/wiki/Hola_mundo\"><em>Hola, mundo</em></a><br /><strong>Fotografía</strong> | <a href=\"https://pixabay.com/es/illustrations/tierra-espacio-luz-de-sol-1756274/\"><em>La Tierra</em></a></p>",
+            "url": "https://www.ebenimeli.org/hola-mundo/",
+            
+            
+            
+            
+            
+            "date_published": "2022-10-31T01:00:00+01:00",
+            "date_modified": "2022-10-31T01:00:00+01:00",
+            
+                "author": "Enrique Benimeli"
+            
+        }
+    
+    ]
+}
