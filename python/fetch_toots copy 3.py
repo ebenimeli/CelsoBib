@@ -30,31 +30,37 @@ def prepend_to_yaml_block(block: str, filename: str):
 
 def sanitize(entry):
     """Extrae fecha, texto limpio, enlace y categoría del toot."""
+    # --- Fecha ---
     dt = datetime(*entry.published_parsed[:6])
 
-    # Obtener HTML del toot
+    # --- HTML completo del toot ---
+    raw = ""
     if hasattr(entry, "content") and entry.content:
         raw = entry.content[0].value
     else:
         raw = entry.get("summary", "")
 
-    # Extraer enlaces externos
+    # --- Enlaces externos ---
     hrefs = re.findall(r'href=[\'"](?P<u>https?://[^\'"]+)', raw)
+    # quitar enlace al propio toot (entry.link)
     external = [u for u in hrefs if u != entry.get("link")]
     link = external[0] if external else ""
 
-    # Extraer categoría desde entry.tags o hashtags en fallback
+    # --- Categoría: preferimos entry.tags si existe ---
+    cat = ""
     if hasattr(entry, "tags") and entry.tags:
+        # feedparser tags: entry.tags is lista de dicts con 'term'
         cat = entry.tags[0].get("term", "")
     else:
+        # fallback: primer hashtag en el texto
         tags = re.findall(r'#(\w+)', raw)
         cat = tags[0] if tags else ""
 
-    # Limpiar texto: quitar HTML, URLs y hashtags
-    text = re.sub(r'<[^>]+>', '', raw)
-    text = re.sub(r'https?://\S+', '', text)
-    text = re.sub(r'#\w+', '', text)
-    text = text.strip().replace('"', '\\"')
+    # --- Texto limpio: sin HTML, URLs ni hashtags ---
+    text = re.sub(r'<[^>]+>', '', raw)            # quita HTML
+    text = re.sub(r'https?://\S+', '', text)     # quita URLs
+    text = re.sub(r'#\w+', '', text)             # quita hashtags
+    text = text.strip().replace('"', '\\"')      # escapar comillas
 
     return dt, text, link, cat
 
@@ -65,7 +71,7 @@ def main():
         print("⚠️ Error al parsear el RSS:", feed.bozo_exception)
         return
 
-    # Filtrar sólo los nuevos toots
+    # Filtrar sólo nuevos toots
     new_entries = []
     for e in feed.entries:
         if not getattr(e, "published_parsed", None):
@@ -79,13 +85,8 @@ def main():
         print("No hay toots nuevos.")
         return
 
-    # Orden **descendente**: del más reciente al más antiguo
-    new_entries.sort(
-        key=lambda e: datetime(*e.published_parsed[:6]),
-        reverse=True
-    )
-
-    # Construir bloques YAML en orden inverso (newest first)
+    # Orden cronológico y formateo YAML
+    new_entries.sort(key=lambda e: datetime(*e.published_parsed[:6]))
     yaml_blocks = []
     for e in new_entries:
         dt, text, link, cat = sanitize(e)
@@ -101,7 +102,7 @@ def main():
 
     # Preprender al log y actualizar since
     prepend_to_yaml_block(block, OUTPUT_YAML)
-    newest = datetime(*new_entries[0].published_parsed[:6])
+    newest = datetime(*new_entries[-1].published_parsed[:6])
     write_last_date(newest)
     print(f"Añadidas {len(yaml_blocks)} entradas a {OUTPUT_YAML}.")
 
