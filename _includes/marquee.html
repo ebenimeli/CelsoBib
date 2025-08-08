@@ -31,13 +31,13 @@
           {%- assign ago_min = diff    | divided_by: 60   | round: 0          -%}
           {%- assign ago_h   = diff    | divided_by: 3600 | round: 0          -%}
           {%- if ago_h == 0 -%}
-            {%- assign agotext = "hace " | append: ago_min | append: " min" -%}
+            {%- assign agotext = "Hace " | append: ago_min | append: " min" -%}
           {%- else -%}
-            {%- assign agotext = "hace " | append: ago_h   | append: " h"   -%}
+            {%- assign agotext = "Hace " | append: ago_h   | append: " h"   -%}
           {%- endif -%}
 
           <div class="text-item post-list {{ msg.cat }}">
-            <a class="post-title" href="{{ msg.link }}">{{ msg.text }} · {{ agotext }}</a>
+            <a class="post-title" href="{{ msg.link }}">{{ agotext }} ▶ {{ msg.text }}</a>
           </div>
 
           {%- assign count = count | plus: 1 -%}
