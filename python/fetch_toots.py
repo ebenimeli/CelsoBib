@@ -2,7 +2,7 @@
 import os
 import re
 import feedparser
-from datetime import datetime
+from datetime import datetime, timedelta  # ← añadido timedelta
 
 # ——— CONFIG ———
 FEED_URL     = "https://mastodon.social/@ebenimeli.rss"
@@ -30,7 +30,7 @@ def prepend_to_yaml_block(block: str, filename: str):
 
 def sanitize(entry):
     """Extrae fecha, texto limpio, enlace y categoría del toot."""
-    dt = datetime(*entry.published_parsed[:6])
+    dt = datetime(*entry.published_parsed[:6]) + timedelta(hours=2)  # ← ajuste +2h
 
     # Obtener HTML del toot
     if hasattr(entry, "content") and entry.content:
@@ -70,7 +70,7 @@ def main():
     for e in feed.entries:
         if not getattr(e, "published_parsed", None):
             continue
-        dt = datetime(*e.published_parsed[:6])
+        dt = datetime(*e.published_parsed[:6]) + timedelta(hours=2)  # ← ajuste +2h
         if last_dt and dt <= last_dt:
             continue
         new_entries.append(e)
@@ -81,7 +81,7 @@ def main():
 
     # Orden **descendente**: del más reciente al más antiguo
     new_entries.sort(
-        key=lambda e: datetime(*e.published_parsed[:6]),
+        key=lambda e: datetime(*e.published_parsed[:6]) + timedelta(hours=2),  # ← ajuste +2h
         reverse=True
     )
 
@@ -101,7 +101,7 @@ def main():
 
     # Preprender al log y actualizar since
     prepend_to_yaml_block(block, OUTPUT_YAML)
-    newest = datetime(*new_entries[0].published_parsed[:6])
+    newest = datetime(*new_entries[0].published_parsed[:6]) + timedelta(hours=2)  # ← ajuste +2h
     write_last_date(newest)
     print(f"Añadidas {len(yaml_blocks)} entradas a {OUTPUT_YAML}.")
 
