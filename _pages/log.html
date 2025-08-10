@@ -45,6 +45,7 @@ description: "Lo más reciente"
             </div>
 
             {% case log.cat %}
+              {% when 'news'     %}<span>🗞️</span>
               {% when 'thought'  %}<span>💭</span>
               {% when 'read'     %}<span>📖</span>
               {% when 'write'    %}<span>📝</span>
