@@ -50,11 +50,16 @@ def sanitize(entry):
         tags = re.findall(r'#(\w+)', raw)
         cat = tags[0] if tags else ""
 
-    # Limpiar texto: quitar HTML, URLs y hashtags
+    # Limpiar texto:
+    # 1) quitar HTML
+    # 2) quitar URLs
+    # 3) quitar SOLO los hashtags #status o #urgent (conserva el resto)
     text = re.sub(r'<[^>]+>', '', raw)
     text = re.sub(r'https?://\S+', '', text)
-    text = re.sub(r'#\w+', '', text)
-    text = text.strip().replace('"', '\\"')
+    text = re.sub(r'#\s*(status|urgent)\b', '', text, flags=re.IGNORECASE)
+    # Normalizar espacios y escapar comillas
+    text = re.sub(r'\s+', ' ', text).strip()
+    text = text.replace('"', '\\"')
 
     return dt, text, link, cat
 
