@@ -40,6 +40,7 @@ Asómate a *La ventana digital*, mi [boletín en Substack](https://ebenimeli.sub
 
 Este es mi boletín más personal. Encontrarás reflexiones al paso y escritos a vuelapluma, retales de ideas y notas al margen del día a día.
 
+* #25 / 09.08.2025 · [Un tiempo limitado](https://notasalvuelo.substack.com/p/un-tiempo-limitado)
 * #24 / 04.08.2025 · [Un verano especial](https://notasalvuelo.substack.com/p/un-verano-especial)
 * #23 / 29.07.2025 · [Un mono distraído](https://notasalvuelo.substack.com/p/un-mono-distraido)
 * #22 / 31.05.2025 · [Una radio sin pilas](https://notasalvuelo.substack.com/p/una-radio-sin-pilas)
