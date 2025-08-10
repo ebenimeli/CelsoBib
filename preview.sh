@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 set -e
-bundle exec jekyll s
+bundle exec jekyll s --future
