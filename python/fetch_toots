@@ -43,20 +43,16 @@ def sanitize(entry):
     external = [u for u in hrefs if u != entry.get("link")]
     link = external[0] if external else ""
 
-    # Extraer categoría desde entry.tags o hashtags en fallback
-    if hasattr(entry, "tags") and entry.tags:
-        cat = entry.tags[0].get("term", "")
-    else:
-        tags = re.findall(r'#(\w+)', raw)
-        cat = tags[0] if tags else ""
+    # Extraer primer hashtag para la categoría
+    tags = re.findall(r'#(\w+)', raw)
+    cat = tags[0] if tags else ""
 
     # Limpiar texto:
     # 1) quitar HTML
     # 2) quitar URLs
-    # 3) quitar SOLO los hashtags #status o #urgent (conserva el resto)
+    # 3) conservar todos los hashtags, incluso el primero
     text = re.sub(r'<[^>]+>', '', raw)
     text = re.sub(r'https?://\S+', '', text)
-    text = re.sub(r'#\s*(status|urgent)\b', '', text, flags=re.IGNORECASE)
     # Normalizar espacios y escapar comillas
     text = re.sub(r'\s+', ' ', text).strip()
     text = text.replace('"', '\\"')
