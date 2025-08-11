@@ -1,28 +1,10 @@
-{%- comment -%}
-  Generamos solo el texto dentro de .marquee-items y
-  descartamos cualquier log cuya timestamp sea posterior a now.
-  Además:
-  - cat := 'status' o 'urgent' SOLO si aparece #status o #urgent en msg.text
-  - quitamos #status y #urgent del texto mostrado
-{%- endcomment -%}
-
 {%- assign now_ts    = 'now'  | date: '%s' | plus: 0 -%}
 {%- assign cutoff_ts = now_ts | minus: 86400         -%}
-
-{%- comment -%}
-  Ya no filtramos por item.cat; calculamos cat desde el texto.
-{%- endcomment -%}
-{%- assign filtered = site.data.log
-     | sort: "timestamp"
-     | reverse -%}
+{%- assign filtered  = site.data.log | sort: "timestamp" | reverse -%}
 
 <div class="marquee-container">
-  <!-- Este es el fondo fijo -->
-  <div class="marquee">
-    <div class="marquee-text"></div>
-  </div>
+  <div class="marquee"><div class="marquee-text"></div></div>
 
-  <!-- Ocultos: solo el contenido textual -->
   <div class="marquee-items" style="display:none;">
     {%- assign count = 0 -%}
     {%- for msg in filtered -%}
@@ -30,38 +12,35 @@
         {%- assign ts = msg.timestamp | date: '%s' | plus: 0 -%}
         {%- if ts >= cutoff_ts and ts <= now_ts -%}
 
-          {%- comment -%}
-            Detectar cat a partir de hashtags en el texto
-          {%- endcomment -%}
-          {%- assign has_status = msg.text contains '#status' -%}
-          {%- assign has_urgent = msg.text contains '#urgent' -%}
+          {%- comment -%} Detectar #urgent/#status (case-insensitive) {%- endcomment -%}
+          {%- assign text_lc = msg.text | downcase -%}
+          {%- assign norm = text_lc
+              | replace: '&nbsp;', ' ' | strip_newlines
+              | replace: ',', ' ' | replace: '.', ' ' | replace: ';', ' '
+              | replace: ':', ' ' | replace: '!', ' ' | replace: '?', ' '
+              | replace: ')', ' ' | replace: '(', ' ' | replace: '[', ' ' | replace: ']', ' '
+              | replace: '  ', ' ' | replace: '  ', ' ' | strip -%}
+          {%- assign toks = norm | split: ' ' -%}
+
           {%- assign cat = '' -%}
-          {%- if has_status -%}
-            {%- assign cat = 'status' -%}
-          {%- elsif has_urgent -%}
+          {%- if toks contains '#urgent' -%}
             {%- assign cat = 'urgent' -%}
+          {%- elsif toks contains '#status' -%}
+            {%- assign cat = 'status' -%}
           {%- endif -%}
 
-          {%- comment -%}
-            Si no hay #status ni #urgent, saltamos este mensaje
-          {%- endcomment -%}
           {%- if cat != '' -%}
-
-            {%- comment -%}
-              Quitar #status y #urgent del texto mostrado
-              + limpieza básica de espacios dobles
-            {%- endcomment -%}
+            {%- comment -%} Quitar hashtags del texto mostrado (simple y directo) {%- endcomment -%}
             {%- assign display_text = msg.text
-                 | replace: '#status', ''
-                 | replace: '#urgent', '' -%}
-            {%- assign display_text = display_text
-                 | replace: '  ', ' ' 
-                 | replace: '  ', ' ' 
-                 | strip -%}
+                 | replace: '#urgent','' | replace: '#URGENT',''
+                 | replace: '#status','' | replace: '#STATUS',''
+                 | replace: '  ', ' ' | replace: '  ', ' ' | strip -%}
 
-            {%- assign diff    = now_ts | minus: ts                             -%}
-            {%- assign ago_min = diff    | divided_by: 60   | round: 0          -%}
-            {%- assign ago_h   = diff    | divided_by: 3600 | round: 0          -%}
+            {%- assign diff    = now_ts | minus: ts -%}
+            {%- assign ago_min = diff | divided_by: 60   | round: 0 -%}
+            {%- assign ago_h   = diff | divided_by: 3600 | round: 0 -%}
+            {%- assign agotext = ago_h == 0
+                 | default: "0" -%}{% comment %}dummy to allow below ternary-ish{% endcomment %}
             {%- if ago_h == 0 -%}
               {%- assign agotext = "Hace " | append: ago_min | append: " min" -%}
             {%- else -%}
