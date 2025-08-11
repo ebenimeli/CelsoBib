@@ -642,9 +642,18 @@ div.readprogress {
 }
 
 .book-list li {
-  list-style-type: none;
+  list-style-type: square;
+  margin-left: -25px;
+  text-align: left;
+}
+
+.book-list-none li {
+  list-style-type: none!important;
   margin-left: -40px;
   text-align: left;
+  padding-left: 7.3em;   /* ancho de la sangría */
+  text-indent: -7.3em;   /* desplaza solo la primera línea hacia la izquierda */
+
 }
 
 .profile-about h2 {

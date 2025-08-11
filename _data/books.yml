@@ -13,17 +13,36 @@ Hace falta un libro entero para responder a esta última pregunta, y ese libro e
 A partir de las investigaciones más recientes en disciplinas tan diversas como la biología evolutiva, la primatología, la neurociencia o la antropología social, Sverker Johansson expone las principales teorías sobre cómo y por qué los humanos comenzaron a hablar. Para ello explora la evolución histórica de las lenguas desde una perspectiva darwiniana, cuestiona las ideas de Chomsky y otros lingüistas reconocidos, compara las habilidades comunicativas de las personas y los animales, y aborda los rasgos característicos de los idiomas modernos.<br/>
 En busca del origen del lenguaje es el libro definitivo para entender cómo se originó el lenguaje humano y por qué hablamos de la manera en que lo hacemos."
   cover: "origenlenguaje.jpeg"
-  onpage: 10
+  onpage: 75
   pages: 400
   highlight: yes
-  
+
+- title: "Nexus: Una breve historia de las redes de información desde la Edad de Piedra hasta la IA"
+  author: Yuval Noah Harari 
+  link: https://amzn.to/4m6eufD
+  image:
+  description:
+  genre: [ensayo]
+  completed: next
+  onpage: 0
+  pages: 608
+  synopsis: "En Nexus, Harari contempla a la humanidad desde la amplia perspectiva de la historia para analizar cómo las redes de información han hecho y deshecho nuestro mundo. Durante los últimos 100.000 años, los sapiens hemos acumulado un enorme poder. Pero, a pesar de todos los descubrimientos, inventos y conquistas, ahora nos enfrentamos a una crisis existencial: el mundo está al borde del colapso ecológico, abunda la desinformación y nos precipitamos hacia la era de la I.A. Con todo el camino andando, ¿por qué somos una especie autodestructiva?
+
+A partir de una fascinante variedad de ejemplos históricos, desde la Edad de Piedra, pasando por la Biblia, la caza de brujas de principios de la Edad Moderna, el estalinismo y el nazismo, hasta el resurgimiento del populismo en nuestros días, Harari nos ofrece un marco revelador para indagar en las complejas relaciones que existen entre información y verdad, burocracia y mitología, y sabiduría y poder.
+
+Examina cómo diferentes sociedades y sistemas políticos han utilizado la información para lograr sus objetivos e imponer el orden, para bien y para mal. Y plantea las opciones urgentes a las que nos enfrentamos hoy en día, cuando la inteligencia no humana amenaza nuestra propia existencia.
+
+La información no es el principio activo de la verdad; tampoco una simple arma. Nexusexplora el esperanzador término medio entre estos extremos."
+  cover: "nexus.jpg"
+  #highlight: 'yes'
+
 - title: La vacuna contra la insensatez. Tratado de inmunología mental
   author: José Antonio Marina
   link: https://amzn.to/4lCvM3I
   image:
   description:
   genre: [ensayo]
-  completed: 
+  completed: next
   onpage: 50
   pages: 350
   synopsis: "Inmunízate contra la desinformación. Si somos tan inteligentes, ¿por qué caemos en tantas estupideces y atrocidades? ¿Por qué nos dejamos manipular por falsas creencias, teorías conspirativas y prejuicios? José Antonio Marina nos alerta de un peligro invisible pero real: los virus mentales, ideas que infectan y corrompen nuestra inteligencia, distorsionan nuestra memoria, sesgan nuestro juicio y nos vuelven vulnerables a la manipulación política, económica e ideológica. Tras años de investigación, Marina nos ofrece una auténtica vacuna contra la insensatez, diseñada para fortalecer el pensamiento crítico, desactivar tópicos que aceptamos como dogmas y entender cómo nuestro cerebro, una obra inacabada de la evolución, nos lleva a cometer errores sistemáticos. Con su estilo claro y provocador, el autor nos invita a reconocer las trampas cognitivas que nos rodean y a protegernos contra la desinformación, la credulidad y la manipulación.  Una lectura imprescindible para quienes buscan claridad en tiempos de confusión."
@@ -62,7 +81,7 @@ En busca del origen del lenguaje es el libro definitivo para entender cómo se o
   image:
   description:
   genre: [novela]
-  completed: 
+  completed: next
   onpage: 50
   pages: 320
   synopsis: "Un libro que hace homenaje al aprendizaje constante y vital. Invitación al aprendizaje es el libro que necesitas para darte cuenta que nunca es tarde para adquirir nuevos conocimientos y que puedes enriquecerte cada día si estás dispuesto a aprender durante toda tu vida. A través de diferentes procesos personales de varios personajes célebres, el profesor Eduardo Sáenz de Cabezón te hará entender que cualquiera puede aprender si los procedimientos son los correctos, que más importante que la edad es la motivación para ello y que la creatividad juega siempre un papel fundamental a la hora de optimizar tu aprendizaje. Y tú, ¿estás dispuesto a seguir aprendiendo?"
@@ -157,7 +176,7 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   genre: [productividad]
   onpage: 65
   pages: 249
-  completed: 
+  completed: next
   synopsis: "El «Deep Work» es la capacidad de concentrarse sin distracciones en una tarea cognitivamente exigente. En un mundo altamente competitivo que además incentiva la hiperconexión y la multitarea, la atención se ha convertido en un activo extremadamente valioso.  A partir de cuatro reglas prácticas, Carl Newport demuestra que reforzar nuestra capacidad de concentración y saber alejarse de las distracciones tecnológicas son los primeros pasos para lograr la felicidad y el éxito profesional."
   cover: "deepwork.jpeg"
   #highlight: "yes"
@@ -181,7 +200,7 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   image:
   description:
   genre: [ciencia]
-  completed: 
+  completed: next
   onpage: 17
   pages: 243
 
