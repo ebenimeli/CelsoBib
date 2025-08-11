@@ -1,14 +1,20 @@
 {%- comment -%}
-  Igual que antes, pero generamos solo el texto dentro de .marquee-items
-  y descartamos cualquier log cuya timestamp sea posterior a now.
+  Generamos solo el texto dentro de .marquee-items y
+  descartamos cualquier log cuya timestamp sea posterior a now.
+  Además:
+  - cat := 'status' o 'urgent' SOLO si aparece #status o #urgent en msg.text
+  - quitamos #status y #urgent del texto mostrado
 {%- endcomment -%}
 
-{%- assign now_ts    = 'now'      | date: '%s' | plus: 0      -%}
-{%- assign cutoff_ts = now_ts     | minus: 86400            -%}
-{%- assign filtered  = site.data.log
-     | where_exp: "item", "item.cat == 'status' or item.cat == 'urgent'"
-     | sort:     "timestamp"
-     | reverse                                -%}
+{%- assign now_ts    = 'now'  | date: '%s' | plus: 0 -%}
+{%- assign cutoff_ts = now_ts | minus: 86400         -%}
+
+{%- comment -%}
+  Ya no filtramos por item.cat; calculamos cat desde el texto.
+{%- endcomment -%}
+{%- assign filtered = site.data.log
+     | sort: "timestamp"
+     | reverse -%}
 
 <div class="marquee-container">
   <!-- Este es el fondo fijo -->
@@ -22,25 +28,53 @@
     {%- for msg in filtered -%}
       {%- if count < 10 -%}
         {%- assign ts = msg.timestamp | date: '%s' | plus: 0 -%}
-        {%- comment -%}
-          Solo si está dentro de las últimas 24 h **y**
-          no es una marca de tiempo futura
-        {%- endcomment -%}
         {%- if ts >= cutoff_ts and ts <= now_ts -%}
-          {%- assign diff    = now_ts | minus: ts                             -%}
-          {%- assign ago_min = diff    | divided_by: 60   | round: 0          -%}
-          {%- assign ago_h   = diff    | divided_by: 3600 | round: 0          -%}
-          {%- if ago_h == 0 -%}
-            {%- assign agotext = "Hace " | append: ago_min | append: " min" -%}
-          {%- else -%}
-            {%- assign agotext = "Hace " | append: ago_h   | append: " h"   -%}
+
+          {%- comment -%}
+            Detectar cat a partir de hashtags en el texto
+          {%- endcomment -%}
+          {%- assign has_status = msg.text contains '#status' -%}
+          {%- assign has_urgent = msg.text contains '#urgent' -%}
+          {%- assign cat = '' -%}
+          {%- if has_status -%}
+            {%- assign cat = 'status' -%}
+          {%- elsif has_urgent -%}
+            {%- assign cat = 'urgent' -%}
           {%- endif -%}
 
-          <div class="text-item post-list {{ msg.cat }}">
-            <a class="post-title" href="{{ msg.link }}">{{ agotext }} ▶ {{ msg.text }}</a>
-          </div>
+          {%- comment -%}
+            Si no hay #status ni #urgent, saltamos este mensaje
+          {%- endcomment -%}
+          {%- if cat != '' -%}
 
-          {%- assign count = count | plus: 1 -%}
+            {%- comment -%}
+              Quitar #status y #urgent del texto mostrado
+              + limpieza básica de espacios dobles
+            {%- endcomment -%}
+            {%- assign display_text = msg.text
+                 | replace: '#status', ''
+                 | replace: '#urgent', '' -%}
+            {%- assign display_text = display_text
+                 | replace: '  ', ' ' 
+                 | replace: '  ', ' ' 
+                 | strip -%}
+
+            {%- assign diff    = now_ts | minus: ts                             -%}
+            {%- assign ago_min = diff    | divided_by: 60   | round: 0          -%}
+            {%- assign ago_h   = diff    | divided_by: 3600 | round: 0          -%}
+            {%- if ago_h == 0 -%}
+              {%- assign agotext = "Hace " | append: ago_min | append: " min" -%}
+            {%- else -%}
+              {%- assign agotext = "Hace " | append: ago_h   | append: " h"   -%}
+            {%- endif -%}
+
+            <div class="text-item post-list {{ cat }}">
+              <a class="post-title" href="{{ msg.link }}">{{ agotext }} ▶ {{ display_text }}</a>
+            </div>
+
+            {%- assign count = count | plus: 1 -%}
+          {%- endif -%}
+
         {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
