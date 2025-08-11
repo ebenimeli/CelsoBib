@@ -16,21 +16,20 @@ description: "Lo más reciente"
       {% assign i     = nrecords %}
 
       {% for log in site.data.log %}
-        {%- comment -%}
-          Convertimos la marca de tiempo de este log a segundos
-        {%- endcomment -%}
         {% assign ts = log.timestamp | date: '%s' | plus: 0 %}
 
-        {%- comment -%}
-          Solo mostramos los logs cuya ts sea menor o igual a now_ts
-        {%- endcomment -%}
         {% if ts <= now_ts %}
 
-          {%- comment -%}
-            Este es el “lastlog”: el primer log anterior a ahora
-          {%- endcomment -%}
           {% if first %}
-            <div class="lastlog {{ log.cat }}log">
+            {% assign text_lc = log.text | downcase %}
+            {% assign class_name = "" %}
+            {% if text_lc contains '#status' %}
+              {% assign class_name = "statuslog" %}
+            {% elsif text_lc contains '#urgent' %}
+              {% assign class_name = "urgentlog" %}
+            {% endif %}
+
+            <div class="lastlog {{ class_name }}">
               <a href="{{ log.link }}">
                 <p>«{{ log.text }}» ▶</p>
               </a>
@@ -56,7 +55,7 @@ description: "Lo más reciente"
               {% when 'quote'    %}<span>💬</span>
               {% when 'chess'    %}<span>♖</span>
               {% when 'movie'    %}<span>🍿</span>
-              {% endcase %}
+            {% endcase %}
 
             <span class="logtext">{{ log.text }}</span>
 
@@ -69,9 +68,6 @@ description: "Lo más reciente"
 
         {% endif %}
 
-        {%- comment -%}
-          Siempre decrementamos el contador, aunque el log se salte
-        {%- endcomment -%}
         {% assign i = i | minus: 1 %}
       {% endfor %}
 
