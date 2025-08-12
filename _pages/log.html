@@ -37,7 +37,12 @@ description: "Lo más reciente"
             {% assign first = false %}
           {% endif %}
 
-          <li class="logitem">
+          {% assign item_class = "logitem" %}
+            {% if log.cat == "gm" %}
+              {% assign item_class = "logitemgm" %}
+            {% endif %}
+ 
+          <li class="{{item_class}}">
             <div class="tooltip">
               <span class="logid">[{{ i }}]</span>
               <span class="tooltiptext">{{ log.timestamp }}</span>

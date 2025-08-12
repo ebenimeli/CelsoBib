@@ -629,6 +629,12 @@ div.logs ul li {
   border-bottom: 1px dotted #000000;
 }
 
+.logitemgm {
+  background-color: darkgreen;
+  color: white;
+  border-bottom: 1px dotted #000000;
+}
+
 h2.year {
   font-size: 1.2em;
 }
