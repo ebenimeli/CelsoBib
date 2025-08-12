@@ -6,7 +6,7 @@ BRANCH="celsobib1"
 
 cd "$REPO"
 
-# Asegura PATH y HOME para Cron (ajusta si necesitas):
+# Asegura PATH y HOME para Cron
 export PATH="/usr/local/bin:/usr/bin:/bin"
 export HOME="/home/ebenimeli"
 
