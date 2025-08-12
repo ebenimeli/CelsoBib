@@ -27,7 +27,10 @@ echo "==> Limpiando _site y caché..."
 rm -rf "$SITEFOLDER" "$CACHE"
 
 echo "==> Tirando cambios desde Git..."
-git pull --ff-only
+# git pull --ff-only
+# Blindar el script para que no falle por FF-only
+# ToDo : Valorar si mejor merge
+git pull --rebase --autostash origin celsobib1
 
 echo "==> Ejecutando Jekyll via Bundler..."
 # Asegúrate de que Gemfile.lock tenga jekyll-sass-converter (2.2.0)
