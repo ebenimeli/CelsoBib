@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ""
-description: "Puedes ver mis fotografías en Instagram (@ebenimeli), pero aquí tienes una foto al azar"
+description: "Una foto al azar"
 ---
 
 {% capture time_seed %}{{ 'now' | date: "%s" }}{% endcapture %}
