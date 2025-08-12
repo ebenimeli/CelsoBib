@@ -1,3 +1,23 @@
+- timestamp: 2025-08-12 16:09
+  text: "La UME despliega un millar de efectivos para luchar contra la cadena de incendios que afecta a seis comunidades | España #urgent"
+  link: "https://www.elmundo.es/espana/2025/08/12/689acbae1ee97cbdb6925e4b-directo.html"
+  cat: 'news'
+- timestamp: 2025-08-12 15:59
+  text: "Nueva actualización de código en CelsoBib: Bookshelf now reading updated #code"
+  link: https://github.com/ebenimeli/CelsoBib/commit/e5fe6c7bb2751ef825f43849a4bf86bfac9faafa
+  cat: 'code'
+- timestamp: 2025-08-12 14:54
+  text: "Nueva actualización de código en CelsoBib: Added Good Night (gn) icon to log page #code"
+  link: https://github.com/ebenimeli/CelsoBib/commit/88bfb4a235a6b80c49086d8af81a5bf2d37fd24b
+  cat: 'code'
+- timestamp: 2025-08-12 14:52
+  text: "Nueva actualización de código en CelsoBib: Book info update (next): Los Austrias. El vuelo del águila #code"
+  link: https://github.com/ebenimeli/CelsoBib/commit/58760e11fd624741e7b7f6a4ff90f165374b73b1
+  cat: 'code'
+- timestamp: 2025-08-12 14:34
+  text: "Nueva actualización de código en CelsoBib: Log format and style (left, margin) #code"
+  link: https://github.com/ebenimeli/CelsoBib/commit/80912570d4bb6bdd35615c9952dafce8b8788e44
+  cat: 'code'
 - timestamp: 2025-08-12 14:10
   text: "Nueva actualización de código en CelsoBib: Book information updated #code"
   link: https://github.com/ebenimeli/CelsoBib/commit/52a75ac699e643f5f5f16dbb3d3f42e26fd30f2a
