@@ -3,10 +3,7 @@ set -e  # si un comando falla, se detiene el script
 
 # Función para esperar y mostrar cuenta atrás
 esperar() {
-  for i in {10..1}; do
-    # echo "⏳ Esperando $i segundos..."
-    sleep 1
-  done
+    sleep 7
 }
 
 echo "🚀 Iniciando ejecución de tareas..."
