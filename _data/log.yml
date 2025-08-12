@@ -1,3 +1,15 @@
+- timestamp: 2025-08-12 13:57
+  text: "Nueva actualización de código en CelsoBib: Python script ignored"
+  link: https://github.com/ebenimeli/CelsoBib/commit/a6c4ee181cb2afb4a5511cdbe815ad618cd0342f
+  cat: 'code'
+- timestamp: 2025-08-12 13:23
+  text: "Nueva actualización de código en CelsoBib: Update .gitignore"
+  link: https://github.com/ebenimeli/CelsoBib/commit/7c3eac21837f511af20a1aaeb8fae9bbfcf0d4ef
+  cat: 'code'
+- timestamp: 2025-08-12 12:39
+  text: "Nueva actualización de código en CelsoBib: Learn log icon"
+  link: https://github.com/ebenimeli/CelsoBib/commit/185e66cb78fd9245d589a64ab2fc38d82e273552
+  cat: 'code'
 - timestamp: 2025-08-12 10:56
   text: "La tesis doctoral de Marie Curie que lo cambió todo: así nació la era de la radiactividad"
   link: "https://www.muyinteresante.com/ciencia/tesis-de-marie-curie-que-cambio-todo.html"
