@@ -1,3 +1,15 @@
+- timestamp: 2025-08-12 17:42
+  text: "Usan la sucesión de Fibonacci para transportar luz, siguiendo el patrón matemático que organiza pétalos, conchas y galaxias"
+  link: "https://www.muyinteresante.com/ciencia/fibonacci-luz-guia.html"
+  cat: 'read'
+- timestamp: 2025-08-12 16:53
+  text: "Nueva actualización de código en CelsoBib: Watchlist updated #code"
+  link: https://github.com/ebenimeli/CelsoBib/commit/d67aae2c57efc76de59071c0bd5af0bee3a81db7
+  cat: 'code'
+- timestamp: 2025-08-12 16:54
+  text: "Intel está encajando un golpe con la capacidad de noquearla: su director general es sospechoso de vender secretos a China #status"
+  link: "https://www.xataka.com/empresas-y-economia/intel-se-enfrenta-a-gran-amenaza-gobierno-eeuu-sospecha-que-su-director-general-aliado-china"
+  cat: 'news'
 - timestamp: 2025-08-12 16:27
   text: "Nueva actualización de código en CelsoBib: Bookshelf (next reading) updated #code #status"
   link: https://github.com/ebenimeli/CelsoBib/commit/2d45f852d84f831dba31be04c92f543b0fb2c830
