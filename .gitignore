@@ -6,3 +6,6 @@ assets/images/.DS_Store
 /node_modules/
 _data/log.yml~
 missing.sh
+check.sh
+checklog.txt
+repair.sh
