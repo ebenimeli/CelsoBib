@@ -633,6 +633,8 @@ div.logs ul li {
   background-color: darkgreen;
   color: white;
   border-bottom: 1px dotted #000000;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 h2.year {
