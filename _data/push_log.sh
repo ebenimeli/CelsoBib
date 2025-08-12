@@ -15,7 +15,7 @@ git fetch origin "$BRANCH"
 git pull --rebase --autostash origin "$BRANCH"
 
 # (Opcional) añade y comitea si hay cambios pendientes
-git add log.yml
+git add _data/log.yml
 if ! git diff --cached --quiet; then
   git commit -m "Actualiza log.yml con nuevos registros"
 fi
