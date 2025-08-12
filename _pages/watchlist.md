@@ -10,7 +10,7 @@ description: "Películas, series de TV y documentales"
 
 Silo (2023) [→ 🍿 S01E2]()
 
-En un futuro tóxico y en ruinas, miles de personas viven en un gigantesco silo bajo tierra. Después de que su sheriff incumpla una regla cardinal y los residentes mueran misteriosamente, la ingeniera Juliette empieza a descubrir secretos espeluznantes y la verdad sobre el silo.
+En un futuro tóxico y en ruinas, miles de personas viven en **un gigantesco silo bajo tierra**. Después de que su sheriff incumpla una regla cardinal y los residentes mueran misteriosamente, la ingeniera Juliette empieza a descubrir secretos espeluznantes y la verdad sobre el silo.
 
 ### Cine
 - Odio el verano (2024) [→ 🍿](https://www.imdb.com/es-es/title/tt26745482) ★★★☆☆
