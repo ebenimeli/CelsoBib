@@ -1,3 +1,7 @@
+- timestamp: 2025-08-12 14:10
+  text: "Nueva actualización de código en CelsoBib: Book information updated #code"
+  link: https://github.com/ebenimeli/CelsoBib/commit/52a75ac699e643f5f5f16dbb3d3f42e26fd30f2a
+  cat: 'code'
 - timestamp: 2025-08-12 13:57
   text: "Nueva actualización de código en CelsoBib: Python script ignored"
   link: https://github.com/ebenimeli/CelsoBib/commit/a6c4ee181cb2afb4a5511cdbe815ad618cd0342f
