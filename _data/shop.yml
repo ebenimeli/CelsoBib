@@ -1,29 +1,35 @@
+- name: hahaland Flashcards
+  description: "hahaland Flashcards Tarjetas Juguetes Bebes 0 3 6 12 Meses, 80 Piezas Tarjetas Bebe en Blanco y Negro y de Colorida, Tarjetas Estimulacion Visual de Alto Contraste para Bebes 0-36 Meses"
+  link: https://amzn.to/4lpMh2b
+  cat: fav
+  image: baby_flashcards.jpg
+
 - name: Cámara de seguridad Tapo 125
   description: "Tapo C125 - Cámara de Seguridad WiFi Resolución 2k QHD, Visión Nocturna con Sistema IR Dual, IA Mejorada, Modo Privacidad Física, Sensor Starlight, Compatible con Alexa&Google Assistant, Home Kit"
   link: https://amzn.to/45m278c
-  cat: electronics
+  cat: fav
   image: tapo125.jpg
 
 - name: TP-Link RE550 - Mesh AC1900 Repeater
   description: "TP-Link RE550 - Mesh AC1900 Repeater, Dual Band WiFi, 1300Mbps/in 5GHz + 600Mbps/in 2.4GHz, WiFi Amplifier, App Control, Compatible with All WiFi Devices, Cranberry"
   link: https://amzn.to/4ft7qaA
-  cat: electronics
+  cat: fav
   image: tplinkre550.jpg
 
 - name: KOKOKA Funda de Silicona Compatible con AirPods 4
   description: "KOKOKA Funda de Silicona Compatible con AirPods 4 2024 Case, LED Frontal Visible, Anti-rasguños, Anti-Polvo, Funda Protectora de Silicona para AirPods 4.ª Generación con Kit de Limpiador, Cloud Grey"
   link: https://amzn.to/4fqNeG8
-  cat: electronics
+  cat: fav
   image: kokoka_airpods.jpg
 
 - name: Micrófono de solapa
   description: "Gyvazla Micrófono de Solapa, Omnidireccional lavalier Micrófono de Condensador de 6.5pies Audio Cables para Grabación Entrevista/Videoconferencia/Podcast/Dicción de Voz/Phone"
   link: https://amzn.to/46ITg2z
-  cat: electronics
+  cat: fav
   image: mic_solapa.jpg
 
 - name: Wacom Intuos S - Tableta Gráfica
   description: "Wacom Intuos S - Tableta Gráfica Bluetooth para pintar, dibujar y editar photos con 2 softwares creativos incluidos para descargar, óptima para la educación en línea y el teletrabajo, pistacho"
   link: https://amzn.to/45kvUOf
-  cat: electronics
+  cat: fav
   image: wacom_intuos.jpg
