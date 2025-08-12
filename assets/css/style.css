@@ -605,14 +605,15 @@ blockquote p {
 }
 
 div.logs {
-  text-align: justify;
+  text-align: left;
   font-size: .9em;
 }
 
 div.logs ul li {
   list-style: none;
-  margin-left: -40px;
-
+  margin-left: -15px;
+  padding-left: 2em;
+  text-indent: -2em;
 }
 
 .logid {
@@ -630,8 +631,10 @@ div.logs ul li {
 }
 
 .logitemgm {
-  background-color: darkgreen;
+  /*
+  background: darkgreen;
   color: white;
+  */
   border-bottom: 1px dotted #000000;
   padding-top: 3px;
   padding-bottom: 3px;
