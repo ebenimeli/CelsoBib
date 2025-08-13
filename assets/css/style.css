@@ -645,8 +645,8 @@ div.logs ul li {
   padding-bottom: 3px;
 }
 
-.sleeptime {
-  text-align: center;
+.sleep {
+  text-align: left;
 }
 
 h2.year {

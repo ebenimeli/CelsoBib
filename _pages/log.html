@@ -75,16 +75,16 @@ description: "Lo más reciente"
             {% endif %}
           </li>
           {% if log.cat == "gm" %}
-          <li class="logitemsleep">
-            <!--
+          <li class="logitem">
+            
             <div class="tooltip">
-              <span class="logid">[___]</span>
+              <span class="logid">&nbsp;&nbsp;🌙&nbsp;&nbsp;</span>
               <span class="tooltiptext"></span>
               </div>
-            -->
-            <span>
-              {% for i in (1..5) %}
-                🌙
+            
+            <span class="sleep">
+              {% for i in (1..10) %}
+                💤
               {% endfor %}
             </span>
           </li>
