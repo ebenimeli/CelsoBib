@@ -7,7 +7,7 @@ description: "Algunas recomendaciones"
 ## ⭐️ Recomendados
 
 <table class="products">
-  {% assign fav_products = site.data.shop | where: "cat", "fav" %}
+  {% assign fav_products = site.data.shop | where: "fav", true %}
   {% for product in fav_products %}
   <tr>
     <td class="img-product">
