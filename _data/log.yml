@@ -1,3 +1,7 @@
+- timestamp: 2025-08-13 15:47
+  text: "Café y podcast de Criminopatía"
+  link: "https://criminopatia.com/"
+  cat: 'coffee'
 - timestamp: 2025-08-13 13:51
   text: "Nueva actualización de código en CelsoBib: Reorganize menus and submenus, adding new navigation items #code"
   link: https://github.com/ebenimeli/CelsoBib/commit/f7999909a4eb976d1931deb0a9cde4bbe2a8bd02
