@@ -49,7 +49,7 @@ description: "Lo más reciente"
             </div>
 
             {% case log.cat %}
-              {% when 'gm'       %}<span>☀️</span>
+              {% when 'gm'       %}<span>☀️</span> 
               {% when 'gn'       %}<span>🌙</span>
               {% when 'code'     %}<span>👨🏻‍💻</span>
               {% when 'news'     %}<span>🗞️</span>
@@ -68,14 +68,27 @@ description: "Lo más reciente"
               {% endcase %}
 
             <span class="logtext">{{ log.text }}</span>
-
             {% if log.link %}
               <span class="loglink">
                 <a title="{{ log.timestamp }}" href="{{ log.link }}">→</a>
               </span>
             {% endif %}
           </li>
-
+          {% if log.cat == "gm" %}
+          <li class="logitemsleep">
+            <!--
+            <div class="tooltip">
+              <span class="logid">[___]</span>
+              <span class="tooltiptext"></span>
+              </div>
+            -->
+            <span>
+              {% for i in (1..5) %}
+                🌙
+              {% endfor %}
+            </span>
+          </li>
+          {% endif %}
         {% endif %}
 
         {% assign i = i | minus: 1 %}

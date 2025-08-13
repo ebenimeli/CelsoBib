@@ -630,6 +630,11 @@ div.logs ul li {
   border-bottom: 1px dotted #000000;
 }
 
+.logitemsleep {
+  border-bottom: 1px dotted #000000;
+  text-align: center;
+}
+
 .logitemgm {
   /*
   background: darkgreen;
@@ -638,6 +643,10 @@ div.logs ul li {
   border-bottom: 1px dotted #000000;
   padding-top: 3px;
   padding-bottom: 3px;
+}
+
+.sleeptime {
+  text-align: center;
 }
 
 h2.year {
