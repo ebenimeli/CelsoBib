@@ -13,11 +13,6 @@
   link: https://www.ebenimeli.org/pages/me_quotes.html
   cat: 'life'
 
-- quote: No cuentes los días, haz que los días cuenten
-  author: Muhammad Ali
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: 'life'
-
 - quote: Sé tú mismo; todos los demás ya están ocupados
   author: Oscar Wilde
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -28,18 +23,8 @@
   link: https://www.ebenimeli.org/pages/me_quotes.html
   cat: 'life'
 
-- quote: El éxito es la suma de pequeños esfuerzos repetidos día tras día
-  author: Robert Collier
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: 'life'
-
 - quote: La educación es el arma más poderosa para cambiar el mundo
   author: Nelson Mandela
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: 'life'
-
-- quote: No esperes el momento perfecto, toma el momento y hazlo perfecto
-  author: Zoey Sayward
   link: https://www.ebenimeli.org/pages/me_quotes.html
   cat: 'life'
 
@@ -47,3 +32,33 @@
   author: Theodore Roosevelt
   link: https://www.ebenimeli.org/pages/me_quotes.html
   cat: 'life'
+
+- quote: La experiencia no es lo que te ocurre, sino lo que haces con lo que te ocurre
+  author: Aldous Huxley
+  link: https://www.ebenimeli.org/pages/me_quotes.html
+  cat: life
+
+- quote: La educación es el arma más poderosa que puedes usar para cambiar el mundo
+  author: Nelson Mandela
+  link: https://www.ebenimeli.org/pages/me_quotes.html
+  cat: life
+
+- quote: La mente no es un vaso que haya que llenar, sino un fuego que encender
+  author: Plutarco
+  link: https://www.ebenimeli.org/pages/me_quotes.html
+  cat: life
+
+- quote: La educación no es preparación para la vida; la educación es la vida misma
+  author: John Dewey
+  link: https://www.ebenimeli.org/pages/me_quotes.html
+  cat: life
+
+- quote: Enseñar es aprender dos veces
+  author: Joseph Joubert
+  link: https://www.ebenimeli.org/pages/me_quotes.html
+  cat: life
+
+- quote: El aprendizaje nunca agota la mente
+  author: Leonardo da Vinci
+  link: https://www.ebenimeli.org/pages/me_quotes.html
+  cat: life
