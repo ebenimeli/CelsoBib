@@ -8,7 +8,7 @@ description: "Una clásica página 'Acerca de...'"
 
 <img src="assets/images/profile.jpg" class="profile image-cropper">
 
-Soy Enrique, papá de dos y [profesor de informática](pages/cv.html) en la ESO ([*Hola, mundo*](https://es.wikipedia.org/wiki/Hola_mundo) era una pista).
+Soy Enrique, papá de dos y [profesor de informática](pages/cv_work.html) en la ESO ([*Hola, mundo*](https://es.wikipedia.org/wiki/Hola_mundo) era una pista).
 
 <!--Actualmente, imparto en inglés asignaturas relacionadas con la *Inteligencia Artificial, Programación y Robótica*, las *Tecnologías de la Información y la Comunicación* y las *Relaciones Digitales Responsables*. Además, soy coordinador TIC del centro.
 
