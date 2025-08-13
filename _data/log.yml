@@ -1,3 +1,7 @@
+- timestamp: 2025-08-13 13:51
+  text: "Nueva actualización de código en CelsoBib: Reorganize menus and submenus, adding new navigation items #code"
+  link: https://github.com/ebenimeli/CelsoBib/commit/f7999909a4eb976d1931deb0a9cde4bbe2a8bd02
+  cat: 'code'
 - timestamp: 2025-08-13 11:51
   text: "Revisando y organizando conceptos y recursos de programación con JavaScript #status"
   link: "https://mastodon.social/tags/learn"
