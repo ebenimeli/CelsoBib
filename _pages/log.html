@@ -75,18 +75,33 @@ description: "Lo más reciente"
             {% endif %}
           </li>
           {% if log.cat == "gm" %}
+
+          {% assign day = "" %}
+          {% assign tl = log.text | downcase %}
+          {% if tl contains "lunes" %}
+            {% assign day = "Lunes" %}
+          {% elsif tl contains "martes" %}
+            {% assign day = "Martes" %}
+          {% elsif tl contains "miércoles" %}
+            {% assign day = "Miércoles" %}
+          {% elsif tl contains "jueves" %}
+            {% assign day = "Jueves" %}
+          {% elsif tl contains "viernes" %}
+            {% assign day = "Viernes" %}
+          {% elsif tl contains "sábado" %}
+            {% assign day = "Sábado" %}
+          {% elsif tl contains "domingo" %}
+            {% assign day = "Domingo" %}
+          {% endif %}
+
           <li class="logitem">
             
             <div class="tooltip">
-              <span class="logid">&nbsp;&nbsp;🌙&nbsp;&nbsp;</span>
+              <span class="logid day">&nbsp;&nbsp;&#9650;&nbsp;&nbsp;</span>
               <span class="tooltiptext"></span>
               </div>
             
-            <span class="sleep">
-              {% for i in (1..10) %}
-                💤
-              {% endfor %}
-            </span>
+            <span class="logtextday">{{day}}</span>
           </li>
           {% endif %}
         {% endif %}
