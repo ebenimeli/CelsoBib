@@ -107,9 +107,9 @@ def main():
 
     # text: «cita» (autor)
     if author:
-        text_value = f"«{quote_text}» ({author})"
+        text_value = f"«{quote_text}» ({author}) #status"
     else:
-        text_value = f"«{quote_text}»"
+        text_value = f"«{quote_text}» #status"
 
     timestamp = datetime.now(TZ).strftime("%Y-%m-%d %H:%M")
 
