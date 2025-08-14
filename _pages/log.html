@@ -48,24 +48,7 @@ description: "Lo más reciente"
               <span class="tooltiptext">{{ log.timestamp }}</span>
             </div>
 
-            {% case log.cat %}
-              {% when 'gm'       %}<span>☀️</span> 
-              {% when 'gn'       %}<span>🌙</span>
-              {% when 'code'     %}<span>👨🏻‍💻</span>
-              {% when 'news'     %}<span>🗞️</span>
-              {% when 'thought'  %}<span>💭</span>
-              {% when 'read'     %}<span>📖</span>
-              {% when 'write'    %}<span>📝</span>
-              {% when 'learn'    %}<span>🧠</span>
-              {% when 'podcast'  %}<span>🎧</span>
-              {% when 'music'    %}<span>🎹</span>
-              {% when 'video'    %}<span>📺</span>
-              {% when 'work'     %}<span>📥</span>
-              {% when 'quote'    %}<span>💬</span>
-              {% when 'chess'    %}<span>♖</span>
-              {% when 'movie'    %}<span>🍿</span>
-              {% when 'coffee'   %}<span>☕️</span>
-              {% endcase %}
+            <span>{% include icons.html cat=log.cat %}</span>
 
             <span class="logtext">{{ log.text }}</span>
             {% if log.link %}
