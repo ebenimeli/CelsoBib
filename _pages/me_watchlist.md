@@ -6,11 +6,11 @@ description: "Películas, series de TV y documentales"
 
 ### Ahora estoy viendo...
 
-![Silo](assets/images/posts/2025/07/silo.jpg)
+![Silo](assets/images/posts/2025/08/hijack2023.jpg)
 
-Silo (2023) [→ 🍿 S01E06]()
+Hijack (2023) [→ 🍿 S01E06](https://www.imdb.com/es-es/title/tt19854762)
 
-En un futuro tóxico y en ruinas, miles de personas viven en **un gigantesco silo bajo tierra**. Después de que su sheriff incumpla una regla cardinal y los residentes mueran misteriosamente, la ingeniera Juliette empieza a descubrir secretos espeluznantes y la verdad sobre el silo.
+> Cuando el vuelo KA29 sufre un secuestro durante su trayecto de siete horas de Dubái a Londres, Sam Nelson, consumado negociador corporativo, intenta echar mano de su pericia profesional para intentar salvar a todos los pasajeros. Pero su estrategia de alto riesgo podría ser su ruina.
 
 ### Cine
 - Crimen en familia (1985) [→ 🍿](https://www.imdb.com/es-es/title/tt0088966) ★★☆☆☆
@@ -23,6 +23,7 @@ En un futuro tóxico y en ruinas, miles de personas viven en **un gigantesco sil
 - 70 binladens [→ 🍿](https://www.imdb.com/title/tt7972178/) ★★★★☆
 
 ### Series
+- Silo (2023) [→ 🍿 S01E06](https://www.imdb.com/es-es/title/tt14688458)
 - Revancha (2024) [→ 🍿 S01E2](https://play.max.com/show/9683b77e-3bb4-43bd-b0b0-faaf4a534974)
 - Memento Mori (2023) [→ 🍿 S01E3](https://www.primevideo.com/detail/0H69GXL24UNDZNY2OBJKH5QWOL/ref=atv_dp_share_cu_r)
 - Parot (2021) [→ 🍿 S01E04](https://www.ebenimeli.org/parot-serie/)
