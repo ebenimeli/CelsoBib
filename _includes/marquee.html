@@ -48,7 +48,9 @@
             {%- endif -%}
 
             <div class="text-item post-list {{ cat }}">
-              <a class="post-title" href="{{ msg.link }}">{{ agotext }} ▶ {{ display_text }}</a>
+              <a class="post-title" href="{{ msg.link }}">
+                <span>{% include icons.html cat=msg.cat %}</span>
+                {{ agotext }} ▶ {{ display_text }}</a>
             </div>
 
             {%- assign count = count | plus: 1 -%}
