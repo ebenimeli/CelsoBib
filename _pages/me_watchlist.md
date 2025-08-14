@@ -8,11 +8,12 @@ description: "Películas, series de TV y documentales"
 
 ![Silo](assets/images/posts/2025/07/silo.jpg)
 
-Silo (2023) [→ 🍿 S01E2]()
+Silo (2023) [→ 🍿 S01E06]()
 
 En un futuro tóxico y en ruinas, miles de personas viven en **un gigantesco silo bajo tierra**. Después de que su sheriff incumpla una regla cardinal y los residentes mueran misteriosamente, la ingeniera Juliette empieza a descubrir secretos espeluznantes y la verdad sobre el silo.
 
 ### Cine
+- Crimen en familia (1985) [→ 🍿](https://www.imdb.com/es-es/title/tt0088966) ★★☆☆☆
 - Odio el verano (2024) [→ 🍿](https://www.imdb.com/es-es/title/tt26745482) ★★★☆☆
 - Te puede pasar a ti/It Could Happen to You (1994) [→ 🍿](https://www.imdb.com/es-es/title/tt0110167) ★★★☆☆
 - La frontera (2025) [→ 🍿](https://www.imdb.com/es-es/title/tt36412591) ★★★★★
