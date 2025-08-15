@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const labelBox = document.getElementById('iconlabel');
   if (!labelBox) return;
 
-  // valor por defecto
   const DEFAULT_LABEL = "Hola, mundo";
   labelBox.textContent = DEFAULT_LABEL;
 
@@ -13,19 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
     labelBox.textContent = label || DEFAULT_LABEL;
   }
 
-  // Hover: cambia solo cuando se entra en un elemento válido
+  // Hover y foco cambian la etiqueta
   document.addEventListener('mouseover', (e) => {
     const a = e.target.closest(SELECTOR);
     if (a) setLabelFrom(a);
   });
 
-  // Eliminamos el "reset" de mouseout → se mantiene último valor
-
-  // Accesibilidad: foco con teclado
   document.addEventListener('focusin', (e) => {
     const a = e.target.closest(SELECTOR);
     if (a) setLabelFrom(a);
   });
 
-  // También quitamos el "reset" de focusout
+  // No reseteamos en mouseout/focusout para “persistir” la última etiqueta
 });

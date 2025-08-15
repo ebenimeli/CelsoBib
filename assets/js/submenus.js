@@ -3,15 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const mainMenu    = document.getElementById('main-menu');
   const placeholder = document.getElementById('submenu');
 
-  // Utilidad: anima altura desde valor actual hasta target (px)
-  function animateHeight(el, targetPx) {
-    el.style.height = `${targetPx}px`;
+  // Escribe max-height en px
+  function animateMaxHeight(el, px) {
+    el.style.maxHeight = `${px}px`;
   }
 
-  // Limpia la altura en línea tras terminar la transición para permitir contenido fluido
+  // Espera a que termine la transición de max-height
   function onTransitionEndOnce(el, cb) {
     const handler = (ev) => {
-      if (ev.propertyName === 'height') {
+      if (ev.propertyName === 'max-height') {
         el.removeEventListener('transitionend', handler);
         cb && cb();
       }
@@ -19,85 +19,91 @@ document.addEventListener('DOMContentLoaded', () => {
     el.addEventListener('transitionend', handler);
   }
 
+  // Segunda medición por si cambian wrapping/fuentes/emoji
+  function settleHeight(el) {
+    const h1 = el.scrollHeight;
+    requestAnimationFrame(() => {
+      const h2 = el.scrollHeight;
+      if (h2 !== h1) animateMaxHeight(el, h2);
+    });
+  }
+
   function showSubmenu(id) {
     const src = document.getElementById(id);
     if (!src) return;
 
-    // Inserta contenido primero con altura 0 para medir después
+    // Inyecta contenido y marca cuál está activo
     placeholder.innerHTML       = src.innerHTML;
     placeholder.dataset.current = id;
 
-    // Forzar estado inicial cerrado antes de medir
+    // Estado visible y colapsado para animar
     placeholder.classList.add('show');
-    placeholder.style.height = '0px';
+    animateMaxHeight(placeholder, 0);
 
-    // Siguiente frame: medir contenido y animar hasta su scrollHeight
+    // Siguiente frame: mide y anima
     requestAnimationFrame(() => {
-      const target = placeholder.scrollHeight; // altura real del contenido
-      // Si no hay contenido, evita animación innecesaria
+      const target = placeholder.scrollHeight;
       if (target === 0) return;
 
-      // Animar
-      animateHeight(placeholder, target);
+      animateMaxHeight(placeholder, target);
+      settleHeight(placeholder);
 
-      // Al terminar, limpiar height para que se adapte si cambia el contenido
+      // Cuando termine la transición, “libera” limitación:
       onTransitionEndOnce(placeholder, () => {
-        placeholder.style.height = 'auto';
+        // Deja crecer libremente, sin recortes
+        placeholder.style.maxHeight = 'none';
       });
     });
+
+    // Accesibilidad
+    const t = mainMenu.querySelector(`a[data-submenu="${id}"]`);
+    mainMenu.querySelectorAll('a[data-submenu]').forEach(a => a.setAttribute('aria-expanded', 'false'));
+    if (t) t.setAttribute('aria-expanded', 'true');
   }
 
   function hideSubmenu() {
-    // Si ya está cerrado, nada que hacer
     if (!placeholder.classList.contains('show')) return;
 
-    // Fijar la altura actual (auto -> px) para poder animar a 0
+    // Volver a bloquear a la altura actual para poder animar a 0
     const current = placeholder.scrollHeight;
-    placeholder.style.height = `${current}px`;
+    placeholder.style.maxHeight = `${current}px`;
 
-    // Forzar reflow para que el navegador aplique el valor actual
-    // y la transición a 0 funcione correctamente
-    // eslint-disable-next-line no-unused-expressions
-    placeholder.offsetHeight;
+    // Fuerza reflow
+    void placeholder.offsetHeight;
 
-    // Iniciar animación hacia arriba
-    animateHeight(placeholder, 0);
+    // Animar hacia 0
+    animateMaxHeight(placeholder, 0);
 
     onTransitionEndOnce(placeholder, () => {
       placeholder.classList.remove('show');
       placeholder.innerHTML = '';
       delete placeholder.dataset.current;
-      // Asegura estado limpio
-      placeholder.style.height = '0px';
+      // Estado limpio
+      animateMaxHeight(placeholder, 0);
+      // Accesibilidad
+      mainMenu.querySelectorAll('a[data-submenu]').forEach(a => a.setAttribute('aria-expanded', 'false'));
     });
   }
 
-  // 1) Al llegar por URL, extraer antes del "_" y auto-abrir
+  // 1) Abrir por URL (p.ej. write_*)
   (function openByPath() {
-    const file = window.location.pathname.split('/').pop();      // e.g. "blog_post.html"
-    const base = file.replace(/\.html$/i, '')                    // "blog_post"
-                     .split('_')[0];                             // "blog"
+    const file = window.location.pathname.split('/').pop();
+    const base = file.replace(/\.html$/i, '').split('_')[0];
     if (!base) return;
-
     const link = mainMenu.querySelector(`a[data-submenu="${base}"]`);
-    if (link) {
-      showSubmenu(base);
-    }
+    if (link) showSubmenu(base);
   })();
 
-  // 2) Toggle al clicar en menú principal
+  // 2) Toggle con click en el menú principal
   mainMenu.addEventListener('click', e => {
     const link = e.target.closest('a');
     if (!link) return;
 
     const submenuId = link.dataset.submenu;
-    if (!submenuId) {
-      // enlace normal → dejamos que navegue
-      return;
-    }
+    if (!submenuId) return; // enlace normal: navegar
     e.preventDefault();
 
-    if (placeholder.dataset.current === submenuId) {
+    if (placeholder.dataset.current === submenuId && placeholder.classList.contains('show')) {
       hideSubmenu();
     } else {
       showSubmenu(submenuId);
@@ -106,16 +112,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 3) Cerrar al clicar fuera
   document.addEventListener('click', e => {
-    if (
-      !e.target.closest('#main-menu a[data-submenu]') &&
-      !e.target.closest('#submenu')
-    ) {
+    if (!e.target.closest('#main-menu a[data-submenu]') &&
+        !e.target.closest('#submenu')) {
       hideSubmenu();
     }
   });
 
-  // Accesibilidad opcional: cerrar con Escape
+  // 4) Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') hideSubmenu();
   });
+
+  // 5) Reajustar altura al cambiar viewport
+  ['resize','orientationchange'].forEach(evt => {
+    window.addEventListener(evt, () => {
+      if (placeholder.classList.contains('show')) {
+        // Si está en 'none' (liberado), vuelve a medir y fijar 'none' después
+        const isNone = placeholder.style.maxHeight === 'none';
+        if (isNone) placeholder.style.maxHeight = `${placeholder.scrollHeight}px`;
+        animateMaxHeight(placeholder, placeholder.scrollHeight);
+        settleHeight(placeholder);
+        if (isNone) {
+          onTransitionEndOnce(placeholder, () => {
+            placeholder.style.maxHeight = 'none';
+          });
+        }
+      }
+    });
+  });
+
+  // 6) Cambios dinámicos internos (por ejemplo fuentes cargando)
+  if ('ResizeObserver' in window) {
+    const ro = new ResizeObserver(() => {
+      if (placeholder.classList.contains('show')) {
+        if (placeholder.style.maxHeight !== 'none') {
+          animateMaxHeight(placeholder, placeholder.scrollHeight);
+        }
+      }
+    });
+    ro.observe(placeholder);
+  }
 });

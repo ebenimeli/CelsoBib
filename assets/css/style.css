@@ -470,6 +470,7 @@ ul.courses {
   display: block;
 }
 */
+
 .navmenu {
   display: flex;
   flex-wrap: wrap;
@@ -483,97 +484,89 @@ ul.courses {
 }
 
 .navmenu a:hover {
-  padding-left: 5px;
-  padding-right: 5px;
-  /*border-bottom: dotted 2px;*/
   transform: scale(1.7);
-
-  text-shadow: 0 0 6px rgba(70, 130, 180, 0.7); /* halo luminoso */
-  filter: brightness(1.3); /* más brillante */
+  text-shadow: 0 0 6px rgba(70,130,180,.7);
+  filter: brightness(1.3);
 }
 
-/* Ocultar todos los submenús “fuente” */
-.navmenu.sub {
-  display: none;
-}
+/* Ocultar submenús fuente */
+.navmenu.sub { display: none; }
 
-/* Estado inicial: cerrado y sin ocupar espacio */
+/* Contenedor visible del submenú (animado) */
 #submenu {
-  font-size: 1em;
+  box-sizing: border-box;         /* ← clave para que el cálculo sea estable */
+  display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   width: 100%;
   clear: both;
 
-  /* Sin bordes ni padding al estar cerrado */
   border: none;
   padding: 0;
   margin: 0;
 
-  /* Animación */
-  overflow: hidden;
-  height: 0;
+  overflow: hidden;               /* cerrado: oculta */
+  max-height: 0;                  /* animaremos esta propiedad */
   opacity: 0;
   transform: translateY(-8px);
   transition:
-    height 0.4s ease,
-    opacity 1s ease,
-    transform 0.8s ease,
-    margin 0.3s ease,
-    padding 0.3s ease,
-    border 0.3s ease;
+    max-height .4s ease,
+    opacity .3s ease,
+    transform .3s ease,
+    margin .3s ease,
+    padding .3s ease,
+    border .3s ease;
 }
 
-/* Enlaces dentro del submenú */
 #submenu a {
   font-size: 1.2em;
-  color: black;
-  margin-left: 5px;
-  margin-right: 5px;
+  color: var(--primary-font-color);
+  margin: 0 5px;
 }
 
-#submenu a:hover {
-  transform: scale(1.7); /* crece (pero no funciona) */
-  /*
-  border-top: 2px solid var(--border-color);
-  padding-top: 5px;
-  */
-  text-shadow: 0 0 6px rgba(70, 130, 180, 0.7); /* halo luminoso */
-  filter: brightness(1.3); /* más brillante */
-}
-
-/* Estado visible: con estilo y ocupando espacio */
+/* Abierto */
 #submenu.show {
   opacity: 1;
   transform: translateY(0);
-
-  /*border: 1px solid steelblue;*/
   border: 1px dashed var(--border-color);
-  /*border-radius: 4px;*/
   padding: 0.5rem 1rem;
   margin-top: 0.5rem;
   margin-bottom: 5px;
+  overflow: visible;              /* abierto: no recorta (para el scale) */
 }
 
+#submenu a:hover {
+  transform: scale(1.7);
+  transform-origin: center;
+  text-shadow: 0 0 6px rgba(70,130,180,.7);
+  filter: brightness(1.3);
+}
+
+/* Respeto a usuarios con reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  #submenu {
+    transition: none !important;
+  }
+}
+
+/* Icon label */
 #iconlabel {
   margin-left: 10px;
-  height: 1.8em;             /* altura mínima fija */
-  line-height: 1.8em;            /* centra verticalmente el texto */
-  margin-bottom: 0.5rem;         /* separación respecto al menú */
-  text-align: left;            /* centra horizontalmente el texto */
-  font-size: 0.8em;             /* un poco más pequeño que los iconos */
+  height: 1.8em;
+  line-height: 1.8em;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-size: 0.8em;
   color: var(--primary-font-color);
-
-  /* opcional para dar estilo */
   font-style: normal;
-  /*border-bottom: 1px dashed var(--border-color);*/
 }
 
 #iconlabel::before {
-  content: "▶ ";   /* el carácter con un espacio detrás */
-  color: steelblue; /* opcional: color distinto para destacarlo */
+  content: "▶ ";
+  color: steelblue;
   font-weight: bold;
 }
+
 
 /* Menú principal */
 #main-menu {
