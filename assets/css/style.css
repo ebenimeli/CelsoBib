@@ -39,7 +39,7 @@ body {
   justify-content: space-between;
   /*width: 60%;*/
   width: 50%;
-  /*text-align: justify;*/
+  text-align: left;
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
@@ -236,7 +236,7 @@ body {
 .blog-post-content {
   width: 100%;
   font-size: 1em;
-  text-align: justify;
+  text-align: left;
   font-family: var(--primary-font);
 }
 
