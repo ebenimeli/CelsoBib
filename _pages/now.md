@@ -1,13 +1,18 @@
 ---
+title: "🌱 Ahora"
 layout: page
-title: ""
-description: "¿En qué ando?"
+permalink: /now/
+description: "¿Qué estoy haciendo ahora?"
 ---
 
+## ¿Qué estoy haciendo ahora?
+
+Esta es una [*now page*](https://nownownow.com/about), y si tienes una web, deberías publicar una también.
+
 🎨 Rediseñando y actualizando los contenidos de esta **web**  
-🖋 Escribiendo sobre **productividad** en [*Ocho en punto*](http://www.ochoenpunto.com)  
-🖥️ Programando algunas aplicaciones web: [*Shuffled*](https://www.ebenimeli.org/shuffled/), [obs](https://www.esferatic.com/2023/03/asistente-redactar-informes-rendimiento-academico/), ...   
-🎹 Aprendiendo a tocar el **piano**  
+🖋 Preparando el próximo boletín de [*La ventana digital*](https://ebenimeli.substack.com/)  
+
+Última actualización: {{ page.last_modified_at | date: "%d/%m/%Y %H:%M" }}
 
 <!--
 📍 Viviendo en **España**  

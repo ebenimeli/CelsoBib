@@ -53,6 +53,7 @@ plugins:
    - jekyll-paginate
    - jekyll-sitemap
    - jekyll-relative-links
+   - jekyll-last-modified-at
 
 relative_links:
    enabled: true
