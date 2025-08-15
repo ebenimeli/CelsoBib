@@ -1,3 +1,8 @@
+- timestamp: 2025-08-15 12:05
+  text: Terminé de leer «Cómo La Vida Imita al Ajedrez»
+  link: https://www.goodreads.com/review/list/1230384?shelf=read
+  cat: 'read'
+
 - timestamp: 2025-08-15 10:59
   text: "Nueva actualización de código en CelsoBib: New TV series added (Hijack, 2023) #code"
   link: https://github.com/ebenimeli/CelsoBib/commit/0230904f35c3cfc51f2d8f2317a0c69503c76dac
