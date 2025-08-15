@@ -555,6 +555,26 @@ ul.courses {
   margin-bottom: 5px;
 }
 
+#iconlabel {
+  margin-left: 10px;
+  height: 1.8em;             /* altura mínima fija */
+  line-height: 1.8em;            /* centra verticalmente el texto */
+  margin-bottom: 0.5rem;         /* separación respecto al menú */
+  text-align: left;            /* centra horizontalmente el texto */
+  font-size: 0.8em;             /* un poco más pequeño que los iconos */
+  color: var(--primary-font-color);
+
+  /* opcional para dar estilo */
+  font-style: normal;
+  /*border-bottom: 1px dashed var(--border-color);*/
+}
+
+#iconlabel::before {
+  content: "▶ ";   /* el carácter con un espacio detrás */
+  color: steelblue; /* opcional: color distinto para destacarlo */
+  font-weight: bold;
+}
+
 /* Menú principal */
 #main-menu {
   display: flex;
