@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ""
+permalink: /shop/
 description: "Algunas recomendaciones"
 ---
 
