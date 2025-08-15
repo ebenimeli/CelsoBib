@@ -9,10 +9,11 @@ description: "¿Qué estoy haciendo ahora?"
 
 Esta es una [*now page*](https://nownownow.com/about), y si tienes una web, deberías publicar una también.
 
-🎨 Rediseñando y actualizando los contenidos de esta **web**  
-🖋 Preparando el próximo boletín de [*La ventana digital*](https://ebenimeli.substack.com/)  
+- 🎨 Rediseñando y actualizando los contenidos de esta **web**. 
+- 🖋 Preparando el próximo boletín de [*La ventana digital*](https://ebenimeli.substack.com/) 
+- 🌱 Preparando esta [*now page*](https://nownownow.com/about) que estás leyendo.
 
-Última actualización: {{ page.last_modified_at | date: "%d/%m/%Y %H:%M" }}
+🕒 Última actualización: {{ page.last_modified_at | date: "%d/%m/%Y %H:%M" }}
 
 <!--
 📍 Viviendo en **España**  
