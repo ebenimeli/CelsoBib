@@ -142,9 +142,9 @@ def build_yaml_block(now_local: datetime, title: str, author: str) -> str:
     display_author = author.strip()
     # Si no hay autor detectado, omitimos el ' de ...'
     if display_author:
-        text = f"Terminé de leer «{display_title}» de {display_author} #status"
+        text = f"\"Terminé de leer «{display_title}» de {display_author} #status\""
     else:
-        text = f"Terminé de leer «{display_title}» #status"
+        text = f"\"Terminé de leer «{display_title}» #status"\"
 
     text = yaml_escape_line(text)
 
