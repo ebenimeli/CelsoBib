@@ -13,18 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
     labelBox.textContent = label || DEFAULT_LABEL;
   }
 
-  // Hover
+  // Hover: cambia solo cuando se entra en un elemento válido
   document.addEventListener('mouseover', (e) => {
     const a = e.target.closest(SELECTOR);
     if (a) setLabelFrom(a);
   });
 
-  document.addEventListener('mouseout', (e) => {
-    const from = e.target.closest(SELECTOR);
-    if (!from) return;
-    const to = e.relatedTarget && e.relatedTarget.closest(SELECTOR);
-    if (!to) labelBox.textContent = DEFAULT_LABEL;
-  });
+  // Eliminamos el "reset" de mouseout → se mantiene último valor
 
   // Accesibilidad: foco con teclado
   document.addEventListener('focusin', (e) => {
@@ -32,10 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
     if (a) setLabelFrom(a);
   });
 
-  document.addEventListener('focusout', (e) => {
-    const from = e.target.closest(SELECTOR);
-    if (!from) return;
-    const to = e.relatedTarget && e.relatedTarget.closest(SELECTOR);
-    if (!to) labelBox.textContent = DEFAULT_LABEL;
-  });
+  // También quitamos el "reset" de focusout
 });
