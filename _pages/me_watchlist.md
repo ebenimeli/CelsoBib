@@ -23,6 +23,7 @@ Hijack (2023) [→ 🍿 S01E06](https://www.imdb.com/es-es/title/tt19854762)
 - 70 binladens [→ 🍿](https://www.imdb.com/title/tt7972178/) ★★★★☆
 
 ### Series
+- Hijack (2023) [→ 🍿 S01E06](https://www.imdb.com/es-es/title/tt19854762) ★★★★★
 - Silo (2023) [→ 🍿 S01E06](https://www.imdb.com/es-es/title/tt14688458)
 - Revancha (2024) [→ 🍿 S01E2](https://play.max.com/show/9683b77e-3bb4-43bd-b0b0-faaf4a534974)
 - Memento Mori (2023) [→ 🍿 S01E3](https://www.primevideo.com/detail/0H69GXL24UNDZNY2OBJKH5QWOL/ref=atv_dp_share_cu_r)
