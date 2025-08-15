@@ -3,7 +3,7 @@
 
 """
 Lee el RSS de Goodreads (shelf=read) y añade entradas a ../_data/log.yml
-solo si hay nuevas lecturas en las últimas 24 horas. Evita duplicados.
+solo si hay nuevas lecturas en las últimas 24 horas. También evita duplicados.
 
 Requisitos: Python 3.9+ (usa zoneinfo de la stdlib).
 """
