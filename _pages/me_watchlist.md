@@ -1,10 +1,20 @@
 ---
 layout: page
-title: ""
+title: "🍿 Ahora estoy viendo..."
 description: "Películas, series de TV y documentales"
 ---
 
-### Ahora estoy viendo...
+## Prime Target (2025)
+
+![Prime Target](assets/images/posts/2025/08/prime_target.jpeg)
+
+Prime Target (2023) [→ 🍿 S01E01](https://www.imdb.com/es-es/title/tt31186958)
+
+> Un estudiante de matemáticas de postgrado descubre que se está intentando destruir su trabajo para encontrar un patrón en los números primos que le permitiría acceder a todos los ordenadores del mundo.
+
+---
+
+## Silo (2023)
 
 ![Silo](assets/images/posts/2025/08/hijack2023.jpg)
 
@@ -12,7 +22,7 @@ Hijack (2023) [→ 🍿 S01E06](https://www.imdb.com/es-es/title/tt19854762)
 
 > Cuando el vuelo KA29 sufre un secuestro durante su trayecto de siete horas de Dubái a Londres, Sam Nelson, consumado negociador corporativo, intenta echar mano de su pericia profesional para intentar salvar a todos los pasajeros. Pero su estrategia de alto riesgo podría ser su ruina.
 
-### Cine
+## Cine
 - Crimen en familia (1985) [→ 🍿](https://www.imdb.com/es-es/title/tt0088966) ★★☆☆☆
 - Odio el verano (2024) [→ 🍿](https://www.imdb.com/es-es/title/tt26745482) ★★★☆☆
 - Te puede pasar a ti/It Could Happen to You (1994) [→ 🍿](https://www.imdb.com/es-es/title/tt0110167) ★★★☆☆
@@ -22,7 +32,7 @@ Hijack (2023) [→ 🍿 S01E06](https://www.imdb.com/es-es/title/tt19854762)
 - Ex machina (2014) [→ 🍿](https://www.imdb.com/title/tt0470752/) ★★★★☆
 - 70 binladens [→ 🍿](https://www.imdb.com/title/tt7972178/) ★★★★☆
 
-### Series
+## Series
 - Hijack (2023) [→ 🍿 S01E06](https://www.imdb.com/es-es/title/tt19854762) ★★★★★
 - Silo (2023) [→ 🍿 S01E06](https://www.imdb.com/es-es/title/tt14688458)
 - Revancha (2024) [→ 🍿 S01E2](https://play.max.com/show/9683b77e-3bb4-43bd-b0b0-faaf4a534974)
@@ -31,7 +41,7 @@ Hijack (2023) [→ 🍿 S01E06](https://www.imdb.com/es-es/title/tt19854762)
 - El Gran Imperio Otomano [→ 🍿 S02E02](https://www.netflix.com/es/title/80990771) ★★★★☆
 - Jaguar (2021) [→ 🍿 S01E04](https://www.netflix.com/es/title/81122682) ★★★☆☆
 
-### Me recomendaron...
+## Me recomendaron...
 * Arrival · La llegada (2016) [→ 🍿](https://www.imdb.com/title/tt2543164/)
 * Inception · Origen (2010) [→ 🍿](https://www.imdb.com/title/tt1375666/)
 * Gisaengchung · Parásitos (2019) [→ 🍿](https://www.imdb.com/title/tt6751668/)
