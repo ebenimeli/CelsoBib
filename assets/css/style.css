@@ -1110,6 +1110,10 @@ p.post-by a {
   text-align: left;
 }
 
+.note {
+  font-size: .85em;
+}
+
 img.product {
   width: 100%;
   aspect-ratio: 1 / 1; /* asegura que sea un cuadrado */
