@@ -1,8 +1,7 @@
 - timestamp: 2025-08-15 12:05
-  text: Terminé de leer «Cómo La Vida Imita al Ajedrez»
+  text: Terminé de leer «Cómo la vida imita al ajedrez» de Garry Kasparov #status 
   link: https://www.goodreads.com/review/list/1230384?shelf=read
   cat: 'read'
-
 - timestamp: 2025-08-15 10:59
   text: "Nueva actualización de código en CelsoBib: New TV series added (Hijack, 2023) #code"
   link: https://github.com/ebenimeli/CelsoBib/commit/0230904f35c3cfc51f2d8f2317a0c69503c76dac
@@ -19,14 +18,14 @@
   text: "Euro digital: ¿soberanía de pagos o dinero con correa? ✍️ @edans #status"
   link: "https://www.enriquedans.com/2025/08/euro-digital-soberania-de-pagos-o-dinero-con-correa.html"
   cat: 'read'
+- timestamp: 2025-08-15 09:15
+  text: "«La educación es el arma más poderosa que puedes usar para cambiar el mundo» (Nelson Mandela) #status"
+  link: https://www.ebenimeli.org/pages/me_quotes.html
+  cat: quote
 - timestamp: 2025-08-15 09:11
   text: "¡Buenos días! Hemos llegado al viernes."
   link: "https://mastodon.social/tags/gm"
   cat: 'gm'
-- timestamp: 2025-08-15 08:50
-  text: "«La educación es el arma más poderosa que puedes usar para cambiar el mundo» (Nelson Mandela) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
 - timestamp: 2025-08-15 01:52
   text: "Clic."
   link: "https://mastodon.social/tags/gn"
