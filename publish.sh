@@ -8,6 +8,10 @@ esperar() {
 
 echo "🚀 Iniciando ejecución de tareas..."
 
+echo "▶️ Ejecutando goodreads2log.py"
+cd /home/ebenimeli/GitHub/CelsoBib/python && ./goodreads2log.py
+esperar
+
 echo "▶️ Ejecutando fetch_toots.py"
 cd /home/ebenimeli/GitHub/CelsoBib/python && ./fetch_toots.py
 esperar
