@@ -17,3 +17,5 @@ description: "Algunos juegos para los nostálgicos"
   Permite simular partidas sencillas.
 * [**Laberinto**](pages/games_maze.html): Encuentra la salida en laberintos generados aleatoriamente.
   Se puede mostrar la solución y seguir el rastro del jugador.
+
+Imagen · [NES](https://pixabay.com/es/illustrations/nes-super-nintendo-mario-5181088/)
