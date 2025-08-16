@@ -5,7 +5,7 @@ permalink: /space/
 description: "El clásico juego de los marcianitos"
 ---
 
-<!-- === SPACE INVADERS — ENRIQUE (v1.0) === -->
+<!-- === SPACE INVADERS — ENRIQUE (v1.0.1 · controles blancos / juego negro) === -->
 <div id="invaders-game" class="invaders" tabindex="0" aria-label="Juego Space Invaders">
   <div class="inv-bar">
     <strong>👾 Space Invaders</strong>
@@ -51,39 +51,35 @@ description: "El clásico juego de los marcianitos"
 <style>
   /* ===== Estilos (aislados bajo #invaders-game) ===== */
   #invaders-game{
-    --panel-bg-light:#ffffff;
-    --panel-bg-dark:#0b0d10;
-    --panel-brd-light:#e5e7eb;
-    --panel-brd-dark:#1f2937;
-
-    --canvas-bg-light:#0f172a;
-    --canvas-bg-dark:#0b1020;
-    --grid-stroke:rgba(255,255,255,.06);
-
+    --grid-stroke:rgba(255,255,255,.08);
     --player:#22c55e; /* verde */
-    --alien:#38bdf8;  /* azul cian */
+    --alien:#38bdf8;  /* cian */
     --ufo:#f59e0b;    /* ámbar */
     --shot:#f43f5e;   /* rojo */
-    --text-dim:#6b7280;
 
     max-width:min(92vw,540px);
     margin:1rem auto;
     border-radius:12px;
     padding:.75rem;
     outline:none;
-    border:1px solid var(--panel-brd-light);
-    background:var(--panel-bg-light);
+
+    /* CONTROLES SIEMPRE BLANCOS */
+    background:#fff; 
+    border:1px solid #e5e7eb;
+    color:#111;
     box-shadow:0 8px 24px rgba(0,0,0,.06);
   }
+  /* Fuerza blanco también con tema oscuro del sitio */
   [data-theme="dark"] #invaders-game{
-    border-color:var(--panel-brd-dark);
-    background:var(--panel-bg-dark);
-    box-shadow:0 8px 24px rgba(0,0,0,.35);
+    background:#fff !important;
+    border-color:#e5e7eb !important;
+    color:#111 !important;
   }
 
   #invaders-game .inv-bar{
     display:flex; align-items:center; justify-content:space-between; gap:.5rem; flex-wrap:wrap;
     margin-bottom:.5rem; font-size:.95rem; position:relative; z-index:2;
+    background:#fff; /* barra blanca siempre */
   }
   #invaders-game .inv-stats{ font-variant-numeric:tabular-nums; }
   #invaders-game .inv-controls{ display:flex; align-items:center; gap:.5rem; }
@@ -95,26 +91,29 @@ description: "El clásico juego de los marcianitos"
     border-color:transparent; background:var(--player); color:#06220f;
   }
   #invaders-game .inv-speed select{
-    margin-left:.25rem; padding:.15rem .35rem; border-radius:6px; border:1px solid currentColor; background:transparent;
+    margin-left:.25rem; padding:.15rem .35rem; border-radius:6px; border:1px solid currentColor; background:#fff; /* select sobre blanco */
+    color:#111;
   }
 
   #invaders-game .inv-canvas-wrap{ position:relative; user-select:none; }
+
+  /* ZONA DE JUEGO SIEMPRE NEGRA */
   #invaders-game canvas{
     width:100%;
     aspect-ratio:4/3; /* formato clásico */
     display:block;
     border-radius:10px;
-    background:var(--canvas-bg-light);
+    background:#000 !important;  /* negro constante */
   }
-  [data-theme="dark"] #invaders-game canvas{ background:var(--canvas-bg-dark); }
+  [data-theme="dark"] #invaders-game canvas{ background:#000 !important; }
 
-  /* Overlay */
+  /* Overlay (sobre el canvas) */
   #invaders-game .inv-overlay{
     position:absolute; inset:0; display:none; place-items:center; backdrop-filter:blur(2px); z-index:999;
   }
   #invaders-game .inv-overlay-card{
     padding:.9rem 1rem; border-radius:10px; min-width:12rem; text-align:center;
-    background:rgba(0,0,0,.65); color:#fff; display:flex; flex-direction:column; gap:.5rem;
+    background:rgba(0,0,0,.75); color:#fff; display:flex; flex-direction:column; gap:.5rem;
   }
 
   /* D-pad táctil */
@@ -127,7 +126,7 @@ description: "El clásico juego de los marcianitos"
     #invaders-game .inv-dpad{ display:flex; }
   }
 
-  #invaders-game .inv-help{ margin:.5rem 0 0; font-size:.9rem; color:var(--text-dim); }
+  #invaders-game .inv-help{ margin:.5rem 0 0; font-size:.9rem; color:#4b5563; background:#fff; } /* texto de ayuda sobre blanco */
 </style>
 
 <script>
@@ -292,9 +291,10 @@ description: "El clásico juego de los marcianitos"
     // Enemy random fire (desde alienes más bajos por columna)
     enemyFireTimer += dt;
     const preset = PRESETS[diffSel.value];
-    if (enemyFireTimer >= enemyFireNext && alive.length){
+    const alive2 = aliens.filter(a=>a.alive);
+    if (enemyFireTimer >= enemyFireNext && alive2.length){
       enemyFireTimer = 0;
-      enemyFireNext = rand(preset.enemyFireMin, preset.enemyFireMax) * clamp(alive.length/40, .4, 1.2);
+      enemyFireNext = rand(preset.enemyFireMin, preset.enemyFireMax) * clamp(alive2.length/40, .4, 1.2);
       const shooters = bottomAliensByColumn();
       if (shooters.length){
         const a = shooters[Math.floor(Math.random()*shooters.length)];
@@ -330,7 +330,6 @@ description: "El clásico juego de los marcianitos"
     pShots.length=0; eShots.length=0;
     if (lives<=0){ endGame(); }
     else {
-      // retrocede un poco los aliens para dar respiro si están encima
       for (let a of aliens){ a.y = Math.max(10, a.y-6); }
     }
   }
@@ -339,7 +338,7 @@ description: "El clásico juego de los marcianitos"
     const map = new Map();
     for (let a of aliens){
       if (!a.alive) continue;
-      const key = Math.round(a.x/1000) + ':' + Math.round(a.x); // clave por X exacta
+      const key = Math.round(a.x/1000)+':'+Math.round(a.x);
       if (!map.has(key) || map.get(key).y < a.y) map.set(key,a);
     }
     return Array.from(map.values());
@@ -352,8 +351,7 @@ description: "El clásico juego de los marcianitos"
   // ===== Disparos =====
   function playerShoot(){
     if (!canShoot) return;
-    // clásico: un disparo simultáneo máx
-    if (pShots.length >= 1) return;
+    if (pShots.length >= 1) return; // 1 disparo máx simultáneo (clásico)
     const w=1.6,h=4;
     pShots.push({x: player.x + player.w/2 - w/2, y: player.y - h, w, h, v:160});
     canShoot=false; shootTimer=0;
@@ -363,17 +361,16 @@ description: "El clásico juego de los marcianitos"
   function draw(){
     const W = canvas.width / DPR, H = canvas.height / DPR;
     ctx.setTransform(DPR,0,0,DPR,0,0);
-    // Fondo
+
+    // Fondo — toma color del canvas (forzado a negro por CSS)
     ctx.fillStyle = getComputedStyle(canvas).backgroundColor || '#000';
     ctx.fillRect(0,0,W,H);
 
     // Cuadrícula suave
     ctx.strokeStyle = getCss('--grid-stroke');
-    ctx.globalAlpha = 1;
     ctx.lineWidth = 1;
     ctx.beginPath();
-    const gx = Math.floor(W/20);
-    const gy = Math.floor(H/15);
+    const gx = Math.floor(W/20), gy = Math.floor(H/15);
     for (let i=0;i<=20;i++){ ctx.moveTo(i*gx,0); ctx.lineTo(i*gx,H); }
     for (let j=0;j<=15;j++){ ctx.moveTo(0,j*gy); ctx.lineTo(W,j*gy); }
     ctx.stroke();
@@ -402,7 +399,6 @@ description: "El clásico juego de los marcianitos"
   }
 
   function drawPlayer(ctx,p){
-    // Nave simple (trapecio + rectángulo)
     ctx.beginPath();
     ctx.moveTo(p.x, p.y+p.h);
     ctx.lineTo(p.x+2, p.y+2);
@@ -410,13 +406,10 @@ description: "El clásico juego de los marcianitos"
     ctx.lineTo(p.x+p.w, p.y+p.h);
     ctx.closePath();
     ctx.fill();
-    // cañón
     ctx.fillRect(p.x + p.w/2 - 1.2, p.y - 2, 2.4, 4);
   }
   function drawAlien(ctx,a){
-    // píxeles estilo retro
-    const px = 1.2;
-    const x=a.x, y=a.y, w=a.w, h=a.h;
+    const px = 1.2, x=a.x, y=a.y, w=a.w, h=a.h;
     ctx.fillRect(x+px, y, w-2*px, px);
     ctx.fillRect(x, y+px, w, px);
     ctx.fillRect(x, y+2*px, w, px);
@@ -470,7 +463,6 @@ description: "El clásico juego de los marcianitos"
     if (e.key==='ArrowRight') player.right=false;
   });
 
-  // Botones
   function bind(el, handler){
     el.addEventListener('pointerdown', ev=>{ ev.preventDefault(); ev.stopPropagation(); });
     el.addEventListener('click', ev=>{ ev.preventDefault(); ev.stopPropagation(); handler(ev); });
@@ -494,10 +486,8 @@ description: "El clásico juego de los marcianitos"
     b.addEventListener('pointerleave', ()=>{ if (b.dataset.act==='left') player.left=false; if (b.dataset.act==='right') player.right=false; });
   });
 
-  // Cambio de dificultad aplica a próxima partida
   diffSel.addEventListener('change', ()=>{ /* se aplicará en onRestart */ });
 
-  // Visibilidad → pausa
   document.addEventListener('visibilitychange', ()=>{ if (document.hidden && running) pauseRun(); });
 
   // ===== Boot =====
