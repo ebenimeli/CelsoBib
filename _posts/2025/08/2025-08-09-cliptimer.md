@@ -8,7 +8,7 @@ categories: Productividad
 tags: [tiempo,apps,productividad,macOS]
 ---
 
-[![image](assets/images/posts/2025/08/cliptimer_light.jpg)]()
+[![image](/assets/images/posts/2025/08/cliptimer_light.jpg)]()
 
 «El tiempo es el que es», como diría Salvador Martí, subsecretario de El Ministerio del Tiempo, interpretado por el actor Jaime Blanch. Aprovecho para recomendaros la serie, de la que no haré spoiler. Coincidiremos en que **no podemos cambiar el tiempo**, pero sí está en nuestra mano **decidir cómo lo invertimos**. Y, para mejorar en este aspecto, es necesario saber de dónde partimos; es decir, cómo lo estamos utilizando hasta ahora.
 
