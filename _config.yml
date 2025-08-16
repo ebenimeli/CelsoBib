@@ -54,6 +54,7 @@ plugins:
    - jekyll-sitemap
    - jekyll-relative-links
    - jekyll-last-modified-at
+#   - jekyll-redirect-from
 
 relative_links:
    enabled: true

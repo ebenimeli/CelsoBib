@@ -1,11 +1,12 @@
 ---
 layout: page
 title: "🐍 Snake"
-permalink: /snake/
 description: "El clásico juego de la serpiente"
+#redirect_from:
+#  - /snake/
 ---
 
-<!-- === SNAKE GAME — ENRIQUE (v1.5.2, controles blancos / juego negro) === -->
+<!-- === SNAKE GAME — ENRIQUE (v1.5.3, juego cuadrado) === -->
 <div id="snake-game" class="snake" tabindex="0" aria-label="Juego Snake">
   <div class="snake-bar">
     <strong>🐍 Snake</strong>
@@ -70,7 +71,6 @@ description: "El clásico juego de la serpiente"
     box-shadow: 0 8px 24px rgba(0,0,0,.06);
     color: #111;
   }
-  /* Fuerza blanco también en modo oscuro del sitio */
   [data-theme="dark"] #snake-game {
     background: #fff !important;
     border-color: #e5e7eb !important;
@@ -80,7 +80,7 @@ description: "El clásico juego de la serpiente"
   #snake-game .snake-bar{
     display:flex; align-items:center; gap:.5rem; justify-content:space-between; flex-wrap:wrap;
     margin-bottom:.5rem; font-size:.95rem; position:relative; z-index: 2000;
-    background:#fff; /* barra blanca siempre */
+    background:#fff;
   }
   #snake-game .snake-scorebox{ font-variant-numeric: tabular-nums; }
   #snake-game .snake-controls{ display:flex; align-items:center; gap:.5rem; }
@@ -93,19 +93,24 @@ description: "El clásico juego de la serpiente"
     margin-left:.25rem; padding:.15rem .35rem; border-radius:6px; border:1px solid currentColor; background:#fff;
   }
 
-  #snake-game .snake-canvas-wrap{ position: relative; user-select:none; }
+  /* ---- Wrap cuadrado: fuerza relación 1:1 ---- */
+  #snake-game .snake-canvas-wrap{
+    position: relative; user-select:none;
+    width:100%;
+    aspect-ratio: 1 / 1;      /* <- cuadrado garantizado */
+  }
 
-  /* ZONA DE JUEGO SIEMPRE NEGRA */
+  /* ZONA DE JUEGO: el canvas rellena el wrap cuadrado y es negro */
   #snake-game canvas{
-    width: 100%;
-    aspect-ratio: 1 / 1;
+    position:absolute; inset:0;
+    width:100%; height:100%;
     display:block;
     border-radius: 10px;
     background: #000 !important;  /* negro constante */
   }
   [data-theme="dark"] #snake-game canvas{ background:#000 !important; }
 
-  /* Overlay (sobre el canvas) */
+  /* Overlay (encima del canvas) */
   #snake-game .snake-overlay{
     position:absolute; inset:0; display:none; place-items:center; backdrop-filter: blur(2px);
     z-index: 999;
@@ -128,7 +133,7 @@ description: "El clásico juego de la serpiente"
   }
 
   #snake-game .snake-help{
-    margin:.5rem 0 0; font-size:.9rem; color:#4b5563; background:#fff; /* texto de ayuda sobre blanco */
+    margin:.5rem 0 0; font-size:.9rem; color:#4b5563; background:#fff;
   }
 </style>
 
@@ -139,6 +144,7 @@ description: "El clásico juego de la serpiente"
   root.dataset.snakeInit = "1";
 
   const $ = (sel, parent=root) => parent.querySelector(sel);
+  const wrap  = $('.snake-canvas-wrap');
   const canvas = $('#snake-canvas');
   const ctx    = canvas.getContext('2d', { alpha: false });
   const scoreEl= $('#snake-score');
@@ -172,13 +178,13 @@ description: "El clásico juego de la serpiente"
     overlayBtn.setAttribute('aria-label', label);
   }
 
-  // ===== Canvas
+  // ===== Canvas (cuadrado real en píxeles, sincronizado con el wrap) =====
   function resizeCanvas(){
     DPR = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
-    const w = Math.floor(root.getBoundingClientRect().width) || 150;
-    const css = Math.max(150, w);
-    canvas.width  = Math.floor(css * DPR);
-    canvas.height = Math.floor(css * DPR);
+    const rect = wrap.getBoundingClientRect();
+    const size = Math.max(150, Math.floor(rect.width || 150)); // wrap es cuadrado ⇒ width=height
+    canvas.width  = Math.floor(size * DPR);
+    canvas.height = Math.floor(size * DPR);
     ctx.setTransform(DPR,0,0,DPR,0,0);
     if (snake && food) draw();
   }
@@ -246,11 +252,11 @@ description: "El clásico juego de la serpiente"
     const offX = Math.floor((W - cell*GRID)/2);
     const offY = Math.floor((H - cell*GRID)/2);
 
-    // fondo de juego (toma el fondo del canvas → negro forzado por CSS)
+    // fondo (negro por CSS)
     ctx.fillStyle = getComputedStyle(canvas).backgroundColor || '#000';
     ctx.fillRect(0,0,W,H);
 
-    // grid suave en blanco tenue
+    // grid suave
     ctx.strokeStyle = cssVar('--grid-stroke');
     ctx.lineWidth = 1; ctx.beginPath();
     for (let i=0;i<=GRID;i++){
@@ -307,7 +313,7 @@ description: "El clásico juego de la serpiente"
     hideOverlay(); startRun();
   }
 
-  // ===== Controles (teclado/táctil/botones)
+  // ===== Controles
   function setDir(x,y){ nextDir = {x,y}; }
 
   function onKey(e){

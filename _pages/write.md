@@ -1,7 +1,6 @@
 ---
 layout: page
 title: ""
-permalink: /write/
 description: "Blogs y boletines"
 ---
 

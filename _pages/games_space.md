@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "👾 Space Invaders"
-permalink: /space/
 description: "El clásico juego de los marcianitos"
 ---
 
