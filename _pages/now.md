@@ -5,7 +5,7 @@ permalink: /now/
 description: "¿Qué estoy haciendo ahora?"
 ---
 
-## ¿Qué estoy haciendo ahora?
+## */now*
 
 Esta es una [*now page*](https://nownownow.com/about), y si tienes una web, deberías publicar una también.
 

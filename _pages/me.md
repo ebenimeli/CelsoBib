@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ""
-description: "Una clásica página 'Acerca de...'"
+description: "Una típica página 'Acerca de...'"
 ---
 
 ### 🙋🏻‍♂️ Hola, mundo
