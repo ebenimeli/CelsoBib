@@ -4,6 +4,8 @@ title: "🎮 Juegos"
 description: "Algunos juegos para los nostálgicos"
 ---
 
+[![image](assets/images/posts/2025/08/nes_remote.jpg)]()
+
 * [**Serpiente**](pages/games_snake.html): Controla una serpiente que crece al comer, evitando chocar contra sí misma o las paredes. Un clásico de reflejos y planificación.
 * [**Space Invaders**](pages/games_space.html): Defiende tu nave disparando a los invasores que descienden en formación. La dificultad aumenta a medida que eliminas enemigos.
 * [**Pong!**](pages/games_pong.html): Dos palas compiten para devolver la pelota. El reto es anticipar la trayectoria y no dejar escapar el balón.
