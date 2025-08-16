@@ -1,0 +1,427 @@
+---
+layout: page
+title: "🏓 Pong"
+description: "Pong clásico: 1P vs CPU"
+---
+
+<!-- === PONG — ENRIQUE (v1.0 · estilo unificado) === -->
+<div id="pong-game" class="pong" tabindex="0" aria-label="Juego Pong">
+  <div class="pong-bar">
+    <strong>🏓 Pong</strong>
+    <div class="pong-stats">
+      Tú: <span id="pong-p1">0</span> · CPU: <span id="pong-p2">0</span> · Mejor rally: <span id="pong-best">0</span>
+    </div>
+    <div class="pong-controls">
+      <button id="pong-start" class="pg-btn" type="button" aria-label="Iniciar / Pausar">▶︎/⏸</button>
+      <button id="pong-restart" class="pg-btn" type="button" aria-label="Reiniciar">⟲</button>
+      <label class="pg-diff">
+        Dificultad
+        <select id="pong-diff" aria-label="Dificultad">
+          <option value="easy">Fácil</option>
+          <option value="normal" selected>Normal</option>
+          <option value="hard">Difícil</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <div class="pong-canvas-wrap">
+    <canvas id="pong-canvas"></canvas>
+
+    <!-- Overlay (inicio/pausa/fin) -->
+    <div class="pong-overlay" id="pong-overlay" aria-hidden="true">
+      <div class="pong-overlay-card">
+        <div id="pong-status-text">Listo</div>
+        <button id="pong-overlay-btn" type="button" class="pg-btn pg-btn-primary" aria-label="Empezar">Empezar</button>
+      </div>
+    </div>
+
+    <!-- D-pad móvil -->
+    <div class="pong-dpad" aria-label="Controles táctiles" role="group">
+      <button class="pg-d" data-act="up"    aria-label="Arriba">▲</button>
+      <button class="pg-d" data-act="toggle" aria-label="Pausar/Continuar">⏯</button>
+      <button class="pg-d" data-act="down"  aria-label="Abajo">▼</button>
+    </div>
+  </div>
+
+  <p class="pong-help">↑ ↓ o W/S para moverte · <kbd>P</kbd> o <kbd>Espacio</kbd> pausa · <kbd>R</kbd> reinicia · A 11 puntos</p>
+</div>
+
+<style>
+  /* ===== Estilos (aislados bajo #pong-game) ===== */
+  #pong-game{
+    --grid-stroke:rgba(255,255,255,.08);
+    --p1:#22c55e;  /* verde jugador */
+    --p2:#38bdf8;  /* cian CPU   */
+    --ball:#f8fafc;/* bola casi blanca */
+
+    max-width:min(92vw,540px);
+    margin:1rem auto;
+    border-radius:12px;
+    padding:.75rem;
+    outline:none;
+
+    /* CONTROLES SIEMPRE BLANCOS */
+    background:#fff; 
+    border:1px solid #e5e7eb;
+    color:#111;
+    box-shadow:0 8px 24px rgba(0,0,0,.06);
+  }
+  [data-theme="dark"] #pong-game{
+    background:#fff !important; border-color:#e5e7eb !important; color:#111 !important;
+  }
+
+  #pong-game .pong-bar{
+    display:flex; align-items:center; justify-content:space-between; gap:.5rem; flex-wrap:wrap;
+    margin-bottom:.5rem; font-size:.95rem; position:relative; z-index:2; background:#fff;
+  }
+  #pong-game .pong-stats{ font-variant-numeric:tabular-nums; }
+  #pong-game .pong-controls{ display:flex; align-items:center; gap:.5rem; }
+  #pong-game .pg-btn{
+    border:1px solid currentColor; background:transparent; padding:.25rem .5rem; border-radius:8px; cursor:pointer;
+    line-height:1; font-size:.95rem; user-select:none; touch-action:manipulation;
+  }
+  #pong-game .pg-btn-primary{ border-color:transparent; background:var(--p1); color:#05220e; }
+  #pong-game .pg-diff select{
+    margin-left:.25rem; padding:.15rem .35rem; border-radius:6px; border:1px solid currentColor; background:#fff; color:#111;
+  }
+
+  #pong-game .pong-canvas-wrap{ position:relative; user-select:none; }
+  /* Zona de juego: formato clásico 4:3 y negro fijo */
+  #pong-game canvas{
+    width:100%; aspect-ratio:4/3; display:block; border-radius:10px; background:#000 !important;
+  }
+  [data-theme="dark"] #pong-game canvas{ background:#000 !important; }
+
+  /* Overlay */
+  #pong-game .pong-overlay{ position:absolute; inset:0; display:none; place-items:center; backdrop-filter:blur(2px); z-index:999; }
+  #pong-game .pong-overlay-card{
+    padding:.9rem 1rem; border-radius:10px; min-width:12rem; text-align:center;
+    background:rgba(0,0,0,.75); color:#fff; display:flex; flex-direction:column; gap:.5rem;
+  }
+
+  /* D-pad móvil */
+  #pong-game .pong-dpad{ display:none; position:absolute; inset:auto .25rem .25rem auto; z-index:5; gap:.35rem; align-items:center; }
+  #pong-game .pg-d{ padding:.4rem .6rem; border-radius:8px; border:1px solid rgba(255,255,255,.35);
+    background:rgba(255,255,255,.15); color:#fff; font-size:1rem; touch-action:manipulation; }
+  @media (hover:none) and (pointer:coarse){
+    #pong-game .pong-dpad{ display:flex; }
+  }
+
+  #pong-game .pong-help{ margin:.5rem 0 0; font-size:.9rem; color:#4b5563; background:#fff; }
+</style>
+
+<script>
+(()=> {
+  const root = document.getElementById('pong-game');
+  if (!root || root.dataset.pongInit === "1") return;
+  root.dataset.pongInit = "1";
+
+  const $ = (s,p=root)=>p.querySelector(s);
+  const canvas = $('#pong-canvas');
+  const ctx = canvas.getContext('2d',{alpha:false});
+  const scoreP1 = $('#pong-p1'), scoreP2 = $('#pong-p2'), bestEl = $('#pong-best');
+  const btnStart = $('#pong-start'), btnRestart = $('#pong-restart'), diffSel = $('#pong-diff');
+  const overlay = $('#pong-overlay'), overlayBtn = $('#pong-overlay-btn'), statusTxt = $('#pong-status-text');
+  const dpad = root.querySelectorAll('.pg-d');
+
+  // ===== Config =====
+  const HS_KEY = 'pong.bestRally.v1';
+  const WU=200, HU=150; // unidades lógicas 4:3, como Invaders
+  const WIN_SCORE = 11;
+
+  const PRESETS = {
+    easy:   { ballSpeed: 55,  ballMax: 125, p1Speed: 150, cpuSpeed: 90,  cpuLag: 120 },
+    normal: { ballSpeed: 70,  ballMax: 150, p1Speed: 170, cpuSpeed: 115, cpuLag: 90  },
+    hard:   { ballSpeed: 85,  ballMax: 175, p1Speed: 190, cpuSpeed: 140, cpuLag: 60  },
+  };
+
+  // ===== Estado =====
+  let DPR=1, S=1;
+  let running=false, paused=false, gameOver=false;
+  let last=performance.now(), acc=0;
+
+  let p1, p2, ball;
+  let s1=0, s2=0, rally=0, best=0;
+  let cpuLagTimer=0, cpuTargetY=HU/2;
+
+  // ===== Util =====
+  function resetClock(){ last=performance.now(); acc=0; }
+  function getBest(){ return parseInt(localStorage.getItem(HS_KEY)||'0',10); }
+  function setBest(v){ localStorage.setItem(HS_KEY,String(v)); bestEl.textContent=String(v); }
+  function clamp(v,a,b){ return Math.max(a,Math.min(b,v)); }
+  function sign(v){ return v<0?-1:1; }
+
+  function getCss(name){
+    return getComputedStyle(root).getPropertyValue(name).trim() ||
+           getComputedStyle(canvas).getPropertyValue(name).trim() || '#fff';
+  }
+
+  function resizeCanvas(){
+    DPR = Math.max(1, Math.min(2, window.devicePixelRatio||1));
+    const wcss = Math.floor(root.getBoundingClientRect().width)||200;
+    const hcss = Math.floor(wcss*3/4);
+    canvas.width = Math.floor(wcss*DPR);
+    canvas.height= Math.floor(hcss*DPR);
+    const W = canvas.width / DPR, H = canvas.height / DPR;
+    S = Math.min(W/WU, H/HU);
+    if (!running) draw();
+  }
+  window.addEventListener('resize', resizeCanvas, {passive:true});
+
+  // ===== Init =====
+  function initPaddles(){
+    const ph = 22, pw = 3;
+    p1 = { x: 6, y: HU/2 - ph/2, w: pw, h: ph, vy:0, up:false, down:false, speed: PRESETS[diffSel.value].p1Speed };
+    p2 = { x: WU - 6 - pw, y: HU/2 - ph/2, w: pw, h: ph, vy:0, speed: PRESETS[diffSel.value].cpuSpeed };
+  }
+  function initBall(toLeft=false){
+    const sp = PRESETS[diffSel.value].ballSpeed;
+    const ang = (Math.random()*0.6 - 0.3); // -0.3..0.3 rad aprox
+    const dir = toLeft ? -1 : 1;
+    ball = { x: WU/2, y: HU/2, r: 2.5, vx: dir*sp*Math.cos(ang), vy: sp*Math.sin(ang), max: PRESETS[diffSel.value].ballMax };
+    rally = 0;
+  }
+
+  function resetGame(){
+    const preset = PRESETS[diffSel.value];
+    s1=0; s2=0; rally=0;
+    scoreP1.textContent="0"; scoreP2.textContent="0";
+    best = getBest(); bestEl.textContent = String(best);
+    cpuLagTimer=0; cpuTargetY=HU/2;
+    initPaddles(); initBall(Math.random()<0.5);
+    running=false; paused=false; gameOver=false;
+    resetClock();
+  }
+
+  // ===== Loop =====
+  function loop(t){
+    const step = 1000/60;
+    let dt = t - last; last = t; acc += dt;
+    acc = Math.min(acc, step*6);
+    while (acc >= step){
+      if (running && !paused && !gameOver) update(step);
+      acc -= step;
+    }
+    draw();
+    requestAnimationFrame(loop);
+  }
+
+  // ===== Update =====
+  function update(dt){
+    const dts = dt/1000;
+    // Player input
+    p1.vy = ((p1.down?1:0) - (p1.up?1:0)) * p1.speed;
+    p1.y += p1.vy * dts;
+    p1.y = clamp(p1.y, 2, HU - p1.h - 2);
+
+    // CPU AI: actualiza objetivo cada cierto lag
+    const preset = PRESETS[diffSel.value];
+    cpuLagTimer += dt;
+    if (cpuLagTimer >= preset.cpuLag){
+      cpuLagTimer = 0;
+      // Si la bola se acerca a su mitad, sigue su y previsto; si no, vuelve al centro
+      if (ball.vx > 0){
+        // estimación simple del punto de impacto
+        let time = (p2.x - (ball.x+ball.r)) / (ball.vx || 0.0001);
+        let ty = ball.y + ball.vy * (time);
+        // reflejos en top/bottom
+        while (ty < 0 || ty > HU){
+          if (ty < 0) ty = -ty;
+          else if (ty > HU) ty = 2*HU - ty;
+        }
+        cpuTargetY = clamp(ty - p2.h/2, 2, HU - p2.h - 2);
+      } else {
+        cpuTargetY = HU/2 - p2.h/2;
+      }
+    }
+    // mover CPU hacia el objetivo con velocidad limitada
+    const diff = cpuTargetY - p2.y;
+    const dir = Math.sign(diff);
+    const mag = Math.min(Math.abs(diff), p2.speed * dts);
+    p2.y += dir * mag;
+    p2.y = clamp(p2.y, 2, HU - p2.h - 2);
+
+    // Ball
+    ball.x += ball.vx * dts;
+    ball.y += ball.vy * dts;
+
+    // colisión con top/bottom
+    if (ball.y - ball.r < 0){ ball.y = ball.r; ball.vy = Math.abs(ball.vy); }
+    if (ball.y + ball.r > HU){ ball.y = HU - ball.r; ball.vy = -Math.abs(ball.vy); }
+
+    // colisión con palas (AABB-círculo simple)
+    collideWithPaddle(p1, 1);
+    collideWithPaddle(p2, -1);
+
+    // punto
+    if (ball.x + ball.r < 0){
+      s2++; scoreP2.textContent=String(s2);
+      checkWin() ? endGame() : nextServe(true); // sirve CPU
+    }
+    if (ball.x - ball.r > WU){
+      s1++; scoreP1.textContent=String(s1);
+      checkWin() ? endGame() : nextServe(false); // sirves tú
+    }
+  }
+
+  function collideWithPaddle(p, side){
+    // side: 1 para izquierda (p1), -1 para derecha (p2)
+    const withinY = ball.y + ball.r > p.y && ball.y - ball.r < p.y + p.h;
+    if (side === 1){
+      if (ball.x - ball.r <= p.x + p.w && ball.x > p.x){
+        if (withinY && ball.vx < 0){
+          onPaddleHit(p);
+          ball.x = p.x + p.w + ball.r;
+        }
+      }
+    } else {
+      if (ball.x + ball.r >= p.x && ball.x < p.x + p.w){
+        if (withinY && ball.vx > 0){
+          onPaddleHit(p);
+          ball.x = p.x - ball.r;
+        }
+      }
+    }
+  }
+
+  function onPaddleHit(p){
+    rally++;
+    if (rally > best){ best = rally; setBest(best); }
+    // ángulo según punto de impacto
+    const rel = ((ball.y - (p.y + p.h/2)) / (p.h/2)); // -1..1
+    const maxBounce = Math.PI/4; // 45°
+    const angle = rel * maxBounce;
+    const speed = Math.min(Math.hypot(ball.vx, ball.vy) * 1.05, ball.max);
+    const dir = -sign(ball.vx);
+    ball.vx = dir * speed * Math.cos(angle);
+    ball.vy = speed * Math.sin(angle);
+    // pequeño "boost" si la pala se mueve
+    ball.vy += (p.vy||0) * 0.02;
+  }
+
+  function nextServe(toLeft){
+    initBall(toLeft);
+    // reposicionar palas suavemente hacia centro
+    p1.y = clamp(p1.y, 2, HU - p1.h - 2);
+    p2.y = clamp(p2.y, 2, HU - p2.h - 2);
+  }
+
+  function checkWin(){ return (s1 >= WIN_SCORE || s2 >= WIN_SCORE); }
+
+  // ===== Render =====
+  function draw(){
+    const W = canvas.width / DPR, H = canvas.height / DPR;
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+    // Fondo negro
+    ctx.fillStyle = getComputedStyle(canvas).backgroundColor || '#000';
+    ctx.fillRect(0,0,W,H);
+
+    // Línea central y rejilla suave
+    ctx.strokeStyle = getCss('--grid-stroke'); ctx.lineWidth = 1; ctx.beginPath();
+    const gx = Math.floor(W/20), gy = Math.floor(H/15);
+    for (let i=0;i<=20;i++){ ctx.moveTo(i*gx,0); ctx.lineTo(i*gx,H); }
+    for (let j=0;j<=15;j++){ ctx.moveTo(0,j*gy); ctx.lineTo(W,j*gy); }
+    ctx.stroke();
+
+    ctx.setLineDash([6,6]);
+    ctx.beginPath();
+    ctx.moveTo(W/2, 6); ctx.lineTo(W/2, H-6);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Escala lógica
+    ctx.save();
+    ctx.translate( (W - WU*S)/2, (H - HU*S)/2 );
+    ctx.scale(S,S);
+
+    // Palas
+    ctx.fillStyle = getCss('--p1'); ctx.fillRect(p1.x, p1.y, p1.w, p1.h);
+    ctx.fillStyle = getCss('--p2'); ctx.fillRect(p2.x, p2.y, p2.w, p2.h);
+
+    // Bola
+    ctx.fillStyle = getCss('--ball'); ctx.beginPath();
+    ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI*2); ctx.fill();
+
+    ctx.restore();
+  }
+
+  // ===== Overlay / flujo =====
+  function showOverlay(show,text){
+    statusTxt.textContent = text || '';
+    overlay.style.display = show ? 'grid' : 'none';
+    overlay.setAttribute('aria-hidden', show ? 'false':'true');
+  }
+  function hideOverlay(){ overlay.style.display='none'; overlay.setAttribute('aria-hidden','true'); }
+  function startRun(){ if (gameOver) return; running=true; paused=false; btnStart.textContent='⏸'; hideOverlay(); resetClock(); }
+  function pauseRun(){ running=false; paused=true; btnStart.textContent='▶︎'; showOverlay(true,'Pausa'); setOverlayButton('Continuar'); }
+  function toggleRun(e){ if(e){e.preventDefault();e.stopPropagation();} if (gameOver) return; (running && !paused)? pauseRun() : startRun(); }
+  function endGame(){
+    running=false; paused=false; gameOver=true; btnStart.textContent='▶︎';
+    const msg = s1>s2 ? '¡Ganaste!' : 'Derrota';
+    setOverlayButton('Empezar');
+    showOverlay(true, `Game Over · ${msg}`);
+  }
+  function onRestart(e){
+    if (e){ e.preventDefault(); e.stopPropagation(); }
+    resetGame(); resizeCanvas(); draw();
+    setOverlayButton('Empezar'); showOverlay(true,'Listo');
+  }
+  function setOverlayButton(label){ overlayBtn.textContent = label; overlayBtn.setAttribute('aria-label',label); }
+
+  // ===== Controles =====
+  document.addEventListener('keydown', (e)=>{
+    const k=e.key;
+    if (['ArrowUp','ArrowDown','w','W','s','S',' ','Spacebar','p','P','r','R'].includes(k)) e.preventDefault();
+    if (k==='ArrowUp' || k==='w' || k==='W') p1.up=true;
+    if (k==='ArrowDown'|| k==='s' || k==='S') p1.down=true;
+    if (k==='p' || k==='P' || k===' ' || k==='Spacebar') toggleRun(e);
+    if (k==='r' || k==='R') onRestart(e);
+    if (!running && !gameOver && (k==='ArrowUp'||k==='ArrowDown'||k==='w'||k==='W'||k==='s'||k==='S')) startRun();
+  });
+  document.addEventListener('keyup', (e)=>{
+    if (e.key==='ArrowUp' || e.key==='w' || e.key==='W') p1.up=false;
+    if (e.key==='ArrowDown'|| e.key==='s' || e.key==='S') p1.down=false;
+  });
+
+  function bind(el, handler){
+    el.addEventListener('pointerdown', ev=>{ ev.preventDefault(); ev.stopPropagation(); });
+    el.addEventListener('click', ev=>{ ev.preventDefault(); ev.stopPropagation(); handler(ev); });
+  }
+  bind(btnStart, toggleRun);
+  bind(btnRestart, onRestart);
+  bind(overlayBtn, ()=>{ if (gameOver) onRestart(); else startRun(); });
+  overlay.addEventListener('click', (e)=>{ if (e.target===overlay){ if (gameOver) onRestart(e); else startRun(); } });
+
+  // D-pad táctil
+  dpad.forEach(b=>{
+    const act = b.dataset.act;
+    if (act==='toggle'){
+      b.addEventListener('click', ev=>{ ev.preventDefault(); ev.stopPropagation(); toggleRun(ev); });
+      return;
+    }
+    b.addEventListener('pointerdown', ev=>{
+      ev.preventDefault(); ev.stopPropagation();
+      if (act==='up'){ p1.up=true; p1.down=false; }
+      if (act==='down'){ p1.down=true; p1.up=false; }
+      if (!running && !gameOver) startRun();
+    });
+    const release = ()=>{ if (act==='up') p1.up=false; if (act==='down') p1.down=false; };
+    b.addEventListener('pointerup', release);
+    b.addEventListener('pointerleave', release);
+  });
+
+  // Dificultad → aplica al reiniciar
+  diffSel.addEventListener('change', ()=>{/* se aplicará en resetGame */});
+
+  // Visibilidad → pausa
+  document.addEventListener('visibilitychange', ()=>{ if (document.hidden && running) pauseRun(); });
+
+  // ===== Boot =====
+  bestEl.textContent = String(getBest());
+  resetGame(); resizeCanvas(); draw();
+  setOverlayButton('Empezar'); showOverlay(true,'Listo');
+  requestAnimationFrame(loop);
+})();
+</script>
+<!-- === /PONG === -->
