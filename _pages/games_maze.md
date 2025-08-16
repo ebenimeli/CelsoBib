@@ -4,7 +4,7 @@ title: "🌀 Laberinto"
 description: "Un generador de laberintos"
 ---
 
-<!-- === MAZE — ENRIQUE (v1.6 · laberinto completo sin 2×2 + solución + imprime) === -->
+<!-- === MAZE — ENRIQUE (v1.7 · rastro azul + sin 2×2 + solución + imprime) === -->
 <div id="maze-game" class="maze" tabindex="0" aria-label="Juego Laberinto">
   <div class="mz-bar">
     <strong>🧩 Laberinto</strong>
@@ -64,7 +64,8 @@ description: "Un generador de laberintos"
     --player:#222;
     --start:#666;
     --exit:#666;
-    --solution:#16a34a;
+    --solution:#16a34a; /* verde solución */
+    --trail:#2563eb;    /* azul rastro */
 
     max-width:min(92vw,540px);
     margin:1rem auto;
@@ -181,6 +182,9 @@ description: "Un generador de laberintos"
   let solutionPath = [];   // [{x,y}, ...] start→exit
   let showSolution = false;
 
+  // Rastro del usuario (pila de celdas desde start hasta la posición actual)
+  let userTrail = []; // [{x,y}, ...]
+
   // Modo impresión
   let printMode = false;
 
@@ -225,42 +229,38 @@ description: "Un generador de laberintos"
 
   // --- Evitar crear un ciclo abierto 2×2 de pasillos con la próxima apertura ---
   function wouldCreate2x2OpenSquare(x1,y1,x2,y2){
-    // Apertura horizontal: (x,y) - (x+1,y)
+    // Apertura horizontal
     if (y1===y2 && Math.abs(x1-x2)===1){
       const x = Math.min(x1,x2), y = y1;
-      // Cuadrado superior: A(x,y-1) B(x+1,y-1) C(x,y) D(x+1,y)
+      // Superior: A(x,y-1) B(x+1,y-1) C(x,y) D(x+1,y)
       if (y-1>=0){
         const A={x:x,y:y-1}, B={x:x+1,y:y-1}, C={x:x,y:y}, D={x:x+1,y:y};
-        // A-B (arriba), A-C (izq), B-D (der) ya abiertos ⇒ abrir C-D cerraría el 2×2
         if (isOpenBetween(A.x,A.y,B.x,B.y) && isOpenBetween(A.x,A.y,C.x,C.y) && isOpenBetween(B.x,B.y,D.x,D.y)) return true;
       }
-      // Cuadrado inferior: A(x,y) B(x+1,y) C(x,y+1) D(x+1,y+1)
+      // Inferior: A(x,y) B(x+1,y) C(x,y+1) D(x+1,y+1)
       if (y+1<rows){
         const A={x:x,y:y}, B={x:x+1,y:y}, C={x:x,y:y+1}, D={x:x+1,y:y+1};
-        // B-D (der), C-D (abajo), A-C (izq) ya abiertos ⇒ abrir A-B cerraría el 2×2
         if (isOpenBetween(B.x,B.y,D.x,D.y) && isOpenBetween(C.x,C.y,D.x,D.y) && isOpenBetween(A.x,A.y,C.x,C.y)) return true;
       }
     }
-    // Apertura vertical: (x,y) - (x,y+1)
+    // Apertura vertical
     if (x1===x2 && Math.abs(y1-y2)===1){
       const y = Math.min(y1,y2), x = x1;
-      // Cuadrado izquierdo: A(x-1,y) B(x,y) C(x-1,y+1) D(x,y+1)
+      // Izquierdo: A(x-1,y) B(x,y) C(x-1,y+1) D(x,y+1)
       if (x-1>=0){
         const A={x:x-1,y:y}, B={x:x,y:y}, C={x:x-1,y:y+1}, D={x:x,y:y+1};
-        // A-B (arriba), A-C (izq), C-D (abajo) ya abiertos ⇒ abrir B-D cerraría el 2×2
         if (isOpenBetween(A.x,A.y,B.x,B.y) && isOpenBetween(A.x,A.y,C.x,C.y) && isOpenBetween(C.x,C.y,D.x,D.y)) return true;
       }
-      // Cuadrado derecho: A(x,y) B(x+1,y) C(x,y+1) D(x+1,y+1)
+      // Derecho: A(x,y) B(x+1,y) C(x,y+1) D(x+1,y+1)
       if (x+1<cols){
         const A={x:x,y:y}, B={x:x+1,y:y}, C={x:x,y:y+1}, D={x:x+1,y:y+1};
-        // A-B (arriba), B-D (der), C-D (abajo) ya abiertos ⇒ abrir A-C cerraría el 2×2
         if (isOpenBetween(A.x,A.y,B.x,B.y) && isOpenBetween(B.x,B.y,D.x,D.y) && isOpenBetween(C.x,C.y,D.x,D.y)) return true;
       }
     }
     return false;
   }
 
-  // ===== Generación: DFS de retroceso que VISITA TODAS LAS CELDAS (perfect maze) =====
+  // ===== Generación: DFS de retroceso VISITANDO TODAS las celdas (perfect maze) =====
   function newMaze(){
     const L = LEVELS[diffSel.value] || LEVELS.normal;
     cols = (L.cols%2?L.cols:L.cols+1);
@@ -279,30 +279,28 @@ description: "Un generador de laberintos"
     parent[start.y][start.x] = null;
 
     while (stack.length){
-      const cur = stack[stack.length-1];
-      // vecinos candidatos (no visitados, que no creen 2×2)
-      let neigh = neighborList(cur.x, cur.y)
+      const node = stack[stack.length-1];
+      let neigh = neighborList(node.x, node.y)
         .filter(n => !visited[n.y][n.x])
-        .filter(n => !wouldCreate2x2OpenSquare(cur.x, cur.y, n.x, n.y));
+        .filter(n => !wouldCreate2x2OpenSquare(node.x, node.y, n.x, n.y));
       if (!neigh.length){
         stack.pop();
         continue;
       }
-      // elige uno al azar
       neigh = shuffle(neigh);
       const nxt = neigh[0];
 
-      carveBetween(cur.x,cur.y, nxt.x,nxt.y);
+      carveBetween(node.x,node.y, nxt.x,nxt.y);
       visited[nxt.y][nxt.x] = true;
-      parent[nxt.y][nxt.x]  = {x:cur.x, y:cur.y};
+      parent[nxt.y][nxt.x]  = {x:node.x, y:node.y};
       stack.push({x:nxt.x, y:nxt.y});
     }
 
-    // Abrir entrada/salida al exterior
+    // Abrir entrada/salida
     cells[start.y][start.x] &= ~LEFT;
     cells[exit.y][exit.x]   &= ~RIGHT;
 
-    // Reconstruir ruta solución desde exit→start por el árbol DFS
+    // Ruta solución exit→start por parent
     solutionPath = [];
     let p = {x:exit.x, y:exit.y};
     if (parent[p.y][p.x] || (p.x===start.x && p.y===start.y)){
@@ -314,18 +312,21 @@ description: "Un generador de laberintos"
     }
     showSolution = false;
 
-    // Estado de juego
-    curPosReset();
+    // Estado de juego + rastro
+    curPosReset(true);
     updateBestLabel();
     updateSolveBtn();
   }
 
-  function curPosReset(){
+  function curPosReset(resetTrail){
     cur = {cx:start.x, cy:start.y};
     from = {cx:cur.cx, cy:cur.cy};
     moving=false; moveT=0; tgt=null;
     finished=false; elapsed=0; timerStart=performance.now();
     btnStart.textContent='▶︎';
+    if (resetTrail){
+      userTrail = [{x:start.x, y:start.y}]; // rastro inicia en start
+    }
   }
 
   // ===== Canvas / escala =====
@@ -385,6 +386,10 @@ description: "Un generador de laberintos"
       moveT += (speed * dt);
       if (moveT >= 1){
         moving=false; moveT=1;
+
+        // --- actualizar rastro del usuario (push/popup) ---
+        updateUserTrail(cur.cx, cur.cy);
+
         if (cur.cx===exit.x && cur.cy===exit.y){
           finished=true; running=false; paused=false;
           const ms = Math.floor(elapsed);
@@ -403,6 +408,25 @@ description: "Un generador de laberintos"
       }
     }
     timeEl.textContent = fmt(Math.floor(elapsed));
+  }
+
+  // Manejo del rastro (pila)
+  function updateUserTrail(nx, ny){
+    const L = userTrail.length;
+    if (L === 0){
+      userTrail.push({x:nx, y:ny});
+      return;
+    }
+    const top = userTrail[L-1];
+    // si vuelve exactamente a la celda anterior en la pila, hacemos pop (retroceso)
+    if (L >= 2 && nx === userTrail[L-2].x && ny === userTrail[L-2].y){
+      userTrail.pop();
+      return;
+    }
+    // si es nueva celda distinta del top, añadimos
+    if (nx !== top.x || ny !== top.y){
+      userTrail.push({x:nx, y:ny});
+    }
   }
 
   // ===== Render =====
@@ -434,7 +458,7 @@ description: "Un generador de laberintos"
     }
     ctx.stroke();
 
-    // SOLUCIÓN (solo en pantalla)
+    // SOLUCIÓN (solo pantalla)
     if (showSolution && !printMode && solutionPath && solutionPath.length>1){
       ctx.strokeStyle = getCss('--solution');
       ctx.lineWidth = Math.max(3, Math.floor(ts*0.28));
@@ -445,6 +469,22 @@ description: "Un generador de laberintos"
       ctx.moveTo((p0.x+0.5)*ts, (p0.y+0.5)*ts);
       for (let i=1;i<solutionPath.length;i++){
         const p = solutionPath[i];
+        ctx.lineTo((p.x+0.5)*ts, (p.y+0.5)*ts);
+      }
+      ctx.stroke();
+    }
+
+    // RASTRO DEL USUARIO (solo pantalla)
+    if (!printMode && userTrail && userTrail.length>1){
+      ctx.strokeStyle = getCss('--trail');
+      ctx.lineWidth = Math.max(2, Math.floor(ts*0.22));
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.beginPath();
+      const p0 = userTrail[0];
+      ctx.moveTo((p0.x+0.5)*ts, (p0.y+0.5)*ts);
+      for (let i=1;i<userTrail.length;i++){
+        const p = userTrail[i];
         ctx.lineTo((p.x+0.5)*ts, (p.y+0.5)*ts);
       }
       ctx.stroke();
@@ -482,12 +522,12 @@ description: "Un generador de laberintos"
   function toggleRun(e){ if(e){e.preventDefault();e.stopPropagation();} if (finished) return; (running && !paused)? pauseRun() : startRun(); }
   function onRestart(e){
     if(e){ e.preventDefault(); e.stopPropagation(); }
-    curPosReset();
+    curPosReset(true);
     setOverlayButton('Empezar'); showOverlay(true,'Listo'); draw();
   }
   function onNew(e){
     if(e){ e.preventDefault(); e.stopPropagation(); }
-    newMaze(); resizeCanvas(); curPosReset();
+    newMaze(); resizeCanvas(); curPosReset(true);
     setOverlayButton('Empezar'); showOverlay(true,'Listo'); draw();
   }
 
@@ -564,4 +604,4 @@ description: "Un generador de laberintos"
   requestAnimationFrame(loop);
 })();
 </script>
-<!-- === /MAZE (v1.6) === -->
+<!-- === /MAZE (v1.7) === -->
