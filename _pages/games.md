@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "🎮 Juegos"
-description: "Algunos juegos para los nostálgicos"
+description: "Algunos juegos para los más nostálgicos"
 ---
 
 [![image](assets/images/posts/2025/08/nes_remote.jpg)]()
