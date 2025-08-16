@@ -470,7 +470,7 @@ ul.courses {
   display: block;
 }
 */
-
+/* Menú principal */
 .navmenu {
   display: flex;
   flex-wrap: wrap;
@@ -483,18 +483,32 @@ ul.courses {
   padding-right: 5px;
 }
 
-.navmenu a:hover {
-  transform: scale(1.7);
-  text-shadow: 0 0 6px rgba(70,130,180,.7);
-  filter: brightness(1.3);
+/* Hover grande SOLO en escritorio (ratón) */
+@media (hover: hover) and (pointer: fine) {
+  .navmenu a:hover {
+    transform: scale(1.7);
+    text-shadow: 0 0 6px rgba(70,130,180,.7);
+    filter: brightness(1.3);
+  }
+}
+
+/* En dispositivos táctiles, sin efectos que muevan el layout */
+@media (hover: none), (pointer: coarse) {
+  .navmenu a:hover {
+    transform: none;
+    text-shadow: none;
+    filter: none;
+  }
 }
 
 /* Ocultar submenús fuente */
-.navmenu.sub { display: none; }
+.navmenu.sub {
+  display: none;
+}
 
-/* Contenedor visible del submenú (animado) */
+/* Contenedor animado del submenú */
 #submenu {
-  box-sizing: border-box;         /* ← clave para que el cálculo sea estable */
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -505,10 +519,11 @@ ul.courses {
   padding: 0;
   margin: 0;
 
-  overflow: hidden;               /* cerrado: oculta */
-  max-height: 0;                  /* animaremos esta propiedad */
+  overflow: hidden;   /* cerrado */
+  max-height: 0;
   opacity: 0;
   transform: translateY(-8px);
+  will-change: max-height;
   transition:
     max-height .4s ease,
     opacity .3s ease,
@@ -524,7 +539,7 @@ ul.courses {
   margin: 0 5px;
 }
 
-/* Abierto */
+/* Estado abierto */
 #submenu.show {
   opacity: 1;
   transform: translateY(0);
@@ -532,17 +547,19 @@ ul.courses {
   padding: 0.5rem 1rem;
   margin-top: 0.5rem;
   margin-bottom: 5px;
-  overflow: visible;              /* abierto: no recorta (para el scale) */
+  overflow: hidden;   /* mantener hidden para que iOS no salte */
 }
 
-#submenu a:hover {
-  transform: scale(1.7);
-  transform-origin: center;
-  text-shadow: 0 0 6px rgba(70,130,180,.7);
-  filter: brightness(1.3);
+/* Hover de enlaces del submenú (solo escritorio) */
+@media (hover: hover) and (pointer: fine) {
+  #submenu a:hover {
+    transform: scale(1.7);
+    transform-origin: center;
+    text-shadow: 0 0 6px rgba(70,130,180,.7);
+    filter: brightness(1.3);
+  }
 }
 
-/* Respeto a usuarios con reduce motion */
 @media (prefers-reduced-motion: reduce) {
   #submenu {
     transition: none !important;
@@ -566,7 +583,6 @@ ul.courses {
   color: steelblue;
   font-weight: bold;
 }
-
 
 /* Menú principal */
 #main-menu {

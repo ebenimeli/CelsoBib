@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     labelBox.textContent = label || DEFAULT_LABEL;
   }
 
-  // Hover y foco cambian la etiqueta
   document.addEventListener('mouseover', (e) => {
     const a = e.target.closest(SELECTOR);
     if (a) setLabelFrom(a);
@@ -22,6 +21,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const a = e.target.closest(SELECTOR);
     if (a) setLabelFrom(a);
   });
-
-  // No reseteamos en mouseout/focusout para “persistir” la última etiqueta
 });
