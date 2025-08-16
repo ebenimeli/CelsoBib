@@ -5,7 +5,7 @@ permalink: /snake/
 description: "El clásico juego de la serpiente"
 ---
 
-<!-- === SNAKE GAME — ENRIQUE (v1.5.1, botón dinámico Empezar/Continuar) === -->
+<!-- === SNAKE GAME — ENRIQUE (v1.5.2, controles blancos / juego negro) === -->
 <div id="snake-game" class="snake" tabindex="0" aria-label="Juego Snake">
   <div class="snake-bar">
     <strong>🐍 Snake</strong>
@@ -56,36 +56,31 @@ description: "El clásico juego de la serpiente"
 <style>
   /* ===== Estilos (aislados bajo #snake-game) ===== */
   #snake-game {
-    --panel-bg-light: #ffffff;
-    --panel-bg-dark: #0b0d10;
-    --panel-brd-light: #e5e7eb;
-    --panel-brd-dark: #1f2937;
-
-    --canvas-bg-light: #0f172a;
-    --canvas-bg-dark:  #0b1020;
-    --grid-stroke: rgba(255,255,255,.06);
+    --grid-stroke: rgba(255,255,255,.08);
     --snake-color: #22c55e;
     --food-color:  #f43f5e;
-    --text-dim: #6b7280;
 
     max-width: min(92vw, 540px);
     margin: 1rem auto;
     border-radius: 12px;
     padding: .75rem;
     outline: none;
-    border: 1px solid var(--panel-brd-light);
-    background: var(--panel-bg-light);
+    border: 1px solid #e5e7eb;          /* borde claro */
+    background: #fff;                    /* controles SIEMPRE blanco */
     box-shadow: 0 8px 24px rgba(0,0,0,.06);
+    color: #111;
   }
+  /* Fuerza blanco también en modo oscuro del sitio */
   [data-theme="dark"] #snake-game {
-    border-color: var(--panel-brd-dark);
-    background: var(--panel-bg-dark);
-    box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    background: #fff !important;
+    border-color: #e5e7eb !important;
+    color: #111 !important;
   }
 
   #snake-game .snake-bar{
     display:flex; align-items:center; gap:.5rem; justify-content:space-between; flex-wrap:wrap;
     margin-bottom:.5rem; font-size:.95rem; position:relative; z-index: 2000;
+    background:#fff; /* barra blanca siempre */
   }
   #snake-game .snake-scorebox{ font-variant-numeric: tabular-nums; }
   #snake-game .snake-controls{ display:flex; align-items:center; gap:.5rem; }
@@ -93,33 +88,31 @@ description: "El clásico juego de la serpiente"
     border:1px solid currentColor; background:transparent; padding:.25rem .5rem; border-radius:8px; cursor:pointer;
     line-height:1; font-size:.95rem; pointer-events:auto; user-select:none; touch-action:manipulation;
   }
-  #snake-game .snk-btn-primary{
-    border-color: transparent; background: var(--snake-color); color: #04130a;
-  }
+  #snake-game .snk-btn-primary{ border-color: transparent; background: var(--snake-color); color: #04130a; }
   #snake-game .snk-speed select{
-    margin-left:.25rem; padding:.15rem .35rem; border-radius:6px; border:1px solid currentColor; background:transparent;
+    margin-left:.25rem; padding:.15rem .35rem; border-radius:6px; border:1px solid currentColor; background:#fff;
   }
 
-  #snake-game .snake-canvas-wrap{
-    position: relative; user-select:none;
-  }
+  #snake-game .snake-canvas-wrap{ position: relative; user-select:none; }
+
+  /* ZONA DE JUEGO SIEMPRE NEGRA */
   #snake-game canvas{
     width: 100%;
-    aspect-ratio: 1 / 1;        /* cuadrado responsivo */
+    aspect-ratio: 1 / 1;
     display:block;
     border-radius: 10px;
-    background: var(--canvas-bg-light);
+    background: #000 !important;  /* negro constante */
   }
-  [data-theme="dark"] #snake-game canvas{ background: var(--canvas-bg-dark); }
+  [data-theme="dark"] #snake-game canvas{ background:#000 !important; }
 
-  /* Overlay SOLO sobre el canvas */
+  /* Overlay (sobre el canvas) */
   #snake-game .snake-overlay{
     position:absolute; inset:0; display:none; place-items:center; backdrop-filter: blur(2px);
     z-index: 999;
   }
   #snake-game .snake-overlay-card{
     padding: .85rem 1rem; border-radius: 10px;
-    background: rgba(0,0,0,.65); color:#fff; text-align:center; min-width: 12rem;
+    background: rgba(0,0,0,.75); color:#fff; text-align:center; min-width: 12rem;
     display:flex; flex-direction:column; gap:.5rem;
   }
 
@@ -135,7 +128,7 @@ description: "El clásico juego de la serpiente"
   }
 
   #snake-game .snake-help{
-    margin:.5rem 0 0; font-size:.9rem; color: var(--text-dim);
+    margin:.5rem 0 0; font-size:.9rem; color:#4b5563; background:#fff; /* texto de ayuda sobre blanco */
   }
 </style>
 
@@ -223,7 +216,6 @@ description: "El clásico juego de la serpiente"
   }
 
   function update(){
-    // no reversa instantánea si longitud > 1
     if (snake.length > 1 && nextDir.x === -dir.x && nextDir.y === -dir.y){
       /* ignorar reversa */ 
     } else {
@@ -231,7 +223,6 @@ description: "El clásico juego de la serpiente"
     }
     const head = { x: snake[0].x + dir.x, y: snake[0].y + dir.y };
 
-    // colisiones
     if (head.x < 0 || head.x >= GRID || head.y < 0 || head.y >= GRID){ endGame(); return; }
     if (snake.some((s,i)=> i>0 && s.x===head.x && s.y===head.y)){ endGame(); return; }
 
@@ -255,11 +246,11 @@ description: "El clásico juego de la serpiente"
     const offX = Math.floor((W - cell*GRID)/2);
     const offY = Math.floor((H - cell*GRID)/2);
 
-    // fondo
+    // fondo de juego (toma el fondo del canvas → negro forzado por CSS)
     ctx.fillStyle = getComputedStyle(canvas).backgroundColor || '#000';
     ctx.fillRect(0,0,W,H);
 
-    // grid suave
+    // grid suave en blanco tenue
     ctx.strokeStyle = cssVar('--grid-stroke');
     ctx.lineWidth = 1; ctx.beginPath();
     for (let i=0;i<=GRID;i++){
@@ -332,7 +323,6 @@ description: "El clásico juego de la serpiente"
   }
   document.addEventListener('keydown', onKey);
 
-  // Botones: usar pointerdown + click por compatibilidad
   function bindButton(el, handler){
     el.addEventListener('pointerdown', (e)=>{ e.preventDefault(); e.stopPropagation(); }, {passive:false});
     el.addEventListener('click', (e)=>{ e.preventDefault(); e.stopPropagation(); handler(e); });
@@ -343,7 +333,6 @@ description: "El clásico juego de la serpiente"
 
   overlay.addEventListener('click', (e)=>{ if (e.target === overlay) continueGame(e); });
 
-  // D-pad
   dpadBtns.forEach(b=>{
     b.addEventListener('click', (e)=>{
       e.preventDefault(); e.stopPropagation();
@@ -378,7 +367,7 @@ description: "El clásico juego de la serpiente"
   }
   function pauseRun(){
     running = false; btnStart.textContent = '▶︎';
-    setOverlayButton('Continuar');          // ← aquí cambiamos el botón
+    setOverlayButton('Continuar');
     showOverlay(true, 'Pausa');
   }
   function toggleRun(e){
@@ -388,7 +377,7 @@ description: "El clásico juego de la serpiente"
   }
   function endGame(){
     running = false; gameOver = true; btnStart.textContent = '▶︎';
-    setOverlayButton('Empezar');            // tras Game Over, ofrecer empezar
+    setOverlayButton('Empezar');
     showOverlay(true, 'Game Over');
   }
 
@@ -396,14 +385,14 @@ description: "El clásico juego de la serpiente"
     if (e){ e.preventDefault(); e.stopPropagation(); }
     FPS = parseInt(speedSel.value,10) || 12;
     resetGame(); resizeCanvas(); draw();
-    setOverlayButton('Empezar');            // inicio → Empezar
+    setOverlayButton('Empezar');
     showOverlay(true, 'Listo');
   }
 
   // ===== Boot
   bestEl.textContent = String(getBest());
   resetGame(); resizeCanvas(); draw();
-  setOverlayButton('Empezar');              // inicio → Empezar
+  setOverlayButton('Empezar');
   showOverlay(true, 'Listo');
   requestAnimationFrame(loop);
 })();
