@@ -17,7 +17,7 @@ Estudié **Ingeniería Informática** y cursé dos años de doctorado en el áre
 Cursé mi último año de carrera en Austria y trabajé en un proyecto europeo de **investigación educativa** en la misma universidad. También he ejercido en ella como profesor de Español como Lengua Extranjera (ELE). En 2019 empecé a estudiar el Grado en Lengua y Literatura Españolas. Puedes leer algunos detalles sobre formación y experiencia profesional en la sección [CV](pages/cv.html) o en [mi perfil de LinkedIn](https://www.linkedin.com/in/ebenimeli/?locale=es_ES).
 -->
 
-Mantengo una relación de amor-odio con las redes sociales. A veces paso por ~~Twitter~~ [X](https://twitter.com/enriquebenimeli) para compartir. En [Instagram](https://www.instagram.com/ebenimeli/) publico algunas fotos, de viajes sobre todo. Apenas paso por [Facebook](https://www.facebook.com/ebenimeli/). Pefiero dedicar el tiempo a escribir en [**mis blogs y boletines**](pages/newsletter.html).
+Mantengo una relación de amor-odio con las redes sociales. A veces paso por ~~Twitter~~ [X](https://twitter.com/enriquebenimeli) para compartir. En [Instagram](https://www.instagram.com/ebenimeli/) publico algunas fotos, de viajes sobre todo. Apenas paso por [Facebook](https://www.facebook.com/ebenimeli/). Pefiero dedicar el tiempo a escribir en [**mis blogs y boletines**](https://www.ebenimeli.org/pages/write.html).
 
 ### 💡 Cosas que me interesan
 1. La informática. En especial las tecnologías del lenguaje.
