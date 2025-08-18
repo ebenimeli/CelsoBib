@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "🎮 Juegos"
-permalink: /games/
 description: "Algunos juegos para los más nostálgicos"
 ---
 
