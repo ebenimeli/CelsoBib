@@ -1202,3 +1202,106 @@ div.lastlog p:hover {
 a.read {
   text-decoration: none;
 }
+
+
+.fav {
+  color: #48b;
+}
+
+
+/* FORMS */
+
+/* Contenedor general */
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fafafa;
+  font-family: system-ui, sans-serif;
+}
+
+/* Agrupación de campos */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Campos */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+input,
+textarea {
+  font: inherit;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #4682b4;
+  box-shadow: 0 0 0 2px rgba(70, 130, 180, 0.2);
+  outline: none;
+}
+
+/* Botón */
+button[type="submit"] {
+  background: #4682b4;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #35648a;
+}
+
+/* Mensajes de estado */
+.form-status {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Consentimiento */
+input[type="checkbox"] {
+  margin-right: 0.4rem;
+}
+
+.form-field label a {
+  color: #4682b4;
+  text-decoration: none;
+}
+
+.form-field label a:hover {
+  text-decoration: underline;
+}
+
+/* Honeypot oculto */
+.hp {
+  display: none;
+}
