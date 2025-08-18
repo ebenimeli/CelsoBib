@@ -8,6 +8,9 @@ description: "Lo que uso"
 
 Herramientas y dispositivos que uso.
 
+Próximamente...
+
+<!--
 ## Dispositivos y SO
 - MacBook Pro
 - iMac
@@ -35,3 +38,4 @@ Programas.
 
 - mkdocs
 
+-->
