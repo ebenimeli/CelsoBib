@@ -4,26 +4,32 @@
   window.__SUBMENUS_INIT__ = true;
 
   document.addEventListener('DOMContentLoaded', () => {
-    const stage = document.querySelector('.menu-stage');
-    const placeholder = document.getElementById('submenu');
-    const menu1 = document.getElementById('main-menu');
-    const menu2 = document.getElementById('main-menu2');
-    const menus = [menu1, menu2].filter(Boolean);
-    const TRANS_MS = 600;
-    const STORAGE_KEY = 'activeMenu'; // '1' | '2'
+    const stage       = document.querySelector('.menu-stage'); // wrapper de todos los navmenu (no .sub)
+    const placeholder = document.getElementById('submenu');    // donde se inyecta el submenú
+    const iconLabelEl = document.getElementById('iconlabel');
+    const defaultLabel = iconLabelEl ? iconLabelEl.textContent : '';
+    const TRANS_MS    = 600;
+    const STORE_KEY   = 'activeMenuIndex';
 
-    if (!stage || !menu1) { console.warn('[submenus] Falta .menu-stage o #main-menu'); return; }
+    if (!stage) { console.warn('[submenus] Falta .menu-stage'); return; }
 
-    /* =============== utils =============== */
+    // --- Recoge TODOS los navmenu hijos directos (excluye .sub) ---
+    let navs = Array.from(stage.querySelectorAll(':scope > .navmenu:not(.sub)'));
+    if (!navs.length) {
+      // Fallback si :scope no está soportado
+      navs = Array.from(stage.children).filter(el => el.classList?.contains('navmenu') && !el.classList.contains('sub'));
+    }
+    if (!navs.length) { console.warn('[submenus] No hay navmenu dentro de .menu-stage'); return; }
+
+    // --- Utils ---
+    const clampIndex   = (i) => (isFinite(i) && i >= 0 && i < navs.length) ? i : 0;
+    const getStoredIdx = () => clampIndex(parseInt(localStorage.getItem(STORE_KEY) || '0', 10));
+    const setStoredIdx = (i) => localStorage.setItem(STORE_KEY, String(clampIndex(i)));
+
     const animateMaxHeight = (el, px) => { el.style.maxHeight = `${px}px`; };
     const onTransitionEndOnce = (el, cb) => {
-      const handler = (ev) => {
-        if (ev.propertyName === 'max-height') {
-          el.removeEventListener('transitionend', handler);
-          cb && cb();
-        }
-      };
-      el.addEventListener('transitionend', handler);
+      const h = (ev) => { if (ev.propertyName === 'max-height') { el.removeEventListener('transitionend', h); cb && cb(); } };
+      el.addEventListener('transitionend', h);
     };
     const settleHeight = (el) => {
       const h1 = el.scrollHeight;
@@ -32,34 +38,26 @@
         if (h2 !== h1) animateMaxHeight(el, h2);
       });
     };
-    const setActiveMenu = (val) => localStorage.setItem(STORAGE_KEY, val);
-    const getActiveMenu = () => localStorage.getItem(STORAGE_KEY) || '1';
 
-    /* =============== estado inicial =============== */
+    // --- Estado inicial: uno activo, resto a la derecha ---
+    let activeIndex = getStoredIdx();
     function normalizeMenus() {
-      const desired = getActiveMenu(); // '1' o '2'
-      if (desired === '2' && menu2) {
-        menu2.classList.add('active');
-        menu2.classList.remove('enter-right','exit-left');
-        menu1.classList.remove('active','exit-left');
-        menu1.classList.add('enter-right');
-      } else {
-        // por defecto menu1
-        menu1.classList.add('active');
-        menu1.classList.remove('enter-right','exit-left');
-        if (menu2) { menu2.classList.remove('active','exit-left'); menu2.classList.add('enter-right'); }
-        setActiveMenu('1');
-      }
+      activeIndex = clampIndex(activeIndex);
+      navs.forEach((nav, i) => {
+        nav.classList.remove('active', 'exit-left', 'enter-right');
+        if (i === activeIndex) nav.classList.add('active');
+        else nav.classList.add('enter-right');
+      });
     }
     normalizeMenus();
 
-    /* =============== submenús =============== */
+    // --- Submenús ---
     function showSubmenu(id) {
       if (!placeholder) return;
       const src = document.getElementById(id);
       if (!src) return;
 
-      placeholder.innerHTML       = src.innerHTML;
+      placeholder.innerHTML       = src.innerHTML; // clona contenido
       placeholder.dataset.current = id;
       placeholder.classList.add('show');
 
@@ -72,7 +70,8 @@
         }
       });
 
-      menus.forEach(m => {
+      // aria-expanded en todos los menús
+      navs.forEach(m => {
         m.querySelectorAll('a[data-submenu]').forEach(a => a.setAttribute('aria-expanded', 'false'));
         const t = m.querySelector(`a[data-submenu="${id}"]`);
         if (t) t.setAttribute('aria-expanded', 'true');
@@ -81,83 +80,126 @@
 
     function hideSubmenu() {
       if (!placeholder || !placeholder.classList.contains('show')) return;
-
       const current = placeholder.scrollHeight;
       placeholder.style.maxHeight = `${current}px`;
-      void placeholder.offsetHeight;
+      void placeholder.offsetHeight; // reflow
       animateMaxHeight(placeholder, 0);
-
       onTransitionEndOnce(placeholder, () => {
         placeholder.classList.remove('show');
         placeholder.innerHTML = '';
         delete placeholder.dataset.current;
         animateMaxHeight(placeholder, 0);
-        menus.forEach(m => m.querySelectorAll('a[data-submenu]').forEach(a => a.setAttribute('aria-expanded', 'false')));
+        navs.forEach(m => m.querySelectorAll('a[data-submenu]').forEach(a => a.setAttribute('aria-expanded', 'false')));
       });
     }
 
-    /* =============== abrir por URL (opcional) =============== */
+    // --- Abrir por URL (opcional) ---
     (function openByPath() {
-      const file = window.location.pathname.split('/').pop();
-      const base = file.replace(/\.html$/i, '').split('_')[0];
+      const file = window.location.pathname.split('/').pop();   // "cv_work.html"
+      const base = file?.replace(/\.html$/i, '').split('_')[0]; // "cv"
       if (!base) return;
-      for (const m of menus) {
-        if (m && m.querySelector(`a[data-submenu="${base}"]`)) { showSubmenu(base); break; }
-      }
+      const exists = navs.some(m => m.querySelector(`a[data-submenu="${base}"]`));
+      if (exists) showSubmenu(base);
     })();
 
-    /* =============== alternar menús =============== */
-    function toggleMenus(from, to) {
-      if (!to || !from) return;
+    // --- Alternar menús (cíclico) ---
+    function toggleToIndex(nextIndex) {
+      nextIndex = clampIndex(nextIndex);
+      if (nextIndex === activeIndex || navs.length < 2) return;
+
+      const from = navs[activeIndex];
+      const to   = navs[nextIndex];
+
       hideSubmenu();
 
-      to.classList.remove('active','exit-left');
+      // Estado inicial del que entra
+      to.classList.remove('active', 'exit-left');
       to.classList.add('enter-right');
-      void to.offsetWidth;
+      void to.offsetWidth; // reflow
 
+      // Saca el actual
       from.classList.remove('active');
       from.classList.add('exit-left');
 
+      // Trae el nuevo
       requestAnimationFrame(() => {
         to.classList.remove('enter-right');
         to.classList.add('active');
       });
 
+      // Limpieza y persistencia
       setTimeout(() => {
         from.classList.remove('exit-left');
         from.classList.add('enter-right');
       }, TRANS_MS);
 
-      setActiveMenu(to === menu2 ? '2' : '1');
+      activeIndex = nextIndex;
+      setStoredIdx(activeIndex);
     }
 
-    function toggleBetweenMenus() {
-      if (menu2 && menu1.classList.contains('active')) toggleMenus(menu1, menu2);
-      else if (menu2 && menu2.classList.contains('active')) toggleMenus(menu2, menu1);
-      else normalizeMenus();
+    // --- Iconlabel: delegación para *todos* los menús y el submenú ---
+    function labelFor(a) {
+      return (a.getAttribute('data-label') || a.title || a.textContent || '').trim();
+    }
+    function setIconLabel(text) {
+      if (iconLabelEl && text) iconLabelEl.textContent = text;
+    }
+    function resetIconLabel() {
+      if (iconLabelEl) iconLabelEl.textContent = defaultLabel;
     }
 
-    /* =============== eventos en los menús =============== */
-    menus.forEach(menu => {
+    // Cambia el label al pasar por encima o al enfocar
+    function handleHoverOrFocus(e) {
+      const a = e.target.closest('a');
+      if (!a) return;
+      const lbl = labelFor(a);
+      if (lbl) setIconLabel(lbl);
+    }
+    // Restablece cuando el puntero sale del área
+    function handleLeaveArea() { resetIconLabel(); }
+    // Restablece cuando el foco sale de ambas áreas
+    function handleFocusOut() {
+      setTimeout(() => {
+        const active = document.activeElement;
+        if (!stage.contains(active) && !(placeholder && placeholder.contains(active))) {
+          resetIconLabel();
+        }
+      }, 0);
+    }
+
+    stage.addEventListener('mouseover', handleHoverOrFocus);
+    stage.addEventListener('focusin',  handleHoverOrFocus);
+    stage.addEventListener('mouseleave', handleLeaveArea);
+    stage.addEventListener('focusout', handleFocusOut);
+
+    if (placeholder) {
+      // 🔴 Aquí es donde se arregla tu detalle: también escuchamos el submenú inyectado
+      placeholder.addEventListener('mouseover', handleHoverOrFocus);
+      placeholder.addEventListener('focusin',  handleHoverOrFocus);
+      placeholder.addEventListener('mouseleave', handleLeaveArea);
+      placeholder.addEventListener('focusout', handleFocusOut);
+    }
+
+    // --- Clicks en TODOS los navs ---
+    navs.forEach((menu, i) => {
       menu.addEventListener('click', (e) => {
         const link = e.target.closest('a');
         if (!link) return;
 
-        // Flecha
+        // Botón "➡️": avanzar al siguiente menú (cíclico)
         if (link.classList.contains('toggle-menu')) {
           e.preventDefault();
-          toggleBetweenMenus();
+          toggleToIndex((activeIndex + 1) % navs.length);
           return;
         }
 
-        const fromMenu2 = menu === menu2;
         const submenuId = link.dataset.submenu;
 
         if (submenuId) {
           // Abrir/cerrar submenú y persistir menú origen
           e.preventDefault();
-          setActiveMenu(fromMenu2 ? '2' : '1');
-          if (placeholder.dataset.current === submenuId && placeholder.classList.contains('show')) {
+          activeIndex = i; setStoredIdx(activeIndex);
+          if (placeholder?.dataset.current === submenuId && placeholder.classList.contains('show')) {
             hideSubmenu();
           } else {
             showSubmenu(submenuId);
@@ -165,25 +207,23 @@
           return;
         }
 
-        // Enlace normal: persistir menú origen y dejar navegar
-        setActiveMenu(fromMenu2 ? '2' : '1');
+        // Enlace normal: persistir menú y navegar
+        activeIndex = i; setStoredIdx(activeIndex);
         hideSubmenu();
       });
     });
 
-    /* =============== clicks en el submenú =============== */
+    // --- Clicks dentro del submenú: persistir menú activo y navegar ---
     if (placeholder) {
       placeholder.addEventListener('click', (e) => {
         const a = e.target.closest('a');
         if (!a) return;
-        // Persistir el menú ACTIVO antes de navegar (clave para mantener navmenu2)
-        const activeIs2 = menu2 && menu2.classList.contains('active');
-        setActiveMenu(activeIs2 ? '2' : '1');
-        // No hacemos preventDefault -> navega
+        setStoredIdx(activeIndex); // mantiene el menú actual tras cambiar de página
+        // sin preventDefault -> permite navegar
       });
     }
 
-    /* =============== click fuera / ESC / resize =============== */
+    // --- Cierre por click fuera / ESC / mantener altura ---
     document.addEventListener('click', (e) => {
       if (!e.target.closest('.menu-stage') && !e.target.closest('#submenu')) hideSubmenu();
     });
@@ -191,7 +231,7 @@
 
     ['resize','orientationchange'].forEach(evt => {
       window.addEventListener(evt, () => {
-        if (placeholder && placeholder.classList.contains('show')) {
+        if (placeholder?.classList.contains('show')) {
           animateMaxHeight(placeholder, placeholder.scrollHeight);
           settleHeight(placeholder);
         }
