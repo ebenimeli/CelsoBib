@@ -1,20 +1,28 @@
 <div id="iconlabel">Hola, mundo</div>
 
+<div class="menu-stage">
+
+
+
 <!-- MENÚ PRINCIPAL -->
-<nav class="navmenu" id="main-menu">
+<nav class="navmenu active" id="main-menu">
   <a href="/" data-label="Un blog personal">✏️</a>
   <a href="log/" data-label="Un simple log">💬</a>
   <a href="read/" data-submenu="read"  data-label="Lecturas">📚</a>
-  <!--<a href="pages/goals.html">🏁</a>·-->
   <a href="write/" data-submenu="write" data-label="Cosas que escribo">✍🏼</a>
   <a href="cv/" data-submenu="cv" data-label="Trabajo y formación">💼</a>
   <a href="me/" data-submenu="me" data-label="Un rincón personal">👦🏻</a>
   <a href="now/" data-label="Lo que estoy haciendo ahora">🌱</a>
-  <a href="shop/" data-submenu="shop" data-label="Favoritos y recomendaciones">❤️</a>
-  <a href="games/" data-submenu="games" data-label="Juegos">🎮</a>
-  <!--<a href="contact/">📧</a>-->
+  <a href="#" class="toggle-menu">➡️</a>
 </nav>
 
+<nav class="navmenu enter-right" id="main-menu2">
+  <a href="shop/" data-submenu="shop" data-label="Favoritos y recomendaciones">❤️</a>
+  <a href="games/" data-submenu="games" data-label="Juegos">🎮</a>
+  <a href="#" class="toggle-menu">➡️</a>
+</nav>
+
+</div>
 <div id="submenu"></div>
 
 <!-- Submenús (ocultos por defecto) -->

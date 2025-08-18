@@ -591,6 +591,91 @@ ul.courses {
   width: 100%;
 }
 
+/* === INTERCAMBIO DESLIZANTE ENTRE #main-menu y #main-menu2 === */
+#main-menu,
+#main-menu2 {
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  position: absolute;           /* se apilan uno sobre otro */
+  top: 40px;                    /* ajusta según tu layout */
+  left: 0;
+  right: 0;
+}
+
+#main-menu.active,
+#main-menu2.active {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 2;
+}
+
+#main-menu.exit-left,
+#main-menu2.exit-left {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 1;
+}
+
+#main-menu.enter-right,
+#main-menu2.enter-right {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 1;
+}
+/* Contexto y escena */
+.container{ position: relative; }
+
+.menu-stage{
+  position: relative;
+  overflow: hidden;
+  /* altura suficiente para una fila de iconos; si tienes 2 filas sube a 4.4rem aprox */
+  min-height: 2.8rem;
+  margin-bottom: .5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Los dos menús solo se posicionan absolutamente dentro de .menu-stage */
+.menu-stage .navmenu{
+  position: absolute !important;
+  top: 0 !important;
+  left: 0; right: 0;
+  box-sizing: border-box;
+  display: flex;               /* asegúrate de que sigue siendo flex */
+  gap: .4rem;
+  padding: .5rem 1rem;         /* el padding que ya usabas */
+  transition: transform .6s ease, opacity .6s ease;
+  will-change: transform, opacity;
+
+  /* Estado base: oculto a la derecha (no parpadea) */
+  opacity: 0;
+  transform: translateX(100%);
+  z-index: 1;
+}
+
+/* Estados */
+.menu-stage .navmenu.active{
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 2;
+}
+.menu-stage .navmenu.exit-left{
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.menu-stage .navmenu.enter-right{
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+/* Opcional: alinear con el padding de .container si quieres */
+.menu-stage .navmenu{ padding-left: 15px; padding-right: 15px; }
+
+/* Asegúrate también de NO tener por arriba algo como:
+   .navmenu { position:absolute; top:40px; }
+   Si existe, elimínalo. Este bloque ya lo gestiona dentro de .menu-stage */
+
+/* === FIN INTERCAMBIO DESLIZANTE === */
+
 div.book-data {
   display: block;
 }
@@ -1305,3 +1390,5 @@ input[type="checkbox"] {
 .hp {
   display: none;
 }
+
+
