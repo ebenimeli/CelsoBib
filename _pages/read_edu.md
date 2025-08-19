@@ -12,9 +12,7 @@ Lecturas recientes sobre educación.
 {% for item in site.data.log %}
   {% if item.cat == 'read' and item.text contains '#edu' %}
     {% assign clean_text = item.text | replace: '#edu', '' %}
-      <li>
-        <a class="read" href="{{ item.link }}">{{ clean_text | strip }} &#9654; 📖
-      </li>
+      <li><a class="read" href="{{ item.link }}">{{ clean_text | strip }} &#9654;</a></li>
   {% endif %}
 {% endfor %}
 </ol>
