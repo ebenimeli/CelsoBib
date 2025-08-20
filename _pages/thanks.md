@@ -1,7 +1,8 @@
 ---
 layout: page
-title: ""
-description: ""
+title: "🙏🏼 Gracias"
+description: "Gracias por contactar"
 ---
+¡Gracias por tu mensaje! He recibido tu consulta y te responderé lo antes posible.
 
-<iframe src="https://mypublicinbox.com/bmac.html?profile=ebenimeli" style="width: 100%; height: 132px; border: none"></iframe>
+Enrique

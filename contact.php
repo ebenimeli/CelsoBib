@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 // Configuración
 $TO      = 'contacto@ebenimeli.org';
-$SUBJECT = 'Nuevo mensaje desde el formulario';
+$SUBJECT = '[Formulario de contacto]';
 $FROM    = 'no-reply@ebenimeli.org'; // Usa tu propio dominio (SPF/DKIM)
-$THANK_YOU_URL = 'pages/gracias.html';     // o null si quieres responder JSON
+$THANK_YOU_URL = 'pages/thanks.html';     // o null si quieres responder JSON
 
 // Solo POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
