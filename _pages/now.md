@@ -7,6 +7,8 @@ description: "¿Qué estoy haciendo ahora?"
 
 ## */now*
 
+<!-- {% include goal.html %} -->
+
 Esta es una [*now page*](https://nownownow.com/about), y si tienes una web, deberías publicar una también.
 
 - 🎨 Rediseñando y actualizando los contenidos de esta **web**. 

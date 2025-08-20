@@ -1,0 +1,25 @@
+{% assign TOTAL_GOAL = 40000.0 %}
+{% assign words = 0 %}
+
+{% for item in site.data.projects %}
+  {% assign w = item.write | default: 0 %}
+  {% assign words = words | plus: w %}
+{% endfor %}
+
+{% assign progress_num = words | times: 100.0 | divided_by: TOTAL_GOAL | round: 1 %}
+{% assign progress_str = progress_num | append: '%' %}
+
+{%- comment -%} Último registro (el primero del YML) {%- endcomment -%}
+{% if site.data.projects and site.data.projects.size > 0 %}
+  {% assign latest = site.data.projects | first %}
+  {% assign last_words = latest.write | default: 0 %}
+  {% assign last_date = latest.date | default: latest.day | default: '' %}
+{% endif %}
+
+<span class="goalperc"> 
+  {{ words }}/{{TOTAL_GOAL | round}} palabras · {{ progress_str }}
+</span>
+<progress class="goal" value="{{ progress_num }}" max="100"></progress>
+<span class="goalperc">
+    Actualizado:&nbsp;{%- if last_date != '' -%} {{ last_date }} (+{{ last_words }} palabras){%- endif -%}
+</span>

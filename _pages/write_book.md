@@ -1,8 +1,7 @@
 ---
 layout: page
-title: ""
+title: "📓 En proceso"
 description: "En proceso"
 ---
 
-## ✍🏼 Próximamente
-
+<!-- {% include goal.html %} -->

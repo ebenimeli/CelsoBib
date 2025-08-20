@@ -1,11 +1,11 @@
-- date: 24/07/2025
-  write: 150
-  day: Thu
+- date: 20/08/2025
+  write: 326
+  day: Wed
   riseearly: ''
-  sleep: 8
-  read: 60
-  lang: 30
-  walk: 3.2
+  sleep: 0
+  read: 0
+  lang: 0
+  walk: 0
   chess: 0
   getridof: 0
   getridof_t: '(0)'
@@ -15,14 +15,14 @@
   journal: 'no'
   family: 'yes'
 
-- date: 23/07/2025
-  write: 150
-  day: Thu
+- date: 19/08/2025
+  write: 7000
+  day: Wed
   riseearly: ''
-  sleep: 8
-  read: 60
-  lang: 30
-  walk: 2.3
+  sleep: 0
+  read: 0
+  lang: 0
+  walk: 0
   chess: 0
   getridof: 0
   getridof_t: '(0)'
@@ -31,4 +31,3 @@
   gtd: 'yes'
   journal: 'no'
   family: 'yes'
-
