@@ -10,34 +10,30 @@ description: "Formas de contacto"
 <form action="/contact.php" method="post" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" novalidate>
   <fieldset>
     <legend>Contacto</legend>
-
     <!-- Nombre -->
     <div class="form-field">
       <label for="name">Nombre</label>
       <input id="name" name="name" type="text" required aria-required="true"
              autocomplete="name" autocapitalize="words" />
     </div>
-
     <!-- Correo electrónico -->
     <div class="form-field">
       <label for="email">Correo electrónico</label>
       <input id="email" name="email" type="email" required aria-required="true"
              autocomplete="email" inputmode="email" />
     </div>
-
     <!-- Asunto -->
     <div class="form-field">
       <label for="subject">Asunto</label>
       <input id="subject" name="subject" type="text" required aria-required="true"
              maxlength="120" />
     </div>
-
     <!-- Mensaje -->
-    <div class="form-field">
-      <label for="message">Mensaje</label>
-      <textarea id="message" name="message" rows="6" required aria-required="true"
-                minlength="10" maxlength="5000"></textarea>
-    </div>
+  <div class="form-field">
+  <label for="message">Mensaje</label>
+  <textarea id="message" name="message" rows="6" required minlength="10" maxlength="5000"></textarea>
+  <small id="counter">0 / 5000</small>
+</div>
 
     <!-- Teléfono (opcional) -->
     <div class="form-field">
@@ -47,12 +43,11 @@ description: "Formas de contacto"
     </div>
 
     <!-- Consentimiento RGPD -->
+
 <div class="form-field consent-field">
   <input id="consent" name="consent" type="checkbox" required aria-required="true" />
   <label for="consent">He leído y acepto la <a href="/privacy/">política de privacidad</a>.</label>
 </div>
-
-
 
     <!-- Honeypot anti-spam (deja oculto con CSS) -->
     <div class="form-field hp">
@@ -64,5 +59,9 @@ description: "Formas de contacto"
     <p class="form-status" aria-live="polite"></p>
 
     <button type="submit">Enviar</button>
+
   </fieldset>
 </form>
+
+<script src="assets/js/contact.js">
+
