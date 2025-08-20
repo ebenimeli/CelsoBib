@@ -1,11 +1,11 @@
 ---
 layout: page
-title: ""
+title: "✉️ Contacto"
 permalink: /contact/
-description: "Contacto"
+description: "Formas de contacto"
 ---
 
-## 📧 Contacto
+<p>Si quieres ponerte en contacto conmigo, rellena el siguiente formulario y responderé lo antes posible</p>
 
 <form action="/contact.php" method="post" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" novalidate>
   <fieldset>
@@ -47,10 +47,12 @@ description: "Contacto"
     </div>
 
     <!-- Consentimiento RGPD -->
-    <div class="form-field">
-      <input id="consent" name="consent" type="checkbox" required aria-required="true" />
-      <label for="consent">He leído y acepto la <a href="/privacidad/">política de privacidad</a>.</label>
-    </div>
+<div class="form-field consent-field">
+  <input id="consent" name="consent" type="checkbox" required aria-required="true" />
+  <label for="consent">He leído y acepto la <a href="/privacy/">política de privacidad</a>.</label>
+</div>
+
+
 
     <!-- Honeypot anti-spam (deja oculto con CSS) -->
     <div class="form-field hp">
