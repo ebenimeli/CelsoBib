@@ -1,3 +1,23 @@
+- timestamp: 2025-08-20 21:29
+  text: "Me gustó el vídeo «Quieren comprar Google Chrome...» #status"
+  link: "https://www.youtube.com/watch?v=0hylA2hH5tI"
+  cat: 'like'
+- timestamp: 2025-08-20 21:29
+  text: "Me gustó esta publicación de criminopatia en X: « Mañana. Octava temporada de Criminopatía. #status"
+  link: "https://t.co/neG9be44wX"
+  cat: 'like'
+- timestamp: 2025-08-20 21:27
+  text: "La polémica que genera la nueva serie de Amanda Knox, la estadounidense que fue condenada y después absuelta del asesinato de su compañera de cuarto"
+  link: "https://www.bbc.com/mundo/articles/cwy18ylyd2jo"
+  cat: 'news'
+- timestamp: 2025-08-20 21:24
+  text: "Me gustó esta publicación de Arteymas_ en X: « La batalla de Arsuf de Gustave Dore #status"
+  link: "https://t.co/dQdyXVup8P"
+  cat: 'like'
+- timestamp: 2025-08-20 21:23
+  text: "Tarde de cumpleaños."
+  link: "https://mastodon.social/tags/say"
+  cat: 'say'
 - timestamp: 2025-08-20 13:19
   text: "Me gustó el vídeo «ROADMAP + GUÍA para PROGRAMADORES: Front-End, Back-End Y Full-Stack 2025» #status"
   link: "https://www.youtube.com/watch?v=JOPNVlVFT-o"
