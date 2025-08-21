@@ -1394,9 +1394,8 @@ input[type="checkbox"] {
 }
 
 /* Honeypot oculto */
-.hp {
-  display: none;
-}
+
+.hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}
 
 progress {
   width: 100%;

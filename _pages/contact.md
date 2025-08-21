@@ -50,10 +50,11 @@ description: "Formas de contacto"
 </div>
 
     <!-- Honeypot anti-spam (deja oculto con CSS) -->
-    <div class="form-field hp">
-      <label for="website">No rellenes este campo</label>
-      <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
-    </div>
+
+  <div class="form-field hp" aria-hidden="true">
+  <label for="website">No rellenes este campo</label>
+  <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+</div>
 
     <!-- Mensajes de estado (opcional, para usar con JS) -->
     <p class="form-status" aria-live="polite"></p>
