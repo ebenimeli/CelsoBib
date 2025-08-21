@@ -1,3 +1,19 @@
+- timestamp: 2025-08-21 22:00
+  text: "Lo que el día dio de sí: #status"
+  link: "https://ift.tt/YGStwVJ"
+  cat: 'say'
+- timestamp: 2025-08-21 20:29
+  text: "Me gustó el vídeo «14 Hours in the Day of Yacht Chef» #status"
+  link: "https://www.youtube.com/watch?v=mOx_5-MRlhE"
+  cat: 'like'
+- timestamp: 2025-08-21 13:24
+  text: "Me gustó el vídeo «The Commit Show S2 #1 ft @mouredev | ¿Vendehúmos? ¿Vale la pena estudiar programación?» #status"
+  link: "https://www.youtube.com/watch?v=aTfFxMRz1No"
+  cat: 'like'
+- timestamp: 2025-08-21 10:04
+  text: "Me gustó esta publicación de RAEinforma en X: « La RAE pone a disposición de los interesados la consulta en línea de las imágenes de las 260 439 papeletas que conforman el Fichero de hilo («a-zuzón»), un gran depósito léxico ahora al alcance de todos: #status"
+  link: "https://t.co/peQSiYKc6H"
+  cat: 'like'
 - timestamp: 2025-08-21 09:29
   text: "Me gustó el vídeo «The Commit Show #1 ft @midudev | ¿Qué significa ser senior? ¿Despidos masivos en Tech? ¿GPT-4?» #status"
   link: "https://mastodon.social/@midudev"
