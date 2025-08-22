@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>txtlab</title>
+    <meta
+      name="description"
+      content="Caja de herramientas para hacer la vida más fácil"
+    />
+    <meta name="author" content="Enrique Benimeli" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+    
+    <!--<link rel="stylesheet" href="css/style.css" />-->
+
+    <link rel="stylesheet" href="css/01-base.css">
+    <link rel="stylesheet" href="css/02-layout.css">
+    <link rel="stylesheet" href="css/03-components.css">
+    <link rel="stylesheet" href="css/04-dialogs.css">
+    <link rel="stylesheet" href="css/05-utilities.css">
+    <link rel="stylesheet" href="css/99-theme.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!--<link rel="preload" as="audio" href="assets/media/click.mp3">-->
+
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="ebenimeli" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF5F5F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+  </head>
+  <body>
+    <section class="container">
+      <div id="topleft" class="mainbox">
+      <a href="">
+        <i class="fa-solid fa-gear"></i>
+        <span class="productname"><strong>txt</strong>lab</span>
+      </a>
+      </div>
+
+      <header>
+        <!-- MENÚ TRANSFORMACIÓN TEXTO -->
+        <button class="tool" data-target="#tblists" data-info="Transformación de listas">
+          <i class="fa-solid fa-list"></i>
+        </button>
+        
+        <!-- MENÚ ACERCA DE -->
+        <button class="tool" data-target="#about" data-info="Acerca de...">
+          <i class="fa-solid fa-circle-question"></i>
+        </button>
+
+        <!-- MENÚ 3 -->
+        <!--
+        <button class="tool" data-target="#menu3" data-info="Acerca de...">
+          <i class="fa-solid fa-circle-question"></i>
+        </button>
+        -->
+        
+      </header>
+      
+      <!-- Zona de menú lateral -->
+      <aside>
+        <div id="sidebar" class="box">
+          
+        </div>
+      </aside>
+
+      <!-- MENÚ 1 · tblists -->
+      <template id="tblists" data-default>
+
+      <div class="input-wrapper">
+            <i class="fa-solid fa-keyboard"></i>
+            <input type="text" id="inputtext" placeholder="N" />
+          </div>
+
+          <section id="info" role="status" aria-live="polite">Información</section>
+
+          <button class="action" data-target="#uplow" data-info="Herramientas para cambiar mayúsculas y minúsculas">Aa</button>
+          <div id="uplow" class="toolset">
+            <button class="action" data-action="doAZ"      data-info="Ordenar A→Z">A-Z</button>
+            <button class="action" data-action="doZA"      data-info="Ordenar Z→A">Z-A</button>
+            <button class="action" data-action="namesUp"   data-info="Poner Mayúscula Inicial">Aa</button>
+            <button class="action" data-action="upperCase" data-info="Convertir a MAYÚSCULAS">AA</button>
+            <button class="action" data-action="lowerCase" data-info="Convertir a minúsculas">aa</button>
+          </div>
+
+          <button class="action" data-target="#groups">Grupos</button>
+          <div id="groups" class="toolset">
+            <button class="action" data-action="group2">x2</button>
+            <button class="action" data-action="group3">x3</button>
+            <button class="action" data-action="group4">x4</button>
+            <button class="action" data-action="groupX">Grupos de N</button>
+            <button class="action" data-action="splitList">N grupos</button>
+            <button class="action" data-action="sortABC">Ordenar A-B-C</button>
+            <button class="action" data-action="abc">Grupos ABC</button>
+            <button class="action" data-action="abbc">Grupos ABBC</button>
+            <button class="action" data-action="joinLists">Fusiona</button>
+          </div>
+
+          <button class="action" data-target="#random">Al azar</button>
+          <div id="random" class="toolset">
+            <button class="action" data-action="randomElements">Selecciona N</button>
+            <button class="action" data-action="shuffleList">Baraja</button>
+          </div>
+          
+          <button class="action" data-target="#format">Formato</button>
+          <div id="format" class="toolset">
+            <button class="action" data-action="cleanLines">Limpia</button>
+            <button class="action" data-action="numberElements">Numerar</button>
+            <button class="action" data-action="removeNumbering">Eliminar numeración</button>
+          </div>
+          
+          <!-- Elimina marcas (etiquetas, grupos) -->
+          <!-- Elimina etiquetas ABC -->
+          <!-- Elimina grupos -->
+          <!-- checkDuplicates() -->
+          <!-- attendanceList() crea un checklist-->
+          <!-- exportCSV() -->
+          <!-- ABC 3 alumnos -->
+      </div>
+      </template>
+
+      <template id="about">
+        <section class="aboutthis">
+          <h1><i class="fa-solid fa-circle-question"></i>&nbsp;¿Qué es esto?</h1>
+          <p>Esto es una caja de herramientas. Puedes procesar listas de elementos para transformarlas de distinta forma.</p>
+          <h1><i class="fa-solid fa-lock"></i>&nbsp;Protección de datos</h1>
+          <p>Esta aplicación web no almacena ni envía ninguna información a Internet. Todo ocurre en tu propio ordenador.</p>
+          <h1><i class="fa-solid fa-address-card"></i>&nbsp;Autor</h1>
+          <p>Este es un proyecto de <a href="https://www.ebenimeli.org" target="_blank">Enrique Benimeli</a>. Si tienes alguna sugerencia, puedes <a href="https://www.ebenimeli.org/contact/" target="_blank>">contactar</a>.</p>
+          
+        </section>
+      </template>
+
+
+      <!-- ZONA PRINCIPAL -->
+      <main>
+        <div id="main" class="box">
+          <div id="imenu" class="box control">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchtext" placeholder="Busca..." />
+            <button data-action="copyi"><i class="fa-regular fa-copy"></i></button>
+            <button data-action="pastei"><i class="fa-regular fa-paste"></i></button>
+            <button data-action="cleanleft"><i class="fa-solid fa-xmark"></i></button>
+            <button data-action="lefttoright"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+          <div id="omenu" class="box control">
+            <button data-action="righttoleft"><i class="fa-solid fa-arrow-left"></i></button>
+            <button data-action="cleanright"><i class="fa-solid fa-xmark"></i></button>
+            <button data-action="copyo"><i class="fa-regular fa-copy"></i></button>
+            <button data-action="pasteo"><i class="fa-regular fa-paste"></i></button>
+          </div>
+          <textarea id="itext" class="box">
+Brin, Sergey / A
+Zuckerberg, Mark / B
+Hopper, Grace / B
+Gates, Bill / A
+Babbage, Charles / A
+Knuth, Donald / A
+Ritchie, Dennis / A
+Simon, Herbert / A
+Kay, Alan / B
+Noyce, Robert / B
+Shannon, Claude / C
+Brooks, Frederick / B
+Dijkstra, Edsger / C
+Torvalds, Linus / B
+Cerf, Vinton / B
+Kahn, Robert / C
+Turing, Alan / B
+Wozniak, Steve / C
+Page, Larry / C
+Von Neumann, John / A
+Allen, Paul / B
+Codd, Edgar / A
+Stallman, Richard / C
+Berners-Lee, Tim / B
+Moore, Gordon / B
+Lovelace, Ada / B
+Thompson, Ken / B
+McCarthy, John / C
+Jobs, Steve / B
+Engelbart, Douglas / B
+              </textarea>
+          <textarea id="otext" class="box"></textarea>
+          <div id="statusi" class="metainfo">Status I</div>
+          <div id="statuso" class="metainfo">Status O</div>
+        </div>
+      </main>
+
+      <footer>
+        <div id="footer" class="box"><a href="https://www.ebenimeli.org" target="_blank">Enrique Benimeli</a> &copy; 2025</div>
+      </footer>
+    </section>
+
+  <dialog id="welcome-dialog" role="dialog" aria-labelledby="welcome-title" aria-describedby="welcome-desc">
+  <form method="dialog" class="dlg">
+    <h3 id="welcome-title">Bienvenido a <strong>txt</strong>lab</h3>
+    <p id="welcome-desc">
+      Usa el panel izquierdo para transformar tus listas. Pasa el ratón por los botones para ver la ayuda.<br/><br/>
+      Esta aplicación no envía ni almacena ninguna información. Todo lo que ves, sucede en tu ordenador. Puedes utilizarla de forma segura.
+    </p>
+
+    <menu class="dlg-actions">
+      <button value="ok" class="action" autofocus>Empezar</button>
+    </menu>
+  </form>
+  </dialog>
+
+  <script type="module" src="js/main.js"></script>
+  </body>
+</html>

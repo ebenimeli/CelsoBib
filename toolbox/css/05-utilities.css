@@ -1,0 +1,40 @@
+/* =========================
+   Helpers / Utilidades
+========================= */
+.box{
+  border: var(--bd);
+  border-radius: var(--radius);
+  margin: var(--sp-1);
+  padding: var(--sp-3);
+}
+
+.mainbox{
+  margin: 7px; /* valor distinto al resto, se mantiene */
+  padding: var(--sp-3);
+}
+
+.metainfo{
+  padding: var(--sp-1);
+  font-size: .8em;
+  font-weight: bold;
+  text-align: left;
+}
+
+.toolbox{ display: none; }
+
+section.aboutthis{
+  text-align: left;
+  font-size: .9em;
+}
+section.aboutthis h1{
+  /*border-left: 6px solid var(--c-text);*/
+  padding-left: var(--sp-1);
+}
+
+
+/* =========================
+   Accesibilidad / Motion
+========================= */
+@media (prefers-reduced-motion: reduce){
+  *{ transition: none !important; }
+}

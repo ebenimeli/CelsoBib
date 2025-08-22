@@ -1,0 +1,52 @@
+/* =========================
+   Base / Design Tokens
+========================= */
+:root{
+  /* Tipografía */
+  --font-mono: "Courier New", Courier, monospace;
+  --fs-base: 1em;
+  --fs-sm: .9em;
+  --fs-lg: 1.2rem;
+
+  /* Colores */
+  --c-text: #000;
+  --c-bg: #fff;
+  --c-accent: steelblue;
+  --c-muted: #dcdcdc;
+  --c-warn: #fff9c4; /* lightyellow aprox */
+
+  /* Bordes / radios / sombras */
+  --bd: 2px dashed var(--c-text);
+  --bd-sm: 1px dashed var(--c-text);
+  --radius: 5px;
+
+  /* Espaciado y gaps */
+  --sp-1: 5px;
+  --sp-2: 8px;
+  --sp-3: 10px;
+
+  /* Alturas mínimas */
+  --h-min-main: 70vh;
+  --h-min-pane: 75vh;
+  --h-min-footer: 10vh;
+
+  /* Transiciones */
+  --t-fast: .2s ease;
+  --t-base: .4s ease;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body{
+  height: 100%;
+}
+
+body{
+  font-family: var(--font-mono);
+  font-size: var(--fs-base);
+  color: var(--c-text);
+  background: var(--c-bg);
+  margin: 0;
+}
