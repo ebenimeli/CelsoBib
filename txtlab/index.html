@@ -3,15 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>txtlab</title>
+    <title>txtlab: ordena tu texto</title>
     <meta
       name="description"
-      content="Caja de herramientas para hacer la vida más fácil"
+      content="txtlab es una caja de herramientas para procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos."
     />
     <meta name="author" content="Enrique Benimeli" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
     
     <!--<link rel="stylesheet" href="css/style.css" />-->
 
@@ -26,7 +25,7 @@
 
     <!--<link rel="preload" as="audio" href="assets/media/click.mp3">-->
 
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="ebenimeli" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF5F5F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+    <!--<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="ebenimeli" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF5F5F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>-->
   </head>
   <body>
     <section class="container">
@@ -121,10 +120,10 @@
 
       <template id="about">
         <section class="aboutthis">
-          <h1><i class="fa-solid fa-circle-question"></i>&nbsp;¿Qué es esto?</h1>
-          <p>Esto es una caja de herramientas. Puedes procesar listas de elementos para transformarlas de distinta forma.</p>
+          <h1><i class="fa-solid fa-circle-question"></i>&nbsp;¿Qué es txtlab?</h1>
+          <p>Esto es una caja de herramientas para procesar y transformar texto. Por ejemplo, puedes procesar listas desde el menú <i class="fa-solid fa-list"></i>.</p>
           <h1><i class="fa-solid fa-lock"></i>&nbsp;Protección de datos</h1>
-          <p>Esta aplicación web no almacena ni envía ninguna información a Internet. Todo ocurre en tu propio ordenador.</p>
+          <p>Esta aplicación web <u>no almacena ni envía</u> datos a Internet. Todo se procesa en tu ordenador y nunca sale de él.</p>
           <h1><i class="fa-solid fa-address-card"></i>&nbsp;Autor</h1>
           <p>Este es un proyecto de <a href="https://www.ebenimeli.org" target="_blank">Enrique Benimeli</a>. Si tienes alguna sugerencia, puedes <a href="https://www.ebenimeli.org/contact/" target="_blank>">contactar</a>.</p>
           
@@ -188,7 +187,21 @@ Engelbart, Douglas / B
       </main>
 
       <footer>
-        <div id="footer" class="box"><a href="https://www.ebenimeli.org" target="_blank">Enrique Benimeli</a> &copy; 2025</div>
+        <div id="footer" class="box">
+          <a href="https://www.ebenimeli.org" target="_blank">Enrique Benimeli</a> &copy; 2025
+          <a href="https://x.com/enriquebenimeli" target="_blank">
+            <img class="icon" src="assets/img/icons/x.svg">
+          </a>
+          <a href="https://www.instagram.com/ebenimeli/" target="_blank">
+            <img class="icon" src="assets/img/icons/instagram.svg">
+          </a>
+          <a href="https://linkedin.com/in/ebenimeli" target="_blank">
+            <img class="icon" src="assets/img/icons/linkedin.svg">
+          </a>
+          <a href="https://substack.com/@ebenimeli" target="_blank">
+            <img class="icon" src="assets/img/icons/substack.svg">
+          </a>
+        </div>
       </footer>
     </section>
 
@@ -196,9 +209,16 @@ Engelbart, Douglas / B
   <form method="dialog" class="dlg">
     <h3 id="welcome-title">Bienvenido a <strong>txt</strong>lab</h3>
     <p id="welcome-desc">
-      Usa el panel izquierdo para transformar tus listas. Pasa el ratón por los botones para ver la ayuda.<br/><br/>
-      Esta aplicación no envía ni almacena ninguna información. Todo lo que ves, sucede en tu ordenador. Puedes utilizarla de forma segura.
-    </p>
+      <p><i class="fa-solid fa-gear"></i> Esta aplicación web es una caja de herramientas para procesar y transformar texto.</p>
+      <p><i class="fa-solid fa-list"></i> De momento, puedes empezar a ordenar, agrupar y formatear listas de elementos.</p>
+      <!--<p></span><i class="fa-solid fa-person-chalkboard"></i> Si eres profesor, ya sabes lo útil que puede ser.</p>-->
+      <p><i class="fa-solid fa-share"></i> Si crees que la herramienta es interesante para algún amigo o compañero, comparte.</p>
+      <p>
+		    <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.ebenimeli.org/txtlab" target="_blank"><img src="assets/img/icons/facebook.svg" class="icon"></a>
+		    <a href="https://x.com/intent/tweet?source=tweetbutton&amp;original_referer=http://www.ebenimeli.org/txtlab&amp;text=txtlab - http://www.ebenimeli.org/txtlab/" target="_blank"><img src="assets/img/icons/x.svg" class="icon"></a>
+		    <a href="https://api.whatsapp.com/send?text=http://www.ebenimeli.org/txtlab" target="_blank"><img src="assets/img/icons/whatsapp.svg" class="icon"></a>
+      </p>
+    </p>  
 
     <menu class="dlg-actions">
       <button value="ok" class="action" autofocus>Empezar</button>

@@ -38,3 +38,10 @@ section.aboutthis h1{
 @media (prefers-reduced-motion: reduce){
   *{ transition: none !important; }
 }
+
+img.icon {
+  height: 20px;
+  align-items: center;
+}
+
+

@@ -26,7 +26,7 @@
   }
 
   .container #topleft {
-    border-bottom: 3px dashed black;
+    border-bottom: 3px solid black;
   }
 
   .container header {
@@ -148,8 +148,10 @@
   display: grid;
 }
 
-.container footer{
+.container footer {
   grid-area: footer;
+  display: flex;
+  align-items: center;
   min-height: var(--h-min-footer);
   font-size: .9em;
   text-align: center;
@@ -162,7 +164,7 @@
   align-items: center;
 }
 
-#main{
+#main {
   background: var(--c-muted);
   min-height: var(--h-min-main);
   display: grid;
@@ -171,12 +173,29 @@
   gap: var(--sp-1);
 }
 
-#footer{
+.container footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;      /* ← centra verticalmente */
+  justify-content: center;  /* ← centra horizontalmente todo el contenido */
+  gap: 10px;                /* espacio entre enlaces e iconos */
+  min-height: var(--h-min-footer);
+  font-size: .9em;
   text-align: center;
-  font-weight: bold;
-}
-#footer a{
-  text-decoration: none;
-  color: var(--c-accent);
 }
 
+#footer {
+  width: 100%;
+  justify-content: center;
+  display: flex;            /* ← convierte el div en flex también */
+  align-items: center;      /* ← centra verticalmente su contenido */
+  gap: 10px;                /* separa texto e iconos */
+  font-weight: bold;
+}
+
+#footer a {
+  text-decoration: none;
+  color: var(--c-accent);
+  display: flex;            /* ← importante para que las imágenes queden centradas */
+  align-items: center;
+}

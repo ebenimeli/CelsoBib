@@ -16,8 +16,8 @@
   --c-warn: #fff9c4; /* lightyellow aprox */
 
   /* Bordes / radios / sombras */
-  --bd: 2px dashed var(--c-text);
-  --bd-sm: 1px dashed var(--c-text);
+  --bd: 1px solid var(--c-text);
+  --bd-sm: 1px solid var(--c-text);
   --radius: 5px;
 
   /* Espaciado y gaps */
