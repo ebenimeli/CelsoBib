@@ -1,0 +1,355 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+}
+
+.box {
+  border: 2px dashed black;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.mainbox {
+  margin: 7px;
+  padding: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  /*grid-template-rows: 100px 1fr 75px;*/
+  /*min-height: 50vh;*/
+
+  grid-template-areas:
+    "topleft header sidebar"
+    "main main main"
+    "footer footer footer";
+}
+
+@media (width > 500px) {
+  .container {
+    grid-template-areas:
+      "topleft header header"
+      "sidebar main main"
+      "footer footer footer";
+  }
+}
+
+.container #topleft {
+  grid-area: topleft;
+  display: flex; /* ← necesario para que align-items funcione */
+  align-items: center; /* centra verticalmente el contenido */
+  justify-content: center;
+  background: white;
+  color: black;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  /*border: 2px dashed black;*/
+  align-items: center;
+}
+
+.container #topleft a i {
+  font-size: 2em;
+  color: black;
+  display: block;
+}
+
+.container #topleft a i:hover {
+  font-size: 2em;
+  color: steelblue;
+  scale: 1.2;
+  display: block;
+}
+
+.container header {
+  grid-area: header;
+  /*background: lightyellow;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  /*border: 2px dashed black;*/
+  /*box-sizing: border-box;*/
+}
+
+button.tool {
+  aspect-ratio: 1 / 1; /* mantiene cuadrado */
+  border: 2px dashed black;
+  border-radius: 5px;
+  margin: 0;
+  min-height: 75px;
+  font-size: 2em;
+}
+
+button.tool:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+.container aside {
+  grid-area: sidebar;
+  min-height: 75vh;
+}
+
+.container main {
+  grid-area: main;
+  min-height: 75vh;
+  display: grid;
+  /*   grid-template-columns: 1fr 1fr;*/
+  /*min-height: 50vh;*/
+}
+
+.container footer {
+  grid-area: footer;
+  min-height: 10vh;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+#sidebar {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column; /* botones uno debajo del otro */
+  align-items: center; /* centra horizontalmente */
+}
+
+#main {
+  background: #dcdcdc;
+  min-height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 1fr;
+  column-gap: 5px;
+  row-gap: 5px;
+}
+
+#footer {
+  text-align: center;
+  font-weight: bold;
+}
+
+#footer a {
+  text-decoration: none;
+  color: steelblue;
+}
+
+button.action {
+  font-weight: bold;
+  background: #dcdcdc;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  border: 2px dashed black;
+  border-radius: 5px;
+  width: 100%;
+  transition: background 0.4s ease, color 0.4s ease;
+  margin: 5px;
+}
+
+button.action:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+button.action:active {
+  background: #dcdcdc;
+  color: black;
+  font-weight: bold;
+}
+
+.toolset[hidden] {
+  display: none;
+}
+
+.toolset {
+  width: 100%;
+  display: flex; /* cuando NO está oculto */
+  flex-direction: column;
+  margin-top: 6px;
+}
+
+.toolset button.action {
+  background: white;
+  margin: 0px;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.toolset button.action:hover {
+  background: lightyellow;
+  cursor: pointer;
+}
+
+#info {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 80px;
+  font-size: 0.8em;
+  align-self: stretch;
+  /*display: block;*/
+  /*text-align: left !important;*/
+  background: lightyellow;
+  padding: 5px;
+  border: 1px dashed black;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.control button {
+  font-family: "Courier New", Courier, monospace;
+  min-width: 50px;
+  height: 25px;
+}
+
+.control button:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+textarea {
+  background: white;
+  font-size: 1em;
+  font-family: "Courier New", Courier, monospace;
+}
+
+textarea:hover {
+  background: lightyellow;
+}
+
+.control {
+  background: white;
+  display: flex;
+  flex-direction: row; /* botones uno debajo del otro */
+  align-items: center; /* centra horizontalmente */
+  gap: 5px;
+}
+
+input {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  width: 85%;
+  font-weight: bold;
+  background: #dcdcdc;
+}
+
+.input-wrapper {
+  display: flex;
+  align-self: stretch;
+  border: 1px dashed black;
+  border-radius: 5px;
+  padding: 5px 8px;
+}
+
+.input-wrapper i {
+  margin-right: 6px; /* espacio entre icono y texto */
+  color: black; /* mismo color que texto */
+  font-size: 1em;
+}
+
+.input-wrapper input {
+  border: none; /* quitamos borde interno */
+  outline: none; /* sin borde al hacer foco */
+  background: transparent;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  flex: 1; /* ocupa todo el espacio restante */
+}
+
+input#searchtext {
+  width: 50%;
+  border: 1px solid black!important;
+  border-radius: 5px;
+  background: white;
+  border-radius: 5px;
+}
+
+#imenu {
+  justify-content: flex-end; /* lleva todo el contenido a la derecha */
+}
+
+#imenu i {
+  justify-content: flex-start;
+}
+
+#imenu input {
+  border: none;
+  padding: 4px;
+}
+
+#omenu {
+  justify-content: flex-start;
+}
+
+.metainfo {
+  padding: 5px;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Modal */
+#welcome-dialog {
+  width: min(520px, 90vw);
+  border: 2px dashed black;
+  padding: 0; /* lo gestiona .dlg */
+  /*background: #dcdcdc;*/
+  background: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .9em;
+}
+
+#welcome-dialog .dlg {
+  margin: 0;
+  padding: 14px;
+}
+
+/* reemplaza tu regla actual de .dlg-actions */
+#welcome-dialog .dlg-actions {
+  display: flex;
+  justify-content: center; /* ← centra horizontalmente */
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#welcome-dialog h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+}
+
+#welcome-dialog p {
+  margin: 0 0 12px 0;
+  line-height: 1.35;
+}
+
+#welcome-dialog .dlg-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 8px;
+  margin: 0;
+}
+
+#welcome-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.toolbox {
+  display: none;
+}
+
+section.aboutthis {
+  text-align: left;
+  font-size: 0.9em;
+}
+
+section.aboutthis h1 {
+  border-left: 6px solid black;
+  padding-left: 5px;
+}
