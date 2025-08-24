@@ -3,26 +3,28 @@
 ========================= */
 
 .container {
+  margin: 10px;
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
   grid-template-areas:
     "topleft header header"
     "sidebar main main"
     "footer footer footer";
+  gap: 10px;
 }
 
-
 @media (max-width: 500px) {
-.container {
-  margin: 10px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "topleft"
-    "header"
-    "sidebar"
-    "main"
-    "footer";
+  .container {
+    width: 100%;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "topleft"
+      "header"
+      "sidebar"
+      "main"
+      "footer";
   }
 
   .container #topleft {
@@ -33,27 +35,44 @@
     justify-content: center;
   }
 
-  .container #sidebar {
-    max-width: fit-content;
+  .container aside {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
+    min-height: fit-content;
 
+  }
+
+  .container #sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: fit-content;
   }
 
   .container #main {
-    max-width: 500px;
+
+    width: 100%;
   }
 
-  .container #imenu, #omenu  {
+  /*
+  .container #imenu,
+  #omenu {
     max-width: 200px;
   }
-  .control button {
-  width: 3px;
-  height: 3px;
+  */
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  .control button {
+    width: 3px;
+    height: 3px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
 
   #imenu > i {
@@ -73,8 +92,6 @@
   }
 }
 
-
-
 /* Zonas */
 .container #topleft {
   grid-area: topleft;
@@ -92,7 +109,7 @@
 }
 
 .container #topleft a i {
-  font-size: 2.0em;
+  font-size: 2em;
   display: block;
   color: var(--c-text);
   transition: transform var(--t-base), color var(--t-base);
@@ -105,8 +122,12 @@
 
 /* animación de giro */
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #topleft .productname {
@@ -122,14 +143,12 @@
   color: steelblue;
 }
 
-
-
-.container #topleft a i:hover{
+.container #topleft a i:hover {
   color: var(--c-accent);
   transform: scale(1.2);
 }
 
-.container header{
+.container header {
   grid-area: header;
   display: flex;
   align-items: center;
@@ -142,7 +161,7 @@
   min-height: var(--h-min-pane);
 }
 
-.container main{
+.container main {
   grid-area: main;
   min-height: var(--h-min-pane);
   display: grid;
@@ -153,11 +172,12 @@
   display: flex;
   align-items: center;
   min-height: var(--h-min-footer);
-  font-size: .9em;
+  font-size: 0.9em;
   text-align: center;
 }
 
-#sidebar{
+#sidebar {
+  width: 100%;
   min-height: var(--h-min-main);
   display: flex;
   flex-direction: column;
@@ -176,26 +196,26 @@
 .container footer {
   grid-area: footer;
   display: flex;
-  align-items: center;      /* ← centra verticalmente */
-  justify-content: center;  /* ← centra horizontalmente todo el contenido */
-  gap: 10px;                /* espacio entre enlaces e iconos */
+  align-items: center; /* ← centra verticalmente */
+  justify-content: center; /* ← centra horizontalmente todo el contenido */
+  gap: 10px; /* espacio entre enlaces e iconos */
   min-height: var(--h-min-footer);
-  font-size: .9em;
+  font-size: 0.9em;
   text-align: center;
 }
 
 #footer {
   width: 100%;
   justify-content: center;
-  display: flex;            /* ← convierte el div en flex también */
-  align-items: center;      /* ← centra verticalmente su contenido */
-  gap: 10px;                /* separa texto e iconos */
+  display: flex; /* ← convierte el div en flex también */
+  align-items: center; /* ← centra verticalmente su contenido */
+  gap: 10px; /* separa texto e iconos */
   font-weight: bold;
 }
 
 #footer a {
   text-decoration: none;
   color: var(--c-accent);
-  display: flex;            /* ← importante para que las imágenes queden centradas */
+  display: flex; /* ← importante para que las imágenes queden centradas */
   align-items: center;
 }

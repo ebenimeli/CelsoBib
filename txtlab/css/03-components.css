@@ -24,6 +24,7 @@ button.action{
   width: 100%;
   margin: var(--sp-1);
   transition: background var(--t-base), color var(--t-base);
+  height: 30px;
 }
 
 /* Estados comunes para ambos tipos de botón */
