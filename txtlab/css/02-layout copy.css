@@ -1,14 +1,13 @@
 /* =========================
-   Reset útil
-========================= */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* =========================
    Layout principal (Grid)
 ========================= */
+
+/* Globally */
+*, *::before, *::after { box-sizing: border-box; }
+
+
 .container {
+
   margin: 10px;
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
@@ -19,25 +18,19 @@
   gap: 10px;
 }
 
-/* =========================
-   Móvil
-========================= */
 @media (max-width: 500px) {
-  :root {
-    --sp-mobile: 8px; /* separación lateral en móvil */
-  }
 
-  html, body {
-    overflow-x: hidden; /* evita scroll lateral */
-    padding: 0;
-    margin: 0;
-  }
+    :root { --sp-mobile: 8px; } /* o lo que prefieras */
+
+  body { padding-inline: var(--sp-mobile); }
 
   .container {
-    margin: 0;                       /* sin margen externo */
-    padding-inline: var(--sp-mobile); /* gutter lateral único */
-    width: auto;
-    max-width: 100%;
+
+    margin: 0;                  /* quita el margen externo */
+    padding-inline: var(--sp-mobile);  /* separación interna */
+    width: auto;                /* evita 100% + padding */
+    max-width: 100%;            /* por seguridad */
+    
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -46,19 +39,6 @@
       "sidebar"
       "main"
       "footer";
-  }
-
-  /* todos los hijos se ajustan al ancho disponible */
-  .container > *,
-  #main,
-  #sidebar,
-  .box,
-  .panel {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
   }
 
   .container #topleft {
@@ -75,7 +55,14 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    --h-min-pane: 0; /* altura auto */
+
+    /*
+    min-height: auto;    
+    height: auto;         
+    */
+
+    --h-min-pane: 0;
+
   }
 
   #sidebar {
@@ -83,33 +70,54 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    --h-min-main: 0; /* altura auto */
+    /*
+    min-height: auto;
+    height: auto;
+    */
+    --h-min-main: 0;
+
   }
 
   .container #main {
-    margin: 0;
+
+    width: 100%;
   }
+
+  /*
+  .container #imenu,
+  #omenu {
+    max-width: 200px;
+  }
+  */
 
   .control button {
     width: 3px;
     height: 3px;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
   }
 
-  #imenu > i,
-  input#searchtext,
-  button[data-action="copyi"],
+  #imenu > i {
+    display: none;
+  }
+
+  input#searchtext {
+    display: none;
+  }
+
+  button[data-action="copyi"] {
+    display: none;
+  }
+
   button[data-action="copyo"] {
     display: none;
   }
 }
 
-/* =========================
-   Zonas
-========================= */
+/* Zonas */
 .container #topleft {
   grid-area: topleft;
   display: flex;
@@ -139,8 +147,12 @@
 
 /* animación de giro */
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #topleft .productname {
@@ -209,9 +221,9 @@
 .container footer {
   grid-area: footer;
   display: flex;
-  align-items: center;     /* centra verticalmente */
-  justify-content: center; /* centra horizontalmente */
-  gap: 10px;
+  align-items: center; /* ← centra verticalmente */
+  justify-content: center; /* ← centra horizontalmente todo el contenido */
+  gap: 10px; /* espacio entre enlaces e iconos */
   min-height: var(--h-min-footer);
   font-size: 0.9em;
   text-align: center;
@@ -220,15 +232,15 @@
 #footer {
   width: 100%;
   justify-content: center;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: flex; /* ← convierte el div en flex también */
+  align-items: center; /* ← centra verticalmente su contenido */
+  gap: 10px; /* separa texto e iconos */
   font-weight: bold;
 }
 
 #footer a {
   text-decoration: none;
   color: var(--c-accent);
-  display: flex;
+  display: flex; /* ← importante para que las imágenes queden centradas */
   align-items: center;
 }
