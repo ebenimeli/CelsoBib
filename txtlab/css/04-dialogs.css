@@ -1,15 +1,16 @@
 /* =========================
    Modal (dialog)
 ========================= */
-#welcome-dialog{
+#welcome-dialog {
   width: min(520px, 90vw);
   border: var(--bd);
+  border-radius: 6px;
   padding: 0;
   background: var(--c-bg);
-  font-family: var(--font-mono);
-  font-size: .9em;
+  font-family: var(--font-sans);
+  font-size: 0.9em;
 }
-#welcome-dialog .dlg{
+#welcome-dialog .dlg {
   margin: 0;
   padding: 14px;
 }
@@ -17,7 +18,7 @@
   margin: 0 0 8px 0;
   font-size: var(--fs-lg);
 }
-#welcome-dialog p{
+#welcome-dialog p {
   margin: 0 0 12px 0;
   line-height: 1.35;
 }
@@ -29,14 +30,43 @@
   padding-top: var(--sp-2);
   margin: 0;
   width: 100%;
-  list-style: none;   /* quita viñetas de <menu> */
-  padding-left: 0;    /* quita sangría */
+  list-style: none; /* quita viñetas de <menu> */
+  padding-left: 0; /* quita sangría */
 }
 
-#welcome-dialog::backdrop{
-  background: rgba(0,0,0,.4);
+#welcome-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 #welcome-dialog strong {
-  color:steelblue;
+  color: steelblue;
+}
+
+p.share {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center; /* centra verticalmente */
+  column-gap: 10px; /* espacio uniforme entre iconos */
+  border: 1px dashed black;
+  border-radius: 8px;
+  background: white;
+  padding: 5px; /* da aire dentro */
+  margin: 0;
+}
+
+p.share a {
+  display: flex; /* hace que la imagen se centre dentro del enlace */
+  align-items: center;
+  justify-content: center;
+}
+
+p.share img.icon {
+  display: block;
+  width: 24px; /* tamaño uniforme */
+  height: 24px;
+}
+
+p.share img.icon:hover {
+  scale: 1.2;
 }

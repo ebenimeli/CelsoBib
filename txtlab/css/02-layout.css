@@ -145,7 +145,7 @@
 
 #topleft .productname {
   font-size: 1.5em;
-  color: black;
+  color: var(--c-text);
 }
 
 #topleft .productname:hover {
@@ -197,6 +197,8 @@
   align-items: center;
 }
 
+
+
 #main {
   background: var(--c-muted);
   min-height: var(--h-min-main);
@@ -223,12 +225,12 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: bold;
+  /*font-weight: bold*/;
 }
 
 #footer a {
   text-decoration: none;
-  color: var(--c-accent);
+  color: var(--c-link);
   display: flex;
   align-items: center;
 }

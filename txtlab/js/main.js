@@ -136,9 +136,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //mountToolbox("#tblists");
   mountToolbox("#about");
-  
-
 });
 
 // Optional named exports (tests / external access)
 export { closeAllToolsets, G as Groups, T as Transforms };
+
+
+/* Tema dark/light con icono */
+
+const root = document.documentElement;
+const btn  = document.getElementById('theme-toggle');
+const ico  = btn?.querySelector('i');
+
+/** Aplica tema, guarda preferencia y ajusta icono/labels */
+function applyTheme(theme) {
+  root.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  if (ico) {
+    if (theme === 'dark') {
+      ico.className = 'fa-solid fa-sun';   // ☀️
+      btn.title = 'Cambiar a tema claro';
+      btn.setAttribute('aria-label', 'Cambiar a tema claro');
+    } else {
+      ico.className = 'fa-solid fa-moon';  // 🌙
+      btn.title = 'Cambiar a tema oscuro';
+      btn.setAttribute('aria-label', 'Cambiar a tema oscuro');
+    }
+  }
+}
+
+// 1) Tema inicial: usa guardado o LIGHT por defecto
+const saved = localStorage.getItem('theme');
+applyTheme((saved === 'dark' || saved === 'light') ? saved : 'light');
+
+// 2) Toggle al hacer clic
+btn?.addEventListener('click', () => {
+  const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  applyTheme(next);
+});

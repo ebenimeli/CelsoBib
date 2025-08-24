@@ -22,6 +22,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
     
+    <meta name="color-scheme" content="light dark">
+
     <!-- === Open Graph + Twitter Cards para txtlab === -->
     <link rel="canonical" href="https://www.ebenimeli.org/txtlab/">
 
@@ -88,9 +90,21 @@
           <i class="fa-solid fa-list"></i>
         </button>
         
+        <!-- MÓDULO PARA ESCRIBIR -->
+        <!--
+        <button id="write-mode" class="tool" title="Escribir">
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+        -->
+        
         <!-- MENÚ ACERCA DE -->
         <button class="tool" data-target="#about" data-info="Acerca de...">
           <i class="fa-solid fa-circle-question"></i>
+        </button>
+
+        <!-- CAMBIO TEMA DARK/LIGHT -->
+        <button id="theme-toggle" class="tool" title="Cambiar tema">
+          <i class="fa-solid fa-moon"></i>
         </button>
 
         <!-- MENÚ 3 -->
@@ -121,11 +135,11 @@
 
           <button class="action" data-target="#uplow" data-info="Herramientas para cambiar mayúsculas y minúsculas">Aa</button>
           <div id="uplow" class="toolset">
-            <button class="action" data-action="doAZ"      data-info="Ordenar A→Z">A-Z</button>
-            <button class="action" data-action="doZA"      data-info="Ordenar Z→A">Z-A</button>
-            <button class="action" data-action="namesUp"   data-info="Poner Mayúscula Inicial">Aa</button>
-            <button class="action" data-action="upperCase" data-info="Convertir a MAYÚSCULAS">AA</button>
-            <button class="action" data-action="lowerCase" data-info="Convertir a minúsculas">aa</button>
+            <button class="action" data-action="doAZ"      data-info="Ordenar la lista alfabéticamente de forma ascendente, de la A a la Z.">Ordenar A-Z</button>
+            <button class="action" data-action="doZA"      data-info="Ordenar la lista alfabéticamente de forma ascendente, de la A a la Z.">Ordenar Z-A</button>
+            <button class="action" data-action="namesUp"   data-info="Poner en mayúscula la letra inicial de cada palabra (Aa)">1a mayúsc. (Aa)</button>
+            <button class="action" data-action="upperCase" data-info="Convertir a MAYÚSCULAS">Todo mayúsc. (AA)</button>
+            <button class="action" data-action="lowerCase" data-info="Convertir a minúsculas">Todo minúsc. (aa)</button>
           </div>
 
           <button class="action" data-target="#groups">Grupos</button>
@@ -137,7 +151,7 @@
             <button class="action" data-action="splitList">N grupos</button>
             <button class="action" data-action="sortABC">Ordenar A-B-C</button>
             <button class="action" data-action="abc">Grupos ABC</button>
-            <button class="action" data-action="abbc">Grupos ABBC</button>
+            <button class="action" data-action="abbc" data-info="Crea grupos de 4 con 1xA, 2xB y 1xC en cada grupo.">Grupos ABBC</button>
             <button class="action" data-action="joinLists">Fusiona</button>
           </div>
 
@@ -165,14 +179,13 @@
       </template>
 
       <template id="about">
-        <section class="aboutthis">
+        <section class="text">
           <h1><i class="fa-solid fa-circle-question"></i>&nbsp;¿Qué es txtlab?</h1>
           <p>Esto es una caja de herramientas para procesar y transformar texto. Por ejemplo, puedes procesar listas desde el menú <i class="fa-solid fa-list"></i>.</p>
           <h1><i class="fa-solid fa-lock"></i>&nbsp;Protección de datos</h1>
           <p>Esta aplicación web <u>no almacena ni envía</u> datos a Internet. Todo se procesa en tu ordenador y nunca sale de él.</p>
           <h1><i class="fa-solid fa-address-card"></i>&nbsp;Autor</h1>
           <p>Este es un proyecto de <a href="https://www.ebenimeli.org" target="_blank">Enrique Benimeli</a>. Si tienes alguna sugerencia, puedes <a href="https://www.ebenimeli.org/contact/" target="_blank>">contactar</a>.</p>
-          
         </section>
       </template>
 
@@ -235,6 +248,11 @@ Engelbart, Douglas / B
       <footer>
         <div id="footer" class="box">
           <a href="https://www.ebenimeli.org" target="_blank">Enrique Benimeli</a> &copy; 2025
+          
+          <p class="share">
+          <a href="https://www.ebenimeli.org" target="_blank">
+            <img class="icon" src="assets/img/icons/web.svg">
+          </a>
           <a href="https://x.com/enriquebenimeli" target="_blank">
             <img class="icon" src="assets/img/icons/x.svg">
           </a>
@@ -247,6 +265,7 @@ Engelbart, Douglas / B
           <a href="https://substack.com/@ebenimeli" target="_blank">
             <img class="icon" src="assets/img/icons/substack.svg">
           </a>
+          </p>
         </div>
       </footer>
     </section>
@@ -259,10 +278,12 @@ Engelbart, Douglas / B
       <p><i class="fa-solid fa-list"></i> Por ejemplo, puedes ordenar, agrupar y formatear listas de elementos.</p>
       <!--<p></span><i class="fa-solid fa-person-chalkboard"></i> Si eres profesor, ya sabes lo útil que puede ser.</p>-->
       <p><i class="fa-solid fa-share"></i> Si te gusta, comparte.</p>
-      <p>
+      <p class="share">
 		    <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.ebenimeli.org/txtlab" target="_blank"><img src="assets/img/icons/facebook.svg" class="icon"></a>
-		    <a href="https://x.com/intent/tweet?source=tweetbutton&amp;original_referer=http://www.ebenimeli.org/txtlab&amp;text=txtlab - http://www.ebenimeli.org/txtlab/" target="_blank"><img src="assets/img/icons/x.svg" class="icon"></a>
-		    <a href="https://api.whatsapp.com/send?text=http://www.ebenimeli.org/txtlab" target="_blank"><img src="assets/img/icons/whatsapp.svg" class="icon"></a>
+		    <a href="https://x.com/intent/tweet?source=tweetbutton&amp;original_referer=http://www.ebenimeli.org/txtlab&amp;text=⚙ txtlab es una caja de herramientas para procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos - http://www.ebenimeli.org/txtlab/ de @enriquebenimeli" target="_blank"><img src="assets/img/icons/x.svg" class="icon"></a>
+		    <a href="https://api.whatsapp.com/send?text=⚙ txtlab es una caja de herramientas para procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos - http://www.ebenimeli.org/txtlab/" target="_blank"><img src="assets/img/icons/whatsapp.svg" class="icon"></a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ebenimeli.org/txtlab" target="_blank"><img src="assets/img/icons/linkedin.svg" class="icon"></a>
+        <a href="mailto:?subject=Prueba txtlab&body=⚙ txtlab es una caja de herramientas para procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos - http://www.ebenimeli.org/txtlab/"><img src="assets/img/icons/email.svg" class="icon"></a>
       </p>
     </p>  
 
