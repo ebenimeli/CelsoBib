@@ -86,7 +86,7 @@
 
       <header>        
         <!-- MÓDULO PARA ESCRIBIR -->
-        <button id="write-mode" class="tool" title="Escribir">
+        <button data-target="#write-mode" class="tool" title="Escribir">
           <i class="fa-solid fa-pen-to-square"></i>
         </button>
       
@@ -124,9 +124,10 @@
        <!-- WRITE -->
       <template id="write-mode" data-default>
         <section class="text">
+          <!--<p>Una cita inspiradora sobre el arte y placer de escribir.</p>-->
 
         <label for="writeprogress">
-          <span id="currentWords">n</span>/<span id="goalWords">250</span> palabras 
+          <span id="currentWords">0</span>/<span id="goalWords">250</span> palabras 
           (<span id="percWords">0 %</span>)
         </label>
         <progress id="writeprogress" value="" max="100"></progress>
@@ -139,7 +140,20 @@
           </div>
         
         </section>
-        <div id="timer"><i class="fa-solid fa-hourglass-half"></i></div>
+<div id="timer" aria-live="polite">00:00:00</div>
+
+<div class="timer-controls">
+  <button id="timer-play"  type="button" class="action" title="Iniciar / Reanudar">
+    <i class="fa-solid fa-play"></i>
+  </button>
+  <button id="timer-pause" type="button" class="action" title="Pausar">
+    <i class="fa-solid fa-pause"></i>
+  </button>
+  <button id="timer-reset" type="button" class="action" title="Reiniciar">
+    <i class="fa-solid fa-rotate-left"></i>
+  </button>
+</div>
+
       </template>
 
       <!-- MENÚ 1 · tblists -->
@@ -317,21 +331,37 @@ Engelbart, Douglas / B
   </form>
   </dialog>
 
-  <dialog id="success-dialog" role="dialog" aria-labelledby="success-title">
+<dialog id="success-dialog" role="dialog" aria-labelledby="success-title">
   <form method="dialog" class="dlg">
     <h3 id="success-title">🎉 ¡Objetivo alcanzado!</h3>
-    <p>Has llegado a tu meta de palabras. ¡Buen trabajo!</p>
 
-      <p class="share">
-		    <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.ebenimeli.org/txtlab" target="_blank"><img src="assets/img/icons/facebook.svg" class="icon"></a>
-		    <a href="https://x.com/intent/tweet?source=tweetbutton&amp;original_referer=http://www.ebenimeli.org/txtlab&amp;text=⚙ txtlab es una caja de herramientas para procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos - http://www.ebenimeli.org/txtlab/ de @enriquebenimeli" target="_blank"><img src="assets/img/icons/x.svg" class="icon"></a>
-		    <a href="https://api.whatsapp.com/send?text=⚙ txtlab es una caja de herramientas para procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos - http://www.ebenimeli.org/txtlab/" target="_blank"><img src="assets/img/icons/whatsapp.svg" class="icon"></a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ebenimeli.org/txtlab" target="_blank"><img src="assets/img/icons/linkedin.svg" class="icon"></a>
-        <a href="mailto:?subject=Prueba txtlab&body=⚙ txtlab es una caja de herramientas para procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos - http://www.ebenimeli.org/txtlab/"><img src="assets/img/icons/email.svg" class="icon"></a>
-      </p>
+    <!-- Mensaje dinámico -->
+    <p id="success-msg">
+      Has llegado a tu meta de <strong><span id="success-goal">—</span></strong>
+      palabras en <strong><span id="success-time">—</span></strong>. ¡Buen trabajo!
+    </p>
+
+    <!-- Share dinámico -->
+    <p class="share" id="success-share">
+      <a id="share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ebenimeli.org/txtlab" target="_blank">
+        <img src="assets/img/icons/facebook.svg" class="icon">
+      </a>
+      <a id="share-x" href="#" target="_blank">
+        <img src="assets/img/icons/x.svg" class="icon">
+      </a>
+      <a id="share-wa" href="#" target="_blank">
+        <img src="assets/img/icons/whatsapp.svg" class="icon">
+      </a>
+      <a id="share-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ebenimeli.org/txtlab" target="_blank">
+        <img src="assets/img/icons/linkedin.svg" class="icon">
+      </a>
+      <a id="share-mail" href="#" target="_blank">
+        <img src="assets/img/icons/email.svg" class="icon">
+      </a>
+    </p>
 
     <menu class="dlg-actions">
-      <button value="ok" class="action" autofocus>Cerrar</button>
+      <button value="ok" class="action">Cerrar</button>
     </menu>
   </form>
 </dialog>

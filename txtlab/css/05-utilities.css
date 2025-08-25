@@ -44,9 +44,16 @@ section.text h1 {
   padding: 3px;
   width: 100%;
   align-items: center;
-
   text-align: center;
 }
+
+.timer-controls{display:flex;gap:.5rem;margin-top:.25rem}
+.timer-controls .action{min-width:2.25rem;display:inline-flex;align-items:center;justify-content:center}
+
+/*
+.timer-controls{display:flex;gap:.5rem;margin-top:.25rem}
+.timer-controls .action{min-width:2.25rem;display:inline-flex;align-items:center;justify-content:center}
+*/
 
 progress {
   width: 100%;
