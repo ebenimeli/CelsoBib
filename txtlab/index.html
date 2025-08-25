@@ -84,19 +84,17 @@
       </a>
       </div>
 
-      <header>
+      <header>        
+        <!-- MÓDULO PARA ESCRIBIR -->
+        <button id="write-mode" class="tool" title="Escribir">
+          <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+      
         <!-- MENÚ TRANSFORMACIÓN TEXTO -->
         <button class="tool" data-target="#tblists" data-info="Transformación de listas">
           <i class="fa-solid fa-list"></i>
         </button>
-        
-        <!-- MÓDULO PARA ESCRIBIR -->
-        <!--
-        <button id="write-mode" class="tool" title="Escribir">
-          <i class="fa-solid fa-pen-to-square"></i>
-        </button>
-        -->
-        
+
         <!-- MENÚ ACERCA DE -->
         <button class="tool" data-target="#about" data-info="Acerca de...">
           <i class="fa-solid fa-circle-question"></i>
@@ -123,49 +121,71 @@
         </div>
       </aside>
 
+       <!-- WRITE -->
+      <template id="write-mode" data-default>
+        <section class="text">
+                    <p>Una cita inspiradora sobre el arte y placer de escribir.</p>
+
+        <label for="writeprogress">
+          <span id="currentWords">n</span>/<span id="goalWords">250</span> palabras 
+          (<span id="percWords">0 %</span>)
+        </label>
+        <progress id="writeprogress" value="" max="100"></progress>
+
+
+          <p>Objetivo de palabras</p>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-keyboard"></i>
+            <input type="text" id="nwords" placeholder="N" value="250"/>
+          </div>
+        
+        </section>
+        <div id="timer"><i class="fa-solid fa-hourglass-half"></i></div>
+      </template>
+
       <!-- MENÚ 1 · tblists -->
-      <template id="tblists" data-default>
+      <template id="tblists">
 
       <div class="input-wrapper">
             <i class="fa-solid fa-keyboard"></i>
             <input type="text" id="inputtext" placeholder="N" />
           </div>
 
-          <section id="info" role="status" aria-live="polite">Información</section>
+          <section id="info" role="status" aria-live="polite">Con estas herramientas puedes ordenar, agrupar y formatear listas de elementos.</section>
 
           <button class="action" data-target="#uplow" data-info="Herramientas para cambiar mayúsculas y minúsculas">Aa</button>
           <div id="uplow" class="toolset">
             <button class="action" data-action="doAZ"      data-info="Ordenar la lista alfabéticamente de forma ascendente, de la A a la Z.">Ordenar A-Z</button>
             <button class="action" data-action="doZA"      data-info="Ordenar la lista alfabéticamente de forma ascendente, de la A a la Z.">Ordenar Z-A</button>
             <button class="action" data-action="namesUp"   data-info="Poner en mayúscula la letra inicial de cada palabra (Aa)">1a mayúsc. (Aa)</button>
-            <button class="action" data-action="upperCase" data-info="Convertir a MAYÚSCULAS">Todo mayúsc. (AA)</button>
-            <button class="action" data-action="lowerCase" data-info="Convertir a minúsculas">Todo minúsc. (aa)</button>
+            <button class="action" data-action="upperCase" data-info="Convertir a MAYÚSCULAS todas las palabras.">Todo mayúsc. (AA)</button>
+            <button class="action" data-action="lowerCase" data-info="Convertir a minúsculas todas las palabras">Todo minúsc. (aa)</button>
           </div>
 
           <button class="action" data-target="#groups">Grupos</button>
           <div id="groups" class="toolset">
-            <button class="action" data-action="group2">x2</button>
-            <button class="action" data-action="group3">x3</button>
-            <button class="action" data-action="group4">x4</button>
-            <button class="action" data-action="groupX">Grupos de N</button>
-            <button class="action" data-action="splitList">N grupos</button>
-            <button class="action" data-action="sortABC">Ordenar A-B-C</button>
-            <button class="action" data-action="abc">Grupos ABC</button>
-            <button class="action" data-action="abbc" data-info="Crea grupos de 4 con 1xA, 2xB y 1xC en cada grupo.">Grupos ABBC</button>
-            <button class="action" data-action="joinLists">Fusiona</button>
+            <button class="action" data-action="group2" data-info="Asignar parejas">x2</button>
+            <button class="action" data-action="group3" data-info="Organizar grupos de 3">x3</button>
+            <button class="action" data-action="group4" data-info="Organizar grupos de 4">x4</button>
+            <button class="action" data-action="groupX" data-info="Organizar grupos de X elementos. Especificar el valor de N en el cuadro de texto.">Grupos de N</button>
+            <button class="action" data-action="splitList" data-info="Organizar N grupos. Especificar el valor de N en el cuadro de texto.">N grupos</button>
+            <button class="action" data-action="sortABC" data-info="Ordena los elemento en 3 bloques A, B y C consecutivos.">Ordenar A-B-C</button>
+            <button class="action" data-action="abc" data-info="Organiza de forma aleatoria grupos de 3 elementos: 1xA, 1xB y 1xC.">Grupos ABC</button>
+            <button class="action" data-action="abbc" data-info="Crea de forma aleatoria grupos de 4 con 1xA, 2xB y 1xC en cada grupo.">Grupos ABBC</button>
+            <button class="action" data-action="joinLists" data-info="Fusiona las dos listas de forma consecutiva: primero la lista de la izquierda y luego la de la derecha.">Fusiona</button>
           </div>
 
           <button class="action" data-target="#random">Al azar</button>
           <div id="random" class="toolset">
-            <button class="action" data-action="randomElements">Selecciona N</button>
-            <button class="action" data-action="shuffleList">Baraja</button>
+            <button class="action" data-action="randomElements" data-info="Selecciona N elementos de la lista. El valor de N se especifica en el cuadro de texto.">Selecciona N</button>
+            <button class="action" data-action="shuffleList" data-info="Mezcla los elementos de la lista de forma aleatoria.">Mezcla</button>
           </div>
           
           <button class="action" data-target="#format">Formato</button>
           <div id="format" class="toolset">
-            <button class="action" data-action="cleanLines">Limpia</button>
-            <button class="action" data-action="numberElements">Numerar</button>
-            <button class="action" data-action="removeNumbering">Eliminar numeración</button>
+            <button class="action" data-action="cleanLines" data-info="Elimina las líneas en blanco">Limpia lista</button>
+            <button class="action" data-action="numberElements" data-info="Numera los elementos de la lista">Numerar</button>
+            <button class="action" data-action="removeNumbering" data-info="Elimina la numeración de los elementos">Eliminar numeración</button>
           </div>
           
           <!-- Elimina marcas (etiquetas, grupos) -->
@@ -247,10 +267,15 @@ Engelbart, Douglas / B
 
       <footer>
         <div id="footer" class="box">
-          <a href="https://www.ebenimeli.org" target="_blank">Enrique Benimeli</a> &copy; 2025
+          <!--<a href="https://www.ebenimeli.org" target="_blank">Enrique Benimeli</a> &copy; 2025-->
           
           <p class="share">
-          <a href="https://www.ebenimeli.org" target="_blank">
+          <!--
+            <a href="https://www.ebenimeli.org" target="_blank">
+            <img class="iconme" src="assets/img/ebenimeli_g.jpg">
+          </a>
+          -->
+            <a href="https://www.ebenimeli.org" target="_blank">
             <img class="icon" src="assets/img/icons/web.svg">
           </a>
           <a href="https://x.com/enriquebenimeli" target="_blank">
@@ -274,7 +299,7 @@ Engelbart, Douglas / B
   <form method="dialog" class="dlg">
     <h3 id="welcome-title">Bienvenido a <strong>txt</strong>lab</h3>
     <p id="welcome-desc">
-      <p><i class="fa-solid fa-gear"></i> Esta aplicación web es una caja de herramientas para procesar y transformar texto.</p>
+      <p><i class="fa-solid fa-gear"></i> Esta aplicación web es una caja de herramientas para escribir, procesar y transformar texto.</p>
       <p><i class="fa-solid fa-list"></i> Por ejemplo, puedes ordenar, agrupar y formatear listas de elementos.</p>
       <!--<p></span><i class="fa-solid fa-person-chalkboard"></i> Si eres profesor, ya sabes lo útil que puede ser.</p>-->
       <p><i class="fa-solid fa-share"></i> Si te gusta, comparte.</p>
@@ -292,6 +317,26 @@ Engelbart, Douglas / B
     </menu>
   </form>
   </dialog>
+
+  <dialog id="success-dialog" role="dialog" aria-labelledby="success-title">
+  <form method="dialog" class="dlg">
+    <h3 id="success-title">🎉 ¡Objetivo alcanzado!</h3>
+    <p>Has llegado a tu meta de palabras. ¡Buen trabajo!</p>
+
+      <p class="share">
+		    <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.ebenimeli.org/txtlab" target="_blank"><img src="assets/img/icons/facebook.svg" class="icon"></a>
+		    <a href="https://x.com/intent/tweet?source=tweetbutton&amp;original_referer=http://www.ebenimeli.org/txtlab&amp;text=⚙ txtlab es una caja de herramientas para procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos - http://www.ebenimeli.org/txtlab/ de @enriquebenimeli" target="_blank"><img src="assets/img/icons/x.svg" class="icon"></a>
+		    <a href="https://api.whatsapp.com/send?text=⚙ txtlab es una caja de herramientas para procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos - http://www.ebenimeli.org/txtlab/" target="_blank"><img src="assets/img/icons/whatsapp.svg" class="icon"></a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ebenimeli.org/txtlab" target="_blank"><img src="assets/img/icons/linkedin.svg" class="icon"></a>
+        <a href="mailto:?subject=Prueba txtlab&body=⚙ txtlab es una caja de herramientas para procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos - http://www.ebenimeli.org/txtlab/"><img src="assets/img/icons/email.svg" class="icon"></a>
+      </p>
+
+    <menu class="dlg-actions">
+      <button value="ok" class="action" autofocus>Cerrar</button>
+    </menu>
+  </form>
+</dialog>
+
 
   <script type="module" src="js/main.js"></script>
   </body>

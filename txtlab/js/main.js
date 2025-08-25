@@ -13,6 +13,9 @@ import * as G from "./text/groups.js";
 import { wireLiveSearch } from "./text/search.js";
 import { copyInput, copyOutput, pasteInput, pasteOutput } from "./clipboard/clipboard.js";
 
+// main.js
+import { initWriteMode } from "./text/write.js";
+
 /** Action registry: map action names to functions (used by the click dispatcher) */
 const actionMap = {
   // transforms
@@ -134,8 +137,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (freshSidebar) initToolsetsWithin(freshSidebar);
   }
 
+  // monta directamente el template de escritura
+  
   //mountToolbox("#tblists");
-  mountToolbox("#about");
+  //mountToolbox("#about");
+  mountToolbox("#write-mode");
+  initWriteMode();   // <--- aquí inicializas los listeners del write mode
+
 });
 
 // Optional named exports (tests / external access)
