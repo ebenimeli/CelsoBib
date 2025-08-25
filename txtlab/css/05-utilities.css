@@ -61,6 +61,12 @@ progress {
   accent-color: steelblue;
 }
 
+.text .quote{
+  font-style: italic;
+  opacity: .9;
+  margin: .25rem 0 .75rem;
+}
+
 
 /* =========================
    Accesibilidad / Motion

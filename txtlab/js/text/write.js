@@ -1,3 +1,30 @@
+// --- Asegura que no quedan timers “huérfanos” entre montajes
+if (window.__wmInterval) {
+  clearInterval(window.__wmInterval);
+  window.__wmInterval = null;
+}
+
+// --- Auto-reinit al abrir el panel "Escribir" desde el header
+if (!window.__wmAutowire) {
+  window.__wmAutowire = true;
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest('button[data-target="#write-mode"]');
+    if (!btn) return;
+    // Espera a que mountToolbox inserte el template y luego inicializa
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() => {
+        // Limpia un posible intervalo previo
+        if (window.__wmInterval) {
+          clearInterval(window.__wmInterval);
+          window.__wmInterval = null;
+        }
+        // Re-inicia el modo escritura para el DOM recién montado
+        try { initWriteMode(); } catch (err) { console.warn(err); }
+      })
+    );
+  });
+}
+
 export function initWriteMode() {
   // --- Referencias UI ---
   const inputGoal    = document.getElementById("nwords");
@@ -8,11 +35,12 @@ export function initWriteMode() {
   const textInput    = document.getElementById("itext");
   const timerEl      = document.getElementById("timer");
   const successDlg   = document.getElementById("success-dialog");
+  const quoteEl      = document.querySelector(".quote");
 
   // Controles del timer (si existen)
   const btnPlay   = document.getElementById("timer-play");
   const btnPause  = document.getElementById("timer-pause");
-  const btnReset  = document.getElementById("timer-reset"); // ← NUEVO
+  const btnReset  = document.getElementById("timer-reset");
 
   // Modal de éxito + botones de compartir
   const successGoal  = document.getElementById("success-goal");
@@ -29,8 +57,31 @@ export function initWriteMode() {
     return;
   }
 
+  // --- Cita aleatoria ---
+  const QUOTES = [
+    "Escribe primero, corrige después.",
+    "La página en blanco es una invitación, no una amenaza.",
+    "Tu primera versión solo necesita existir.",
+    "Escribir es pensar en voz baja.",
+    "Un párrafo al día construye libros.",
+    "La rutina es la musa más fiable.",
+    "Pequeños bloques, grandes historias.",
+    "Cada palabra cuenta; no todas pesan lo mismo.",
+    "La claridad gana a la perfección.",
+    "El hábito vence a la inspiración."
+  ];
+
+  const setRandomQuote = () => {
+    const el = document.querySelector(".quote"); // re-busca por si se re-monta el template
+    if (!el) return;
+    const idx = Math.floor(Math.random() * QUOTES.length);
+    el.textContent = QUOTES[idx];
+  };
+
+  // pinta una cita al cargar
+  setRandomQuote();
+
   // --- Estado ---
-  let timer = null;
   let seconds = 0;
   let running = false;
   let goalReached = false;
@@ -64,7 +115,9 @@ export function initWriteMode() {
   const startTimer = () => {
     if (running) return;
     running = true;
-    timer = setInterval(() => {
+    // Usa un handle global para evitar duplicidades entre montajes
+    if (window.__wmInterval) clearInterval(window.__wmInterval);
+    window.__wmInterval = setInterval(() => {
       seconds++;
       timerEl.textContent = formatClock(seconds);
     }, 1000);
@@ -73,14 +126,14 @@ export function initWriteMode() {
 
   const pauseTimer = () => {
     if (!running) return;
-    clearInterval(timer);
-    timer = null;
+    clearInterval(window.__wmInterval);
+    window.__wmInterval = null;
     running = false;
     updateTimerButtons();
   };
 
-  const resetTimer = () => {         // ← NUEVO
-    pauseTimer();                    // por si estaba corriendo
+  const resetTimer = () => {
+    pauseTimer();
     seconds = 0;
     timerEl.textContent = "00:00:00";
     // no tocamos goalReached, texto ni contadores
@@ -96,7 +149,6 @@ export function initWriteMode() {
       const subject = encodeURIComponent("¡Objetivo de escritura alcanzado!");
       shareMail.href = `mailto:?subject=${subject}&body=${enc}`;
     }
-    // Facebook/LinkedIn comparten solo la URL por política: ya están OK en HTML.
   }
 
   // --- Lógica palabras ---
@@ -163,5 +215,5 @@ export function initWriteMode() {
 
   btnPlay?.addEventListener("click", startTimer);
   btnPause?.addEventListener("click", pauseTimer);
-  btnReset?.addEventListener("click", resetTimer); // ← NUEVO
+  btnReset?.addEventListener("click", resetTimer);
 }
