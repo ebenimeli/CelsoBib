@@ -13,12 +13,10 @@ if (!window.__wmAutowire) {
     // Espera a que mountToolbox inserte el template y luego inicializa
     requestAnimationFrame(() =>
       requestAnimationFrame(() => {
-        // Limpia un posible intervalo previo
         if (window.__wmInterval) {
           clearInterval(window.__wmInterval);
           window.__wmInterval = null;
         }
-        // Re-inicia el modo escritura para el DOM recién montado
         try { initWriteMode(); } catch (err) { console.warn(err); }
       })
     );
@@ -36,8 +34,9 @@ export function initWriteMode() {
   const timerEl      = document.getElementById("timer");
   const successDlg   = document.getElementById("success-dialog");
   const quoteEl      = document.querySelector(".quote");
+  const wpmEl        = document.querySelector(".wpm"); // ← NUEVO
 
-  // Controles del timer (si existen)
+  // Controles del timer
   const btnPlay   = document.getElementById("timer-play");
   const btnPause  = document.getElementById("timer-pause");
   const btnReset  = document.getElementById("timer-reset");
@@ -70,15 +69,12 @@ export function initWriteMode() {
     "La claridad gana a la perfección.",
     "El hábito vence a la inspiración."
   ];
-
   const setRandomQuote = () => {
     const el = document.querySelector(".quote"); // re-busca por si se re-monta el template
     if (!el) return;
     const idx = Math.floor(Math.random() * QUOTES.length);
     el.textContent = QUOTES[idx];
   };
-
-  // pinta una cita al cargar
   setRandomQuote();
 
   // --- Estado ---
@@ -86,7 +82,13 @@ export function initWriteMode() {
   let running = false;
   let goalReached = false;
 
-  // --- Utilidades tiempo ---
+  // --- Utilidades ---
+  const countWords = (raw) => {
+    const t = String(raw || "").trim();
+    if (!t) return 0;
+    return t.split(/\s+/).length;
+  };
+
   const formatClock = (s) => {
     const h = String(Math.floor(s / 3600)).padStart(2, "0");
     const m = String(Math.floor((s % 3600) / 60)).padStart(2, "0");
@@ -105,6 +107,13 @@ export function initWriteMode() {
     return parts.length ? parts.join(" ") : "0 s";
   };
 
+  // --- WPM ---
+  const updateWPM = (wordsNow) => {
+    if (!wpmEl) return;
+    const wpm = seconds > 0 ? Math.round((wordsNow / seconds) * 60) : 0;
+    wpmEl.textContent = `${wpm} palabras/min`;
+  };
+
   // --- Timer ---
   const updateTimerButtons = () => {
     if (!btnPlay || !btnPause) return;
@@ -115,11 +124,13 @@ export function initWriteMode() {
   const startTimer = () => {
     if (running) return;
     running = true;
-    // Usa un handle global para evitar duplicidades entre montajes
+    // Evita duplicados entre montajes
     if (window.__wmInterval) clearInterval(window.__wmInterval);
     window.__wmInterval = setInterval(() => {
       seconds++;
       timerEl.textContent = formatClock(seconds);
+      // mientras corre, recalculamos WPM aunque no haya tecleo
+      updateWPM(countWords(textInput.value));
     }, 1000);
     updateTimerButtons();
   };
@@ -136,7 +147,7 @@ export function initWriteMode() {
     pauseTimer();
     seconds = 0;
     timerEl.textContent = "00:00:00";
-    // no tocamos goalReached, texto ni contadores
+    updateWPM(countWords(textInput.value)); // volverá a 0
   };
 
   // --- Share ---
@@ -151,7 +162,7 @@ export function initWriteMode() {
     }
   }
 
-  // --- Lógica palabras ---
+  // --- Lógica palabras/progreso ---
   function updateGoal() {
     const newGoal = parseInt(inputGoal.value, 10);
     if (!isNaN(newGoal) && newGoal > 0) {
@@ -161,12 +172,11 @@ export function initWriteMode() {
       goalWords.textContent = "0";
       progress.max = 0;
     }
-    updateCurrent(); // recalcula % inmediatamente
+    updateCurrent(); // recalcula % y WPM
   }
 
   function updateCurrent() {
-    const text = textInput.value.trim();
-    const words = text === "" ? 0 : text.split(/\s+/).length;
+    const words = countWords(textInput.value);
     currentWords.textContent = words;
 
     const goal = parseInt(goalWords.textContent, 10) || 0;
@@ -176,7 +186,6 @@ export function initWriteMode() {
       percWords.textContent = Math.round(perc) + " %";
       progress.value = words;
 
-      // Objetivo alcanzado -> pausar, rellenar modal y compartir
       if (words >= goal && !goalReached) {
         goalReached = true;
         pauseTimer();
@@ -192,19 +201,23 @@ export function initWriteMode() {
       percWords.textContent = "0 %";
       progress.value = 0;
     }
+
+    // siempre que cambia el texto, actualizamos WPM
+    updateWPM(words);
   }
 
   // --- Estado inicial ---
-  if (!inputGoal.value) inputGoal.value = "250"; // por si HTML no trae valor
+  if (!inputGoal.value) inputGoal.value = "250";
   textInput.value = "";
   seconds = 0;
   timerEl.textContent = "00:00:00";
+  if (wpmEl) wpmEl.textContent = "0 palabras/min";
   updateGoal();
   updateTimerButtons();
 
   // --- Eventos ---
   inputGoal.addEventListener("input", () => {
-    goalReached = false; // si cambia la meta, permitir celebrar de nuevo
+    goalReached = false;
     updateGoal();
   });
 

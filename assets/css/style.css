@@ -7,6 +7,10 @@
   --body-bg: #fff;
   --primary-font-color: #000;
   --border-color: #dadada;
+  --shadow-img: 0 1px 2px rgb(0 0 0 / 8%),
+                0 8px 24px rgb(0 0 0 / 12%);
+  --shadow-img-hover: 0 4px 12px rgb(0 0 0 / 12%),
+                      0 16px 32px rgb(0 0 0 / 16%);
 }
 
 [data-theme="dark"] {
@@ -17,6 +21,8 @@
   --primary-font-color: #bfbfbf;
   /**--primary-font-color: White;**/
   --border-color: #6a6a6a;
+  --shadow-img:        0 1px 2px rgb(0 0 0 / 24%), 0 8px 24px rgb(0 0 0 / 28%);
+  --shadow-img-hover:  0 4px 12px rgb(0 0 0 / 28%), 0 16px 32px rgb(0 0 0 / 32%);
 }
 
 body {
@@ -235,7 +241,7 @@ body {
 
 .blog-post-content {
   width: 100%;
-  font-size: 1em;
+  font-size: .9em;
   text-align: left;
   font-family: var(--primary-font);
 }
@@ -340,8 +346,13 @@ a {
   text-decoration: none;
 }
 
-img {
+.blog-post-content img {
   max-width: 100%;
+  border: 1px solid var(--border-color);
+  padding: 3px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-img);
+  transition: box-shadow .2s ease, transform .2s ease;
 }
 
 figure {

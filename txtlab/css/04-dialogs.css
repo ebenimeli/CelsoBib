@@ -40,7 +40,6 @@ dialog .dlg-actions .action {
   color: #fff;
 }
 
-
 p.share {
   display: flex;
   flex-direction: row;
@@ -49,7 +48,9 @@ p.share {
   column-gap: 10px; /* espacio uniforme entre iconos */
   border: 1px solid black;
   border-radius: 8px;
-  background: white;
+  /*background: white;*/
+  background: rgba(255, 255, 255, .75); /* fondo blanco 75% opaco */
+  backdrop-filter: blur(6px) saturate(120%);   /* opcional efecto “glass” */
   padding: 5px; /* da aire dentro */
   margin: 0;
 }
