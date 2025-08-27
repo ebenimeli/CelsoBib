@@ -13,8 +13,11 @@ import * as G from "./text/groups.js";
 import { wireLiveSearch } from "./text/search.js";
 import { copyInput, copyOutput, pasteInput, pasteOutput } from "./clipboard/clipboard.js";
 
-// main.js
-import { initWriteMode } from "./text/write.js";
+// === CHG === quita el import estático de write.js para evitar que se ejecute en otros templates
+// import { initWriteMode } from "./text/write.js";
+
+// import genérico de listas
+import * as X from "./text/example.js";
 
 /** Action registry: map action names to functions (used by the click dispatcher) */
 const actionMap = {
@@ -50,6 +53,9 @@ const actionMap = {
   copyo: copyOutput,
   pastei: pasteInput,
   pasteo: pasteOutput,
+
+  // importar lista desde assets/data/*.txt
+  importList: X.importList,
 };
 
 /** Global click dispatcher: handles current and future .action buttons via data-action */
@@ -60,7 +66,7 @@ function installActionDispatcher() {
     const action = btn.dataset.action;
     const fn = actionMap[action];
     if (typeof fn === "function") {
-      fn();
+      fn(btn);            // pasamos el botón (para leer data-file, etc.)
       playClick?.();
     }
   });
@@ -114,6 +120,55 @@ function mountDefaultToolbox() {
   return false;
 }
 
+// === CHG === lazy loader para write-mode
+let writeModeLoaded = false;
+async function ensureWriteModeLoaded(container) {
+  if (writeModeLoaded) return;
+  writeModeLoaded = true;
+
+  // Carga bajo demanda los módulos del modo escritura
+  const [{ initWriteMode }] = await Promise.all([
+    import("./text/write.js"),         // debe exportar initWriteMode(container?)
+    // opcional: también words.js si existe y solo aplica a write-mode
+    // import("./text/words.js").then(m => m.initWords?.(container)),
+  ]);
+
+  // Inicializa write-mode dentro de su contenedor/template
+  initWriteMode?.(container);
+}
+
+// === CHG === intercepta la apertura del template write-mode para cargarlo perezosamente
+function installWriteModeLazyLoader() {
+  document.addEventListener("click", async (e) => {
+    const toolBtn = e.target.closest('button.tool[data-target]');
+    if (!toolBtn) return;
+
+    const sel = toolBtn.dataset.target;
+    if (sel === "#write-mode") {
+      // montar el template (si aún no está)
+      mountToolbox(sel);
+      const container = document.querySelector(sel);
+      if (container) {
+        initToolsetsWithin(container);
+        await ensureWriteModeLoaded(container);
+      }
+    }
+  });
+
+  // Además, por accesibilidad: si el panel aparece visible por teclado/otro trigger
+  const writeTpl = document.querySelector("#write-mode");
+  if (writeTpl) {
+    const mo = new MutationObserver(async () => {
+      const visible = !writeTpl.hidden && writeTpl.childElementCount > 0;
+      if (visible) {
+        await ensureWriteModeLoaded(writeTpl);
+        mo.disconnect();
+      }
+    });
+    mo.observe(writeTpl, { attributes: true, childList: true, subtree: true, attributeFilter: ["hidden"] });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // 1) Prepare audio pool (no playback yet)
   initClick("assets/media/click.mp3");
@@ -137,21 +192,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (freshSidebar) initToolsetsWithin(freshSidebar);
   }
 
-  // monta directamente el template de escritura
-  
-  //mountToolbox("#tblists");
-  //mountToolbox("#about");
-  mountToolbox("#write-mode");
-  initWriteMode();   // <--- aquí inicializas los listeners del write mode
+  // === CHG === NO montar write-mode aquí (evita que se ejecute cuando estás en tblists)
+  // mountToolbox("#write-mode");
+  // initWriteMode();
 
+  // === CHG === activar lazy-load del write-mode
+  installWriteModeLazyLoader();
 });
 
 // Optional named exports (tests / external access)
 export { closeAllToolsets, G as Groups, T as Transforms };
 
-
 /* Tema dark/light con icono */
-
 const root = document.documentElement;
 const btn  = document.getElementById('theme-toggle');
 const ico  = btn?.querySelector('i');

@@ -130,39 +130,56 @@
           Con estas herramientas puedes ordenar, agrupar y formatear listas de elementos.
         </section>
 
+        <button class="action" data-target="#examples" data-info="Listas de ejemplo">Ejemplos</button>
+        <div id="examples" class="toolset">
+          <button class="action" data-action="importList" data-file="cspeople.txt">
+            Personas
+          </button>
+          <button class="action" data-action="importList" data-file="days.txt">
+            Días del año
+          </button>
+          <button class="action" data-action="importList" data-file="animals.txt">
+            Animales
+          </button>
+          <button class="action" data-action="importList" data-file="countries.txt">
+            Países
+          </button>
+        </div>
+
+
         <button class="action" data-target="#uplow" data-info="Herramientas para cambiar mayúsculas y minúsculas">Aa</button>
         <div id="uplow" class="toolset">
-          <button class="action" data-action="doAZ">Ordenar A-Z</button>
-          <button class="action" data-action="doZA">Ordenar Z-A</button>
-          <button class="action" data-action="namesUp">1a mayúsc. (Aa)</button>
-          <button class="action" data-action="upperCase">Todo mayúsc. (AA)</button>
-          <button class="action" data-action="lowerCase">Todo minúsc. (aa)</button>
-        </div>
+          <button class="action" data-action="doAZ"      data-info="Ordenar la lista alfabéticamente de forma ascendente, de la A a la Z.">Ordenar A-Z</button>
+            <button class="action" data-action="doZA"      data-info="Ordenar la lista alfabéticamente de forma ascendente, de la A a la Z.">Ordenar Z-A</button>
+            <button class="action" data-action="namesUp"   data-info="Poner en mayúscula la letra inicial de cada palabra (Aa)">1a mayúsc. (Aa)</button>
+            <button class="action" data-action="upperCase" data-info="Convertir a MAYÚSCULAS todas las palabras.">Todo mayúsc. (AA)</button>
+            <button class="action" data-action="lowerCase" data-info="Convertir a minúsculas todas las palabras">Todo minúsc. (aa)</button>
+          </div>
 
         <button class="action" data-target="#groups">Grupos</button>
         <div id="groups" class="toolset">
-          <button class="action" data-action="group2">x2</button>
-          <button class="action" data-action="group3">x3</button>
-          <button class="action" data-action="group4">x4</button>
-          <button class="action" data-action="groupX">Grupos de N</button>
-          <button class="action" data-action="splitList">N grupos</button>
-          <button class="action" data-action="sortABC">Ordenar A-B-C</button>
-          <button class="action" data-action="abc">Grupos ABC</button>
-          <button class="action" data-action="abbc">Grupos ABBC</button>
-          <button class="action" data-action="joinLists">Fusiona</button>
+            <button class="action" data-action="group2" data-info="Asignar parejas">x2</button>
+            <button class="action" data-action="group3" data-info="Organizar grupos de 3">x3</button>
+            <button class="action" data-action="group4" data-info="Organizar grupos de 4">x4</button>
+            <button class="action" data-action="groupX" data-info="Organizar grupos de X elementos. Especificar el valor de N en el cuadro de texto.">Grupos de N</button>
+            <button class="action" data-action="splitList" data-info="Organizar N grupos. Especificar el valor de N en el cuadro de texto.">N grupos</button>
+            <button class="action" data-action="sortABC" data-info="Ordena los elemento en 3 bloques A, B y C consecutivos.">Ordenar A-B-C</button>
+            <button class="action" data-action="abc" data-info="Organiza de forma aleatoria grupos de 3 elementos: 1xA, 1xB y 1xC.">Grupos ABC</button>
+            <button class="action" data-action="abbc" data-info="Crea de forma aleatoria grupos de 4 con 1xA, 2xB y 1xC en cada grupo.">Grupos ABBC</button>
+            <button class="action" data-action="joinLists" data-info="Fusiona las dos listas de forma consecutiva: primero la lista de la izquierda y luego la de la derecha.">Fusiona</button>
         </div>
 
         <button class="action" data-target="#random">Al azar</button>
         <div id="random" class="toolset">
-          <button class="action" data-action="randomElements">Selecciona N</button>
-          <button class="action" data-action="shuffleList">Mezcla</button>
+            <button class="action" data-action="randomElements" data-info="Selecciona N elementos de la lista. El valor de N se especifica en el cuadro de texto.">Selecciona N</button>
+            <button class="action" data-action="shuffleList" data-info="Mezcla los elementos de la lista de forma aleatoria.">Mezcla</button>
         </div>
 
         <button class="action" data-target="#format">Formato</button>
         <div id="format" class="toolset">
-          <button class="action" data-action="cleanLines">Limpia lista</button>
-          <button class="action" data-action="numberElements">Numerar</button>
-          <button class="action" data-action="removeNumbering">Eliminar numeración</button>
+            <button class="action" data-action="cleanLines" data-info="Elimina las líneas en blanco">Limpia lista</button>
+            <button class="action" data-action="numberElements" data-info="Numera los elementos de la lista">Numerar</button>
+            <button class="action" data-action="removeNumbering" data-info="Elimina la numeración de los elementos">Eliminar numeración</button>
         </div>
       </template>
 
@@ -195,36 +212,6 @@
             <button data-action="pasteo"><i class="fa-regular fa-paste"></i></button>
           </div>
           <textarea id="itext" class="box">
-Brin, Sergey / A
-Zuckerberg, Mark / B
-Hopper, Grace / B
-Gates, Bill / A
-Babbage, Charles / A
-Knuth, Donald / A
-Ritchie, Dennis / A
-Simon, Herbert / A
-Kay, Alan / B
-Noyce, Robert / B
-Shannon, Claude / C
-Brooks, Frederick / B
-Dijkstra, Edsger / C
-Torvalds, Linus / B
-Cerf, Vinton / B
-Kahn, Robert / C
-Turing, Alan / B
-Wozniak, Steve / C
-Page, Larry / C
-Von Neumann, John / A
-Allen, Paul / B
-Codd, Edgar / A
-Stallman, Richard / C
-Berners-Lee, Tim / B
-Moore, Gordon / B
-Lovelace, Ada / B
-Thompson, Ken / B
-McCarthy, John / C
-Jobs, Steve / B
-Engelbart, Douglas / B
           </textarea>
           <textarea id="otext" class="box"></textarea>
           <div id="statusi" class="metainfo">Status I</div>
