@@ -146,6 +146,77 @@ export function abc() {
   $id(IDS.otext).value = out.join("\n");
 }
 
+/** 
+ * Agrupa según patrón definido en input#inputtext.
+ * Ej: "ABBC" → grupos con 1 A, 2 B y 1 C. 
+ */
+export function groupByPattern() {
+  const patternRaw = $id("inputtext").value.trim().toUpperCase();
+  if (!patternRaw) {
+    $id(IDS.otext).value = "⚠️ Especifica un patrón en el input.";
+    return;
+  }
+
+  const lines = getNames(); // función que obtiene las líneas
+  const buckets = {};       // { A: [], B: [], ... }
+  const leftovers = [];
+
+  // Expresión: "Nombre / X"
+  const re = /^(.*?)(?:\s*\/\s*)([A-Z])$/;
+
+  for (const line of lines) {
+    const m = line.match(re);
+    if (!m) {
+      leftovers.push({ name: line.trim(), tag: "?" });
+      continue;
+    }
+    const name = m[1].trim();
+    const tag = m[2].toUpperCase();
+    if (!buckets[tag]) buckets[tag] = [];
+    buckets[tag].push({ name, tag });
+  }
+
+  // Cuenta cuántos necesita el patrón
+  const need = {};
+  for (const ch of patternRaw) {
+    need[ch] = (need[ch] || 0) + 1;
+  }
+
+  // máximo número de grupos posibles
+  let maxGroups = Infinity;
+  for (const tag in need) {
+    const available = buckets[tag]?.length || 0;
+    maxGroups = Math.min(maxGroups, Math.floor(available / need[tag]));
+  }
+  if (maxGroups === Infinity) maxGroups = 0;
+
+  const out = [];
+  if (maxGroups === 0) {
+    out.push(`No se pueden formar grupos con el patrón ${patternRaw}.`);
+    $id(IDS.otext).value = out.join("\n");
+    return;
+  }
+
+  // formar grupos
+  for (let g = 1; g <= maxGroups; g++) {
+    const group = [];
+    for (const ch of patternRaw) {
+      const member = buckets[ch].shift(); // ← mantiene el orden original
+      if (member) group.push(member);
+    }
+    group.forEach((m) => out.push(`${m.name} (Grupo ${g} / ${m.tag})`));
+  }
+
+  // sobras
+  for (const tag in buckets) {
+    leftovers.push(...buckets[tag]);
+  }
+  leftovers.forEach((m) => out.push(`${m.name} (${m.tag})`));
+
+  $id(IDS.otext).value = out.join("\n");
+}
+
+
 /** Sort students: A (alphabetical), then B, then C
  * input format: "Surname, Name / X" */
 export function sortABC() {

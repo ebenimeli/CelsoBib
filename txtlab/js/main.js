@@ -45,6 +45,7 @@ const actionMap = {
   randomElements: G.randomElements,
   abbc: G.abbc,
   abc: G.abc,
+  groupByPattern: G.groupByPattern,
   sortABC: G.sortABC,
   splitList: G.splitList,
 

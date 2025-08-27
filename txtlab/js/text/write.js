@@ -30,11 +30,11 @@ export function initWriteMode() {
   const currentWords = document.getElementById("currentWords");
   const percWords    = document.getElementById("percWords");
   const progress     = document.getElementById("writeprogress");
-  const textInput    = document.getElementById("itext");
+  const textInput    = document.getElementById("itext");      // (si usas #wtext, cámbialo aquí)
   const timerEl      = document.getElementById("timer");
   const successDlg   = document.getElementById("success-dialog");
   const quoteEl      = document.querySelector(".quote");
-  const wpmEl        = document.querySelector(".wpm"); // ← NUEVO
+  const wpmEl        = document.querySelector(".wpm");
 
   // Controles del timer
   const btnPlay   = document.getElementById("timer-play");
@@ -50,7 +50,7 @@ export function initWriteMode() {
 
   const SITE_URL = "https://www.ebenimeli.org/txtlab/";
 
-  // Si el template aún no está montado, salir sin romper
+  // Si la UI no está montada, abortar
   if (!inputGoal || !goalWords || !currentWords || !progress || !textInput || !timerEl) {
     console.warn("[write] UI aún no montada; initWriteMode() aborta.");
     return;
@@ -70,7 +70,7 @@ export function initWriteMode() {
     "El hábito vence a la inspiración."
   ];
   const setRandomQuote = () => {
-    const el = document.querySelector(".quote"); // re-busca por si se re-monta el template
+    const el = document.querySelector(".quote");
     if (!el) return;
     const idx = Math.floor(Math.random() * QUOTES.length);
     el.textContent = QUOTES[idx];
@@ -124,12 +124,10 @@ export function initWriteMode() {
   const startTimer = () => {
     if (running) return;
     running = true;
-    // Evita duplicados entre montajes
     if (window.__wmInterval) clearInterval(window.__wmInterval);
     window.__wmInterval = setInterval(() => {
       seconds++;
       timerEl.textContent = formatClock(seconds);
-      // mientras corre, recalculamos WPM aunque no haya tecleo
       updateWPM(countWords(textInput.value));
     }, 1000);
     updateTimerButtons();
@@ -147,7 +145,7 @@ export function initWriteMode() {
     pauseTimer();
     seconds = 0;
     timerEl.textContent = "00:00:00";
-    updateWPM(countWords(textInput.value)); // volverá a 0
+    updateWPM(countWords(textInput.value));
   };
 
   // --- Share ---
@@ -187,6 +185,10 @@ export function initWriteMode() {
       progress.value = words;
 
       if (words >= goal && !goalReached) {
+        // ✅ COMPROBACIÓN MÍNIMA: solo mostrar el modal si write-mode está montado
+        //    (timerEl existe y está en el DOM)
+        if (!timerEl?.isConnected) return;
+
         goalReached = true;
         pauseTimer();
 
@@ -202,7 +204,6 @@ export function initWriteMode() {
       progress.value = 0;
     }
 
-    // siempre que cambia el texto, actualizamos WPM
     updateWPM(words);
   }
 
@@ -222,6 +223,8 @@ export function initWriteMode() {
   });
 
   textInput.addEventListener("input", () => {
+    // ✅ OPCIONAL: no arrancar ni actualizar si write-mode no está visible
+    if (!timerEl?.isConnected) return;
     updateCurrent();
     startTimer(); // autostart al escribir
   });

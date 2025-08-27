@@ -60,6 +60,10 @@
       </div>
 
       <header>
+
+        <button class="tool" data-target="#about" data-info="Acerca de...">
+          <i class="fa-solid fa-circle-question"></i>
+        </button>
         <!-- MÓDULO PARA ESCRIBIR -->
         <button data-target="#write-mode" class="tool" title="Escribir">
           <i class="fa-solid fa-pen-to-square"></i>
@@ -69,9 +73,7 @@
         <button class="tool" data-target="#tblists" data-info="Transformación de listas">
           <i class="fa-solid fa-list"></i>
         </button>
-        <button class="tool" data-target="#about" data-info="Acerca de...">
-          <i class="fa-solid fa-circle-question"></i>
-        </button>
+
 
         <!-- CAMBIO TEMA -->
         <button id="theme-toggle" class="tool" title="Cambiar tema">
@@ -85,7 +87,7 @@
       </aside>
 
       <!-- WRITE -->
-      <template id="write-mode" data-default>
+      <template id="write-mode">
         <section class="text">
           <p class="quote"></p>
 
@@ -144,6 +146,9 @@
           <button class="action" data-action="importList" data-file="countries.txt">
             Países
           </button>
+          <button class="action" data-action="importList" data-file="writers.txt">
+            Escritores
+          </button>
         </div>
 
 
@@ -166,6 +171,7 @@
             <button class="action" data-action="sortABC" data-info="Ordena los elemento en 3 bloques A, B y C consecutivos.">Ordenar A-B-C</button>
             <button class="action" data-action="abc" data-info="Organiza de forma aleatoria grupos de 3 elementos: 1xA, 1xB y 1xC.">Grupos ABC</button>
             <button class="action" data-action="abbc" data-info="Crea de forma aleatoria grupos de 4 con 1xA, 2xB y 1xC en cada grupo.">Grupos ABBC</button>
+            <button class="action" data-action="groupByPattern" data-info="Crea de forma aleatoria grupos según el patrón especificado.">Grupos por patrón</button>
             <button class="action" data-action="joinLists" data-info="Fusiona las dos listas de forma consecutiva: primero la lista de la izquierda y luego la de la derecha.">Fusiona</button>
         </div>
 
@@ -183,10 +189,10 @@
         </div>
       </template>
 
-      <template id="about">
+      <template id="about" data-default>
         <section class="text">
           <h1><i class="fa-solid fa-circle-question"></i>&nbsp;¿Qué es txtlab?</h1>
-          <p>Esto es una caja de herramientas para procesar y transformar texto. Por ejemplo, puedes procesar listas desde el menú <i class="fa-solid fa-list"></i>.</p>
+          <p>Esto es una caja de herramientas para procesar y transformar texto. Por ejemplo, puedes procesar listas desde el menú <i class="fa-solid fa-list"></i>. O puedes empezar a escribir desde el menú <i class="fa-solid fa-pen-to-square"></i>.</p>
           <h1><i class="fa-solid fa-lock"></i>&nbsp;Protección de datos</h1>
           <p>Esta aplicación web <u>no almacena ni envía</u> datos a Internet. Todo se procesa en tu ordenador y nunca sale de él.</p>
           <h1><i class="fa-solid fa-address-card"></i>&nbsp;Autor</h1>
@@ -211,8 +217,7 @@
             <button data-action="copyo"><i class="fa-regular fa-copy"></i></button>
             <button data-action="pasteo"><i class="fa-regular fa-paste"></i></button>
           </div>
-          <textarea id="itext" class="box">
-          </textarea>
+          <textarea id="itext" class="box"></textarea>
           <textarea id="otext" class="box"></textarea>
           <div id="statusi" class="metainfo">Status I</div>
           <div id="statuso" class="metainfo">Status O</div>
