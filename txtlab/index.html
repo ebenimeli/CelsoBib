@@ -64,6 +64,7 @@
         <button class="tool" data-target="#about" data-info="Acerca de...">
           <i class="fa-solid fa-circle-question"></i>
         </button>
+
         <!-- MÓDULO PARA ESCRIBIR -->
         <button data-target="#write-mode" class="tool" title="Escribir">
           <i class="fa-solid fa-pen-to-square"></i>
@@ -152,13 +153,11 @@
         </div>
 
 
-        <button class="action" data-target="#uplow" data-info="Herramientas para cambiar mayúsculas y minúsculas">Aa</button>
+        <button class="action" data-target="#uplow" data-info="Herramientas para ordenar listas">Ordenar</button>
         <div id="uplow" class="toolset">
           <button class="action" data-action="doAZ"      data-info="Ordenar la lista alfabéticamente de forma ascendente, de la A a la Z.">Ordenar A-Z</button>
             <button class="action" data-action="doZA"      data-info="Ordenar la lista alfabéticamente de forma ascendente, de la A a la Z.">Ordenar Z-A</button>
-            <button class="action" data-action="namesUp"   data-info="Poner en mayúscula la letra inicial de cada palabra (Aa)">1a mayúsc. (Aa)</button>
-            <button class="action" data-action="upperCase" data-info="Convertir a MAYÚSCULAS todas las palabras.">Todo mayúsc. (AA)</button>
-            <button class="action" data-action="lowerCase" data-info="Convertir a minúsculas todas las palabras">Todo minúsc. (aa)</button>
+            <button class="action" data-action="sortByTag" data-info="Ordenar la lista por etiqueta">Ordenar por etiqueta</button>
           </div>
 
         <button class="action" data-target="#groups">Grupos</button>
@@ -181,8 +180,11 @@
             <button class="action" data-action="shuffleList" data-info="Mezcla los elementos de la lista de forma aleatoria.">Mezcla</button>
         </div>
 
-        <button class="action" data-target="#format">Formato</button>
+        <button class="action" data-target="#format" data-info="Herramientas para formatear listas">Formato</button>
         <div id="format" class="toolset">
+            <button class="action" data-action="namesUp"   data-info="Poner en mayúscula la letra inicial de cada palabra (Aa)">1a mayúsc. (Aa)</button>
+            <button class="action" data-action="upperCase" data-info="Convertir a MAYÚSCULAS todas las palabras.">Todo mayúsc. (AA)</button>
+            <button class="action" data-action="lowerCase" data-info="Convertir a minúsculas todas las palabras">Todo minúsc. (aa)</button>
             <button class="action" data-action="cleanLines" data-info="Elimina las líneas en blanco">Limpia lista</button>
             <button class="action" data-action="numberElements" data-info="Numera los elementos de la lista">Numerar</button>
             <button class="action" data-action="removeNumbering" data-info="Elimina la numeración de los elementos">Eliminar numeración</button>

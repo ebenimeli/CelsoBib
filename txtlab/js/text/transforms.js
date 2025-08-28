@@ -73,3 +73,39 @@ export function joinLists() {
   const right = $id(IDS.otext).value.trim();
   $id(IDS.otext).value = right && left ? right + "\n" + left : (right || left);
 }
+
+export function sortByTag() {
+  const input = document.getElementById("itext").value;
+
+  // --- Separar líneas no vacías
+  const lines = input
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0);
+
+  // --- Agrupar por etiquetas
+  const groups = {};
+  lines.forEach((line) => {
+    const parts = line.split("/");
+    const tag = parts.length > 1 ? parts[parts.length - 1].trim() : "";
+    if (!groups[tag]) groups[tag] = [];
+    groups[tag].push(line);
+  });
+
+  // --- Ordenar etiquetas
+  const sortedTags = Object.keys(groups).sort((a, b) =>
+    a.localeCompare(b, "es", { sensitivity: "base" })
+  );
+
+  // --- Ordenar dentro de cada bloque
+  const result = [];
+  sortedTags.forEach((tag) => {
+    const sortedLines = groups[tag].sort((a, b) =>
+      a.localeCompare(b, "es", { sensitivity: "base" })
+    );
+    result.push(...sortedLines);
+  });
+
+  // --- Escribir en el textarea de salida
+  document.getElementById("otext").value = result.join("\n");
+}
