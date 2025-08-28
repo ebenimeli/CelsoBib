@@ -61,7 +61,8 @@ export function randomElements() {
   $id(IDS.otext).value = shuffle(lines).slice(0, n).join("\n");
 }
 
-/** Build 1A + 2B + 1C groups, report leftovers; input format: "Surname, Name / X" */
+/** Build 1A + 2B + 1C groups, report leftovers; 
+ * input format: "Surname, Name / X" */
 export function abbc() {
   const lines = getNames();
   const A = [], B = [], C = [];
@@ -91,16 +92,19 @@ export function abbc() {
     const b1 = Bs.pop(), b2 = Bs.pop();
     const c = Cs.pop();
     const BsSorted = [b1, b2].sort((u, v) => u.name.localeCompare(v.name));
-    out.push(`${a.name} (Grupo ${g} / ${a.tag})`);
-    BsSorted.forEach((b) => out.push(`${b.name} (Grupo ${g} / ${b.tag})`));
-    out.push(`${c.name} (Grupo ${g} / ${c.tag})`);
+
+    // --- Formato nuevo: "Nombre /X (Grupo n)"
+    out.push(`${a.name} /${a.tag} (Grupo ${g})`);
+    BsSorted.forEach((b) => out.push(`${b.name} /${b.tag} (Grupo ${g})`));
+    out.push(`${c.name} /${c.tag} (Grupo ${g})`);
   }
 
   const leftovers = [...As, ...Bs, ...Cs].sort((u, v) => u.name.localeCompare(v.name));
-  leftovers.forEach((m) => out.push(`${m.name} (${m.tag})`));
+  leftovers.forEach((m) => out.push(`${m.name} /${m.tag}`));
 
   $id(IDS.otext).value = out.join("\n");
 }
+
 
 /** Build 1A + 1B + 1C groups, report leftovers; 
  * input format: "Surname, Name / X" */
@@ -109,7 +113,6 @@ export function abc() {
   const A = [], B = [], C = [];
   const re = /^(.*?)(?:\s*\/\s*)([ABCabc])$/;
 
-  
   for (const line of lines) {
     const m = line.match(re);
     if (!m) continue;
@@ -134,17 +137,19 @@ export function abc() {
     const b = Bs.pop();
     const c = Cs.pop();
 
-    // Salida siempre en orden A → B → C
-    out.push(`${a.name} (Grupo ${g} / ${a.tag})`);
-    out.push(`${b.name} (Grupo ${g} / ${b.tag})`);
-    out.push(`${c.name} (Grupo ${g} / ${c.tag})`);
+    // Formato: "Nombre /X (Grupo n)"
+    out.push(`${a.name} /${a.tag} (Grupo ${g})`);
+    out.push(`${b.name} /${b.tag} (Grupo ${g})`);
+    out.push(`${c.name} /${c.tag} (Grupo ${g})`);
   }
 
   const leftovers = [...As, ...Bs, ...Cs].sort((u, v) => u.name.localeCompare(v.name));
-  leftovers.forEach((m) => out.push(`${m.name} (${m.tag})`));
+  leftovers.forEach((m) => out.push(`${m.name} /${m.tag}`));
 
   $id(IDS.otext).value = out.join("\n");
 }
+
+
 
 /** 
  * Agrupa según patrón definido en input#inputtext.
@@ -251,8 +256,12 @@ export function splitList() {
   const numGroups = parseInt($id(IDS.inputtext).value, 10);
   const students = getNames();
 
-  if (isNaN(numGroups) || numGroups <= 0) return $id(IDS.otext).value = "Introduce un número válido de grupos.";
-  if (!students.length) return $id(IDS.otext).value = "La lista está vacía.";
+  if (isNaN(numGroups) || numGroups <= 0) {
+    return $id(IDS.otext).value = "Introduce un número válido de grupos.";
+  }
+  if (!students.length) {
+    return $id(IDS.otext).value = "La lista está vacía.";
+  }
   if (numGroups > students.length) {
     return $id(IDS.otext).value = `No puedes crear ${numGroups} grupos con solo ${students.length} estudiantes.`;
   }
@@ -267,6 +276,9 @@ export function splitList() {
   while (pool.length) groups[numGroups - 1].push(pool.pop());
 
   const out = [];
-  groups.forEach((group, i) => group.forEach((s) => out.push(`${s} / Grupo ${i + 1}`)));
+  groups.forEach((group, i) =>
+    group.forEach((s) => out.push(`${s} (Grupo ${i + 1})`))
+  );
+
   $id(IDS.otext).value = out.join("\n");
 }

@@ -36,6 +36,7 @@ const actionMap = {
   removeNumbering: T.removeNumbering,
   joinLists: T.joinLists,
   sortByTag: T.sortByTag,
+  removeTags: T.removeTags,
 
   // groups
   group2: G.group2,

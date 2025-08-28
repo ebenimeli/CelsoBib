@@ -109,3 +109,27 @@ export function sortByTag() {
   // --- Escribir en el textarea de salida
   document.getElementById("otext").value = result.join("\n");
 }
+
+
+/** Remove "/ TAG" tokens that appear right after a slash, keeping the rest.
+ *  Examples:
+ *   "Lovelace, Ada / A (Grupo 1)"  -> "Lovelace, Ada (Grupo 1)"
+ *   "Nombre / etiqueta-2 — nota"   -> "Nombre — nota"
+ *  It won't remove text in parentheses or anything not immediately the tag.
+ */
+export function removeTags() {
+  const src = $id(IDS.itext).value.split("\n");
+
+  const cleaned = src
+    .map((l) =>
+      l
+        // Quita cualquier ocurrencia " / etiqueta" (etiqueta = secuencia sin espacios ni ()[]{} )
+        .replace(/\s*\/\s*[^\s()[\]{}]+/g, "")
+        // Normaliza espacios sobrantes (por si la barra tenía un espacio antes)
+        .replace(/\s{2,}/g, " ")
+        .trim()
+    )
+    .filter((l) => l.length > 0);
+
+  $id(IDS.otext).value = cleaned.join("\n");
+}
