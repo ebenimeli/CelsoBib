@@ -1,3 +1,19 @@
+- timestamp: 2025-08-29 22:12
+  text: "Lo nuevo de Word te obligará a guardar tus documentos en OneDrive #tech #edu"
+  link: "https://hipertextual.com/software/microsoft-word-obliga-guardar-onedrive/"
+  cat: 'news'
+- timestamp: 2025-08-29 22:11
+  text: "Anthropic usará tus chats con Claude para entrenar su IA #tech #ia"
+  link: "https://hipertextual.com/tecnologia/anthropic-conversaciones-claude-entrenar-ia/"
+  cat: 'news'
+- timestamp: 2025-08-29 22:10
+  text: "El hallazgo de una proteína cerebral abre una vía contra el envejecimiento y la pérdida de memoria #sci"
+  link: "https://www.muyinteresante.com/ciencia/proteina-ftl1-revertir-envejecimiento-cerebral.html"
+  cat: 'news'
+- timestamp: 2025-08-29 22:00
+  text: "Lo que el día dio de sí: #status"
+  link: "https://ift.tt/sDj0UWL"
+  cat: 'say'
 - timestamp: 2025-08-29 08:59
   text: "Me gustó esta publicación de ZhiSu22 en X: « 🏓🤖 Our humanoid robot can now rally over 100 consecutive shots against a human in real table tennis — fully autonomous, sub-second reaction, human-like strikes. #status"
   link: "https://t.co/6DvqhilAjk"
