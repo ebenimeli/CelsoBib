@@ -24,13 +24,36 @@ if (!window.__wmAutowire) {
 }
 
 export function initWriteMode() {
+  // --- Activa layout de write-mode y oculta zona de salida ---
+  const main = document.getElementById("main");
+  if (main) main.classList.add("write-mode-active");
+
+  // Oculta salida
+  ["omenu","otext","statuso"].forEach(id => document.getElementById(id)?.classList.add("is-hidden"));
+  // Muestra entrada
+  ["imenu","itext","statusi"].forEach(id => document.getElementById(id)?.classList.remove("is-hidden"));
+
+  // Limita #imenu a solo copyi, pastei y cleanleft
+  const imenu = document.getElementById("imenu");
+  if (imenu) {
+    // Oculta TODOS los hijos de #imenu...
+    Array.from(imenu.children).forEach(el => el.classList.add("is-hidden"));
+    // ...y muestra solo los tres botones permitidos
+    ["copyi","pastei","cleanleft"].forEach(action => {
+      imenu.querySelector(`button[data-action="${action}"]`)?.classList.remove("is-hidden");
+    });
+  }
+
+  // (por robustez) Ocultar botón left->right en write-mode
+  document.querySelector('button[data-action="lefttoright"]')?.classList.add('is-hidden');
+
   // --- Referencias UI ---
   const inputGoal    = document.getElementById("nwords");
   const goalWords    = document.getElementById("goalWords");
   const currentWords = document.getElementById("currentWords");
   const percWords    = document.getElementById("percWords");
   const progress     = document.getElementById("writeprogress");
-  const textInput    = document.getElementById("itext");      // (si usas #wtext, cámbialo aquí)
+  const textInput    = document.getElementById("itext");      // textarea principal
   const timerEl      = document.getElementById("timer");
   const successDlg   = document.getElementById("success-dialog");
   const quoteEl      = document.querySelector(".quote");
@@ -185,8 +208,7 @@ export function initWriteMode() {
       progress.value = words;
 
       if (words >= goal && !goalReached) {
-        // ✅ COMPROBACIÓN MÍNIMA: solo mostrar el modal si write-mode está montado
-        //    (timerEl existe y está en el DOM)
+        // ✅ Solo mostrar el modal si write-mode está montado
         if (!timerEl?.isConnected) return;
 
         goalReached = true;
@@ -223,7 +245,6 @@ export function initWriteMode() {
   });
 
   textInput.addEventListener("input", () => {
-    // ✅ OPCIONAL: no arrancar ni actualizar si write-mode no está visible
     if (!timerEl?.isConnected) return;
     updateCurrent();
     startTimer(); // autostart al escribir
@@ -233,3 +254,87 @@ export function initWriteMode() {
   btnPause?.addEventListener("click", pauseTimer);
   btnReset?.addEventListener("click", resetTimer);
 }
+
+export function exitWriteMode() {
+  // Quita la clase de layout
+  document.getElementById("main")?.classList.remove("write-mode-active");
+
+  // Muestra todos (restaura visibilidad)
+  ["omenu","otext","statuso","imenu","itext","statusi"].forEach(id => {
+    const el = document.getElementById(id);
+    el?.classList.remove("is-hidden");
+    // Limpia posibles estilos inline
+    el?.style.removeProperty("display");
+    el?.style.removeProperty("width");
+    el?.style.removeProperty("height");
+    el?.style.removeProperty("flex");
+  });
+
+  // Restaura TODOS los hijos de #imenu (vuelve a aparecer el buscador, icono, lefttoright, etc.)
+  const imenu = document.getElementById("imenu");
+  if (imenu) {
+    Array.from(imenu.children).forEach(el => el.classList.remove("is-hidden"));
+  }
+
+  // Restablece posibles estilos forzados en #main
+  const main = document.getElementById("main");
+  main?.style.removeProperty("display");
+  main?.style.removeProperty("flex-direction");
+  main?.style.removeProperty("gap");
+  main?.style.removeProperty("align-items");
+
+  // Forzar esquema base, tipografía y tamaño por defecto en #itext
+  resetSchemeToTheme();
+
+  // Limpieza: timers
+  if (window.__wmInterval) {
+    clearInterval(window.__wmInterval);
+    window.__wmInterval = null;
+  }
+}
+
+function resetSchemeToTheme() {
+  const itxt = document.getElementById("itext");
+  if (!itxt) return;
+
+  // Quitar cualquier clase scheme-*
+  [...itxt.classList]
+    .filter(c => c.startsWith("scheme-"))
+    .forEach(c => itxt.classList.remove(c));
+
+  // ⚙️ Valores por defecto al cargar la app
+  const DEFAULT_FONT_FAMILY = "system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,sans-serif";
+  const DEFAULT_FONT_SIZE_REM = 1.0;
+
+  // Aplicar tipografía y tamaño por defecto
+  itxt.style.setProperty("--write-font-family", DEFAULT_FONT_FAMILY);
+  itxt.style.setProperty("--write-font-size", `${DEFAULT_FONT_SIZE_REM}rem`);
+
+  // Actualizar (opcional) controles visibles si existen
+  const selFamily = document.getElementById("font-family-select");
+  if (selFamily) selFamily.value = DEFAULT_FONT_FAMILY;
+
+  const sizeDisplay = document.getElementById("font-size-display");
+  if (sizeDisplay) sizeDisplay.textContent = `${DEFAULT_FONT_SIZE_REM.toFixed(1)}rem`;
+
+  // Guardar en localStorage como estado base
+  localStorage.setItem("write.fontFamily", DEFAULT_FONT_FAMILY);
+  localStorage.setItem("write.fontSize", String(DEFAULT_FONT_SIZE_REM));
+  localStorage.setItem("write.colorScheme", "theme");
+}
+
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-target]");
+  if (!btn) return;
+
+  const target = btn.getAttribute("data-target");
+  if (target !== "#write-mode") {
+    // Vamos a otro panel → sal de write-mode
+    try { exitWriteMode(); } catch (_) {}
+  } else {
+    // Entramos en write-mode → init
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      try { initWriteMode(); } catch (err) { console.warn(err); }
+    }));
+  }
+});

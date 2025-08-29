@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="css/03-components.css">
     <link rel="stylesheet" href="css/04-dialogs.css">
     <link rel="stylesheet" href="css/05-utilities.css">
+    <link rel="stylesheet" href="css/06-format.css">
     <link rel="stylesheet" href="css/99-theme.css">
 
     <link rel="stylesheet"
@@ -89,38 +90,88 @@
 
       <!-- WRITE -->
       <template id="write-mode">
-        <section class="text">
-          <p class="quote"></p>
+        <fieldset class="quote-fieldset">
+          <legend>Cita del día</legend>
+          <p class="quote">“Escribe algo que merezca la pena ser leído.”</p>
+        </fieldset>
 
-          <label for="writeprogress">
-            <span id="currentWords">0</span>/<span id="goalWords">250</span> palabras
-            (<span id="percWords">0 %</span>)
-          </label>
-          <progress id="writeprogress" value="" max="100"></progress>
+        <fieldset class="progress-fieldset">
+          <legend>Objetivo</legend>
 
-          <p class="wpm">0 palabras/min</p>
-
-          <p>Objetivo de palabras</p>
-          <div class="input-wrapper">
-            <i class="fa-solid fa-keyboard"></i>
-            <input type="text" id="nwords" placeholder="N" value="250"/>
-          </div>
-        </section>
-
-        <div id="timer" aria-live="polite">00:00:00</div>
-
-        <div class="timer-controls">
-          <button id="timer-play"  type="button" class="action" title="Iniciar / Reanudar">
-            <i class="fa-solid fa-play"></i>
-          </button>
-          <button id="timer-pause" type="button" class="action" title="Pausar">
-            <i class="fa-solid fa-pause"></i>
-          </button>
-          <button id="timer-reset" type="button" class="action" title="Reiniciar">
-            <i class="fa-solid fa-rotate-left"></i>
-          </button>
+        <label for="writeprogress">
+        <div class="input-wrapper">
+          <i class="fa-solid fa-keyboard"></i>
+          <input type="text" id="nwords" placeholder="N" value="250"/>
         </div>
+        <span id="currentWords">0</span>/<span id="goalWords">250</span> palabras (<span id="percWords">0 %</span>)
+        </label>
+        <progress id="writeprogress" value="" max="100"></progress>
+        <p class="wpm">0 palabras/min</p>
+      </fieldset>
+
+<fieldset class="timer-fieldset">
+  <legend>Temporizador</legend>
+
+  <div id="timer" aria-live="polite">00:00:00</div>
+
+  <div class="timer-controls">
+    <button id="timer-play" type="button" class="action" title="Iniciar / Reanudar">
+      <i class="fa-solid fa-play"></i>
+    </button>
+    <button id="timer-pause" type="button" class="action" title="Pausar">
+      <i class="fa-solid fa-pause"></i>
+    </button>
+    <button id="timer-reset" type="button" class="action" title="Reiniciar">
+      <i class="fa-solid fa-rotate-left"></i>
+    </button>
+  </div>
+</fieldset>
+
+
+<!-- CONTROLES DE FORMATO PARA REDACCIÓN -->
+<fieldset class="format-controls">
+  <legend>Formato</legend>
+
+  <div class="format-row">
+    <label class="format-label"></label>
+    <div class="btn-group" aria-label="Tamaño de letra">
+      <button type="button" class="action" id="font-smaller" title="Reducir tamaño">
+        <i class="fa-solid fa-minus"></i>
+      </button>aA
+      <button type="button" class="action" id="font-bigger" title="Aumentar tamaño">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+      <button type="button" class="action ghost" id="font-reset" title="Restaurar tamaño por defecto">
+        <i class="fa-solid fa-rotate-left"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="format-row">
+    <label for="font-family-select" class="format-label"></label>
+    <select id="font-family-select" class="select">
+      <option value="system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,sans-serif">Sans (sistema)</option>
+      <option value="Georgia,Times New Roman,Times,serif">Serif</option>
+      <option value="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Roboto Mono,monospace">Monospace</option>
+      <option value="'Catamaran',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,sans-serif">Catamaran</option>
+      <option value="'Prestige Elite Std',ui-monospace,Consolas,monospace">Prestige Elite</option>
+     <option value="'GNUTypewriter', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Roboto Mono', monospace">GNUTypewriter</option>
+    </select>
+  </div>
+
+  <div class="format-row">
+    <label for="scheme-select" class="format-label"></label>
+    <select id="scheme-select" class="select">
+      <option value="theme">Base</option>
+      <option value="default">Claro</option>
+      <option value="dark">Oscuro</option>
+      <option value="retro">Retro</option>
+    </select>
+  </div>
+</fieldset>
+
       </template>
+
 
       <!-- MENÚ 1 · tblists -->
       <template id="tblists">
@@ -183,12 +234,13 @@
         <button class="action" data-target="#format" data-info="Herramientas para formatear listas">Formato</button>
         <div id="format" class="toolset">
             <button class="action" data-action="namesUp"   data-info="Poner en mayúscula la letra inicial de cada palabra (Aa)">1a mayúsc. (Aa)</button>
-            <button class="action" data-action="upperCase" data-info="Convertir a MAYÚSCULAS todas las palabras.">Todo mayúsc. (AA)</button>
-            <button class="action" data-action="lowerCase" data-info="Convertir a minúsculas todas las palabras">Todo minúsc. (aa)</button>
-            <button class="action" data-action="cleanLines" data-info="Elimina las líneas en blanco">Limpia lista</button>
+            <button class="action" data-action="upperCase" data-info="Convertir a MAYÚSCULAS todas las palabras.">Mayúsc. (AA)</button>
+            <button class="action" data-action="lowerCase" data-info="Convertir a minúsculas todas las palabras">minúsc. (aa)</button>
+            <button class="action" data-action="cleanLines" data-info="Elimina las líneas en blanco">Limpiar lista</button>
             <button class="action" data-action="numberElements" data-info="Numera los elementos de la lista">Numerar</button>
             <button class="action" data-action="removeNumbering" data-info="Elimina la numeración de los elementos">Eliminar numeración</button>
             <button class="action" data-action="removeTags" data-info="Elimina las etiquetas de los elementos">Eliminar etiquetas</button>
+            <button class="action" data-action="toCheckList" data-info="Transforma la lista en una lista de comprobación">Lista de tareas</button>
           </div>
       </template>
 
@@ -219,8 +271,10 @@
             <button data-action="cleanright"><i class="fa-solid fa-xmark"></i></button>
             <button data-action="copyo"><i class="fa-regular fa-copy"></i></button>
             <button data-action="pasteo"><i class="fa-regular fa-paste"></i></button>
+            <button data-action="printo" title="Imprimir"><i class="fa-solid fa-print"></i></button>
+
           </div>
-          <textarea id="itext" class="box"></textarea>
+          <textarea id="itext" class="box" autofocus></textarea>
           <textarea id="otext" class="box"></textarea>
           <div id="statusi" class="metainfo">Status I</div>
           <div id="statuso" class="metainfo">Status O</div>

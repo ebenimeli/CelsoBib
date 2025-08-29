@@ -101,8 +101,9 @@
 
   #imenu > i,
   input#searchtext,
-  button[data-action="copyi"],
-  button[data-action="copyo"] {
+  /*button[data-action="copyi"],*/
+  button[data-action="copyo"], 
+  button[data-action="printo"] {
     display: none;
   }
 }

@@ -43,6 +43,9 @@
 
   /* Indica a los UA que soportas ambos esquemas */
   color-scheme: light dark;
+
+  --c-surface: #ffffff;         /* fondo de controles */
+
 }
 
 /* Auto DARK según el sistema */
@@ -53,6 +56,7 @@
     --c-accent: #4da3ff;
     --c-muted: #222222;
     --c-border: rgba(255,255,255,.45);
+    --c-surface: #1e1e1e;       /* superficie oscura para inputs/selects */
   }
 }
 
@@ -65,6 +69,8 @@
     --c-border: rgba(0,0,0,.6);
     --bg-mainbutton: #dcdcdc;
     color-scheme: light;
+    --c-surface: #ffffff;
+
 }
 :root[data-theme="dark"] {
   --c-bg: #111111;
@@ -75,6 +81,8 @@
   --c-border: rgba(255,255,255,.45);
   --bg-mainbutton: #2F4F4F;
   color-scheme: dark;
+  --c-surface: #1e1e1e;
+
 }
 
 /* =========================

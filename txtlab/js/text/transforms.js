@@ -133,3 +133,12 @@ export function removeTags() {
 
   $id(IDS.otext).value = cleaned.join("\n");
 }
+
+/** Convert list into checklist with big ballot box, ignoring empty lines */
+export function toCheckList() {
+  const lines = getLinesFromValue($id(IDS.itext).value)
+    .filter(line => line.trim() !== ""); // ignora vacías
+  const checked = lines.map(line => `☐ ${line}`);
+  $id(IDS.otext).value = checked.join("\n");
+}
+
