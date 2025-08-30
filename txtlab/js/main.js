@@ -10,13 +10,13 @@ import { wireCounters } from "./ui/counters.js";
 
 import * as T from "./text/transforms.js";
 import * as G from "./text/groups.js";
+import * as S from "./text/stats.js";
 import { wireLiveSearch } from "./text/search.js";
 import { copyInput, copyOutput, pasteInput, pasteOutput } from "./clipboard/clipboard.js";
 
 // import genérico de listas
 import * as X from "./text/example.js";
 
-// --- NUEVO: impresión
 import { printO } from "./ui/print.js";
 
 /* ============================
@@ -94,6 +94,9 @@ const actionMap = {
   sortABC: G.sortABC,
   splitList: G.splitList,
 
+  calcWordFreq: S.calcWordFreq,
+  calcCharFreq: S.calcCharFreq,
+
   // clipboard
   copyi: copyInput,
   copyo: copyOutput,
@@ -102,6 +105,7 @@ const actionMap = {
 
   // importar lista desde assets/data/*.txt
   importList: X.importList,
+  importText: X.importText,
 
   // PRINT
   printo: () => printO("otext", "Imprimir · txtlab", { autoClose: false }),

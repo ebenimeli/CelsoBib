@@ -1,351 +1,442 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCTF9SC59D"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-GCTF9SC59D');
-    </script>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>txtlab: un laboratotio para el texto</title>
-    <meta name="description" content="txtlab es una caja de herramientas para procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos."/>
-    <meta name="author" content="Enrique Benimeli" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
-    <meta name="color-scheme" content="light dark">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCTF9SC59D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-GCTF9SC59D');
+  </script>
 
-    <!-- Open Graph + Twitter -->
-    <link rel="canonical" href="https://www.ebenimeli.org/txtlab/">
-    <meta property="og:title" content="txtlab: ordena tu texto">
-    <meta property="og:description" content="txtlab es una caja de herramientas para procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.ebenimeli.org/txtlab/">
-    <meta property="og:site_name" content="txtlab">
-    <meta property="og:locale" content="es_ES">
-    <meta property="og:image" content="https://www.ebenimeli.org/txtlab/assets/og/txtlab-og.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Logo de txtlab y vista de la app">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="txtlab: ordena tu texto">
-    <meta name="twitter:description" content="Caja de herramientas para procesar y transformar texto en tu navegador.">
-    <meta name="twitter:image" content="https://www.ebenimeli.org/txtlab/assets/og/txtlab-og.jpg">
-    <meta name="twitter:site" content="@enriquebenimeli">
-    <meta name="theme-color" content="#111111">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>txtlab: un laboratotio para el texto</title>
+  <meta name="description"
+    content="txtlab es una caja de herramientas para procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos." />
+  <meta name="author" content="Enrique Benimeli" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <meta name="color-scheme" content="light dark">
 
-    <link rel="stylesheet" href="css/01-base.css">
-    <link rel="stylesheet" href="css/02-layout.css">
-    <link rel="stylesheet" href="css/03-components.css">
-    <link rel="stylesheet" href="css/04-dialogs.css">
-    <link rel="stylesheet" href="css/05-utilities.css">
-    <link rel="stylesheet" href="css/06-format.css">
-    <link rel="stylesheet" href="css/99-theme.css">
+  <!-- Open Graph + Twitter -->
+  <link rel="canonical" href="https://www.ebenimeli.org/txtlab/">
+  <meta property="og:title" content="txtlab: ordena tu texto">
+  <meta property="og:description"
+    content="txtlab es una caja de herramientas para procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ebenimeli.org/txtlab/">
+  <meta property="og:site_name" content="txtlab">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.ebenimeli.org/txtlab/assets/og/txtlab-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo de txtlab y vista de la app">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="txtlab: ordena tu texto">
+  <meta name="twitter:description" content="Caja de herramientas para procesar y transformar texto en tu navegador.">
+  <meta name="twitter:image" content="https://www.ebenimeli.org/txtlab/assets/og/txtlab-og.jpg">
+  <meta name="twitter:site" content="@enriquebenimeli">
+  <meta name="theme-color" content="#111111">
 
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body>
-    <section class="container">
-      <div id="topleft" class="mainbox">
-        <a href="">
-          <i class="fa-solid fa-gear"></i>
-          <span class="productname"><strong>txt</strong>lab</span>
-        </a>
-      </div>
+  <link rel="stylesheet" href="css/01-base.css">
+  <link rel="stylesheet" href="css/02-layout.css">
+  <link rel="stylesheet" href="css/03-components.css">
+  <link rel="stylesheet" href="css/04-dialogs.css">
+  <link rel="stylesheet" href="css/05-utilities.css">
+  <link rel="stylesheet" href="css/06-format.css">
+  <link rel="stylesheet" href="css/99-theme.css">
 
-      <header>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-        <button class="tool" data-target="#about" data-info="Acerca de...">
-          <i class="fa-solid fa-circle-question"></i>
-        </button>
+<body>
+  <section class="container">
+    <div id="topleft" class="mainbox">
+      <a href="">
+        <i class="fa-solid fa-gear"></i>
+        <span class="productname"><strong>txt</strong>lab</span>
+      </a>
+    </div>
 
-        <!-- MÓDULO PARA ESCRIBIR -->
-        <button data-target="#write-mode" class="tool" title="Escribir">
-          <i class="fa-solid fa-pen-to-square"></i>
-        </button>
+    <header>
+      <!-- HOME -->
+      <button class="tool" data-target="#about" data-info="Acerca de...">
+        <i class="fa-solid fa-circle-question"></i>
+      </button>
 
-        <!-- MENÚS -->
-        <button class="tool" data-target="#tblists" data-info="Transformación de listas">
-          <i class="fa-solid fa-list"></i>
-        </button>
+      <!-- MÓDULO PARA ESCRIBIR -->
+      <button data-target="#write-mode" class="tool" title="Escribir">
+        <i class="fa-solid fa-pen-to-square"></i>
+      </button>
 
+      <!-- LISTAS -->
+      <button class="tool" data-target="#tblists" data-info="Transformación de listas">
+        <i class="fa-solid fa-list"></i>
+      </button>
 
-        <!-- CAMBIO TEMA -->
-        <button id="theme-toggle" class="tool" title="Cambiar tema">
-          <i class="fa-solid fa-moon"></i>
-        </button>
-      </header>
+      <!-- ANÁLISIS ESTADÍSTICO -->
+      <button class="tool" data-target="#stats" data-info="Anális estadístico">
+        <i class="fa-solid fa-chart-simple"></i>
+      </button>
 
-      <!-- Menú lateral -->
-      <aside>
-        <div id="sidebar" class="box"></div>
-      </aside>
+      <!-- CAMBIO TEMA -->
+      <button id="theme-toggle" class="tool" title="Cambiar tema">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </header>
 
-      <!-- WRITE -->
-      <template id="write-mode">
-        <fieldset class="quote-fieldset">
-          <legend>Cita del día</legend>
-          <p class="quote">“Escribe algo que merezca la pena ser leído.”</p>
-        </fieldset>
+    <!-- Menú lateral -->
+    <aside>
+      <div id="sidebar" class="box"></div>
+    </aside>
 
-        <fieldset class="progress-fieldset">
-          <legend>Objetivo</legend>
+    <!-- WRITE -->
+    <template id="write-mode">
+      <fieldset class="quote-fieldset">
+        <legend>Cita del día</legend>
+        <p class="quote">“Escribe algo que merezca la pena ser leído.”</p>
+      </fieldset>
+
+      <fieldset class="progress-fieldset">
+        <legend>Objetivo</legend>
 
         <label for="writeprogress">
-        <div class="input-wrapper">
-          <i class="fa-solid fa-keyboard"></i>
-          <input type="text" id="nwords" placeholder="N" value="250"/>
-        </div>
-        <span id="currentWords">0</span>/<span id="goalWords">250</span> palabras (<span id="percWords">0 %</span>)
+          <div class="input-wrapper">
+            <i class="fa-solid fa-keyboard"></i>
+            <input type="text" id="nwords" placeholder="N" value="250" />
+          </div>
+          <span id="currentWords">0</span>/<span id="goalWords">250</span> palabras (<span id="percWords">0 %</span>)
         </label>
         <progress id="writeprogress" value="" max="100"></progress>
         <p class="wpm">0 palabras/min</p>
       </fieldset>
 
-<fieldset class="timer-fieldset">
-  <legend>Temporizador</legend>
+      <fieldset class="timer-fieldset">
+        <legend>Temporizador</legend>
 
-  <div id="timer" aria-live="polite">00:00:00</div>
+        <div id="timer" aria-live="polite">00:00:00</div>
 
-  <div class="timer-controls">
-    <button id="timer-play" type="button" class="action" title="Iniciar / Reanudar">
-      <i class="fa-solid fa-play"></i>
-    </button>
-    <button id="timer-pause" type="button" class="action" title="Pausar">
-      <i class="fa-solid fa-pause"></i>
-    </button>
-    <button id="timer-reset" type="button" class="action" title="Reiniciar">
-      <i class="fa-solid fa-rotate-left"></i>
-    </button>
-  </div>
-</fieldset>
-
-
-<!-- CONTROLES DE FORMATO PARA REDACCIÓN -->
-<fieldset class="format-controls">
-  <legend>Formato</legend>
-
-  <div class="format-row">
-    <label class="format-label"></label>
-    <div class="btn-group" aria-label="Tamaño de letra">
-      <button type="button" class="action" id="font-smaller" title="Reducir tamaño">
-        <i class="fa-solid fa-minus"></i>
-      </button>aA
-      <button type="button" class="action" id="font-bigger" title="Aumentar tamaño">
-        <i class="fa-solid fa-plus"></i>
-      </button>
-      <button type="button" class="action ghost" id="font-reset" title="Restaurar tamaño por defecto">
-        <i class="fa-solid fa-rotate-left"></i>
-      </button>
-    </div>
-  </div>
-
-  <div class="format-row">
-    <label for="font-family-select" class="format-label"></label>
-    <select id="font-family-select" class="select">
-      <option value="system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,sans-serif">Sans (sistema)</option>
-      <option value="Georgia,Times New Roman,Times,serif">Serif</option>
-      <option value="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Roboto Mono,monospace">Monospace</option>
-      <option value="'Catamaran',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,sans-serif">Catamaran</option>
-      <option value="'Prestige Elite Std',ui-monospace,Consolas,monospace">Prestige Elite</option>
-     <option value="'GNUTypewriter', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Roboto Mono', monospace">GNUTypewriter</option>
-    </select>
-  </div>
-
-  <div class="format-row">
-    <label for="scheme-select" class="format-label"></label>
-    <select id="scheme-select" class="select">
-      <option value="theme">Base</option>
-      <option value="default">Claro</option>
-      <option value="dark">Oscuro</option>
-      <option value="retro">Retro</option>
-    </select>
-  </div>
-</fieldset>
-
-      </template>
-
-
-      <!-- MENÚ 1 · tblists -->
-      <template id="tblists">
-        <div class="input-wrapper">
-          <i class="fa-solid fa-keyboard"></i>
-          <input type="text" id="inputtext" placeholder="N" />
-        </div>
-
-        <section id="info" role="status" aria-live="polite">
-          Con estas herramientas puedes ordenar, agrupar y formatear listas de elementos.
-        </section>
-
-        <button class="action" data-target="#examples" data-info="Listas de ejemplo">Ejemplos</button>
-        <div id="examples" class="toolset">
-          <button class="action" data-action="importList" data-file="cspeople.txt">
-            Personas
+        <div class="timer-controls">
+          <button id="timer-play" type="button" class="action" title="Iniciar / Reanudar">
+            <i class="fa-solid fa-play"></i>
           </button>
-          <button class="action" data-action="importList" data-file="days.txt">
-            Días del año
+          <button id="timer-pause" type="button" class="action" title="Pausar">
+            <i class="fa-solid fa-pause"></i>
           </button>
-          <button class="action" data-action="importList" data-file="animals.txt">
-            Animales
-          </button>
-          <button class="action" data-action="importList" data-file="countries.txt">
-            Países
-          </button>
-          <button class="action" data-action="importList" data-file="writers.txt">
-            Escritores
+          <button id="timer-reset" type="button" class="action" title="Reiniciar">
+            <i class="fa-solid fa-rotate-left"></i>
           </button>
         </div>
+      </fieldset>
 
 
-        <button class="action" data-target="#uplow" data-info="Herramientas para ordenar listas">Ordenar</button>
-        <div id="uplow" class="toolset">
-          <button class="action" data-action="doAZ"      data-info="Ordenar la lista alfabéticamente de forma ascendente, de la A a la Z.">Ordenar A-Z</button>
-            <button class="action" data-action="doZA"      data-info="Ordenar la lista alfabéticamente de forma ascendente, de la A a la Z.">Ordenar Z-A</button>
-            <button class="action" data-action="sortByTag" data-info="Ordenar la lista por etiqueta">Ordenar por etiqueta</button>
+      <!-- CONTROLES DE FORMATO PARA REDACCIÓN -->
+      <fieldset class="format-controls">
+        <legend>Formato</legend>
+
+        <div class="format-row">
+          <label class="format-label"></label>
+          <div class="btn-group" aria-label="Tamaño de letra">
+            <button type="button" class="action" id="font-smaller" title="Reducir tamaño">
+              <i class="fa-solid fa-minus"></i>
+            </button>aA
+            <button type="button" class="action" id="font-bigger" title="Aumentar tamaño">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <button type="button" class="action ghost" id="font-reset" title="Restaurar tamaño por defecto">
+              <i class="fa-solid fa-rotate-left"></i>
+            </button>
           </div>
-
-        <button class="action" data-target="#groups">Grupos</button>
-        <div id="groups" class="toolset">
-            <button class="action" data-action="group2" data-info="Asignar parejas">x2</button>
-            <button class="action" data-action="group3" data-info="Organizar grupos de 3">x3</button>
-            <button class="action" data-action="group4" data-info="Organizar grupos de 4">x4</button>
-            <button class="action" data-action="groupX" data-info="Organizar grupos de X elementos. Especificar el valor de N en el cuadro de texto.">Grupos de N</button>
-            <button class="action" data-action="splitList" data-info="Organizar N grupos. Especificar el valor de N en el cuadro de texto.">N grupos</button>
-            <button class="action" data-action="sortABC" data-info="Ordena los elemento en 3 bloques A, B y C consecutivos.">Ordenar A-B-C</button>
-            <button class="action" data-action="abc" data-info="Organiza de forma aleatoria grupos de 3 elementos: 1xA, 1xB y 1xC.">Grupos ABC</button>
-            <button class="action" data-action="abbc" data-info="Crea de forma aleatoria grupos de 4 con 1xA, 2xB y 1xC en cada grupo.">Grupos ABBC</button>
-            <button class="action" data-action="groupByPattern" data-info="Crea de forma aleatoria grupos según el patrón especificado.">Grupos por patrón</button>
-            <button class="action" data-action="joinLists" data-info="Fusiona las dos listas de forma consecutiva: primero la lista de la izquierda y luego la de la derecha.">Fusiona</button>
         </div>
 
-        <button class="action" data-target="#random">Al azar</button>
-        <div id="random" class="toolset">
-            <button class="action" data-action="randomElements" data-info="Selecciona N elementos de la lista. El valor de N se especifica en el cuadro de texto.">Selecciona N</button>
-            <button class="action" data-action="shuffleList" data-info="Mezcla los elementos de la lista de forma aleatoria.">Mezcla</button>
+        <div class="format-row">
+          <label for="font-family-select" class="format-label"></label>
+          <select id="font-family-select" class="select">
+            <option
+              value="system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,sans-serif">Sans
+              (sistema)</option>
+            <option value="Georgia,Times New Roman,Times,serif">Serif</option>
+            <option value="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Roboto Mono,monospace">Monospace</option>
+            <option
+              value="'Catamaran',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,sans-serif">
+              Catamaran</option>
+            <option value="'Prestige Elite Std',ui-monospace,Consolas,monospace">Prestige Elite</option>
+            <option
+              value="'GNUTypewriter', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Roboto Mono', monospace">
+              GNUTypewriter</option>
+          </select>
         </div>
 
-        <button class="action" data-target="#format" data-info="Herramientas para formatear listas">Formato</button>
-        <div id="format" class="toolset">
-            <button class="action" data-action="namesUp"   data-info="Poner en mayúscula la letra inicial de cada palabra (Aa)">1a mayúsc. (Aa)</button>
-            <button class="action" data-action="upperCase" data-info="Convertir a MAYÚSCULAS todas las palabras.">Mayúsc. (AA)</button>
-            <button class="action" data-action="lowerCase" data-info="Convertir a minúsculas todas las palabras">minúsc. (aa)</button>
-            <button class="action" data-action="cleanLines" data-info="Elimina las líneas en blanco">Limpiar lista</button>
-            <button class="action" data-action="numberElements" data-info="Numera los elementos de la lista">Numerar</button>
-            <button class="action" data-action="removeNumbering" data-info="Elimina la numeración de los elementos">Eliminar numeración</button>
-            <button class="action" data-action="removeTags" data-info="Elimina las etiquetas de los elementos">Eliminar etiquetas</button>
-            <button class="action" data-action="toCheckList" data-info="Transforma la lista en una lista de comprobación">Lista de tareas</button>
-          </div>
-      </template>
-
-      <template id="about" data-default>
-        <section class="text">
-          <h1><i class="fa-solid fa-circle-question"></i>&nbsp;¿Qué es txtlab?</h1>
-          <p>Esto es una caja de herramientas para procesar y transformar texto. Por ejemplo, puedes procesar listas desde el menú <i class="fa-solid fa-list"></i>. O puedes empezar a escribir desde el menú <i class="fa-solid fa-pen-to-square"></i>.</p>
-          <h1><i class="fa-solid fa-lock"></i>&nbsp;Protección de datos</h1>
-          <p>Esta aplicación web <u>no almacena ni envía</u> datos a Internet. Todo se procesa en tu ordenador y nunca sale de él.</p>
-          <h1><i class="fa-solid fa-address-card"></i>&nbsp;Autor</h1>
-          <p>Este es un proyecto de <a href="https://www.ebenimeli.org" target="_blank">Enrique Benimeli</a>. Si tienes alguna sugerencia, puedes <a href="https://www.ebenimeli.org/contact/" target="_blank>">contactar</a>.</p>
-        </section>
-      </template>
-
-      <!-- ZONA PRINCIPAL -->
-      <main>
-        <div id="main" class="box">
-          <div id="imenu" class="box control">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="searchtext" placeholder="Busca..." />
-            <button data-action="copyi"><i class="fa-regular fa-copy"></i></button>
-            <button data-action="pastei"><i class="fa-regular fa-paste"></i></button>
-            <button data-action="cleanleft"><i class="fa-solid fa-xmark"></i></button>
-            <button data-action="lefttoright"><i class="fa-solid fa-arrow-right"></i></button>
-          </div>
-          <div id="omenu" class="box control">
-            <button data-action="righttoleft"><i class="fa-solid fa-arrow-left"></i></button>
-            <button data-action="cleanright"><i class="fa-solid fa-xmark"></i></button>
-            <button data-action="copyo"><i class="fa-regular fa-copy"></i></button>
-            <button data-action="pasteo"><i class="fa-regular fa-paste"></i></button>
-            <button data-action="printo" title="Imprimir"><i class="fa-solid fa-print"></i></button>
-
-          </div>
-          <textarea id="itext" class="box" autofocus></textarea>
-          <textarea id="otext" class="box"></textarea>
-          <div id="statusi" class="metainfo">Status I</div>
-          <div id="statuso" class="metainfo">Status O</div>
+        <div class="format-row">
+          <label for="scheme-select" class="format-label"></label>
+          <select id="scheme-select" class="select">
+            <option value="theme">Base</option>
+            <option value="default">Claro</option>
+            <option value="dark">Oscuro</option>
+            <option value="retro">Retro</option>
+          </select>
         </div>
-      </main>
+      </fieldset>
 
-      <footer>
-        <div id="footer" class="box">
-          <p class="share">
-            <a href="https://www.ebenimeli.org" target="_blank"><img class="icon" src="assets/img/icons/web.svg"></a>
-            <a href="https://x.com/enriquebenimeli" target="_blank"><img class="icon" src="assets/img/icons/x.svg"></a>
-            <a href="https://www.instagram.com/ebenimeli/" target="_blank"><img class="icon" src="assets/img/icons/instagram.svg"></a>
-            <a href="https://linkedin.com/in/ebenimeli" target="_blank"><img class="icon" src="assets/img/icons/linkedin.svg"></a>
-            <a href="https://substack.com/@ebenimeli" target="_blank"><img class="icon" src="assets/img/icons/substack.svg"></a>
-          </p>
+    </template>
+
+
+    <!-- MENÚ 1 · tblists -->
+    <template id="tblists">
+      <div class="input-wrapper">
+        <i class="fa-solid fa-keyboard"></i>
+        <input type="text" id="inputtext" placeholder="N" />
+      </div>
+
+      <section id="info" role="status" aria-live="polite">
+        Con estas herramientas puedes ordenar, agrupar y formatear listas de elementos.
+      </section>
+
+      <button class="action" data-target="#examples" data-info="Listas de ejemplo">Ejemplos</button>
+      <div id="examples" class="toolset">
+        <button class="action" data-action="importList" data-file="cspeople.txt">
+          Personas
+        </button>
+        <button class="action" data-action="importList" data-file="days.txt">
+          Días del año
+        </button>
+        <button class="action" data-action="importList" data-file="animals.txt">
+          Animales
+        </button>
+        <button class="action" data-action="importList" data-file="countries.txt">
+          Países
+        </button>
+        <button class="action" data-action="importList" data-file="writers.txt">
+          Escritores
+        </button>
+      </div>
+
+
+      <button class="action" data-target="#uplow" data-info="Herramientas para ordenar listas">Ordenar</button>
+      <div id="uplow" class="toolset">
+        <button class="action" data-action="doAZ"
+          data-info="Ordenar la lista alfabéticamente de forma ascendente, de la A a la Z.">Ordenar A-Z</button>
+        <button class="action" data-action="doZA"
+          data-info="Ordenar la lista alfabéticamente de forma ascendente, de la A a la Z.">Ordenar Z-A</button>
+        <button class="action" data-action="sortByTag" data-info="Ordenar la lista por etiqueta">Ordenar por
+          etiqueta</button>
+      </div>
+
+      <button class="action" data-target="#groups">Grupos</button>
+      <div id="groups" class="toolset">
+        <button class="action" data-action="group2" data-info="Asignar parejas">x2</button>
+        <button class="action" data-action="group3" data-info="Organizar grupos de 3">x3</button>
+        <button class="action" data-action="group4" data-info="Organizar grupos de 4">x4</button>
+        <button class="action" data-action="groupX"
+          data-info="Organizar grupos de X elementos. Especificar el valor de N en el cuadro de texto.">Grupos de
+          N</button>
+        <button class="action" data-action="splitList"
+          data-info="Organizar N grupos. Especificar el valor de N en el cuadro de texto.">N grupos</button>
+        <button class="action" data-action="sortABC"
+          data-info="Ordena los elemento en 3 bloques A, B y C consecutivos.">Ordenar A-B-C</button>
+        <button class="action" data-action="abc"
+          data-info="Organiza de forma aleatoria grupos de 3 elementos: 1xA, 1xB y 1xC.">Grupos ABC</button>
+        <button class="action" data-action="abbc"
+          data-info="Crea de forma aleatoria grupos de 4 con 1xA, 2xB y 1xC en cada grupo.">Grupos ABBC</button>
+        <button class="action" data-action="groupByPattern"
+          data-info="Crea de forma aleatoria grupos según el patrón especificado.">Grupos por patrón</button>
+        <button class="action" data-action="joinLists"
+          data-info="Fusiona las dos listas de forma consecutiva: primero la lista de la izquierda y luego la de la derecha.">Fusiona</button>
+      </div>
+
+      <button class="action" data-target="#random">Al azar</button>
+      <div id="random" class="toolset">
+        <button class="action" data-action="randomElements"
+          data-info="Selecciona N elementos de la lista. El valor de N se especifica en el cuadro de texto.">Selecciona
+          N</button>
+        <button class="action" data-action="shuffleList"
+          data-info="Mezcla los elementos de la lista de forma aleatoria.">Mezcla</button>
+      </div>
+
+      <button class="action" data-target="#format" data-info="Herramientas para formatear listas">Formato</button>
+      <div id="format" class="toolset">
+        <button class="action" data-action="namesUp"
+          data-info="Poner en mayúscula la letra inicial de cada palabra (Aa)">1a mayúsc. (Aa)</button>
+        <button class="action" data-action="upperCase" data-info="Convertir a MAYÚSCULAS todas las palabras.">Mayúsc.
+          (AA)</button>
+        <button class="action" data-action="lowerCase" data-info="Convertir a minúsculas todas las palabras">minúsc.
+          (aa)</button>
+        <button class="action" data-action="cleanLines" data-info="Elimina las líneas en blanco">Limpiar lista</button>
+        <button class="action" data-action="numberElements"
+          data-info="Numera los elementos de la lista">Numerar</button>
+        <button class="action" data-action="removeNumbering" data-info="Elimina la numeración de los elementos">Eliminar
+          numeración</button>
+        <button class="action" data-action="removeTags" data-info="Elimina las etiquetas de los elementos">Eliminar
+          etiquetas</button>
+        <button class="action" data-action="toCheckList"
+          data-info="Transforma la lista en una lista de comprobación">Lista de tareas</button>
+      </div>
+    </template>
+
+
+    <!-- TEMPLATE: ANÁLISIS ESTADÍSTICO -->
+    <template id="stats">
+      <div class="input-wrapper">
+        <i class="fa-solid fa-keyboard"></i><input type="text" id="inputstats" placeholder="X" />
+      </div>
+
+      <section id="info" role="status" aria-live="polite">
+        Con estas herramientas puedes realizar cálculos estadísticos.
+      </section>
+
+      <button class="action" data-target="#texts" data-info="Textos de ejemplo">Ejemplos</button>
+      <div id="texts" class="toolset">
+        <button class="action" data-action="importText" data-file="adalovelace_es.txt">
+          Ada Lovelace (ES)
+        </button>
+            <button class="action" data-action="importText" data-file="adalovelace_en.txt">
+          Ada Lovelace (EN)
+        </button>
+        <button class="action" data-action="importText" data-file="lazarillo.txt">
+          Lazarillo
+        </button>
+        <button class="action" data-action="importText" data-file="quijote.txt">
+          Quijote
+        </button>
+      </div>
+      
+      <button class="action" data-target="#frequencies" data-info="Cálculo de frecuencias">Frecuencias</button>
+      <div id="frequencies" class="toolset">
+        <button class="action" data-action="calcWordFreq">
+          Frec. palabras
+        </button>
+        <button class="action" data-action="calcCharFreq">
+          Frec. caracteres
+        </button>
+      </div>
+    </template>
+
+
+    <template id="about" data-default>
+      <section class="text">
+        <h1><i class="fa-solid fa-circle-question"></i>&nbsp;¿Qué es txtlab?</h1>
+        <p>Esto es una caja de herramientas para procesar y transformar texto. Por ejemplo, puedes procesar listas desde
+          el menú <i class="fa-solid fa-list"></i>. O puedes empezar a escribir desde el menú <i
+            class="fa-solid fa-pen-to-square"></i>.</p>
+        <h1><i class="fa-solid fa-lock"></i>&nbsp;Protección de datos</h1>
+        <p>Esta aplicación web <u>no almacena ni envía</u> datos a Internet. Todo se procesa en tu ordenador y nunca
+          sale de él.</p>
+        <h1><i class="fa-solid fa-address-card"></i>&nbsp;Autor</h1>
+        <p>Este es un proyecto de <a href="https://www.ebenimeli.org" target="_blank">Enrique Benimeli</a>. Si tienes
+          alguna sugerencia, puedes <a href="https://www.ebenimeli.org/contact/" target="_blank>">contactar</a>.</p>
+      </section>
+    </template>
+
+    <!-- ZONA PRINCIPAL -->
+    <main>
+      <div id="main" class="box">
+        <div id="imenu" class="box control">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchtext" placeholder="Busca..." />
+          <button data-action="copyi"><i class="fa-regular fa-copy"></i></button>
+          <button data-action="pastei"><i class="fa-regular fa-paste"></i></button>
+          <button data-action="cleanleft"><i class="fa-solid fa-xmark"></i></button>
+          <button data-action="lefttoright"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
-      </footer>
-    </section>
+        <div id="omenu" class="box control">
+          <button data-action="righttoleft"><i class="fa-solid fa-arrow-left"></i></button>
+          <button data-action="cleanright"><i class="fa-solid fa-xmark"></i></button>
+          <button data-action="copyo"><i class="fa-regular fa-copy"></i></button>
+          <button data-action="pasteo"><i class="fa-regular fa-paste"></i></button>
+          <button data-action="printo" title="Imprimir"><i class="fa-solid fa-print"></i></button>
 
-    <dialog id="welcome-dialog" role="dialog" aria-labelledby="welcome-title" aria-describedby="welcome-desc">
-      <form method="dialog" class="dlg">
-        <h3 id="welcome-title">Bienvenido a <strong>txt</strong>lab</h3>
-        <p id="welcome-desc">
-          <p><i class="fa-solid fa-gear"></i> Esta aplicación web es una caja de herramientas para escribir, procesar y transformar texto.</p>
-          <p><i class="fa-solid fa-list"></i> Puedes ordenar, agrupar y formatear listas de elementos.</p>
-          <p><i class="fa-solid fa-pen-to-square"></i> Puedes escribir sin distracciones, marcarte objetivos y compartir tu progreso de escritura.</p>
-          <p><i class="fa-solid fa-share"></i> Si te gusta, comparte.</p>
-          <p class="share">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.ebenimeli.org/txtlab" target="_blank"><img src="assets/img/icons/facebook.svg" class="icon"></a>
-            <a href="https://x.com/intent/tweet?source=tweetbutton&amp;original_referer=http://www.ebenimeli.org/txtlab&amp;text=⚙ txtlab es una caja de herramientas para escribir, procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos - http://www.ebenimeli.org/txtlab/ de @enriquebenimeli" target="_blank"><img src="assets/img/icons/x.svg" class="icon"></a>
-            <a href="https://api.whatsapp.com/send?text=⚙ txtlab es una caja de herramientas para escribir, procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos - http://www.ebenimeli.org/txtlab/" target="_blank"><img src="assets/img/icons/whatsapp.svg" class="icon"></a>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ebenimeli.org/txtlab" target="_blank"><img src="assets/img/icons/linkedin.svg" class="icon"></a>
-            <a href="mailto:?subject=Prueba txtlab&body=⚙ txtlab es una caja de herramientas para escribir, procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos - http://www.ebenimeli.org/txtlab/"><img src="assets/img/icons/email.svg" class="icon"></a>
-          </p>
+        </div>
+        <textarea id="itext" class="box" autofocus></textarea>
+        <textarea id="otext" class="box"></textarea>
+        <div id="statusi" class="metainfo">Status I</div>
+        <div id="statuso" class="metainfo">Status O</div>
+      </div>
+    </main>
+
+    <footer>
+      <div id="footer" class="box">
+        <p class="share">
+          <a href="https://www.ebenimeli.org" target="_blank"><img class="icon" src="assets/img/icons/web.svg"></a>
+          <a href="https://x.com/enriquebenimeli" target="_blank"><img class="icon" src="assets/img/icons/x.svg"></a>
+          <a href="https://www.instagram.com/ebenimeli/" target="_blank"><img class="icon"
+              src="assets/img/icons/instagram.svg"></a>
+          <a href="https://linkedin.com/in/ebenimeli" target="_blank"><img class="icon"
+              src="assets/img/icons/linkedin.svg"></a>
+          <a href="https://substack.com/@ebenimeli" target="_blank"><img class="icon"
+              src="assets/img/icons/substack.svg"></a>
         </p>
-        <menu class="dlg-actions">
-          <button value="ok" class="action" autofocus>Empezar</button>
-        </menu>
-      </form>
-    </dialog>
+      </div>
+    </footer>
+  </section>
 
-    <dialog id="success-dialog" role="dialog" aria-labelledby="success-title">
-      <form method="dialog" class="dlg">
-        <h3 id="success-title">🎉 ¡Objetivo alcanzado!</h3>
-        <p id="success-msg">
-          Has llegado a tu meta de <strong><span id="success-goal">—</span></strong>
-          palabras en <strong><span id="success-time">—</span></strong>. ¡Buen trabajo!
-        </p>
-        <p class="share" id="success-share">
-          <a id="share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ebenimeli.org/txtlab" target="_blank">
-            <img src="assets/img/icons/facebook.svg" class="icon">
-          </a>
-          <a id="share-x" href="#" target="_blank">
-            <img src="assets/img/icons/x.svg" class="icon">
-          </a>
-          <a id="share-wa" href="#" target="_blank">
-            <img src="assets/img/icons/whatsapp.svg" class="icon">
-          </a>
-          <a id="share-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ebenimeli.org/txtlab" target="_blank">
-            <img src="assets/img/icons/linkedin.svg" class="icon">
-          </a>
-          <a id="share-mail" href="#" target="_blank">
-            <img src="assets/img/icons/email.svg" class="icon">
-          </a>
-        </p>
-        <menu class="dlg-actions">
-          <button value="ok" class="action">Cerrar</button>
-        </menu>
-      </form>
-    </dialog>
+  <dialog id="welcome-dialog" role="dialog" aria-labelledby="welcome-title" aria-describedby="welcome-desc">
+    <form method="dialog" class="dlg">
+      <h3 id="welcome-title">Bienvenido a <strong>txt</strong>lab</h3>
+      <p id="welcome-desc">
+      <p><i class="fa-solid fa-gear"></i> Esta aplicación web es una caja de herramientas para escribir, procesar y
+        transformar texto.</p>
+      <p><i class="fa-solid fa-list"></i> Puedes ordenar, agrupar y formatear listas de elementos.</p>
+      <p><i class="fa-solid fa-pen-to-square"></i> Puedes escribir sin distracciones, marcarte objetivos y compartir tu
+        progreso de escritura.</p>
+      <p><i class="fa-solid fa-share"></i> Si te gusta, comparte.</p>
+      <p class="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.ebenimeli.org/txtlab" target="_blank"><img
+            src="assets/img/icons/facebook.svg" class="icon"></a>
+        <a href="https://x.com/intent/tweet?source=tweetbutton&amp;original_referer=http://www.ebenimeli.org/txtlab&amp;text=⚙ txtlab es una caja de herramientas para escribir, procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos - http://www.ebenimeli.org/txtlab/ de @enriquebenimeli"
+          target="_blank"><img src="assets/img/icons/x.svg" class="icon"></a>
+        <a href="https://api.whatsapp.com/send?text=⚙ txtlab es una caja de herramientas para escribir, procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos - http://www.ebenimeli.org/txtlab/"
+          target="_blank"><img src="assets/img/icons/whatsapp.svg" class="icon"></a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ebenimeli.org/txtlab"
+          target="_blank"><img src="assets/img/icons/linkedin.svg" class="icon"></a>
+        <a
+          href="mailto:?subject=Prueba txtlab&body=⚙ txtlab es una caja de herramientas para escribir, procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos - http://www.ebenimeli.org/txtlab/"><img
+            src="assets/img/icons/email.svg" class="icon"></a>
+      </p>
+      </p>
+      <menu class="dlg-actions">
+        <button value="ok" class="action" autofocus>Empezar</button>
+      </menu>
+    </form>
+  </dialog>
 
-    <script type="module" src="js/main.js"></script>
-  </body>
+  <dialog id="success-dialog" role="dialog" aria-labelledby="success-title">
+    <form method="dialog" class="dlg">
+      <h3 id="success-title">🎉 ¡Objetivo alcanzado!</h3>
+      <p id="success-msg">
+        Has llegado a tu meta de <strong><span id="success-goal">—</span></strong>
+        palabras en <strong><span id="success-time">—</span></strong>. ¡Buen trabajo!
+      </p>
+      <p class="share" id="success-share">
+        <a id="share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ebenimeli.org/txtlab"
+          target="_blank">
+          <img src="assets/img/icons/facebook.svg" class="icon">
+        </a>
+        <a id="share-x" href="#" target="_blank">
+          <img src="assets/img/icons/x.svg" class="icon">
+        </a>
+        <a id="share-wa" href="#" target="_blank">
+          <img src="assets/img/icons/whatsapp.svg" class="icon">
+        </a>
+        <a id="share-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ebenimeli.org/txtlab"
+          target="_blank">
+          <img src="assets/img/icons/linkedin.svg" class="icon">
+        </a>
+        <a id="share-mail" href="#" target="_blank">
+          <img src="assets/img/icons/email.svg" class="icon">
+        </a>
+      </p>
+      <menu class="dlg-actions">
+        <button value="ok" class="action">Cerrar</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+
 </html>
