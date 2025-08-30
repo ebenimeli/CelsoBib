@@ -413,6 +413,24 @@ export function initWriteMode() {
   btnReset?.addEventListener("click", resetTimer);
 
   syncSoundButtons(document);
+
+  function wireAmbientToggle(root = document) {
+    const ambientBtn = root.getElementById("ambient");
+    if (!ambientBtn) return; // no hay botón aún
+
+    const soundBtns = root.querySelectorAll('button[data-action="soundOn"]');
+    let visible = false;
+
+    ambientBtn.addEventListener("click", () => {
+      visible = !visible;
+      soundBtns.forEach((btn) => {
+        btn.classList.toggle("is-visible", visible);
+      });
+    });
+  }
+
+  // dentro de initWriteMode():
+  wireAmbientToggle(document);
 }
 
 export function exitWriteMode() {
@@ -661,37 +679,70 @@ export function suggestWord(btn) {
 }
 */
 
-// --- Sonido de fondo (lluvia + truenos)
+// --- Sonido de fondo (multipista con data-file) ---
+const MEDIA_BASE = "assets/media/";
 let bgAudio = null;
+let currentBgKey = null;
 
-function ensureBgAudio() {
-  if (!bgAudio) {
-    bgAudio = new Audio("assets/media/rainthunder.mp3");
+// Volumen persistente (opcional)
+function getSavedVolume() {
+  const v = parseFloat(localStorage.getItem("write.bgVolume") || "0.5");
+  return Number.isFinite(v) ? Math.min(1, Math.max(0, v)) : 0.5;
+}
+function setSavedVolume(v) {
+  const vol = Math.min(1, Math.max(0, Number(v)));
+  localStorage.setItem("write.bgVolume", String(vol));
+  if (bgAudio) bgAudio.volume = vol;
+  return vol;
+}
+
+// Prepara / cambia la pista si es necesario
+function ensureBgAudio(fileKey = "rainthunder") {
+  // normaliza (quita espacios)
+  const key = String(fileKey).trim() || "rainthunder";
+
+  // Si no existe o la pista es distinta → crea/cambia
+  if (!bgAudio || currentBgKey !== key) {
+    try {
+      bgAudio?.pause();
+    } catch (_) {}
+
+    bgAudio = new Audio(`${MEDIA_BASE}${key}.mp3`);
     bgAudio.loop = true;
     bgAudio.preload = "auto";
-    bgAudio.volume = 0.5;
+    bgAudio.volume = getSavedVolume();
+    currentBgKey = key;
+
+    // Guarda la pista elegida
+    localStorage.setItem("write.bgKey", currentBgKey);
+
+    // Cuando termine o falle, sincroniza botones
+    bgAudio.addEventListener("ended", () => syncSoundButtons(document));
+    bgAudio.addEventListener("pause", () => syncSoundButtons(document));
+    bgAudio.addEventListener("play", () => syncSoundButtons(document));
   }
   return bgAudio;
 }
 
+// Actualiza el estado visual de los botones
 function syncSoundButtons(root = document) {
-  const onBtn = root.querySelector('button[data-action="soundOn"]');
   const offBtn = root.querySelector('button[data-action="soundOff"]');
-  if (!onBtn || !offBtn) return;
+  const isPlaying = !!(bgAudio && !bgAudio.paused && !bgAudio.ended);
 
-  const bg = ensureBgAudio();
-  const isPlaying = !bg.paused && !bg.ended;
-  if (isPlaying) {
-    onBtn.style.display = "none";
-    offBtn.style.display = "inline-block";
-  } else {
-    offBtn.style.display = "none";
-    onBtn.style.display = "inline-block";
-  }
+  // Muestra/oculta solo el botón de "Silencio"
+  if (offBtn) offBtn.style.display = isPlaying ? "inline-block" : "none";
+
+  // Marca como activo el botón cuya pista está sonando
+  root.querySelectorAll('button[data-action="soundOn"]').forEach((b) => {
+    const key = (b.dataset.file || "rainthunder").trim();
+    b.classList.toggle("is-active", isPlaying && key === currentBgKey);
+  });
 }
 
-async function soundOnAction() {
-  const bg = ensureBgAudio();
+// Acción: encender sonido leyendo data-file del botón
+async function soundOnAction(btn) {
+  const key = (btn?.dataset?.file || "rainthunder").trim();
+  const bg = ensureBgAudio(key);
   try {
     await bg.play();
   } catch (e) {
@@ -700,17 +751,35 @@ async function soundOnAction() {
   syncSoundButtons(document);
 }
 
+// Acción: apagar sonido (pausa la pista actual)
 function soundOffAction() {
-  const bg = ensureBgAudio();
+  if (!bgAudio) return;
   try {
-    bg.pause();
-  } catch (e) {}
+    bgAudio.pause();
+  } catch (_) {}
   syncSoundButtons(document);
 }
 
-// Exporta para poder usarlas desde main.js (actionMap)
+// (Opcional) API para ajustar volumen desde la UI si tienes un slider
+function setBgVolumeFromInput(inputEl) {
+  if (!inputEl) return;
+  inputEl.addEventListener("input", () => {
+    setSavedVolume(inputEl.value);
+  });
+}
+
+// Al montar write-mode, intenta restaurar la última pista
+(function restoreLastTrackOnLoad() {
+  const lastKey = localStorage.getItem("write.bgKey");
+  if (lastKey) ensureBgAudio(lastKey);
+  // No auto-play por políticas del navegador; solo sincroniza estado
+  syncSoundButtons(document);
+})();
+
+// Exporta para actionMap / main.js
 export {
   soundOnAction as soundOn,
   soundOffAction as soundOff,
   syncSoundButtons,
+  setBgVolumeFromInput, // opcional
 };

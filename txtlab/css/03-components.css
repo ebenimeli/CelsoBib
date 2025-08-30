@@ -15,6 +15,7 @@ button.tool {
   transition: background var(--t-base), color var(--t-base);
 }
 
+select.action,
 button.action {
   /*font-weight: bold;*/
   /*background: var(--c-muted);*/

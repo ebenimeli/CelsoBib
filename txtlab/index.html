@@ -109,18 +109,43 @@
           <i class="fa-solid fa-maximize"></i> Modo concentración
         </button>
 
-        <!-- Botones sonido (usan el dispatcher global) -->
-        <button type="button" class="action" data-action="soundOn" title="Activar sonido de fondo">
-          <!--<i class="fa-solid fa-volume-up"></i>-->
+        <button id="ambient" type="button" class="action"
+          title="Seleccionar ambiente">
+          <i class="fa-solid fa-headphones"></i> Ambiente
+        </button>
+        <button type="button" class="action" data-action="soundOn" data-file="rainthunder"
+          title="Activar sonido de fondo">
           <i class="fa-solid fa-cloud-rain"></i> Lluvia
         </button>
+        <button type="button" class="action" data-action="soundOn" data-file="cafe" title="Activar sonido de fondo">
+          <i class="fa-solid fa-mug-saucer"></i> Café
+        </button>
+        <button type="button" class="action" data-action="soundOn" data-file="library" title="Activar sonido de fondo">
+          <i class="fa-solid fa-book"></i> Biblioteca
+        </button>
+        <button type="button" class="action" data-action="soundOn" data-file="nightwoods"
+          title="Activar sonido de fondo">
+          <i class="fa-solid fa-tree"></i> Bosque de noche
+        </button>
+
+        <!-- Solo una idea: menú desplegable para ambientes-->
+        <!--
+        <label for="sound-select"></label>
+        <select id="sound-select" class="action">
+          <option value="rainthunder">🌧️ Lluvia</option>
+          <option value="cafe">☕ Café</option>
+          <option value="library">📚 Biblioteca</option>
+          <option value="nightwoods">🌲 Bosque de noche</option>
+        </select>
+        -->
+
         <button type="button" class="action" data-action="soundOff" title="Desactivar sonido de fondo"
           style="display:none;">
           <i class="fa-solid fa-volume-xmark"></i> Silencio
         </button>
+
       </fieldset>
 
-      <!--
       <fieldset class="quote-fieldset">
         <legend>Cajón de ideas</legend>
         <button type="button" class="action" data-action="suggestWord" title="Añadir palabra aleatoria">
@@ -155,7 +180,6 @@
           <i class="fa-solid fa-bolt"></i>
         </button>
       </fieldset>
-      -->
 
       <fieldset class="progress-fieldset">
         <legend>Objetivo</legend>
