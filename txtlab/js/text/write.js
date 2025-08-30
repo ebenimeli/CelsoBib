@@ -479,3 +479,46 @@ document.addEventListener("click", (e) => {
     }));
   }
 });
+
+// js/text/write.js
+
+const WORDS_BASE = "assets/data/words/";
+
+function pickRandom(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function getEditorTextarea() {
+  return document.querySelector("#text") || document.querySelector("#itext");
+}
+
+export function suggestWord() {
+  const ta = getEditorTextarea();
+  if (!ta) {
+    console.warn("No se encontró textarea con id='text' ni 'itext'.");
+    return Promise.resolve(); // nada que hacer, pero no rompemos la cadena
+  }
+
+  const idx = 1 + Math.floor(Math.random() * 3);
+  const url = `${WORDS_BASE}dic.txt_part${idx}.txt`;
+
+  return fetch(url, { cache: "no-store" })
+    .then((res) => {
+      if (!res.ok) throw new Error(`No se pudo cargar ${url}`);
+      return res.text();
+    })
+    .then((text) => {
+      const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+      if (!lines.length) return;
+
+      const word = pickRandom(lines);
+      const needsSpace = ta.value.length > 0 && !/\s$/.test(ta.value);
+      ta.value += `${needsSpace ? " " : ""}${word}`;
+
+      ta.dispatchEvent(new Event("input", { bubbles: true }));
+      return word; // opcional: por si quieres usarlo
+    })
+    .catch((err) => {
+      console.error("[suggestWord] Error:", err);
+    });
+}

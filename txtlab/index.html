@@ -95,19 +95,34 @@
       <div id="sidebar" class="box"></div>
     </aside>
 
+
+
     <!-- WRITE -->
     <template id="write-mode">
+
+
+
       <fieldset class="quote-fieldset">
         <legend>Cita del día</legend>
         <p class="quote">“Escribe algo que merezca la pena ser leído.”</p>
       </fieldset>
 
-      <!-- BOTÓN MODO CONCENTRACIÓN -->
+          <!-- BOTÓN MODO CONCENTRACIÓN -->
+            <fieldset class="quote-fieldset">
+              <legend>Concentración</legend>
       <div class="focus-controls">
         <button id="focus-mode" type="button" class="action" title="Modo concentración (pantalla completa)">
-          <i class="fa-solid fa-maximize"></i> Concentración
+          <i class="fa-solid fa-maximize"></i> Pantalla completa
         </button>
       </div>
+      </fieldset>
+
+            <fieldset class="quote-fieldset">
+      <legend>Cajón de ideas</legend>
+      <button type="button" class="action" data-action="suggestWord" title="Añadir palabra aleatoria">
+        <i class="fa-solid fa-dice"></i> Palabra
+      </button>
+    </fieldset>
 
       <fieldset class="progress-fieldset">
         <legend>Objetivo</legend>

@@ -11,6 +11,8 @@ import { wireCounters } from "./ui/counters.js";
 import * as T from "./text/transforms.js";
 import * as G from "./text/groups.js";
 import * as S from "./text/stats.js";
+import * as W from "./text/write.js";
+
 import { wireLiveSearch } from "./text/search.js";
 import { copyInput, copyOutput, pasteInput, pasteOutput } from "./clipboard/clipboard.js";
 
@@ -63,6 +65,8 @@ function installAboutLoader() {
 
 /** Action registry: map action names to functions (used by the click dispatcher) */
 const actionMap = {
+  suggestWord: W.suggestWord,
+
   // transforms
   doAZ: T.doAZ,
   doZA: T.doZA,
@@ -112,6 +116,7 @@ const actionMap = {
 };
 
 /** Global click dispatcher: handles current and future .action buttons via data-action */
+/*
 function installActionDispatcher() {
   document.addEventListener("click", (e) => {
     const btn = e.target.closest('button[data-action]');
@@ -124,6 +129,33 @@ function installActionDispatcher() {
     }
   });
 }
+  */
+
+function installActionDispatcher() {
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest('button[data-action]');
+    if (!btn) return;
+    const action = btn.dataset.action;
+    const fn = actionMap[action];
+    if (typeof fn === "function") {
+      try {
+        const ret = fn(btn); // algunas funciones usan btn para data-file, etc.
+        if (ret && typeof ret.then === "function") {
+          // Es una Promise: reproduce click cuando termine
+          ret.then(() => playClick?.()).catch((err) => {
+            console.error(`[action:${action}]`, err);
+          });
+        } else {
+          // Sincrónica
+          playClick?.();
+        }
+      } catch (err) {
+        console.error(`[action:${action}]`, err);
+      }
+    }
+  });
+}
+
 
 /** Initial a11y wiring for .toolset panels present at boot */
 function initToolsetsA11y() {

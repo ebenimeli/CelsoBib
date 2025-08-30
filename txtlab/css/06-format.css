@@ -22,6 +22,8 @@
 :root {
   --write-bg: var(--c-bg);
   --write-fg: var(--c-text);
+  /* margen superior en modo concentración (puedes cambiar a 10%) */
+  --focus-top-pad: 10vh;
 }
 
 /* Variables por defecto aplicadas al textarea de redacción */
@@ -340,12 +342,18 @@ fieldset div {
   border: 0;
   margin: 0;
   outline: none;
-  /* ← padding lateral 10% en concentración (fullscreen directo) */
-  padding-block: 1rem;
+
+  /* ← margen superior del 10% + safe-area */
+  padding-top: calc(var(--focus-top-pad) + env(safe-area-inset-top, 0px));
+  /* ← laterales 10% en concentración (fullscreen directo) */
   padding-inline: 10%;
+  /* ← un poco de aire abajo */
+  padding-bottom: 1.5rem;
+
   background: var(--write-bg);
   color: var(--write-fg);
   line-height: 1.6;
+  box-sizing: border-box;
 }
 
 /* Fallback CSS si Fullscreen API no está disponible */
@@ -360,12 +368,19 @@ body.concentration-active {
   border: 0;
   margin: 0;
   outline: none;
-  /* ← padding lateral 10% en concentración (fallback) */
-  padding-block: 1rem;
+
+  /* ← margen superior del 10% + safe-area */
+  padding-top: calc(var(--focus-top-pad) + env(safe-area-inset-top, 0px));
+  /* ← laterales 10% en concentración (fallback) */
   padding-inline: 10%;
+  /* ← un poco de aire abajo */
+  padding-bottom: 1.5rem;
+
   z-index: 99999;
   background: var(--write-bg);
   color: var(--write-fg);
+  line-height: 1.6;
+  box-sizing: border-box;
 }
 
 
@@ -397,9 +412,14 @@ body.concentration-active {
   border: 0;
   margin: 0;
   outline: none;
-  /* ← padding lateral 10% en concentración (fullscreen con wrapper) */
-  padding-block: 1rem;
+
+  /* ← margen superior del 10% + safe-area (fullscreen con wrapper) */
+  padding-top: calc(var(--focus-top-pad) + env(safe-area-inset-top, 0px));
+  /* ← laterales 10% */
   padding-inline: 10%;
+  /* ← aire inferior */
+  padding-bottom: 1.5rem;
+
   line-height: 1.6;
   background: var(--write-bg);
   color: var(--write-fg);
