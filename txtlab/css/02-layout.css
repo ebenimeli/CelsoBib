@@ -99,6 +99,10 @@
     overflow: hidden;
   }
 
+  .focus-controls {
+    display: none!important;
+  }
+
   #imenu > i,
   input#searchtext,
   /*button[data-action="copyi"],*/

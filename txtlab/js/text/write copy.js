@@ -79,139 +79,6 @@ export function initWriteMode() {
     return;
   }
 
-  // --- Modo concentración: fullscreen de #itext (ESC para salir/fallback)
-  const focusBtn = document.getElementById("focus-mode");
-  const itxt = document.getElementById("itext");
-
-
-// === Helpers para overlay y wrapper de concentración (NO cambian tu lógica) ===
-let __fsWrap = null;      // wrapper temporal para fullscreen
-let __wordFloat = null;   // div flotante con el contador
-
-const ensureFsWrap = () => {
-  if (__fsWrap && __fsWrap.isConnected) return __fsWrap;
-  const wrap = document.createElement("div");
-  wrap.id = "itext-wrapper";
-  wrap.className = "itext-wrapper";
-  const parent = itxt.parentNode;
-  parent.insertBefore(wrap, itxt);
-  wrap.appendChild(itxt);
-  __fsWrap = wrap;
-  return wrap;
-};
-
-const unwrapFs = () => {
-  if (!__fsWrap || !__fsWrap.isConnected) return;
-  const parent = __fsWrap.parentNode;
-  if (parent) parent.insertBefore(itxt, __fsWrap);
-  __fsWrap.remove();
-  __fsWrap = null;
-};
-
-const isConcentrationActive = () =>
-  (document.fullscreenElement === __fsWrap) || itxt.classList.contains("concentration-overlay");
-
-const showWordFloat = (n) => {
-  if (!__wordFloat || !__wordFloat.isConnected) {
-    __wordFloat = document.createElement("div");
-    __wordFloat.className = "word-float is-visible";
-    // color acorde al esquema actual del editor
-    const cs = getComputedStyle(itxt);
-    const fg = (cs.getPropertyValue("--write-fg") || cs.color).trim();
-    __wordFloat.style.color = fg;
-    // si estamos en fullscreen nativo, debe ser descendiente del wrapper
-    if (document.fullscreenElement === __fsWrap) {
-      __fsWrap.appendChild(__wordFloat);
-    } else {
-      document.body.appendChild(__wordFloat); // fallback
-    }
-  }
-  __wordFloat.textContent = String(n);
-};
-
-const updateWordFloat = (n) => {
-  if (__wordFloat && __wordFloat.isConnected) __wordFloat.textContent = String(n);
-};
-
-const hideWordFloat = () => {
-  if (!__wordFloat) return;
-  try { __wordFloat.remove(); } catch {}
-  __wordFloat = null;
-};
-
-
-  
-  // Limpieza previa si ya hubiera listeners de otra sesión
-  if (window.__wmFocusCleanup) {
-    try { window.__wmFocusCleanup(); } catch {}
-    window.__wmFocusCleanup = null;
-  }
-const enterConcentration = async () => {
-  if (!itxt) return;
-  try {
-    // fullscreen del WRAPPER, no del textarea
-    const wrap = ensureFsWrap();
-    if (wrap.requestFullscreen) {
-      await wrap.requestFullscreen();
-    } else {
-      // Fallback CSS
-      document.body.classList.add("concentration-active");
-      itxt.classList.add("concentration-overlay");
-    }
-    itxt.focus({ preventScroll: true });
-    // mostrar contador con el valor actual
-    showWordFloat(countWords(itxt.value));
-  } catch (err) {
-    console.warn("[focus] No se pudo entrar en concentración:", err);
-  }
-};
-
-const exitConcentration = () => {
-  try {
-    if (document.fullscreenElement) {
-      document.exitFullscreen?.();
-    }
-  } catch {}
-  document.body.classList.remove("concentration-active");
-  itxt?.classList.remove("concentration-overlay");
-  hideWordFloat();
-  unwrapFs();
-};
-
-  const onEscToExit = (ev) => {
-    if (ev.key === "Escape") {
-      // Si estamos en fallback (no fullscreen nativo), ESC sale también
-      if (!document.fullscreenElement) exitConcentration();
-    }
-  };
-
-const onFsChange = () => {
-  if (!document.fullscreenElement) {
-    // salimos de fullscreen → limpiar
-    document.body.classList.remove("concentration-active");
-    itxt?.classList.remove("concentration-overlay");
-    hideWordFloat();
-    unwrapFs();
-  } else if (document.fullscreenElement === __fsWrap) {
-    // asegúrate de que el overlay cuelga del wrapper
-    if (__wordFloat && __wordFloat.parentNode !== __fsWrap) {
-      try { __fsWrap.appendChild(__wordFloat); } catch {}
-    }
-  }
-};
-
-  focusBtn?.addEventListener("click", enterConcentration);
-  document.addEventListener("keydown", onEscToExit);
-  document.addEventListener("fullscreenchange", onFsChange);
-
-  // Guardar limpieza para exitWriteMode()
-  window.__wmFocusCleanup = () => {
-    focusBtn?.removeEventListener("click", enterConcentration);
-    document.removeEventListener("keydown", onEscToExit);
-    document.removeEventListener("fullscreenchange", onFsChange);
-    exitConcentration();
-  };
-
   // --- Cita aleatoria ---
   const QUOTES = [
     "Escribe primero, corrige después.",
@@ -360,8 +227,6 @@ const onFsChange = () => {
     }
 
     updateWPM(words);
-    if (isConcentrationActive()) updateWordFloat(words);
-
   }
 
   // --- Estado inicial ---
@@ -417,12 +282,6 @@ export function exitWriteMode() {
   main?.style.removeProperty("flex-direction");
   main?.style.removeProperty("gap");
   main?.style.removeProperty("align-items");
-
-  // Salir y limpiar modo concentración si estuviera activo
-  if (window.__wmFocusCleanup) {
-    try { window.__wmFocusCleanup(); } catch {}
-    window.__wmFocusCleanup = null;
-  }
 
   // Forzar esquema base, tipografía y tamaño por defecto en #itext
   resetSchemeToTheme();

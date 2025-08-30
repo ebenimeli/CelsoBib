@@ -235,6 +235,7 @@ button.ghost:hover {
 }
 
 fieldset {
+  box-sizing: border-box;
   font-size: .8em;
   width: 100%;
 }
@@ -314,3 +315,111 @@ fieldset div {
   flex: 1;                /* ocupa el alto restante */
   min-height: 200px;      /* opcional */
 }
+
+/* Botón centrado y con pequeño margen */
+.focus-controls {
+  display: flex;
+  justify-content: center;
+  margin: .5rem 0 1rem;
+}
+
+.input-wrapper {
+  margin-bottom: 10px;
+}
+
+.wpm {
+  display: block;
+}
+
+/* Estilos del textarea en pantalla completa (Fullscreen API) */
+/* (si aún haces fullscreen directo del #itext en algún navegador) */
+#itext:fullscreen,
+#itext:-webkit-full-screen { /* Safari */
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+  margin: 0;
+  outline: none;
+  /* ← padding lateral 10% en concentración (fullscreen directo) */
+  padding-block: 1rem;
+  padding-inline: 10%;
+  background: var(--write-bg);
+  color: var(--write-fg);
+  line-height: 1.6;
+}
+
+/* Fallback CSS si Fullscreen API no está disponible */
+body.concentration-active {
+  overflow: hidden;
+}
+#itext.concentration-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+  margin: 0;
+  outline: none;
+  /* ← padding lateral 10% en concentración (fallback) */
+  padding-block: 1rem;
+  padding-inline: 10%;
+  z-index: 99999;
+  background: var(--write-bg);
+  color: var(--write-fg);
+}
+
+
+/* Fieldsets full width */
+.timer-fieldset,
+.progress-fieldset,
+.quote-fieldset,
+.format-controls {      /* si esto es un fieldset con clase */
+  max-width: none;
+  width: 100%;
+}
+
+
+/* Wrapper usado para fullscreen del editor (si usas el wrapper) */
+.itext-wrapper { position: relative; }
+
+.itext-wrapper:fullscreen,
+.itext-wrapper:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+  background: var(--write-bg);
+  color: var(--write-fg);
+}
+
+.itext-wrapper:fullscreen #itext,
+.itext-wrapper:-webkit-full-screen #itext {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  outline: none;
+  /* ← padding lateral 10% en concentración (fullscreen con wrapper) */
+  padding-block: 1rem;
+  padding-inline: 10%;
+  line-height: 1.6;
+  background: var(--write-bg);
+  color: var(--write-fg);
+  box-sizing: border-box;
+}
+
+/* Contador flotante: abajo a la IZQUIERDA, pegado al borde */
+.word-float {
+  position: fixed;
+  left: env(safe-area-inset-left, 0px);      /* 0 en la mayoría; evita notch en iOS */
+  bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+  transform: none;                            /* sin centrado */
+  right: auto;
+
+  font-size: 2em;      /* 2.0 */
+  line-height: 1;
+  opacity: .5;         /* ligera transparencia */
+  text-shadow: 0 1px 2px rgba(0,0,0,.15);
+  pointer-events: none;
+  z-index: 100000;
+  display: none;
+}
+.word-float.is-visible { display: block; }

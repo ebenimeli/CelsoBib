@@ -102,6 +102,13 @@
         <p class="quote">“Escribe algo que merezca la pena ser leído.”</p>
       </fieldset>
 
+      <!-- BOTÓN MODO CONCENTRACIÓN -->
+      <div class="focus-controls">
+        <button id="focus-mode" type="button" class="action" title="Modo concentración (pantalla completa)">
+          <i class="fa-solid fa-maximize"></i> Concentración
+        </button>
+      </div>
+
       <fieldset class="progress-fieldset">
         <legend>Objetivo</legend>
 
@@ -113,7 +120,7 @@
           <span id="currentWords">0</span>/<span id="goalWords">250</span> palabras (<span id="percWords">0 %</span>)
         </label>
         <progress id="writeprogress" value="" max="100"></progress>
-        <p class="wpm">0 palabras/min</p>
+        <span class="wpm">0 palabras/min</span>
       </fieldset>
 
       <fieldset class="timer-fieldset">
@@ -289,7 +296,7 @@
         Con estas herramientas puedes realizar cálculos estadísticos.
       </section>
 
-      <button class="action" data-target="#texts" data-info="Textos de ejemplo">Ejemplos</button>
+      <button class="action" data-target="#texts" data-info="Textos de ejemplo">Textos</button>
       <div id="texts" class="toolset">
         <button class="action" data-action="importText" data-file="adalovelace_es.txt">
           Ada Lovelace (ES)
@@ -302,6 +309,9 @@
         </button>
         <button class="action" data-action="importText" data-file="quijote.txt">
           Quijote
+        </button>
+              <button class="action" data-action="importText" data-file="biblia.txt">
+          Biblia
         </button>
       </div>
       
