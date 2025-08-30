@@ -19,7 +19,9 @@ export function calcWordFreq() {
 
   const text = String(inEl.value || "");
   // Letras y dígitos Unicode → normalizamos a minúsculas (locale 'es')
-  const words = (text.match(/[\p{L}\p{N}]+/gu) || []).map(w => w.toLocaleLowerCase("es"));
+  const words = (text.match(/[\p{L}\p{N}]+/gu) || []).map((w) =>
+    w.toLocaleLowerCase("es")
+  );
   const total = words.length;
 
   if (total === 0) {
@@ -35,7 +37,10 @@ export function calcWordFreq() {
   const sorted = [...counts.entries()].sort((a, b) => {
     const diff = b[1] - a[1];
     if (diff !== 0) return diff;
-    return a[0].localeCompare(b[0], "es", { sensitivity: "accent", numeric: true });
+    return a[0].localeCompare(b[0], "es", {
+      sensitivity: "accent",
+      numeric: true,
+    });
   });
 
   const lines = [String(total)];
@@ -46,7 +51,6 @@ export function calcWordFreq() {
 
   outEl.value = lines.join("\n");
 }
-
 
 // js/text/stats.js
 
@@ -101,7 +105,10 @@ export function calcCharFreq() {
     const diff = b[1] - a[1];
     if (diff !== 0) return diff;
     // 'variant' distingue mayúsculas/minúsculas; 'numeric' ordena 2 < 10.
-    return a[0].localeCompare(b[0], "es", { sensitivity: "variant", numeric: true });
+    return a[0].localeCompare(b[0], "es", {
+      sensitivity: "variant",
+      numeric: true,
+    });
   });
 
   const lines = [String(total)];

@@ -79,7 +79,6 @@ button.action:active {
   border: var(--bd-sm);
   border-radius: var(--radius);
   /*font-weight: bold;*/
-
 }
 
 /* =========================
@@ -104,7 +103,7 @@ button.action:active {
 
 textarea {
   background: var(--c-bg);
-  font-size: .9em;
+  font-size: 0.9em;
   font-family: var(--font-mono);
   transition: background var(--t-fast);
 }
@@ -159,4 +158,3 @@ input#searchtext {
 #omenu {
   justify-content: flex-start;
 }
-

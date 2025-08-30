@@ -7,7 +7,8 @@ export const $id = (id) => document.getElementById(id);
 export const $ = (sel, scope = document) => scope.querySelector(sel);
 
 /** Query-all within a scope or document -> Array */
-export const $$ = (sel, scope = document) => Array.from(scope.querySelectorAll(sel));
+export const $$ = (sel, scope = document) =>
+  Array.from(scope.querySelectorAll(sel));
 
 /** Common ids used across modules (kept centralized for maintainability) */
 export const IDS = {

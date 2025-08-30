@@ -95,34 +95,67 @@
       <div id="sidebar" class="box"></div>
     </aside>
 
-
-
     <!-- WRITE -->
     <template id="write-mode">
-
-
-
       <fieldset class="quote-fieldset">
         <legend>Cita del día</legend>
         <p class="quote">“Escribe algo que merezca la pena ser leído.”</p>
       </fieldset>
 
-          <!-- BOTÓN MODO CONCENTRACIÓN -->
-            <fieldset class="quote-fieldset">
-              <legend>Concentración</legend>
-      <div class="focus-controls">
+      <!-- BOTÓN MODO CONCENTRACIÓN -->
+      <fieldset class="quote-fieldset">
+        <legend>Concentración</legend>
         <button id="focus-mode" type="button" class="action" title="Modo concentración (pantalla completa)">
-          <i class="fa-solid fa-maximize"></i> Pantalla completa
+          <i class="fa-solid fa-maximize"></i> Modo concentración
         </button>
-      </div>
+
+        <!-- Botones sonido (usan el dispatcher global) -->
+        <button type="button" class="action" data-action="soundOn" title="Activar sonido de fondo">
+          <!--<i class="fa-solid fa-volume-up"></i>-->
+          <i class="fa-solid fa-cloud-rain"></i> Lluvia
+        </button>
+        <button type="button" class="action" data-action="soundOff" title="Desactivar sonido de fondo"
+          style="display:none;">
+          <i class="fa-solid fa-volume-xmark"></i> Silencio
+        </button>
       </fieldset>
 
-            <fieldset class="quote-fieldset">
-      <legend>Cajón de ideas</legend>
-      <button type="button" class="action" data-action="suggestWord" title="Añadir palabra aleatoria">
-        <i class="fa-solid fa-dice"></i> Palabra
-      </button>
-    </fieldset>
+      <!--
+      <fieldset class="quote-fieldset">
+        <legend>Cajón de ideas</legend>
+        <button type="button" class="action" data-action="suggestWord" title="Añadir palabra aleatoria">
+          <i class="fa-solid fa-dice"></i> Palabra
+        </button>
+        <button type="button" class="action" data-action="suggestCharacter" data-file="characters.txt"
+          title="Añadir personaje al azar">
+          <i class="fa-solid fa-person"></i> Personaje
+        </button>
+        <button type="button" class="action" data-action="suggestPlace" data-file="places.txt"
+          title="Añadir lugar al azar">
+          <i class="fa-solid fa-earth-americas"></i> Lugar
+        </button>
+        <button type="button" class="action" data-action="suggestTime" data-file="times.txt"
+          title="Añadir tiempo al azar">
+          <i class="fa-solid fa-clock"></i> Momento
+        </button>
+        <button type="button" class="action" data-action="suggestFeeling" data-file="feelings.txt"
+          title="Añadir emoción o sentimiento al azar">
+          <i class="fa-solid fa-heart"></i> Sentimiento
+        </button>
+        <button type="button" class="action" data-action="suggestConflict" data-file="conflicts.txt"
+          title="Añadir emoción o sentimiento al azar">
+          <i class="fa-solid fa-bolt"></i> Conflicto
+        </button>
+
+        <button type="button" class="action" data-action="suggestAll" title="Añadir emoción o sentimiento al azar">
+          <i class="fa-solid fa-person"></i>
+          <i class="fa-solid fa-earth-americas"></i>
+          <i class="fa-solid fa-clock"></i>
+          <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-bolt"></i>
+        </button>
+      </fieldset>
+      -->
 
       <fieldset class="progress-fieldset">
         <legend>Objetivo</legend>
@@ -316,7 +349,7 @@
         <button class="action" data-action="importText" data-file="adalovelace_es.txt">
           Ada Lovelace (ES)
         </button>
-            <button class="action" data-action="importText" data-file="adalovelace_en.txt">
+        <button class="action" data-action="importText" data-file="adalovelace_en.txt">
           Ada Lovelace (EN)
         </button>
         <button class="action" data-action="importText" data-file="lazarillo.txt">
@@ -325,11 +358,11 @@
         <button class="action" data-action="importText" data-file="quijote.txt">
           Quijote
         </button>
-              <button class="action" data-action="importText" data-file="biblia.txt">
+        <button class="action" data-action="importText" data-file="biblia.txt">
           Biblia
         </button>
       </div>
-      
+
       <button class="action" data-target="#frequencies" data-info="Cálculo de frecuencias">Frecuencias</button>
       <div id="frequencies" class="toolset">
         <button class="action" data-action="calcWordFreq">

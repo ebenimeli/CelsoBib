@@ -13,9 +13,9 @@ function getFontMetrics(itxt) {
 
   // "Hg" suele cubrir ascendente y descendente
   const m = ctx.measureText("Hg");
-  const ascent  = m.actualBoundingBoxAscent  || parseFloat(cs.fontSize) * 0.8;
+  const ascent = m.actualBoundingBoxAscent || parseFloat(cs.fontSize) * 0.8;
   const descent = m.actualBoundingBoxDescent || parseFloat(cs.fontSize) * 0.2;
-  const height  = ascent + descent;
+  const height = ascent + descent;
 
   _metricsCache = { font: fontCanvas, ascent, descent, height };
   return _metricsCache;
@@ -33,7 +33,8 @@ const DEFAULTS = {
   minRem: 0.8,
   maxRem: 2.4,
   stepRem: 0.1,
-  family: "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Roboto Mono,monospace",
+  family:
+    "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Roboto Mono,monospace",
   scheme: "theme", // <- antes: "default"
 };
 
@@ -48,9 +49,15 @@ function setInlineVar(varName, value) {
   const itxt = $itxt();
   if (itxt) itxt.style.setProperty(varName, value);
 }
-function getSavedSize()   { return parseFloat(localStorage.getItem(LS_KEYS.size))   || DEFAULTS.sizeRem; }
-function getSavedFamily() { return localStorage.getItem(LS_KEYS.family) || DEFAULTS.family; }
-function getSavedScheme() { return localStorage.getItem(LS_KEYS.scheme) || DEFAULTS.scheme; }
+function getSavedSize() {
+  return parseFloat(localStorage.getItem(LS_KEYS.size)) || DEFAULTS.sizeRem;
+}
+function getSavedFamily() {
+  return localStorage.getItem(LS_KEYS.family) || DEFAULTS.family;
+}
+function getSavedScheme() {
+  return localStorage.getItem(LS_KEYS.scheme) || DEFAULTS.scheme;
+}
 
 function applySize(rem) {
   setInlineVar("--write-font-size", `${rem}rem`);
@@ -67,18 +74,24 @@ function applyScheme(scheme) {
   if (!itxt) return;
 
   // Quita cualquier scheme- previo
-  [...itxt.classList].forEach(c => c.startsWith("scheme-") && itxt.classList.remove(c));
+  [...itxt.classList].forEach(
+    (c) => c.startsWith("scheme-") && itxt.classList.remove(c)
+  );
 
   if (scheme === "retro") {
     itxt.classList.add("scheme-retro");
-    itxt.style.setProperty("--write-font-family", "'CPC464', ui-monospace, monospace");
+    itxt.style.setProperty(
+      "--write-font-family",
+      "'CPC464', ui-monospace, monospace"
+    );
   } else if (scheme === "default") {
     itxt.classList.add("scheme-default");
     itxt.style.setProperty("--write-font-family", getSavedFamily());
   } else if (scheme === "dark") {
     itxt.classList.add("scheme-dark");
     itxt.style.setProperty("--write-font-family", getSavedFamily());
-  } else { // "theme" o vacío → heredar tema global
+  } else {
+    // "theme" o vacío → heredar tema global
     itxt.style.setProperty("--write-font-family", getSavedFamily());
   }
 
@@ -87,13 +100,14 @@ function applyScheme(scheme) {
 
 function loadState() {
   return {
-    size:   getSavedSize(),
+    size: getSavedSize(),
     family: getSavedFamily(),
     scheme: getSavedScheme(),
   };
 }
 function saveState({ size, family, scheme }) {
-  if (typeof size === "number")   localStorage.setItem(LS_KEYS.size,   String(size));
+  if (typeof size === "number")
+    localStorage.setItem(LS_KEYS.size, String(size));
   if (typeof family === "string") localStorage.setItem(LS_KEYS.family, family);
   if (typeof scheme === "string") localStorage.setItem(LS_KEYS.scheme, scheme);
 }
@@ -107,9 +121,9 @@ export function initFormatControls() {
 
   itxt.classList.add("write-target");
 
-  const btnMinus  = document.getElementById("font-smaller");
-  const btnPlus   = document.getElementById("font-bigger");
-  const btnReset  = document.getElementById("font-reset");
+  const btnMinus = document.getElementById("font-smaller");
+  const btnPlus = document.getElementById("font-bigger");
+  const btnReset = document.getElementById("font-reset");
   const selFamily = document.getElementById("font-family-select");
   const selScheme = document.getElementById("scheme-select");
 
@@ -129,13 +143,19 @@ export function initFormatControls() {
   // Listeners tamaño
   btnMinus?.addEventListener("click", () => {
     const cur = getSavedSize();
-    const next = Math.max(DEFAULTS.minRem, roundTo(cur - DEFAULTS.stepRem, DEFAULTS.stepRem));
+    const next = Math.max(
+      DEFAULTS.minRem,
+      roundTo(cur - DEFAULTS.stepRem, DEFAULTS.stepRem)
+    );
     applySize(next);
     saveState({ size: next });
   });
   btnPlus?.addEventListener("click", () => {
     const cur = getSavedSize();
-    const next = Math.min(DEFAULTS.maxRem, roundTo(cur + DEFAULTS.stepRem, DEFAULTS.stepRem));
+    const next = Math.min(
+      DEFAULTS.maxRem,
+      roundTo(cur + DEFAULTS.stepRem, DEFAULTS.stepRem)
+    );
     applySize(next);
     saveState({ size: next });
   });
@@ -161,5 +181,5 @@ export function initFormatControls() {
   });
 }
 
-localStorage.removeItem('write.fontFamily');
-localStorage.removeItem('write.colorScheme');
+localStorage.removeItem("write.fontFamily");
+localStorage.removeItem("write.colorScheme");

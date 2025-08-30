@@ -4,11 +4,13 @@
 :root {
   /* Tipografía */
   /*--font-mono: "Courier New", Courier, monospace;*/
-  --font-sans: Verdana, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-sans: Verdana, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
+    "Courier New", monospace;
 
   --fs-base: 1em;
-  --fs-sm: .9em;
+  --fs-sm: 0.9em;
   --fs-lg: 1.2rem;
 
   /* Colores (LIGHT por defecto) */
@@ -16,11 +18,11 @@
   --c-text: #111111;
   --c-accent: steelblue;
   --c-muted: #f0f0f0;
-  --c-link: #2AA198;
+  --c-link: #2aa198;
   /*  --c-warn: #fff9c4;*/
 
   /* Borde (separado del texto) */
-  --c-border: rgba(0,0,0,.6);
+  --c-border: rgba(0, 0, 0, 0.6);
 
   /* Bordes / radios / sombras */
   --bd: 1px solid var(--c-border);
@@ -38,14 +40,13 @@
   --h-min-footer: 10vh;
 
   /* Transiciones */
-  --t-fast: .2s ease;
-  --t-base: .4s ease;
+  --t-fast: 0.2s ease;
+  --t-base: 0.4s ease;
 
   /* Indica a los UA que soportas ambos esquemas */
   color-scheme: light dark;
 
-  --c-surface: #ffffff;         /* fondo de controles */
-
+  --c-surface: #ffffff; /* fondo de controles */
 }
 
 /* Auto DARK según el sistema */
@@ -55,22 +56,21 @@
     --c-text: #f5f5f5;
     --c-accent: #4da3ff;
     --c-muted: #222222;
-    --c-border: rgba(255,255,255,.45);
-    --c-surface: #1e1e1e;       /* superficie oscura para inputs/selects */
+    --c-border: rgba(255, 255, 255, 0.45);
+    --c-surface: #1e1e1e; /* superficie oscura para inputs/selects */
   }
 }
 
 /* Overrides MANUALES (prioridad sobre lo anterior) */
 :root[data-theme="light"] {
   --c-bg: #ffffff;
-    --c-text: #111111;
-    --c-accent: steelblue;
-    --c-muted: #f0f0f0;
-    --c-border: rgba(0,0,0,.6);
-    --bg-mainbutton: #dcdcdc;
-    color-scheme: light;
-    --c-surface: #ffffff;
-
+  --c-text: #111111;
+  --c-accent: steelblue;
+  --c-muted: #f0f0f0;
+  --c-border: rgba(0, 0, 0, 0.6);
+  --bg-mainbutton: #dcdcdc;
+  color-scheme: light;
+  --c-surface: #ffffff;
 }
 :root[data-theme="dark"] {
   --c-bg: #111111;
@@ -78,11 +78,10 @@
   --c-accent: #4da3ff;
   --c-muted: #222222;
   /*--c-muted: #dcdcdc;*/
-  --c-border: rgba(255,255,255,.45);
-  --bg-mainbutton: #2F4F4F;
+  --c-border: rgba(255, 255, 255, 0.45);
+  --bg-mainbutton: #2f4f4f;
   color-scheme: dark;
   --c-surface: #1e1e1e;
-
 }
 
 /* =========================
@@ -90,13 +89,16 @@
 ========================= */
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after {
+  box-sizing: border-box;
+}
 
-html, body { 
+html,
+body {
   height: 100%;
 }
 
-body{
+body {
   /*font-family: var(--font-mono);*/
   font-family: var(--font-sans);
   font-size: var(--fs-base);
@@ -105,19 +107,27 @@ body{
   margin: 0;
 }
 
-.mono, textarea, pre, code { font-family: var(--font-mono); }
+.mono,
+textarea,
+pre,
+code {
+  font-family: var(--font-mono);
+}
 
 /* Headings más controlados */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-sans);
   font-weight: 700;
   line-height: 1.15;
-  letter-spacing: 0;        /* evita “gordura” visual extra en Firefox */
+  letter-spacing: 0; /* evita “gordura” visual extra en Firefox */
 }
 
-h1 i { font-size: .9em; vertical-align: -0.05em; }
-
-
+h1 i {
+  font-size: 0.9em;
+  vertical-align: -0.05em;
+}
 
 a {
   color: var(--c-link);

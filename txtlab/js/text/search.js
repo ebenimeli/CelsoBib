@@ -8,10 +8,12 @@ export function searchElements() {
   const query = $id(IDS.searchtext)?.value.trim().toLowerCase() || "";
   const lines = getLinesFromValue($id(IDS.itext).value);
 
-  if (!query) return $id(IDS.otext).value = "Introduce un texto para buscar.";
+  if (!query) return ($id(IDS.otext).value = "Introduce un texto para buscar.");
 
   const results = lines.filter((line) => line.toLowerCase().includes(query));
-  $id(IDS.otext).value = results.length ? results.join("\n") : `No se encontraron coincidencias con "${query}".`;
+  $id(IDS.otext).value = results.length
+    ? results.join("\n")
+    : `No se encontraron coincidencias con "${query}".`;
 }
 
 /** Wire input event with debounce to live-search */

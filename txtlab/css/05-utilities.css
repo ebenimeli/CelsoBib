@@ -1,34 +1,36 @@
 /* =========================
    Helpers / Utilidades
 ========================= */
-.box{
+.box {
   border: var(--bd);
   border-radius: var(--radius);
   margin: var(--sp-1);
   padding: var(--sp-3);
 }
 
-.mainbox{
+.mainbox {
   margin: 7px; /* valor distinto al resto, se mantiene */
   padding: var(--sp-3);
 }
 
-.metainfo{
+.metainfo {
   padding: var(--sp-1);
-  font-size: .8em;
+  font-size: 0.8em;
   /*font-weight: bold;*/
   text-align: left;
 }
 
-.toolbox{ display: none; }
+.toolbox {
+  display: none;
+}
 
 section.text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    text-align: left;
-    font-size: .9em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  text-align: left;
+  font-size: 0.9em;
 }
 
 section.text h1 {
@@ -47,8 +49,17 @@ section.text h1 {
   text-align: center;
 }
 
-.timer-controls{display:flex;gap:.5rem;margin-top:.25rem}
-.timer-controls .action{min-width:2.25rem;display:inline-flex;align-items:center;justify-content:center}
+.timer-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+.timer-controls .action {
+  min-width: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /*
 .timer-controls{display:flex;gap:.5rem;margin-top:.25rem}
@@ -61,18 +72,19 @@ progress {
   accent-color: steelblue;
 }
 
-.text .quote{
+.text .quote {
   font-style: italic;
-  opacity: .9;
-  margin: .25rem 0 .75rem;
+  opacity: 0.9;
+  margin: 0.25rem 0 0.75rem;
 }
-
 
 /* =========================
    Accesibilidad / Motion
 ========================= */
-@media (prefers-reduced-motion: reduce){
-  *{ transition: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
 }
 
 img.icon {
@@ -85,5 +97,3 @@ img.iconme {
   border-radius: 10px;
   align-items: center;
 }
-
-

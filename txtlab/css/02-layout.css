@@ -1,7 +1,9 @@
 /* =========================
    Reset útil
 ========================= */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -27,14 +29,15 @@
     --sp-mobile: 8px; /* separación lateral en móvil */
   }
 
-  html, body {
+  html,
+  body {
     overflow-x: hidden; /* evita scroll lateral */
     padding: 0;
     margin: 0;
   }
 
   .container {
-    margin: 0;                       /* sin margen externo */
+    margin: 0; /* sin margen externo */
     padding-inline: var(--sp-mobile); /* gutter lateral único */
     width: auto;
     max-width: 100%;
@@ -100,7 +103,7 @@
   }
 
   .focus-controls {
-    display: none!important;
+    display: none !important;
   }
 
   #imenu > i,
@@ -144,8 +147,12 @@
 
 /* animación de giro */
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #topleft .productname {
@@ -202,8 +209,6 @@
   align-items: center;
 }
 
-
-
 #main {
   background: var(--c-muted);
   min-height: var(--h-min-main);
@@ -216,7 +221,7 @@
 .container footer {
   grid-area: footer;
   display: flex;
-  align-items: center;     /* centra verticalmente */
+  align-items: center; /* centra verticalmente */
   justify-content: center; /* centra horizontalmente */
   gap: 10px;
   min-height: var(--h-min-footer);
@@ -230,7 +235,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  /*font-weight: bold*/;
+  /*font-weight: bold*/
 }
 
 #footer a {

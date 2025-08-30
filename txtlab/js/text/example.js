@@ -1,3 +1,5 @@
+// js/text/import.js
+
 import { $id, IDS } from "../core/dom.js";
 
 /** Importa una lista de assets/data/*.txt en el textarea itext */
@@ -17,8 +19,6 @@ export async function importList(btn) {
   }
 }
 
-// js/text/import.js
-
 /**
  * Importa texto en #itext.
  * - Si el botón trae data-file, lo carga desde js/text/data/<archivo>.
@@ -28,7 +28,10 @@ export async function importList(btn) {
  * @param {string} [opts.targetId="itext"] - id del textarea destino
  * @param {string} [opts.basePath="js/text/data/"] - carpeta base para data-file
  */
-export function importText(btn, { targetId = "itext", basePath = "js/text/data/" } = {}) {
+export function importText(
+  btn,
+  { targetId = "itext", basePath = "js/text/data/" } = {}
+) {
   const out = document.getElementById(targetId);
   if (!out) {
     console.error(`[importText] No existe #${targetId}`);
@@ -39,7 +42,8 @@ export function importText(btn, { targetId = "itext", basePath = "js/text/data/"
 
   if (fileFromBtn) {
     // Carga desde el repositorio de textos
-    const url = (basePath.endsWith("/") ? basePath : basePath + "/") + fileFromBtn;
+    const url =
+      (basePath.endsWith("/") ? basePath : basePath + "/") + fileFromBtn;
     return fetch(url)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status} al cargar ${url}`);
@@ -69,16 +73,20 @@ export function importText(btn, { targetId = "itext", basePath = "js/text/data/"
     picker.addEventListener("change", async () => {
       try {
         const file = picker.files?.[0];
-        if (!file) { cleanup(); return resolve(false); }
+        if (!file) {
+          cleanup();
+          return resolve(false);
+        }
 
-        const text = typeof file.text === "function"
-          ? await file.text()
-          : await new Promise((res, rej) => {
-              const r = new FileReader();
-              r.onload = () => res(String(r.result || ""));
-              r.onerror = () => rej(r.error || new Error("FileReader error"));
-              r.readAsText(file);
-            });
+        const text =
+          typeof file.text === "function"
+            ? await file.text()
+            : await new Promise((res, rej) => {
+                const r = new FileReader();
+                r.onload = () => res(String(r.result || ""));
+                r.onerror = () => rej(r.error || new Error("FileReader error"));
+                r.readAsText(file);
+              });
 
         out.value = text;
         out.dispatchEvent(new Event("input", { bubbles: true }));

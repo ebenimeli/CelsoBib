@@ -4,13 +4,17 @@ import { getLinesFromValue } from "./textUtils.js";
 
 /** Sort lines A→Z */
 export function doAZ() {
-  const lines = getLinesFromValue($id(IDS.itext).value).sort((a, b) => a.localeCompare(b));
+  const lines = getLinesFromValue($id(IDS.itext).value).sort((a, b) =>
+    a.localeCompare(b)
+  );
   $id(IDS.otext).value = lines.join("\n");
 }
 
 /** Sort lines Z→A */
 export function doZA() {
-  const lines = getLinesFromValue($id(IDS.itext).value).sort((a, b) => b.localeCompare(a));
+  const lines = getLinesFromValue($id(IDS.itext).value).sort((a, b) =>
+    b.localeCompare(a)
+  );
   $id(IDS.otext).value = lines.join("\n");
 }
 
@@ -25,10 +29,14 @@ export function rightToLeft() {
 }
 
 /** Clear left textarea */
-export function cleanLeft() { $id(IDS.itext).value = ""; }
+export function cleanLeft() {
+  $id(IDS.itext).value = "";
+}
 
 /** Clear right textarea */
-export function cleanRight() { $id(IDS.otext).value = ""; }
+export function cleanRight() {
+  $id(IDS.otext).value = "";
+}
 
 /** Lowercase transform */
 export function lowerCase() {
@@ -42,7 +50,9 @@ export function upperCase() {
 
 /** Capitalize each word (simple title-case) */
 export function namesUp() {
-  const s = $id(IDS.itext).value.toLowerCase().replace(/\w\S*/g, (w) => w[0].toUpperCase() + w.slice(1));
+  const s = $id(IDS.itext)
+    .value.toLowerCase()
+    .replace(/\w\S*/g, (w) => w[0].toUpperCase() + w.slice(1));
   $id(IDS.otext).value = s;
 }
 
@@ -71,7 +81,7 @@ export function removeNumbering() {
 export function joinLists() {
   const left = $id(IDS.itext).value.trim();
   const right = $id(IDS.otext).value.trim();
-  $id(IDS.otext).value = right && left ? right + "\n" + left : (right || left);
+  $id(IDS.otext).value = right && left ? right + "\n" + left : right || left;
 }
 
 export function sortByTag() {
@@ -110,7 +120,6 @@ export function sortByTag() {
   document.getElementById("otext").value = result.join("\n");
 }
 
-
 /** Remove "/ TAG" tokens that appear right after a slash, keeping the rest.
  *  Examples:
  *   "Lovelace, Ada / A (Grupo 1)"  -> "Lovelace, Ada (Grupo 1)"
@@ -136,9 +145,9 @@ export function removeTags() {
 
 /** Convert list into checklist with big ballot box, ignoring empty lines */
 export function toCheckList() {
-  const lines = getLinesFromValue($id(IDS.itext).value)
-    .filter(line => line.trim() !== ""); // ignora vacías
-  const checked = lines.map(line => `☐ ${line}`);
+  const lines = getLinesFromValue($id(IDS.itext).value).filter(
+    (line) => line.trim() !== ""
+  ); // ignora vacías
+  const checked = lines.map((line) => `☐ ${line}`);
   $id(IDS.otext).value = checked.join("\n");
 }
-

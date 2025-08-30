@@ -17,7 +17,11 @@ if (!window.__wmAutowire) {
           clearInterval(window.__wmInterval);
           window.__wmInterval = null;
         }
-        try { initWriteMode(); } catch (err) { console.warn(err); }
+        try {
+          initWriteMode();
+        } catch (err) {
+          console.warn(err);
+        }
       })
     );
   });
@@ -29,52 +33,67 @@ export function initWriteMode() {
   if (main) main.classList.add("write-mode-active");
 
   // Oculta salida
-  ["omenu","otext","statuso"].forEach(id => document.getElementById(id)?.classList.add("is-hidden"));
+  ["omenu", "otext", "statuso"].forEach((id) =>
+    document.getElementById(id)?.classList.add("is-hidden")
+  );
   // Muestra entrada
-  ["imenu","itext","statusi"].forEach(id => document.getElementById(id)?.classList.remove("is-hidden"));
+  ["imenu", "itext", "statusi"].forEach((id) =>
+    document.getElementById(id)?.classList.remove("is-hidden")
+  );
 
   // Limita #imenu a solo copyi, pastei y cleanleft
   const imenu = document.getElementById("imenu");
   if (imenu) {
     // Oculta TODOS los hijos de #imenu...
-    Array.from(imenu.children).forEach(el => el.classList.add("is-hidden"));
+    Array.from(imenu.children).forEach((el) => el.classList.add("is-hidden"));
     // ...y muestra solo los tres botones permitidos
-    ["copyi","pastei","cleanleft"].forEach(action => {
-      imenu.querySelector(`button[data-action="${action}"]`)?.classList.remove("is-hidden");
+    ["copyi", "pastei", "cleanleft"].forEach((action) => {
+      imenu
+        .querySelector(`button[data-action="${action}"]`)
+        ?.classList.remove("is-hidden");
     });
   }
 
   // (por robustez) Ocultar botón left->right en write-mode
-  document.querySelector('button[data-action="lefttoright"]')?.classList.add('is-hidden');
+  document
+    .querySelector('button[data-action="lefttoright"]')
+    ?.classList.add("is-hidden");
 
   // --- Referencias UI ---
-  const inputGoal    = document.getElementById("nwords");
-  const goalWords    = document.getElementById("goalWords");
+  const inputGoal = document.getElementById("nwords");
+  const goalWords = document.getElementById("goalWords");
   const currentWords = document.getElementById("currentWords");
-  const percWords    = document.getElementById("percWords");
-  const progress     = document.getElementById("writeprogress");
-  const textInput    = document.getElementById("itext");      // textarea principal
-  const timerEl      = document.getElementById("timer");
-  const successDlg   = document.getElementById("success-dialog");
-  const quoteEl      = document.querySelector(".quote");
-  const wpmEl        = document.querySelector(".wpm");
+  const percWords = document.getElementById("percWords");
+  const progress = document.getElementById("writeprogress");
+  const textInput = document.getElementById("itext"); // textarea principal
+  const timerEl = document.getElementById("timer");
+  const successDlg = document.getElementById("success-dialog");
+  const quoteEl = document.querySelector(".quote");
+  const wpmEl = document.querySelector(".wpm");
 
   // Controles del timer
-  const btnPlay   = document.getElementById("timer-play");
-  const btnPause  = document.getElementById("timer-pause");
-  const btnReset  = document.getElementById("timer-reset");
+  const btnPlay = document.getElementById("timer-play");
+  const btnPause = document.getElementById("timer-pause");
+  const btnReset = document.getElementById("timer-reset");
 
   // Modal de éxito + botones de compartir
-  const successGoal  = document.getElementById("success-goal");
-  const successTime  = document.getElementById("success-time");
-  const shareX       = document.getElementById("share-x");
-  const shareWA      = document.getElementById("share-wa");
-  const shareMail    = document.getElementById("share-mail");
+  const successGoal = document.getElementById("success-goal");
+  const successTime = document.getElementById("success-time");
+  const shareX = document.getElementById("share-x");
+  const shareWA = document.getElementById("share-wa");
+  const shareMail = document.getElementById("share-mail");
 
   const SITE_URL = "https://www.ebenimeli.org/txtlab/";
 
   // Si la UI no está montada, abortar
-  if (!inputGoal || !goalWords || !currentWords || !progress || !textInput || !timerEl) {
+  if (
+    !inputGoal ||
+    !goalWords ||
+    !currentWords ||
+    !progress ||
+    !textInput ||
+    !timerEl
+  ) {
     console.warn("[write] UI aún no montada; initWriteMode() aborta.");
     return;
   }
@@ -83,100 +102,103 @@ export function initWriteMode() {
   const focusBtn = document.getElementById("focus-mode");
   const itxt = document.getElementById("itext");
 
+  // === Helpers para overlay y wrapper de concentración (NO cambian tu lógica) ===
+  let __fsWrap = null; // wrapper temporal para fullscreen
+  let __wordFloat = null; // div flotante con el contador
 
-// === Helpers para overlay y wrapper de concentración (NO cambian tu lógica) ===
-let __fsWrap = null;      // wrapper temporal para fullscreen
-let __wordFloat = null;   // div flotante con el contador
+  const ensureFsWrap = () => {
+    if (__fsWrap && __fsWrap.isConnected) return __fsWrap;
+    const wrap = document.createElement("div");
+    wrap.id = "itext-wrapper";
+    wrap.className = "itext-wrapper";
+    const parent = itxt.parentNode;
+    parent.insertBefore(wrap, itxt);
+    wrap.appendChild(itxt);
+    __fsWrap = wrap;
+    return wrap;
+  };
 
-const ensureFsWrap = () => {
-  if (__fsWrap && __fsWrap.isConnected) return __fsWrap;
-  const wrap = document.createElement("div");
-  wrap.id = "itext-wrapper";
-  wrap.className = "itext-wrapper";
-  const parent = itxt.parentNode;
-  parent.insertBefore(wrap, itxt);
-  wrap.appendChild(itxt);
-  __fsWrap = wrap;
-  return wrap;
-};
+  const unwrapFs = () => {
+    if (!__fsWrap || !__fsWrap.isConnected) return;
+    const parent = __fsWrap.parentNode;
+    if (parent) parent.insertBefore(itxt, __fsWrap);
+    __fsWrap.remove();
+    __fsWrap = null;
+  };
 
-const unwrapFs = () => {
-  if (!__fsWrap || !__fsWrap.isConnected) return;
-  const parent = __fsWrap.parentNode;
-  if (parent) parent.insertBefore(itxt, __fsWrap);
-  __fsWrap.remove();
-  __fsWrap = null;
-};
+  const isConcentrationActive = () =>
+    document.fullscreenElement === __fsWrap ||
+    itxt.classList.contains("concentration-overlay");
 
-const isConcentrationActive = () =>
-  (document.fullscreenElement === __fsWrap) || itxt.classList.contains("concentration-overlay");
-
-const showWordFloat = (n) => {
-  if (!__wordFloat || !__wordFloat.isConnected) {
-    __wordFloat = document.createElement("div");
-    __wordFloat.className = "word-float is-visible";
-    // color acorde al esquema actual del editor
-    const cs = getComputedStyle(itxt);
-    const fg = (cs.getPropertyValue("--write-fg") || cs.color).trim();
-    __wordFloat.style.color = fg;
-    // si estamos en fullscreen nativo, debe ser descendiente del wrapper
-    if (document.fullscreenElement === __fsWrap) {
-      __fsWrap.appendChild(__wordFloat);
-    } else {
-      document.body.appendChild(__wordFloat); // fallback
+  const showWordFloat = (n) => {
+    if (!__wordFloat || !__wordFloat.isConnected) {
+      __wordFloat = document.createElement("div");
+      __wordFloat.className = "word-float is-visible";
+      // color acorde al esquema actual del editor
+      const cs = getComputedStyle(itxt);
+      const fg = (cs.getPropertyValue("--write-fg") || cs.color).trim();
+      __wordFloat.style.color = fg;
+      // si estamos en fullscreen nativo, debe ser descendiente del wrapper
+      if (document.fullscreenElement === __fsWrap) {
+        __fsWrap.appendChild(__wordFloat);
+      } else {
+        document.body.appendChild(__wordFloat); // fallback
+      }
     }
-  }
-  __wordFloat.textContent = String(n);
-};
+    __wordFloat.textContent = String(n);
+  };
 
-const updateWordFloat = (n) => {
-  if (__wordFloat && __wordFloat.isConnected) __wordFloat.textContent = String(n);
-};
+  const updateWordFloat = (n) => {
+    if (__wordFloat && __wordFloat.isConnected)
+      __wordFloat.textContent = String(n);
+  };
 
-const hideWordFloat = () => {
-  if (!__wordFloat) return;
-  try { __wordFloat.remove(); } catch {}
-  __wordFloat = null;
-};
+  const hideWordFloat = () => {
+    if (!__wordFloat) return;
+    try {
+      __wordFloat.remove();
+    } catch {}
+    __wordFloat = null;
+  };
 
-
-  
   // Limpieza previa si ya hubiera listeners de otra sesión
   if (window.__wmFocusCleanup) {
-    try { window.__wmFocusCleanup(); } catch {}
+    try {
+      window.__wmFocusCleanup();
+    } catch {}
     window.__wmFocusCleanup = null;
   }
-const enterConcentration = async () => {
-  if (!itxt) return;
-  try {
-    // fullscreen del WRAPPER, no del textarea
-    const wrap = ensureFsWrap();
-    if (wrap.requestFullscreen) {
-      await wrap.requestFullscreen();
-    } else {
-      // Fallback CSS
-      document.body.classList.add("concentration-active");
-      itxt.classList.add("concentration-overlay");
+  const enterConcentration = async () => {
+    if (!itxt) return;
+    try {
+      // fullscreen del WRAPPER, no del textarea
+      const wrap = ensureFsWrap();
+      if (wrap.requestFullscreen) {
+        await wrap.requestFullscreen();
+      } else {
+        // Fallback CSS
+        document.body.classList.add("concentration-active");
+        itxt.classList.add("concentration-overlay");
+      }
+      itxt.focus({ preventScroll: true });
+      // mostrar contador con el valor actual
+      showWordFloat(countWords(itxt.value));
+    } catch (err) {
+      console.warn("[focus] No se pudo entrar en concentración:", err);
     }
-    itxt.focus({ preventScroll: true });
-    // mostrar contador con el valor actual
-    showWordFloat(countWords(itxt.value));
-  } catch (err) {
-    console.warn("[focus] No se pudo entrar en concentración:", err);
-  }
-};
+  };
 
-const exitConcentration = () => {
-  try {
-    if (document.fullscreenElement) {
-      document.exitFullscreen?.();
-    }
-  } catch {}
-  document.body.classList.remove("concentration-active");
-  itxt?.classList.remove("concentration-overlay");
-  hideWordFloat();
-  unwrapFs();
-};
+  const exitConcentration = () => {
+    try {
+      if (document.fullscreenElement) {
+        document.exitFullscreen?.();
+      }
+    } catch {}
+    document.body.classList.remove("concentration-active");
+    itxt?.classList.remove("concentration-overlay");
+    hideWordFloat();
+    unwrapFs();
+  };
 
   const onEscToExit = (ev) => {
     if (ev.key === "Escape") {
@@ -185,20 +207,22 @@ const exitConcentration = () => {
     }
   };
 
-const onFsChange = () => {
-  if (!document.fullscreenElement) {
-    // salimos de fullscreen → limpiar
-    document.body.classList.remove("concentration-active");
-    itxt?.classList.remove("concentration-overlay");
-    hideWordFloat();
-    unwrapFs();
-  } else if (document.fullscreenElement === __fsWrap) {
-    // asegúrate de que el overlay cuelga del wrapper
-    if (__wordFloat && __wordFloat.parentNode !== __fsWrap) {
-      try { __fsWrap.appendChild(__wordFloat); } catch {}
+  const onFsChange = () => {
+    if (!document.fullscreenElement) {
+      // salimos de fullscreen → limpiar
+      document.body.classList.remove("concentration-active");
+      itxt?.classList.remove("concentration-overlay");
+      hideWordFloat();
+      unwrapFs();
+    } else if (document.fullscreenElement === __fsWrap) {
+      // asegúrate de que el overlay cuelga del wrapper
+      if (__wordFloat && __wordFloat.parentNode !== __fsWrap) {
+        try {
+          __fsWrap.appendChild(__wordFloat);
+        } catch {}
+      }
     }
-  }
-};
+  };
 
   focusBtn?.addEventListener("click", enterConcentration);
   document.addEventListener("keydown", onEscToExit);
@@ -223,7 +247,7 @@ const onFsChange = () => {
     "Pequeños bloques, grandes historias.",
     "Cada palabra cuenta; no todas pesan lo mismo.",
     "La claridad gana a la perfección.",
-    "El hábito vence a la inspiración."
+    "El hábito vence a la inspiración.",
   ];
   const setRandomQuote = () => {
     const el = document.querySelector(".quote");
@@ -273,7 +297,7 @@ const onFsChange = () => {
   // --- Timer ---
   const updateTimerButtons = () => {
     if (!btnPlay || !btnPause) return;
-    btnPlay.disabled  = running;
+    btnPlay.disabled = running;
     btnPause.disabled = !running;
   };
 
@@ -307,10 +331,10 @@ const onFsChange = () => {
   // --- Share ---
   function updateShareLinks(goal, naturalTime) {
     const text = `🎉 ¡He alcanzado mi objetivo de escribir ${goal} palabras! He estado ${naturalTime} escribiendo con txtlab: ${SITE_URL}`;
-    const enc  = encodeURIComponent(text);
-    if (shareX)   shareX.href   = `https://x.com/intent/tweet?text=${enc}`;
-    if (shareWA)  shareWA.href  = `https://api.whatsapp.com/send?text=${enc}`;
-    if (shareMail){
+    const enc = encodeURIComponent(text);
+    if (shareX) shareX.href = `https://x.com/intent/tweet?text=${enc}`;
+    if (shareWA) shareWA.href = `https://api.whatsapp.com/send?text=${enc}`;
+    if (shareMail) {
       const subject = encodeURIComponent("¡Objetivo de escritura alcanzado!");
       shareMail.href = `mailto:?subject=${subject}&body=${enc}`;
     }
@@ -361,7 +385,6 @@ const onFsChange = () => {
 
     updateWPM(words);
     if (isConcentrationActive()) updateWordFloat(words);
-
   }
 
   // --- Estado inicial ---
@@ -388,6 +411,8 @@ const onFsChange = () => {
   btnPlay?.addEventListener("click", startTimer);
   btnPause?.addEventListener("click", pauseTimer);
   btnReset?.addEventListener("click", resetTimer);
+
+  syncSoundButtons(document);
 }
 
 export function exitWriteMode() {
@@ -395,7 +420,7 @@ export function exitWriteMode() {
   document.getElementById("main")?.classList.remove("write-mode-active");
 
   // Muestra todos (restaura visibilidad)
-  ["omenu","otext","statuso","imenu","itext","statusi"].forEach(id => {
+  ["omenu", "otext", "statuso", "imenu", "itext", "statusi"].forEach((id) => {
     const el = document.getElementById(id);
     el?.classList.remove("is-hidden");
     // Limpia posibles estilos inline
@@ -408,7 +433,9 @@ export function exitWriteMode() {
   // Restaura TODOS los hijos de #imenu (vuelve a aparecer el buscador, icono, lefttoright, etc.)
   const imenu = document.getElementById("imenu");
   if (imenu) {
-    Array.from(imenu.children).forEach(el => el.classList.remove("is-hidden"));
+    Array.from(imenu.children).forEach((el) =>
+      el.classList.remove("is-hidden")
+    );
   }
 
   // Restablece posibles estilos forzados en #main
@@ -420,7 +447,9 @@ export function exitWriteMode() {
 
   // Salir y limpiar modo concentración si estuviera activo
   if (window.__wmFocusCleanup) {
-    try { window.__wmFocusCleanup(); } catch {}
+    try {
+      window.__wmFocusCleanup();
+    } catch {}
     window.__wmFocusCleanup = null;
   }
 
@@ -440,11 +469,12 @@ function resetSchemeToTheme() {
 
   // Quitar cualquier clase scheme-*
   [...itxt.classList]
-    .filter(c => c.startsWith("scheme-"))
-    .forEach(c => itxt.classList.remove(c));
+    .filter((c) => c.startsWith("scheme-"))
+    .forEach((c) => itxt.classList.remove(c));
 
   // ⚙️ Valores por defecto al cargar la app
-  const DEFAULT_FONT_FAMILY = "system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,sans-serif";
+  const DEFAULT_FONT_FAMILY =
+    "system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,sans-serif";
   const DEFAULT_FONT_SIZE_REM = 1.0;
 
   // Aplicar tipografía y tamaño por defecto
@@ -456,7 +486,8 @@ function resetSchemeToTheme() {
   if (selFamily) selFamily.value = DEFAULT_FONT_FAMILY;
 
   const sizeDisplay = document.getElementById("font-size-display");
-  if (sizeDisplay) sizeDisplay.textContent = `${DEFAULT_FONT_SIZE_REM.toFixed(1)}rem`;
+  if (sizeDisplay)
+    sizeDisplay.textContent = `${DEFAULT_FONT_SIZE_REM.toFixed(1)}rem`;
 
   // Guardar en localStorage como estado base
   localStorage.setItem("write.fontFamily", DEFAULT_FONT_FAMILY);
@@ -471,12 +502,20 @@ document.addEventListener("click", (e) => {
   const target = btn.getAttribute("data-target");
   if (target !== "#write-mode") {
     // Vamos a otro panel → sal de write-mode
-    try { exitWriteMode(); } catch (_) {}
+    try {
+      exitWriteMode();
+    } catch (_) {}
   } else {
     // Entramos en write-mode → init
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      try { initWriteMode(); } catch (err) { console.warn(err); }
-    }));
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() => {
+        try {
+          initWriteMode();
+        } catch (err) {
+          console.warn(err);
+        }
+      })
+    );
   }
 });
 
@@ -508,7 +547,10 @@ export function suggestWord() {
       return res.text();
     })
     .then((text) => {
-      const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+      const lines = text
+        .split(/\r?\n/)
+        .map((l) => l.trim())
+        .filter(Boolean);
       if (!lines.length) return;
 
       const word = pickRandom(lines);
@@ -522,3 +564,153 @@ export function suggestWord() {
       console.error("[suggestWord] Error:", err);
     });
 }
+
+// js/text/write.js
+
+const WORDS_BASE_PATH = "assets/data/words/";
+
+/* ========= Utilidades comunes ========= */
+
+function pickRandomLine(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function addToItext(snippet) {
+  const ta = document.getElementById("itext");
+  if (!ta || !snippet) return;
+  const needsSpace = ta.value.length > 0 && !/\s$/.test(ta.value);
+  ta.value += (needsSpace ? " " : "") + snippet;
+  ta.dispatchEvent(new Event("input", { bubbles: true }));
+}
+
+/** Lee un archivo (en assets/data/words/) y devuelve una línea aleatoria no vacía. */
+function readRandomLine(fileName) {
+  const url = WORDS_BASE_PATH + fileName;
+  return fetch(url, { cache: "no-store" })
+    .then((res) => {
+      if (!res.ok)
+        throw new Error(`[readRandomLine] No se pudo cargar: ${url}`);
+      return res.text();
+    })
+    .then((text) => {
+      const lines = text
+        .split(/\r?\n/)
+        .map((l) => l.trim())
+        .filter(Boolean);
+      if (!lines.length) return null;
+      return pickRandomLine(lines);
+    });
+}
+
+/** Factoría: usa data-file del botón; si falta, registra aviso. */
+function suggestFromFile(btn) {
+  const file = btn?.dataset?.file;
+  if (!file) {
+    console.warn("[suggestFromFile] Falta data-file en el botón.");
+    return Promise.resolve();
+  }
+  return readRandomLine(file)
+    .then((line) => addToItext(line))
+    .catch((err) => console.error("[suggestFromFile]", err));
+}
+
+function suggestFromFileName(tag, file) {
+  if (!file) {
+    console.warn("[suggestFromFile] Falta data-file en el botón.");
+    return Promise.resolve();
+  }
+  return readRandomLine(file)
+    .then((line) => addToItext(tag + ": " + line))
+    .catch((err) => console.error("[suggestFromFile]", err));
+}
+
+/* ========= Funciones exportadas para actionMap ========= */
+
+export function suggestCharacter(btn) {
+  return suggestFromFile(btn); // characters.txt
+}
+
+export function suggestPlace(btn) {
+  return suggestFromFile(btn); // places.txt
+}
+
+export function suggestTime(btn) {
+  return suggestFromFile(btn); // times.txt
+}
+
+export function suggestFeeling(btn) {
+  return suggestFromFile(btn); // feelings.txt
+}
+
+export function suggestConflict(btn) {
+  return suggestFromFile(btn);
+}
+
+export function suggestAll(btn) {
+  suggestFromFileName("Personaje", "characters.txt");
+  suggestFromFileName("Lugar", "places.txt");
+  suggestFromFileName("Momento/tiempo", "times.txt");
+  suggestFromFileName("Sentimiento/Emoción", "feelings.txt");
+  suggestFromFileName("Conflicto", "conflicts.txt");
+}
+
+/* (Opcional) Si ya tienes suggestWord, puede reutilizar lo mismo:
+export function suggestWord(btn) {
+  // ej. usar data-file="dic.txt_part{N}.txt" si lo pasas por HTML
+  return suggestFromFile(btn);
+}
+*/
+
+// --- Sonido de fondo (lluvia + truenos)
+let bgAudio = null;
+
+function ensureBgAudio() {
+  if (!bgAudio) {
+    bgAudio = new Audio("assets/media/rainthunder.mp3");
+    bgAudio.loop = true;
+    bgAudio.preload = "auto";
+    bgAudio.volume = 0.5;
+  }
+  return bgAudio;
+}
+
+function syncSoundButtons(root = document) {
+  const onBtn = root.querySelector('button[data-action="soundOn"]');
+  const offBtn = root.querySelector('button[data-action="soundOff"]');
+  if (!onBtn || !offBtn) return;
+
+  const bg = ensureBgAudio();
+  const isPlaying = !bg.paused && !bg.ended;
+  if (isPlaying) {
+    onBtn.style.display = "none";
+    offBtn.style.display = "inline-block";
+  } else {
+    offBtn.style.display = "none";
+    onBtn.style.display = "inline-block";
+  }
+}
+
+async function soundOnAction() {
+  const bg = ensureBgAudio();
+  try {
+    await bg.play();
+  } catch (e) {
+    console.warn("[sound] play()", e);
+  }
+  syncSoundButtons(document);
+}
+
+function soundOffAction() {
+  const bg = ensureBgAudio();
+  try {
+    bg.pause();
+  } catch (e) {}
+  syncSoundButtons(document);
+}
+
+// Exporta para poder usarlas desde main.js (actionMap)
+export {
+  soundOnAction as soundOn,
+  soundOffAction as soundOff,
+  syncSoundButtons,
+};

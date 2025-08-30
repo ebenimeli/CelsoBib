@@ -37,7 +37,9 @@ export async function copyToClipboard(text) {
 export async function pasteInto(targetId) {
   try {
     if (!navigator.clipboard?.readText) {
-      alert("Este navegador no permite leer del portapapeles aquí. Usad Ctrl/Cmd+V.");
+      alert(
+        "Este navegador no permite leer del portapapeles aquí. Usad Ctrl/Cmd+V."
+      );
       return;
     }
     const text = await navigator.clipboard.readText();
@@ -48,7 +50,9 @@ export async function pasteInto(targetId) {
     area.setSelectionRange(area.value.length, area.value.length);
     setInfo("Pegado desde portapapeles");
   } catch {
-    alert("No se pudo pegar. Aseguraos de usar HTTPS y un gesto de usuario (clic).");
+    alert(
+      "No se pudo pegar. Aseguraos de usar HTTPS y un gesto de usuario (clic)."
+    );
   }
 }
 
