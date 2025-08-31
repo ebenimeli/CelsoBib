@@ -78,6 +78,7 @@ function installAboutLoader() {
 const actionMap = {
   soundOn: W.soundOn,
   soundOff: W.soundOff,
+  typewriterToggle: W.typewriterToggle,
 
   suggestWord: W.suggestWord,
   suggestCharacter: W.suggestCharacter,
@@ -245,6 +246,7 @@ async function ensureWriteModeLoaded(container) {
 
   initWriteMode?.(container);
   W.syncSoundButtons?.(document);
+  W.typewriterRestore?.();
 }
 
 function installWriteModeLazyLoader() {

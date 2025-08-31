@@ -102,16 +102,14 @@
         <p class="quote">“Escribe algo que merezca la pena ser leído.”</p>
       </fieldset>
 
-      <!-- BOTÓN MODO CONCENTRACIÓN -->
       <fieldset class="quote-fieldset">
         <legend>Concentración</legend>
         <button id="focus-mode" type="button" class="action" title="Modo concentración (pantalla completa)">
           <i class="fa-solid fa-maximize"></i> Modo concentración
         </button>
 
-        <button id="ambient" type="button" class="action"
-          title="Seleccionar ambiente">
-          <i class="fa-solid fa-headphones"></i> Ambiente
+        <button id="ambient" type="button" class="action" title="Seleccionar ambiente">
+          <i class="fa-solid fa-headphones"></i> Escuchar ambiente
         </button>
         <button type="button" class="action" data-action="soundOn" data-file="rainthunder"
           title="Activar sonido de fondo">
@@ -127,26 +125,22 @@
           title="Activar sonido de fondo">
           <i class="fa-solid fa-tree"></i> Bosque de noche
         </button>
-
-        <!-- Solo una idea: menú desplegable para ambientes-->
-        <!--
-        <label for="sound-select"></label>
-        <select id="sound-select" class="action">
-          <option value="rainthunder">🌧️ Lluvia</option>
-          <option value="cafe">☕ Café</option>
-          <option value="library">📚 Biblioteca</option>
-          <option value="nightwoods">🌲 Bosque de noche</option>
-        </select>
-        -->
-
+        <button type="button" class="action" data-action="soundOn" data-file="fireplace_ORIG"
+          title="Activar sonido de fondo">
+          <i class="fa-solid fa-fire"></i> Chimenea
+        </button>
         <button type="button" class="action" data-action="soundOff" title="Desactivar sonido de fondo"
           style="display:none;">
-          <i class="fa-solid fa-volume-xmark"></i> Silencio
+          <i class="fa-solid fa-volume-xmark"></i> Silenciar ambiente
         </button>
-
+        <button id="typewriter-toggle" type="button" class="action" data-action="typewriterToggle"
+          data-label-on="Silenciar teclas" data-label-off="Escuchar teclas" aria-pressed="false"
+          title="Activar sonido de máquina de escribir">
+          <i class="fa-solid fa-keyboard" aria-hidden="true"></i>
+          <span class="lbl">¡Tac, tac, tac!</span>
+        </button>
       </fieldset>
 
-      <!--
       <fieldset class="quote-fieldset">
         <legend>Cajón de ideas</legend>
         <button type="button" class="action" data-action="suggestWord" title="Añadir palabra aleatoria">
@@ -181,7 +175,7 @@
           <i class="fa-solid fa-bolt"></i>
         </button>
       </fieldset>
-      -->
+
       <fieldset class="progress-fieldset">
         <legend>Objetivo</legend>
 

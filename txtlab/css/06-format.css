@@ -483,3 +483,21 @@ button[data-action="soundOn"] {
 button[data-action="soundOn"].is-visible {
   display: inline-block; /* o block/flex según tu layout */
 }
+
+/* estado ON: color/contorno + puntito indicador */
+button.action.is-on {
+  outline: 2px solid var(--c-accent, #4a90e2);
+  background: color-mix(in oklab, var(--c-accent, #4a90e2) 12%, transparent);
+  box-shadow: 0 0 0 2px
+    color-mix(in oklab, var(--c-accent, #4a90e2) 30%, transparent) inset;
+}
+
+button.action.is-on .state-dot::after {
+  content: "";
+  display: inline-block;
+  width: 0.55em;
+  height: 0.55em;
+  border-radius: 50%;
+  background: var(--c-accent, #4a90e2);
+  margin-left: 0.4em;
+}
