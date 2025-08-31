@@ -12,6 +12,7 @@ CAMBIOS Y MEJORAS RECIENTES:
 [OK] Textos de ejemplo
 [OK] Cálculo de frecuencia de palabras y de caracteres.
 [OK] Nuevo módulo para realizar cálculos estadísticos sobre textos.
+
 [ ] Modo “Escribir”
 [OK] Interfaz simplificada: en la barra de entrada solo verás Copiar, Pegar y Limpiar.
 [OK] Zona de salida oculta durante la escritura para evitar distracciones.
