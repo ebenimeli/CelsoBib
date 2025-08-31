@@ -44,7 +44,9 @@ export function initWriteMode() {
   // Limita #imenu a solo copyi, pastei y cleanleft
   const imenu = document.getElementById("imenu");
   if (imenu) {
+    // Oculta TODOS los hijos de #imenu...
     Array.from(imenu.children).forEach((el) => el.classList.add("is-hidden"));
+    // ...y muestra solo los tres botones permitidos
     ["copyi", "pastei", "cleanleft"].forEach((action) => {
       imenu
         .querySelector(`button[data-action="${action}"]`)
@@ -100,7 +102,7 @@ export function initWriteMode() {
   const focusBtn = document.getElementById("focus-mode");
   const itxt = document.getElementById("itext");
 
-  // === Helpers para overlay y wrapper de concentración ===
+  // === Helpers para overlay y wrapper de concentración (NO cambian tu lógica) ===
   let __fsWrap = null; // wrapper temporal para fullscreen
   let __wordFloat = null; // div flotante con el contador
 
@@ -132,9 +134,11 @@ export function initWriteMode() {
     if (!__wordFloat || !__wordFloat.isConnected) {
       __wordFloat = document.createElement("div");
       __wordFloat.className = "word-float is-visible";
+      // color acorde al esquema actual del editor
       const cs = getComputedStyle(itxt);
       const fg = (cs.getPropertyValue("--write-fg") || cs.color).trim();
       __wordFloat.style.color = fg;
+      // si estamos en fullscreen nativo, debe ser descendiente del wrapper
       if (document.fullscreenElement === __fsWrap) {
         __fsWrap.appendChild(__wordFloat);
       } else {
@@ -157,40 +161,6 @@ export function initWriteMode() {
     __wordFloat = null;
   };
 
-  // === NUEVO: botón de cierre en concentración ===
-  let __closeBtn = null;
-
-  const ensureCloseBtn = () => {
-    if (__closeBtn && __closeBtn.isConnected) return __closeBtn;
-    const b = document.createElement("button");
-    b.type = "button";
-    b.className = "concentration-close";
-    b.setAttribute("aria-label", "Salir de concentración (Esc)");
-    b.title = "Salir de concentración (Esc)";
-    b.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
-    b.addEventListener("click", () => exitConcentration());
-    __closeBtn = b;
-    return b;
-  };
-
-  const showCloseBtn = () => {
-    const btn = ensureCloseBtn();
-    if (document.fullscreenElement === __fsWrap) {
-      __fsWrap.appendChild(btn);
-    } else {
-      document.body.appendChild(btn); // fallback
-    }
-    requestAnimationFrame(() => btn.classList.add("is-visible"));
-  };
-
-  const hideCloseBtn = () => {
-    if (!__closeBtn) return;
-    try {
-      __closeBtn.remove();
-    } catch {}
-    __closeBtn = null;
-  };
-
   // Limpieza previa si ya hubiera listeners de otra sesión
   if (window.__wmFocusCleanup) {
     try {
@@ -198,10 +168,10 @@ export function initWriteMode() {
     } catch {}
     window.__wmFocusCleanup = null;
   }
-
   const enterConcentration = async () => {
     if (!itxt) return;
     try {
+      // fullscreen del WRAPPER, no del textarea
       const wrap = ensureFsWrap();
       if (wrap.requestFullscreen) {
         await wrap.requestFullscreen();
@@ -211,8 +181,8 @@ export function initWriteMode() {
         itxt.classList.add("concentration-overlay");
       }
       itxt.focus({ preventScroll: true });
+      // mostrar contador con el valor actual
       showWordFloat(countWords(itxt.value));
-      showCloseBtn(); // NUEVO
     } catch (err) {
       console.warn("[focus] No se pudo entrar en concentración:", err);
     }
@@ -227,32 +197,28 @@ export function initWriteMode() {
     document.body.classList.remove("concentration-active");
     itxt?.classList.remove("concentration-overlay");
     hideWordFloat();
-    hideCloseBtn(); // NUEVO
     unwrapFs();
   };
 
   const onEscToExit = (ev) => {
     if (ev.key === "Escape") {
-      if (!document.fullscreenElement) exitConcentration(); // fallback
+      // Si estamos en fallback (no fullscreen nativo), ESC sale también
+      if (!document.fullscreenElement) exitConcentration();
     }
   };
 
   const onFsChange = () => {
     if (!document.fullscreenElement) {
+      // salimos de fullscreen → limpiar
       document.body.classList.remove("concentration-active");
       itxt?.classList.remove("concentration-overlay");
       hideWordFloat();
-      hideCloseBtn(); // NUEVO
       unwrapFs();
     } else if (document.fullscreenElement === __fsWrap) {
+      // asegúrate de que el overlay cuelga del wrapper
       if (__wordFloat && __wordFloat.parentNode !== __fsWrap) {
         try {
           __fsWrap.appendChild(__wordFloat);
-        } catch {}
-      }
-      if (__closeBtn && __closeBtn.parentNode !== __fsWrap) {
-        try {
-          __fsWrap.appendChild(__closeBtn);
         } catch {}
       }
     }
@@ -267,7 +233,7 @@ export function initWriteMode() {
     focusBtn?.removeEventListener("click", enterConcentration);
     document.removeEventListener("keydown", onEscToExit);
     document.removeEventListener("fullscreenchange", onFsChange);
-    exitConcentration(); // ya limpia flotantes y wrapper
+    exitConcentration();
   };
 
   // --- Cita aleatoria ---
@@ -384,7 +350,7 @@ export function initWriteMode() {
       goalWords.textContent = "0";
       progress.max = 0;
     }
-    updateCurrent();
+    updateCurrent(); // recalcula % y WPM
   }
 
   function updateCurrent() {
@@ -399,7 +365,9 @@ export function initWriteMode() {
       progress.value = words;
 
       if (words >= goal && !goalReached) {
+        // ✅ Solo mostrar el modal si write-mode está montado
         if (!timerEl?.isConnected) return;
+
         goalReached = true;
         pauseTimer();
 
@@ -473,13 +441,14 @@ export function exitWriteMode() {
   ["omenu", "otext", "statuso", "imenu", "itext", "statusi"].forEach((id) => {
     const el = document.getElementById(id);
     el?.classList.remove("is-hidden");
+    // Limpia posibles estilos inline
     el?.style.removeProperty("display");
     el?.style.removeProperty("width");
     el?.style.removeProperty("height");
     el?.style.removeProperty("flex");
   });
 
-  // Restaura TODOS los hijos de #imenu
+  // Restaura TODOS los hijos de #imenu (vuelve a aparecer el buscador, icono, lefttoright, etc.)
   const imenu = document.getElementById("imenu");
   if (imenu) {
     Array.from(imenu.children).forEach((el) =>
@@ -550,10 +519,12 @@ document.addEventListener("click", (e) => {
 
   const target = btn.getAttribute("data-target");
   if (target !== "#write-mode") {
+    // Vamos a otro panel → sal de write-mode
     try {
       exitWriteMode();
     } catch (_) {}
   } else {
+    // Entramos en write-mode → init
     requestAnimationFrame(() =>
       requestAnimationFrame(() => {
         try {
@@ -582,7 +553,7 @@ export function suggestWord() {
   const ta = getEditorTextarea();
   if (!ta) {
     console.warn("No se encontró textarea con id='text' ni 'itext'.");
-    return Promise.resolve();
+    return Promise.resolve(); // nada que hacer, pero no rompemos la cadena
   }
 
   const idx = 1 + Math.floor(Math.random() * 3);
@@ -605,14 +576,14 @@ export function suggestWord() {
       ta.value += `${needsSpace ? " " : ""}${word}`;
 
       ta.dispatchEvent(new Event("input", { bubbles: true }));
-      return word;
+      return word; // opcional: por si quieres usarlo
     })
     .catch((err) => {
       console.error("[suggestWord] Error:", err);
     });
 }
 
-// js/text/write.js (colecciones)
+// js/text/write.js
 
 const WORDS_BASE_PATH = "assets/data/words/";
 
@@ -674,20 +645,25 @@ function suggestFromFileName(tag, file) {
 /* ========= Funciones exportadas para actionMap ========= */
 
 export function suggestCharacter(btn) {
-  return suggestFromFile(btn);
+  return suggestFromFile(btn); // characters.txt
 }
+
 export function suggestPlace(btn) {
-  return suggestFromFile(btn);
+  return suggestFromFile(btn); // places.txt
 }
+
 export function suggestTime(btn) {
-  return suggestFromFile(btn);
+  return suggestFromFile(btn); // times.txt
 }
+
 export function suggestFeeling(btn) {
-  return suggestFromFile(btn);
+  return suggestFromFile(btn); // feelings.txt
 }
+
 export function suggestConflict(btn) {
   return suggestFromFile(btn);
 }
+
 export function suggestAll(btn) {
   suggestFromFileName("Personaje", "characters.txt");
   suggestFromFileName("Lugar", "places.txt");
@@ -696,7 +672,14 @@ export function suggestAll(btn) {
   suggestFromFileName("Conflicto", "conflicts.txt");
 }
 
-/* --- Sonido de fondo (multipista con data-file) --- */
+/* (Opcional) Si ya tienes suggestWord, puede reutilizar lo mismo:
+export function suggestWord(btn) {
+  // ej. usar data-file="dic.txt_part{N}.txt" si lo pasas por HTML
+  return suggestFromFile(btn);
+}
+*/
+
+// --- Sonido de fondo (multipista con data-file) ---
 const MEDIA_BASE = "assets/media/";
 let bgAudio = null;
 let currentBgKey = null;
@@ -715,7 +698,10 @@ function setSavedVolume(v) {
 
 // Prepara / cambia la pista si es necesario
 function ensureBgAudio(fileKey = "rainthunder") {
+  // normaliza (quita espacios)
   const key = String(fileKey).trim() || "rainthunder";
+
+  // Si no existe o la pista es distinta → crea/cambia
   if (!bgAudio || currentBgKey !== key) {
     try {
       bgAudio?.pause();
@@ -727,8 +713,10 @@ function ensureBgAudio(fileKey = "rainthunder") {
     bgAudio.volume = getSavedVolume();
     currentBgKey = key;
 
+    // Guarda la pista elegida
     localStorage.setItem("write.bgKey", currentBgKey);
 
+    // Cuando termine o falle, sincroniza botones
     bgAudio.addEventListener("ended", () => syncSoundButtons(document));
     bgAudio.addEventListener("pause", () => syncSoundButtons(document));
     bgAudio.addEventListener("play", () => syncSoundButtons(document));
@@ -741,15 +729,17 @@ function syncSoundButtons(root = document) {
   const offBtn = root.querySelector('button[data-action="soundOff"]');
   const isPlaying = !!(bgAudio && !bgAudio.paused && !bgAudio.ended);
 
+  // Muestra/oculta solo el botón de "Silencio"
   if (offBtn) offBtn.style.display = isPlaying ? "inline-block" : "none";
 
+  // Marca como activo el botón cuya pista está sonando
   root.querySelectorAll('button[data-action="soundOn"]').forEach((b) => {
     const key = (b.dataset.file || "rainthunder").trim();
     b.classList.toggle("is-active", isPlaying && key === currentBgKey);
   });
 }
 
-// Acción: encender sonido
+// Acción: encender sonido leyendo data-file del botón
 async function soundOnAction(btn) {
   const key = (btn?.dataset?.file || "rainthunder").trim();
   const bg = ensureBgAudio(key);
@@ -761,7 +751,7 @@ async function soundOnAction(btn) {
   syncSoundButtons(document);
 }
 
-// Acción: apagar sonido
+// Acción: apagar sonido (pausa la pista actual)
 function soundOffAction() {
   if (!bgAudio) return;
   try {
@@ -770,7 +760,7 @@ function soundOffAction() {
   syncSoundButtons(document);
 }
 
-// (Opcional) API volumen
+// (Opcional) API para ajustar volumen desde la UI si tienes un slider
 function setBgVolumeFromInput(inputEl) {
   if (!inputEl) return;
   inputEl.addEventListener("input", () => {
@@ -778,10 +768,11 @@ function setBgVolumeFromInput(inputEl) {
   });
 }
 
-// Restaurar última pista
+// Al montar write-mode, intenta restaurar la última pista
 (function restoreLastTrackOnLoad() {
   const lastKey = localStorage.getItem("write.bgKey");
   if (lastKey) ensureBgAudio(lastKey);
+  // No auto-play por políticas del navegador; solo sincroniza estado
   syncSoundButtons(document);
 })();
 
@@ -793,7 +784,6 @@ export {
   setBgVolumeFromInput, // opcional
 };
 
-/* --- Máquina de escribir --- */
 let __twEnabled = false;
 
 function updateTypewriterUI(root = document) {
@@ -818,6 +808,7 @@ function updateTypewriterUI(root = document) {
   }
   if (lbl) lbl.textContent = __twEnabled ? onTxt : offTxt;
 
+  // puntito indicador si no existe
   if (__twEnabled && !btn.querySelector(".state-dot")) {
     const d = document.createElement("span");
     d.className = "state-dot";
@@ -832,6 +823,7 @@ function ensureTypewriterWired(root = document) {
   const ta = root.getElementById("itext");
   if (!ta) return false;
 
+  // pool de audio mínima (puedes reusar tu MEDIA_BASE)
   const src = `${MEDIA_BASE}typing1.mp3`;
   const mk = () => {
     const a = new Audio(src);
@@ -854,6 +846,7 @@ function ensureTypewriterWired(root = document) {
 
   ta.addEventListener("keydown", onKey);
 
+  // limpieza al salir de write-mode
   const prev = window.__wmTypeCleanup;
   window.__wmTypeCleanup = () => {
     try {
@@ -871,6 +864,7 @@ function ensureTypewriterWired(root = document) {
 }
 
 export function typewriterToggle(btn) {
+  // monta wiring si ya estás en write-mode
   if (!ensureTypewriterWired(document)) {
     console.warn("[typewriter] Editor aún no montado.");
     return;
@@ -880,6 +874,7 @@ export function typewriterToggle(btn) {
   updateTypewriterUI(document);
 }
 
+// (opcional) restablecer estado previo al entrar en write-mode
 export function typewriterRestore() {
   __twEnabled = localStorage.getItem("write.typewriter") === "1";
   updateTypewriterUI(document);

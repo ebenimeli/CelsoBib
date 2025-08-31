@@ -449,20 +449,19 @@ body.concentration-active {
 }
 
 /* Contador flotante: abajo a la IZQUIERDA, pegado al borde */
-/*
 .word-float {
   position: fixed;
   left: env(
     safe-area-inset-left,
     0px
-  );
+  ); /* 0 en la mayoría; evita notch en iOS */
   bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
-  transform: none; 
+  transform: none; /* sin centrado */
   right: auto;
 
-  font-size: 2em; 
+  font-size: 2em; /* 2.0 */
   line-height: 1;
-  opacity: 0.5; 
+  opacity: 0.5; /* ligera transparencia */
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   pointer-events: none;
   z-index: 100000;
@@ -471,7 +470,6 @@ body.concentration-active {
 .word-float.is-visible {
   display: block;
 }
-  */
 
 button[data-action="soundOn"].is-active {
   outline: 2px solid var(--c-accent);
@@ -502,94 +500,4 @@ button.action.is-on .state-dot::after {
   border-radius: 50%;
   background: var(--c-accent, #4a90e2);
   margin-left: 0.4em;
-}
-
-/* === Modo concentración: contador flotante y botón cerrar === */
-
-.word-float {
-  position: fixed;
-  left: 16px;
-  bottom: 16px;
-  z-index: 9999;
-  padding: 8px 12px;
-  font: 600 14px/1.2
-    var(
-      --write-font-family,
-      system-ui,
-      -apple-system,
-      Segoe UI,
-      Roboto,
-      Ubuntu,
-      Cantarell,
-      Noto Sans,
-      Helvetica,
-      Arial,
-      sans-serif
-    );
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  background: rgba(255, 255, 255, 0.55);
-  color: var(--write-fg, inherit);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-[data-theme="dark"] .word-float {
-  background: rgba(0, 0, 0, 0.4);
-  border-color: rgba(255, 255, 255, 0.15);
-}
-.word-float.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Botón cerrar (arriba-derecha) con estética translúcida */
-.concentration-close {
-  position: fixed;
-  top: 16px;
-  right: 16px;
-  z-index: 10000;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  background: rgba(255, 255, 255, 0.55);
-  color: var(--write-fg, inherit);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  opacity: 0;
-  transform: translateY(-6px);
-  transition: opacity 0.2s ease, transform 0.2s ease, background 0.15s ease,
-    border-color 0.15s ease;
-}
-[data-theme="dark"] .concentration-close {
-  background: rgba(0, 0, 0, 0.4);
-  border-color: rgba(255, 255, 255, 0.15);
-}
-.concentration-close.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.concentration-close:hover {
-  filter: brightness(1.05);
-}
-.concentration-close:active {
-  transform: translateY(0) scale(0.98);
-}
-.concentration-close i {
-  font-size: 20px; /* tamaño medio visible */
-  pointer-events: none;
-}
-
-/* Asegura stacking context controlado del wrapper en fullscreen */
-.itext-wrapper {
-  position: relative;
 }
