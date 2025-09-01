@@ -168,8 +168,8 @@
   "remove_tags_label": "Supprimer étiquettes",
   "checklist_label": "Liste de tâches",
 
-  "status_i": "Statut I",
-  "status_o": "Statut O",
+  "status_i": "Statut",
+  "status_o": "Statut",
 
   "font_option_sans_system": "Sans (système)",
   "font_option_serif": "Serif",

@@ -168,8 +168,8 @@
   "remove_tags_label": "Eliminar etiquetas",
   "checklist_label": "Lista de tareas",
 
-  "status_i": "Status I",
-  "status_o": "Status O",
+  "status_i": "Estado",
+  "status_o": "Estado",
 
   "font_option_sans_system": "Sans (sistema)",
   "font_option_serif": "Serif",

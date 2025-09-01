@@ -168,8 +168,8 @@
   "remove_tags_label": "Tags entfernen",
   "checklist_label": "Checkliste",
 
-  "status_i": "Status I",
-  "status_o": "Status O",
+  "status_i": "Status",
+  "status_o": "Status",
 
   "font_option_sans_system": "Sans (System)",
   "font_option_serif": "Serif",

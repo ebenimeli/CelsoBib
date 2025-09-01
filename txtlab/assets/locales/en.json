@@ -169,8 +169,8 @@
   "remove_tags_label": "Remove tags",
   "checklist_label": "Checklist",
 
-  "status_i": "Status I",
-  "status_o": "Status O",
+  "status_i": "Status",
+  "status_o": "Status",
 
   "font_option_sans_system": "Sans (system)",
   "font_option_serif": "Serif",

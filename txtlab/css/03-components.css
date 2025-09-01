@@ -41,6 +41,11 @@ button.action:active {
   background: var(--c-muted);
   color: var(--c-text);
 }
+/*
+button.tool i {
+  color: inherit;
+}
+*/
 
 /* =========================
    Toolsets
