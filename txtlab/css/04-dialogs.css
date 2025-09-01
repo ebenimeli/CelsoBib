@@ -103,9 +103,25 @@ select.share {
   min-height: 24px;
 }
 
-#lang-switch {
-  
+
+p.welcomeshare {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente */
+  column-gap: 10px;        /* espacio uniforme entre iconos */
+  border: 1px solid black;
+  border-radius: 8px;
+  background: white;
+  padding: 5px;
+  margin: 0;
 }
+p.welcomeshare a {
+  color: black;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
 
 /* (Opcional) Hover/Foco */
 dialog .dlg-actions .action:hover {
