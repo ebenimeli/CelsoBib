@@ -64,6 +64,10 @@
     overflow-x: hidden;
   }
 
+  button#focus-mode {
+    display: none;
+  }
+  
   .container #topleft {
     border-bottom: 3px solid black;
   }
