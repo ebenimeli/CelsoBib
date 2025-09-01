@@ -1,3 +1,5 @@
+import { loadLocale, getCurrentLang, applyLocaleTo, initI18n } from "./i18n.js";
+
 // Entry point: boot the app, wire events (via delegation), and initial UI state
 import { $$, $, $id } from "./core/dom.js";
 import { initClick, playClick } from "./core/audio.js";
@@ -25,25 +27,18 @@ import {
   pasteOutput,
 } from "./clipboard/clipboard.js";
 
-// import genérico de listas
 import * as X from "./text/example.js";
-
 import { printO } from "./ui/print.js";
 
 /* ============================
-   NUEVO: cargar log.txt en itext
+   Cargar log.txt en itext
    ============================ */
-
-/** Intenta cargar log.txt en #itext.
- *  Prueba primero './log.txt' y, si falla, 'assets/data/log.txt'.
- */
 async function loadLog(targetId = "itext") {
   const ta = $id(targetId);
   if (!ta) {
     console.warn("[loadLog] No existe textarea #" + targetId);
     return false;
   }
-
   const paths = ["assets/data/log.txt"];
   for (const path of paths) {
     try {
@@ -52,29 +47,51 @@ async function loadLog(targetId = "itext") {
       const text = await res.text();
       ta.value = text;
       return true;
-    } catch (_) {
-      // probar siguiente ruta
-    }
+    } catch (_) {}
   }
-
   console.warn("[loadLog] No se pudo cargar log.txt en ninguna ruta");
   return false;
 }
 
-/** Cuando se abre el template #about mediante su botón de cabecera, recarga el log. */
 function installAboutLoader() {
   document.addEventListener("click", (e) => {
     const btn = e.target.closest('button.tool[data-target="#about"]');
     if (!btn) return;
-    // Dejamos que el sistema monte el template y, acto seguido, cargamos el log.
-    // setTimeout 0 garantiza que la delegación de mount ya se haya ejecutado.
     setTimeout(() => {
       loadLog();
     }, 0);
   });
 }
 
-/** Action registry: map action names to functions (used by the click dispatcher) */
+/* === i18n helper: aplica el idioma activo al contenedor recién montado === */
+function applyCurrentLocaleNow(root = document) {
+  if (typeof applyLocaleTo === "function") {
+    applyLocaleTo(root);
+  } else {
+    const lang =
+      (typeof getCurrentLang === "function" && getCurrentLang()) ||
+      localStorage.getItem("txtlab.lang") ||
+      "es";
+    loadLocale(lang);
+  }
+}
+
+/* === Reaplica i18n cada vez que se monta un template vía botón .tool === */
+function installI18nAutoApplyOnTemplateMount() {
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest("button.tool[data-target]");
+    if (!btn) return;
+    const sel = btn.dataset.target;
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() => {
+        const container = sel ? document.querySelector(sel) : null;
+        applyCurrentLocaleNow(container || document);
+      })
+    );
+  });
+}
+
+/** Action registry */
 const actionMap = {
   soundOn: W.soundOn,
   soundOff: W.soundOff,
@@ -119,6 +136,7 @@ const actionMap = {
   sortABC: G.sortABC,
   splitList: G.splitList,
 
+  // stats
   calcWordFreq: S.calcWordFreq,
   calcCharFreq: S.calcCharFreq,
 
@@ -128,30 +146,15 @@ const actionMap = {
   pastei: pasteInput,
   pasteo: pasteOutput,
 
-  // importar lista desde assets/data/*.txt
+  // importar lista/texto desde assets/data/*.txt
   importList: X.importList,
   importText: X.importText,
 
-  // PRINT
+  // print
   printo: () => printO("otext", "Imprimir · txtlab", { autoClose: false }),
 };
 
-/** Global click dispatcher: handles current and future .action buttons via data-action */
-/*
-function installActionDispatcher() {
-  document.addEventListener("click", (e) => {
-    const btn = e.target.closest('button[data-action]');
-    if (!btn) return;
-    const action = btn.dataset.action;
-    const fn = actionMap[action];
-    if (typeof fn === "function") {
-      fn(btn);            // pasamos el botón (para leer data-file, etc.)
-      playClick?.();
-    }
-  });
-}
-  */
-
+/** Global click dispatcher */
 function installActionDispatcher() {
   document.addEventListener("click", (e) => {
     const btn = e.target.closest("button[data-action]");
@@ -160,16 +163,12 @@ function installActionDispatcher() {
     const fn = actionMap[action];
     if (typeof fn === "function") {
       try {
-        const ret = fn(btn); // algunas funciones usan btn para data-file, etc.
+        const ret = fn(btn);
         if (ret && typeof ret.then === "function") {
-          // Es una Promise: reproduce click cuando termine
           ret
             .then(() => playClick?.())
-            .catch((err) => {
-              console.error(`[action:${action}]`, err);
-            });
+            .catch((err) => console.error(`[action:${action}]`, err));
         } else {
-          // Sincrónica
           playClick?.();
         }
       } catch (err) {
@@ -179,7 +178,7 @@ function installActionDispatcher() {
   });
 }
 
-/** Initial a11y wiring for .toolset panels present at boot */
+/** A11y wiring para .toolset presentes al arrancar */
 function initToolsetsA11y() {
   const SINGLE_OPEN = true;
   $$(".toolset").forEach((panel, idx) => {
@@ -199,34 +198,35 @@ function initToolsetsA11y() {
   });
 }
 
-/** Mount a default toolbox so .action buttons exist before any user click */
+/** Monta un toolbox por defecto para que existan .action al instante */
 function mountDefaultToolbox() {
-  // 1) Prefer an explicit default template
+  // 1) preferente: template con data-default
   const tplDefault = $("template[data-default]");
   if (tplDefault?.id) {
-    mountToolbox(`#${tplDefault.id}`);
-
-    // --- NUEVO: si el default es #about, cargamos el log al iniciar
-    if (tplDefault.id === "about") {
-      loadLog();
-    }
+    const sel = `#${tplDefault.id}`;
+    mountToolbox(sel);
+    applyCurrentLocaleNow(document.querySelector(sel) || document);
+    if (tplDefault.id === "about") loadLog();
     return true;
   }
 
-  // 2) Otherwise, use the first tool button's target
+  // 2) si no, primer botón .tool
   const firstTool = $("button.tool[data-target]");
   if (firstTool) {
     const sel = firstTool.dataset.target;
     if (sel) {
       mountToolbox(sel);
+      applyCurrentLocaleNow(document.querySelector(sel) || document);
       return true;
     }
   }
 
-  // 3) Lastly, mount the first <template> in the document (if any)
+  // 3) si no, primer <template>
   const firstTpl = $("template");
   if (firstTpl?.id) {
-    mountToolbox(`#${firstTpl.id}`);
+    const sel = `#${firstTpl.id}`;
+    mountToolbox(sel);
+    applyCurrentLocaleNow(document.querySelector(sel) || document);
     return true;
   }
 
@@ -236,14 +236,13 @@ function mountDefaultToolbox() {
   return false;
 }
 
-// === CHG === lazy loader para write-mode
+// === Lazy loader para write-mode
 let writeModeLoaded = false;
 async function ensureWriteModeLoaded(container) {
   if (writeModeLoaded) return;
   writeModeLoaded = true;
 
   const [{ initWriteMode }] = await Promise.all([import("./text/write.js")]);
-
   initWriteMode?.(container);
   W.syncSoundButtons?.(document);
   W.typewriterRestore?.();
@@ -265,6 +264,7 @@ function installWriteModeLazyLoader() {
       if (container) {
         initToolsetsWithin(container);
         await ensureWriteModeLoaded(container);
+        applyCurrentLocaleNow(container); // i18n tras montar write
       }
     }
   });
@@ -275,6 +275,7 @@ function installWriteModeLazyLoader() {
       const visible = !writeTpl.hidden && writeTpl.childElementCount > 0;
       if (visible) {
         await ensureWriteModeLoaded(writeTpl);
+        applyCurrentLocaleNow(writeTpl);
         mo.disconnect();
       }
     });
@@ -288,13 +289,16 @@ function installWriteModeLazyLoader() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // 1) Prepare audio pool (no playback yet)
+  // 0) i18n: cablea selector y aplica idioma inicial (sin doble fetch)
+  initI18n?.();
+
+  // 1) audio pool
   initClick("assets/media/click.mp3");
 
-  // 2) Install global action dispatcher (robust to dynamic DOM)
+  // 2) dispatcher global
   installActionDispatcher();
 
-  // 3) Toolsets (present at boot) a11y wiring
+  // 3) toolsets a11y
   initToolsetsA11y();
 
   // 4) UI helpers
@@ -304,20 +308,23 @@ document.addEventListener("DOMContentLoaded", () => {
   wireLiveSearch();
   wireCounters();
 
-  // 5) Ensure a default toolbox is mounted so .action buttons exist immediately
+  // 5) monta toolbox por defecto
   if (mountDefaultToolbox()) {
     const freshSidebar = $id("sidebar");
     if (freshSidebar) initToolsetsWithin(freshSidebar);
   }
 
-  // Lazy-load del write-mode
+  // 6) lazy-load write-mode
   installWriteModeLazyLoader();
 
-  // NUEVO: volver a cargar log cuando se abra #about desde el header
+  // 7) recarga log al abrir #about
   installAboutLoader();
+
+  // 8) reaplica i18n en cada template montado desde header
+  installI18nAutoApplyOnTemplateMount();
 });
 
-// Optional named exports (tests / external access)
+// Optional named exports
 export { closeAllToolsets, G as Groups, T as Transforms };
 
 /* Tema dark/light con icono */
@@ -348,21 +355,3 @@ btn?.addEventListener("click", () => {
   const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
   applyTheme(next);
 });
-
-// main.js
-/*
-function focusItxt(moveToEnd = true) {
-  const ta = document.getElementById("itext");
-  if (!ta) return;
-  ta.focus({ preventScroll: true });
-  if (moveToEnd) {
-    const len = ta.value.length;
-    ta.setSelectionRange(len, len);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  // ...tu código existente...
-  setTimeout(() => focusItxt(), 0);
-});
-*/

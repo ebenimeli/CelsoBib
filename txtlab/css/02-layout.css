@@ -168,6 +168,16 @@
   color: steelblue;
 }
 
+#topleft .productlogo {
+  width: 30%;
+  display: flex;
+  align-items: center;       /* centra verticalmente */
+  justify-content: center;   /* centra horizontalmente */
+  margin: 0 auto;            /* asegura centrado si hay espacio libre */
+}
+
+
+
 .container #topleft a i:hover {
   color: var(--c-accent);
   transform: scale(1.2);

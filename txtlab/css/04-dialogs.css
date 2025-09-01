@@ -53,7 +53,7 @@ dialog .dlg-actions .action {
   color: #fff;
 }
 
-p.share {
+p.share, select.share {
   display: flex;
   flex-direction: row;
   justify-content: center; /* centra horizontalmente */
@@ -67,6 +67,7 @@ p.share {
   padding: 5px; /* da aire dentro */
   margin: 0;
 }
+
 
 p.share a {
   display: flex; /* hace que la imagen se centre dentro del enlace */
@@ -82,6 +83,28 @@ p.share img.icon {
 
 p.share img.icon:hover {
   scale: 1.2;
+}
+
+
+select.share {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center; /* centra verticalmente */
+  column-gap: 10px; /* espacio uniforme entre iconos */
+  border: 1px solid black;
+  border-radius: 8px;
+  /*background: white;*/
+  background: rgba(255, 255, 255, 0.75); /* fondo blanco 75% opaco */
+  backdrop-filter: blur(6px) saturate(120%); /* opcional efecto “glass” */
+  padding: 8px; /* da aire dentro */
+  margin: 0;
+  color: black;
+  min-height: 24px;
+}
+
+#lang-switch {
+  
 }
 
 /* (Opcional) Hover/Foco */

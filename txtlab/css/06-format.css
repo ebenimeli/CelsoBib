@@ -593,3 +593,58 @@ button.action.is-on .state-dot::after {
 .itext-wrapper {
   position: relative;
 }
+
+/* MODO CONCENTRACIÓN MÓVIL */
+
+/* --- Cerrar concentración: visible solo en móvil y solo en concentración --- */
+.concentration-close {
+  display: none;
+} /* por defecto oculto */
+
+@media (max-width: 500px) {
+  /* Mostrar en fullscreen del wrapper o en overlay del wrapper */
+  .itext-wrapper:fullscreen .concentration-close,
+  .itext-wrapper:-webkit-full-screen .concentration-close,
+  .itext-wrapper.concentration-overlay .concentration-close {
+    display: inline-flex;
+  }
+
+  /* Posición segura (notch) y por encima del overlay */
+  .itext-wrapper .concentration-close {
+    position: fixed;
+    top: calc(12px + env(safe-area-inset-top, 0px));
+    right: calc(12px + env(safe-area-inset-right, 0px));
+    z-index: 100001; /* overlay suele ir a 100000 */
+    width: 48px;
+    height: 48px; /* target táctil cómodo */
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.55);
+    color: var(--write-fg, inherit);
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  [data-theme="dark"] .itext-wrapper .concentration-close {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+  /*.itext-wrapper .concentration-close i { font-size: 20px; pointer-events: none; }*/
+}
+
+/* Mostrar el botón cerrar SIEMPRE que el wrapper esté en concentración */
+.itext-wrapper:fullscreen .concentration-close,
+.itext-wrapper:-webkit-full-screen .concentration-close,
+.itext-wrapper.concentration-overlay .concentration-close {
+  display: inline-flex;
+}
+
+/* Tamaño táctil solo en móvil */
+@media (max-width: 500px) {
+  .itext-wrapper .concentration-close {
+    width: 48px;
+    height: 48px;
+  }
+}

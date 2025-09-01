@@ -28,6 +28,13 @@ if (!window.__wmAutowire) {
 }
 
 export function initWriteMode() {
+
+  // Reaplica traducción al nuevo contenido del template
+  if (typeof loadLocale === "function" && typeof getCurrentLang === "function") {
+    loadLocale(getCurrentLang());
+  }
+
+
   // --- Activa layout de write-mode y oculta zona de salida ---
   const main = document.getElementById("main");
   if (main) main.classList.add("write-mode-active");
@@ -104,6 +111,25 @@ export function initWriteMode() {
   let __fsWrap = null; // wrapper temporal para fullscreen
   let __wordFloat = null; // div flotante con el contador
 
+  // Botón "cerrar" específico para móvil (vive dentro del wrapper)
+  function ensureMobileCloseBtn(fsWrap, onClick) {
+    if (!fsWrap) return null;
+    // Solo en móvil
+    if (!window.matchMedia("(max-width: 500px)").matches) return null;
+
+    let btn = fsWrap.querySelector(".concentration-close");
+    if (!btn) {
+      btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "concentration-close";
+      btn.setAttribute("aria-label", "Salir de concentración");
+      btn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+      btn.addEventListener("click", onClick);
+      fsWrap.appendChild(btn);
+    }
+    return btn;
+  }
+
   const ensureFsWrap = () => {
     if (__fsWrap && __fsWrap.isConnected) return __fsWrap;
     const wrap = document.createElement("div");
@@ -126,7 +152,7 @@ export function initWriteMode() {
 
   const isConcentrationActive = () =>
     document.fullscreenElement === __fsWrap ||
-    itxt.classList.contains("concentration-overlay");
+    (__fsWrap && __fsWrap.classList.contains("concentration-overlay"));
 
   const showWordFloat = (n) => {
     if (!__wordFloat || !__wordFloat.isConnected) {
@@ -175,11 +201,10 @@ export function initWriteMode() {
 
   const showCloseBtn = () => {
     const btn = ensureCloseBtn();
-    if (document.fullscreenElement === __fsWrap) {
-      __fsWrap.appendChild(btn);
-    } else {
-      document.body.appendChild(btn); // fallback
-    }
+    // Siempre dentro del wrapper para no quedar debajo del overlay
+    if (__fsWrap) __fsWrap.appendChild(btn);
+    // Asegura el botón móvil (X grande) en pantallas pequeñas
+    ensureMobileCloseBtn(__fsWrap, exitConcentration);
     requestAnimationFrame(() => btn.classList.add("is-visible"));
   };
 
@@ -206,13 +231,14 @@ export function initWriteMode() {
       if (wrap.requestFullscreen) {
         await wrap.requestFullscreen();
       } else {
-        // Fallback CSS
+        // Fallback CSS en el WRAPPER (no en #itext)
         document.body.classList.add("concentration-active");
-        itxt.classList.add("concentration-overlay");
+        wrap.classList.add("concentration-overlay");
       }
       itxt.focus({ preventScroll: true });
       showWordFloat(countWords(itxt.value));
-      showCloseBtn(); // NUEVO
+      ensureMobileCloseBtn(__fsWrap, exitConcentration); // crea botón en móvil
+      showCloseBtn(); // tu botón general (desktop también)
     } catch (err) {
       console.warn("[focus] No se pudo entrar en concentración:", err);
     }
@@ -225,7 +251,8 @@ export function initWriteMode() {
       }
     } catch {}
     document.body.classList.remove("concentration-active");
-    itxt?.classList.remove("concentration-overlay");
+    __fsWrap?.classList.remove("concentration-overlay");
+
     hideWordFloat();
     hideCloseBtn(); // NUEVO
     unwrapFs();
@@ -240,7 +267,8 @@ export function initWriteMode() {
   const onFsChange = () => {
     if (!document.fullscreenElement) {
       document.body.classList.remove("concentration-active");
-      itxt?.classList.remove("concentration-overlay");
+      __fsWrap?.classList.remove("concentration-overlay");
+
       hideWordFloat();
       hideCloseBtn(); // NUEVO
       unwrapFs();
@@ -248,11 +276,13 @@ export function initWriteMode() {
       if (__wordFloat && __wordFloat.parentNode !== __fsWrap) {
         try {
           __fsWrap.appendChild(__wordFloat);
+          ensureMobileCloseBtn(__fsWrap, exitConcentration);
         } catch {}
       }
       if (__closeBtn && __closeBtn.parentNode !== __fsWrap) {
         try {
           __fsWrap.appendChild(__closeBtn);
+          ensureMobileCloseBtn(__fsWrap, exitConcentration);
         } catch {}
       }
     }
@@ -325,7 +355,7 @@ export function initWriteMode() {
   const updateWPM = (wordsNow) => {
     if (!wpmEl) return;
     const wpm = seconds > 0 ? Math.round((wordsNow / seconds) * 60) : 0;
-    wpmEl.textContent = `${wpm} palabras/min`;
+    wpmEl.textContent = `${wpm}`;
   };
 
   // --- Timer ---
@@ -463,6 +493,7 @@ export function initWriteMode() {
 
   // dentro de initWriteMode():
   wireAmbientToggle(document);
+
 }
 
 export function exitWriteMode() {
@@ -808,8 +839,8 @@ function updateTypewriterUI(root = document) {
 
   const icon = btn.querySelector("i");
   const lbl = btn.querySelector(".lbl");
-  const onTxt = btn.dataset.labelOn || "¡Tac, tac, tac!";
-  const offTxt = btn.dataset.labelOff || "Silencio";
+  const onTxt = btn.dataset.labelOn || "Escuchar teclas";
+  const offTxt = btn.dataset.labelOff || "Silenciar teclas";
 
   if (icon) {
     icon.className = __twEnabled
