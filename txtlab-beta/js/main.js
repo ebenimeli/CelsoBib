@@ -391,7 +391,7 @@ btn?.addEventListener("click", () => {
 
   async function sendRating(n){
     try {
-      await fetch('http://www.ebenimeli.org/txtlab-beta/api/rating-email.php', {              // <-- ajusta ruta si procede
+      await fetch('https://www.ebenimeli.org/txtlab-beta/api/rating-email.php', {              // <-- ajusta ruta si procede
         method: 'POST',
         headers: {'Content-Type':'application/x-www-form-urlencoded'},
         body: new URLSearchParams({
