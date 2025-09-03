@@ -1,0 +1,822 @@
+/* css/06-format.css */
+
+@font-face {
+  font-family: "CPC464";
+  src: url("../assets/fonts/cpc464.woff2") format("woff2"),
+    url("../assets/fonts/cpc464.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GNUTypewriter";
+  src: url("../assets/fonts/gtw.otf") format("opentype"),
+    url("../assets/fonts/gtw.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* esquema por defecto (texto negro sobre blanco) */
+:root {
+  --write-bg: var(--c-bg);
+  --write-fg: var(--c-text);
+  /* margen superior en modo concentración (puedes cambiar a 10%) */
+  --focus-top-pad: 10vh;
+}
+
+/* Variables por defecto aplicadas al textarea de redacción */
+#itext.write-target {
+  --write-font-size: 1rem;
+  --write-font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    Cantarell, Noto Sans, Helvetica, Arial, sans-serif;
+
+  font-size: var(--write-font-size);
+  font-family: var(--write-font-family);
+
+  color: var(--write-fg);
+  background: var(--write-bg);
+
+  line-height: 1.6;
+  caret-color: var(--write-fg);
+}
+
+/* Esquemas de color */
+#itext.scheme-default {
+  --write-bg: #ffffff;
+  --write-fg: #111111;
+}
+#itext.scheme-sepia {
+  --write-bg: #f7f3e8;
+  --write-fg: #4b3d2a;
+}
+#itext.scheme-dark {
+  --write-bg: #0f0f10;
+  --write-fg: #e6e6e6;
+}
+#itext.scheme-solar {
+  --write-bg: #fdf6e3;
+  --write-fg: #586e75;
+}
+#itext.scheme-high {
+  --write-bg: #ffffff;
+  --write-fg: #000000;
+}
+
+/* Retro estilo CPC-Amstrad (verde fosforito sobre negro) */
+#itext.scheme-retro {
+  --write-bg: #000000;
+  --write-fg: #00ff00;
+  --write-font-family: "CPC464", ui-monospace, monospace;
+  caret-color: #00ff00; /* color del caret nativo */
+}
+
+/* UI de los controles */
+.format-controls {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.format-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.format-label {
+  min-width: 80px;
+}
+
+.btn-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.select {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--c-border, #ccc);
+  border-radius: 0.5rem;
+  background: var(--c-surface);
+  color: var(--c-text);
+  font: inherit;
+}
+
+/* Muchos navegadores respetan esto; algunos ignoran parte del estilo por el UI nativo */
+.select option {
+  background: var(--c-surface);
+  color: var(--c-text);
+}
+
+/* Botón estilo "ghost" coherente con tu app */
+button.ghost {
+  background: transparent;
+  border: 1px dashed var(--c-border, #bbb);
+  opacity: 0.8;
+}
+button.ghost:hover {
+  opacity: 1;
+}
+
+/* Output del tamaño */
+#font-size-display {
+  display: inline-block;
+  min-width: 4.5ch;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Asegura contraste de selección de texto en todos los esquemas */
+#itext.write-target::selection {
+  background: rgba(64, 128, 255, 0.35);
+}
+
+.format-controls {
+  display: flex;
+  flex-direction: column; /* apila las filas */
+  align-items: center; /* centra horizontalmente */
+  gap: 1rem; /* separación vertical entre filas */
+  border: 1px solid var(--c-border, #ccc);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.format-controls legend {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Cada fila centrada */
+.format-row {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centra horizontalmente dentro de la fila */
+  gap: 0.5rem;
+  width: 100%; /* opcional: hace que ocupe todo el ancho del fieldset */
+}
+
+.format-label {
+  min-width: 0; /* como no usas etiquetas de texto, que no ocupen espacio */
+}
+
+.timer-fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente */
+  gap: 1rem;
+  border: 1px solid var(--c-border, #ccc);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-width: 300px; /* opcional, limita el ancho */
+  margin: 1rem auto; /* auto = centra el fieldset en la página */
+}
+
+.timer-fieldset legend {
+  font-weight: bold;
+  text-align: center;
+}
+
+#timer {
+  font-size: 1.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.progress-fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente todos los hijos */
+  gap: 0.75rem; /* espacio vertical entre elementos */
+  border: 1px solid var(--c-border, #ccc);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-width: 320px; /* opcional */
+  margin: 1rem auto; /* centra el fieldset en la página */
+  text-align: center; /* centra el texto de p y label */
+}
+
+.progress-fieldset legend {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.progress-fieldset progress {
+  width: 100%; /* ocupa todo el ancho disponible */
+  max-width: 250px; /* opcional, para que no sea demasiado largo */
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.input-wrapper input {
+  text-align: center;
+  width: 80px; /* ancho fijo opcional */
+}
+
+.quote-fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente */
+  justify-content: center;
+  text-align: center; /* centra el texto dentro del párrafo */
+  border: 1px solid var(--c-border, #ccc);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 500px; /* opcional: limita ancho */
+}
+
+.quote-fieldset legend {
+  font-weight: bold;
+  text-align: center;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+fieldset {
+  box-sizing: border-box;
+  font-size: 0.8em;
+  width: 100%;
+}
+
+fieldset legend {
+  font-size: 1.2em;
+}
+
+fieldset div {
+  margin: 0;
+}
+
+/* Utilidad para ocultar (evitas inline styles) */
+.is-hidden {
+  display: none !important;
+}
+
+/* Al activar write-mode, #main se comporta como columna */
+#main.write-mode-active {
+  display: flex !important; /* sobreescribe grid/flex previos */
+  flex-direction: column !important;
+  align-items: stretch; /* estira hijos al 100% */
+  gap: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Asegura que estos tres se apilan y ocupan el ancho */
+#main.write-mode-active #imenu,
+#main.write-mode-active #itext,
+#main.write-mode-active #statusi {
+  display: block; /* por si estaban como inline/none */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Si #imenu usa flex en fila, mantenlo pero que no rompa el flujo */
+#main.write-mode-active #imenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* o center si prefieres */
+  gap: 0.5rem;
+}
+
+/* Evita que cajas internas impidan apilarse */
+#main.write-mode-active .box.control,
+#main.write-mode-active .box {
+  width: 100%;
+}
+
+/* Si algún layout previo ponía columnas, anúlalo aquí */
+#main.write-mode-active > * {
+  float: none !important;
+  grid-area: auto !important;
+}
+
+/* utilidad para ocultar */
+.is-hidden {
+  display: none !important;
+}
+
+/* columna izquierda apilada y el textarea estirado */
+#main.write-mode-active {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch;
+  gap: 0.5rem;
+  height: 100%; /* asegura que #itext pueda crecer en vertical */
+}
+
+#main.write-mode-active #imenu,
+#main.write-mode-active #itext,
+#main.write-mode-active #statusi {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#main.write-mode-active #itext {
+  flex: 1; /* ocupa el alto restante */
+  min-height: 200px; /* opcional */
+}
+
+/* Botón centrado y con pequeño margen */
+/* ELIMINAR PORQUE SE ELIMINÓ EL DIV */
+/*
+.focus-controls {
+  display: flex;
+  justify-content: center;
+  margin: .5rem 0 1rem;
+}
+  */
+
+.input-wrapper {
+  margin-bottom: 10px;
+}
+
+.wpm {
+  display: block;
+}
+
+/* Estilos del textarea en pantalla completa (Fullscreen API) */
+/* (si aún haces fullscreen directo del #itext en algún navegador) */
+#itext:fullscreen,
+#itext:-webkit-full-screen {
+  /* Safari */
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+  margin: 0;
+  outline: none;
+
+  /* ← margen superior del 10% + safe-area */
+  padding-top: calc(var(--focus-top-pad) + env(safe-area-inset-top, 0px));
+  /* ← laterales 10% en concentración (fullscreen directo) */
+  padding-inline: 10%;
+  /* ← un poco de aire abajo */
+  padding-bottom: 1.5rem;
+
+  background: var(--write-bg);
+  color: var(--write-fg);
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+/* Fallback CSS si Fullscreen API no está disponible */
+body.concentration-active {
+  overflow: hidden;
+}
+#itext.concentration-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+  margin: 0;
+  outline: none;
+
+  /* ← margen superior del 10% + safe-area */
+  padding-top: calc(var(--focus-top-pad) + env(safe-area-inset-top, 0px));
+  /* ← laterales 10% en concentración (fallback) */
+  padding-inline: 10%;
+  /* ← un poco de aire abajo */
+  padding-bottom: 1.5rem;
+
+  z-index: 99999;
+  background: var(--write-bg);
+  color: var(--write-fg);
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+/* Fieldsets full width */
+.timer-fieldset,
+.progress-fieldset,
+.quote-fieldset,
+.format-controls {
+  /* si esto es un fieldset con clase */
+  max-width: none;
+  width: 100%;
+}
+
+/* Wrapper usado para fullscreen del editor (si usas el wrapper) */
+.itext-wrapper {
+  position: relative;
+}
+
+.itext-wrapper:fullscreen,
+.itext-wrapper:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+  background: var(--write-bg);
+  color: var(--write-fg);
+}
+
+.itext-wrapper:fullscreen #itext,
+.itext-wrapper:-webkit-full-screen #itext {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  outline: none;
+
+  /* ← margen superior del 10% + safe-area (fullscreen con wrapper) */
+  padding-top: calc(var(--focus-top-pad) + env(safe-area-inset-top, 0px));
+  /* ← laterales 10% */
+  padding-inline: 10%;
+  /* ← aire inferior */
+  padding-bottom: 1.5rem;
+
+  line-height: 1.6;
+  background: var(--write-bg);
+  color: var(--write-fg);
+  box-sizing: border-box;
+}
+
+/* Contador flotante: abajo a la IZQUIERDA, pegado al borde */
+/*
+.word-float {
+  position: fixed;
+  left: env(
+    safe-area-inset-left,
+    0px
+  );
+  bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+  transform: none; 
+  right: auto;
+
+  font-size: 2em; 
+  line-height: 1;
+  opacity: 0.5; 
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  z-index: 100000;
+  display: none;
+}
+.word-float.is-visible {
+  display: block;
+}
+  */
+
+button[data-action="soundOn"].is-active {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+}
+
+button[data-action="soundOn"] {
+  display: none;
+}
+
+button[data-action="soundOn"].is-visible {
+  display: inline-block; /* o block/flex según tu layout */
+}
+
+/* estado ON: color/contorno + puntito indicador */
+button.action.is-on {
+  outline: 2px solid var(--c-accent, #4a90e2);
+  background: color-mix(in oklab, var(--c-accent, #4a90e2) 12%, transparent);
+  box-shadow: 0 0 0 2px
+    color-mix(in oklab, var(--c-accent, #4a90e2) 30%, transparent) inset;
+}
+
+button.action.is-on .state-dot::after {
+  content: "";
+  display: inline-block;
+  width: 0.55em;
+  height: 0.55em;
+  border-radius: 50%;
+  background: var(--c-accent, #4a90e2);
+  margin-left: 0.4em;
+}
+
+/* === Modo concentración: contador flotante y botón cerrar === */
+
+.word-float {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  padding: 8px 12px;
+  font: 600 14px/1.2
+    var(
+      --write-font-family,
+      system-ui,
+      -apple-system,
+      Segoe UI,
+      Roboto,
+      Ubuntu,
+      Cantarell,
+      Noto Sans,
+      Helvetica,
+      Arial,
+      sans-serif
+    );
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--write-fg, inherit);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+[data-theme="dark"] .word-float {
+  background: rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.word-float.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Botón cerrar (arriba-derecha) con estética translúcida */
+.concentration-close {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 10000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--write-fg, inherit);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.15s ease,
+    border-color 0.15s ease;
+}
+[data-theme="dark"] .concentration-close {
+  background: rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.concentration-close.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.concentration-close:hover {
+  filter: brightness(1.05);
+}
+.concentration-close:active {
+  transform: translateY(0) scale(0.98);
+}
+.concentration-close i {
+  font-size: 20px; /* tamaño medio visible */
+  pointer-events: none;
+}
+
+/* Asegura stacking context controlado del wrapper en fullscreen */
+.itext-wrapper {
+  position: relative;
+}
+
+/* MODO CONCENTRACIÓN MÓVIL */
+
+/* --- Cerrar concentración: visible solo en móvil y solo en concentración --- */
+.concentration-close {
+  display: none;
+} /* por defecto oculto */
+
+@media (max-width: 500px) {
+  /* Mostrar en fullscreen del wrapper o en overlay del wrapper */
+  .itext-wrapper:fullscreen .concentration-close,
+  .itext-wrapper:-webkit-full-screen .concentration-close,
+  .itext-wrapper.concentration-overlay .concentration-close {
+    display: inline-flex;
+  }
+
+  /* Posición segura (notch) y por encima del overlay */
+  .itext-wrapper .concentration-close {
+    position: fixed;
+    top: calc(12px + env(safe-area-inset-top, 0px));
+    right: calc(12px + env(safe-area-inset-right, 0px));
+    z-index: 100001; /* overlay suele ir a 100000 */
+    width: 48px;
+    height: 48px; /* target táctil cómodo */
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.55);
+    color: var(--write-fg, inherit);
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  [data-theme="dark"] .itext-wrapper .concentration-close {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+  /*.itext-wrapper .concentration-close i { font-size: 20px; pointer-events: none; }*/
+}
+
+/* Mostrar el botón cerrar SIEMPRE que el wrapper esté en concentración */
+.itext-wrapper:fullscreen .concentration-close,
+.itext-wrapper:-webkit-full-screen .concentration-close,
+.itext-wrapper.concentration-overlay .concentration-close {
+  display: inline-flex;
+}
+
+/* Tamaño táctil solo en móvil */
+@media (max-width: 500px) {
+  .itext-wrapper .concentration-close {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/** FORMATO DOCUMENTACIÓN **/
+
+/* Que el título y el documento ocupen todo el ancho de #main (que es grid) */
+#main > h1,
+#main > .document {
+  grid-column: 1 / -1;
+}
+
+/* El documento en sí: flujo vertical, ancho legible y buen ritmo */
+#main .document {
+  grid-row: 1 / -1;                /* ocupa toda la altura de la rejilla */
+  display: block;
+  max-width: 72ch;                 /* medida óptima de línea */
+  margin: 0 auto;                  /* centrado */
+  padding: clamp(16px, 3vw, 32px);
+  background: var(--c-bg);
+  color: var(--c-text);
+  border: 1px solid var(--c-border, rgba(0,0,0,.08));
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0,0,0,.05);
+  line-height: 1.7;
+  font-size: clamp(0.98rem, 0.4vw + 0.9rem, 1.1rem);
+}
+
+/* Espaciado vertical consistente entre bloques */
+#main .document > * + * {
+  margin-top: 1rem;
+}
+
+/* Títulos dentro del documento */
+#main .document h1,
+#main .document h2,
+#main .document h3 {
+  line-height: 1.25;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+#main .document h1 { font-size: clamp(1.6rem, 2.4vw, 2.2rem); }
+#main .document h2 { font-size: clamp(1.3rem, 2vw, 1.6rem); }
+#main .document h3 { font-size: clamp(1.15rem, 1.4vw, 1.25rem); }
+
+/* Texto */
+#main .document p { text-wrap: pretty; }
+#main .document a { color: var(--c-link); }
+
+/* Imágenes y medias responsivas */
+#main .document img,
+#main .document video,
+#main .document iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
+
+/* Citas, reglas y listas agradables */
+#main .document blockquote {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border-inline-start: 4px solid var(--c-accent, steelblue);
+  background: color-mix(in srgb, var(--c-accent, steelblue) 6%, transparent);
+}
+#main .document hr {
+  border: 0;
+  border-top: 1px solid var(--c-border, rgba(0,0,0,.12));
+  margin: 1.5rem 0;
+}
+#main .document ul,
+#main .document ol {
+  padding-inline-start: 1.4rem;
+}
+
+/* Código */
+#main .document pre,
+#main .document code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Roboto Mono", monospace;
+}
+#main .document pre {
+  background: var(--c-muted);
+  border: 1px solid var(--c-border, rgba(0,0,0,.08));
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  overflow: auto;
+}
+
+/* Ajustes móviles */
+@media (max-width: 600px) {
+  #main .document {
+    max-width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+  }
+}
+
+/* (Opcional) Si el navegador soporta :has, convierte #main en flujo
+   normal cuando muestres documentos (en lugar de grid). */
+@supports selector(:has(*)) {
+  #main:has(> .document) {
+    display: block;
+  }
+}
+
+#itext {
+  font-size: var(--write-font-size, 1rem);
+  font-family: var(--write-font-family, system-ui);
+}
+
+/* Garantiza que el esquema se vea también fuera de fullscreen */
+#itext {
+  background: var(--write-bg) !important;
+  color: var(--write-fg) !important;
+  caret-color: var(--write-fg);
+}
+
+/* === APP RATING (versión optimizada) ===================== */
+.rating{
+  --star-size: clamp(2rem, 6vw, 2.5rem);
+  --star-empty: #ccc;
+  --star-fill:  #f6c103;
+
+  display: inline-flex;
+  gap: .4rem;
+}
+
+.rating .star{
+  appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--star-size);
+  line-height: 1;
+  color: var(--star-empty);
+  padding: .15rem;
+
+  /* objetivo táctil cómodo */
+  min-width:  clamp(36px, 6vw, 44px);
+  min-height: clamp(36px, 6vw, 44px);
+
+  transition: transform .08s ease;
+}
+
+.rating .star::before{
+  content: '☆'; /* vacía */
+}
+
+.rating .star.is-active::before{
+  content: '★';
+  color: var(--star-fill);
+  text-shadow: 0 0 1px rgba(0,0,0,.15);
+}
+
+.rating .star:hover{ transform: scale(1.08); }
+
+.rating .star:focus-visible{
+  outline: 2px solid var(--c-accent, #4a90e2);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Sobrescribe el inline-flex en el contexto del dialog */
+#welcome-dialog .rating{
+  display:flex;               /* la hace “bloque” y flex contenedor */
+  justify-content:center;     /* centra las estrellas */
+  margin: .75rem auto 0;      /* auto = centrado horizontal */
+}

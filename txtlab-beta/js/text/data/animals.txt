@@ -1,0 +1,102 @@
+Perro
+Gato
+Caballo
+Vaca
+Oveja
+Cabra
+Cerdo
+Gallina
+Pato
+Ganso
+Conejo
+Ratón
+Rata
+Hámster
+Cuyo
+Burro
+Mula
+Camello
+Dromedario
+Alpaca
+Llama
+Reno
+Ciervo
+Alce
+Bisonte
+Búfalo
+Cebra
+Jirafa
+Elefante
+Rinoceronte
+Hipopótamo
+León
+Tigre
+Leopardo
+Jaguar
+Guepardo
+Puma
+Lobo
+Zorro
+Oso pardo
+Oso polar
+Oso panda
+Koala
+Canguro
+Wallaby
+Delfín
+Ballena azul
+Orca
+Tiburón blanco
+Tiburón martillo
+Mantaraya
+Foca
+León marino
+Morsa
+Pingüino
+Águila
+Halcón
+Búho
+Lechuza
+Gavilán
+Cóndor
+Pavo real
+Cisne
+Flamenco
+Pelícano
+Cigüeña
+Garza
+Golondrina
+Colibrí
+Canario
+Gorrión
+Papagayo
+Guacamayo
+Loro
+Periquito
+Iguana
+Camaleón
+Lagarto
+Serpiente pitón
+Serpiente cascabel
+Cocodrilo
+Aligátor
+Tortuga marina
+Tortuga terrestre
+Sapo
+Rana
+Salamandra
+Trucha
+Salmón
+Atún
+Bacalao
+Pulpo
+Calamar
+Cangrejo
+Langosta
+Gamba
+Caracol
+Mariposa
+Abeja
+Avispa
+Hormiga
+Escarabajo

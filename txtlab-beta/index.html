@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCTF9SC59D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-GCTF9SC59D');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="page_title">txtlab: un laboratorio de texto</title>
+  <meta name="description" data-i18n="page_description"
+    content="txtlab es una caja de herramientas para escribir, procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos." />
+  <meta name="author" content="Enrique Benimeli" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- https://staging.svgrepo.com/svg/275186/swiss-army-knife -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Open Graph + Twitter -->
+  <link rel="canonical" href="https://www.ebenimeli.org/txtlab/">
+  <meta property="og:title" content="txtlab: ordena tu texto">
+  <meta property="og:description"
+    content="txtlab es una caja de herramientas para procesar y transformar texto. Puedes ordenar, agrupar y formatear tus listas de elementos.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ebenimeli.org/txtlab/">
+  <meta property="og:site_name" content="txtlab">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://www.ebenimeli.org/txtlab/assets/og/txtlab-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo de txtlab y vista de la app">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="txtlab: ordena tu texto">
+  <meta name="twitter:description" content="Caja de herramientas para procesar y transformar texto en tu navegador.">
+  <meta name="twitter:image" content="https://www.ebenimeli.org/txtlab/assets/og/txtlab-og.jpg">
+  <meta name="twitter:site" content="@enriquebenimeli">
+  <meta name="theme-color" content="#111111">
+
+  <link rel="stylesheet" href="css/01-base.css">
+  <link rel="stylesheet" href="css/02-layout.css">
+  <link rel="stylesheet" href="css/03-components.css">
+  <link rel="stylesheet" href="css/04-dialogs.css">
+  <link rel="stylesheet" href="css/05-utilities.css">
+  <link rel="stylesheet" href="css/06-format.css">
+  <link rel="stylesheet" href="css/99-theme.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <section class="container">
+    <div id="topleft" class="mainbox">
+      <a href="">
+        <img class="productlogo" src="assets/img/swiss-army-knife.svg" alt="txtlab logo" />
+        <span class="productname"><strong>txt</strong>lab</span>
+      </a>
+    </div>
+
+    <header>
+      <!-- HOME -->
+      <button class="tool" data-target="#about" data-i18n-title="about_title" title="Acerca de…">
+        <i class="fa-solid fa-circle-question"></i>
+      </button>
+
+      <!-- MÓDULO PARA ESCRIBIR -->
+      <button data-target="#write-mode" class="tool" data-i18n-title="write_title" title="Escribir">
+        <i class="fa-solid fa-pen-to-square"></i>
+      </button>
+
+      <!-- LISTAS -->
+      <button class="tool" data-target="#tblists" data-i18n-title="lists_title" title="Transformación de listas">
+        <i class="fa-solid fa-list"></i>
+      </button>
+
+      <!-- ANÁLISIS ESTADÍSTICO -->
+      <button class="tool" data-target="#stats" data-i18n-title="stats_title" title="Análisis estadístico">
+        <i class="fa-solid fa-chart-simple"></i>
+      </button>
+
+      <!-- DOCS -->
+       <!--
+      <button class="tool" data-target="#docs" data-i18n-title="" title="Documentación">
+        <i class="fa-solid fa-book"></i>
+      </button>
+-->
+      <!-- GAMES -->
+      <button class="tool" data-target="#games" data-i18n-title="" title="Juegos">
+        <i class="fa-solid fa-gamepad"></i>
+      </button>
+
+      <!-- CAMBIO TEMA -->
+      <button id="theme-toggle" class="tool" data-i18n-title="theme_toggle_title" title="Cambiar tema">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </header>
+
+    <!-- Menú lateral -->
+    <aside>
+      <div id="sidebar" class="box"></div>
+    </aside>
+
+
+    <!-- TEMPLATE: GAMES -->
+
+    <template id="games">
+      <button class="action" data-target="#games" data-i18n="">Español</button>
+      <div id="games" class="toolset">
+        <button class="action" data-action="crosswords" data-i18n="">
+          Sopa de letras
+        </button>
+
+        <button class="action" data-action="game2" data-i18n="">
+          Letras
+        </button>
+        <!--
+
+        <button class="action" data-action="game3" data-i18n="">
+          Shuffle
+        </button>
+      -->
+      </div>
+    </template>
+
+    <!-- TEMPLATE: DOCS -->
+
+    <template id="docs">
+      <button class="action" data-target="#documentation" data-i18n="">Documentación</button>
+      <div id="documentation" class="toolset">
+        <button class="action" data-file="lists.html" data-i18n="">
+          Listas
+        </button>
+    </template>
+
+    <!-- WRITE -->
+    <template id="write-mode">
+      <fieldset class="quote-fieldset">
+        <legend data-i18n="legend_quote">Cita del día</legend>
+        <p class="quote" data-i18n="quote_fallback">“Escribe algo que merezca la pena ser leído.”</p>
+      </fieldset>
+
+      <fieldset class="quote-fieldset">
+        <legend data-i18n="legend_focus">Concentración</legend>
+
+        <button id="focus-mode" type="button" class="action" data-i18n-title="focus_mode_title"
+          title="Modo concentración (pantalla completa)">
+          <i class="fa-solid fa-maximize"></i>
+          <span data-i18n="focus_mode_label">Modo concentración</span>
+        </button>
+
+        <button id="ambient" type="button" class="action" data-i18n-title="ambient_picker_title"
+          title="Seleccionar ambiente">
+          <i class="fa-solid fa-headphones"></i>
+          <span data-i18n="ambient_picker_label">Escuchar ambiente</span>
+        </button>
+
+        <button type="button" class="action" data-action="soundOn" data-file="rainthunder"
+          data-i18n-title="ambient_on_title_rain" title="Activar sonido de fondo">
+          <i class="fa-solid fa-cloud-rain"></i>
+          <span data-i18n="ambient_rain">Lluvia</span>
+        </button>
+        <button type="button" class="action" data-action="soundOn" data-file="cafe"
+          data-i18n-title="ambient_on_title_cafe">
+          <i class="fa-solid fa-mug-saucer"></i>
+          <span data-i18n="ambient_cafe">Café</span>
+        </button>
+        <button type="button" class="action" data-action="soundOn" data-file="library"
+          data-i18n-title="ambient_on_title_library">
+          <i class="fa-solid fa-book"></i>
+          <span data-i18n="ambient_library">Biblioteca</span>
+        </button>
+        <button type="button" class="action" data-action="soundOn" data-file="nightwoods"
+          data-i18n-title="ambient_on_title_nightwoods">
+          <i class="fa-solid fa-tree"></i>
+          <span data-i18n="ambient_nightwoods">Bosque de noche</span>
+        </button>
+        <button type="button" class="action" data-action="soundOn" data-file="fireplace_ORIG"
+          data-i18n-title="ambient_on_title_fireplace">
+          <i class="fa-solid fa-fire"></i>
+          <span data-i18n="ambient_fireplace">Chimenea</span>
+        </button>
+        <button type="button" class="action" data-action="soundOff" style="display:none;"
+          data-i18n-title="ambient_off_title">
+          <i class="fa-solid fa-volume-xmark"></i>
+          <span data-i18n="ambient_off">Silenciar ambiente</span>
+        </button>
+
+        <button id="typewriter-toggle" type="button" class="action" data-action="typewriterToggle" data-label-on=""
+          data-label-off="" aria-pressed="false" data-i18n-title="typewriter_title"
+          data-i18n-ariaLabel="typewriter_title" data-i18n-data-label-on="typewriter_label_on"
+          data-i18n-data-label-off="typewriter_label_off">
+          <i class="fa-solid fa-keyboard" aria-hidden="true"></i>
+          <span class="lbl" data-i18n="typewriter_label">Escuchar teclas</span>
+        </button>
+
+      </fieldset>
+
+      <!-- CAJÓN DE IDEAS -->
+      <fieldset class="quote-fieldset" data-i18n-visible="es">
+        <legend>Cajón de ideas</legend>
+        <button type="button" class="action" data-action="suggestWord" title="Añadir palabra aleatoria">
+          <i class="fa-solid fa-dice"></i> Palabra
+        </button>
+        <button type="button" class="action" data-action="suggestCharacter" data-file="characters.txt"
+          title="Añadir personaje al azar">
+          <i class="fa-solid fa-person"></i> Personaje
+        </button>
+        <button type="button" class="action" data-action="suggestPlace" data-file="places.txt"
+          title="Añadir lugar al azar">
+          <i class="fa-solid fa-earth-americas"></i> Lugar
+        </button>
+        <button type="button" class="action" data-action="suggestTime" data-file="times.txt"
+          title="Añadir tiempo al azar">
+          <i class="fa-solid fa-clock"></i> Momento
+        </button>
+        <button type="button" class="action" data-action="suggestFeeling" data-file="feelings.txt"
+          title="Añadir emoción o sentimiento al azar">
+          <i class="fa-solid fa-heart"></i> Sentimiento
+        </button>
+        <button type="button" class="action" data-action="suggestConflict" data-file="conflicts.txt"
+          title="Añadir emoción o sentimiento al azar">
+          <i class="fa-solid fa-bolt"></i> Conflicto
+        </button>
+
+        <button type="button" class="action" data-action="suggestAll" title="Añadir emoción o sentimiento al azar">
+          <i class="fa-solid fa-person"></i>
+          <i class="fa-solid fa-earth-americas"></i>
+          <i class="fa-solid fa-clock"></i>
+          <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-bolt"></i>
+        </button>
+      </fieldset>
+
+
+      <fieldset class="progress-fieldset">
+        <legend data-i18n="legend_goal">Objetivo</legend>
+
+        <label for="writeprogress">
+          <div class="input-wrapper">
+            <i class="fa-solid fa-keyboard"></i>
+            <input type="text" id="nwords" placeholder="N" data-i18n-placeholder="goal_placeholder" />
+          </div>
+          <span id="currentWords">0</span>/<span id="goalWords">250</span>
+          <span data-i18n="words_label">palabras</span> (<span id="percWords">0 %</span>)
+        </label>
+
+        <progress id="writeprogress" value="" max="100"></progress>
+        <span data-i18n="wpm_label">Palabras/min:</span>
+        <span class="wpm">0</span>
+
+      </fieldset>
+
+      <fieldset class="timer-fieldset">
+        <legend data-i18n="legend_timer">Temporizador</legend>
+
+        <div id="timer" aria-live="polite">00:00:00</div>
+
+        <div class="timer-controls">
+          <button id="timer-play" type="button" class="action" data-i18n-title="timer_play_title"
+            title="Iniciar / Reanudar">
+            <i class="fa-solid fa-play"></i>
+          </button>
+          <button id="timer-pause" type="button" class="action" data-i18n-title="timer_pause_title" title="Pausar">
+            <i class="fa-solid fa-pause"></i>
+          </button>
+          <button id="timer-reset" type="button" class="action" data-i18n-title="timer_reset_title" title="Reiniciar">
+            <i class="fa-solid fa-rotate-left"></i>
+          </button>
+        </div>
+      </fieldset>
+
+      <!-- CONTROLES DE FORMATO PARA REDACCIÓN -->
+      <fieldset class="format-controls">
+        <legend data-i18n="legend_format">Formato</legend>
+
+        <div class="format-row">
+          <label class="format-label"></label>
+          <div class="btn-group" aria-label="Tamaño de letra" data-i18n-ariaLabel="font_group_label">
+            <button type="button" class="action" id="font-smaller" data-i18n-title="font_smaller"
+              title="Reducir tamaño">
+              <i class="fa-solid fa-minus"></i>
+            </button>aA
+            <button type="button" class="action" id="font-bigger" data-i18n-title="font_bigger" title="Aumentar tamaño">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <button type="button" class="action ghost" id="font-reset" data-i18n-title="font_reset"
+              title="Restaurar tamaño por defecto">
+              <i class="fa-solid fa-rotate-left"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="format-row">
+          <label for="font-family-select" class="format-label" data-i18n="font_family_label">Tipografía</label>
+          <select id="font-family-select" class="select">
+            <option data-i18n="font_option_sans_system"
+              value="system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,sans-serif">
+              Sans (sistema)
+            </option>
+            <option data-i18n="font_option_serif" value="Georgia,Times New Roman,Times,serif">Serif</option>
+            <option data-i18n="font_option_monospace"
+              value="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Roboto Mono,monospace">Monospace</option>
+            <option data-i18n="font_option_catamaran"
+              value="'Catamaran',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,sans-serif">
+              Catamaran
+            </option>
+            <option data-i18n="font_option_prestige" value="'Prestige Elite Std',ui-monospace,Consolas,monospace">
+              Prestige Elite</option>
+            <option data-i18n="font_option_gnutypewriter"
+              value="'GNUTypewriter', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Roboto Mono', monospace">
+              GNUTypewriter
+            </option>
+          </select>
+        </div>
+
+        <div class="format-row">
+          <label for="scheme-select" class="format-label" data-i18n="scheme_label">Esquema</label>
+          <select id="scheme-select" class="select">
+            <option value="theme" data-i18n="scheme_base">Base</option>
+            <option value="default" data-i18n="scheme_light">Claro</option>
+            <option value="dark" data-i18n="scheme_dark">Oscuro</option>
+            <option value="retro" data-i18n="scheme_retro">Retro</option>
+          </select>
+        </div>
+      </fieldset>
+    </template>
+
+    <!-- MENÚ 1 · tblists -->
+    <template id="tblists">
+      <div class="input-wrapper">
+        <i class="fa-solid fa-keyboard"></i>
+        <input type="text" id="inputtext" placeholder="N" data-i18n-placeholder="generic_n_placeholder" />
+      </div>
+
+      <section id="info" role="status" aria-live="polite" data-i18n="lists_info">
+        Con estas herramientas puedes ordenar, agrupar y formatear listas de elementos.
+      </section>
+
+      <button class="action" data-target="#examples" data-i18n="lists_examples_btn">Ejemplos</button>
+      <div id="examples" class="toolset">
+        <button class="action" data-action="importList" data-file="cspeople.txt" data-i18n="list_example_people">
+          Personas
+        </button>
+        <button class="action" data-action="importList" data-file="days.txt" data-i18n="list_example_days">
+          Días del año
+        </button>
+        <button class="action" data-action="importList" data-file="animals.txt" data-i18n="list_example_animals">
+          Animales
+        </button>
+        <button class="action" data-action="importList" data-file="countries.txt" data-i18n="list_example_countries">
+          Países
+        </button>
+        <button class="action" data-action="importList" data-file="writers.txt" data-i18n="list_example_writers">
+          Escritores
+        </button>
+      </div>
+
+      <button class="action" data-target="#uplow" data-i18n="lists_sort_tools">Ordenar</button>
+      <div id="uplow" class="toolset">
+        <button class="action" data-action="doAZ" data-i18n-title="sort_az_info"
+          title="Ordenar la lista alfabéticamente de forma ascendente, de la A a la Z.">
+          <span data-i18n="sort_az_label">Ordenar A-Z</span>
+        </button>
+        <button class="action" data-action="doZA" data-i18n-title="sort_za_info"
+          title="Ordenar la lista alfabéticamente de forma ascendente, de la A a la Z.">
+          <span data-i18n="sort_za_label">Ordenar Z-A</span>
+        </button>
+        <button class="action" data-action="sortByTag" data-i18n-title="sort_by_tag_info"
+          title="Ordenar la lista por etiqueta">
+          <span data-i18n="sort_by_tag_label">Ordenar por etiqueta</span>
+        </button>
+      </div>
+
+      <button class="action" data-target="#groups" data-i18n="lists_groups">Grupos</button>
+      <div id="groups" class="toolset">
+        <button class="action" data-action="group2" data-i18n-title="group2_info"><span
+            data-i18n="group2_label">x2</span></button>
+        <button class="action" data-action="group3" data-i18n-title="group3_info"><span
+            data-i18n="group3_label">x3</span></button>
+        <button class="action" data-action="group4" data-i18n-title="group4_info"><span
+            data-i18n="group4_label">x4</span></button>
+        <button class="action" data-action="groupX" data-i18n-title="groupx_info"><span data-i18n="groupx_label">Grupos
+            de N</span></button>
+        <button class="action" data-action="splitList" data-i18n-title="split_n_info"><span data-i18n="split_n_label">N
+            grupos</span></button>
+        <button class="action" data-action="sortABC" data-i18n-title="sort_abc_info"><span
+            data-i18n="sort_abc_label">Ordenar A-B-C</span></button>
+        <button class="action" data-action="abc" data-i18n-title="abc_info"><span data-i18n="abc_label">Grupos
+            ABC</span></button>
+        <button class="action" data-action="abbc" data-i18n-title="abbc_info"><span data-i18n="abbc_label">Grupos
+            ABBC</span></button>
+        <button class="action" data-action="groupByPattern" data-i18n-title="group_pattern_info"><span
+            data-i18n="group_pattern_label">Grupos por patrón</span></button>
+        <button class="action" data-action="joinLists" data-i18n-title="merge_info"><span
+            data-i18n="merge_label">Fusiona</span></button>
+      </div>
+
+      <button class="action" data-target="#random" data-i18n="lists_random">Al azar</button>
+      <div id="random" class="toolset">
+        <button class="action" data-action="randomElements" data-i18n-title="pick_n_info">
+          <span data-i18n="pick_n_label">Selecciona N</span>
+        </button>
+        <button class="action" data-action="shuffleList" data-i18n-title="shuffle_info">
+          <span data-i18n="shuffle_label">Mezcla</span>
+        </button>
+      </div>
+
+      <button class="action" data-target="#format" data-i18n="lists_format">Formato</button>
+      <div id="format" class="toolset">
+        <button class="action" data-action="namesUp" data-i18n-title="title_case_info"><span
+            data-i18n="namesup_label">1a mayúsc. (Aa)</span></button>
+        <button class="action" data-action="upperCase" data-i18n-title="upper_info"><span
+            data-i18n="upper_label">Mayúsc. (AA)</span></button>
+        <button class="action" data-action="lowerCase" data-i18n-title="lower_info"><span
+            data-i18n="lower_label">minúsc. (aa)</span></button>
+        <button class="action" data-action="cleanLines" data-i18n-title="clean_list_info"><span
+            data-i18n="clean_list_label">Limpiar lista</span></button>
+        <button class="action" data-action="numberElements" data-i18n-title="number_info"><span
+            data-i18n="number_label">Numerar</span></button>
+        <button class="action" data-action="removeNumbering" data-i18n-title="unnumber_info"><span
+            data-i18n="unnumber_label">Eliminar numeración</span></button>
+        <button class="action" data-action="removeTags" data-i18n-title="remove_tags_info"><span
+            data-i18n="remove_tags_label">Eliminar etiquetas</span></button>
+        <button class="action" data-action="toCheckList" data-i18n-title="checklist_info"><span
+            data-i18n="checklist_label">Lista de tareas</span></button>
+      </div>
+    </template>
+
+    <!-- TEMPLATE: ANÁLISIS ESTADÍSTICO -->
+    <template id="stats">
+      <div class="input-wrapper">
+        <i class="fa-solid fa-keyboard"></i>
+        <input type="text" id="inputstats" placeholder="X" data-i18n-placeholder="generic_x_placeholder" />
+      </div>
+
+      <section id="info" role="status" aria-live="polite" data-i18n="stats_info">
+        Con estas herramientas puedes realizar cálculos estadísticos.
+      </section>
+
+      <button class="action" data-target="#texts" data-i18n="stats_texts">Textos</button>
+      <div id="texts" class="toolset">
+        <button class="action" data-action="importText" data-file="adalovelace_es.txt" data-i18n="stats_text_ada_es">
+          Ada Lovelace (ES)
+        </button>
+        <button class="action" data-action="importText" data-file="adalovelace_en.txt" data-i18n="stats_text_ada_en">
+          Ada Lovelace (EN)
+        </button>
+        <button class="action" data-action="importText" data-file="lazarillo.txt" data-i18n="stats_text_lazarillo">
+          Lazarillo
+        </button>
+        <button class="action" data-action="importText" data-file="quijote.txt" data-i18n="stats_text_quijote">
+          Quijote
+        </button>
+        <button class="action" data-action="importText" data-file="biblia.txt" data-i18n="stats_text_biblia">
+          Biblia
+        </button>
+      </div>
+
+      <button class="action" data-target="#frequencies" data-i18n="stats_freq">Frecuencias</button>
+      <div id="frequencies" class="toolset">
+        <button class="action" data-action="calcWordFreq" data-i18n="stats_word_freq">Frec. palabras</button>
+        <button class="action" data-action="calcCharFreq" data-i18n="stats_char_freq">Frec. caracteres</button>
+      </div>
+    </template>
+
+    <template id="about" data-default>
+      <section class="text">
+
+        <h1><i class="fa-solid fa-circle-question"></i>&nbsp;<span data-i18n="about_h1">¿Qué es txtlab?</span></h1>
+        <p>
+          <span data-i18n="about_p1">
+            Esto es una caja de herramientas para procesar y transformar texto. Por ejemplo, puedes procesar listas
+            desde
+            el menú
+          </span>
+          <i class="fa-solid fa-list"></i>.
+          <span data-i18n="about_p1b">O puedes empezar a escribir desde el menú</span>
+          <i class="fa-solid fa-pen-to-square"></i>.
+        </p>
+        <h1><i class="fa-solid fa-lock"></i>&nbsp;<span data-i18n="about_h2">Protección de datos</span></h1>
+        <p data-i18n="about_p2">
+          Esta aplicación web <u>no almacena ni envía</u> datos a Internet. Todo se procesa en tu ordenador y nunca sale
+          de él.
+        </p>
+        <h1><i class="fa-solid fa-address-card"></i>&nbsp;<span data-i18n="about_h3">Autor</span></h1>
+        <p>
+          <span data-i18n="about_p3a">Este es un proyecto de</span>
+          <a href="https://www.ebenimeli.org" target="_blank">Enrique Benimeli</a>.
+          <span data-i18n="about_p3b">Si tienes alguna sugerencia, puedes</span>
+          <a href="https://www.ebenimeli.org/contact/" target="_blank" data-i18n="contact_label">contactar</a>.
+        </p>
+      </section>
+    </template>
+
+    <!-- ZONA PRINCIPAL -->
+    <main>
+      <div id="main" class="box">
+        <div id="imenu" class="box control">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchtext" placeholder="Busca..." data-i18n-placeholder="search_placeholder" />
+          <button data-action="copyi" data-i18n-title="copyi_title" title="Copiar">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+          <button data-action="pastei" data-i18n-title="pastei_title" title="Pegar">
+            <i class="fa-regular fa-paste"></i>
+          </button>
+          <button data-action="cleanleft" data-i18n-title="cleanleft_title" title="Limpiar">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button data-action="lefttoright" data-i18n-title="lefttoright_title" title="Pasar a la derecha">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+        <div id="omenu" class="box control">
+          <button data-action="righttoleft" data-i18n-title="righttoleft_title" title="Pasar a la izquierda"><i
+              class="fa-solid fa-arrow-left"></i></button>
+          <button data-action="cleanright" data-i18n-title="cleanright_title" title="Limpiar"><i
+              class="fa-solid fa-xmark"></i></button>
+          <button data-action="copyo" data-i18n-title="copyo_title" title="Copiar"><i
+              class="fa-regular fa-copy"></i></button>
+          <button data-action="pasteo" data-i18n-title="pasteo_title" title="Pegar"><i
+              class="fa-regular fa-paste"></i></button>
+          <button data-action="printo" data-i18n-title="printo_title" title="Imprimir"><i
+              class="fa-solid fa-print"></i></button>
+        </div>
+        <textarea id="itext" class="box">Escribe o pega aquí tu lista.</textarea>
+        <textarea id="otext" class="box"></textarea>
+        <div id="statusi" class="metainfo" data-i18n="status_i"></div>
+        <div id="statuso" class="metainfo" data-i18n="status_o"></div>
+      </div>
+    </main>
+
+    <footer>
+      <div id="footer" class="box">
+        <p class="share">
+          <a href="https://www.ebenimeli.org" target="_blank"><img class="icon" src="assets/img/icons/web.svg"
+              alt="web"></a>
+          <a href="https://x.com/enriquebenimeli" target="_blank"><img class="icon" src="assets/img/icons/x.svg"
+              alt="X"></a>
+          <a href="https://www.instagram.com/ebenimeli/" target="_blank"><img class="icon"
+              src="assets/img/icons/instagram.svg" alt="Instagram"></a>
+          <a href="https://linkedin.com/in/ebenimeli" target="_blank"><img class="icon"
+              src="assets/img/icons/linkedin.svg" alt="LinkedIn"></a>
+          <a href="https://substack.com/@ebenimeli" target="_blank"><img class="icon"
+              src="assets/img/icons/substack.svg" alt="Substack"></a>
+        </p>
+        <select class="share" id="lang-switch" aria-label="Seleccionar idioma" data-i18n-ariaLabel="lang_switch_label">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+          <option value="de">Deutsch</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+
+    </footer>
+  </section>
+
+  <dialog id="welcome-dialog" role="dialog" aria-labelledby="welcome-title" aria-describedby="welcome-desc">
+    <form method="dialog" class="dlg">
+      <h3 id="welcome-title" data-i18n="welcome_title"><strong>txt</strong>lab</h3>
+      <p id="welcome-desc"></p>
+      <p><i class="fa-solid fa-gear"></i> <span data-i18n="welcome_p1">Esta aplicación web es una caja de herramientas
+          para escribir, procesar y transformar texto.</span></p>
+      <p><i class="fa-solid fa-list"></i> <span data-i18n="welcome_p2">Puedes ordenar, agrupar y formatear listas de
+          elementos.</span></p>
+      <p><i class="fa-solid fa-pen-to-square"></i> <span data-i18n="welcome_p3">Puedes escribir sin distracciones,
+          marcarte objetivos y compartir tu progreso de escritura.</span></p>
+      <p><i class="fa-solid fa-share"></i> <span data-i18n="welcome_p4">Si te gusta, comparte.</span></p>
+
+      <p class="welcomeshare">
+        <a href="https://twitter.com/intent/tweet?text=Prueba%20txtlab%20👉%20https%3A%2F%2Fwww.ebenimeli.org%2Ftxtlab%2F"
+          target="_blank" rel="noopener" title="Compartir en Twitter">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ebenimeli.org%2Ftxtlab%2F"
+          target="_blank" rel="noopener" title="Compartir en Facebook">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.ebenimeli.org%2Ftxtlab%2F"
+          target="_blank" rel="noopener" title="Compartir en LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://wa.me/?text=Prueba%20txtlab%20👉%20https%3A%2F%2Fwww.ebenimeli.org%2Ftxtlab%2F" target="_blank"
+          rel="noopener" title="Compartir en WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </p>
+
+      <!-- Rate app -->
+
+      <div class="rating" id="welcome-rating" role="radiogroup" aria-label="Valora la app">
+        <button class="star" type="button" role="radio" aria-checked="false" data-value="1" title="1/5"></button>
+        <button class="star" type="button" role="radio" aria-checked="false" data-value="2" title="2/5"></button>
+        <button class="star" type="button" role="radio" aria-checked="false" data-value="3" title="3/5"></button>
+        <button class="star" type="button" role="radio" aria-checked="false" data-value="4" title="4/5"></button>
+        <button class="star" type="button" role="radio" aria-checked="false" data-value="5" title="5/5"></button>
+      </div>
+
+      <!-- Se actualizará con el número de estrellas seleccionadas -->
+      <input type="hidden" name="rating" id="rating-value" value="0">
+
+      <menu class="dlg-actions">
+        <button value="ok" class="action" autofocus data-i18n="welcome_cta">Empezar</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <dialog id="success-dialog" role="dialog" aria-labelledby="success-title">
+    <form method="dialog" class="dlg">
+      <h3 id="success-title" data-i18n="success_title">🎉 ¡Objetivo alcanzado!</h3>
+      <p id="success-msg">
+        <span data-i18n="success_msg_1">Has llegado a tu meta de</span>
+        <strong><span id="success-goal">—</span></strong>
+        <span data-i18n="success_msg_2">palabras en</span>
+        <strong><span id="success-time">—</span></strong>.
+        <span data-i18n="success_msg_3">¡Buen trabajo!</span>
+      </p>
+      <p class="share" id="success-share">
+        <a id="share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ebenimeli.org/txtlab"
+          target="_blank">
+          <img src="assets/img/icons/facebook.svg" class="icon" alt="Facebook">
+        </a>
+        <a id="share-x" href="#" target="_blank">
+          <img src="assets/img/icons/x.svg" class="icon" alt="X">
+        </a>
+        <a id="share-wa" href="#" target="_blank">
+          <img src="assets/img/icons/whatsapp.svg" class="icon" alt="WhatsApp">
+        </a>
+        <a id="share-li" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ebenimeli.org/txtlab"
+          target="_blank">
+          <img src="assets/img/icons/linkedin.svg" class="icon" alt="LinkedIn">
+        </a>
+        <a id="share-mail" href="#" target="_blank">
+          <img src="assets/img/icons/email.svg" class="icon" alt="Email">
+        </a>
+      </p>
+      <menu class="dlg-actions">
+        <button value="ok" class="action" data-i18n="close">Cerrar</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+/* =========================
+   Reset útil
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =========================
+   Layout principal (Grid)
+========================= */
+.container {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-areas:
+    "topleft header header"
+    "sidebar main main"
+    "footer footer footer";
+  gap: 10px;
+}
+
+/* =========================
+   Móvil
+========================= */
+@media (max-width: 500px) {
+  :root {
+    --sp-mobile: 8px; /* separación lateral en móvil */
+  }
+
+  html,
+  body {
+    overflow-x: hidden; /* evita scroll lateral */
+    padding: 0;
+    margin: 0;
+  }
+
+  .container {
+    margin: 0; /* sin margen externo */
+    padding-inline: var(--sp-mobile); /* gutter lateral único */
+    width: auto;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "topleft"
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+  }
+
+  /* todos los hijos se ajustan al ancho disponible */
+  .container > *,
+  #main,
+  #sidebar,
+  .box,
+  .panel {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  button#focus-mode {
+    display: none;
+  }
+  
+  .container #topleft {
+    border-bottom: 3px solid black;
+  }
+
+  .container header {
+    justify-content: center;
+  }
+
+  .container aside {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    --h-min-pane: 0; /* altura auto */
+  }
+
+  #sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    --h-min-main: 0; /* altura auto */
+  }
+
+  .container #main {
+    margin: 0;
+  }
+
+  .control button {
+    width: 3px;
+    height: 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .focus-controls {
+    display: none !important;
+  }
+
+  #imenu > i,
+  input#searchtext,
+  /*button[data-action="copyi"],*/
+  button[data-action="copyo"], 
+  button[data-action="printo"] {
+    display: none;
+  }
+}
+
+/* =========================
+   Zonas
+========================= */
+.container #topleft {
+  grid-area: topleft;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--c-bg);
+  color: var(--c-text);
+  text-align: center;
+  font-weight: bold;
+}
+
+.container #topleft a {
+  text-decoration: none;
+}
+
+.container #topleft a i {
+  font-size: 2em;
+  display: block;
+  color: var(--c-text);
+  transition: transform var(--t-base), color var(--t-base);
+}
+
+/* al pasar el ratón por el enlace */
+.container #topleft a:hover i {
+  animation: spin 5s linear;
+}
+
+/* animación de giro */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#topleft .productname {
+  font-size: 1.5em;
+  color: var(--c-text);
+}
+
+#topleft .productname:hover {
+  scale: 1.2;
+}
+
+#topleft .productname strong {
+  color: steelblue;
+}
+
+#topleft .productlogo {
+  width: 30%;
+  display: flex;
+  align-items: center;       /* centra verticalmente */
+  justify-content: center;   /* centra horizontalmente */
+  margin: 0 auto;            /* asegura centrado si hay espacio libre */
+}
+
+
+
+.container #topleft a i:hover {
+  color: var(--c-accent);
+  transform: scale(1.2);
+}
+
+.container header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  padding: var(--sp-1);
+}
+
+.container aside {
+  grid-area: sidebar;
+  min-height: var(--h-min-pane);
+}
+
+.container main {
+  grid-area: main;
+  min-height: var(--h-min-pane);
+  display: grid;
+}
+
+.container footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  min-height: var(--h-min-footer);
+  font-size: 0.9em;
+  text-align: center;
+}
+
+#sidebar {
+  width: 100%;
+  min-height: var(--h-min-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main {
+  background: var(--c-muted);
+  min-height: var(--h-min-main);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 1fr;
+  gap: var(--sp-1);
+}
+
+/* Cuando #main contiene un juego o un documento, usa flujo */
+#main:has(.game-root),
+#main:has(.document) {
+  display: block;           /* o flex; flex-direction: column; */
+  grid-template: none;      /* anula las pistas del grid */
+  height: auto;             /* crece con el contenido */
+  min-height: var(--h-min-main); /* conservas tu mínimo si quieres */
+}
+
+
+.container footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  justify-content: center; /* centra horizontalmente */
+  gap: 10px;
+  min-height: var(--h-min-footer);
+  font-size: 0.9em;
+  text-align: center;
+}
+
+#footer {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /*font-weight: bold*/
+}
+
+#footer a {
+  text-decoration: none;
+  color: var(--c-link);
+  display: flex;
+  align-items: center;
+}
+
+/* Colocación por defecto en el grid del main */
+#imenu { grid-column: 1; grid-row: 1; }
+#omenu { grid-column: 2; grid-row: 1; }
+
+/* Si hay #imenu pero NO hay #omenu, que #imenu ocupe 100% */
+@supports selector(:has(*)) {
+  #main:has(#imenu):not(:has(#omenu)) {
+    grid-template-columns: 1fr;       /* (opcional) convierte el grid en 1 columna */
+  }
+  #main:has(#imenu):not(:has(#omenu)) #imenu {
+    grid-column: 1 / -1;              /* que abarque todas las columnas disponibles */
+  }
+}
+
+section.document {
+  display: block;
+  height: auto;
+}
+
+#main .game-root {
+  grid-column: 1 / -1;
+  display: block;
+  min-height: 500px;
+}
+

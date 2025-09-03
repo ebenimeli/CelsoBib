@@ -1,0 +1,102 @@
+Bibliotecaria: cabello canoso, gafas grandes; nocturna que conversa con libros insomnes.
+Astrónoma: pecas y ojos brillantes; adolescente que nombra estrellas con apodos secretos.
+Panadero: robusto, brazos fuertes, manos harinosas; científico que pesa sueños en balanzas.
+Ciclista: delgado, piernas largas, casco brillante; urbano que compite contra su sombra.
+Profesora: cabello recogido, gafas redondas, estatura baja; impaciente que aprende paciencia con tortugas.
+Jardinera: piel morena, manos firmes, cabello rizado; espacial que cultiva meteoritos con flores.
+Mecánico: manos manchadas, torso ancho, barba corta; amable que escucha motores como melodías.
+Fotógrafa: cabello lacio, lentes colgando, mirada concentrada; tímida que retrata fantasmas vergonzosos.
+Cartero: piernas musculosas, uniforme gastado, sonrisa amplia; poeta que escribe respuestas sin remitente.
+Matemático: cabello despeinado, gafas torcidas, dedos manchados; distraído que ordena números por colores.
+Pastelera: mejillas sonrojadas, delantal harinoso, manos ágiles; valiente que hornea tormentas en frascos.
+Bibliotecario: cabello gris, chaqueta larga, ojos cansados; viajero que presta mapas a estrellas.
+Sastre: dedos finos, gafas pequeñas, cuerpo encorvado; marino que cose velas con conchas.
+Inventora: cabello rebelde, gafas gruesas, manos firmes; paciente que enseña a respirar a robots.
+Albañil: brazos fuertes, piel bronceada, cejas espesas; poeta que levanta paredes con rimas.
+Bailarín: cuerpo ágil, piernas largas, mirada intensa; sordo que siente música con luces.
+Hechicero: barba desordenada, túnica vieja, sombrero ladeado; torpe que conjura flores por accidente.
+Físico: cabello corto, gafas redondas, postura erguida; curioso que pesa sombras al amanecer.
+Botánica: cabello trenzado, manos delicadas, piel morena luminosa; risueña que adopta plantas huérfanas.
+Pescador: piel curtida, manos grandes, sombrero gastado; nocturno que atrapa risas en redes.
+Abogada: traje oscuro, cabello liso, mirada serena; justa que defiende causas perdidas imposibles.
+Monje: cabeza rapada, túnica suelta, manos firmes; grafitero que pinta paz en muros.
+Nadadora: hombros fuertes, cabello mojado, ojos claros; intrépida que conversa con corrientes marinas.
+Carpintera: brazos robustos, delantal de cuero, cabello rizado; exacta que mide nubes con reglas.
+Cartero: botas desgastadas, chaqueta larga, cabello despeinado; astral que entrega cartas a cometas.
+Enfermera: mirada atenta, manos firmes, bata blanca; valiente que cose miedos con hilo rojo.
+Piloto: chaqueta gruesa, gafas aéreas, sonrisa calmada; tranquilo que aterriza en tejados de cuentos.
+Ajedrecista: cabello liso, gafas rectas, dedos largos; paciente que juega partidas con el tiempo.
+Reportera: micrófono en mano, cabello recogido, ojos brillantes; audaz que entrevista tormentas tropicales.
+Científica: trenzas apretadas, gafas grandes, bata corta; niña que fabrica lluvia embotellada.
+Mago: sombrero torcido, varita larga, túnica oscura; joven que estudia trucos de honestidad.
+Panadera: piel sonrojada, manos fuertes, cabello recogido; viajera que intercambia recetas por historias.
+Forjador: brazos musculosos, manos negras, piel sudorosa; paciente que enfría espadas con canciones.
+Estudiante: cabello despeinado, mochila caída, gafas torcidas; distraído que pierde lápices en otros mundos.
+Tendera: delantal limpio, sonrisa amplia, cabello corto; optimista que guarda soles en frascos.
+Barquero: piel arrugada, espalda encorvada, ojos cansados; anciano que cruza recuerdos de noche.
+Trompetista: mejillas infladas, manos rápidas, chaqueta desgastada; callejero que cambia tormentas por música.
+Cartógrafa: gafas gruesas, cabello recogido, manos manchadas de tinta; minuciosa que dibuja ciudades invisibles.
+Programadora: cabello lacio, gafas grandes, dedos veloces, postura encorvada; creativa que depura pesadillas.
+Cazador: cuerpo robusto, barba espesa, botas gastadas; vegetariano que protege lobos heridos.
+Bombera: uniforme pesado, casco brillante, mirada firme; serena que apaga incendios con cuentos.
+Ladronzuelo: manos rápidas, cuerpo delgado, mirada inquieta; arrepentido que devuelve secretos robados.
+Curandera: cabello blanco, manos arrugadas, ojos dulces; vieja que prescribe paseos por nubes.
+Herbolario: bata verde, cabello corto, dedos delicados; meticuloso que cataloga suspiros fragantes.
+Payasa: nariz roja, cabello rizado, ojos alegres; filosófica que hace reír pensando.
+Poeta: cabello desordenado, gafas redondas, manos entintadas; tartamudo que escribe versos fluidos.
+Camarera: delantal ajustado, cabello recogido, sonrisa discreta; prudente que recuerda pedidos de memoria.
+Fotógrafo: cámara colgada, cabello mojado, botas firmes; paciente que espera relámpagos perfectos.
+Agricultor: brazos fuertes, sombrero ancho, piel tostada; urbano que cultiva azoteas fértiles.
+Alfarera: manos firmes, delantal manchado, cabello recogido; paciente que moldea constelaciones de barro.
+Carterista: cuerpo ágil, mirada rápida, dedos largos; honesto que roba preocupaciones y devuelve calma.
+Ilusionista: sombrero negro, guantes blancos, mirada intensa; sincero que explica cada truco después.
+Minera: casco brillante, rostro sucio, brazos fuertes; valiente que canta para espantar derrumbes.
+Piloto: gafas oscuras, chaqueta gruesa, sonrisa tranquila; meditabundo que colecciona amaneceres en cuadernos.
+Editor: gafas pequeñas, chaqueta ordenada, cabello corto; maniático que corrige letreros de la calle.
+Pastora: trenza larga, vestido sencillo, mirada brillante; urbana que guía bicicletas perdidas.
+Conserje: uniforme gris, manos firmes, pasos silenciosos; invisible que limpia recuerdos ajenos.
+Taxista: cabello escaso, bigote fino, manos grandes; filosófico que aconseja a desconocidos nocturnos.
+Panadero: delantal sucio, mirada perdida, cuerpo ancho; melancólico que hornea pan con nostalgia.
+Geógrafa: cabello suelto, gafas finas, labios delicados; soñadora que mide distancias en besos.
+Carpintero: brazos fuertes, piel morena, manos curtidas; paciente que repara sillas con cuentos.
+Médica: bata blanca, cabello recogido, gafas rectas; escéptica que receta abrazos verificados.
+Cartero: piernas cansadas, uniforme gastado, cabello gris; lento que siempre llega a tiempo.
+Veterinaria: bata verde, manos suaves, cabello lacio; paciente que traduce ladridos complejos.
+Farero: barba blanca, chaqueta gruesa, mirada distante; solitario que colecciona sombras de barcos.
+Heladera: cabello corto, delantal colorido, sonrisa amplia; creativa que inventa sabores imposibles.
+Poeta: cabello despeinado, cuaderno en mano, gafas rectas; urbano que escribe en pasos de peatones.
+Jueza: toga oscura, cabello recogido, mirada firme; justa que escucha silencios como testimonios.
+Carterista: guantes finos, traje ajustado, sonrisa discreta; elegante que roba solo bostezos.
+Astrónomo: gafas grandes, cabello canoso, manos temblorosas; paciente que cuenta satélites insomnes.
+Bióloga: cabello recogido, traje de buceo, ojos claros; marina que lee corrientes como libros.
+Escultora: manos firmes, rostro sereno, cabello trenzado; ciega que reconoce mármol por canciones.
+Repartidor: mochila grande, piernas fuertes, cabello despeinado; puntual que entrega oportunidades perdidas.
+Acróbata: cuerpo ágil, brazos largos, mirada fija; reflexivo que calcula cada salto filosóficamente.
+Botones: uniforme azul, gorra pequeña, sonrisa amplia; curioso que abre ascensores al pasado.
+Relojero: gafas finas, manos pequeñas, gesto serio; minucioso que adelanta segundos por compasión.
+Heredera: cabello largo, vestido sencillo, mirada serena; valiente que renuncia a una fortuna.
+Bibliotecaria: cabello gris, lentes colgando, sonrisa tranquila; viajera que presta brújulas literarias.
+Panadero: delantal sucio, brazos fuertes, mirada inquieta; curioso que pregunta recetas a ancestros.
+Barista: cabello recogido, delantal limpio, sonrisa amable; atento que dibuja constelaciones en cafés.
+Cerrajera: manos fuertes, cabello corto, mirada determinada; humilde que libera puertas olvidadas.
+Estibador: brazos robustos, piel bronceada, cejas gruesas; poético que ordena cajas por metáforas.
+Flautista: mejillas infladas, cabello lacio, mirada alegre; rural que apacigua tormentas con notas.
+Geólogo: botas firmes, barba espesa, piel curtida; terco que discute con montañas.
+Guardabosques: cabello largo, sombrero ancho, ojos brillantes; sereno que conversa con hongos antiguos.
+Historiadora: gafas grandes, cabello recogido, manos finas; inquieta que corrige fechas en sueños.
+Ilustradora: cabello trenzado, delantal manchado, ojos serenos; paciente que colorea días nublados.
+Jardinero: manos firmes, piel oscura, mirada luminosa; noctámbulo que trasplanta estrellas escondidas.
+Kiosquera: delantal sencillo, cabello corto, sonrisa amplia; risueña que recomienda titulares felices.
+Lingüista: gafas redondas, cabello suelto, dedos largos; obstinada que colecciona palabras huérfanas.
+Marinero: tatuajes visibles, brazos fuertes, barba espesa; supersticioso que canta para ahuyentar sirenas.
+Modista: cinta al cuello, cabello recogido, sonrisa dulce; creativa que diseña bolsillos para secretos.
+Niñera: brazos cálidos, cabello trenzado, mirada tierna; paciente que duerme dragones bebés.
+Obrero: casco amarillo, manos fuertes, piel morena; tenaz que construye puentes con perdones.
+Panadera: cabello gris, delantal limpio, sonrisa suave; sabia que lee migas como runas.
+Química: bata blanca, gafas gruesas, cabello recogido; metódica que destila recuerdos dulces.
+Recolector: sombrero de paja, manos firmes, piel tostada; paciente que junta silencios matutinos.
+Soñadora: cabello largo, cuaderno en mano, mirada brillante; práctica que agenda aventuras imposibles.
+Tatuador: brazos tatuados, mirada concentrada, cabello corto; sensible que escucha pieles tímidas.
+Ujier: traje oscuro, cabello escaso, pasos silenciosos; discreto que abre puertas simbólicas.
+Viajera: mochila pequeña, cabello suelto, sonrisa amplia; ligera que empaca solo promesas.
+Zapatera: manos fuertes, delantal manchado, cabello recogido; ingeniosa que repara pasos rotos.

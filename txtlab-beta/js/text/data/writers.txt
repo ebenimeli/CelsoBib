@@ -1,0 +1,185 @@
+Shakespeare, William / A
+Cervantes, Miguel de / B
+Homer, Homer / C
+Virgil, Publius Vergilius / D
+Dante, Alighieri / E
+Chaucer, Geoffrey / A
+Milton, John / B
+Goethe, Johann Wolfgang von / C
+Schiller, Friedrich / D
+Byron, Lord / E
+Shelley, Percy Bysshe / A
+Shelley, Mary / B
+Keats, John / C
+Wordsworth, William / D
+Coleridge, Samuel Taylor / E
+Dickens, Charles / A
+Thackeray, William Makepeace / B
+Tennyson, Alfred / C
+Browning, Robert / D
+Browning, Elizabeth Barrett / E
+Eliot, George / A
+Hardy, Thomas / B
+Stevenson, Robert Louis / C
+Wilde, Oscar / D
+Joyce, James / E
+Yeats, William Butler / A
+Eliot, T. S. / B
+Pound, Ezra / C
+Hemingway, Ernest / D
+Fitzgerald, F. Scott / E
+Faulkner, William / A
+Steinbeck, John / B
+Salinger, J. D. / C
+Kerouac, Jack / D
+Ginsberg, Allen / E
+Morrison, Toni / A
+Angelou, Maya / B
+Baldwin, James / C
+Roth, Philip / D
+Updike, John / E
+Borges, Jorge Luis / A
+Cortázar, Julio / B
+García Márquez, Gabriel / C
+Fuentes, Carlos / D
+Vargas Llosa, Mario / E
+Neruda, Pablo / A
+Mistral, Gabriela / B
+Paz, Octavio / C
+Allende, Isabel / D
+Carpentier, Alejo / E
+Quiroga, Horacio / A
+Sábato, Ernesto / B
+Onetti, Juan Carlos / C
+Donoso, José / D
+Rulfo, Juan / E
+Vallejo, César / A
+Bryce Echenique, Alfredo / B
+Arlt, Roberto / C
+Ocampo, Silvina / D
+Bioy Casares, Adolfo / E
+Tolstói, León / A
+Dostoyevski, Fiódor / B
+Chéjov, Antón / C
+Pushkin, Aleksandr / D
+Gógol, Nikolái / E
+Pasternak, Boris / A
+Solzhenitsyn, Aleksandr / B
+Bulgákov, Mijaíl / C
+Turgéniev, Iván / D
+Nabokov, Vladimir / E
+Zamýatin, Yevgueni / A
+Gorki, Máximo / B
+Akhmátova, Anna / C
+Mandelstam, Ósip / D
+Mayakovski, Vladímir / E
+Kafka, Franz / A
+Mann, Thomas / B
+Hesse, Hermann / C
+Böll, Heinrich / D
+Grass, Günter / E
+Musil, Robert / A
+Zweig, Stefan / B
+Rilke, Rainer Maria / C
+Celan, Paul / D
+Sebald, W. G. / E
+Camus, Albert / A
+Sartre, Jean-Paul / B
+Beauvoir, Simone de / C
+Flaubert, Gustave / D
+Balzac, Honoré de / E
+Zola, Émile / A
+Stendhal, Stendhal / B
+Maupassant, Guy de / C
+Hugo, Victor / D
+Duras, Marguerite / E
+Proust, Marcel / A
+Valéry, Paul / B
+Colette, Colette / C
+Yourcenar, Marguerite / D
+Voltaire, Voltaire / E
+Rousseau, Jean-Jacques / A
+Montesquieu, Montesquieu / B
+Diderot, Denis / C
+Rabelais, François / D
+Molière, Jean-Baptiste / E
+Austen, Jane / A
+Bronte, Charlotte / B
+Bronte, Emily / C
+Bronte, Anne / D
+Dickinson, Emily / E
+Whitman, Walt / A
+Poe, Edgar Allan / B
+Hawthorne, Nathaniel / C
+Melville, Herman / D
+Alcott, Louisa May / E
+Twain, Mark / A
+London, Jack / B
+Wharton, Edith / C
+James, Henry / D
+Cather, Willa / E
+O’Connor, Flannery / A
+Welty, Eudora / B
+Capote, Truman / C
+Oates, Joyce Carol / D
+King, Stephen / E
+Rowling, J. K. / A
+Tolkien, J. R. R. / B
+Lewis, C. S. / C
+Pullman, Philip / D
+Gaiman, Neil / E
+Martin, George R. R. / A
+Le Guin, Ursula K. / B
+Herbert, Frank / C
+Asimov, Isaac / D
+Clarke, Arthur C. / E
+Bradbury, Ray / A
+Orwell, George / B
+Huxley, Aldous / C
+Wells, H. G. / D
+Verne, Jules / E
+Christie, Agatha / A
+Doyle, Arthur Conan / B
+Chandler, Raymond / C
+Hammett, Dashiell / D
+Highsmith, Patricia / E
+Simenon, Georges / A
+Eco, Umberto / B
+Calvino, Italo / C
+Moravia, Alberto / D
+Pirandello, Luigi / E
+Svevo, Italo / A
+Leopardi, Giacomo / B
+Manzoni, Alessandro / C
+Alighieri, Dante (duplicado histórico) / D
+Boccaccio, Giovanni / E
+Ariosto, Ludovico / A
+Tasso, Torquato / B
+Machado, Antonio / C
+Lorca, Federico García / D
+Unamuno, Miguel de / E
+Baroja, Pío / A
+Valle-Inclán, Ramón María del / B
+Cela, Camilo José / C
+Delibes, Miguel / D
+Matute, Ana María / E
+Grandes, Almudena / A
+Galdós, Benito Pérez / B
+Clarín, Leopoldo Alas / C
+Blasco Ibáñez, Vicente / D
+Espronceda, José de / E
+Quevedo, Francisco de / A
+Góngora, Luis de / B
+Lope de Vega, Lope / C
+Calderón de la Barca, Pedro / D
+Sor Juana Inés de la Cruz / E
+Darío, Rubén / A
+Martí, José / B
+Hostos, Eugenio María de / C
+Henríquez Ureña, Pedro / D
+Gallegos, Rómulo / E
+Galán, Jorge Isaacs / A
+Rodó, José Enrique / B
+Amado, Jorge / C
+Lispector, Clarice / D
+Machado de Assis, Joaquim / E
