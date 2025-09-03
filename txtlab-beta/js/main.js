@@ -389,6 +389,7 @@ btn?.addEventListener("click", () => {
     if (hidden) hidden.value = String(n);
   };
 
+  
   async function sendRating(n){
     try {
       await fetch('https://www.ebenimeli.org/txtlab-beta/api/rating-email.php', {              // <-- ajusta ruta si procede
