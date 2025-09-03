@@ -374,7 +374,8 @@ btn?.addEventListener("click", () => {
 
   const stars  = Array.from(container.querySelectorAll('.star'));
   const hidden = root.querySelector('#rating-value');
-  let selected = 0; // 0 = nada fijado
+  let selected = 0;     // 0 = nada fijado
+  let sent = false;     // evita re-enviar
 
   const paint = (n) => {
     stars.forEach((s, i) => {
@@ -388,6 +389,22 @@ btn?.addEventListener("click", () => {
     if (hidden) hidden.value = String(n);
   };
 
+  async function sendRating(n){
+    try {
+      await fetch('api/rating-email.php', {              // <-- ajusta ruta si procede
+        method: 'POST',
+        headers: {'Content-Type':'application/x-www-form-urlencoded'},
+        body: new URLSearchParams({
+          rating: String(n),
+          source: 'welcome-dialog',
+          page: location.href
+        })
+      });
+    } catch (err) {
+      console.warn('No se pudo enviar la valoración', err);
+    }
+  }
+
   stars.forEach((star, i) => {
     const n = i + 1;
 
@@ -396,24 +413,36 @@ btn?.addEventListener("click", () => {
     star.addEventListener('mouseleave', () => paint(selected));
     star.addEventListener('blur',       () => paint(selected));
 
-    star.addEventListener('click',      () => set(n));
+    // Click fija y ENVÍA
+    star.addEventListener('click', () => {
+      set(n);
+      if (!sent) { sent = true; sendRating(n); }
+    });
 
+    // Teclado: Enter/Espacio envían; flechas solo cambian selección
     star.addEventListener('keydown', (e) => {
-      if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); set(n); }
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        set(n);
+        if (!sent) { sent = true; sendRating(n); }
+      }
       if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
         e.preventDefault(); set(Math.min(5, (selected || 0) + 1));
         stars[Math.min(4, selected - 1)].focus();
       }
       if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
         e.preventDefault(); set(Math.max(1, (selected || 1) - 1));
-        stars[Math.max(0, selected - 1 - 1)].focus();
+        stars[Math.max(0, selected - 2)].focus();
       }
     });
   });
 
-  // Si quieres arrancar con un valor previo (p.ej. desde servidor)
+  // Estado inicial si hay valor previo
   const initial = parseInt(hidden?.value || '0', 10);
   if (initial > 0) set(initial);
 
-  // Si ya tienes un botón/enlace de “Enviar valoración”, solo manda hidden.value
+  // Por si el usuario cierra el diálogo tras elegir pero sin click final
+  root.addEventListener('close', () => {
+    if (selected > 0 && !sent) { sent = true; sendRating(selected); }
+  });
 })();
