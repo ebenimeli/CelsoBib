@@ -26,7 +26,7 @@ $ts   = isset($data['ts'])   ? substr($data['ts'],   0, 64) : date('c');
 $ip   = $_SERVER['REMOTE_ADDR'] ?? '';
 $ua   = $_SERVER['HTTP_USER_AGENT'] ?? '';
 
-$to      = 'contact@ebenimeli.org';   // ← CAMBIA ESTA DIRECCIÓN
+$to      = 'contacto@ebenimeli.org';   // ← CAMBIA ESTA DIRECCIÓN
 $subject = 'Nueva valoración txtlab: ' . $rating . '/5';
 $body    = "Nueva valoración recibida:\n\n" .
            "⭐ Rating: {$rating}/5\n" .
