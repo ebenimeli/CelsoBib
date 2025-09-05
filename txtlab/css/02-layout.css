@@ -97,14 +97,21 @@
     margin: 0;
   }
 
-  .control button {
-    width: 3px;
-    height: 3px;
+ .control button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-  }
+    width: 44px;     /* tamaño cómodo de botón táctil */
+    height: 44px;
+    padding: 0;
+    line-height: 1;
+}
+.control button i {
+    font-size: 1.25rem; /* tamaño del icono */
+    line-height: 1;
+    display: block;
+}
+
 
   .focus-controls {
     display: none !important;
