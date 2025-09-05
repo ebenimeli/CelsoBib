@@ -1,0 +1,92 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* PANEL SUPERIOR */
+#top-panel {
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#top-panel button {
+  padding: 8px 12px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: green;
+  color: white;
+}
+/* Imagen cuadrada junto al botón */
+#selectedImg {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+}
+/* Contenedor de las imágenes de palabras */
+#image-buttons {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+#image-buttons .word-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+#image-buttons .word-icon:hover {
+  transform: scale(1.1);
+  border-color: #aaa;
+}
+
+/* PANEL CENTRAL */
+#panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+#panel img,
+#panel .blank {
+  object-fit: contain;
+  height: auto;
+  box-sizing: border-box;
+}
+#panel .blank {
+  border: 2px dashed #ccc;
+  background-color: #fff;
+}
+
+/* PANEL INFERIOR */
+#input-area {
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  width: 100%;
+}
+#wordInput {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2em;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}

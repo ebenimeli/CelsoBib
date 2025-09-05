@@ -118,7 +118,7 @@
   "contact_label": "contact me",
 
 
-  "welcome_title": "Welcome to txtlab",
+  "welcome_title": "txtlab",
   "welcome_p1": "This web app is a toolbox to write, process and transform text.",
   "welcome_p2": "You can sort, group and format item lists.",
   "welcome_p3": "You can write distraction-free, set goals and share your writing progress.",
@@ -177,5 +177,28 @@
   "font_option_monospace": "Monospace",
   "font_option_catamaran": "Catamaran",
   "font_option_prestige": "Prestige Elite",
-  "font_option_gnutypewriter": "GNUTypewriter"
+  "font_option_gnutypewriter": "GNUTypewriter",
+
+  "type_title": "Typing",
+
+  "games_menu_title": "Games",
+  "game_crosswords": "Word search",
+  "game_letters": "Letters",
+  "game_shuffle": "Shuffle",
+
+  "timer_clocks": "Clocks",
+  "timer_clock_analog": "Analog",
+  "timer_clock_digital": "Digital",
+  "timer_basic": "Timers",
+  "timer_basic_digital": "Digital",
+  "timer_basic_crown": "Crown",
+  "timer_basic_classic": "Classic",
+  "timer_basic_hourglass": "Hourglass",
+  "timer_tasks": "Tasks",
+  "timer_tasks_session": "Task session",
+  "timer_tasks_pomodoro": "Pomodoro",
+
+  "docs_menu_title": "Documentation",
+  "docs_lists": "Lists"
 }
+

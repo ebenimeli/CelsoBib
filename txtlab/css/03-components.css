@@ -15,6 +15,26 @@ button.tool {
   transition: background var(--t-base), color var(--t-base);
 }
 
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  button.tool {
+    aspect-ratio: 1 / 1;
+    flex-direction:column;
+    border: var(--bd);
+    border-radius: var(--radius);
+    margin: 0;
+    min-height: 60px;
+    font-size: 2em;
+    transition: background var(--t-base), color var(--t-base);
+  }
+}
+
 select.action,
 button.action {
   /*font-weight: bold;*/

@@ -232,6 +232,16 @@
   gap: var(--sp-1);
 }
 
+/* Cuando #main contiene un juego o un documento, usa flujo */
+#main:has(.game-root),
+#main:has(.document) {
+  display: block;           /* o flex; flex-direction: column; */
+  grid-template: none;      /* anula las pistas del grid */
+  height: auto;             /* crece con el contenido */
+  min-height: var(--h-min-main); /* conservas tu mínimo si quieres */
+}
+
+
 .container footer {
   grid-area: footer;
   display: flex;
@@ -258,3 +268,29 @@
   display: flex;
   align-items: center;
 }
+
+/* Colocación por defecto en el grid del main */
+#imenu { grid-column: 1; grid-row: 1; }
+#omenu { grid-column: 2; grid-row: 1; }
+
+/* Si hay #imenu pero NO hay #omenu, que #imenu ocupe 100% */
+@supports selector(:has(*)) {
+  #main:has(#imenu):not(:has(#omenu)) {
+    grid-template-columns: 1fr;       /* (opcional) convierte el grid en 1 columna */
+  }
+  #main:has(#imenu):not(:has(#omenu)) #imenu {
+    grid-column: 1 / -1;              /* que abarque todas las columnas disponibles */
+  }
+}
+
+section.document {
+  display: block;
+  height: auto;
+}
+
+#main .game-root {
+  grid-column: 1 / -1;
+  display: block;
+  min-height: 500px;
+}
+

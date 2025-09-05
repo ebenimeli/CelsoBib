@@ -117,7 +117,7 @@
   "about_p3b": "Si vous avez une suggestion, vous pouvez",
   "contact_label": "contacter",
 
-  "welcome_title": "Bienvenue sur txtlab",
+  "welcome_title": "txtlab",
   "welcome_p1": "Cette application web est une boîte à outils pour écrire, traiter et transformer du texte.",
   "welcome_p2": "Vous pouvez trier, regrouper et formater des listes d’éléments.",
   "welcome_p3": "Vous pouvez écrire sans distractions, fixer des objectifs et partager vos progrès d’écriture.",
@@ -176,6 +176,28 @@
   "font_option_monospace": "Monospace",
   "font_option_catamaran": "Catamaran",
   "font_option_prestige": "Prestige Elite",
-  "font_option_gnutypewriter": "GNUTypewriter"
+  "font_option_gnutypewriter": "GNUTypewriter",
 
+  "type_title": "Taper",
+
+  "games_menu_title": "Jeux",
+  "game_crosswords": "Mots mêlés",
+  "game_letters": "Lettres",
+  "game_shuffle": "Shuffle",
+
+  "timer_clocks": "Horloges",
+  "timer_clock_analog": "Analogique",
+  "timer_clock_digital": "Numérique",
+  "timer_basic": "Minuteries",
+  "timer_basic_digital": "Numérique",
+  "timer_basic_crown": "Couronne",
+  "timer_basic_classic": "Classique",
+  "timer_basic_hourglass": "Sablier",
+  "timer_tasks": "Tâches",
+  "timer_tasks_session": "Session de tâches",
+  "timer_tasks_pomodoro": "Pomodoro",
+
+  "docs_menu_title": "Documentation",
+  "docs_lists": "Listes"
 }
+

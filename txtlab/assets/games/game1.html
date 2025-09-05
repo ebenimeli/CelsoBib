@@ -1,0 +1,329 @@
+<!-- assets/games/game1.html -->
+<div id="dino-embed" role="group" aria-label="Juego: Dino Runner">
+  <style>
+    /* ====== INTEGRACIÓN EN #main ======
+       #main es grid (2 col, 2 filas). Este wrapper ocupa todo. */
+    #dino-embed {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      /* que el contenedor se adapte a tu ancho disponible */
+      width: 100%;
+      padding: 8px;
+      container-type: inline-size;
+    }
+
+    /* ====== Estilos propios (namespaced) ====== */
+    #dino-embed .frame {
+      background: var(--c-bg, #f7f7f7);
+      border: 1px solid var(--c-border, #ddd);
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      padding: 8px 8px 12px;
+    }
+
+    #dino-embed .hud {
+      position: absolute;
+      inset: 6px 8px auto 8px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      z-index: 2;
+      pointer-events: none;
+    }
+    #dino-embed .spacer { flex: 1; }
+    #dino-embed .chip {
+      font: inherit;
+      font-variant-numeric: tabular-nums;
+      background: color-mix(in oklab, white 85%, transparent);
+      border: 1px solid #e6e6e6;
+      border-radius: 8px;
+      padding: 2px 8px;
+      pointer-events: auto;
+      user-select: none;
+      color: var(--c-text, #222);
+    }
+    #dino-embed .btn {
+      pointer-events: auto;
+      border: 1px solid #ddd;
+      background: #fff;
+      border-radius: 8px;
+      padding: 4px 8px;
+      font: inherit;
+      cursor: pointer;
+      color: var(--c-text, #222);
+    }
+    #dino-embed .btn:active { transform: translateY(1px); }
+
+    #dino-embed canvas {
+      display: block;
+      width: 100%;
+      height: auto;                 /* mantiene proporción */
+      max-height: 240px;            /* altura comedida para caber en #main */
+      border-radius: 10px;
+      image-rendering: pixelated;
+      background: linear-gradient(#fff, #f9f9f9 60%, #f2f2f2 60%) no-repeat;
+    }
+
+    #dino-embed .overlay {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.85), rgba(255,255,255,0.55));
+      padding: 16px;
+      z-index: 3;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .15s ease;
+    }
+    #dino-embed .overlay.show { opacity: 1; pointer-events: auto; }
+
+    #dino-embed .card {
+      background: color-mix(in oklab, white 90%, transparent);
+      border: 1px solid #e7e7e7;
+      border-radius: 10px;
+      padding: 12px 14px;
+      max-width: 92%;
+      font: inherit;
+      color: var(--c-text, #222);
+    }
+    #dino-embed .card h2 { margin: 0 0 6px; font-size: 1rem; }
+    #dino-embed .kbd {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: #fafafa;
+      border: 1px solid #e4e4e4;
+      border-radius: 6px;
+      padding: 1px 5px;
+    }
+
+    /* Botón táctil (no le afecta tu .control button en móvil) */
+    @media (hover: none) and (pointer: coarse) {
+      #dino-embed .tapjump {
+        position: absolute; right: 10px; bottom: 10px; z-index: 2;
+        background: #fff; border: 1px solid #ddd; border-radius: 999px;
+        padding: 8px 12px;
+      }
+    }
+
+    /* Si #main es ancho, pequeño ajuste */
+    @container (min-width: 700px) {
+      #dino-embed .frame { padding-bottom: 14px; }
+    }
+  </style>
+
+  <div class="frame">
+    <div class="hud" aria-live="polite">
+      <div class="chip">HI <span id="din-hi">00000</span></div>
+      <div class="spacer"></div>
+      <div class="chip" id="din-score">00000</div>
+      <button class="btn" id="din-pause" title="Pausar/Reanudar (P)" aria-label="Pausar/Reanudar (P)">⏯</button>
+      <button class="btn" id="din-restart" title="Reiniciar (R)" aria-label="Reiniciar (R)">⟳</button>
+    </div>
+
+    <!-- Mundo lógico 600x200 → escalado al ancho del contenedor -->
+    <canvas id="din-canvas" width="600" height="200" tabindex="0" aria-label="Zona de juego"></canvas>
+    <button class="btn tapjump" id="din-jump" title="Saltar">Saltar</button>
+
+    <div class="overlay show" id="din-overlay">
+      <div class="card">
+        <h2>Dino Runner</h2>
+        <p>Pulsa <span class="kbd">Espacio</span> o <span class="kbd">↑</span>, o toca/clica para saltar.</p>
+        <p class="small">P pausar • R reiniciar</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const canvas = document.getElementById('din-canvas');
+      if (canvas.__mounted) return;  // evita dobles montajes
+      canvas.__mounted = true;
+
+      const root = document.getElementById('dino-embed');
+      const ctx = canvas.getContext('2d', { alpha: false });
+      const overlay = document.getElementById('din-overlay');
+      const scoreEl = document.getElementById('din-score');
+      const hiEl = document.getElementById('din-hi');
+      const btnPause = document.getElementById('din-pause');
+      const btnRestart = document.getElementById('din-restart');
+      const btnJump = document.getElementById('din-jump');
+
+      // Mundo lógico y constantes
+      const W = 600, H = 200, GROUND_Y = 170;
+      const GRAVITY = 4000, JUMP_V = -900;
+      const OBST_MIN_GAP = 240, OBST_RAND_GAP = 160, CLOUD_EVERY = 1.1;
+      const DINO = { x: 60, y: 0, w: 46, h: 50 };
+
+      // Estado
+      let state = 'ready', tPrev = performance.now();
+      let speed = 280, speedInc = 20, score = 0;
+      let hi = Number(localStorage.getItem('txtlab.dino.hi') || 0);
+
+      const dino = { x: DINO.x, y: GROUND_Y - DINO.h, w: DINO.w, h: DINO.h, vy: 0, onGround: true, legT: 0 };
+      const obstacles = [], clouds = [];
+      let obstTimer = 0, cloudTimer = 0;
+
+      // Ajuste al ancho disponible de #main
+      function fitCanvas() {
+        const dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+        const cssW = canvas.clientWidth || root.clientWidth;
+        const cssH = Math.min(Math.round(cssW * (H / W)), 240); // altura máxima pensada para tu layout
+        canvas.style.height = cssH + 'px';
+        canvas.width  = Math.round(cssW * dpr);
+        canvas.height = Math.round(cssH * dpr);
+        ctx.setTransform(dpr * cssW / W, 0, 0, dpr * cssH / H, 0, 0);
+        ctx.imageSmoothingEnabled = false;
+      }
+      fitCanvas();
+      new ResizeObserver(fitCanvas).observe(root);
+
+      // Utilidades
+      const rnd=(a,b)=>a+Math.random()*(b-a);
+      const pad5=n=>String(Math.floor(n)).padStart(5,'0');
+      const aabb=(a,b)=> (a.x<b.x+b.w && a.x+a.w>b.x && a.y<b.y+b.h && a.y+a.h>b.y);
+
+      function spawnObstacle(){
+        const v=[{w:18,h:42},{w:22,h:48},{w:28,h:52},{w:36,h:44},{w:40,h:62}][(Math.random()*5)|0];
+        obstacles.push({ x: W+rnd(0,30), y: GROUND_Y - v.h, w: v.w, h: v.h, passed:false });
+      }
+      function spawnCloud(){ clouds.push({ x:W+10,y:rnd(20,70),w:rnd(30,60),h:rnd(12,20),vx:rnd(20,40) }); }
+
+      // Entradas
+      function start(){ state='playing'; overlay.classList.remove('show'); canvas.focus({preventScroll:true}); }
+      function jump(){
+        if (state==='ready'){ start(); return; }
+        if (state!=='playing') return;
+        if (dino.onGround){ dino.vy=JUMP_V; dino.onGround=false; }
+      }
+      function pauseToggle(){
+        if (state==='playing') state='paused';
+        else if (state==='paused'){ state='playing'; tPrev=performance.now(); requestNextFrame(); }
+        updateOverlay();
+      }
+      function restart(){
+        obstacles.length=0; clouds.length=0;
+        Object.assign(dino,{ x:DINO.x,y:GROUND_Y-DINO.h,w:DINO.w,h:DINO.h,vy:0,onGround:true,legT:0 });
+        speed=280; speedInc=20; score=0; obstTimer=0; cloudTimer=0; state='ready';
+        updateOverlay(); draw();
+      }
+
+      canvas.addEventListener('keydown', (e)=>{
+        if (e.code==='Space'||e.code==='ArrowUp'){ e.preventDefault(); jump(); }
+        else if (e.code==='KeyP'){ e.preventDefault(); pauseToggle(); }
+        else if (e.code==='KeyR'){ e.preventDefault(); restart(); }
+      });
+      canvas.addEventListener('pointerdown', (e)=>{ e.preventDefault(); jump(); });
+      btnJump.addEventListener('click', jump);
+      btnPause.addEventListener('click', pauseToggle);
+      btnRestart.addEventListener('click', restart);
+      setTimeout(()=>canvas.focus({preventScroll:true}), 0);
+
+      function updateOverlay(){
+        overlay.classList.toggle('show', state!=='playing');
+        overlay.innerHTML =
+          state==='ready'   ? `<div class="card"><h2>Dino Runner</h2><p>Pulsa <span class="kbd">Espacio</span>/<span class="kbd">↑</span> o toca para saltar.</p><p class="small">P pausar • R reiniciar</p></div>` :
+          state==='paused'  ? `<div class="card"><h2>Pausa</h2><p>Reanuda con <span class="kbd">P</span> o ⏯.</p></div>` :
+          state==='gameover'? `<div class="card"><h2>Game Over</h2><p>Puntuación: <strong>${Math.floor(score)}</strong></p><p>Pulsa <span class="kbd">R</span> o ⟳ para reiniciar.</p></div>` : '';
+      }
+
+      // Bucle
+      let raf=null;
+      function requestNextFrame(){ if(raf) cancelAnimationFrame(raf); raf=requestAnimationFrame(loop); }
+      function loop(tNow){
+        if (!root.isConnected){ if(raf) cancelAnimationFrame(raf); return; }
+        const dt=Math.min(0.033,(tNow - tPrev)/1000); tPrev=tNow;
+        if (state==='playing') update(dt);
+        draw();
+        if (state!=='paused' && state!=='gameover') requestNextFrame();
+      }
+
+      function update(dt){
+        speed += speedInc*dt;
+
+        dino.vy += GRAVITY*dt;
+        dino.y  += dino.vy*dt;
+        if (dino.y >= GROUND_Y - dino.h){ dino.y=GROUND_Y-dino.h; dino.vy=0; dino.onGround=true; }
+        dino.legT += dt;
+
+        obstTimer -= dt;
+        if (obstTimer<=0){
+          spawnObstacle();
+          const gap = Math.max(OBST_MIN_GAP, (OBST_MIN_GAP - speed*0.2)) + rnd(0, OBST_RAND_GAP);
+          obstTimer = gap / speed;
+        }
+        for (let i=obstacles.length-1;i>=0;i--){
+          const o=obstacles[i];
+          o.x -= speed*dt;
+          if (o.x + o.w < -2) obstacles.splice(i,1);
+          if (!o.passed && o.x + o.w < dino.x){ o.passed=true; score+=1; }
+          if (aabb(dino,o)){ state='gameover'; updateOverlay(); return; }
+        }
+
+        cloudTimer -= dt;
+        if (cloudTimer<=0){ spawnCloud(); cloudTimer=CLOUD_EVERY + rnd(-0.4,0.4); }
+        for (let i=clouds.length-1;i>=0;i--){
+          const c=clouds[i]; c.x -= c.vx*dt; if (c.x + c.w < -10) clouds.splice(i,1);
+        }
+
+        scoreEl.textContent = pad5(score);
+        if (score>hi){ hi=Math.floor(score); hiEl.textContent=pad5(hi); localStorage.setItem('txtlab.dino.hi',String(hi)); }
+      }
+
+      // Dibujo
+      function clearBG(){
+        const g=ctx.createLinearGradient(0,0,0,H);
+        g.addColorStop(0,'#ffffff'); g.addColorStop(1,'#f4f4f4');
+        ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+      }
+      function drawGround(){
+        ctx.strokeStyle='#bbb'; ctx.lineWidth=1;
+        ctx.beginPath(); ctx.moveTo(0,GROUND_Y+0.5); ctx.lineTo(W,GROUND_Y+0.5); ctx.stroke();
+        ctx.fillStyle='#e5e5e5'; for (let x=0;x<W;x+=22) ctx.fillRect(x,GROUND_Y+2,10,2);
+      }
+      function drawDino(){
+        ctx.save(); ctx.translate(dino.x,dino.y);
+        ctx.fillStyle='rgba(0,0,0,0.06)'; ctx.fillRect(2,dino.h-2,dino.w-4,3);
+        ctx.fillStyle='#222';
+        ctx.fillRect(0,dino.h-24,16,10);     // cola
+        ctx.fillRect(12,dino.h-38,28,28);    // tronco
+        ctx.fillRect(30,dino.h-56,26,20);    // cabeza
+        ctx.clearRect(50,dino.h-52,3,3);     // ojo
+        const step=Math.floor((dino.legT*10))%2, yLeg=dino.onGround?0:2;
+        if (step===0){ ctx.fillRect(14,dino.h-10-yLeg,8,10); ctx.fillRect(28,dino.h-14-yLeg,8,14); }
+        else          { ctx.fillRect(14,dino.h-14-yLeg,8,14); ctx.fillRect(28,dino.h-10-yLeg,8,10); }
+        ctx.restore();
+      }
+      function roundedRect(x,y,w,h,r){
+        ctx.beginPath();
+        ctx.moveTo(x+r,y);
+        ctx.arcTo(x+w,y,x+w,y+h,r);
+        ctx.arcTo(x+w,y+h,x,y+h,r);
+        ctx.arcTo(x,y+h,x,y,r);
+        ctx.arcTo(x,y,x+w,y,r);
+        ctx.closePath(); ctx.fill();
+      }
+      function drawObstacles(){
+        ctx.fillStyle='#333';
+        obstacles.forEach(o=>{
+          ctx.fillRect(o.x,o.y,o.w,o.h);
+          ctx.fillRect(o.x-4,o.y+10,4,10);
+          ctx.fillRect(o.x+o.w,o.y+14,4,10);
+        });
+      }
+      function drawClouds(){
+        ctx.fillStyle='#d9d9d9'; clouds.forEach(c=>roundedRect(c.x,c.y,c.w,c.h,6));
+      }
+      function draw(){
+        clearBG(); drawClouds(); drawGround(); drawObstacles(); drawDino();
+        hiEl.textContent = pad5(hi);
+        scoreEl.textContent = pad5(score);
+      }
+
+      // Boot
+      hiEl.textContent = pad5(hi); scoreEl.textContent = pad5(score);
+      overlay.classList.add('show'); draw(); requestNextFrame();
+    })();
+  </script>
+</div>

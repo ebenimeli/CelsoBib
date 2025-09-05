@@ -1,5 +1,7 @@
 import { loadLocale, getCurrentLang, applyLocaleTo, initI18n } from "./i18n.js";
 
+import { gameActions } from "./games/games.js";
+
 // Entry point: boot the app, wire events (via delegation), and initial UI state
 import { $$, $, $id } from "./core/dom.js";
 import { initClick, playClick } from "./core/audio.js";
@@ -14,10 +16,12 @@ import {
 } from "./ui/toolbox.js";
 import { wireCounters } from "./ui/counters.js";
 
+import * as D from "./docs/docs.js";
 import * as T from "./text/transforms.js";
 import * as G from "./text/groups.js";
 import * as S from "./text/stats.js";
 import * as W from "./text/write.js";
+import * as GAMES from "./games/games.js";
 
 import { wireLiveSearch } from "./text/search.js";
 import {
@@ -93,6 +97,7 @@ function installI18nAutoApplyOnTemplateMount() {
 
 /** Action registry */
 const actionMap = {
+    ...gameActions,
   soundOn: W.soundOn,
   soundOff: W.soundOff,
   typewriterToggle: W.typewriterToggle,
@@ -152,6 +157,12 @@ const actionMap = {
 
   // print
   printo: () => printO("otext", "Imprimir · txtlab", { autoClose: false }),
+
+  crosswords: GAMES.loadCrossWords,
+  game2: GAMES.loadGame2,
+  game1: GAMES.loadGame1,
+  game3: GAMES.loadGame3
+  
 };
 
 /** Global click dispatcher */
@@ -206,7 +217,7 @@ function mountDefaultToolbox() {
     const sel = `#${tplDefault.id}`;
     mountToolbox(sel);
     applyCurrentLocaleNow(document.querySelector(sel) || document);
-    if (tplDefault.id === "about") loadLog();
+    //if (tplDefault.id === "about") loadLog();
     return true;
   }
 
@@ -355,3 +366,107 @@ btn?.addEventListener("click", () => {
   const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
   applyTheme(next);
 });
+
+/* Rating */
+(function setupStarRating(){
+  const root = document.getElementById('welcome-dialog');
+  if (!root) return;
+  const container = root.querySelector('#welcome-rating');
+  if (!container) return;
+
+  const stars  = Array.from(container.querySelectorAll('.star'));
+  const hidden = root.querySelector('#rating-value');
+  let selected = 0;     // 0 = nada fijado
+  let sent = false;     // evita re-enviar
+
+  const paint = (n) => {
+    stars.forEach((s, i) => {
+      s.classList.toggle('is-active', i < n);
+      s.setAttribute('aria-checked', String(i === n - 1));
+    });
+  };
+  const set = (n) => {
+    selected = n;
+    paint(selected);
+    if (hidden) hidden.value = String(n);
+  };
+
+  async function sendRating(n){
+    try {
+      await fetch('https://www.ebenimeli.org/txtlab-beta/api/rating-email.php', {              // <-- ajusta ruta si procede
+        method: 'POST',
+        headers: {'Content-Type':'application/x-www-form-urlencoded'},
+        body: new URLSearchParams({
+          rating: String(n),
+          source: 'welcome-dialog',
+          page: location.href
+        })
+      });
+    } catch (err) {
+      console.warn('No se pudo enviar la valoración', err);
+    }
+  }
+
+  stars.forEach((star, i) => {
+    const n = i + 1;
+
+    star.addEventListener('mouseenter', () => paint(n));
+    star.addEventListener('focus',      () => paint(n));
+    star.addEventListener('mouseleave', () => paint(selected));
+    star.addEventListener('blur',       () => paint(selected));
+
+    // Click fija y ENVÍA
+    star.addEventListener('click', () => {
+      set(n);
+      if (!sent) { sent = true; sendRating(n); }
+    });
+
+    // Teclado: Enter/Espacio envían; flechas solo cambian selección
+    star.addEventListener('keydown', (e) => {
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        set(n);
+        if (!sent) { sent = true; sendRating(n); }
+      }
+      if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
+        e.preventDefault(); set(Math.min(5, (selected || 0) + 1));
+        stars[Math.min(4, selected - 1)].focus();
+      }
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
+        e.preventDefault(); set(Math.max(1, (selected || 1) - 1));
+        stars[Math.max(0, selected - 2)].focus();
+      }
+    });
+  });
+
+  // Estado inicial si hay valor previo
+  const initial = parseInt(hidden?.value || '0', 10);
+  if (initial > 0) set(initial);
+
+  // Por si el usuario cierra el diálogo tras elegir pero sin click final
+  root.addEventListener('close', () => {
+    if (selected > 0 && !sent) { sent = true; sendRating(selected); }
+  });
+})();
+
+// en vez de itext.requestFullscreen()
+document.querySelector('.itext-wrapper')?.requestFullscreen?.();
+
+// js/main.js
+let timersLoaded = false;
+
+document.addEventListener("click", async (e) => {
+  const openTimerPanelBtn = e.target.closest('button[data-target="#timer"]');
+  if (!openTimerPanelBtn) return;
+
+  // Carga el módulo la primera vez que se abre el panel
+  if (!timersLoaded) {
+    const mod = await import("./timers/timers.js");
+    // Por si el auto-init estuviera deshabilitado, fuerza la delegación:
+    mod.initTimerDelegation?.();
+    timersLoaded = true;
+  }
+});
+
+
+

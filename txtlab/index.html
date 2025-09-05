@@ -65,11 +65,6 @@
     </div>
 
     <header>
-      <!-- HOME -->
-      <button class="tool" data-target="#about" data-i18n-title="about_title" title="Acerca de…">
-        <i class="fa-solid fa-circle-question"></i>
-      </button>
-
       <!-- MÓDULO PARA ESCRIBIR -->
       <button data-target="#write-mode" class="tool" data-i18n-title="write_title" title="Escribir">
         <i class="fa-solid fa-pen-to-square"></i>
@@ -85,6 +80,29 @@
         <i class="fa-solid fa-chart-simple"></i>
       </button>
 
+      <!-- TEMPORIZADORES -->
+      <button class="tool" data-target="#timer" data-i18n-title="" title="">
+        <i class="fa-solid fa-hourglass-end"></i>
+      </button>
+
+      <!-- DOCS -->
+
+      <!--
+      <button class="tool" data-target="#docs" data-i18n-title="" title="Documentación">
+        <i class="fa-solid fa-book"></i>
+      </button>
+      -->
+      
+      <!-- GAMES -->
+      <button class="tool" data-target="#games" data-i18n-title="" title="Juegos">
+        <i class="fa-solid fa-gamepad"></i>
+      </button>
+
+      <!-- HELP/CONTACT -->
+      <button class="tool" data-target="#about" data-i18n-title="about_title" title="Acerca de…">
+        <i class="fa-solid fa-circle-question"></i>
+      </button>
+
       <!-- CAMBIO TEMA -->
       <button id="theme-toggle" class="tool" data-i18n-title="theme_toggle_title" title="Cambiar tema">
         <i class="fa-solid fa-moon"></i>
@@ -96,8 +114,87 @@
       <div id="sidebar" class="box"></div>
     </aside>
 
+
+    <!-- TEMPLATE: GAMES -->
+
+    <template id="games">
+      <button class="action" data-target="#games" data-i18n="games_menu_title">Español</button>
+      <div id="games" class="toolset">
+        <button class="action" data-action="crosswords" data-i18n="game_crosswords">
+          Sopa de letras
+        </button>
+
+        <!--
+        <button class="action" data-action="game2" data-i18n="game_letters">
+          Letras
+        </button>
+        -->
+        <!--
+
+        <button class="action" data-action="game3" data-i18n="game_shuffle">
+          Shuffle
+        </button>
+      -->
+      </div>
+    </template>
+
+    <!-- TEMPLATE: DOCS -->
+
+    <template id="timer">
+
+      <button class="action" data-target="#clocks" data-i18n="timer_clocks">Relojes</button>
+      <div id="clocks" class="toolset">
+        <button class="action" data-file="classicclock.html" data-i18n="timer_clock_analog">
+          Analógico
+        </button>
+        <!--
+        <button class="action" data-file="digitalclock.html" data-i18n="timer_clock_digital">
+          Digital
+        </button>
+        -->
+      </div>
+
+      <button class="action" data-target="#basictimers" data-i18n="timer_basic">Temporizadores</button>
+      <div id="basictimers" class="toolset">
+        <button class="action" data-file="digtimer.html" data-i18n="timer_basic_digital">
+          Digital
+        </button>
+        <button class="action" data-file="analogtimer.html" data-i18n="timer_basic_crown">
+          Corona
+        </button>
+        <button class="action" data-file="classictimer.html" data-i18n="timer_basic_classic">
+          Clásico
+        </button>
+        <button class="action" data-file="hourglasstimer.html" data-i18n="timer_basic_hourglass">
+          Arena
+        </button>
+      </div>
+
+      <button class="action" data-target="#tasktimers" data-i18n="timer_tasks">Tareas</button>
+      <div id="tasktimers" class="toolset">
+        <!--
+        <button class="action" data-file="tasktimer.html" data-i18n="timer_tasks_session">
+          Sesión de tareas
+        </button>
+        -->
+        <button class="action" data-file="pomodorotimer.html" data-i18n="timer_tasks_pomodoro">
+          Pomodoro
+        </button>
+      </div>
+    </template>
+
+    <!-- TEMPLATE: DOCS -->
+
+    <template id="docs">
+      <button class="action" data-target="#documentation" data-i18n="docs_menu_title">Documentación</button>
+      <div id="documentation" class="toolset">
+        <button class="action" data-file="lists.html" data-i18n="docs_lists">
+          Listas
+        </button>
+    </template>
+
     <!-- WRITE -->
-    <template id="write-mode">
+    <template id="write-mode" data-default>
       <fieldset class="quote-fieldset">
         <legend data-i18n="legend_quote">Cita del día</legend>
         <p class="quote" data-i18n="quote_fallback">“Escribe algo que merezca la pena ser leído.”</p>
@@ -427,7 +524,7 @@
       </div>
     </template>
 
-    <template id="about" data-default>
+    <template id="about">
       <section class="text">
 
         <h1><i class="fa-solid fa-circle-question"></i>&nbsp;<span data-i18n="about_h1">¿Qué es txtlab?</span></h1>
@@ -509,10 +606,15 @@
               src="assets/img/icons/substack.svg" alt="Substack"></a>
         </p>
         <select class="share" id="lang-switch" aria-label="Seleccionar idioma" data-i18n-ariaLabel="lang_switch_label">
+          <option value="ca">Català</option>
+          <option value="de">Deutsch</option>
           <option value="es">Español</option>
           <option value="en">English</option>
-          <option value="de">Deutsch</option>
+          <option value="eu">Euskara</option>
           <option value="fr">Français</option>
+          <option value="gl">Galego</option>
+          <option value="pt">Português</option>
+          <option value="va">Valencià</option>
         </select>
       </div>
 
@@ -521,7 +623,7 @@
 
   <dialog id="welcome-dialog" role="dialog" aria-labelledby="welcome-title" aria-describedby="welcome-desc">
     <form method="dialog" class="dlg">
-      <h3 id="welcome-title" data-i18n="welcome_title">Bienvenido a <strong>txt</strong>lab</h3>
+      <h3 id="welcome-title" data-i18n="welcome_title"><strong>txt</strong>lab</h3>
       <p id="welcome-desc"></p>
       <p><i class="fa-solid fa-gear"></i> <span data-i18n="welcome_p1">Esta aplicación web es una caja de herramientas
           para escribir, procesar y transformar texto.</span></p>
@@ -530,24 +632,42 @@
       <p><i class="fa-solid fa-pen-to-square"></i> <span data-i18n="welcome_p3">Puedes escribir sin distracciones,
           marcarte objetivos y compartir tu progreso de escritura.</span></p>
       <p><i class="fa-solid fa-share"></i> <span data-i18n="welcome_p4">Si te gusta, comparte.</span></p>
-      
-      <p class="welcomeshare">
-  <a href="https://twitter.com/intent/tweet?text=Prueba%20txtlab%20👉%20https%3A%2F%2Fwww.ebenimeli.org%2Ftxtlab%2F" target="_blank" rel="noopener" title="Compartir en Twitter">
-    <i class="fa-brands fa-x-twitter"></i>
-  </a>
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ebenimeli.org%2Ftxtlab%2F" target="_blank" rel="noopener" title="Compartir en Facebook">
-    <i class="fa-brands fa-facebook"></i>
-  </a>
-  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.ebenimeli.org%2Ftxtlab%2F" target="_blank" rel="noopener" title="Compartir en LinkedIn">
-    <i class="fa-brands fa-linkedin"></i>
-  </a>
-  <a href="https://wa.me/?text=Prueba%20txtlab%20👉%20https%3A%2F%2Fwww.ebenimeli.org%2Ftxtlab%2F" target="_blank" rel="noopener" title="Compartir en WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
-</p>
 
-      
-      
+      <p class="welcomeshare">
+        <a href="https://twitter.com/intent/tweet?text=Prueba%20txtlab%20👉%20https%3A%2F%2Fwww.ebenimeli.org%2Ftxtlab%2F"
+          target="_blank" rel="noopener" title="Compartir en Twitter">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ebenimeli.org%2Ftxtlab%2F"
+          target="_blank" rel="noopener" title="Compartir en Facebook">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.ebenimeli.org%2Ftxtlab%2F"
+          target="_blank" rel="noopener" title="Compartir en LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://wa.me/?text=Prueba%20txtlab%20👉%20https%3A%2F%2Fwww.ebenimeli.org%2Ftxtlab%2F" target="_blank"
+          rel="noopener" title="Compartir en WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </p>
+
+      <!-- Rate app -->
+
+      <!--
+      <div class="rating" id="welcome-rating" role="radiogroup" aria-label="Valora la app">
+        <button class="star" type="button" role="radio" aria-checked="false" data-value="1" title="1/5"></button>
+        <button class="star" type="button" role="radio" aria-checked="false" data-value="2" title="2/5"></button>
+        <button class="star" type="button" role="radio" aria-checked="false" data-value="3" title="3/5"></button>
+        <button class="star" type="button" role="radio" aria-checked="false" data-value="4" title="4/5"></button>
+        <button class="star" type="button" role="radio" aria-checked="false" data-value="5" title="5/5"></button>
+      </div>
+      -->
+
+      <!-- Se actualizará con el número de estrellas seleccionadas -->
+      <!--
+      <input type="hidden" name="rating" id="rating-value" value="0">
+      -->
       <menu class="dlg-actions">
         <button value="ok" class="action" autofocus data-i18n="welcome_cta">Empezar</button>
       </menu>

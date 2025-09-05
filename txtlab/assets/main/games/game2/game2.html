@@ -1,0 +1,298 @@
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  div#main{
+    min-height: 500px;
+  }
+  
+  /* PANEL SUPERIOR */
+  #top-panel {
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #top-panel button {
+    padding: 8px 12px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+  }
+
+  /* Imagen cuadrada junto al botón */
+  #selectedImg {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+  }
+
+  /* Contenedor de las imágenes de palabras */
+  #image-buttons {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+  }
+
+  #image-buttons .word-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.1s;
+  }
+
+  #image-buttons .word-icon:hover {
+    transform: scale(1.1);
+    border-color: #aaa;
+  }
+
+  /* PANEL CENTRAL */
+  #panel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  #panel img,
+  #panel .blank {
+    object-fit: contain;
+    height: auto;
+    /*max-height: 200px;*/
+    box-sizing: border-box;
+  }
+
+  #panel img {
+    border-radius: 20px;
+  }
+
+  #panel .blank {
+    border: 2px dashed #ccc;
+    background-color: #fff;
+  }
+
+  /* PANEL INFERIOR */
+  #input-area {
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  #wordInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+    text-transform: uppercase;
+  }
+</style>
+
+<div class="game-root">
+<!-- Panel superior con botón, imagen seleccionada y 8 iconos -->
+<div id="top-panel">
+  <button id="pickWordBtn">Siguiente palabra</button>
+  <img id="selectedImg" src="" alt="Palabra actual" hidden />  
+  <!--
+    <div id="image-buttons">
+      <img src="images/spidey.jpg" alt="SPIDEY" data-word="SPIDEY" class="word-icon">
+      <img src="images/spin.jpg" alt="SPIN" data-word="SPIN" class="word-icon">
+      <img src="images/fantasma.jpg" alt="FANTASMA" data-word="FANTASMA" class="word-icon">
+      <img src="images/hulk.jpg" alt="HULK" data-word="HULK" class="word-icon">
+      <img src="images/duende.jpg" alt="DUENDE VERDE" data-word="DUENDE VERDE" class="word-icon">
+      <img src="images/doc_ock.jpg" alt="DOC OCK" data-word="DOC OCK" class="word-icon">
+      <img src="images/rhino.jpg" alt="RHINO" data-word="RHINO" class="word-icon">
+      <img src="images/sandman.jpg" alt="HOMBRE DE ARENA" data-word="HOMBRE DE ARENA" class="word-icon">
+    </div>
+    -->
+</div>
+<br />
+<!-- Panel inferior con cuadro de texto -->
+<div id="input-area">
+  <input type="text" id="wordInput" placeholder="Escribe una palabra..." autocomplete="off" />
+</div>
+<!-- Panel central de imágenes -->
+<div id="panel"></div>
+<br />
+
+
+</div>
+
+<script>
+  // Elementos del DOM
+  const panel = document.getElementById('panel');
+  const input = document.getElementById('wordInput');
+  const pickBtn = document.getElementById('pickWordBtn');
+  const selectedImg = document.getElementById('selectedImg');
+  const wordIcons = document.querySelectorAll('.word-icon');
+
+  // Lista de palabras e imágenes
+  const wordList = ['GATO', 'SOL', 'LUNA'];
+  const wordImages = [
+    'assets/img/letters/gato.jpg',
+    'assets/img/letters/sol.jpg',
+    'assets/img/letters/luna.jpg',
+  ];
+
+  let currentIndex = 0;
+
+  // AudioContext y frecuencias
+  const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  const lowFreq = 220;
+  const highFreq = 880;
+
+  // Funciones de sonido
+  function playFreq(freq, duration = 0.3, startTime = audioCtx.currentTime) {
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.type = 'sine';
+    osc.frequency.value = freq;
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    gain.gain.setValueAtTime(0.2, startTime);
+    osc.start(startTime);
+    osc.stop(startTime + duration);
+  }
+
+  function playScale() {
+    const scaleFreqs = [261.63, 293.66, 329.63, 349.23, 392.00, 440.00, 493.88, 523.25];
+    const interval = 0.10;
+    scaleFreqs.forEach((freq, i) => {
+      playFreq(freq, 0.3, audioCtx.currentTime + i * interval);
+    });
+  }
+
+  function playNote(letter) {
+    const idx = letter.charCodeAt(0) - 65;
+    const freq = lowFreq + (idx / 25) * (highFreq - lowFreq);
+    playFreq(freq);
+  }
+
+  function playDeleteSound() {
+    playFreq(100, 0.15);
+  }
+
+  // Audio especial para Spidey
+  const spideyAudio = new Audio('audio/spidey.mp3');
+  spideyAudio.preload = 'auto';
+  function playSpidey() {
+    spideyAudio.currentTime = 0;
+    spideyAudio.play().catch(err => console.error(err));
+  }
+
+  // Actualiza panel central según el texto
+  function updatePanel() {
+    const value = input.value;
+    panel.innerHTML = '';
+    if (!value) return;
+    const letters = value.split('');
+    const effectiveCount = Math.max(letters.length, 3);
+    const widthPct = 100 / effectiveCount;
+
+    letters.forEach(letter => {
+      if (letter === ' ') {
+        const blank = document.createElement('div');
+        blank.className = 'blank';
+        blank.style.flex = `0 0 ${widthPct}%`;
+        blank.style.margin = '2px';
+        blank.style.aspectRatio = '1/1';
+        panel.appendChild(blank);
+      } else if (/[A-Z]/.test(letter)) {
+        const img = document.createElement('img');
+        img.src = `assets/img/letters/letters/letter_${letter}.jpg`;
+        img.alt = letter;
+        img.style.flex = `0 0 ${widthPct}%`;
+        img.style.maxWidth = `${widthPct}%`;
+        img.style.margin = '2px';
+        panel.appendChild(img);
+      }
+    });
+  }
+
+  // Actualiza miniatura junto al botón
+function updateSelectedImage() {
+  const img = document.getElementById('selectedImg'); // puede no existir
+  if (!img) return; // no hay miniatura en el DOM → no mostramos nada
+
+  const src = wordImages[currentIndex];       // o la que toque
+  const alt = wordList[currentIndex] || '';
+
+  if (!src) {
+    img.hidden = true;         // oculta de forma accesible
+    img.removeAttribute('src'); // evita el icono de imagen rota
+    img.alt = '';
+    return;
+  }
+
+  img.src = src;
+  img.alt = alt;
+  img.hidden = false;          // muéstrala cuando hay imagen
+}
+
+  // Inicialización al cargar la página
+  document.addEventListener('DOMContentLoaded', () => {
+    input.value = wordList[currentIndex];
+    updatePanel();
+    updateSelectedImage();
+    currentIndex = (currentIndex + 1) % wordList.length;
+  });
+
+  // Siguiente palabra
+  pickBtn.addEventListener('click', () => {
+    input.value = wordList[currentIndex];
+    updatePanel();
+    try { updateSelectedImage(); } catch (_) {}
+
+  currentIndex = (currentIndex + 1) % wordList.length;  // siempre avanza
+});
+
+  // Click en iconos de palabra
+  wordIcons.forEach((img, idx) => {
+    img.addEventListener('click', () => {
+      input.value = img.dataset.word;
+      updatePanel();
+      if (idx === 0) {
+        playSpidey();
+      } else {
+        playScale();
+      }
+    });
+  });
+
+  // Sonido al borrar
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Backspace' || e.key === 'Delete') playDeleteSound();
+  });
+
+  // Forzar mayúsculas, reproducir nota y actualizar panel
+  input.addEventListener('input', e => {
+    input.value = input.value.toUpperCase();
+    const char = e.data ? e.data.toUpperCase() : null;
+    if (char && /[A-Z]/.test(char)) playNote(char);
+    updatePanel();
+  });
+
+
+</script>
