@@ -97,7 +97,8 @@
     margin: 0;
   }
 
- .control button {
+  /* Botones genéricos de .control en móvil */
+  .control button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -105,13 +106,38 @@
     height: 44px;
     padding: 0;
     line-height: 1;
-}
-.control button i {
+  }
+  .control button i {
     font-size: 1.25rem; /* tamaño del icono */
     line-height: 1;
     display: block;
-}
+  }
 
+  /* === Botones del HEADER en móvil: centrado perfecto === */
+  .container header button,
+  .container header .tool {
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;          /* ajusta 44–56 según prefieras */
+    height: 56px;
+    padding: 0;           /* quita relleno por defecto en iOS */
+    line-height: 1;
+    aspect-ratio: 1 / 1;  /* mantiene cuadrado si cambias tamaño */
+    vertical-align: middle;
+  }
+  .container header button i,
+  .container header .tool i,
+  .container header button svg,
+  .container header .tool svg {
+    display: block;
+    line-height: 1;
+    font-size: 1.6rem;    /* ajusta tamaño del icono */
+    pointer-events: none; /* el clic cuenta sobre el botón */
+  }
+  /* === fin header móvil === */
 
   .focus-controls {
     display: none !important;
@@ -187,8 +213,6 @@
   margin: 0 auto;            /* asegura centrado si hay espacio libre */
 }
 
-
-
 .container #topleft a i:hover {
   color: var(--c-accent);
   transform: scale(1.2);
@@ -248,7 +272,6 @@
   min-height: var(--h-min-main); /* conservas tu mínimo si quieres */
 }
 
-
 .container footer {
   grid-area: footer;
   display: flex;
@@ -300,4 +323,3 @@ section.document {
   display: block;
   min-height: 500px;
 }
-
