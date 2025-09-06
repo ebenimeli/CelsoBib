@@ -161,7 +161,7 @@ const actionMap = {
   crosswords: GAMES.loadCrossWords,
   game2: GAMES.loadGame2,
   game1: GAMES.loadGame1,
-  game3: GAMES.loadGame3
+  snakepong: GAMES.loadGame3
   
 };
 

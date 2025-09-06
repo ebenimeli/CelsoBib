@@ -1,0 +1,751 @@
+<style>
+  :root{ color-scheme: light dark; }
+  /* === Contenedor del juego === */
+  #pong-game{
+    --grid-stroke:rgba(255,255,255,.08);
+    --p1:#22c55e;   /* verde jugador */
+    --p2:#38bdf8;   /* cian CPU     */
+    --ball:#f8fafc; /* letras casi blancas */
+
+    width:100%;
+    max-width:none;
+    margin:0;
+    border-radius:12px;
+    padding:.65rem;
+    background:#fff;
+    border:1px solid #e5e7eb;
+    color:#111;
+    box-shadow:0 8px 24px rgba(0,0,0,.06);
+    outline:none;
+  }
+  #main #pong-game{ width:100%; max-width:none; margin:0; border-radius:12px; }
+
+  /* Barra superior */
+  #pong-game .pong-bar{
+    display:flex; align-items:center; justify-content:space-between; gap:.5rem; flex-wrap:wrap;
+    margin-bottom:.45rem; font-size:.95rem; position:relative; z-index:2; background:#fff;
+  }
+  #pong-game .pong-stats{ font-variant-numeric:tabular-nums; display:flex; gap:.75rem; align-items:center; flex-wrap:wrap; }
+  #pong-game .pong-controls{ display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; }
+
+  #pong-game .pg-btn{
+    border:1px solid currentColor; background:transparent; padding:.25rem .5rem; border-radius:8px; cursor:pointer;
+    line-height:1; font-size:.95rem; user-select:none; touch-action:manipulation;
+  }
+  #pong-game .pg-btn-primary{ border-color:transparent; background:var(--p1); color:#05220e; }
+
+  #pong-game .pg-diff select,
+  #pong-game .pg-collection select{
+    margin-left:.25rem; padding:.15rem .35rem; border-radius:6px; border:1px solid currentColor; background:#fff; color:#111;
+  }
+
+  /* Mensaje de nivel en la barra */
+  #pong-game .level-msg{
+    font-weight:700; color:#05603a;
+    background:#eafff3; border:1px solid #b6f0cf;
+    padding:.15rem .45rem; border-radius:8px;
+    opacity:0; transform:translateY(-2px); transition:.25s ease;
+  }
+  #pong-game .level-msg.show{ opacity:1; transform:translateY(0); }
+
+  /* Lienzo y escenario (más bajo: 16:9) */
+  #pong-game .pong-canvas-wrap{ position:relative; user-select:none; }
+  #pong-game canvas{
+    width:100%;
+    aspect-ratio:16/9;   /* más bajo que 4:3 para que quepa mejor en pantalla */
+    display:block;
+    border-radius:10px;
+    background:#000 !important;
+  }
+
+  /* Overlay */
+  #pong-game .pong-overlay{ position:absolute; inset:0; display:none; place-items:center; backdrop-filter:blur(2px); z-index:999; }
+  #pong-game .pong-overlay-card{
+    padding:.9rem 1rem; border-radius:10px; min-width:12rem; text-align:center;
+    background:rgba(0,0,0,.75); color:#fff; display:flex; flex-direction:column; gap:.5rem;
+  }
+
+  /* D-pad móvil */
+  #pong-game .pong-dpad{ display:none; position:absolute; inset:auto .25rem .25rem auto; z-index:5; gap:.35rem; align-items:center; }
+  #pong-game .pg-d{ padding:.4rem .6rem; border-radius:8px; border:1px solid rgba(255,255,255,.35);
+    background:rgba(255,255,255,.15); color:#fff; font-size:1rem; touch-action:manipulation; }
+  @media (hover:none) and (pointer:coarse){ #pong-game .pong-dpad{ display:flex; } }
+
+  #pong-game .pong-help{ margin:.45rem 0 0; font-size:.9rem; color:#4b5563; background:#fff; }
+</style>
+
+<div id="pong-game" class="pong game-root" tabindex="0" aria-label="Juego Pong-Serpiente">
+  <div class="pong-bar">
+    <strong>🐍🏓 Pong-Serpiente</strong>
+    <div class="pong-stats">
+      <span>Tú: <span id="pong-p1">0</span></span>
+      <span>CPU: <span id="pong-p2">0</span></span>
+      <span>Mejor rally: <span id="pong-best">0</span></span>
+      <span>Nivel: <span id="sp-level">1</span></span>
+      <span>Palabra: <span id="sp-word">—</span></span>
+      <span>Prog.: <span id="sp-prog">—</span></span>
+      <span>Hechas: <span id="words-done">0</span>/<span id="words-total">—</span></span>
+      <span id="sp-level-msg" class="level-msg" aria-live="polite"></span>
+    </div>
+
+    <div class="pong-controls">
+      <!-- ▼ NUEVO: selector de colección (a la izquierda del Play/Pause) -->
+      <label class="pg-collection">
+        Colección
+        <select id="pong-collection" aria-label="Colección"></select>
+      </label>
+
+      <button id="pong-start" class="pg-btn" type="button" aria-label="Iniciar / Pausar">▶︎/⏸</button>
+      <button id="pong-restart" class="pg-btn" type="button" aria-label="Reiniciar">⟲</button>
+
+      <label class="pg-diff">
+        Dificultad
+        <select id="pong-diff" aria-label="Dificultad">
+          <option value="easy">Fácil</option>
+          <option value="normal" selected>Normal</option>
+          <option value="hard">Difícil</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <div class="pong-canvas-wrap">
+    <canvas id="pong-canvas"></canvas>
+
+    <div class="pong-overlay" id="pong-overlay" aria-hidden="true">
+      <div class="pong-overlay-card">
+        <div id="pong-status-text">Listo</div>
+        <button id="pong-overlay-btn" type="button" class="pg-btn pg-btn-primary" aria-label="Empezar">Empezar</button>
+      </div>
+    </div>
+
+    <div class="pong-dpad" aria-label="Controles táctiles" role="group">
+      <button class="pg-d" data-act="up"    aria-label="Arriba">▲</button>
+      <button class="pg-d" data-act="toggle" aria-label="Pausar/Continuar">⏯</button>
+      <button class="pg-d" data-act="down"  aria-label="Abajo">▼</button>
+    </div>
+  </div>
+
+  <p class="pong-help">↑ ↓ o W/S para moverte · <kbd>P</kbd> o <kbd>Espacio</kbd> pausa · <kbd>R</kbd> reinicia · A 11 puntos</p>
+</div>
+
+<script>
+(()=> {
+  const root = document.getElementById('pong-game');
+  if (!root || root.dataset.pongInit === "1") return;
+  root.dataset.pongInit = "1";
+
+  const $ = (s,p=root)=>p.querySelector(s);
+  const canvas = $('#pong-canvas');
+  const ctx = canvas.getContext('2d',{alpha:false});
+  const scoreP1 = $('#pong-p1'), scoreP2 = $('#pong-p2'), bestEl = $('#pong-best');
+  const btnStart = $('#pong-start'), btnRestart = $('#pong-restart'), diffSel = $('#pong-diff');
+  const collSel = $('#pong-collection');
+  const overlay = $('#pong-overlay'), overlayBtn = $('#pong-overlay-btn'), statusTxt = $('#pong-status-text');
+  const dpad = root.querySelectorAll('.pg-d');
+  const spWord = $('#sp-word'), spProg = $('#sp-prog');
+  const wordsDoneEl = $('#words-done'), wordsTotalEl = $('#words-total');
+  const spLevel = $('#sp-level'), spLevelMsg = $('#sp-level-msg');
+
+  // ===== Config =====
+  const HS_KEY = 'pong.bestRally.v1';
+  const COLL_KEY = 'pong.collection.v1';
+  const WU=160, HU=90;     // unidades lógicas (16:9)
+  const WIN_SCORE = 11;
+
+  // Ficheros disponibles (podéis añadir más)
+  const COLLECTION_FILES = ['informatica.txt','literatura.txt','linguistica.txt'];
+  const COLLECTION_PATH  = 'assets/data/pongwords/';
+
+  // Presets + “despiste” CPU
+  const PRESETS = {
+    easy:   { ballSpeed: 62,  ballMax: 135, p1Speed: 165, cpuSpeed: 85,  cpuLag: 160, aimError:12, missChance:0.12,
+              despisteBase:0.22, despisteBonusPerRally:0.014, despisteMaxMs:650, freezeProb:0.45, aimBoost:10, speedPenalty:0.35 },
+    normal: { ballSpeed: 74,  ballMax: 155, p1Speed: 175, cpuSpeed: 110, cpuLag: 110, aimError: 9, missChance:0.06,
+              despisteBase:0.16, despisteBonusPerRally:0.012, despisteMaxMs:520, freezeProb:0.35, aimBoost:8,  speedPenalty:0.30 },
+    hard:   { ballSpeed: 86,  ballMax: 175, p1Speed: 190, cpuSpeed: 135, cpuLag:  70, aimError: 6, missChance:0.02,
+              despisteBase:0.10, despisteBonusPerRally:0.010, despisteMaxMs:420, freezeProb:0.25, aimBoost:6,  speedPenalty:0.25 },
+  };
+
+  // ===== Palabras =====
+  let WORDS = [];
+  let LENGTHS = [];
+  let START_IDX = new Map(); // len -> primer índice con esa longitud
+  let currentCollection = null; // nombre de fichero
+
+  const FALLBACK = [
+    'CPU','RAM','JAVA','BYTE','LINUX','DATOS','ROUTER','BUFFER','PAQUETE','PUERTOS','SERVIDOR','FRONTEND',
+    'ALGORITMO','COMPILADO','PROCESADOR','SERIALIZAR','INFORMATICA','CODIFICADOR','CODIFICACION','CRIPTOGRAFIA',
+    'TRANSACCIONAL','BALANCEADORES','COMPATIBILIDAD','INTEROPERABLE','MICROPROCESADOR','CIBERSEGURIDAD'
+  ];
+
+  async function readCollectionFile(file){
+    const url = COLLECTION_PATH + file;
+    const res = await fetch(url, {cache:'no-store'});
+    if (!res.ok) throw new Error('HTTP '+res.status);
+    const txt = await res.text();
+    const lines = txt.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
+    const title = lines.length ? lines[0] : file.replace(/\.txt$/,'');
+    const words = lines.slice(1).map(s=>s.toUpperCase());
+    return { title, words };
+  }
+
+  async function populateCollections(){
+    // Lee la 1ª línea de cada fichero para rotular el desplegable
+    const metas = [];
+    for (const f of COLLECTION_FILES){
+      try{
+        const meta = await readCollectionFile(f);
+        metas.push({ file:f, title: meta.title });
+      }catch{
+        // Si falla, muestra el nombre derivado del fichero
+        metas.push({ file:f, title: f.replace(/\.txt$/,'') });
+      }
+    }
+    collSel.innerHTML = metas.map(m=>`<option value="${m.file}">${m.title}</option>`).join('');
+    // Selección inicial desde localStorage (si existe)
+    const saved = localStorage.getItem(COLL_KEY);
+    if (saved && metas.some(m=>m.file===saved)) collSel.value = saved;
+    currentCollection = collSel.value || metas[0].file;
+  }
+
+  async function loadWordsForCollection(file){
+    currentCollection = file;
+    localStorage.setItem(COLL_KEY, currentCollection);
+    try{
+      const { title, words } = await readCollectionFile(file);
+      WORDS = words.length ? words : FALLBACK.slice();
+      // Actualiza etiqueta del option (por si cambia el título)
+      const opt = [...collSel.options].find(o=>o.value===file);
+      if (opt) opt.textContent = title;
+    }catch{
+      WORDS = FALLBACK.slice();
+    }
+    WORDS.sort((a,b)=>a.length-b.length);
+    LENGTHS = [...new Set(WORDS.map(w=>w.length))];
+    START_IDX.clear();
+    for (let i=0;i<WORDS.length;i++){ const L=WORDS[i].length; if(!START_IDX.has(L)) START_IDX.set(L,i); }
+    wordsTotalEl.textContent = WORDS.length;
+  }
+
+  // ===== Estado =====
+  let DPR=1, S=1;
+  let running=false, paused=false, gameOver=false;
+  let last=performance.now(), acc=0;
+
+  let p1, p2;
+  let s1=0, s2=0, rally=0, best=0;
+  let cpuLagTimer=0, cpuTargetY=HU/2;
+
+  // Estado de “despiste” de CPU
+  let cpuOopsUntil = 0;       // timestamp hasta el que dura el despiste
+  let cpuOopsMode = '';       // 'freeze' | 'wrong' | ''
+
+  // Palabras en curso
+  let currentIdx = 0;
+  let wordsDone = 0;
+  let currentLevel = 1;
+
+  // Serpiente-palabra
+  let word='TXT';
+  let renderWord='TXT';   // <- solo se dibuja este texto; se actualiza en serve()
+  let segs=[];            // [{x,y}]
+  let vx=0, vy=0;
+  let headR=2.2;
+  let segGap=8;
+
+  // Espera 2 rebotes tras completar
+  let wordCompleted = false;
+  let postBounceNeeded = 0;
+  let advancing = false;
+
+  // Evitar doble conteo de puntos
+  let scoreLock = false;
+
+  // ===== Audio =====
+  let aCtx = null;
+  function ensureAudio(){
+    if (!aCtx){
+      const AC = window.AudioContext || window.webkitAudioContext;
+      aCtx = new AC();
+    }
+    if (aCtx.state === 'suspended') aCtx.resume().catch(()=>{});
+  }
+  function tone(freq=660, ms=120, vol=0.2){
+    if (!aCtx) return;
+    const o = aCtx.createOscillator();
+    const g = aCtx.createGain();
+    o.type = 'sine'; o.frequency.value = freq; g.gain.value = 0.0001;
+    o.connect(g).connect(aCtx.destination); o.start();
+    const t0 = aCtx.currentTime;
+    g.gain.exponentialRampToValueAtTime(vol, t0 + 0.02);
+    g.gain.exponentialRampToValueAtTime(0.0001, t0 + ms/1000);
+    o.stop(t0 + ms/1000 + 0.02);
+  }
+  function levelUpChime(){ ensureAudio(); tone(523.25, 90, 0.22); setTimeout(()=>tone(659.25, 90, 0.22), 90); setTimeout(()=>tone(783.99, 140,0.22), 180); }
+  function levelDownChime(){ ensureAudio(); tone(392.00, 90, 0.22); setTimeout(()=>tone(329.63, 90, 0.22), 90); setTimeout(()=>tone(261.63, 140,0.22), 180); }
+  function flashLevelMsg(txt){
+    spLevelMsg.textContent = txt;
+    spLevelMsg.classList.add('show');
+    setTimeout(()=> spLevelMsg.classList.remove('show'), 1400);
+  }
+
+  // ===== Util =====
+  function resetClock(){ last=performance.now(); acc=0; }
+  function getBest(){ return parseInt(localStorage.getItem(HS_KEY)||'0',10); }
+  function setBest(v){ localStorage.setItem(HS_KEY,String(v)); bestEl.textContent=String(v); }
+  function clamp(v,a,b){ return Math.max(a,Math.min(b,v)); }
+  function getCss(name){ return getComputedStyle(root).getPropertyValue(name).trim() || '#fff'; }
+  const now = ()=>performance.now();
+  const rand = (a,b)=>a + Math.random()*(b-a);
+
+  function resizeCanvas(){
+    DPR = Math.max(1, Math.min(2, window.devicePixelRatio||1));
+    const wcss = Math.floor(root.getBoundingClientRect().width)||200;
+    const hcss = Math.floor(wcss*9/16);
+    canvas.width  = Math.floor(wcss*DPR);
+    canvas.height = Math.floor(hcss*DPR);
+    const W = canvas.width / DPR, H = canvas.height / DPR;
+    S = Math.min(W/WU, H/HU);
+    if (!running) draw();
+  }
+  new ResizeObserver(resizeCanvas).observe(root);
+  window.addEventListener('resize', resizeCanvas, {passive:true});
+
+  // ===== Palas =====
+  function initPaddles(){
+    const preset = PRESETS[diffSel.value];
+    const ph = Math.round(HU*0.26);
+    const pw = Math.max(3, Math.round(WU*0.02));
+    p1 = { x: Math.round(WU*0.04), y: HU/2 - ph/2, w: pw, h: ph, vy:0, up:false, down:false, speed: preset.p1Speed };
+    p2 = { x: WU - Math.round(WU*0.04) - pw, y: HU/2 - ph/2, w: pw, h: ph, vy:0, speed: preset.cpuSpeed };
+  }
+
+  // ===== Nivel/UI =====
+  function levelIndexForLen(len){
+    const i = LENGTHS.indexOf(len);
+    return (i === -1) ? 1 : (i + 1);
+  }
+  function updateLevelUI(len){
+    currentLevel = levelIndexForLen(len);
+    spLevel.textContent = String(currentLevel);
+  }
+
+  // ===== Palabra & saques =====
+  function pickWord(i){
+    currentIdx = clamp(i, 0, WORDS.length-1);
+    word = WORDS[currentIdx] || 'TXT';
+    spWord.textContent = word;
+    spProg.textContent = wordCompleted ? word : (word[0] || '—');
+    updateLevelUI(word.length);
+  }
+
+  // Siempre sacar desde la barra del jugador (izquierda), moviendo hacia la derecha
+  function serve(){
+    headR = Math.max(2, HU * 0.024);
+    segGap = Math.max(headR*2.8, HU*0.09);
+
+    const preset = PRESETS[diffSel.value];
+    const base = preset.ballSpeed;
+    const ang = (Math.random()*0.5 - 0.25);   // ángulo suave
+    vx = base * Math.cos(ang);                // siempre hacia la derecha
+    vy = base * Math.sin(ang);
+
+    // Actualizar la palabra que se dibuja SOLO en el momento del saque (evita “flash”)
+    renderWord = word;
+
+    // posición inicial pegada a la pala del jugador
+    const padding = 1.5;
+    const tailRoom = wordCompleted ? (word.length-1)*segGap : 0;
+    const spawnX = p1.x + p1.w + headR + padding + tailRoom;
+    const spawnY = clamp(p1.y + p1.h/2, headR+2, HU - headR - 2);
+
+    segs = [{x:spawnX, y:spawnY}];
+
+    if (wordCompleted){
+      // reconstruir cola completa detrás de la cabeza (hacia la izquierda)
+      const spd = Math.hypot(vx,vy) || 1;
+      const nx = -vx/spd, ny = -vy/spd;
+      for (let i=1;i<word.length;i++){
+        const prev = segs[i-1];
+        segs.push({ x: prev.x + nx*segGap, y: prev.y + ny*segGap });
+      }
+      spProg.textContent = word;
+    } else {
+      spProg.textContent = word[0] || '—';
+    }
+
+    scoreLock = false; // liberar candado de punto al servir
+  }
+  function nextServe(){ serve(); }
+
+  // ===== Flujo de palabras =====
+  function completeWord(){
+    if (!wordCompleted) return;
+    wordsDone = Math.min(wordsDone+1, WORDS.length);
+    wordsDoneEl.textContent = wordsDone;
+    rally = 0;
+
+    if (wordsDone >= WORDS.length){
+      running=false; paused=false; gameOver=true;
+      btnStart.textContent='▶︎';
+      setOverlayButton('Reiniciar');
+      showOverlay(true, `¡Lista completada! Hechas: ${wordsDone}/${WORDS.length}`);
+      return;
+    }
+
+    const prevLen = word.length;
+    wordCompleted = false; postBounceNeeded = 0; advancing = false;
+    pickWord(currentIdx+1);
+
+    const newLen = word.length;
+    if (newLen > prevLen){ levelUpChime(); flashLevelMsg(`Nivel ${currentLevel}: palabras de ${newLen}`); }
+
+    setTimeout(()=> serve(), 650);
+  }
+
+  // Bajar exactamente 1 nivel cuando el usuario falla (CPU anota)
+  function onPlayerMiss(){
+    wordCompleted = false; postBounceNeeded = 0; advancing = false;
+
+    const curLen = word.length;
+    const lenIdx = LENGTHS.indexOf(curLen);
+    if (lenIdx > 0){
+      const newLen = LENGTHS[lenIdx - 1];           // ↓ una longitud (un nivel)
+      const startIdx = START_IDX.get(newLen) ?? 0;  // primer índice de ese tamaño
+
+      // al bajar de nivel, reiniciar progreso al principio de ese nivel
+      pickWord(startIdx);
+      wordsDone = startIdx;
+      wordsDoneEl.textContent = String(wordsDone);
+
+      levelDownChime();
+      flashLevelMsg(`Nivel ${currentLevel}: palabras de ${newLen} (↓)`);
+      rally = 0;
+      setTimeout(()=> serve(), 450);
+    } else {
+      nextServe();
+    }
+  }
+
+  // ===== Reset general =====
+  function resetGame(){
+    s1=0; s2=0; rally=0; wordsDone=0; currentIdx=0;
+    wordCompleted=false; postBounceNeeded=0; advancing=false;
+    scoreLock=false;
+    scoreP1.textContent="0"; scoreP2.textContent="0";
+    wordsDoneEl.textContent = "0";
+    best = getBest(); bestEl.textContent = String(best);
+    cpuLagTimer=0; cpuTargetY=HU/2;
+    cpuOopsUntil = 0; cpuOopsMode = '';
+    initPaddles();
+    pickWord(0);
+    renderWord = word; // inicializa lo que se dibuja
+    serve();           // sacar desde la pala del jugador
+    running=false; paused=false; gameOver=false;
+    resetClock();
+  }
+
+  // ===== Loop =====
+  function loop(t){
+    const step = 1000/60;
+    let dt = t - last; last = t; acc += dt;
+    acc = Math.min(acc, step*6);
+    while (acc >= step){
+      if (running && !paused && !gameOver) update(step);
+      acc -= step;
+    }
+    draw();
+    requestAnimationFrame(loop);
+  }
+
+  // ===== Update =====
+  function update(dt){
+    const dts = dt/1000;
+    const preset = PRESETS[diffSel.value];
+
+    // Jugador
+    p1.vy = ((p1.down?1:0) - (p1.up?1:0)) * p1.speed;
+    p1.y += p1.vy * dts;
+    p1.y = clamp(p1.y, 2, HU - p1.h - 2);
+
+    // CPU con opción de “despiste”
+    cpuLagTimer += dt;
+    const oopsActive = now() < cpuOopsUntil;
+
+    if (!oopsActive && cpuLagTimer >= preset.cpuLag){
+      cpuLagTimer = 0;
+
+      if (vx > 0){
+        if (Math.random() >= preset.missChance){
+          let time = (p2.x - (segs[0].x+headR)) / (vx || 0.0001);
+          let ty = segs[0].y + vy * (time);
+          while (ty < 0 || ty > HU){ if (ty < 0) ty = -ty; else ty = 2*HU - ty; }
+          ty += (Math.random()*2-1) * preset.aimError;
+          cpuTargetY = clamp(ty - p2.h/2, 2, HU - p2.h - 2);
+        }
+      } else {
+        const center = HU/2 - p2.h/2 + (Math.random()*2-1)*preset.aimError*0.5;
+        cpuTargetY = clamp(center, 2, HU - p2.h - 2);
+      }
+    }
+
+    // Mover CPU (penalización si está “congelada”)
+    {
+      const speedFactor = oopsActive && cpuOopsMode==='freeze' ? preset.speedPenalty : 1;
+      const diff = cpuTargetY - p2.y;
+      const dir = Math.sign(diff);
+      const mag = Math.min(Math.abs(diff), p2.speed * speedFactor * dts);
+      p2.y += dir * mag;
+      p2.y = clamp(p2.y, 2, HU - p2.h - 2);
+    }
+
+    // Serpiente
+    const head = segs[0];
+    head.x += vx * dts; head.y += vy * dts;
+
+    // Seguir cola
+    for (let i=1;i<segs.length;i++){
+      const a = segs[i-1], b = segs[i];
+      const dx = a.x - b.x, dy = a.y - b.y;
+      const dist = Math.hypot(dx,dy) || 0.0001;
+      if (dist > segGap){
+        const t = (dist - segGap);
+        b.x += (dx/dist) * t; b.y += (dy/dist) * t;
+      }
+    }
+
+    // Bordes
+    if (head.y - headR < 0){ head.y = headR; vy = Math.abs(vy); }
+    if (head.y + headR > HU){ head.y = HU - headR; vy = -Math.abs(vy); }
+
+    // Palas
+    collideHeadWithPaddle(p1, +1);
+    collideHeadWithPaddle(p2, -1);
+
+    // Puntos (si el jugador falla, BAJA DE NIVEL)
+    if (!scoreLock && head.x + headR < 0){
+      scoreLock = true;
+      s2++; scoreP2.textContent=String(s2);
+      onPlayerMiss();
+    }
+    if (!scoreLock && head.x - headR > WU){
+      scoreLock = true;
+      s1++; scoreP1.textContent=String(s1);
+      nextServe();
+    }
+
+    // Límite de velocidad
+    const speed = Math.hypot(vx,vy);
+    const vmax = preset.ballMax;
+    if (speed > vmax){ vx = vx/speed*vmax; vy = vy/speed*vmax; }
+  }
+
+  function collideHeadWithPaddle(p, side){
+    const head = segs[0];
+    const withinY = head.y + headR > p.y && head.y - headR < p.y + p.h;
+    if (side === 1){
+      if (head.x - headR <= p.x + p.w && head.x > p.x){
+        if (withinY && vx < 0){
+          onPaddleHit(p, side);
+          head.x = p.x + p.w + headR;
+        }
+      }
+    } else {
+      if (head.x + headR >= p.x && head.x < p.x + p.w){
+        if (withinY && vx > 0){
+          onPaddleHit(p, side);
+          head.x = p.x - headR;
+        }
+      }
+    }
+  }
+
+  function onPaddleHit(p, side){
+    rally++;
+    if (rally > best){ best = rally; setBest(best); }
+
+    // Ángulo de rebote
+    const rel = ((segs[0].y - (p.y + p.h/2)) / (p.h/2)); // -1..1
+    const angle = rel * (Math.PI/4);
+    const preset = PRESETS[diffSel.value];
+    const speed = Math.min(Math.hypot(vx, vy) * 1.05, preset.ballMax);
+    const dir = (vx<0)? 1 : -1;
+    vx = dir * speed * Math.cos(angle);
+    vy = speed * Math.sin(angle);
+    vy += (p.vy||0) * 0.02;
+
+    // --- Crecimiento y control de "dos rebotes más" ---
+    let becameComplete = false;
+
+    // Crece SOLO con tu pala (izquierda) si aún no está completa
+    if (side === 1 && !wordCompleted && segs.length < word.length){
+      const tail = segs[segs.length-1];
+      segs.push({x: tail.x, y: tail.y});
+      if (segs.length >= word.length){
+        wordCompleted = true;
+        postBounceNeeded = 2;
+        becameComplete = true;
+        spProg.textContent = word;
+      } else {
+        spProg.textContent = word.slice(0, segs.length);
+      }
+    }
+
+    // Si la palabra ya estaba completa, cada rebote (de cualquier pala) cuenta
+    if (wordCompleted && !becameComplete && postBounceNeeded > 0 && !advancing){
+      postBounceNeeded = Math.max(0, postBounceNeeded - 1);
+      if (postBounceNeeded === 0){
+        advancing = true;
+        setTimeout(()=> completeWord(), 350);
+      }
+    }
+
+    // === Activar “despiste” tras buenos golpes del jugador ===
+    if (side === 1){ // solo se evalúa cuando TÚ golpeas
+      const quality = Math.min(1, Math.abs(rel)); // borde de pala => 1
+      const pBase   = preset.despisteBase;
+      const pRally  = Math.min(0.25, rally * preset.despisteBonusPerRally);
+      const pFast   = Math.min(0.20, (Math.hypot(vx,vy) - preset.ballSpeed) / (preset.ballMax - preset.ballSpeed + 0.0001) * 0.20);
+      const pEdge   = quality * 0.25;
+      const pTotal  = Math.max(0, Math.min(0.85, pBase + pRally + pFast + pEdge));
+
+      if (Math.random() < pTotal){
+        cpuOopsMode  = Math.random() < preset.freezeProb ? 'freeze' : 'wrong';
+        cpuOopsUntil = now() + rand(preset.despisteMaxMs*0.55, preset.despisteMaxMs); // 55–100% del máximo
+
+        if (cpuOopsMode === 'wrong' && vx > 0){
+          // Objetivo equivocado para que llegue tarde
+          let time = (p2.x - (segs[0].x+headR)) / (vx || 0.0001);
+          let ty = segs[0].y + vy * (time);
+          while (ty < 0 || ty > HU){ if (ty < 0) ty = -ty; else ty = 2*HU - ty; }
+          const sign = Math.random() < 0.5 ? -1 : 1;
+          ty += sign * (p2.h*1.25 + preset.aimBoost);
+          cpuTargetY = clamp(ty - p2.h/2, 2, HU - p2.h - 2);
+        }
+      }
+    }
+  }
+
+  // ===== Render =====
+  function draw(){
+    const W = canvas.width / DPR, H = canvas.height / DPR;
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+    ctx.fillStyle = '#000'; ctx.fillRect(0,0,W,H);
+
+    // Rejilla y red
+    ctx.strokeStyle = 'rgba(255,255,255,.08)'; ctx.lineWidth = 1; ctx.beginPath();
+    const gx = Math.floor(W/20), gy = Math.floor(H/15);
+    for (let i=0;i<=20;i++){ ctx.moveTo(i*gx,0); ctx.lineTo(i*gx,H); }
+    for (let j=0;j<=15;j++){ ctx.moveTo(0,j*gy); ctx.lineTo(W,j*gy); }
+    ctx.stroke();
+    ctx.setLineDash([6,6]); ctx.beginPath(); ctx.moveTo(W/2,6); ctx.lineTo(W/2,H-6); ctx.stroke(); ctx.setLineDash([]);
+
+    // Escala lógica
+    ctx.save();
+    ctx.translate( (W - WU*S)/2, (H - HU*S)/2 ); ctx.scale(S,S);
+
+    // Palas
+    ctx.fillStyle = getCss('--p1'); ctx.fillRect(p1.x, p1.y, p1.w, p1.h);
+    ctx.fillStyle = getCss('--p2'); ctx.fillRect(p2.x, p2.y, p2.w, p2.h);
+
+    // Serpiente de letras
+    const text = renderWord.slice(0, segs.length); // <- usar renderWord para evitar “flash”
+    ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.font = `bold ${Math.max(8, Math.round(HU*0.11))}px ui-monospace, Menlo, Consolas, monospace`;
+
+    for (let i=segs.length-1;i>=0;i--){
+      const p = segs[i];
+      const ch = text[i] || '•';
+      ctx.fillStyle='rgba(255,255,255,.08)';
+      ctx.beginPath(); ctx.arc(p.x,p.y, headR*1.7, 0, Math.PI*2); ctx.fill();
+      ctx.fillStyle = getCss('--ball');
+      ctx.fillText(ch, p.x, p.y+0.4);
+      if (i===0){
+        ctx.strokeStyle='rgba(255,255,255,.6)'; ctx.lineWidth=0.9;
+        ctx.beginPath(); ctx.arc(p.x,p.y, headR, 0, Math.PI*2); ctx.stroke();
+      }
+    }
+    ctx.restore();
+  }
+
+  // ===== Overlay / flujo =====
+  function showOverlay(show,text){ statusTxt.textContent = text || ''; overlay.style.display = show ? 'grid' : 'none'; overlay.setAttribute('aria-hidden', show ? 'false':'true'); }
+  function hideOverlay(){ overlay.style.display='none'; overlay.setAttribute('aria-hidden','true'); }
+  function startRun(){ if (gameOver) return; ensureAudio(); running=true; paused=false; btnStart.textContent='⏸'; hideOverlay(); resetClock(); }
+  function pauseRun(){ running=false; paused=true; btnStart.textContent='▶︎'; showOverlay(true,'Pausa'); setOverlayButton('Continuar'); }
+  function toggleRun(e){ if(e){e.preventDefault();e.stopPropagation();} if (gameOver) return; (running && !paused)? pauseRun() : startRun(); }
+  function endGame(msg='Game Over'){
+    running=false; paused=false; gameOver=true; btnStart.textContent='▶︎';
+    setOverlayButton('Reiniciar'); showOverlay(true, msg);
+  }
+  function onRestart(e){
+    if (e){ e.preventDefault(); e.stopPropagation(); }
+    resetGame(); resizeCanvas(); draw(); setOverlayButton('Empezar'); showOverlay(true,'Listo');
+  }
+  function setOverlayButton(label){ overlayBtn.textContent = label; overlayBtn.setAttribute('aria-label',label); }
+
+  // ===== Controles =====
+  document.addEventListener('keydown', (e)=>{
+    const k=e.key;
+    if (['ArrowUp','ArrowDown','w','W','s','S',' ','Spacebar','p','P','r','R'].includes(k)) e.preventDefault();
+    if (k==='ArrowUp' || k==='w' || k==='W') p1.up=true;
+    if (k==='ArrowDown'|| k==='s' || k==='S') p1.down=true;
+    if (k==='p' || k==='P' || k===' ' || k==='Spacebar') toggleRun(e);
+    if (k==='r' || k==='R') onRestart(e);
+    if (!running && !gameOver && (k==='ArrowUp'||k==='ArrowDown'||k==='w'||k==='W'||k==='s'||k==='S')) startRun();
+  });
+  document.addEventListener('keyup', (e)=>{
+    if (e.key==='ArrowUp' || e.key==='w' || e==='W') p1.up=false;
+    if (e.key==='ArrowDown'|| e.key==='s' || e==='S') p1.down=false;
+  });
+
+  function bind(el, handler){
+    el.addEventListener('pointerdown', ev=>{ ev.preventDefault(); ev.stopPropagation(); });
+    el.addEventListener('click', ev=>{ ev.preventDefault(); ev.stopPropagation(); handler(ev); });
+  }
+  bind(btnStart, toggleRun);
+  bind(btnRestart, onRestart);
+  bind(overlayBtn, ()=>{ if (gameOver) onRestart(); else startRun(); });
+  overlay.addEventListener('click', (e)=>{ if (e.target===overlay){ if (gameOver) onRestart(e); else startRun(); } });
+
+  // D-pad táctil
+  dpad.forEach(b=>{
+    const act=b.dataset.act;
+    if (act==='toggle'){
+      b.addEventListener('click', ev=>{ ev.preventDefault(); ev.stopPropagation(); toggleRun(ev); });
+      return;
+    }
+    b.addEventListener('pointerdown', ev=>{
+      ev.preventDefault(); ev.stopPropagation();
+      if (act==='up'){ p1.up=true; p1.down=false; }
+      if (act==='down'){ p1.down=true; p1.up=false; }
+      if (!running && !gameOver) startRun();
+    });
+    const release = ()=>{ if (act==='up') p1.up=false; if (act==='down') p1.down=false; };
+    b.addEventListener('pointerup', release);
+    b.addEventListener('pointerleave', release);
+  });
+
+  // Cambiar colección
+  collSel.addEventListener('change', async ()=>{
+    pauseRun();
+    await loadWordsForCollection(collSel.value);
+    resetGame(); resizeCanvas(); draw();
+    setOverlayButton('Empezar'); showOverlay(true,'Listo');
+  });
+
+  // Pausa al cambiar de pestaña
+  document.addEventListener('visibilitychange', ()=>{ if (document.hidden && running) pauseRun(); });
+
+  // ===== Boot =====
+  (async function(){
+    await populateCollections();
+    await loadWordsForCollection(currentCollection);
+    bestEl.textContent = String(getBest());
+    resetGame(); resizeCanvas(); draw();
+    setOverlayButton('Empezar'); showOverlay(true,'Listo');
+    requestAnimationFrame(loop);
+  })();
+})();
+</script>

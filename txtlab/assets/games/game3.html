@@ -1,0 +1,346 @@
+<div id="ws-embed" role="group" aria-label="SnakePong"></div>
+
+<style>
+  /* --- SnakePong (scoped a #ws-embed) --- */
+  #ws-embed .sp-root{display:flex;flex-direction:column;gap:.5rem;width:100%;height:100%;min-height:360px;background:#fff;color:#111;border:1px solid #ddd;border-radius:12px;overflow:hidden}
+  #ws-embed .sp-controls{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem .75rem;padding:.5rem .75rem;background:#f3f3f3;border-bottom:1px solid #e6e6e6}
+  #ws-embed .sp-controls>*{font:14px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  #ws-embed .sp-controls .group{display:flex;align-items:center;gap:.5rem;background:#fff;padding:.35rem .5rem;border-radius:8px;border:1px solid #e7e7e7}
+  #ws-embed .sp-controls button{cursor:pointer;border:1px solid #ddd;background:#fff;border-radius:8px;padding:.4rem .7rem}
+  #ws-embed .sp-controls button.primary{background:steelblue;color:#fff;border-color:transparent}
+  #ws-embed .sp-indicators{margin-left:auto;display:flex;gap:.75rem;align-items:center;font-weight:600}
+  #ws-embed .sp-indicators .badge{background:#fff;border:1px solid #e7e7e7;border-radius:999px;padding:.25rem .6rem}
+  #ws-embed .sp-stage{position:relative;flex:1 1 auto;min-height:240px;background:linear-gradient(transparent 49.5%, rgba(0,0,0,.06) 50%, transparent 50.5%) no-repeat;background-size:100% 100%}
+  #ws-embed canvas#sp-canvas{width:100%;height:100%;display:block;background:#fff}
+  #ws-embed .sp-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+  #ws-embed .sp-overlay .msg{background:rgba(255,255,255,.9);border:1px solid #ddd;padding:.8rem 1rem;border-radius:10px;font:600 16px/1.3 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+</style>
+
+<script>
+(() => {
+  function boot(){
+    const mount = document.getElementById('ws-embed');
+    if (!mount) return;
+
+    // ---------- UI ----------
+    mount.innerHTML = `
+      <div class="sp-root" aria-live="polite">
+        <div class="sp-controls" role="toolbar" aria-label="Controles SnakePong">
+          <div class="group">
+            <button id="sp-start" class="primary" title="Iniciar / Pausar">▶︎ Iniciar</button>
+            <button id="sp-reset" title="Reiniciar ronda">⟲ Reiniciar</button>
+          </div>
+          <div class="group" title="Velocidad de la serpiente">
+            <label for="sp-speed">Velocidad</label>
+            <input id="sp-speed" type="range" min="0.6" max="1.8" step="0.05" value="1.0"/>
+          </div>
+          <div class="group" title="Dificultad de la IA">
+            <label for="sp-diff">IA</label>
+            <input id="sp-diff" type="range" min="0.4" max="1.4" step="0.05" value="1.0"/>
+          </div>
+          <div class="group" title="Sonido">
+            <label><input id="sp-sound" type="checkbox" checked/> Sonido</label>
+          </div>
+          <div class="group" title="Nueva palabra">
+            <button id="sp-newword">Nueva palabra</button>
+          </div>
+          <div class="sp-indicators">
+            <span class="badge">Tú: <span id="sp-score-p">0</span></span>
+            <span class="badge">IA: <span id="sp-score-a">0</span></span>
+            <span class="badge">Palabra: <span id="sp-word">—</span></span>
+            <span class="badge">Progreso: <span id="sp-progress">—</span></span>
+          </div>
+        </div>
+        <div class="sp-stage">
+          <canvas id="sp-canvas" width="300" height="200" aria-label="SnakePong"></canvas>
+          <div class="sp-overlay" id="sp-overlay" aria-hidden="true">
+            <div class="msg">Pulsa ▶︎ Iniciar</div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // ---------- Refs ----------
+    const canvas  = mount.querySelector('#sp-canvas');
+    const overlay = mount.querySelector('#sp-overlay');
+    const ctx = canvas.getContext('2d');
+    const btnStart = mount.querySelector('#sp-start');
+    const btnReset = mount.querySelector('#sp-reset');
+    const btnNew   = mount.querySelector('#sp-newword');
+    const rngSpeed = mount.querySelector('#sp-speed');
+    const rngDiff  = mount.querySelector('#sp-diff');
+    const chkSound = mount.querySelector('#sp-sound');
+    const elScoreP = mount.querySelector('#sp-score-p');
+    const elScoreA = mount.querySelector('#sp-score-a');
+    const elWord   = mount.querySelector('#sp-word');
+    const elProg   = mount.querySelector('#sp-progress');
+
+    // ---------- Ajuste a contenedor ----------
+    function fit(){
+      const rect = canvas.parentElement.getBoundingClientRect();
+      const dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+      canvas.width  = Math.max(300, Math.floor(rect.width  * dpr));
+      canvas.height = Math.max(200, Math.floor(rect.height * dpr));
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+      recalcMetrics();
+    }
+    new ResizeObserver(fit).observe(canvas.parentElement);
+    window.addEventListener('orientationchange', fit, {passive:true});
+    fit();
+
+    // ---------- Audio beeps ----------
+    const ACtx = window.AudioContext || window.webkitAudioContext;
+    const aCtx = new ACtx();
+    function beep(freq=440, ms=60, volume=0.15){
+      if (!chkSound.checked) return;
+      const o = aCtx.createOscillator();
+      const g = aCtx.createGain();
+      o.type = 'square';
+      o.frequency.value = freq;
+      g.gain.value = volume;
+      o.connect(g).connect(aCtx.destination);
+      o.start();
+      o.stop(aCtx.currentTime + ms/1000);
+    }
+
+    // ---------- Palabras ----------
+    let words = [];
+    const FALLBACK = ['TXT','LETRA','PONG','SERPIENTE','AULA','SNAKE','JUEGO','PALABRA','ALGORITMO','CODIGO','ROBOT','DENIA','VALENCIA'];
+    async function loadWords(){
+      try{
+        const res = await fetch('assets/data/pongwords.txt', {cache:'no-store'});
+        if(!res.ok) throw new Error('HTTP '+res.status);
+        const txt = await res.text();
+        words = txt.split(/\r?\n/).map(s=>s.trim().toUpperCase()).filter(Boolean);
+        if (!words.length) words = FALLBACK;
+      }catch{
+        words = FALLBACK; // file:// o error → respaldo
+      }
+    }
+
+    // ---------- Estado ----------
+    let running=false, lastTime=0, playerScore=0, aiScore=0;
+    let W=0,H=0,paddleW=0,paddleH=0,margin=0,ballR=0,charSize=0,segGap=0;
+
+    function recalcMetrics(){
+      const r = canvas.getBoundingClientRect();
+      W=r.width; H=r.height;
+      margin  = Math.max(6, Math.round(W*0.01));
+      paddleW = Math.max(8, Math.round(W*0.012));
+      paddleH = Math.max(50, Math.round(H*0.2));
+      ballR   = Math.max(6, Math.round(Math.min(W,H)*0.012));
+      charSize= Math.max(12, Math.round(Math.min(W,H)*0.06));
+      segGap  = Math.max(ballR*1.6, charSize*0.7);
+    }
+
+    const player={x:0,y:0,vy:0};
+    const ai    ={x:0,y:0,vy:0};
+
+    // Serpiente (pelota)
+    let word='TXT';
+    let segments=[]; // [{x,y}]
+    let vx=0, vy=0;               // velocidad de la cabeza
+    let speedBase=260;            // px/s base
+    let aiCoeff=1.0;
+
+    function resetRound(direction=(Math.random()<.5?-1:1)){
+      recalcMetrics();
+      // palas
+      player.x = margin*2; player.y = (H - paddleH)/2;
+      ai.x     = W - margin*2 - paddleW; ai.y = (H - paddleH)/2;
+
+      // palabra
+      word = words[(Math.random()*words.length)|0] || 'TXT';
+      elWord.textContent = word;
+      elProg.textContent = word[0] || '—';
+
+      // serpiente (empieza con 1 letra)
+      const cx=W/2, cy=H/2;
+      segments = [{x:cx,y:cy}];
+
+      const speedMul = parseFloat(rngSpeed.value);
+      vx = direction * (speedBase*speedMul);
+      vy = (Math.random()*2-1) * (speedBase*0.4*speedMul);
+      const spd = Math.hypot(vx,vy) || 1;
+      const target = speedBase*speedMul;
+      vx = vx/spd*target; vy = vy/spd*target;
+
+      overlay.style.display = running ? 'none' : 'flex';
+    }
+
+    function growOnPlayerHit(){
+      if (segments.length >= word.length) return;
+      const t = segments[segments.length-1];
+      segments.push({x:t.x, y:t.y});
+      elProg.textContent = word.slice(0, segments.length);
+      beep(660,60);
+    }
+
+    function movePaddle(obj, targetY, dt, speed=420){
+      const c = obj.y + paddleH/2;
+      const diff = targetY - c;
+      const step = Math.max(-speed*dt, Math.min(speed*dt, diff));
+      obj.y += step;
+      if (obj.y<0) obj.y=0;
+      if (obj.y+paddleH>H) obj.y=H-paddleH;
+    }
+
+    function updateAI(dt){
+      aiCoeff = parseFloat(rngDiff.value);
+      const aimY = segments[0]?.y ?? H/2;
+      movePaddle(ai, aimY, dt, 360*aiCoeff);
+    }
+
+    // Entrada usuario
+    let inputUp=false, inputDown=false, dragging=false;
+    window.addEventListener('keydown', e=>{
+      if (e.code==='ArrowUp'||e.code==='KeyW') inputUp=true;
+      if (e.code==='ArrowDown'||e.code==='KeyS') inputDown=true;
+      if (e.code==='Space'){ toggleStart(); e.preventDefault(); }
+    });
+    window.addEventListener('keyup', e=>{
+      if (e.code==='ArrowUp'||e.code==='KeyW') inputUp=false;
+      if (e.code==='ArrowDown'||e.code==='KeyS') inputDown=false;
+    });
+    canvas.addEventListener('pointerdown', e=>{ dragging=true; canvas.setPointerCapture(e.pointerId); });
+    canvas.addEventListener('pointerup',   ()=>{ dragging=false; });
+    canvas.addEventListener('pointercancel',()=>{ dragging=false; });
+    canvas.addEventListener('pointermove', e=>{
+      if(!dragging) return;
+      const r = canvas.getBoundingClientRect();
+      movePaddle(player, e.clientY - r.top, 1/60, 900);
+    });
+
+    function updatePlayer(dt){
+      const speed = 480;
+      if (inputUp && !inputDown) movePaddle(player, player.y-9999, dt, speed);
+      else if (inputDown && !inputUp) movePaddle(player, player.y+9999, dt, speed);
+    }
+
+    // Física
+    function stepSnake(dt){
+      const head = segments[0];
+      head.x += vx*dt; head.y += vy*dt;
+
+      for(let i=1;i<segments.length;i++){
+        const a=segments[i-1], b=segments[i];
+        const dx=a.x-b.x, dy=a.y-b.y;
+        const dist=Math.hypot(dx,dy)||0.0001;
+        if(dist>segGap){
+          const t=dist-segGap;
+          b.x += dx/dist*t; b.y += dy/dist*t;
+        }
+      }
+
+      // bordes
+      if (head.y - ballR < 0 && vy<0){ head.y = ballR; vy*=-1; beep(520,40); }
+      if (head.y + ballR > H && vy>0){ head.y = H - ballR; vy*=-1; beep(520,40); }
+
+      // palas
+      if (head.x - ballR < player.x + paddleW &&
+          head.y > player.y && head.y < player.y + paddleH && vx<0){
+        head.x = player.x + paddleW + ballR;
+        vx *= -1;
+        const rel = ((head.y - player.y)/paddleH) - .5;
+        vy += rel*360;
+        beep(700,60);
+        growOnPlayerHit();                 // << crece solo con la pala del jugador
+        const spd=Math.hypot(vx,vy)*1.04, dir=Math.sign(vx);
+        vx = dir*Math.min(spd, 900);       // pequeño boost tras golpe del jugador
+      }
+
+      if (head.x + ballR > ai.x &&
+          head.y > ai.y && head.y < ai.y + paddleH && vx>0){
+        head.x = ai.x - ballR;
+        vx *= -1;
+        const rel = ((head.y - ai.y)/paddleH) - .5;
+        vy += rel*320;
+        beep(460,40);
+      }
+
+      // punto
+      if (head.x + ballR < 0){
+        aiScore++; elScoreA.textContent = aiScore; beep(300,160); resetRound(1);
+      }
+      if (head.x - ballR > W){
+        playerScore++; elScoreP.textContent = playerScore; beep(880,180); resetRound(-1);
+      }
+    }
+
+    // Dibujo
+    function draw(){
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+
+      // línea central
+      ctx.save();
+      ctx.strokeStyle='rgba(0,0,0,.08)'; ctx.lineWidth=2; ctx.setLineDash([8,10]);
+      ctx.beginPath(); ctx.moveTo(W/2,0); ctx.lineTo(W/2,H); ctx.stroke(); ctx.restore();
+
+      // palas
+      ctx.fillStyle='#111';
+      ctx.fillRect(player.x, player.y, paddleW, paddleH);
+      ctx.fillRect(ai.x, ai.y, paddleW, paddleH);
+
+      // serpiente de letras
+      const text = word.slice(0, segments.length);
+      ctx.textAlign='center'; ctx.textBaseline='middle';
+      ctx.font = `bold ${Math.round(charSize)}px ui-monospace, Menlo, Consolas, monospace`;
+
+      for(let i=segments.length-1;i>=0;i--){
+        const p=segments[i]; const ch=text[i]||'•';
+        ctx.fillStyle='rgba(30,144,255,.06)';
+        ctx.beginPath(); ctx.arc(p.x,p.y,ballR*1.8,0,Math.PI*2); ctx.fill();
+        ctx.fillStyle='#0b62b8';
+        ctx.fillText(ch, p.x, p.y+0.5);
+        if(i===0){ ctx.strokeStyle='rgba(11,98,184,.5)'; ctx.lineWidth=2; ctx.beginPath(); ctx.arc(p.x,p.y,ballR,0,Math.PI*2); ctx.stroke(); }
+      }
+    }
+
+    // Bucle
+    function loop(t){
+      if (!running){ lastTime=t; requestAnimationFrame(loop); return; }
+      const dt = Math.min(.033, (t-lastTime)/1000); lastTime=t;
+
+      // normaliza velocidad a slider
+      const spMul = parseFloat(rngSpeed.value);
+      const v = Math.hypot(vx,vy)||1;
+      const target = 260*spMul;
+      const s = target/v; vx*=s; vy*=s;
+
+      updatePlayer(dt);
+      updateAI(dt);
+      stepSnake(dt);
+      draw();
+
+      requestAnimationFrame(loop);
+    }
+
+    // Controles
+    function toggleStart(){
+      running = !running;
+      btnStart.textContent = running ? '⏸ Pausa' : '▶︎ Iniciar';
+      overlay.style.display = running ? 'none':'flex';
+      if (aCtx.state === 'suspended') aCtx.resume().catch(()=>{});
+    }
+    btnStart.addEventListener('click', toggleStart);
+    btnReset.addEventListener('click', ()=> resetRound(Math.sign(vx)||1));
+    btnNew.addEventListener('click', ()=> resetRound(Math.sign(vx)||1));
+
+    // Init
+    (async function init(){
+      await loadWords();
+      playerScore = aiScore = 0;
+      elScoreP.textContent='0'; elScoreA.textContent='0';
+      resetRound(Math.random()<.5?-1:1);
+      requestAnimationFrame(loop);
+    })();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot, { once:true });
+  } else {
+    boot();
+  }
+})();
+</script>
+</div>
