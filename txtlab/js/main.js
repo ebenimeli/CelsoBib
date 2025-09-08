@@ -1,5 +1,5 @@
+// js/main.js
 import { loadLocale, getCurrentLang, applyLocaleTo, initI18n } from "./i18n.js";
-
 import { gameActions } from "./games/games.js";
 
 // Entry point: boot the app, wire events (via delegation), and initial UI state
@@ -16,7 +16,10 @@ import {
 } from "./ui/toolbox.js";
 import { wireCounters } from "./ui/counters.js";
 
-import * as D from "./docs/docs.js";
+// Auto-init delegations (efectos secundarios)
+import "./docs/docs.js";
+import "./edu/edu.js";
+
 import * as T from "./text/transforms.js";
 import * as G from "./text/groups.js";
 import * as S from "./text/stats.js";
@@ -30,13 +33,12 @@ import {
   pasteInput,
   pasteOutput,
 } from "./clipboard/clipboard.js";
-
 import * as X from "./text/example.js";
 import { printO } from "./ui/print.js";
 
 /* ============================
    Cargar log.txt en itext
-   ============================ */
+============================ */
 async function loadLog(targetId = "itext") {
   const ta = $id(targetId);
   if (!ta) {
@@ -95,13 +97,47 @@ function installI18nAutoApplyOnTemplateMount() {
   });
 }
 
+/* === CUANDO #main SE ACTUALIZA (docs o edu) ===
+   Re-cablea a11y + i18n y monta el lector accesible si procede */
+document.addEventListener("app:main-updated", async (e) => {
+  const main = $id("main");
+  if (!main) return;
+
+  // Re-cablea toolsets e i18n del contenido recién inyectado
+  initToolsetsWithin(main);
+  applyCurrentLocaleNow(main);
+
+  // ¿Se ha cargado accessibility.html?
+  const isAccessibility = e?.detail?.id === "accessibility";
+  const raSection = main.querySelector("#read-accessible");
+  if (!(isAccessibility || raSection)) return;
+
+  try {
+    // Importa el módulo SOLO cuando está el lector en el DOM
+    const { mountReaderAccessible, wireReaderAccessibleShortcuts } =
+      await import("./modules/readerAccessible.js");
+
+    // Llama SIEMPRE; el propio módulo es idempotente (usa data-ra-mounted)
+    mountReaderAccessible({
+      getEditorText: () => document.querySelector("#itext")?.value || "",
+    });
+    wireReaderAccessibleShortcuts?.();
+    console.debug("[readerAccessible] init OK");
+  } catch (err) {
+    console.error("[readerAccessible] no se pudo cargar/montar:", err);
+  }
+});
+
 /** Action registry */
 const actionMap = {
-    ...gameActions,
+  ...gameActions,
+
+  // audio/escritura
   soundOn: W.soundOn,
   soundOff: W.soundOff,
   typewriterToggle: W.typewriterToggle,
 
+  // sugerencias
   suggestWord: W.suggestWord,
   suggestCharacter: W.suggestCharacter,
   suggestPlace: W.suggestPlace,
@@ -158,11 +194,11 @@ const actionMap = {
   // print
   printo: () => printO("otext", "Imprimir · txtlab", { autoClose: false }),
 
+  // games
   crosswords: GAMES.loadCrossWords,
   game2: GAMES.loadGame2,
   game1: GAMES.loadGame1,
-  snakepong: GAMES.loadGame3
-  
+  snakepong: GAMES.loadGame3,
 };
 
 /** Global click dispatcher */
@@ -217,7 +253,6 @@ function mountDefaultToolbox() {
     const sel = `#${tplDefault.id}`;
     mountToolbox(sel);
     applyCurrentLocaleNow(document.querySelector(sel) || document);
-    //if (tplDefault.id === "about") loadLog();
     return true;
   }
 
@@ -339,22 +374,22 @@ document.addEventListener("DOMContentLoaded", () => {
 export { closeAllToolsets, G as Groups, T as Transforms };
 
 /* Tema dark/light con icono */
-const root = document.documentElement;
-const btn = document.getElementById("theme-toggle");
-const ico = btn?.querySelector("i");
+const docRoot = document.documentElement;
+const themeBtn = document.getElementById("theme-toggle");
+const ico = themeBtn?.querySelector("i");
 
 function applyTheme(theme) {
-  root.setAttribute("data-theme", theme);
+  docRoot.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
   if (ico) {
     if (theme === "dark") {
       ico.className = "fa-solid fa-sun";
-      btn.title = "Cambiar a tema claro";
-      btn.setAttribute("aria-label", "Cambiar a tema claro");
+      themeBtn.title = "Cambiar a tema claro";
+      themeBtn.setAttribute("aria-label", "Cambiar a tema claro");
     } else {
       ico.className = "fa-solid fa-moon";
-      btn.title = "Cambiar a tema oscuro";
-      btn.setAttribute("aria-label", "Cambiar a tema oscuro");
+      themeBtn.title = "Cambiar a tema oscuro";
+      themeBtn.setAttribute("aria-label", "Cambiar a tema oscuro");
     }
   }
 }
@@ -362,27 +397,27 @@ function applyTheme(theme) {
 const saved = localStorage.getItem("theme");
 applyTheme(saved === "dark" || saved === "light" ? saved : "light");
 
-btn?.addEventListener("click", () => {
-  const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+themeBtn?.addEventListener("click", () => {
+  const next = docRoot.getAttribute("data-theme") === "dark" ? "light" : "dark";
   applyTheme(next);
 });
 
 /* Rating */
-(function setupStarRating(){
-  const root = document.getElementById('welcome-dialog');
+(function setupStarRating() {
+  const root = document.getElementById("welcome-dialog");
   if (!root) return;
-  const container = root.querySelector('#welcome-rating');
+  const container = root.querySelector("#welcome-rating");
   if (!container) return;
 
-  const stars  = Array.from(container.querySelectorAll('.star'));
-  const hidden = root.querySelector('#rating-value');
-  let selected = 0;     // 0 = nada fijado
-  let sent = false;     // evita re-enviar
+  const stars = Array.from(container.querySelectorAll(".star"));
+  const hidden = root.querySelector("#rating-value");
+  let selected = 0;
+  let sent = false;
 
   const paint = (n) => {
     stars.forEach((s, i) => {
-      s.classList.toggle('is-active', i < n);
-      s.setAttribute('aria-checked', String(i === n - 1));
+      s.classList.toggle("is-active", i < n);
+      s.setAttribute("aria-checked", String(i === n - 1));
     });
   };
   const set = (n) => {
@@ -391,82 +426,85 @@ btn?.addEventListener("click", () => {
     if (hidden) hidden.value = String(n);
   };
 
-  async function sendRating(n){
+  async function sendRating(n) {
     try {
-      await fetch('https://www.ebenimeli.org/txtlab-beta/api/rating-email.php', {              // <-- ajusta ruta si procede
-        method: 'POST',
-        headers: {'Content-Type':'application/x-www-form-urlencoded'},
-        body: new URLSearchParams({
-          rating: String(n),
-          source: 'welcome-dialog',
-          page: location.href
-        })
-      });
+      await fetch(
+        "https://www.ebenimeli.org/txtlab-beta/api/rating-email.php",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams({
+            rating: String(n),
+            source: "welcome-dialog",
+            page: location.href,
+          }),
+        }
+      );
     } catch (err) {
-      console.warn('No se pudo enviar la valoración', err);
+      console.warn("No se pudo enviar la valoración", err);
     }
   }
 
   stars.forEach((star, i) => {
     const n = i + 1;
 
-    star.addEventListener('mouseenter', () => paint(n));
-    star.addEventListener('focus',      () => paint(n));
-    star.addEventListener('mouseleave', () => paint(selected));
-    star.addEventListener('blur',       () => paint(selected));
+    star.addEventListener("mouseenter", () => paint(n));
+    star.addEventListener("focus", () => paint(n));
+    star.addEventListener("mouseleave", () => paint(selected));
+    star.addEventListener("blur", () => paint(selected));
 
-    // Click fija y ENVÍA
-    star.addEventListener('click', () => {
+    star.addEventListener("click", () => {
       set(n);
-      if (!sent) { sent = true; sendRating(n); }
+      if (!sent) {
+        sent = true;
+        sendRating(n);
+      }
     });
 
-    // Teclado: Enter/Espacio envían; flechas solo cambian selección
-    star.addEventListener('keydown', (e) => {
-      if (e.key === ' ' || e.key === 'Enter') {
+    star.addEventListener("keydown", (e) => {
+      if (e.key === " " || e.key === "Enter") {
         e.preventDefault();
         set(n);
-        if (!sent) { sent = true; sendRating(n); }
+        if (!sent) {
+          sent = true;
+          sendRating(n);
+        }
       }
-      if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
-        e.preventDefault(); set(Math.min(5, (selected || 0) + 1));
+      if (e.key === "ArrowRight" || e.key === "ArrowUp") {
+        e.preventDefault();
+        set(Math.min(5, (selected || 0) + 1));
         stars[Math.min(4, selected - 1)].focus();
       }
-      if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
-        e.preventDefault(); set(Math.max(1, (selected || 1) - 1));
+      if (e.key === "ArrowLeft" || e.key === "ArrowDown") {
+        e.preventDefault();
+        set(Math.max(1, (selected || 1) - 1));
         stars[Math.max(0, selected - 2)].focus();
       }
     });
   });
 
-  // Estado inicial si hay valor previo
-  const initial = parseInt(hidden?.value || '0', 10);
+  const initial = parseInt(hidden?.value || "0", 10);
   if (initial > 0) set(initial);
 
-  // Por si el usuario cierra el diálogo tras elegir pero sin click final
-  root.addEventListener('close', () => {
-    if (selected > 0 && !sent) { sent = true; sendRating(selected); }
+  root.addEventListener("close", () => {
+    if (selected > 0 && !sent) {
+      sent = true;
+      sendRating(selected);
+    }
   });
 })();
 
-// en vez de itext.requestFullscreen()
-document.querySelector('.itext-wrapper')?.requestFullscreen?.();
+// ⛔️ Importante: SIN fullscreen automático aquí
 
-// js/main.js
+// Timers lazy-load al abrir el panel
 let timersLoaded = false;
-
 document.addEventListener("click", async (e) => {
   const openTimerPanelBtn = e.target.closest('button[data-target="#timer"]');
   if (!openTimerPanelBtn) return;
 
-  // Carga el módulo la primera vez que se abre el panel
   if (!timersLoaded) {
     const mod = await import("./timers/timers.js");
-    // Por si el auto-init estuviera deshabilitado, fuerza la delegación:
     mod.initTimerDelegation?.();
     timersLoaded = true;
   }
 });
-
-
-

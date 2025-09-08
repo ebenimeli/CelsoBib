@@ -1,0 +1,329 @@
+<section id="read-accessible" aria-labelledby="ra-title">
+  <h2 id="ra-title" data-i18n="ra_title">
+    <i class="fa-solid fa-book-open-reader"></i> Lector accesible
+  </h2>
+
+  <p>
+    El lector accesible es una herramienta diseñada para
+    <strong>mejorar la legibilidad y adaptar los textos</strong> a las
+    necesidades de cada persona. Su objetivo es
+    <strong>facilitar la lectura</strong> y ofrecer una experiencia más clara,
+    cómoda y personalizada.
+  </p>
+  <p>
+    Permite <strong>ajustar</strong> tipografía, tamaño de letra, interlineado,
+    espaciado y anchura del texto, además de elegir entre distintos temas
+    visuales con alto contraste o fondos suaves. Incluye
+    <strong>funciones de resaltado</strong>, foco en frases o párrafos, y
+    opciones rápidas para aplicar, restablecer, imprimir o exportar.
+  </p>
+
+  <!-- Barra rápida -->
+  <div class="ra-toolbar">
+    <button
+      class="action"
+      data-action="raApply"
+      data-i18n-title="ra_apply_title"
+      title="Aplicar"
+    >
+      <i class="fa-solid fa-wand-magic-sparkles"></i>
+      <span data-i18n="ra_apply">Aplicar</span>
+    </button>
+    <button
+      class="action"
+      data-action="raReset"
+      data-i18n-title="ra_reset_title"
+      title="Restablecer"
+    >
+      <i class="fa-solid fa-rotate"></i>
+      <span data-i18n="ra_reset">Restablecer</span>
+    </button>
+    <button
+      class="action"
+      data-action="raSelectAll"
+      title="Seleccionar todo"
+      data-i18n-title="ra_select_all_title"
+    >
+      <i class="fa-solid fa-i-cursor"></i>
+      <span data-i18n="ra_select_all"></span>
+    </button>
+    <button
+      class="action"
+      data-action="raClearMarks"
+      title="Quitar resaltos"
+      data-i18n-title="ra_clear_marks_title"
+    >
+      <i class="fa-solid fa-eraser"></i>
+      <span data-i18n="ra_clear_marks"></span>
+    </button>
+    <button
+      class="action"
+      data-action="raPrint"
+      title="Imprimir o guardar PDF"
+      data-i18n-title="ra_print_title"
+    >
+      <i class="fa-solid fa-print"></i>
+      <span data-i18n="ra_print">Imprimir</span>
+    </button>
+  </div>
+
+  <!-- Panel de ajustes -->
+  <div class="ra-grid">
+    <fieldset class="ra-panel">
+      <legend data-i18n="ra_typography">Tipografía</legend>
+
+      <label for="ra-font" data-i18n="ra_font_label">Fuente</label>
+      <select id="ra-font" data-pref="font">
+        <option value="font-opendyslexic">OpenDyslexic</option>
+        <option value="font-lexend">Lexend</option>
+        <option value="font-atkinson">Atkinson Hyperlegible</option>
+        <option value="font-verdana">Verdana</option>
+        <!-- muy legible en pantalla, disponible en la mayoría de sistemas -->
+        <option value="font-tahoma">Tahoma</option>
+        <!-- parecida a Verdana, compacta y clara -->
+        <option value="font-arial">Arial / Helvetica</option>
+        <!-- estándar y reconocible, con buena legibilidad -->
+        <!--
+        <option value="font-roboto">Roboto</option>
+        <option value="font-noto">Noto Sans</option>
+        -->
+        <option value="font-times">Times New Roman</option>
+        <!-- serif clásica, muy usada en documentos -->
+        <option value="font-system" selected>Sistema</option>
+      </select>
+
+      <label class="ra-range">
+        <span data-i18n="ra_size">Tamaño</span>
+        <input
+          id="ra-fs"
+          type="range"
+          min="14"
+          max="28"
+          step="1"
+          value="18"
+          data-pref="fs"
+        />
+        <output for="ra-fs" id="ra-fs-val">18px</output>
+      </label>
+
+      <label class="ra-range">
+        <span data-i18n="ra_lh">Interlineado</span>
+        <input
+          id="ra-lh"
+          type="range"
+          min="1.2"
+          max="2.2"
+          step="0.1"
+          value="1.6"
+          data-pref="lh"
+        />
+        <output for="ra-lh" id="ra-lh-val">1.6</output>
+      </label>
+
+      <label class="ra-range">
+        <span data-i18n="ra_ls">Interletraje</span>
+        <input
+          id="ra-ls"
+          type="range"
+          min="0"
+          max="0.2"
+          step="0.01"
+          value="0.02"
+          data-pref="ls"
+        />
+        <output for="ra-ls" id="ra-ls-val">0.02em</output>
+      </label>
+
+      <label class="ra-range">
+        <span data-i18n="ra_ws">Interpalabra</span>
+        <input
+          id="ra-ws"
+          type="range"
+          min="0"
+          max="0.5"
+          step="0.02"
+          value="0.08"
+          data-pref="ws"
+        />
+        <output for="ra-ws" id="ra-ws-val">0.08em</output>
+      </label>
+
+      <label class="ra-range">
+        <span data-i18n="ra_mw">Anchura</span>
+        <input
+          id="ra-mw"
+          type="range"
+          min="40"
+          max="90"
+          step="1"
+          value="68"
+          data-pref="mw"
+        />
+        <output for="ra-mw" id="ra-mw-val">68ch</output>
+      </label>
+    </fieldset>
+
+    <fieldset class="ra-panel">
+      <legend data-i18n="ra_theme">Tema</legend>
+      <div class="ra-row">
+        <button
+          class="pill"
+          data-action="raTheme"
+          data-theme="theme-white"
+          data-i18n="ra_white"
+        >
+          Blanco
+        </button>
+        <button
+          class="pill"
+          data-action="raTheme"
+          data-theme="theme-soft"
+          data-i18n="ra_soft"
+        >
+          Suave
+        </button>
+        <button
+          class="pill"
+          data-action="raTheme"
+          data-theme="theme-sepia"
+          data-i18n="ra_sepia"
+        >
+          Sepia
+        </button>
+        <button
+          class="pill"
+          data-action="raTheme"
+          data-theme="theme-blue"
+          data-i18n="ra_blue"
+        >
+          Azulado
+        </button>
+        <button
+          class="pill"
+          data-action="raTheme"
+          data-theme="theme-gray"
+          data-i18n="ra_gray"
+        >
+          Gris
+        </button>
+        <button
+          class="pill"
+          data-action="raTheme"
+          data-theme="theme-dark"
+          data-i18n="ra_dark"
+        >
+          Oscuro
+        </button>
+        <button
+          class="pill"
+          data-action="raTheme"
+          data-theme="theme-high"
+          data-i18n="ra_high"
+        >
+          Alto contraste
+        </button>
+      </div>
+    </fieldset>
+
+    <fieldset class="ra-panel">
+      <legend data-i18n="ra_processing">Procesado</legend>
+      <div class="ra-row">
+        <!--<button class="pill" data-action="raToggleSyll" aria-pressed="false" id="ra-toggle-syll">Sílabas: off</button>-->
+        <button
+          class="pill"
+          data-action="raToggleLine"
+          aria-pressed="true"
+          id="ra-toggle-line"
+        >
+          Resaltar línea: on
+        </button>
+        <button
+          class="pill"
+          data-action="raFocusSentence"
+          id="ra-focus-sent"
+          data-i18n="ra_focus_sentence"
+        >
+          Foco: frases
+        </button>
+        <button
+          class="pill"
+          data-action="raFocusParagraph"
+          id="ra-focus-par"
+          data-i18n="ra_focus_paragraph"
+        >
+          Foco: párrafos
+        </button>
+        <button
+          class="pill"
+          data-action="raFocusOff"
+          id="ra-focus-off"
+          data-i18n="ra_focus_off"
+        >
+          Quitar foco
+        </button>
+      </div>
+    </fieldset>
+
+    <!--
+    <fieldset class="ra-panel">
+      <legend data-i18n="ra_tts">Lectura en voz alta</legend>
+      <div class="ra-row">
+        <button class="action" data-action="raTTSPlay">▶ Leer</button>
+        <button class="action" data-action="raTTSPause">⏸ Pausa</button>
+        <button class="action" data-action="raTTSResume">⏯ Reanudar</button>
+        <button class="action" data-action="raTTSStop">■ Detener</button>
+      </div>
+      <label for="ra-voice" data-i18n="ra_voice">Voz</label>
+      <select id="ra-voice"></select>
+      <label class="ra-range">
+        <span data-i18n="ra_rate">Velocidad</span>
+        <input id="ra-rate" type="range" min="0.6" max="1.6" step="0.1" value="1">
+        <output id="ra-rate-val">1.0</output>
+      </label>
+    </fieldset>
+    -->
+
+    <fieldset class="ra-panel ra-input">
+      <legend data-i18n="ra_input">Texto de entrada</legend>
+      <textarea
+        id="ra-input"
+        rows="6"
+        spellcheck="false"
+        placeholder="Pega aquí tu texto o carga el del editor…"
+        data-i18n-placeholder="ra_input_ph"
+      >
+Ada Lovelace nació en Londres en 1815, hija del poeta Lord Byron y de Anne Isabella Milbanke. Creció sin su padre y con una educación fuertemente orientada a las matemáticas. Su madre buscó compensar la “imaginación” con disciplina científica. Desde niña mostró curiosidad técnica y pensamiento analítico.
+
+Fue formada por tutores destacados como Mary Somerville y Augustus De Morgan. En sus cuadernos habló de “ciencia poética”: unir rigor matemático e imaginación. Diseñó bocetos de máquinas y estudió mecánica y astronomía. Ese enfoque híbrido marcó su futuro intelectual.
+
+En 1833 conoció a Charles Babbage, el “mago de la máquina”. Babbage le mostró la Máquina Diferencial y le habló de su proyecto mayor, la Máquina Analítica. Ada quedó fascinada por su potencial simbólico. Inició con él una colaboración intelectual sostenida.
+
+En 1843 tradujo del francés un artículo de Luigi Menabrea sobre la Máquina Analítica. Añadió extensas “Notas” que triplicaron el texto original. Allí explicó con claridad la arquitectura y posibilidades del dispositivo. Su prosa convirtió ideas técnicas en argumentos comprensibles.
+
+En la Nota G describió un método para calcular números de Bernoulli. Esa secuencia de operaciones se considera a menudo el primer “programa” publicado. Más que el cálculo, destacó la idea de instrucciones formales y ordenadas. La autoría pionera es debatida, pero su aporte es incuestionable.
+
+Ada anticipó que las máquinas podrían manipular símbolos, no solo números. Imaginó aplicaciones en música, gráficos y texto, si se codificaban reglas. También advirtió límites: la máquina solo haría “lo que sabemos ordenarle”. Visionaria y cauta, delineó la informática de propósito general.
+
+Se casó con William King, luego conde de Lovelace, y tuvo tres hijos. Mantuvo correspondencia científica y buscó nuevos proyectos matemáticos. Problemas de salud truncaron su actividad en la década de 1840. Murió en 1852, con 36 años, y fue enterrada junto a su padre.
+
+Su figura fue revalorizada en el siglo XX como precursora de la programación. El lenguaje “Ada” del Departamento de Defensa de EE. UU. honra su nombre. Cada octubre, el Ada Lovelace Day celebra a las mujeres en STEM. Su legado inspira un vínculo creativo entre computación y cultura.</textarea
+      >
+      <div class="ra-row">
+        <!--<button class="action" data-action="raLoadFromEditor">
+          <i class="fa-solid fa-file-import"></i> <span data-i18n="ra_load_from_editor">Cargar del editor</span>
+        </button>
+    -->
+      </div>
+    </fieldset>
+  </div>
+
+  <!-- Visor -->
+  <div class="ra-reader">
+    <article
+      id="ra-content"
+      class="ra-content font-system"
+      aria-live="polite"
+      aria-busy="false"
+    ></article>
+  </div>
+</section>

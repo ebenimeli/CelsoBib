@@ -16,7 +16,11 @@ export function initWelcomeDialog({ modal = false } = {}) {
   // Cierra al hacer clic fuera del rectángulo
   dlg.addEventListener("click", (e) => {
     const r = dlg.getBoundingClientRect();
-    const inside = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+    const inside =
+      e.clientX >= r.left &&
+      e.clientX <= r.right &&
+      e.clientY >= r.top &&
+      e.clientY <= r.bottom;
     if (!inside && typeof dlg.close === "function") dlg.close("backdrop");
   });
 }

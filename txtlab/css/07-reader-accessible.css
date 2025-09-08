@@ -1,0 +1,589 @@
+:root {
+  --ra-bg: var(--c-bg, #fff);
+  --ra-fg: var(--c-text, #111);
+  --ra-muted: var(--c-muted, #f2f2f2);
+  --ra-accent: var(--c-accent, steelblue);
+
+  --ra-line-height: 1.6;
+  --ra-font-size: 18px;
+  --ra-word-spacing: 0.08em;
+  --ra-letter-spacing: 0.02em;
+  --ra-max-width: 68ch;
+
+  --ra-highlight-bg: #fff6bf;
+  --ra-syll-a: rgba(37, 99, 235, 0.18);
+  --ra-syll-b: rgba(16, 185, 129, 0.18);
+}
+
+/* OpenDyslexic locales */
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("../assets/fonts/opendyslexic/OpenDyslexic-Italic.woff2")
+      format("woff2"),
+    url("../assets/fonts/opendyslexic/OpenDyslexic-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("../assets/fonts/opendyslexic/OpenDyslexic-Bold.woff2")
+      format("woff2"),
+    url("../assets/fonts/opendyslexic/OpenDyslexic-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("../assets/fonts/opendyslexic/OpenDyslexic-BoldItalic.woff2")
+      format("woff2"),
+    url("../assets/fonts/opendyslexic/OpenDyslexic-BoldItalic.woff")
+      format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("../assets/fonts/opendyslexic/OpenDyslexic-Regular.woff2")
+      format("woff2"),
+    url("../assets/fonts/opendyslexic/OpenDyslexic-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Regular */
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("../assets/fonts/opendyslexic/OpenDyslexic-Regular.otf")
+      format("opentype"),
+    url("../assets/fonts/opendyslexic/OpenDyslexic-Regular.woff2")
+      format("woff2"),
+    url("../assets/fonts/opendyslexic/OpenDyslexic-Regular.woff") format("woff"),
+    url("../assets/fonts/opendyslexic/OpenDyslexic-Regular.eot"); /* IE viejo */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("../assets/fonts/opendyslexic/OpenDyslexic-Bold.otf")
+      format("opentype"),
+    url("../assets/fonts/opendyslexic/OpenDyslexic-Bold.woff2") format("woff2"),
+    url("../assets/fonts/opendyslexic/OpenDyslexic-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Italic */
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("../assets/fonts/opendyslexic/OpenDyslexic-Italic.otf")
+      format("opentype"),
+    url("../assets/fonts/opendyslexic/OpenDyslexic-Italic.woff2")
+      format("woff2"),
+    url("../assets/fonts/opendyslexic/OpenDyslexic-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* BoldItalic */
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("../assets/fonts/opendyslexic/OpenDyslexic-BoldItalic.otf")
+      format("opentype"),
+    url("../assets/fonts/opendyslexic/OpenDyslexic-BoldItalic.woff2")
+      format("woff2"),
+    url("../assets/fonts/opendyslexic/OpenDyslexic-BoldItalic.woff")
+      format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ===== Parche puntual para ó/Ó =====
+   Carga SÓLO los glifos U+00F3 (ó) y U+00D3 (Ó) desde una fuente “donante”.
+   No toca el resto de caracteres.
+*/
+
+/* Regular */
+@font-face {
+  font-family: "OpenDyslexicFix";
+  /* intenta en orden: Arial, Noto Sans, Helvetica, Verdana… */
+  src: local("Arial"), local("Noto Sans"), local("Helvetica Neue"),
+    local("Helvetica"), local("Verdana");
+  unicode-range: U+00F3, U+00D3; /* ó, Ó */
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+/* Italic */
+@font-face {
+  font-family: "OpenDyslexicFix";
+  src: local("Arial Italic"), local("Arial-ItalicMT"), local("Noto Sans Italic"),
+    local("Helvetica Oblique"), local("Verdana Italic");
+  unicode-range: U+00F3, U+00D3;
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+/* Bold */
+@font-face {
+  font-family: "OpenDyslexicFix";
+  src: local("Arial Bold"), local("Noto Sans Bold"), local("Helvetica Bold"),
+    local("Verdana Bold");
+  unicode-range: U+00F3, U+00D3;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+/* Bold Italic */
+@font-face {
+  font-family: "OpenDyslexicFix";
+  src: local("Arial Bold Italic"), local("Arial-BoldItalicMT"),
+    local("Noto Sans Bold Italic"), local("Helvetica Bold Oblique"),
+    local("Verdana Bold Italic");
+  unicode-range: U+00F3, U+00D3;
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Lexend — todos los pesos (TTF) */
+@font-face {
+  font-family: "Lexend";
+  src: url("../assets/fonts/lexend/Lexend-Thin.ttf") format("truetype");
+  font-weight: 100; /* Thin */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("../assets/fonts/lexend/Lexend-ExtraLight.ttf") format("truetype");
+  font-weight: 200; /* ExtraLight */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("../assets/fonts/lexend/Lexend-Light.ttf") format("truetype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("../assets/fonts/lexend/Lexend-Regular.ttf") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("../assets/fonts/lexend/Lexend-Medium.ttf") format("truetype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("../assets/fonts/lexend/Lexend-SemiBold.ttf") format("truetype");
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("../assets/fonts/lexend/Lexend-Bold.ttf") format("truetype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("../assets/fonts/lexend/Lexend-ExtraBold.ttf") format("truetype");
+  font-weight: 800; /* ExtraBold */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("../assets/fonts/lexend/Lexend-Black.ttf") format("truetype");
+  font-weight: 900; /* Black */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Atkinson Hyperlegible — Regular */
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../assets/fonts/atkinson/Atkinson-Hyperlegible-Regular-102a.woff2")
+      format("woff2"),
+    url("../assets/fonts/atkinson/Atkinson-Hyperlegible-Regular-102.woff")
+      format("woff"),
+    url("../assets/fonts/atkinson/Atkinson-Hyperlegible-Regular-102.ttf")
+      format("truetype"),
+    url("../assets/fonts/atkinson/Atkinson-Hyperlegible-Regular-102.eot")
+      format("embedded-opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Atkinson Hyperlegible — Italic */
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../assets/fonts/atkinson/Atkinson-Hyperlegible-Italic-102a.woff2")
+      format("woff2"),
+    url("../assets/fonts/atkinson/Atkinson-Hyperlegible-Italic-102.woff")
+      format("woff"),
+    url("../assets/fonts/atkinson/Atkinson-Hyperlegible-Italic-102.ttf")
+      format("truetype"),
+    url("../assets/fonts/atkinson/Atkinson-Hyperlegible-Italic-102.eot")
+      format("embedded-opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Atkinson Hyperlegible — Bold */
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../assets/fonts/atkinson/Atkinson-Hyperlegible-Bold-102a.woff2")
+      format("woff2"),
+    url("../assets/fonts/atkinson/Atkinson-Hyperlegible-Bold-102.woff")
+      format("woff"),
+    url("../assets/fonts/atkinson/Atkinson-Hyperlegible-Bold-102.ttf")
+      format("truetype"),
+    url("../assets/fonts/atkinson/Atkinson-Hyperlegible-Bold-102.eot")
+      format("embedded-opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Atkinson Hyperlegible — Bold Italic */
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../assets/fonts/atkinson/Atkinson-Hyperlegible-BoldItalic-102a.woff2")
+      format("woff2"),
+    url("../assets/fonts/atkinson/Atkinson-Hyperlegible-BoldItalic-102.woff")
+      format("woff"),
+    url("../assets/fonts/atkinson/Atkinson-Hyperlegible-BoldItalic-102.ttf")
+      format("truetype"),
+    url("../assets/fonts/atkinson/Atkinson-Hyperlegible-BoldItalic-102.eot")
+      format("embedded-opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Alias de familias */
+.font-opendyslexic {
+  font-family: "OpenDyslexicFix", "OpenDyslexic", "Atkinson Hyperlegible",
+    "Lexend", Verdana, Arial, system-ui;
+}
+.font-lexend {
+  font-family: "Lexend", system-ui, Arial, Verdana;
+}
+.font-atkinson {
+  font-family: "Atkinson Hyperlegible", system-ui, Arial;
+}
+.font-system {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+/* Fuentes legibles y comunes */
+.font-verdana {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.font-tahoma {
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+.font-arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-times {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.font-roboto {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.font-noto {
+  font-family: "Noto Sans", Arial, sans-serif;
+}
+
+/* Temas (se aplican sobre .ra-reader) */
+.theme-white {
+  --ra-bg: #ffffff;
+  --ra-fg: #111111;
+  --ra-muted: #efefef;
+  --ra-highlight-bg: #fff6bf;
+}
+.theme-soft {
+  --ra-bg: #fdfcf8;
+  --ra-fg: #1a1a1a;
+  --ra-muted: #efece6;
+}
+.theme-sepia {
+  --ra-bg: #f7f1e1;
+  --ra-fg: #1a1a1a;
+  --ra-muted: #e8decb;
+}
+.theme-blue {
+  --ra-bg: #eef6ff;
+  --ra-fg: #0f172a;
+  --ra-muted: #dbeafe;
+}
+.theme-gray {
+  --ra-bg: #f6f7f8;
+  --ra-fg: #141414;
+  --ra-muted: #e7e7e9;
+}
+.theme-dark {
+  --ra-bg: #111;
+  --ra-fg: #f2f2f2;
+  --ra-muted: #1e1e1e;
+  --ra-highlight-bg: #2a2a2a;
+}
+.theme-high {
+  --ra-bg: #000;
+  --ra-fg: #fff;
+  --ra-muted: #111;
+  --ra-highlight-bg: #222;
+}
+
+/* Contenedor principal */
+#read-accessible {
+  background: var(--ra-bg);
+  color: var(--ra-fg);
+  border: 1px solid color-mix(in oklab, var(--ra-fg) 12%, transparent);
+  border-radius: 12px;
+  padding: 12px;
+
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+/* Barra rápida: una fila con botones que se reparten el ancho */
+#read-accessible .ra-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+#read-accessible .ra-toolbar .action {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0.45rem 0.7rem;
+  font-size: clamp(12px, 1.6vw, 14px);
+}
+#read-accessible .ra-toolbar .action > span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#read-accessible .ra-toolbar .action i {
+  flex: 0 0 auto;
+  margin-right: 0.4rem;
+}
+
+/* Paneles de ajustes */
+#read-accessible .ra-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 900px) {
+  #read-accessible .ra-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Panel */
+#read-accessible .ra-panel {
+  background: var(--ra-muted);
+  border: 1px solid color-mix(in oklab, var(--ra-fg) 12%, transparent);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Filas y controles */
+#read-accessible .ra-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#read-accessible .ra-range {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 6px;
+  align-items: center;
+}
+#read-accessible .pill,
+#read-accessible .action,
+#read-accessible select {
+  border: 1px solid color-mix(in oklab, var(--ra-fg) 16%, transparent);
+  border-radius: 999px;
+  padding: 0.4rem 0.7rem;
+  background: #fff;
+  color: #111;
+}
+
+/* Textarea de entrada */
+#read-accessible .ra-input textarea {
+  width: 100%;
+  border-radius: 8px;
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #111;
+}
+
+/* Visor */
+#read-accessible .ra-reader {
+  width: 100%;
+  border: 1px solid color-mix(in oklab, var(--ra-fg) 12%, transparent);
+  border-radius: 12px;
+  background: var(--ra-bg);
+  color: var(--ra-fg);
+  padding: 16px;
+  margin-top: 10px;
+  overflow: auto;
+  min-height: 48vh;
+}
+
+/* Contenido del lector: controla el ancho con --ra-max-width */
+#read-accessible .ra-content {
+  font-size: var(--ra-font-size);
+  line-height: var(--ra-line-height);
+  word-spacing: var(--ra-word-spacing);
+  letter-spacing: var(--ra-letter-spacing);
+  max-width: var(--ra-max-width);
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Marcados */
+#read-accessible .line {
+  display: inline-block;
+  padding: 0.05rem 0.25rem;
+  border-radius: 6px;
+}
+#read-accessible .line.is-active {
+  background: var(--ra-highlight-bg);
+}
+
+#read-accessible .sent.is-active,
+#read-accessible p.is-active {
+  background: var(--ra-highlight-bg);
+  border-radius: 6px;
+  padding: 0.05rem 0.25rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+#read-accessible .syll.s0 {
+  background: var(--ra-syll-a);
+  border-radius: 4px;
+}
+#read-accessible .syll.s1 {
+  background: var(--ra-syll-b);
+  border-radius: 4px;
+}
+#read-accessible .syll.pad::after {
+  content: "\00A0";
+}
+#read-accessible .spoken {
+  outline: 2px solid var(--ra-accent);
+  outline-offset: 2px;
+}
+
+/* Suaviza el tracking en OpenDyslexic */
+#read-accessible .ra-content.font-opendyslexic {
+  letter-spacing: 0;
+  word-spacing: 0.06em;
+  line-height: 1.65;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+/* Píldoras activas */
+#read-accessible .pill[aria-pressed="true"] {
+  background: color-mix(in oklab, var(--ra-accent) 18%, #fff);
+  border-color: color-mix(in oklab, var(--ra-accent) 65%, transparent);
+  box-shadow: inset 0 0 0 1px
+    color-mix(in oklab, var(--ra-accent) 55%, transparent);
+}
+#read-accessible.theme-dark .pill[aria-pressed="true"],
+#read-accessible.theme-high .pill[aria-pressed="true"] {
+  color: #fff;
+  background: color-mix(in oklab, var(--ra-accent) 55%, #000);
+  border-color: var(--ra-accent);
+}
+
+/* =========================
+   Impresión del lector
+   ========================= */
+
+/* Gating: en el documento PRINCIPAL ocultamos todo salvo el visor.
+   El iframe de impresión lleva body.ra-print, así que no le afecta. */
+@media print {
+  body:not(.ra-print) * {
+    visibility: hidden !important;
+  }
+
+  body:not(.ra-print) #read-accessible .ra-reader,
+  body:not(.ra-print) #read-accessible .ra-reader * {
+    visibility: visible !important;
+  }
+
+  #read-accessible .ra-reader {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: var(--ra-bg, #fff) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  #read-accessible .ra-content {
+    margin: 0 auto !important;
+    max-width: var(--ra-max-width) !important; /* respeta “Anchura (ch)” */
+  }
+
+  #read-accessible .ra-content p {
+    break-inside: avoid;
+  }
+}
+
+h2 {
+  font-size: 1.4em;
+}

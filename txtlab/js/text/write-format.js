@@ -42,7 +42,9 @@ export function applyScheme(scheme) {
   const itxt = getItxt();
   if (!itxt) return;
   // elimina clases scheme-*
-  [...itxt.classList].filter(c => c.startsWith("scheme-")).forEach(c => itxt.classList.remove(c));
+  [...itxt.classList]
+    .filter((c) => c.startsWith("scheme-"))
+    .forEach((c) => itxt.classList.remove(c));
   // "theme" = base por tema
   if (scheme && scheme !== "theme") itxt.classList.add(`scheme-${scheme}`);
   localStorage.setItem("write.colorScheme", scheme || "theme");
@@ -53,7 +55,7 @@ export function applyScheme(scheme) {
 export function restoreFormatFromStorage() {
   const itxt = getItxt();
   if (!itxt) return;
-  const storedSize   = parseFloat(localStorage.getItem("write.fontSize") || "1");
+  const storedSize = parseFloat(localStorage.getItem("write.fontSize") || "1");
   const storedFamily = localStorage.getItem("write.fontFamily");
   const storedScheme = localStorage.getItem("write.colorScheme") || "theme";
   if (Number.isFinite(storedSize)) applyFontSize(storedSize);
@@ -63,14 +65,14 @@ export function restoreFormatFromStorage() {
 
 export function wireFormatControls(root = document) {
   const smaller = root.getElementById("font-smaller");
-  const bigger  = root.getElementById("font-bigger");
-  const reset   = root.getElementById("font-reset");
-  const selFam  = root.getElementById("font-family-select");
-  const selSch  = root.getElementById("scheme-select");
+  const bigger = root.getElementById("font-bigger");
+  const reset = root.getElementById("font-reset");
+  const selFam = root.getElementById("font-family-select");
+  const selSch = root.getElementById("scheme-select");
 
   smaller?.addEventListener("click", () => nudgeFontSize(-FONT_STEP));
-  bigger ?.addEventListener("click", () => nudgeFontSize(+FONT_STEP));
-  reset  ?.addEventListener("click", resetFontSize);
+  bigger?.addEventListener("click", () => nudgeFontSize(+FONT_STEP));
+  reset?.addEventListener("click", resetFontSize);
 
   selFam?.addEventListener("change", (e) => applyFontFamily(e.target.value));
   selSch?.addEventListener("change", (e) => applyScheme(e.target.value));

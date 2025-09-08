@@ -1,6 +1,10 @@
 <section id="pm-root" class="game-root timer-page" aria-labelledby="pm-title">
   <!-- Barra de control (fila única) -->
-  <div class="timer-controls" role="toolbar" aria-label="Controles del temporizador">
+  <div
+    class="timer-controls"
+    role="toolbar"
+    aria-label="Controles del temporizador"
+  >
     <h2 id="pm-title" class="sr-only">Temporizador Pomodoro</h2>
 
     <!-- Contador de pomodoros realizados -->
@@ -9,7 +13,9 @@
     </div>
 
     <!-- Ajustes de duraciones -->
-    <label for="pm-work" class="sr-only">Duración trabajo (h:mm:ss o mm:ss)</label>
+    <label for="pm-work" class="sr-only"
+      >Duración trabajo (h:mm:ss o mm:ss)</label
+    >
     <input
       id="pm-work"
       class="dt-input"
@@ -21,7 +27,9 @@
       value="25:00"
       pattern="^\\d{1,2}:\\d{2}(:\\d{2})?$"
     />
-    <label for="pm-short" class="sr-only">Duración descanso corto (h:mm:ss o mm:ss)</label>
+    <label for="pm-short" class="sr-only"
+      >Duración descanso corto (h:mm:ss o mm:ss)</label
+    >
     <input
       id="pm-short"
       class="dt-input"
@@ -33,7 +41,9 @@
       value="05:00"
       pattern="^\\d{1,2}:\\d{2}(:\\d{2})?$"
     />
-    <label for="pm-long" class="sr-only">Duración descanso largo (h:mm:ss o mm:ss)</label>
+    <label for="pm-long" class="sr-only"
+      >Duración descanso largo (h:mm:ss o mm:ss)</label
+    >
     <input
       id="pm-long"
       class="dt-input"
@@ -46,30 +56,67 @@
       pattern="^\\d{1,2}:\\d{2}(:\\d{2})?$"
     />
 
-    <button id="pm-apply" class="action ghost" type="button" title="Aplicar y reiniciar ciclo">
-      <i class="fa-solid fa-check" aria-hidden="true"></i><span class="lbl">Aplicar</span>
+    <button
+      id="pm-apply"
+      class="action ghost"
+      type="button"
+      title="Aplicar y reiniciar ciclo"
+    >
+      <i class="fa-solid fa-check" aria-hidden="true"></i
+      ><span class="lbl">Aplicar</span>
     </button>
 
-    <button id="pm-start" class="action" type="button" title="Iniciar (Espacio)">
-      <i class="fa-solid fa-play" aria-hidden="true"></i><span class="lbl"></span>
+    <button
+      id="pm-start"
+      class="action"
+      type="button"
+      title="Iniciar (Espacio)"
+    >
+      <i class="fa-solid fa-play" aria-hidden="true"></i
+      ><span class="lbl"></span>
     </button>
 
-    <button id="pm-pause" class="action" type="button" title="Pausar (Espacio)" disabled>
-      <i class="fa-solid fa-pause" aria-hidden="true"></i><span class="lbl"></span>
+    <button
+      id="pm-pause"
+      class="action"
+      type="button"
+      title="Pausar (Espacio)"
+      disabled
+    >
+      <i class="fa-solid fa-pause" aria-hidden="true"></i
+      ><span class="lbl"></span>
     </button>
 
-    <button id="pm-reset" class="action ghost" type="button" title="Reiniciar ciclo (R)">
-      <i class="fa-solid fa-rotate-left" aria-hidden="true"></i><span class="lbl"></span>
+    <button
+      id="pm-reset"
+      class="action ghost"
+      type="button"
+      title="Reiniciar ciclo (R)"
+    >
+      <i class="fa-solid fa-rotate-left" aria-hidden="true"></i
+      ><span class="lbl"></span>
     </button>
 
-    <button id="pm-fs" class="action" type="button" title="Pantalla completa (F)">
-      <i class="fa-solid fa-expand" aria-hidden="true"></i><span class="lbl"></span>
+    <button
+      id="pm-fs"
+      class="action"
+      type="button"
+      title="Pantalla completa (F)"
+    >
+      <i class="fa-solid fa-expand" aria-hidden="true"></i
+      ><span class="lbl"></span>
     </button>
   </div>
 
   <!-- Botón salir (visible en pantalla completa) -->
-  <button id="pm-fs-exit" class="dt-fs-exit" type="button" title="Salir de pantalla completa (Esc)">
-    <i class="fa-solid fa-xmark" aria-hidden="true"></i><span class="sr-only">Salir</span>
+  <button
+    id="pm-fs-exit"
+    class="dt-fs-exit"
+    type="button"
+    title="Salir de pantalla completa (Esc)"
+  >
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i
+    ><span class="sr-only">Salir</span>
   </button>
 
   <!-- Cara del temporizador (anillo analógico) -->
@@ -92,10 +139,14 @@
 <style>
   .sr-only {
     position: absolute !important;
-    width: 1px; height: 1px;
-    padding: 0; margin: -1px;
-    overflow: hidden; clip: rect(0,0,0,0);
-    white-space: nowrap; border: 0;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 
   .timer-page {
@@ -108,23 +159,25 @@
   .timer-controls {
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
     flex-wrap: nowrap;
-    margin-bottom: .75rem;
+    margin-bottom: 0.75rem;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 2px;
   }
-  .timer-controls .lbl { margin-left: .35rem; }
+  .timer-controls .lbl {
+    margin-left: 0.35rem;
+  }
 
   /* Contador “X pomodoros” */
-  .pm-stat{
+  .pm-stat {
     display: inline-flex;
     align-items: center;
-    gap: .35rem;
-    padding: .25rem .5rem;
+    gap: 0.35rem;
+    padding: 0.25rem 0.5rem;
     border: 1px solid var(--c-border, #ccc);
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     background: var(--c-surface, transparent);
     color: var(--c-text, #111);
     white-space: nowrap;
@@ -132,14 +185,14 @@
   }
 
   .dt-input {
-    width: 8.5ch;             /* mm:ss o h:mm:ss (compacto) */
+    width: 8.5ch; /* mm:ss o h:mm:ss (compacto) */
     min-width: 10ch;
     text-align: center;
     font: inherit;
     font-variant-numeric: tabular-nums;
-    padding: .35rem .5rem;
+    padding: 0.35rem 0.5rem;
     border: 1px solid var(--c-border, #ccc);
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     background: var(--c-surface, transparent);
     color: var(--c-text, #111);
     outline-offset: 2px;
@@ -156,7 +209,7 @@
     align-items: center;
     justify-content: center;
     padding: clamp(12px, 3vw, 24px);
-    border: 1px solid var(--c-border, rgba(0,0,0,.15));
+    border: 1px solid var(--c-border, rgba(0, 0, 0, 0.15));
     border-radius: 12px;
     background: var(--c-bg, transparent);
     color: var(--c-text, #111);
@@ -164,7 +217,8 @@
   }
   .timer-face.done {
     border-color: var(--c-accent, steelblue);
-    box-shadow: 0 0 0 2px color-mix(in srgb, var(--c-accent, steelblue) 20%, transparent) inset;
+    box-shadow: 0 0 0 2px
+      color-mix(in srgb, var(--c-accent, steelblue) 20%, transparent) inset;
   }
 
   .analog {
@@ -172,7 +226,12 @@
     width: min(84vmin, 92vw, 560px);
     aspect-ratio: 1 / 1;
   }
-  .ring { width: 100%; height: 100%; display: block; transform: rotate(-90deg); }
+  .ring {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: rotate(-90deg);
+  }
 
   .track,
   .arc {
@@ -181,13 +240,17 @@
     stroke-width: 12;
   }
   .track {
-    stroke: color-mix(in oklab, var(--c-border, rgba(0,0,0,.2)) 55%, transparent);
+    stroke: color-mix(
+      in oklab,
+      var(--c-border, rgba(0, 0, 0, 0.2)) 55%,
+      transparent
+    );
   }
   .arc {
     stroke: var(--c-accent, steelblue);
-    stroke-dasharray: 339.292;     /* 2πr con r=54 */
-    stroke-dashoffset: 339.292;    /* 0% transcurrido */
-    transition: stroke-dashoffset .18s linear;
+    stroke-dasharray: 339.292; /* 2πr con r=54 */
+    stroke-dashoffset: 339.292; /* 0% transcurrido */
+    transition: stroke-dashoffset 0.18s linear;
   }
 
   /* Centrado perfecto dentro del círculo */
@@ -198,19 +261,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: .25rem;
+    gap: 0.25rem;
     padding: clamp(8px, 2vw, 12px);
   }
 
   .phase {
-    font-size: clamp(.9rem, 1.5vw, 1.1rem);
-    opacity: .85;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    opacity: 0.85;
     text-align: center;
   }
 
   /* Tamaño reducido para encajar mejor en el anillo */
   .time {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Roboto Mono", monospace;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Roboto Mono",
+      monospace;
     font-variant-numeric: tabular-nums;
     letter-spacing: 0.02em;
     font-weight: 600;
@@ -228,19 +292,22 @@
     display: none; /* visible solo en fullscreen */
     align-items: center;
     justify-content: center;
-    width: 44px; height: 44px;
+    width: 44px;
+    height: 44px;
     border-radius: 12px;
-    border: 1px solid rgba(255,255,255,.25);
-    background: rgba(0,0,0,.45);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.45);
     color: #fff;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     cursor: pointer;
   }
   #pm-root.is-fs .dt-fs-exit,
-  #pm-root:fullscreen  .dt-fs-exit,
+  #pm-root:fullscreen .dt-fs-exit,
   #pm-root:-webkit-full-screen .dt-fs-exit,
-  #pm-root:-moz-full-screen .dt-fs-exit { display: inline-flex; }
+  #pm-root:-moz-full-screen .dt-fs-exit {
+    display: inline-flex;
+  }
 
   /* Pantalla completa: centrado vertical del anillo */
   #pm-root.is-fs,
@@ -257,7 +324,7 @@
   #pm-root:fullscreen .timer-controls,
   #pm-root:-webkit-full-screen .timer-controls,
   #pm-root:-moz-full-screen .timer-controls {
-    margin-bottom: .75rem;
+    margin-bottom: 0.75rem;
   }
   #pm-root.is-fs .timer-face,
   #pm-root:fullscreen .timer-face,
@@ -271,316 +338,382 @@
   }
 
   @media (max-width: 560px) {
-    .timer-controls .lbl { display: none; }
+    .timer-controls .lbl {
+      display: none;
+    }
   }
 </style>
 
 <script>
-(function () {
-  /* --------- DOM refs --------- */
-  const root     = document.getElementById("pm-root");
-  const elTime   = document.getElementById("pm-time");
-  const elPhase  = document.getElementById("pm-phase");
-  const inWork   = document.getElementById("pm-work");
-  const inShort  = document.getElementById("pm-short");
-  const inLong   = document.getElementById("pm-long");
-  const btnApply = document.getElementById("pm-apply");
-  const btnStart = document.getElementById("pm-start");
-  const btnPause = document.getElementById("pm-pause");
-  const btnReset = document.getElementById("pm-reset");
-  const btnFS    = document.getElementById("pm-fs");
-  const btnFSx   = document.getElementById("pm-fs-exit");
-  const face     = root.querySelector(".timer-face");
-  const arc      = document.getElementById("pm-arc");
-  const elCount  = document.getElementById("pm-count");
+  (function () {
+    /* --------- DOM refs --------- */
+    const root = document.getElementById("pm-root");
+    const elTime = document.getElementById("pm-time");
+    const elPhase = document.getElementById("pm-phase");
+    const inWork = document.getElementById("pm-work");
+    const inShort = document.getElementById("pm-short");
+    const inLong = document.getElementById("pm-long");
+    const btnApply = document.getElementById("pm-apply");
+    const btnStart = document.getElementById("pm-start");
+    const btnPause = document.getElementById("pm-pause");
+    const btnReset = document.getElementById("pm-reset");
+    const btnFS = document.getElementById("pm-fs");
+    const btnFSx = document.getElementById("pm-fs-exit");
+    const face = root.querySelector(".timer-face");
+    const arc = document.getElementById("pm-arc");
+    const elCount = document.getElementById("pm-count");
 
-  /* --------- Estado --------- */
-  let base = { work: 25*60, short: 5*60, long: 20*60 };
-  let seq  = ["work","short","work","short","work","short","work","long"]; // 4 pomodoros
-  let idx  = 0;                 // índice de fase actual
-  let total = base[seq[idx]];   // duración de la fase actual
-  let remaining = total;
-  let running = false;
-  let ticker = null;
-  let deadline = 0;
-  let workDone = 0;             // contador de pomodoros completados
+    /* --------- Estado --------- */
+    let base = { work: 25 * 60, short: 5 * 60, long: 20 * 60 };
+    let seq = [
+      "work",
+      "short",
+      "work",
+      "short",
+      "work",
+      "short",
+      "work",
+      "long",
+    ]; // 4 pomodoros
+    let idx = 0; // índice de fase actual
+    let total = base[seq[idx]]; // duración de la fase actual
+    let remaining = total;
+    let running = false;
+    let ticker = null;
+    let deadline = 0;
+    let workDone = 0; // contador de pomodoros completados
 
-  // Geometría del arco (r=54 → C ≈ 339.292)
-  const CIRC = 2 * Math.PI * 54;
-  arc.style.strokeDasharray = String(CIRC);
-  arc.style.strokeDashoffset = String(CIRC); // 0% transcurrido
+    // Geometría del arco (r=54 → C ≈ 339.292)
+    const CIRC = 2 * Math.PI * 54;
+    arc.style.strokeDasharray = String(CIRC);
+    arc.style.strokeDashoffset = String(CIRC); // 0% transcurrido
 
-  // Sonido
-  let audioCtx = null;
-  let lastBeepSec = null;
-  function ensureAudio() {
-    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    if (audioCtx.state === "suspended") audioCtx.resume();
-  }
-  function beep({ freq = 880, dur = 0.08, type = "sine", gain = 0.06 } = {}) {
-    if (!audioCtx) return;
-    const o = audioCtx.createOscillator();
-    const g = audioCtx.createGain();
-    o.type = type; o.frequency.value = freq; g.gain.value = 0;
-    o.connect(g); g.connect(audioCtx.destination);
-    const now = audioCtx.currentTime;
-    g.gain.linearRampToValueAtTime(gain, now + 0.005);
-    g.gain.linearRampToValueAtTime(0.0001, now + dur);
-    o.start(now); o.stop(now + dur + 0.02);
-  }
-  function beepTick() { beep({ freq: 900, dur: 0.06, type: "sine", gain: 0.07 }); }
-  function beepFinal() {
-    if (!audioCtx) return;
-    const steps = [
-      { t: 0.00, f: 660, d: 0.08 },
-      { t: 0.09, f: 880, d: 0.10 },
-      { t: 0.21, f: 660, d: 0.16 }
-    ];
-    steps.forEach(s => setTimeout(() => beep({ freq: s.f, dur: s.d, type: "sine", gain: 0.09 }), s.t * 1000));
-  }
-
-  /* --------- Utils --------- */
-  const clamp = (n, min, max) => Math.min(max, Math.max(min, n));
-  const pad2 = (n) => String(n).padStart(2, "0");
-  const fmtHMS = (s) => {
-    const h = Math.floor(s / 3600);
-    const m = Math.floor((s % 3600) / 60);
-    const sec = Math.max(0, s % 60);
-    return `${pad2(h)}:${pad2(m)}:${pad2(sec)}`;
-  };
-  const parseHMS = (str) => {
-    if (!str) return null;
-    const t = String(str).trim();
-    let m = t.match(/^(\d{1,2}):(\d{2}):(\d{2})$/);
-    if (m) {
-      const h = parseInt(m[1], 10), mi= parseInt(m[2], 10), s = parseInt(m[3], 10);
-      if (mi > 59 || s > 59) return null;
-      return h * 3600 + mi * 60 + s;
+    // Sonido
+    let audioCtx = null;
+    let lastBeepSec = null;
+    function ensureAudio() {
+      if (!audioCtx)
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      if (audioCtx.state === "suspended") audioCtx.resume();
     }
-    m = t.match(/^(\d{1,2}):(\d{2})$/); // mm:ss
-    if (m) {
-      const mi= parseInt(m[1], 10), s = parseInt(m[2], 10);
-      if (mi > 59 || s > 59) return null;
-      return mi * 60 + s;
+    function beep({ freq = 880, dur = 0.08, type = "sine", gain = 0.06 } = {}) {
+      if (!audioCtx) return;
+      const o = audioCtx.createOscillator();
+      const g = audioCtx.createGain();
+      o.type = type;
+      o.frequency.value = freq;
+      g.gain.value = 0;
+      o.connect(g);
+      g.connect(audioCtx.destination);
+      const now = audioCtx.currentTime;
+      g.gain.linearRampToValueAtTime(gain, now + 0.005);
+      g.gain.linearRampToValueAtTime(0.0001, now + dur);
+      o.start(now);
+      o.stop(now + dur + 0.02);
     }
-    return null;
-  };
+    function beepTick() {
+      beep({ freq: 900, dur: 0.06, type: "sine", gain: 0.07 });
+    }
+    function beepFinal() {
+      if (!audioCtx) return;
+      const steps = [
+        { t: 0.0, f: 660, d: 0.08 },
+        { t: 0.09, f: 880, d: 0.1 },
+        { t: 0.21, f: 660, d: 0.16 },
+      ];
+      steps.forEach((s) =>
+        setTimeout(
+          () => beep({ freq: s.f, dur: s.d, type: "sine", gain: 0.09 }),
+          s.t * 1000
+        )
+      );
+    }
 
-  function phaseLabel(type) {
-    return type === "work" ? "Sesión de trabajo"
-         : type === "short" ? "Descanso corto"
-         : "Descanso largo";
-  }
+    /* --------- Utils --------- */
+    const clamp = (n, min, max) => Math.min(max, Math.max(min, n));
+    const pad2 = (n) => String(n).padStart(2, "0");
+    const fmtHMS = (s) => {
+      const h = Math.floor(s / 3600);
+      const m = Math.floor((s % 3600) / 60);
+      const sec = Math.max(0, s % 60);
+      return `${pad2(h)}:${pad2(m)}:${pad2(sec)}`;
+    };
+    const parseHMS = (str) => {
+      if (!str) return null;
+      const t = String(str).trim();
+      let m = t.match(/^(\d{1,2}):(\d{2}):(\d{2})$/);
+      if (m) {
+        const h = parseInt(m[1], 10),
+          mi = parseInt(m[2], 10),
+          s = parseInt(m[3], 10);
+        if (mi > 59 || s > 59) return null;
+        return h * 3600 + mi * 60 + s;
+      }
+      m = t.match(/^(\d{1,2}):(\d{2})$/); // mm:ss
+      if (m) {
+        const mi = parseInt(m[1], 10),
+          s = parseInt(m[2], 10);
+        if (mi > 59 || s > 59) return null;
+        return mi * 60 + s;
+      }
+      return null;
+    };
 
-  function setDisplay(seconds) { elTime.textContent = fmtHMS(seconds); }
-  function updateButtons() { btnStart.disabled = running; btnPause.disabled = !running; }
-  function setProgressElapsed(pct) {
-    const p = clamp(pct, 0, 100);
-    const offset = CIRC * (1 - p / 100);
-    arc.style.strokeDashoffset = String(offset);
-  }
-  function updateRing() {
-    const elapsed = total > 0 ? total - remaining : 0;
-    const pct = total > 0 ? (elapsed / total) * 100 : 0;
-    setProgressElapsed(pct);
-  }
-  function updateCountUI() { elCount.textContent = String(workDone); }
+    function phaseLabel(type) {
+      return type === "work"
+        ? "Sesión de trabajo"
+        : type === "short"
+        ? "Descanso corto"
+        : "Descanso largo";
+    }
 
-  function loadPhase(i) {
-    idx = i;
-    const type = seq[idx];
-    total = base[type];
-    remaining = total;
-    elPhase.textContent = phaseLabel(type);
-    setDisplay(remaining);
-    setProgressElapsed(0);
-    face.classList.remove("done");
-  }
+    function setDisplay(seconds) {
+      elTime.textContent = fmtHMS(seconds);
+    }
+    function updateButtons() {
+      btnStart.disabled = running;
+      btnPause.disabled = !running;
+    }
+    function setProgressElapsed(pct) {
+      const p = clamp(pct, 0, 100);
+      const offset = CIRC * (1 - p / 100);
+      arc.style.strokeDashoffset = String(offset);
+    }
+    function updateRing() {
+      const elapsed = total > 0 ? total - remaining : 0;
+      const pct = total > 0 ? (elapsed / total) * 100 : 0;
+      setProgressElapsed(pct);
+    }
+    function updateCountUI() {
+      elCount.textContent = String(workDone);
+    }
 
-  function nextPhase() {
-    const last = idx >= seq.length - 1;
-    if (last) {
-      // Fin del ciclo completo
+    function loadPhase(i) {
+      idx = i;
+      const type = seq[idx];
+      total = base[type];
+      remaining = total;
+      elPhase.textContent = phaseLabel(type);
+      setDisplay(remaining);
+      setProgressElapsed(0);
+      face.classList.remove("done");
+    }
+
+    function nextPhase() {
+      const last = idx >= seq.length - 1;
+      if (last) {
+        // Fin del ciclo completo
+        running = false;
+        updateButtons();
+        elPhase.textContent = "Sesión completa";
+        face.classList.add("done");
+        return;
+      }
+      loadPhase(idx + 1);
+      // Auto-iniciar siguiente fase
+      start();
+    }
+
+    /* --------- Temporización con corrección de deriva --------- */
+    function tick() {
+      const now = Date.now();
+      const secs = Math.max(0, Math.ceil((deadline - now) / 1000));
+      if (secs !== remaining) {
+        remaining = secs;
+        setDisplay(remaining);
+        updateRing();
+
+        if (remaining <= 10 && remaining > 0 && remaining !== lastBeepSec) {
+          lastBeepSec = remaining;
+          beepTick();
+        }
+      }
+
+      if (remaining <= 0) {
+        // Si acabamos una fase de trabajo, incrementa contador
+        if (seq[idx] === "work") {
+          workDone++;
+          updateCountUI();
+        }
+        stop(false);
+        face.classList.add("done");
+        setProgressElapsed(100); // anillo completo al terminar la fase
+        beepFinal();
+        // avanzar a la siguiente fase tras un pequeño respiro
+        setTimeout(nextPhase, 800);
+        return;
+      }
+
+      ticker = setTimeout(tick, 200);
+    }
+
+    function start() {
+      if (running) return;
+      if (remaining <= 0) remaining = total;
+      running = true;
+      face.classList.remove("done");
+      ensureAudio();
+      lastBeepSec = null;
+      deadline = Date.now() + remaining * 1000;
+      setDisplay(remaining);
+      updateButtons();
+      updateRing();
+      tick();
+    }
+    function pause() {
+      if (!running) return;
+      remaining = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
       running = false;
       updateButtons();
-      elPhase.textContent = "Sesión completa";
-      face.classList.add("done");
-      return;
-    }
-    loadPhase(idx + 1);
-    // Auto-iniciar siguiente fase
-    start();
-  }
-
-  /* --------- Temporización con corrección de deriva --------- */
-  function tick() {
-    const now = Date.now();
-    const secs = Math.max(0, Math.ceil((deadline - now) / 1000));
-    if (secs !== remaining) {
-      remaining = secs;
-      setDisplay(remaining);
+      clearTimeout(ticker);
+      ticker = null;
       updateRing();
+    }
+    function stop(userInitiated = true) {
+      running = false;
+      updateButtons();
+      clearTimeout(ticker);
+      ticker = null;
+      if (userInitiated) {
+        /* sin beep final */
+      }
+    }
+    function resetCycle() {
+      stop(true);
+      loadPhase(0);
+      // Intencionadamente NO reseteamos workDone
+    }
 
-      if (remaining <= 10 && remaining > 0 && remaining !== lastBeepSec) {
-        lastBeepSec = remaining;
-        beepTick();
+    /* --------- Aplicar nuevas duraciones (reinicia el ciclo) --------- */
+    function applyDurations() {
+      const w = parseHMS(inWork.value) ?? base.work;
+      const s = parseHMS(inShort.value) ?? base.short;
+      const l = parseHMS(inLong.value) ?? base.long;
+
+      // límites sanos
+      const LIM = 99 * 3600 + 59 * 60 + 59;
+      base.work = clamp(w, 10, LIM); // al menos 10 s por seguridad
+      base.short = clamp(s, 10, LIM);
+      base.long = clamp(l, 10, LIM);
+
+      // Normaliza inputs con el formato h:mm:ss
+      inWork.value = fmtHMS(base.work);
+      inShort.value = fmtHMS(base.short);
+      inLong.value = fmtHMS(base.long);
+
+      resetCycle(); // reinicia desde el primer pomodoro con las nuevas duraciones
+    }
+
+    /* --------- Pantalla completa --------- */
+    const isFS = () =>
+      document.fullscreenElement === root ||
+      document.webkitFullscreenElement === root ||
+      document.mozFullScreenElement === root;
+
+    async function enterFS() {
+      try {
+        if (root.requestFullscreen)
+          await root.requestFullscreen({ navigationUI: "hide" });
+        else if (root.webkitRequestFullscreen) root.webkitRequestFullscreen();
+        else if (root.mozRequestFullScreen) root.mozRequestFullScreen();
+      } catch (e) {
+        console.warn("[pm] No se pudo poner en pantalla completa:", e);
+      }
+    }
+    async function exitFS() {
+      try {
+        if (document.fullscreenElement) await document.exitFullscreen();
+        else if (
+          document.webkitFullscreenElement &&
+          document.webkitExitFullscreen
+        )
+          document.webkitExitFullscreen();
+        else if (document.mozFullScreenElement && document.mozCancelFullScreen)
+          document.mozCancelFullScreen();
+      } catch (e) {
+        console.warn("[pm] No se pudo salir de pantalla completa:", e);
+      }
+    }
+    function toggleFS() {
+      isFS() ? exitFS() : enterFS();
+    }
+    function onFSChange() {
+      if (isFS()) {
+        root.classList.add("is-fs");
+        btnFS.querySelector("i")?.classList.replace("fa-expand", "fa-compress");
+        btnFS.title = "Salir de pantalla completa (F)";
+        const lbl = btnFS.querySelector(".lbl");
+        if (lbl) lbl.textContent = "Salir de pant. completa";
+      } else {
+        root.classList.remove("is-fs");
+        btnFS.querySelector("i")?.classList.replace("fa-compress", "fa-expand");
+        btnFS.title = "Pantalla completa (F)";
+        const lbl = btnFS.querySelector(".lbl");
+        if (lbl) lbl.textContent = "";
       }
     }
 
-    if (remaining <= 0) {
-      // Si acabamos una fase de trabajo, incrementa contador
-      if (seq[idx] === "work") {
-        workDone++;
-        updateCountUI();
+    /* --------- Eventos --------- */
+    btnStart.addEventListener("click", start);
+    btnPause.addEventListener("click", pause);
+    btnReset.addEventListener("click", resetCycle);
+    btnApply.addEventListener("click", applyDurations);
+    btnFS.addEventListener("click", toggleFS);
+    btnFSx.addEventListener("click", exitFS);
+    document.addEventListener("fullscreenchange", onFSChange);
+
+    // Enter aplica también (comodidad): Enter en cualquier input de duración
+    [inWork, inShort, inLong].forEach((inp) => {
+      inp.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          applyDurations();
+        }
+      });
+      inp.addEventListener("blur", () => {
+        const v = parseHMS(inp.value);
+        if (v != null && v > 0) inp.value = fmtHMS(v);
+      });
+    });
+
+    // Atajos globales: Espacio = iniciar/pausar, R = reiniciar, F = toggle FS
+    document.addEventListener("keydown", (e) => {
+      const editing = [inWork, inShort, inLong].includes(
+        document.activeElement
+      );
+      if (e.code === "Space" || e.key === " ") {
+        if (!editing) {
+          e.preventDefault();
+          running ? pause() : start();
+        }
+      } else if (e.key?.toLowerCase() === "r") {
+        if (!editing) {
+          e.preventDefault();
+          resetCycle();
+        }
+      } else if (e.key?.toLowerCase() === "f") {
+        if (!editing) {
+          e.preventDefault();
+          toggleFS();
+        }
       }
-      stop(false);
-      face.classList.add("done");
-      setProgressElapsed(100); // anillo completo al terminar la fase
-      beepFinal();
-      // avanzar a la siguiente fase tras un pequeño respiro
-      setTimeout(nextPhase, 800);
-      return;
-    }
+    });
 
-    ticker = setTimeout(tick, 200);
-  }
-
-  function start() {
-    if (running) return;
-    if (remaining <= 0) remaining = total;
-    running = true;
-    face.classList.remove("done");
-    ensureAudio();
-    lastBeepSec = null;
-    deadline = Date.now() + remaining * 1000;
-    setDisplay(remaining);
-    updateButtons();
-    updateRing();
-    tick();
-  }
-  function pause() {
-    if (!running) return;
-    remaining = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
-    running = false;
-    updateButtons();
-    clearTimeout(ticker);
-    ticker = null;
-    updateRing();
-  }
-  function stop(userInitiated = true) {
-    running = false;
-    updateButtons();
-    clearTimeout(ticker);
-    ticker = null;
-    if (userInitiated) { /* sin beep final */ }
-  }
-  function resetCycle() {
-    stop(true);
-    loadPhase(0);
-    // Intencionadamente NO reseteamos workDone
-  }
-
-  /* --------- Aplicar nuevas duraciones (reinicia el ciclo) --------- */
-  function applyDurations() {
-    const w = parseHMS(inWork.value)  ?? base.work;
-    const s = parseHMS(inShort.value) ?? base.short;
-    const l = parseHMS(inLong.value)  ?? base.long;
-
-    // límites sanos
-    const LIM = 99*3600 + 59*60 + 59;
-    base.work  = clamp(w,  10, LIM);   // al menos 10 s por seguridad
-    base.short = clamp(s,  10, LIM);
-    base.long  = clamp(l,  10, LIM);
-
-    // Normaliza inputs con el formato h:mm:ss
-    inWork.value  = fmtHMS(base.work);
+    // Init
+    inWork.value = fmtHMS(base.work);
     inShort.value = fmtHMS(base.short);
-    inLong.value  = fmtHMS(base.long);
+    inLong.value = fmtHMS(base.long);
+    updateCountUI();
+    loadPhase(0);
+    updateButtons();
+    onFSChange();
 
-    resetCycle(); // reinicia desde el primer pomodoro con las nuevas duraciones
-  }
-
-  /* --------- Pantalla completa --------- */
-  const isFS = () => document.fullscreenElement === root
-                 || document.webkitFullscreenElement === root
-                 || document.mozFullScreenElement === root;
-
-  async function enterFS() {
-    try {
-      if (root.requestFullscreen) await root.requestFullscreen({ navigationUI: "hide" });
-      else if (root.webkitRequestFullscreen) root.webkitRequestFullscreen();
-      else if (root.mozRequestFullScreen) root.mozRequestFullScreen();
-    } catch (e) { console.warn("[pm] No se pudo poner en pantalla completa:", e); }
-  }
-  async function exitFS() {
-    try {
-      if (document.fullscreenElement) await document.exitFullscreen();
-      else if (document.webkitFullscreenElement && document.webkitExitFullscreen) document.webkitExitFullscreen();
-      else if (document.mozFullScreenElement && document.mozCancelFullScreen) document.mozCancelFullScreen();
-    } catch (e) { console.warn("[pm] No se pudo salir de pantalla completa:", e); }
-  }
-  function toggleFS() { isFS() ? exitFS() : enterFS(); }
-  function onFSChange() {
-    if (isFS()) {
-      root.classList.add("is-fs");
-      btnFS.querySelector("i")?.classList.replace("fa-expand", "fa-compress");
-      btnFS.title = "Salir de pantalla completa (F)";
-      const lbl = btnFS.querySelector(".lbl"); if (lbl) lbl.textContent = "Salir de pant. completa";
-    } else {
-      root.classList.remove("is-fs");
-      btnFS.querySelector("i")?.classList.replace("fa-compress", "fa-expand");
-      btnFS.title = "Pantalla completa (F)";
-      const lbl = btnFS.querySelector(".lbl"); if (lbl) lbl.textContent = "";
-    }
-  }
-
-  /* --------- Eventos --------- */
-  btnStart.addEventListener("click", start);
-  btnPause.addEventListener("click", pause);
-  btnReset.addEventListener("click", resetCycle);
-  btnApply.addEventListener("click", applyDurations);
-  btnFS.addEventListener("click", toggleFS);
-  btnFSx.addEventListener("click", exitFS);
-  document.addEventListener("fullscreenchange", onFSChange);
-
-  // Enter aplica también (comodidad): Enter en cualquier input de duración
-  [inWork, inShort, inLong].forEach(inp => {
-    inp.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") { e.preventDefault(); applyDurations(); }
-    });
-    inp.addEventListener("blur", () => {
-      const v = parseHMS(inp.value);
-      if (v != null && v > 0) inp.value = fmtHMS(v);
-    });
-  });
-
-  // Atajos globales: Espacio = iniciar/pausar, R = reiniciar, F = toggle FS
-  document.addEventListener("keydown", (e) => {
-    const editing = [inWork, inShort, inLong].includes(document.activeElement);
-    if (e.code === "Space" || e.key === " ") {
-      if (!editing) { e.preventDefault(); running ? pause() : start(); }
-    } else if (e.key?.toLowerCase() === "r") {
-      if (!editing) { e.preventDefault(); resetCycle(); }
-    } else if (e.key?.toLowerCase() === "f") {
-      if (!editing) { e.preventDefault(); toggleFS(); }
-    }
-  });
-
-  // Init
-  inWork.value  = fmtHMS(base.work);
-  inShort.value = fmtHMS(base.short);
-  inLong.value  = fmtHMS(base.long);
-  updateCountUI();
-  loadPhase(0);
-  updateButtons();
-  onFSChange();
-
-  // Limpieza si #main es reemplazado por otra página
-  const cleanup = () => {
-    clearTimeout(ticker);
-    ticker = null;
-    document.removeEventListener("fullscreenchange", onFSChange);
-  };
-  document.addEventListener("app:main-updated", cleanup, { once: true });
-})();
+    // Limpieza si #main es reemplazado por otra página
+    const cleanup = () => {
+      clearTimeout(ticker);
+      ticker = null;
+      document.removeEventListener("fullscreenchange", onFSChange);
+    };
+    document.addEventListener("app:main-updated", cleanup, { once: true });
+  })();
 </script>

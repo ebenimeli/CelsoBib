@@ -1,6 +1,10 @@
 <section id="dt-root" class="game-root timer-page" aria-labelledby="dt-title">
   <!-- Barra de control (fila única) -->
-  <div class="timer-controls" role="toolbar" aria-label="Controles del temporizador">
+  <div
+    class="timer-controls"
+    role="toolbar"
+    aria-label="Controles del temporizador"
+  >
     <h2 id="dt-title" class="sr-only">Temporizador con reloj de arena</h2>
 
     <label for="dt-duration" class="sr-only">Duración (h:mm:ss o mm:ss)</label>
@@ -18,32 +22,65 @@
     />
 
     <button id="dt-dec" class="action ghost" type="button" title="−1 minuto">
-      <i class="fa-solid fa-minus" aria-hidden="true"></i><span class="lbl"></span>
+      <i class="fa-solid fa-minus" aria-hidden="true"></i
+      ><span class="lbl"></span>
     </button>
     <button id="dt-inc" class="action ghost" type="button" title="+1 minuto">
-      <i class="fa-solid fa-plus" aria-hidden="true"></i><span class="lbl"></span>
+      <i class="fa-solid fa-plus" aria-hidden="true"></i
+      ><span class="lbl"></span>
     </button>
 
-    <button id="dt-start" class="action" type="button" title="Iniciar (Espacio)">
-      <i class="fa-solid fa-play" aria-hidden="true"></i><span class="lbl">Iniciar</span>
+    <button
+      id="dt-start"
+      class="action"
+      type="button"
+      title="Iniciar (Espacio)"
+    >
+      <i class="fa-solid fa-play" aria-hidden="true"></i
+      ><span class="lbl">Iniciar</span>
     </button>
 
-    <button id="dt-pause" class="action" type="button" title="Pausar (Espacio)" disabled>
-      <i class="fa-solid fa-pause" aria-hidden="true"></i><span class="lbl">Pausar</span>
+    <button
+      id="dt-pause"
+      class="action"
+      type="button"
+      title="Pausar (Espacio)"
+      disabled
+    >
+      <i class="fa-solid fa-pause" aria-hidden="true"></i
+      ><span class="lbl">Pausar</span>
     </button>
 
-    <button id="dt-reset" class="action ghost" type="button" title="Reiniciar (R)">
-      <i class="fa-solid fa-rotate-left" aria-hidden="true"></i><span class="lbl"></span>
+    <button
+      id="dt-reset"
+      class="action ghost"
+      type="button"
+      title="Reiniciar (R)"
+    >
+      <i class="fa-solid fa-rotate-left" aria-hidden="true"></i
+      ><span class="lbl"></span>
     </button>
 
-    <button id="dt-fs" class="action" type="button" title="Pantalla completa (F)">
-      <i class="fa-solid fa-expand" aria-hidden="true"></i><span class="lbl"></span>
+    <button
+      id="dt-fs"
+      class="action"
+      type="button"
+      title="Pantalla completa (F)"
+    >
+      <i class="fa-solid fa-expand" aria-hidden="true"></i
+      ><span class="lbl"></span>
     </button>
   </div>
 
   <!-- Botón salir (visible en pantalla completa) -->
-  <button id="dt-fs-exit" class="dt-fs-exit" type="button" title="Salir de pantalla completa (Esc)">
-    <i class="fa-solid fa-xmark" aria-hidden="true"></i><span class="sr-only">Salir</span>
+  <button
+    id="dt-fs-exit"
+    class="dt-fs-exit"
+    type="button"
+    title="Salir de pantalla completa (Esc)"
+  >
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i
+    ><span class="sr-only">Salir</span>
   </button>
 
   <!-- Cara del temporizador: reloj de arena -->
@@ -52,32 +89,47 @@
     <span id="dt-time" class="sr-only">00:05:00</span>
 
     <div class="hourglass" id="hg" aria-hidden="true">
-      <svg class="hg-svg" viewBox="0 0 200 300" width="100%" height="100%" focusable="false" aria-hidden="true">
+      <svg
+        class="hg-svg"
+        viewBox="0 0 200 300"
+        width="100%"
+        height="100%"
+        focusable="false"
+        aria-hidden="true"
+      >
         <!-- Definiciones: clips para bulbos -->
         <defs>
           <!-- Forma del bulbo superior (triángulo curvado) -->
           <clipPath id="clip-upper">
-            <path d="M30,40
+            <path
+              d="M30,40
                      Q100,20 170,40
                      Q140,110 100,145
-                     Q60,110 30,40Z"/>
+                     Q60,110 30,40Z"
+            />
           </clipPath>
           <!-- Forma del bulbo inferior -->
           <clipPath id="clip-lower">
-            <path d="M30,260
+            <path
+              d="M30,260
                      Q100,280 170,260
                      Q140,190 100,155
-                     Q60,190 30,260Z"/>
+                     Q60,190 30,260Z"
+            />
           </clipPath>
           <!-- Textura de arena (color heredado) -->
           <linearGradient id="sand-grad" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0%"  stop-opacity="0.95"/>
-            <stop offset="100%" stop-opacity="0.85"/>
+            <stop offset="0%" stop-opacity="0.95" />
+            <stop offset="100%" stop-opacity="0.85" />
           </linearGradient>
         </defs>
 
         <!-- Marco del reloj -->
-        <g fill="none" stroke="var(--c-border, rgba(0,0,0,.2))" stroke-width="4">
+        <g
+          fill="none"
+          stroke="var(--c-border, rgba(0,0,0,.2))"
+          stroke-width="4"
+        >
           <path d="M40,28 H160 M40,272 H160" />
           <path d="M50,28 C70,28 70,60 100,145 C130,60 130,28 150,28" />
           <path d="M50,272 C70,272 70,240 100,155 C130,240 130,272 150,272" />
@@ -85,30 +137,74 @@
 
         <!-- Arena superior (nivel variable) -->
         <g clip-path="url(#clip-upper)">
-          <rect id="sand-upper" x="30" y="40" width="140" height="105"
-                fill="var(--c-accent, steelblue)" fill-opacity="0.20"/>
-          <rect id="sand-upper-fill" x="30" y="40" width="140" height="105"
-                fill="var(--c-accent, steelblue)"/>
+          <rect
+            id="sand-upper"
+            x="30"
+            y="40"
+            width="140"
+            height="105"
+            fill="var(--c-accent, steelblue)"
+            fill-opacity="0.20"
+          />
+          <rect
+            id="sand-upper-fill"
+            x="30"
+            y="40"
+            width="140"
+            height="105"
+            fill="var(--c-accent, steelblue)"
+          />
         </g>
 
         <!-- Arena inferior (nivel variable) -->
         <g clip-path="url(#clip-lower)">
-          <rect id="sand-lower" x="30" y="155" width="140" height="105"
-                fill="var(--c-accent, steelblue)" fill-opacity="0.20"/>
-          <rect id="sand-lower-fill" x="30" y="260" width="140" height="0"
-                fill="var(--c-accent, steelblue)"/>
+          <rect
+            id="sand-lower"
+            x="30"
+            y="155"
+            width="140"
+            height="105"
+            fill="var(--c-accent, steelblue)"
+            fill-opacity="0.20"
+          />
+          <rect
+            id="sand-lower-fill"
+            x="30"
+            y="260"
+            width="140"
+            height="0"
+            fill="var(--c-accent, steelblue)"
+          />
         </g>
 
         <!-- Garganta (cuello) -->
-        <rect x="97.5" y="145" width="5" height="10" rx="2" fill="currentColor" opacity=".25"/>
+        <rect
+          x="97.5"
+          y="145"
+          width="5"
+          height="10"
+          rx="2"
+          fill="currentColor"
+          opacity=".25"
+        />
 
         <!-- Chorro de arena (animado cuando corre) -->
         <g id="sand-stream" opacity="0">
           <rect x="98.5" y="145" width="3" height="20" fill="url(#sand-grad)" />
           <!-- Gránulos -->
           <circle cx="100" cy="170" r="2" fill="currentColor" opacity=".7">
-            <animate attributeName="cy" values="165;178;165" dur="0.8s" repeatCount="indefinite"/>
-            <animate attributeName="opacity" values="0.3;0.9;0.3" dur="0.8s" repeatCount="indefinite"/>
+            <animate
+              attributeName="cy"
+              values="165;178;165"
+              dur="0.8s"
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="opacity"
+              values="0.3;0.9;0.3"
+              dur="0.8s"
+              repeatCount="indefinite"
+            />
           </circle>
         </g>
       </svg>
@@ -116,7 +212,14 @@
   </div>
 
   <!-- Barra de progreso (restante: 100% -> 0%) -->
-  <div class="timer-progress" role="progressbar" aria-label="Tiempo restante" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+  <div
+    class="timer-progress"
+    role="progressbar"
+    aria-label="Tiempo restante"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    aria-valuenow="100"
+  >
     <div class="bar" style="width: 100%"></div>
   </div>
 
@@ -134,33 +237,62 @@
 <style>
   .sr-only {
     position: absolute !important;
-    width: 1px; height: 1px;
-    padding: 0; margin: -1px;
-    overflow: hidden; clip: rect(0,0,0,0);
-    white-space: nowrap; border: 0;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 
-  .timer-page { width: 100%; display: block; padding: clamp(8px, 2vw, 16px); box-sizing: border-box; }
+  .timer-page {
+    width: 100%;
+    display: block;
+    padding: clamp(8px, 2vw, 16px);
+    box-sizing: border-box;
+  }
 
   .timer-controls {
-    display: flex; align-items: center; gap: .5rem; flex-wrap: nowrap;
-    margin-bottom: .75rem; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 2px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    margin-bottom: 0.75rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
   }
-  .timer-controls .lbl { margin-left: .35rem; }
+  .timer-controls .lbl {
+    margin-left: 0.35rem;
+  }
 
   .dt-input {
-    width: 10ch; min-width: 12ch; text-align: center; font: inherit; font-variant-numeric: tabular-nums;
-    padding: .4rem .55rem; border: 1px solid var(--c-border, #ccc); border-radius: .5rem;
-    background: var(--c-surface, transparent); color: var(--c-text, #111); outline-offset: 2px;
+    width: 10ch;
+    min-width: 12ch;
+    text-align: center;
+    font: inherit;
+    font-variant-numeric: tabular-nums;
+    padding: 0.4rem 0.55rem;
+    border: 1px solid var(--c-border, #ccc);
+    border-radius: 0.5rem;
+    background: var(--c-surface, transparent);
+    color: var(--c-text, #111);
+    outline-offset: 2px;
   }
-  .dt-input:invalid { outline: 2px solid color-mix(in srgb, #ff4d4f 60%, transparent); outline-offset: 2px; }
+  .dt-input:invalid {
+    outline: 2px solid color-mix(in srgb, #ff4d4f 60%, transparent);
+    outline-offset: 2px;
+  }
 
   .timer-face {
     width: 100%;
     min-height: clamp(180px, 35vw, 360px);
-    display: grid; place-items: center;
+    display: grid;
+    place-items: center;
     padding: clamp(12px, 3vw, 24px);
-    border: 1px solid var(--c-border, rgba(0,0,0,.15));
+    border: 1px solid var(--c-border, rgba(0, 0, 0, 0.15));
     border-radius: 12px;
     background: var(--c-bg, transparent);
     color: var(--c-text, #111);
@@ -168,382 +300,496 @@
   }
   .timer-face.done {
     border-color: var(--c-accent, steelblue);
-    box-shadow: 0 0 0 2px color-mix(in srgb, var(--c-accent, steelblue) 20%, transparent) inset;
+    box-shadow: 0 0 0 2px
+      color-mix(in srgb, var(--c-accent, steelblue) 20%, transparent) inset;
   }
 
-  .hourglass { width: min(80vw, 420px); max-width: 600px; aspect-ratio: 2 / 3; }
-  .hg-svg { display: block; width: 100%; height: auto; }
+  .hourglass {
+    width: min(80vw, 420px);
+    max-width: 600px;
+    aspect-ratio: 2 / 3;
+  }
+  .hg-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 
   .timer-progress {
-    width: 100%; height: 12px; margin-top: .6rem;
-    border: 1px solid var(--c-border, rgba(0,0,0,.15)); border-radius: 999px;
-    background: color-mix(in oklab, var(--c-border, rgba(0,0,0,.15)) 20%, transparent); overflow: hidden; box-sizing: border-box;
+    width: 100%;
+    height: 12px;
+    margin-top: 0.6rem;
+    border: 1px solid var(--c-border, rgba(0, 0, 0, 0.15));
+    border-radius: 999px;
+    background: color-mix(
+      in oklab,
+      var(--c-border, rgba(0, 0, 0, 0.15)) 20%,
+      transparent
+    );
+    overflow: hidden;
+    box-sizing: border-box;
   }
-  .timer-progress .bar { height: 100%; width: 100%; background: var(--c-accent, steelblue); transition: width .2s linear; }
+  .timer-progress .bar {
+    height: 100%;
+    width: 100%;
+    background: var(--c-accent, steelblue);
+    transition: width 0.2s linear;
+  }
 
   .timer-presets {
-    display: flex; flex-wrap: nowrap; gap: .5rem; justify-content: flex-start;
-    margin-top: .75rem; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-block: 2px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    margin-top: 0.75rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-block: 2px;
   }
 
   .dt-fs-exit {
-    position: fixed; top: calc(12px + env(safe-area-inset-top, 0px));
-    right: calc(12px + env(safe-area-inset-right, 0px)); z-index: 10000;
-    display: none; align-items: center; justify-content: center;
-    width: 44px; height: 44px; border-radius: 12px;
-    border: 1px solid rgba(255,255,255,.25); background: rgba(0,0,0,.45); color: #fff;
-    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); cursor: pointer;
+    position: fixed;
+    top: calc(12px + env(safe-area-inset-top, 0px));
+    right: calc(12px + env(safe-area-inset-right, 0px));
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    cursor: pointer;
   }
   #dt-root.is-fs .dt-fs-exit,
-  #dt-root:fullscreen  .dt-fs-exit,
+  #dt-root:fullscreen .dt-fs-exit,
   #dt-root:-webkit-full-screen .dt-fs-exit,
-  #dt-root:-moz-full-screen .dt-fs-exit { display: inline-flex; }
+  #dt-root:-moz-full-screen .dt-fs-exit {
+    display: inline-flex;
+  }
 
   #dt-root.is-fs,
   #dt-root:fullscreen,
   #dt-root:-webkit-full-screen,
   #dt-root:-moz-full-screen {
-    display: flex; flex-direction: column; min-height: 100vh;
-    padding: clamp(8px, 2vw, 16px); box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: clamp(8px, 2vw, 16px);
+    box-sizing: border-box;
   }
   #dt-root.is-fs .timer-controls,
   #dt-root:fullscreen .timer-controls,
   #dt-root:-webkit-full-screen .timer-controls,
-  #dt-root:-moz-full-screen .timer-controls { margin-bottom: .75rem; }
+  #dt-root:-moz-full-screen .timer-controls {
+    margin-bottom: 0.75rem;
+  }
   #dt-root.is-fs .timer-face,
   #dt-root:fullscreen .timer-face,
   #dt-root:-webkit-full-screen .timer-face,
   #dt-root:-moz-full-screen .timer-face {
-    flex: 1 1 auto; min-height: 0; display: flex; align-items: center; justify-content: center;
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  @media (max-width: 560px) { .timer-controls .lbl { display: none; } }
+  @media (max-width: 560px) {
+    .timer-controls .lbl {
+      display: none;
+    }
+  }
 </style>
 
 <script>
-(function () {
-  /* --------- DOM refs --------- */
-  const root     = document.getElementById("dt-root");
-  const elTime   = document.getElementById("dt-time"); // sr-only
-  const inDur    = document.getElementById("dt-duration");
-  const btnInc   = document.getElementById("dt-inc");
-  const btnDec   = document.getElementById("dt-dec");
-  const btnStart = document.getElementById("dt-start");
-  const btnPause = document.getElementById("dt-pause");
-  const btnReset = document.getElementById("dt-reset");
-  const btnFS    = document.getElementById("dt-fs");
-  const btnFSx   = document.getElementById("dt-fs-exit");
-  const face     = root.querySelector(".timer-face");
-  const presets  = root.querySelector(".timer-presets");
-  const progWrap = root.querySelector(".timer-progress");
-  const progBar  = progWrap.querySelector(".bar");
+  (function () {
+    /* --------- DOM refs --------- */
+    const root = document.getElementById("dt-root");
+    const elTime = document.getElementById("dt-time"); // sr-only
+    const inDur = document.getElementById("dt-duration");
+    const btnInc = document.getElementById("dt-inc");
+    const btnDec = document.getElementById("dt-dec");
+    const btnStart = document.getElementById("dt-start");
+    const btnPause = document.getElementById("dt-pause");
+    const btnReset = document.getElementById("dt-reset");
+    const btnFS = document.getElementById("dt-fs");
+    const btnFSx = document.getElementById("dt-fs-exit");
+    const face = root.querySelector(".timer-face");
+    const presets = root.querySelector(".timer-presets");
+    const progWrap = root.querySelector(".timer-progress");
+    const progBar = progWrap.querySelector(".bar");
 
-  // Elementos del reloj de arena
-  const hg              = document.getElementById("hg");
-  const sandUpperFill   = document.getElementById("sand-upper-fill");
-  const sandLowerFill   = document.getElementById("sand-lower-fill");
-  const sandStream      = document.getElementById("sand-stream");
+    // Elementos del reloj de arena
+    const hg = document.getElementById("hg");
+    const sandUpperFill = document.getElementById("sand-upper-fill");
+    const sandLowerFill = document.getElementById("sand-lower-fill");
+    const sandStream = document.getElementById("sand-stream");
 
-  /* --------- Estado --------- */
-  let total = 5 * 60;         // 5 minutos por defecto
-  let remaining = total;
-  let running = false;
-  let ticker = null;
-  let deadline = 0;
+    /* --------- Estado --------- */
+    let total = 5 * 60; // 5 minutos por defecto
+    let remaining = total;
+    let running = false;
+    let ticker = null;
+    let deadline = 0;
 
-  // Sonido
-  let audioCtx = null;
-  let lastBeepSec = null;
-  function ensureAudio() {
-    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    if (audioCtx.state === "suspended") audioCtx.resume();
-  }
-  function beep({ freq = 880, dur = 0.08, type = "sine", gain = 0.06 } = {}) {
-    if (!audioCtx) return;
-    const o = audioCtx.createOscillator();
-    const g = audioCtx.createGain();
-    o.type = type; o.frequency.value = freq; g.gain.value = 0;
-    o.connect(g); g.connect(audioCtx.destination);
-    const now = audioCtx.currentTime;
-    g.gain.linearRampToValueAtTime(gain, now + 0.005);
-    g.gain.linearRampToValueAtTime(0.0001, now + dur);
-    o.start(now); o.stop(now + dur + 0.02);
-  }
-  function beepTick() { beep({ freq: 900, dur: 0.06, type: "sine", gain: 0.07 }); }
-  function beepFinal() {
-    if (!audioCtx) return;
-    [{t:0.00,f:660,d:0.08},{t:0.09,f:880,d:0.10},{t:0.21,f:660,d:0.16}]
-      .forEach(s=>setTimeout(()=>beep({freq:s.f,dur:s.d,type:"sine",gain:0.09}), s.t*1000));
-  }
-
-  /* --------- Utils --------- */
-  const clamp = (n, min, max) => Math.min(max, Math.max(min, n));
-  const pad2 = (n) => String(n).padStart(2, "0");
-  const fmtHMS = (s) => {
-    const h = Math.floor(s / 3600);
-    const m = Math.floor((s % 3600) / 60);
-    const sec = Math.max(0, s % 60);
-    return `${pad2(h)}:${pad2(m)}:${pad2(sec)}`;
-  };
-  const parseHMS = (str) => {
-    if (!str) return null;
-    const t = String(str).trim();
-    let m = t.match(/^(\d{1,2}):(\d{2}):(\d{2})$/);
-    if (m) {
-      const h = parseInt(m[1], 10);
-      const mi= parseInt(m[2], 10);
-      const s  = parseInt(m[3], 10);
-      if (mi > 59 || s > 59) return null;
-      return h * 3600 + mi * 60 + s;
+    // Sonido
+    let audioCtx = null;
+    let lastBeepSec = null;
+    function ensureAudio() {
+      if (!audioCtx)
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      if (audioCtx.state === "suspended") audioCtx.resume();
     }
-    m = t.match(/^(\d{1,2}):(\d{2})$/); // mm:ss
-    if (m) {
-      const mi= parseInt(m[1], 10);
-      const s  = parseInt(m[2], 10);
-      if (mi > 59 || s > 59) return null;
-      return mi * 60 + s;
+    function beep({ freq = 880, dur = 0.08, type = "sine", gain = 0.06 } = {}) {
+      if (!audioCtx) return;
+      const o = audioCtx.createOscillator();
+      const g = audioCtx.createGain();
+      o.type = type;
+      o.frequency.value = freq;
+      g.gain.value = 0;
+      o.connect(g);
+      g.connect(audioCtx.destination);
+      const now = audioCtx.currentTime;
+      g.gain.linearRampToValueAtTime(gain, now + 0.005);
+      g.gain.linearRampToValueAtTime(0.0001, now + dur);
+      o.start(now);
+      o.stop(now + dur + 0.02);
     }
-    return null;
-  };
+    function beepTick() {
+      beep({ freq: 900, dur: 0.06, type: "sine", gain: 0.07 });
+    }
+    function beepFinal() {
+      if (!audioCtx) return;
+      [
+        { t: 0.0, f: 660, d: 0.08 },
+        { t: 0.09, f: 880, d: 0.1 },
+        { t: 0.21, f: 660, d: 0.16 },
+      ].forEach((s) =>
+        setTimeout(
+          () => beep({ freq: s.f, dur: s.d, type: "sine", gain: 0.09 }),
+          s.t * 1000
+        )
+      );
+    }
 
-  // Geometría útil de los bulbos (coincide con los clips)
-  const UPPER_Y = 40, UPPER_H = 105; // bulbo superior: y=40..145
-  const LOWER_Y = 155, LOWER_H = 105; // bulbo inferior: y=155..260
+    /* --------- Utils --------- */
+    const clamp = (n, min, max) => Math.min(max, Math.max(min, n));
+    const pad2 = (n) => String(n).padStart(2, "0");
+    const fmtHMS = (s) => {
+      const h = Math.floor(s / 3600);
+      const m = Math.floor((s % 3600) / 60);
+      const sec = Math.max(0, s % 60);
+      return `${pad2(h)}:${pad2(m)}:${pad2(sec)}`;
+    };
+    const parseHMS = (str) => {
+      if (!str) return null;
+      const t = String(str).trim();
+      let m = t.match(/^(\d{1,2}):(\d{2}):(\d{2})$/);
+      if (m) {
+        const h = parseInt(m[1], 10);
+        const mi = parseInt(m[2], 10);
+        const s = parseInt(m[3], 10);
+        if (mi > 59 || s > 59) return null;
+        return h * 3600 + mi * 60 + s;
+      }
+      m = t.match(/^(\d{1,2}):(\d{2})$/); // mm:ss
+      if (m) {
+        const mi = parseInt(m[1], 10);
+        const s = parseInt(m[2], 10);
+        if (mi > 59 || s > 59) return null;
+        return mi * 60 + s;
+      }
+      return null;
+    };
 
-  function setHourglassFromSeconds(seconds) {
-    // Texto accesible
-    elTime.textContent = fmtHMS(seconds);
+    // Geometría útil de los bulbos (coincide con los clips)
+    const UPPER_Y = 40,
+      UPPER_H = 105; // bulbo superior: y=40..145
+    const LOWER_Y = 155,
+      LOWER_H = 105; // bulbo inferior: y=155..260
 
-    if (!total || total <= 0) return;
-    const p = clamp(seconds / total, 0, 1); // fracción restante (1 -> lleno arriba, 0 -> vacío)
+    function setHourglassFromSeconds(seconds) {
+      // Texto accesible
+      elTime.textContent = fmtHMS(seconds);
 
-    // Ajusta arena del bulbo superior (altura proporcional a p)
-    const hUpper = UPPER_H * p;
-    sandUpperFill.setAttribute("y", String(UPPER_Y + (UPPER_H - hUpper)));
-    sandUpperFill.setAttribute("height", String(hUpper));
+      if (!total || total <= 0) return;
+      const p = clamp(seconds / total, 0, 1); // fracción restante (1 -> lleno arriba, 0 -> vacío)
 
-    // Ajusta arena del bulbo inferior (altura proporcional a 1-p)
-    const hLower = LOWER_H * (1 - p);
-    sandLowerFill.setAttribute("y", String(LOWER_Y + (LOWER_H - hLower)));
-    sandLowerFill.setAttribute("height", String(hLower));
+      // Ajusta arena del bulbo superior (altura proporcional a p)
+      const hUpper = UPPER_H * p;
+      sandUpperFill.setAttribute("y", String(UPPER_Y + (UPPER_H - hUpper)));
+      sandUpperFill.setAttribute("height", String(hUpper));
 
-    // Chorro visible solo cuando está corriendo y queda tiempo
-    sandStream.setAttribute("opacity", running && seconds > 0 ? "1" : "0");
-  }
+      // Ajusta arena del bulbo inferior (altura proporcional a 1-p)
+      const hLower = LOWER_H * (1 - p);
+      sandLowerFill.setAttribute("y", String(LOWER_Y + (LOWER_H - hLower)));
+      sandLowerFill.setAttribute("height", String(hLower));
 
-  function updateButtons() { btnStart.disabled = running; btnPause.disabled = !running; }
-  function syncDurationInput() { inDur.value = fmtHMS(total); }
+      // Chorro visible solo cuando está corriendo y queda tiempo
+      sandStream.setAttribute("opacity", running && seconds > 0 ? "1" : "0");
+    }
 
-  function setProgressPercent(pct) {
-    const p = clamp(Math.round(pct), 0, 100);
-    progBar.style.width = p + "%";
-    progWrap.setAttribute("aria-valuenow", String(p));
-  }
-  function updateProgress() {
-    const pct = total > 0 ? (remaining / total) * 100 : 0;
-    setProgressPercent(pct);
-  }
+    function updateButtons() {
+      btnStart.disabled = running;
+      btnPause.disabled = !running;
+    }
+    function syncDurationInput() {
+      inDur.value = fmtHMS(total);
+    }
 
-  /* --------- Temporización con corrección de deriva --------- */
-  function tick() {
-    const now = Date.now();
-    const secs = Math.max(0, Math.ceil((deadline - now) / 1000));
-    if (secs !== remaining) {
-      remaining = secs;
+    function setProgressPercent(pct) {
+      const p = clamp(Math.round(pct), 0, 100);
+      progBar.style.width = p + "%";
+      progWrap.setAttribute("aria-valuenow", String(p));
+    }
+    function updateProgress() {
+      const pct = total > 0 ? (remaining / total) * 100 : 0;
+      setProgressPercent(pct);
+    }
+
+    /* --------- Temporización con corrección de deriva --------- */
+    function tick() {
+      const now = Date.now();
+      const secs = Math.max(0, Math.ceil((deadline - now) / 1000));
+      if (secs !== remaining) {
+        remaining = secs;
+        setHourglassFromSeconds(remaining);
+        updateProgress();
+
+        if (remaining <= 10 && remaining > 0 && remaining !== lastBeepSec) {
+          lastBeepSec = remaining;
+          beepTick();
+        }
+      }
+
+      if (remaining <= 0) {
+        stop(false);
+        face.classList.add("done");
+        setProgressPercent(0);
+        sandStream.setAttribute("opacity", "0");
+        beepFinal();
+        return;
+      }
+
+      ticker = setTimeout(tick, 200);
+    }
+
+    function start() {
+      if (running) return;
+      if (remaining <= 0) remaining = total;
+      running = true;
+      face.classList.remove("done");
+      ensureAudio();
+      lastBeepSec = null;
+      deadline = Date.now() + remaining * 1000;
       setHourglassFromSeconds(remaining);
+      updateButtons();
       updateProgress();
+      tick();
+    }
+    function pause() {
+      if (!running) return;
+      remaining = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
+      running = false;
+      updateButtons();
+      clearTimeout(ticker);
+      ticker = null;
+      updateProgress();
+      setHourglassFromSeconds(remaining);
+    }
+    function stop(userInitiated = true) {
+      running = false;
+      updateButtons();
+      clearTimeout(ticker);
+      ticker = null;
+      if (userInitiated) {
+        /* no beep final */
+      }
+    }
+    function reset() {
+      stop(true);
+      remaining = total;
+      face.classList.remove("done");
+      setHourglassFromSeconds(remaining);
+      setProgressPercent(100);
+    }
 
-      if (remaining <= 10 && remaining > 0 && remaining !== lastBeepSec) {
-        lastBeepSec = remaining;
-        beepTick();
+    /* --------- Cambiar duración --------- */
+    function setDurationSeconds(secs, { stopIfRunning = true } = {}) {
+      secs = clamp(Math.floor(secs), 1, 99 * 3600 + 59 * 60 + 59);
+      total = secs;
+      syncDurationInput();
+      if (running && !stopIfRunning) {
+        const now = Date.now();
+        const rem = Math.max(0, Math.ceil((deadline - now) / 1000));
+        const elapsed = clamp(total - rem, 0, total);
+        remaining = clamp(total - elapsed, 0, total);
+        deadline = now + remaining * 1000;
+      } else {
+        stop(true);
+        remaining = total;
+      }
+      face.classList.remove("done");
+      setHourglassFromSeconds(remaining);
+      setProgressPercent(100);
+    }
+    function applyDurationFromInput() {
+      const secs = parseHMS(inDur.value);
+      if (secs == null || secs <= 0) return;
+      setDurationSeconds(secs, { stopIfRunning: true });
+    }
+    function incMinute() {
+      if (running) {
+        total = clamp(total + 60, 1, 99 * 3600 + 59 * 60 + 59);
+        syncDurationInput();
+        deadline += 60 * 1000;
+        const rem = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
+        setHourglassFromSeconds(rem);
+        updateProgress();
+      } else {
+        setDurationSeconds(total + 60, { stopIfRunning: true });
+      }
+    }
+    function decMinute() {
+      if (running) {
+        total = clamp(total - 60, 1, 99 * 3600 + 59 * 60 + 59);
+        syncDurationInput();
+        deadline -= 60 * 1000;
+        const rem = Math.max(1, Math.ceil((deadline - Date.now()) / 1000));
+        deadline = Date.now() + rem * 1000;
+        setHourglassFromSeconds(rem);
+        updateProgress();
+      } else {
+        setDurationSeconds(Math.max(1, total - 60), { stopIfRunning: true });
       }
     }
 
-    if (remaining <= 0) {
-      stop(false);
-      face.classList.add("done");
-      setProgressPercent(0);
-      sandStream.setAttribute("opacity", "0");
-      beepFinal();
-      return;
+    /* --------- Pantalla completa --------- */
+    const isFS = () =>
+      document.fullscreenElement === root ||
+      document.webkitFullscreenElement === root ||
+      document.mozFullScreenElement === root;
+
+    async function enterFS() {
+      try {
+        if (root.requestFullscreen)
+          await root.requestFullscreen({ navigationUI: "hide" });
+        else if (root.webkitRequestFullscreen) root.webkitRequestFullscreen();
+        else if (root.mozRequestFullScreen) root.mozRequestFullScreen();
+      } catch (e) {
+        console.warn("[dt] No se pudo poner en pantalla completa:", e);
+      }
+    }
+    async function exitFS() {
+      try {
+        if (document.fullscreenElement) await document.exitFullscreen();
+        else if (
+          document.webkitFullscreenElement &&
+          document.webkitExitFullscreen
+        )
+          document.webkitExitFullscreen();
+        else if (document.mozFullScreenElement && document.mozCancelFullScreen)
+          document.mozCancelFullScreen();
+      } catch (e) {
+        console.warn("[dt] No se pudo salir de pantalla completa:", e);
+      }
+    }
+    function toggleFS() {
+      isFS() ? exitFS() : enterFS();
+    }
+    function onFSChange() {
+      if (isFS()) {
+        root.classList.add("is-fs");
+        btnFS.querySelector("i")?.classList.replace("fa-expand", "fa-compress");
+        btnFS.title = "Salir de pantalla completa (F)";
+        const lbl = btnFS.querySelector(".lbl");
+        if (lbl) lbl.textContent = "Salir de pant. completa";
+      } else {
+        root.classList.remove("is-fs");
+        btnFS.querySelector("i")?.classList.replace("fa-compress", "fa-expand");
+        btnFS.title = "Pantalla completa (F)";
+        const lbl = btnFS.querySelector(".lbl");
+        if (lbl) lbl.textContent = "";
+      }
     }
 
-    ticker = setTimeout(tick, 200);
-  }
+    /* --------- Eventos --------- */
+    btnStart.addEventListener("click", start);
+    btnPause.addEventListener("click", pause);
+    btnReset.addEventListener("click", reset);
+    btnFS.addEventListener("click", toggleFS);
+    btnFSx.addEventListener("click", exitFS);
+    document.addEventListener("fullscreenchange", onFSChange);
 
-  function start() {
-    if (running) return;
-    if (remaining <= 0) remaining = total;
-    running = true;
-    face.classList.remove("done");
-    ensureAudio();
-    lastBeepSec = null;
-    deadline = Date.now() + remaining * 1000;
-    setHourglassFromSeconds(remaining);
-    updateButtons();
-    updateProgress();
-    tick();
-  }
-  function pause() {
-    if (!running) return;
-    remaining = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
-    running = false;
-    updateButtons();
-    clearTimeout(ticker); ticker = null;
-    updateProgress();
-    setHourglassFromSeconds(remaining);
-  }
-  function stop(userInitiated = true) {
-    running = false;
-    updateButtons();
-    clearTimeout(ticker); ticker = null;
-    if (userInitiated) { /* no beep final */ }
-  }
-  function reset() {
-    stop(true);
-    remaining = total;
-    face.classList.remove("done");
-    setHourglassFromSeconds(remaining);
-    setProgressPercent(100);
-  }
+    inDur.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        applyDurationFromInput();
+      } else if (e.key.toLowerCase() === "r") {
+        e.preventDefault();
+        reset();
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        incMinute();
+      } else if (e.key === "ArrowDown") {
+        e.preventDefault();
+        decMinute();
+      }
+    });
+    inDur.addEventListener("blur", applyDurationFromInput);
 
-  /* --------- Cambiar duración --------- */
-  function setDurationSeconds(secs, { stopIfRunning = true } = {}) {
-    secs = clamp(Math.floor(secs), 1, 99 * 3600 + 59 * 60 + 59);
-    total = secs;
+    btnInc.addEventListener("click", incMinute);
+    btnDec.addEventListener("click", decMinute);
+
+    presets.addEventListener("click", (e) => {
+      const btn = e.target.closest("button.preset[data-seconds]");
+      if (!btn) return;
+      const secs = parseInt(btn.getAttribute("data-seconds"), 10);
+      if (Number.isFinite(secs)) {
+        setDurationSeconds(secs, { stopIfRunning: true });
+        // start(); // descomenta si quieres auto-arranque tras preset
+      }
+    });
+
+    // Atajos globales
+    document.addEventListener("keydown", (e) => {
+      const editing = document.activeElement === inDur;
+      if (e.code === "Space" || e.key === " ") {
+        if (!editing) {
+          e.preventDefault();
+          running ? pause() : start();
+        }
+      } else if (e.key?.toLowerCase() === "r") {
+        if (!editing) {
+          e.preventDefault();
+          reset();
+        }
+      } else if (e.key?.toLowerCase() === "f") {
+        if (!editing) {
+          e.preventDefault();
+          toggleFS();
+        }
+      }
+    });
+
+    // Init
+    setHourglassFromSeconds(remaining);
+    updateButtons();
     syncDurationInput();
-    if (running && !stopIfRunning) {
-      const now = Date.now();
-      const rem = Math.max(0, Math.ceil((deadline - now) / 1000));
-      const elapsed = clamp(total - rem, 0, total);
-      remaining = clamp(total - elapsed, 0, total);
-      deadline = now + remaining * 1000;
-    } else {
-      stop(true);
-      remaining = total;
-    }
-    face.classList.remove("done");
-    setHourglassFromSeconds(remaining);
     setProgressPercent(100);
-  }
-  function applyDurationFromInput() {
-    const secs = parseHMS(inDur.value);
-    if (secs == null || secs <= 0) return;
-    setDurationSeconds(secs, { stopIfRunning: true });
-  }
-  function incMinute() {
-    if (running) {
-      total = clamp(total + 60, 1, 99*3600 + 59*60 + 59);
-      syncDurationInput();
-      deadline += 60 * 1000;
-      const rem = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
-      setHourglassFromSeconds(rem);
-      updateProgress();
-    } else {
-      setDurationSeconds(total + 60, { stopIfRunning: true });
-    }
-  }
-  function decMinute() {
-    if (running) {
-      total = clamp(total - 60, 1, 99*3600 + 59*60 + 59);
-      syncDurationInput();
-      deadline -= 60 * 1000;
-      const rem = Math.max(1, Math.ceil((deadline - Date.now()) / 1000));
-      deadline = Date.now() + rem * 1000;
-      setHourglassFromSeconds(rem);
-      updateProgress();
-    } else {
-      setDurationSeconds(Math.max(1, total - 60), { stopIfRunning: true });
-    }
-  }
+    onFSChange();
 
-  /* --------- Pantalla completa --------- */
-  const isFS = () => document.fullscreenElement === root
-                 || document.webkitFullscreenElement === root
-                 || document.mozFullScreenElement === root;
-
-  async function enterFS() {
-    try {
-      if (root.requestFullscreen) await root.requestFullscreen({ navigationUI: "hide" });
-      else if (root.webkitRequestFullscreen) root.webkitRequestFullscreen();
-      else if (root.mozRequestFullScreen) root.mozRequestFullScreen();
-    } catch (e) { console.warn("[dt] No se pudo poner en pantalla completa:", e); }
-  }
-  async function exitFS() {
-    try {
-      if (document.fullscreenElement) await document.exitFullscreen();
-      else if (document.webkitFullscreenElement && document.webkitExitFullscreen) document.webkitExitFullscreen();
-      else if (document.mozFullScreenElement && document.mozCancelFullScreen) document.mozCancelFullScreen();
-    } catch (e) { console.warn("[dt] No se pudo salir de pantalla completa:", e); }
-  }
-  function toggleFS() { isFS() ? exitFS() : enterFS(); }
-  function onFSChange() {
-    if (isFS()) {
-      root.classList.add("is-fs");
-      btnFS.querySelector("i")?.classList.replace("fa-expand", "fa-compress");
-      btnFS.title = "Salir de pantalla completa (F)";
-      const lbl = btnFS.querySelector(".lbl"); if (lbl) lbl.textContent = "Salir de pant. completa";
-    } else {
-      root.classList.remove("is-fs");
-      btnFS.querySelector("i")?.classList.replace("fa-compress", "fa-expand");
-      btnFS.title = "Pantalla completa (F)";
-      const lbl = btnFS.querySelector(".lbl"); if (lbl) lbl.textContent = "";
-    }
-  }
-
-  /* --------- Eventos --------- */
-  btnStart.addEventListener("click", start);
-  btnPause.addEventListener("click", pause);
-  btnReset.addEventListener("click", reset);
-  btnFS.addEventListener("click", toggleFS);
-  btnFSx.addEventListener("click", exitFS);
-  document.addEventListener("fullscreenchange", onFSChange);
-
-  inDur.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") { e.preventDefault(); applyDurationFromInput(); }
-    else if (e.key.toLowerCase() === "r") { e.preventDefault(); reset(); }
-    else if (e.key === "ArrowUp") { e.preventDefault(); incMinute(); }
-    else if (e.key === "ArrowDown") { e.preventDefault(); decMinute(); }
-  });
-  inDur.addEventListener("blur", applyDurationFromInput);
-
-  btnInc.addEventListener("click", incMinute);
-  btnDec.addEventListener("click", decMinute);
-
-  presets.addEventListener("click", (e) => {
-    const btn = e.target.closest("button.preset[data-seconds]");
-    if (!btn) return;
-    const secs = parseInt(btn.getAttribute("data-seconds"), 10);
-    if (Number.isFinite(secs)) {
-      setDurationSeconds(secs, { stopIfRunning: true });
-      // start(); // descomenta si quieres auto-arranque tras preset
-    }
-  });
-
-  // Atajos globales
-  document.addEventListener("keydown", (e) => {
-    const editing = document.activeElement === inDur;
-    if (e.code === "Space" || e.key === " ") {
-      if (!editing) { e.preventDefault(); running ? pause() : start(); }
-    } else if (e.key?.toLowerCase() === "r") {
-      if (!editing) { e.preventDefault(); reset(); }
-    } else if (e.key?.toLowerCase() === "f") {
-      if (!editing) { e.preventDefault(); toggleFS(); }
-    }
-  });
-
-  // Init
-  setHourglassFromSeconds(remaining);
-  updateButtons();
-  syncDurationInput();
-  setProgressPercent(100);
-  onFSChange();
-
-  // Limpieza si #main se reemplaza
-  const cleanup = () => {
-    clearTimeout(ticker); ticker = null;
-    document.removeEventListener("fullscreenchange", onFSChange);
-  };
-  document.addEventListener("app:main-updated", cleanup, { once: true });
-})();
+    // Limpieza si #main se reemplaza
+    const cleanup = () => {
+      clearTimeout(ticker);
+      ticker = null;
+      document.removeEventListener("fullscreenchange", onFSChange);
+    };
+    document.addEventListener("app:main-updated", cleanup, { once: true });
+  })();
 </script>

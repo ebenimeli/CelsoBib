@@ -127,7 +127,7 @@
       gap: 8px;
       align-items: center;
       justify-content: space-between;
-      font-size: .95em;
+      font-size: 0.95em;
     }
 
     #ws-embed .muted {
@@ -140,10 +140,14 @@
       inset: 0;
       display: grid;
       place-items: center;
-      background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.6));
+      background: radial-gradient(
+        ellipse at center,
+        rgba(255, 255, 255, 0.88),
+        rgba(255, 255, 255, 0.6)
+      );
       opacity: 0;
       pointer-events: none;
-      transition: opacity .2s ease;
+      transition: opacity 0.2s ease;
     }
 
     #ws-embed .overlay.show {
@@ -156,7 +160,7 @@
       border: 1px solid #e7e7e7;
       border-radius: 12px;
       padding: 14px 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       text-align: center;
       max-width: 92%;
     }
@@ -242,9 +246,11 @@
 
     #ws-embed .overlay {
       /* ya es translúcido, pero en dark oscurecemos un poco más */
-      background: radial-gradient(ellipse at center,
-          color-mix(in oklab, var(--c-surface) 88%, transparent),
-          color-mix(in oklab, var(--c-surface) 60%, transparent));
+      background: radial-gradient(
+        ellipse at center,
+        color-mix(in oklab, var(--c-surface) 88%, transparent),
+        color-mix(in oklab, var(--c-surface) 60%, transparent)
+      );
     }
 
     #ws-embed .card {
@@ -259,14 +265,22 @@
 
     <div class="toolbar" role="toolbar" aria-label="Controles de juego">
       <div role="group" aria-label="Dificultad">
-        <button class="btn dif" data-dif="easy" aria-pressed="true">Fácil</button>
-        <button class="btn dif" data-dif="intermediate" aria-pressed="false">Intermedio</button>
-        <button class="btn dif" data-dif="difficult" aria-pressed="false">Difícil</button>
+        <button class="btn dif" data-dif="easy" aria-pressed="true">
+          Fácil
+        </button>
+        <button class="btn dif" data-dif="intermediate" aria-pressed="false">
+          Intermedio
+        </button>
+        <button class="btn dif" data-dif="difficult" aria-pressed="false">
+          Difícil
+        </button>
       </div>
       <button class="btn" id="ws-new">Nueva partida</button>
     </div>
 
-    <div class="desc" id="ws-desc">Elige dificultad y pulsa “Nueva partida”.</div>
+    <div class="desc" id="ws-desc">
+      Elige dificultad y pulsa “Nueva partida”.
+    </div>
 
     <div id="ws-grid" class="grid" aria-label="Tablero de letras"></div>
 
@@ -277,9 +291,15 @@
       </div>
 
       <div class="fallback" id="ws-fallback">
-        <p><strong>No se han encontrado archivos para esta dificultad.</strong> Pega aquí una lista (1ª línea:
-          descripción; resto: palabras) y pulsa “Nueva partida”.</p>
-        <textarea id="ws-custom" placeholder="Frutas&#10;Manzana&#10;Pera&#10;Plátano"></textarea>
+        <p>
+          <strong>No se han encontrado archivos para esta dificultad.</strong>
+          Pega aquí una lista (1ª línea: descripción; resto: palabras) y pulsa
+          “Nueva partida”.
+        </p>
+        <textarea
+          id="ws-custom"
+          placeholder="Frutas&#10;Manzana&#10;Pera&#10;Plátano"
+        ></textarea>
       </div>
     </div>
 
@@ -299,30 +319,30 @@
 
   <script>
     (() => {
-      const root = document.getElementById('ws-embed');
+      const root = document.getElementById("ws-embed");
       if (root.__mounted) return; // evita dobles montajes si se reinserta
       root.__mounted = true;
 
       // UI refs
-      const gridEl = document.getElementById('ws-grid');
-      const wordsEl = document.getElementById('ws-words');
-      const descEl = document.getElementById('ws-desc');
-      const statusEl = document.getElementById('ws-status');
-      const fileEl = document.getElementById('ws-file');
-      const overlayEl = document.getElementById('ws-overlay');
-      const summaryEl = document.getElementById('ws-summary');
-      const restartBtn = document.getElementById('ws-restart');
-      const difBtns = Array.from(root.querySelectorAll('.btn.dif'));
-      const newBtn = document.getElementById('ws-new');
-      const fallbackBox = document.getElementById('ws-fallback');
-      const customTA = document.getElementById('ws-custom');
+      const gridEl = document.getElementById("ws-grid");
+      const wordsEl = document.getElementById("ws-words");
+      const descEl = document.getElementById("ws-desc");
+      const statusEl = document.getElementById("ws-status");
+      const fileEl = document.getElementById("ws-file");
+      const overlayEl = document.getElementById("ws-overlay");
+      const summaryEl = document.getElementById("ws-summary");
+      const restartBtn = document.getElementById("ws-restart");
+      const difBtns = Array.from(root.querySelectorAll(".btn.dif"));
+      const newBtn = document.getElementById("ws-new");
+      const fallbackBox = document.getElementById("ws-fallback");
+      const customTA = document.getElementById("ws-custom");
 
       // Estado
-      let difficulty = 'easy';
+      let difficulty = "easy";
       let gridSize = 10;
-      let words = [];        // [{raw, norm, placed, cells:[{r,c}], found}]
+      let words = []; // [{raw, norm, placed, cells:[{r,c}], found}]
       let placedCount = 0;
-      let board = [];        // matriz letras
+      let board = []; // matriz letras
       let sel = { active: false, start: null, dir: null, path: [] };
 
       // Config por dificultad
@@ -332,15 +352,18 @@
         difficult: { size: 18, tryFiles: 3 },
       };
 
-      const ABC = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+      const ABC = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 
       // Normaliza tildes (preserva Ñ)
       function normalizeWord(s) {
         return s
-          .replace(/ñ/gi, m => m === 'ñ' ? '##enye##' : '##ENYE##')
-          .normalize('NFD').replace(/\p{Diacritic}/gu, '')
-          .replace(/##enye##/g, 'Ñ').replace(/##ENYE##/g, 'Ñ')
-          .toUpperCase().replace(/[^A-ZÑ]/g, '');
+          .replace(/ñ/gi, (m) => (m === "ñ" ? "##enye##" : "##ENYE##"))
+          .normalize("NFD")
+          .replace(/\p{Diacritic}/gu, "")
+          .replace(/##enye##/g, "Ñ")
+          .replace(/##ENYE##/g, "Ñ")
+          .toUpperCase()
+          .replace(/[^A-ZÑ]/g, "");
       }
 
       // ----------- Carga de archivo aleatorio -----------
@@ -350,9 +373,9 @@
         for (let i = 1; i <= maxTry; i++) {
           const url = `assets/main/crosswords/${dif}${i}.txt`;
           try {
-            const res = await fetch(url, { cache: 'no-store' });
+            const res = await fetch(url, { cache: "no-store" });
             if (res.ok) okList.push({ url, res });
-          } catch { }
+          } catch {}
         }
         if (okList.length === 0) return null;
         const k = (Math.random() * okList.length) | 0;
@@ -361,29 +384,50 @@
       }
 
       function parsePuzzleText(txt) {
-        const lines = txt.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
-        if (lines.length === 0) return { desc: '—', words: [] };
+        const lines = txt
+          .split(/\r?\n/)
+          .map((l) => l.trim())
+          .filter(Boolean);
+        if (lines.length === 0) return { desc: "—", words: [] };
         const desc = lines[0];
         const list = lines.slice(1);
-        const out = list.map(w => ({ raw: w, norm: normalizeWord(w), placed: false, cells: [], found: false }))
-          .filter(w => w.norm.length > 0);
+        const out = list
+          .map((w) => ({
+            raw: w,
+            norm: normalizeWord(w),
+            placed: false,
+            cells: [],
+            found: false,
+          }))
+          .filter((w) => w.norm.length > 0);
         return { desc, words: out };
       }
 
       // ----------- Construcción del tablero -----------
-      function emptyBoard(n) { return Array.from({ length: n }, () => Array.from({ length: n }, () => '')); }
+      function emptyBoard(n) {
+        return Array.from({ length: n }, () =>
+          Array.from({ length: n }, () => "")
+        );
+      }
 
       const DIRS = [
-        { dr: 0, dc: 1 }, { dr: 1, dc: 0 }, { dr: 0, dc: -1 }, { dr: -1, dc: 0 },
-        { dr: 1, dc: 1 }, { dr: -1, dc: 1 }, { dr: 1, dc: -1 }, { dr: -1, dc: -1 },
+        { dr: 0, dc: 1 },
+        { dr: 1, dc: 0 },
+        { dr: 0, dc: -1 },
+        { dr: -1, dc: 0 },
+        { dr: 1, dc: 1 },
+        { dr: -1, dc: 1 },
+        { dr: 1, dc: -1 },
+        { dr: -1, dc: -1 },
       ];
 
       function canPlace(word, r, c, dir, n) {
         for (let i = 0; i < word.length; i++) {
-          const rr = r + dir.dr * i, cc = c + dir.dc * i;
+          const rr = r + dir.dr * i,
+            cc = c + dir.dc * i;
           if (rr < 0 || rr >= n || cc < 0 || cc >= n) return false;
           const cell = board[rr][cc];
-          if (cell !== '' && cell !== word[i]) return false;
+          if (cell !== "" && cell !== word[i]) return false;
         }
         return true;
       }
@@ -392,41 +436,52 @@
         const W = wObj.norm;
         for (let tries = 0; tries < 200; tries++) {
           const dir = DIRS[(Math.random() * DIRS.length) | 0];
-          const r0 = (Math.random() * n) | 0, c0 = (Math.random() * n) | 0;
+          const r0 = (Math.random() * n) | 0,
+            c0 = (Math.random() * n) | 0;
           if (!canPlace(W, r0, c0, dir, n)) continue;
           const cells = [];
           for (let i = 0; i < W.length; i++) {
-            const rr = r0 + dir.dr * i, cc = c0 + dir.dc * i;
-            board[rr][cc] = W[i]; cells.push({ r: rr, c: cc });
+            const rr = r0 + dir.dr * i,
+              cc = c0 + dir.dc * i;
+            board[rr][cc] = W[i];
+            cells.push({ r: rr, c: cc });
           }
-          wObj.placed = true; wObj.cells = cells; return true;
+          wObj.placed = true;
+          wObj.cells = cells;
+          return true;
         }
         return false;
       }
 
       function fillFiller(n) {
-        for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) if (!board[r][c])
-          board[r][c] = ABC[(Math.random() * ABC.length) | 0];
+        for (let r = 0; r < n; r++)
+          for (let c = 0; c < n; c++)
+            if (!board[r][c])
+              board[r][c] = ABC[(Math.random() * ABC.length) | 0];
       }
 
       // ----------- Pintado -----------
       function drawBoard(n) {
         gridEl.style.gridTemplateColumns = `repeat(${n}, var(--cell))`;
-        gridEl.innerHTML = '';
-        for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) {
-          const d = document.createElement('div');
-          d.className = 'cell'; d.dataset.r = r; d.dataset.c = c;
-          d.textContent = board[r][c];
-          gridEl.appendChild(d);
-        }
+        gridEl.innerHTML = "";
+        for (let r = 0; r < n; r++)
+          for (let c = 0; c < n; c++) {
+            const d = document.createElement("div");
+            d.className = "cell";
+            d.dataset.r = r;
+            d.dataset.c = c;
+            d.textContent = board[r][c];
+            gridEl.appendChild(d);
+          }
       }
 
       function drawWordList() {
-        wordsEl.innerHTML = '';
+        wordsEl.innerHTML = "";
         for (const w of words) {
-          const li = document.createElement('li');
-          li.textContent = w.raw; li.dataset.word = w.norm;
-          if (w.found) li.classList.add('found');
+          const li = document.createElement("li");
+          li.textContent = w.raw;
+          li.dataset.word = w.norm;
+          if (w.found) li.classList.add("found");
           wordsEl.appendChild(li);
         }
         statusEl.textContent = `${placedCount}/${words.length} encontradas`;
@@ -434,51 +489,69 @@
 
       // ----------- Selección por arrastre (parche final) -----------
       function getCell(el) {
-        if (!el || !el.classList.contains('cell')) return null;
+        if (!el || !el.classList.contains("cell")) return null;
         return { r: +el.dataset.r, c: +el.dataset.c, el };
       }
       function cellFromPoint(x, y) {
         const el = document.elementFromPoint(x, y);
-        return getCell(el?.closest('.cell'));
+        return getCell(el?.closest(".cell"));
       }
       function paintSelection(path) {
-        gridEl.querySelectorAll('.cell.sel').forEach(el => el.classList.remove('sel'));
+        gridEl
+          .querySelectorAll(".cell.sel")
+          .forEach((el) => el.classList.remove("sel"));
         for (const p of path) {
-          const el = gridEl.querySelector(`.cell[data-r="${p.r}"][data-c="${p.c}"]`);
-          if (el) el.classList.add('sel');
+          const el = gridEl.querySelector(
+            `.cell[data-r="${p.r}"][data-c="${p.c}"]`
+          );
+          if (el) el.classList.add("sel");
         }
       }
       function clearSelection() {
-        sel.active = false; sel.start = null; sel.dir = null; sel.path.length = 0;
-        gridEl.querySelectorAll('.cell.sel').forEach(el => el.classList.remove('sel'));
+        sel.active = false;
+        sel.start = null;
+        sel.dir = null;
+        sel.path.length = 0;
+        gridEl
+          .querySelectorAll(".cell.sel")
+          .forEach((el) => el.classList.remove("sel"));
       }
-      function pathToString(path) { return path.map(p => board[p.r][p.c]).join(''); }
+      function pathToString(path) {
+        return path.map((p) => board[p.r][p.c]).join("");
+      }
       function tryMatchPath(path) {
         if (path.length < 2) return false;
         const s = pathToString(path);
-        const rs = s.split('').reverse().join('');
-        const target = words.find(w => !w.found && (w.norm === s || w.norm === rs));
+        const rs = s.split("").reverse().join("");
+        const target = words.find(
+          (w) => !w.found && (w.norm === s || w.norm === rs)
+        );
         if (!target) return false;
 
         // pinta celdas encontradas
         for (const p of path) {
-          const el = gridEl.querySelector(`.cell[data-r="${p.r}"][data-c="${p.c}"]`);
-          if (el) el.classList.add('found');
+          const el = gridEl.querySelector(
+            `.cell[data-r="${p.r}"][data-c="${p.c}"]`
+          );
+          if (el) el.classList.add("found");
         }
-        target.found = true; placedCount++;
+        target.found = true;
+        placedCount++;
         const li = wordsEl.querySelector(`li[data-word="${target.norm}"]`);
-        if (li) li.classList.add('found');
+        if (li) li.classList.add("found");
 
         statusEl.textContent = `${placedCount}/${words.length} encontradas`;
         if (placedCount === words.length) {
           summaryEl.textContent = `Has encontrado ${placedCount} palabras.`;
-          overlayEl.classList.add('show');
+          overlayEl.classList.add("show");
         }
         return true;
       }
-      function sign(n) { return n === 0 ? 0 : (n > 0 ? 1 : -1); }
+      function sign(n) {
+        return n === 0 ? 0 : n > 0 ? 1 : -1;
+      }
 
-      gridEl.addEventListener('pointerdown', (e) => {
+      gridEl.addEventListener("pointerdown", (e) => {
         const cell = getCell(e.target) || cellFromPoint(e.clientX, e.clientY);
         if (!cell) return;
         e.preventDefault();
@@ -491,7 +564,7 @@
         gridEl.setPointerCapture(e.pointerId);
       });
 
-      gridEl.addEventListener('pointermove', (e) => {
+      gridEl.addEventListener("pointermove", (e) => {
         if (!sel.active) return;
         const cell = cellFromPoint(e.clientX, e.clientY);
         if (!cell) return;
@@ -506,10 +579,12 @@
 
         // Reconstruye línea recta desde start hasta la celda actual
         const path = [];
-        let r = sel.start.r, c = sel.start.c;
+        let r = sel.start.r,
+          c = sel.start.c;
         path.push({ r, c });
         while (r !== cell.r || c !== cell.c) {
-          r += sel.dir.dr; c += sel.dir.dc;
+          r += sel.dir.dr;
+          c += sel.dir.dc;
           if (r < 0 || r >= gridSize || c < 0 || c >= gridSize) break;
           path.push({ r, c });
           // El “snap” mantiene el trazo recto aunque el dedo vaya zigzagueando
@@ -518,32 +593,32 @@
         paintSelection(sel.path);
       });
 
-      gridEl.addEventListener('pointerup', (e) => {
+      gridEl.addEventListener("pointerup", (e) => {
         if (!sel.active) return;
         tryMatchPath(sel.path);
         clearSelection();
         gridEl.releasePointerCapture(e.pointerId);
       });
-      gridEl.addEventListener('pointercancel', clearSelection);
+      gridEl.addEventListener("pointercancel", clearSelection);
 
       // ----------- Controles y flujo -----------
-      restartBtn.addEventListener('click', () => startNewGame(difficulty));
+      restartBtn.addEventListener("click", () => startNewGame(difficulty));
 
-      difBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          difBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
-          btn.setAttribute('aria-pressed', 'true');
+      difBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          difBtns.forEach((b) => b.setAttribute("aria-pressed", "false"));
+          btn.setAttribute("aria-pressed", "true");
           difficulty = btn.dataset.dif;
         });
       });
 
-      newBtn.addEventListener('click', () => startNewGame(difficulty));
+      newBtn.addEventListener("click", () => startNewGame(difficulty));
 
       async function startNewGame(dif) {
-        overlayEl.classList.remove('show');
-        fileEl.textContent = '';
-        descEl.textContent = 'Cargando…';
-        fallbackBox.style.display = 'none';
+        overlayEl.classList.remove("show");
+        fileEl.textContent = "";
+        descEl.textContent = "Cargando…";
+        fallbackBox.style.display = "none";
 
         const cfg = CFG[dif] || CFG.easy;
         gridSize = cfg.size;
@@ -552,12 +627,15 @@
         if (!data) {
           const txt = customTA.value.trim();
           if (!txt) {
-            fallbackBox.style.display = 'grid';
-            descEl.textContent = 'No hay archivos disponibles para esta dificultad.';
-            gridEl.innerHTML = ''; wordsEl.innerHTML = ''; statusEl.textContent = '0/0 encontradas';
+            fallbackBox.style.display = "grid";
+            descEl.textContent =
+              "No hay archivos disponibles para esta dificultad.";
+            gridEl.innerHTML = "";
+            wordsEl.innerHTML = "";
+            statusEl.textContent = "0/0 encontradas";
             return;
           }
-          data = { url: '(personalizado)', text: txt };
+          data = { url: "(personalizado)", text: txt };
         }
 
         const parsed = parsePuzzleText(data.text);
@@ -573,14 +651,30 @@
         for (let grow = 0; grow < 3 && !success; grow++) {
           const n = gridSize + grow * 2;
           board = emptyBoard(n);
-          const byLen = [...words].sort((a, b) => b.norm.length - a.norm.length);
-          byLen.forEach(w => { w.placed = false; w.cells = []; });
+          const byLen = [...words].sort(
+            (a, b) => b.norm.length - a.norm.length
+          );
+          byLen.forEach((w) => {
+            w.placed = false;
+            w.cells = [];
+          });
           let allOk = true;
-          for (const w of byLen) { if (!placeWord(w, n)) { allOk = false; break; } }
+          for (const w of byLen) {
+            if (!placeWord(w, n)) {
+              allOk = false;
+              break;
+            }
+          }
           if (allOk) {
-            const placedMap = Object.fromEntries(byLen.map(w => [w.norm, w]));
-            words.forEach(w => { const ref = placedMap[w.norm]; w.placed = ref.placed; w.cells = ref.cells; });
-            fillFiller(n); gridSize = n; success = true;
+            const placedMap = Object.fromEntries(byLen.map((w) => [w.norm, w]));
+            words.forEach((w) => {
+              const ref = placedMap[w.norm];
+              w.placed = ref.placed;
+              w.cells = ref.cells;
+            });
+            fillFiller(n);
+            gridSize = n;
+            success = true;
           }
         }
 
@@ -588,20 +682,34 @@
           // Quita 2 palabras largas y reintenta en tamaño base
           const n = gridSize;
           board = emptyBoard(n);
-          const reduced = [...words].sort((a, b) => b.norm.length - a.norm.length).slice(2);
-          reduced.forEach(w => { w.placed = false; w.cells = []; });
+          const reduced = [...words]
+            .sort((a, b) => b.norm.length - a.norm.length)
+            .slice(2);
+          reduced.forEach((w) => {
+            w.placed = false;
+            w.cells = [];
+          });
           let allOk = true;
-          for (const w of reduced) { if (!placeWord(w, n)) { allOk = false; break; } }
+          for (const w of reduced) {
+            if (!placeWord(w, n)) {
+              allOk = false;
+              break;
+            }
+          }
           if (!allOk) {
-            descEl.textContent = 'No se pudo construir el tablero con las palabras dadas.';
-            gridEl.innerHTML = ''; wordsEl.innerHTML = ''; statusEl.textContent = '0/0 encontradas';
+            descEl.textContent =
+              "No se pudo construir el tablero con las palabras dadas.";
+            gridEl.innerHTML = "";
+            wordsEl.innerHTML = "";
+            statusEl.textContent = "0/0 encontradas";
             return;
           }
-          words = reduced; fillFiller(n);
+          words = reduced;
+          fillFiller(n);
         }
 
         // Reset encontrados
-        words.forEach(w => w.found = false);
+        words.forEach((w) => (w.found = false));
         placedCount = 0;
 
         // Pintar

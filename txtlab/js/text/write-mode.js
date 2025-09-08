@@ -5,7 +5,10 @@ import { syncSoundButtons } from "./write-audio.js";
 // Exported API
 export function initWriteMode() {
   // Reaplica traducción (si está disponible global)
-  if (typeof loadLocale === "function" && typeof getCurrentLang === "function") {
+  if (
+    typeof loadLocale === "function" &&
+    typeof getCurrentLang === "function"
+  ) {
     loadLocale(getCurrentLang());
   }
 
@@ -25,36 +28,47 @@ export function initWriteMode() {
   if (imenu) {
     Array.from(imenu.children).forEach((el) => el.classList.add("is-hidden"));
     ["copyi", "pastei", "cleanleft"].forEach((action) => {
-      imenu.querySelector(`button[data-action="${action}"]`)?.classList.remove("is-hidden");
+      imenu
+        .querySelector(`button[data-action="${action}"]`)
+        ?.classList.remove("is-hidden");
     });
   }
-  document.querySelector('button[data-action="lefttoright"]')?.classList.add("is-hidden");
+  document
+    .querySelector('button[data-action="lefttoright"]')
+    ?.classList.add("is-hidden");
 
   // --- Referencias UI requeridas ---
-  const inputGoal    = document.getElementById("nwords");
-  const goalWords    = document.getElementById("goalWords");
+  const inputGoal = document.getElementById("nwords");
+  const goalWords = document.getElementById("goalWords");
   const currentWords = document.getElementById("currentWords");
-  const percWords    = document.getElementById("percWords");
-  const progress     = document.getElementById("writeprogress");
-  const textInput    = document.getElementById("itext");
-  const timerEl      = document.getElementById("timer");
-  const successDlg   = document.getElementById("success-dialog");
-  const quoteEl      = document.querySelector(".quote");
-  const wpmEl        = document.querySelector(".wpm");
+  const percWords = document.getElementById("percWords");
+  const progress = document.getElementById("writeprogress");
+  const textInput = document.getElementById("itext");
+  const timerEl = document.getElementById("timer");
+  const successDlg = document.getElementById("success-dialog");
+  const quoteEl = document.querySelector(".quote");
+  const wpmEl = document.querySelector(".wpm");
 
-  const btnPlay  = document.getElementById("timer-play");
+  const btnPlay = document.getElementById("timer-play");
   const btnPause = document.getElementById("timer-pause");
   const btnReset = document.getElementById("timer-reset");
 
   const successGoal = document.getElementById("success-goal");
   const successTime = document.getElementById("success-time");
-  const shareX   = document.getElementById("share-x");
-  const shareWA  = document.getElementById("share-wa");
-  const shareMail= document.getElementById("share-mail");
+  const shareX = document.getElementById("share-x");
+  const shareWA = document.getElementById("share-wa");
+  const shareMail = document.getElementById("share-mail");
 
   const SITE_URL = "https://www.ebenimeli.org/txtlab/";
 
-  if (!inputGoal || !goalWords || !currentWords || !progress || !textInput || !timerEl) {
+  if (
+    !inputGoal ||
+    !goalWords ||
+    !currentWords ||
+    !progress ||
+    !textInput ||
+    !timerEl
+  ) {
     console.warn("[write] UI aún no montada; initWriteMode() aborta.");
     return;
   }
@@ -148,7 +162,7 @@ export function initWriteMode() {
   function updateShareLinks(goal, naturalTime) {
     const text = `🎉 ¡He alcanzado mi objetivo de escribir ${goal} palabras! He estado ${naturalTime} escribiendo con txtlab: ${SITE_URL}`;
     const enc = encodeURIComponent(text);
-    if (shareX)  shareX.href  = `https://x.com/intent/tweet?text=${enc}`;
+    if (shareX) shareX.href = `https://x.com/intent/tweet?text=${enc}`;
     if (shareWA) shareWA.href = `https://api.whatsapp.com/send?text=${enc}`;
     if (shareMail) {
       const subject = encodeURIComponent("¡Objetivo de escritura alcanzado!");
@@ -173,7 +187,8 @@ export function initWriteMode() {
     (__fsWrap && __fsWrap.classList.contains("concentration-overlay"));
   let __wordFloat = null;
   const updateWordFloat = (n) => {
-    if (__wordFloat && __wordFloat.isConnected) __wordFloat.textContent = String(n);
+    if (__wordFloat && __wordFloat.isConnected)
+      __wordFloat.textContent = String(n);
   };
 
   function updateCurrent() {
@@ -207,8 +222,8 @@ export function initWriteMode() {
 
   /* ── Modo concentración (Fullscreen robusto) ──────── */
   const focusBtn = document.getElementById("focus-mode");
-  const itxt     = document.getElementById("itext");
-  let __fsWrap   = null;
+  const itxt = document.getElementById("itext");
+  let __fsWrap = null;
   let __closeBtn = null;
 
   // Guardamos dónde estaba el textarea para restaurarlo
@@ -256,7 +271,9 @@ export function initWriteMode() {
       if (__origNext) __origParent.insertBefore(itxt, __origNext);
       else __origParent.appendChild(itxt);
     }
-    try { __fsWrap.remove(); } catch {}
+    try {
+      __fsWrap.remove();
+    } catch {}
     __fsWrap = null;
   };
 
@@ -267,14 +284,17 @@ export function initWriteMode() {
       const cs = getComputedStyle(itxt);
       const fg = (cs.getPropertyValue("--write-fg") || cs.color).trim();
       __wordFloat.style.color = fg;
-      if (document.fullscreenElement === __fsWrap) __fsWrap.appendChild(__wordFloat);
+      if (document.fullscreenElement === __fsWrap)
+        __fsWrap.appendChild(__wordFloat);
       else document.body.appendChild(__wordFloat);
     }
     __wordFloat.textContent = String(n);
   };
   const hideWordFloat = () => {
     if (!__wordFloat) return;
-    try { __wordFloat.remove(); } catch {}
+    try {
+      __wordFloat.remove();
+    } catch {}
     __wordFloat = null;
   };
 
@@ -298,7 +318,9 @@ export function initWriteMode() {
   };
   const hideCloseBtn = () => {
     if (!__closeBtn) return;
-    try { __closeBtn.remove(); } catch {}
+    try {
+      __closeBtn.remove();
+    } catch {}
     __closeBtn = null;
   };
 
@@ -329,7 +351,9 @@ export function initWriteMode() {
   }
 
   if (window.__wmFocusCleanup) {
-    try { window.__wmFocusCleanup(); } catch {}
+    try {
+      window.__wmFocusCleanup();
+    } catch {}
     window.__wmFocusCleanup = null;
   }
 
@@ -359,7 +383,9 @@ export function initWriteMode() {
   };
 
   const exitConcentration = () => {
-    try { if (document.fullscreenElement) document.exitFullscreen?.(); } catch {}
+    try {
+      if (document.fullscreenElement) document.exitFullscreen?.();
+    } catch {}
     document.body.classList.remove("concentration-active");
     __fsWrap?.classList.remove("concentration-overlay");
     setFullscreenTextareaStyles(false);
@@ -384,10 +410,14 @@ export function initWriteMode() {
     } else if (document.fullscreenElement === __fsWrap) {
       // Asegura que la UI auxiliar vive dentro del subárbol fullscreen
       if (__wordFloat && __wordFloat.parentNode !== __fsWrap) {
-        try { __fsWrap.appendChild(__wordFloat); } catch {}
+        try {
+          __fsWrap.appendChild(__wordFloat);
+        } catch {}
       }
       if (__closeBtn && __closeBtn.parentNode !== __fsWrap) {
-        try { __fsWrap.appendChild(__closeBtn); } catch {}
+        try {
+          __fsWrap.appendChild(__closeBtn);
+        } catch {}
       }
       ensureMobileCloseBtn(__fsWrap, exitConcentration);
       setFullscreenTextareaStyles(true);
@@ -459,7 +489,10 @@ export function exitWriteMode() {
   });
 
   const imenu = document.getElementById("imenu");
-  if (imenu) Array.from(imenu.children).forEach((el) => el.classList.remove("is-hidden"));
+  if (imenu)
+    Array.from(imenu.children).forEach((el) =>
+      el.classList.remove("is-hidden")
+    );
 
   const main = document.getElementById("main");
   main?.style.removeProperty("display");
@@ -468,14 +501,18 @@ export function exitWriteMode() {
   main?.style.removeProperty("align-items");
 
   if (window.__wmFocusCleanup) {
-    try { window.__wmFocusCleanup(); } catch {}
+    try {
+      window.__wmFocusCleanup();
+    } catch {}
     window.__wmFocusCleanup = null;
   }
 
   resetSchemeToTheme();
 
   if (window.__wmInterval) {
-    try { clearInterval(window.__wmInterval); } catch {}
+    try {
+      clearInterval(window.__wmInterval);
+    } catch {}
     window.__wmInterval = null;
   }
 }

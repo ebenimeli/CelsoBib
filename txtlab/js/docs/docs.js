@@ -17,7 +17,7 @@ export async function loadDoc(fileOrId) {
   }
 
   const file = fileOrId.endsWith(".html") ? fileOrId : `${fileOrId}.html`;
-  const url  = `assets/docs/${file}`;
+  const url = `assets/docs/${file}`;
 
   // Estado accesible de carga
   const prevHTML = main.innerHTML;
@@ -54,10 +54,15 @@ export async function loadDoc(fileOrId) {
 
     // Notificar actualización de #main
     const id = file.replace(/\.html$/i, "");
-    document.dispatchEvent(new CustomEvent("app:main-updated", { detail: { id } }));
+    document.dispatchEvent(
+      new CustomEvent("app:main-updated", { detail: { id } })
+    );
 
     // Enfocar algo accionable
-    (main.querySelector("[autofocus], button, a, input, select, textarea") || main).focus?.();
+    (
+      main.querySelector("[autofocus], button, a, input, select, textarea") ||
+      main
+    ).focus?.();
 
     return true;
   } catch (err) {
@@ -81,7 +86,7 @@ export function initDocsDelegation() {
     if (!container) return;
 
     // 2) Localiza el botón objetivo dentro de ese contenedor
-    const btn = e.target.closest('button.action[data-file]');
+    const btn = e.target.closest("button.action[data-file]");
     if (!btn || !container.contains(btn)) return;
 
     // 3) Carga el documento

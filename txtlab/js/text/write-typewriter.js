@@ -8,16 +8,20 @@ function updateTypewriterUI(root = document) {
 
   btn.classList.toggle("is-on", __twEnabled);
   btn.setAttribute("aria-pressed", String(__twEnabled));
-  btn.title = __twEnabled ? "Desactivar sonido de máquina de escribir"
-                          : "Activar sonido de máquina de escribir";
+  btn.title = __twEnabled
+    ? "Desactivar sonido de máquina de escribir"
+    : "Activar sonido de máquina de escribir";
 
   const icon = btn.querySelector("i");
-  const lbl  = btn.querySelector(".lbl");
-  const onTxt  = btn.dataset.labelOn  || "Escuchar teclas";
+  const lbl = btn.querySelector(".lbl");
+  const onTxt = btn.dataset.labelOn || "Escuchar teclas";
   const offTxt = btn.dataset.labelOff || "Silenciar teclas";
 
-  if (icon) icon.className = __twEnabled ? "fa-solid fa-volume-high" : "fa-solid fa-keyboard";
-  if (lbl)  lbl.textContent = __twEnabled ? onTxt : offTxt;
+  if (icon)
+    icon.className = __twEnabled
+      ? "fa-solid fa-volume-high"
+      : "fa-solid fa-keyboard";
+  if (lbl) lbl.textContent = __twEnabled ? onTxt : offTxt;
 
   if (__twEnabled && !btn.querySelector(".state-dot")) {
     const d = document.createElement("span");
@@ -34,7 +38,12 @@ function ensureTypewriterWired(root = document) {
   if (!ta) return false;
 
   const src = `${MEDIA_BASE}typing1.mp3`;
-  const mk = () => { const a = new Audio(src); a.preload = "auto"; a.volume = 0.5; return a; };
+  const mk = () => {
+    const a = new Audio(src);
+    a.preload = "auto";
+    a.volume = 0.5;
+    return a;
+  };
   const pool = [mk(), mk(), mk(), mk()];
   let idx = 0;
 
@@ -42,15 +51,23 @@ function ensureTypewriterWired(root = document) {
     if (!__twEnabled) return;
     if (ev.ctrlKey || ev.metaKey || ev.altKey) return;
     const a = pool[idx++ % pool.length];
-    try { a.currentTime = 0; a.play(); } catch {}
+    try {
+      a.currentTime = 0;
+      a.play();
+    } catch {}
   };
 
   ta.addEventListener("keydown", onKey);
 
   const prev = window.__wmTypeCleanup;
   window.__wmTypeCleanup = () => {
-    try { ta.removeEventListener("keydown", onKey); } catch {}
-    if (prev) try { prev(); } catch {}
+    try {
+      ta.removeEventListener("keydown", onKey);
+    } catch {}
+    if (prev)
+      try {
+        prev();
+      } catch {}
     ensureTypewriterWired._wired = false;
   };
 

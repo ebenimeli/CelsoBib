@@ -67,7 +67,7 @@
   button#focus-mode {
     display: none;
   }
-  
+
   .container #topleft {
     border-bottom: 3px solid black;
   }
@@ -102,7 +102,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 44px;     /* tamaño cómodo de botón táctil */
+    width: 44px; /* tamaño cómodo de botón táctil */
     height: 44px;
     padding: 0;
     line-height: 1;
@@ -121,11 +121,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 56px;          /* ajusta 44–56 según prefieras */
+    width: 56px; /* ajusta 44–56 según prefieras */
     height: 56px;
-    padding: 0;           /* quita relleno por defecto en iOS */
+    padding: 0; /* quita relleno por defecto en iOS */
     line-height: 1;
-    aspect-ratio: 1 / 1;  /* mantiene cuadrado si cambias tamaño */
+    aspect-ratio: 1 / 1; /* mantiene cuadrado si cambias tamaño */
     vertical-align: middle;
   }
   .container header button i,
@@ -134,7 +134,7 @@
   .container header .tool svg {
     display: block;
     line-height: 1;
-    font-size: 1.6rem;    /* ajusta tamaño del icono */
+    font-size: 1.6rem; /* ajusta tamaño del icono */
     pointer-events: none; /* el clic cuenta sobre el botón */
   }
   /* === fin header móvil === */
@@ -208,9 +208,9 @@
 #topleft .productlogo {
   width: 30%;
   display: flex;
-  align-items: center;       /* centra verticalmente */
-  justify-content: center;   /* centra horizontalmente */
-  margin: 0 auto;            /* asegura centrado si hay espacio libre */
+  align-items: center; /* centra verticalmente */
+  justify-content: center; /* centra horizontalmente */
+  margin: 0 auto; /* asegura centrado si hay espacio libre */
 }
 
 .container #topleft a i:hover {
@@ -266,9 +266,9 @@
 /* Cuando #main contiene un juego o un documento, usa flujo */
 #main:has(.game-root),
 #main:has(.document) {
-  display: block;           /* o flex; flex-direction: column; */
-  grid-template: none;      /* anula las pistas del grid */
-  height: auto;             /* crece con el contenido */
+  display: block; /* o flex; flex-direction: column; */
+  grid-template: none; /* anula las pistas del grid */
+  height: auto; /* crece con el contenido */
   min-height: var(--h-min-main); /* conservas tu mínimo si quieres */
 }
 
@@ -300,16 +300,22 @@
 }
 
 /* Colocación por defecto en el grid del main */
-#imenu { grid-column: 1; grid-row: 1; }
-#omenu { grid-column: 2; grid-row: 1; }
+#imenu {
+  grid-column: 1;
+  grid-row: 1;
+}
+#omenu {
+  grid-column: 2;
+  grid-row: 1;
+}
 
 /* Si hay #imenu pero NO hay #omenu, que #imenu ocupe 100% */
 @supports selector(:has(*)) {
   #main:has(#imenu):not(:has(#omenu)) {
-    grid-template-columns: 1fr;       /* (opcional) convierte el grid en 1 columna */
+    grid-template-columns: 1fr; /* (opcional) convierte el grid en 1 columna */
   }
   #main:has(#imenu):not(:has(#omenu)) #imenu {
-    grid-column: 1 / -1;              /* que abarque todas las columnas disponibles */
+    grid-column: 1 / -1; /* que abarque todas las columnas disponibles */
   }
 }
 
@@ -322,4 +328,26 @@ section.document {
   grid-column: 1 / -1;
   display: block;
   min-height: 500px;
+}
+
+/* Cuando #main contiene el lector accesible, usa flujo normal */
+#main:has(#read-accessible) {
+  display: block; /* o flex; flex-direction: column; */
+  grid-template: none; /* anula el grid de 2 columnas */
+  height: auto; /* crece con el contenido */
+  min-height: var(--h-min-main);
+  overflow: auto; /* scroll vertical si lo necesita */
+}
+
+/* Cuando #main contiene una cabecera (hero) */
+#main:has(.section-wrap) {
+  display: block; /* apaga el grid */
+  grid-template: none;
+  height: auto;
+  min-height: var(--h-min-main);
+}
+
+.section-wrap img {
+  width: 100%;
+  border-radius: 15px;
 }

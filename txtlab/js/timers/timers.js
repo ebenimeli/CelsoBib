@@ -17,7 +17,7 @@ export async function loadTimer(fileOrId) {
   }
 
   const file = fileOrId.endsWith(".html") ? fileOrId : `${fileOrId}.html`;
-  const url  = `assets/timers/${file}`;
+  const url = `assets/timers/${file}`;
 
   // Estado accesible de carga
   const prevHTML = main.innerHTML;
@@ -32,7 +32,9 @@ export async function loadTimer(fileOrId) {
       main.innerHTML = prevHTML;
       if (prevBusy === null) main.removeAttribute("aria-busy");
       else main.setAttribute("aria-busy", prevBusy);
-      console.warn(`[loadTimer] No se pudo cargar ${url} (HTTP ${res.status}).`);
+      console.warn(
+        `[loadTimer] No se pudo cargar ${url} (HTTP ${res.status}).`
+      );
       return false;
     }
 
@@ -40,14 +42,19 @@ export async function loadTimer(fileOrId) {
 
     // 1) Avisar al módulo anterior para que haga cleanup ANTES de reemplazar #main
     const id = file.replace(/\.html$/i, "");
-    document.dispatchEvent(new CustomEvent("app:main-updated", { detail: { id } }));
+    document.dispatchEvent(
+      new CustomEvent("app:main-updated", { detail: { id } })
+    );
 
     // 2) Insertar HTML y ejecutar <script> embebidos
     main.innerHTML = html;
     runScripts(main);
 
     // 3) Enfocar algo accionable
-    (main.querySelector("[autofocus], button, a, input, select, textarea") || main).focus?.();
+    (
+      main.querySelector("[autofocus], button, a, input, select, textarea") ||
+      main
+    ).focus?.();
 
     return true;
   } catch (err) {

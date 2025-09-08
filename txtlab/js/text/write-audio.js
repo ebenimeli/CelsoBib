@@ -16,7 +16,9 @@ export function setSavedVolume(v) {
 function ensureBgAudio(fileKey = "rainthunder") {
   const key = String(fileKey).trim() || "rainthunder";
   if (!bgAudio || currentBgKey !== key) {
-    try { bgAudio?.pause(); } catch {}
+    try {
+      bgAudio?.pause();
+    } catch {}
     bgAudio = new Audio(`${MEDIA_BASE}${key}.mp3`);
     bgAudio.loop = true;
     bgAudio.preload = "auto";
@@ -25,7 +27,7 @@ function ensureBgAudio(fileKey = "rainthunder") {
     localStorage.setItem("write.bgKey", currentBgKey);
     bgAudio.addEventListener("ended", () => syncSoundButtons(document));
     bgAudio.addEventListener("pause", () => syncSoundButtons(document));
-    bgAudio.addEventListener("play",  () => syncSoundButtons(document));
+    bgAudio.addEventListener("play", () => syncSoundButtons(document));
   }
   return bgAudio;
 }
@@ -43,13 +45,19 @@ export function syncSoundButtons(root = document) {
 export async function soundOn(btn) {
   const key = (btn?.dataset?.file || "rainthunder").trim();
   const bg = ensureBgAudio(key);
-  try { await bg.play(); } catch (e) { console.warn("[sound] play()", e); }
+  try {
+    await bg.play();
+  } catch (e) {
+    console.warn("[sound] play()", e);
+  }
   syncSoundButtons(document);
 }
 
 export function soundOff() {
   if (!bgAudio) return;
-  try { bgAudio.pause(); } catch {}
+  try {
+    bgAudio.pause();
+  } catch {}
   syncSoundButtons(document);
 }
 

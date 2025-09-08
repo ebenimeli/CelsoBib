@@ -48,6 +48,7 @@
   <link rel="stylesheet" href="css/04-dialogs.css">
   <link rel="stylesheet" href="css/05-utilities.css">
   <link rel="stylesheet" href="css/06-format.css">
+  <link rel="stylesheet" href="css/07-reader-accessible.css">
   <link rel="stylesheet" href="css/99-theme.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -92,7 +93,11 @@
         <i class="fa-solid fa-book"></i>
       </button>
       -->
-      
+
+      <button class="tool" data-target="#edu" data-i18n-title="" title="Educación">
+        <i class="fa-solid fa-chalkboard-user"></i>
+      </button>
+
       <!-- GAMES -->
       <button class="tool" data-target="#games" data-i18n-title="" title="Juegos">
         <i class="fa-solid fa-gamepad"></i>
@@ -123,15 +128,13 @@
         <button class="action" data-action="crosswords" data-i18n="game_crosswords">
           Sopa de letras
         </button>
-
         <button class="action" data-action="snakepong" data-i18n="">
           SnakePong!
         </button>
-    
       </div>
     </template>
 
-    <!-- TEMPLATE: DOCS -->
+    <!-- TEMPLATE: TIMER -->
 
     <template id="timer">
 
@@ -176,15 +179,47 @@
       </div>
     </template>
 
+    <!-- TEMPLATE: EDU -->
+
+    <template id="edu">
+      <button class="action" data-target="#resources" data-i18n="">Recursos</button>
+      <div id="resources" class="toolset">
+        <button class="action" data-file="comingsoon.html" data-i18n="">
+          Próximamente
+        </button>
+      </div>
+          <button class="action" data-target="#evaluation" data-i18n="">Evaluación</button>
+      <div id="evaluation" class="toolset">
+        <button class="action" data-file="comingsoon.html" data-i18n="">
+          Próximamente
+        </button>
+      </div>
+      <button class="action" data-target="#diversity" data-i18n="">Diversidad</button>
+      <div id="diversity" class="toolset">
+        <button class="action" data-file="accessibility.html" data-i18n="">
+          Lector accesible
+        </button>
+      </div>
+      <button class="action" data-target="#digcomp" data-i18n="">TIC/TAC</button>
+      <div id="digcomp" class="toolset">
+        <button class="action" data-file="comingsoon.html" data-i18n="">
+          Próximamente
+        </button>
+      </div>
+    </template>
+
     <!-- TEMPLATE: DOCS -->
 
+    <!--
     <template id="docs">
       <button class="action" data-target="#documentation" data-i18n="docs_menu_title">Documentación</button>
       <div id="documentation" class="toolset">
         <button class="action" data-file="lists.html" data-i18n="docs_lists">
           Listas
         </button>
+      </div>
     </template>
+    -->
 
     <!-- WRITE -->
     <template id="write-mode">

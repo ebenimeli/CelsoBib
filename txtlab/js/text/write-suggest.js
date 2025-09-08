@@ -1,8 +1,10 @@
 // js/text/write-suggest.js
-const WORDS_BASE       = "assets/data/words/";
-const WORDS_BASE_PATH  = "assets/data/words/";
+const WORDS_BASE = "assets/data/words/";
+const WORDS_BASE_PATH = "assets/data/words/";
 
-function pickRandom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+function pickRandom(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
 function getEditorTextarea() {
   return document.querySelector("#text") || document.querySelector("#itext");
 }
@@ -21,7 +23,10 @@ export function suggestWord() {
       return res.text();
     })
     .then((text) => {
-      const lines = text.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+      const lines = text
+        .split(/\r?\n/)
+        .map((l) => l.trim())
+        .filter(Boolean);
       if (!lines.length) return;
       const word = pickRandom(lines);
       const needsSpace = ta.value.length > 0 && !/\s$/.test(ta.value);
@@ -32,7 +37,9 @@ export function suggestWord() {
     .catch((err) => console.error("[suggestWord] Error:", err));
 }
 
-function pickRandomLine(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+function pickRandomLine(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
 function addToItext(snippet) {
   const ta = document.getElementById("itext");
   if (!ta || !snippet) return;
@@ -44,11 +51,15 @@ function readRandomLine(fileName) {
   const url = WORDS_BASE_PATH + fileName;
   return fetch(url, { cache: "no-store" })
     .then((res) => {
-      if (!res.ok) throw new Error(`[readRandomLine] No se pudo cargar: ${url}`);
+      if (!res.ok)
+        throw new Error(`[readRandomLine] No se pudo cargar: ${url}`);
       return res.text();
     })
     .then((text) => {
-      const lines = text.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+      const lines = text
+        .split(/\r?\n/)
+        .map((l) => l.trim())
+        .filter(Boolean);
       if (!lines.length) return null;
       return pickRandomLine(lines);
     });
@@ -73,11 +84,21 @@ function suggestFromFileName(tag, file) {
     .catch((err) => console.error("[suggestFromFile]", err));
 }
 
-export function suggestCharacter(btn) { return suggestFromFile(btn); }
-export function suggestPlace(btn)     { return suggestFromFile(btn); }
-export function suggestTime(btn)      { return suggestFromFile(btn); }
-export function suggestFeeling(btn)   { return suggestFromFile(btn); }
-export function suggestConflict(btn)  { return suggestFromFile(btn); }
+export function suggestCharacter(btn) {
+  return suggestFromFile(btn);
+}
+export function suggestPlace(btn) {
+  return suggestFromFile(btn);
+}
+export function suggestTime(btn) {
+  return suggestFromFile(btn);
+}
+export function suggestFeeling(btn) {
+  return suggestFromFile(btn);
+}
+export function suggestConflict(btn) {
+  return suggestFromFile(btn);
+}
 export function suggestAll() {
   suggestFromFileName("Personaje", "characters.txt");
   suggestFromFileName("Lugar", "places.txt");

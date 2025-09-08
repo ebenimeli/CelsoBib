@@ -10,20 +10,32 @@ if (!window.__wmBootstrapped) {
 
     // Limpia timer huérfano si lo hubiera
     if (window.__wmInterval) {
-      try { clearInterval(window.__wmInterval); } catch {}
+      try {
+        clearInterval(window.__wmInterval);
+      } catch {}
       window.__wmInterval = null;
     }
 
     if (id === "write-mode") {
-      const ready = await waitForSelectors(["#itext", "#nwords", "#writeprogress", "#timer"]);
+      const ready = await waitForSelectors([
+        "#itext",
+        "#nwords",
+        "#writeprogress",
+        "#timer",
+      ]);
       if (!ready) {
         console.warn("[write] UI no encontrada tras cargar write-mode.html");
         return;
       }
-      try { initWriteMode(); } catch (err) { console.warn(err); }
+      try {
+        initWriteMode();
+      } catch (err) {
+        console.warn(err);
+      }
     } else {
-      try { exitWriteMode(); } catch {}
+      try {
+        exitWriteMode();
+      } catch {}
     }
   });
 }
-

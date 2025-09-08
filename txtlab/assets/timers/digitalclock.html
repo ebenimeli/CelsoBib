@@ -3,7 +3,9 @@
   <div class="timer-controls" role="toolbar" aria-label="Controles del reloj">
     <h2 id="dt-title" class="sr-only">Reloj digital con avisos</h2>
 
-    <label for="dt-duration" class="sr-only">Intervalo de aviso (h:mm:ss o mm:ss)</label>
+    <label for="dt-duration" class="sr-only"
+      >Intervalo de aviso (h:mm:ss o mm:ss)</label
+    >
     <input
       id="dt-duration"
       class="dt-input"
@@ -18,32 +20,63 @@
     />
 
     <button id="dt-dec" class="action ghost" type="button" title="−1 minuto">
-      <i class="fa-solid fa-minus" aria-hidden="true"></i><span class="lbl"></span>
+      <i class="fa-solid fa-minus" aria-hidden="true"></i
+      ><span class="lbl"></span>
     </button>
     <button id="dt-inc" class="action ghost" type="button" title="+1 minuto">
-      <i class="fa-solid fa-plus" aria-hidden="true"></i><span class="lbl"></span>
+      <i class="fa-solid fa-plus" aria-hidden="true"></i
+      ><span class="lbl"></span>
     </button>
 
-    <button id="dt-start" class="action" type="button" title="Avisar (Espacio)" aria-pressed="false" disabled>
-      <i class="fa-solid fa-bell" aria-hidden="true"></i><span class="lbl">Avisar</span>
+    <button
+      id="dt-start"
+      class="action"
+      type="button"
+      title="Avisar (Espacio)"
+      aria-pressed="false"
+      disabled
+    >
+      <i class="fa-solid fa-bell" aria-hidden="true"></i
+      ><span class="lbl">Avisar</span>
     </button>
 
-    <button id="dt-pause" class="action" type="button" title="No avisar (Espacio)" aria-pressed="true" disabled>
-      <i class="fa-solid fa-bell-slash" aria-hidden="true"></i><span class="lbl"></span>
+    <button
+      id="dt-pause"
+      class="action"
+      type="button"
+      title="No avisar (Espacio)"
+      aria-pressed="true"
+      disabled
+    >
+      <i class="fa-solid fa-bell-slash" aria-hidden="true"></i
+      ><span class="lbl"></span>
     </button>
 
-    <button id="dt-reset" class="action ghost" type="button" title="Reiniciar (R)">
-      <i class="fa-solid fa-rotate-left" aria-hidden="true"></i><span class="lbl"></span>
+    <button
+      id="dt-reset"
+      class="action ghost"
+      type="button"
+      title="Reiniciar (R)"
+    >
+      <i class="fa-solid fa-rotate-left" aria-hidden="true"></i
+      ><span class="lbl"></span>
     </button>
 
-    <button id="dt-fs" class="action" type="button" title="Pantalla completa (F)">
-      <i class="fa-solid fa-expand" aria-hidden="true"></i><span class="lbl"></span>
+    <button
+      id="dt-fs"
+      class="action"
+      type="button"
+      title="Pantalla completa (F)"
+    >
+      <i class="fa-solid fa-expand" aria-hidden="true"></i
+      ><span class="lbl"></span>
     </button>
   </div>
 
   <!-- Botón salir (visible en pantalla completa) -->
   <button id="dt-fs-exit" class="dt-fs-exit" type="button" title="Salir (Esc)">
-    <i class="fa-solid fa-xmark" aria-hidden="true"></i><span class="sr-only">Salir</span>
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i
+    ><span class="sr-only">Salir</span>
   </button>
 
   <!-- Cara: reloj DIGITAL en hora actual -->
@@ -67,323 +100,510 @@
   </div>
 
   <!-- Progreso hasta próximo aviso -->
-  <div class="timer-progress" role="progressbar" aria-label="Tiempo hasta próximo aviso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+  <div
+    class="timer-progress"
+    role="progressbar"
+    aria-label="Tiempo hasta próximo aviso"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    aria-valuenow="0"
+  >
     <div class="bar" style="width: 0%"></div>
   </div>
 </section>
 
 <style>
-  .sr-only { position:absolute!important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-  .timer-page { width:100%; display:block; padding:clamp(8px,2vw,16px); box-sizing:border-box; }
+  .sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .timer-page {
+    width: 100%;
+    display: block;
+    padding: clamp(8px, 2vw, 16px);
+    box-sizing: border-box;
+  }
 
   .timer-controls {
-    display:flex; align-items:center; gap:.5rem; flex-wrap:nowrap;
-    margin-bottom:.75rem; overflow-x:auto; -webkit-overflow-scrolling:touch; padding-bottom:2px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    margin-bottom: 0.75rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
   }
-  .timer-controls .lbl { margin-left:.35rem; }
+  .timer-controls .lbl {
+    margin-left: 0.35rem;
+  }
 
   .dt-input {
-    width:10ch; min-width:12ch; text-align:center; font:inherit; font-variant-numeric:tabular-nums;
-    padding:.4rem .55rem; border:1px solid var(--c-border,#ccc); border-radius:.5rem;
-    background:var(--c-surface,transparent); color:var(--c-text,#111); outline-offset:2px;
+    width: 10ch;
+    min-width: 12ch;
+    text-align: center;
+    font: inherit;
+    font-variant-numeric: tabular-nums;
+    padding: 0.4rem 0.55rem;
+    border: 1px solid var(--c-border, #ccc);
+    border-radius: 0.5rem;
+    background: var(--c-surface, transparent);
+    color: var(--c-text, #111);
+    outline-offset: 2px;
   }
-  .dt-input:invalid { outline:2px solid color-mix(in srgb,#ff4d4f 60%, transparent); outline-offset:2px; }
+  .dt-input:invalid {
+    outline: 2px solid color-mix(in srgb, #ff4d4f 60%, transparent);
+    outline-offset: 2px;
+  }
 
   .timer-face {
-    width:100%; min-height:clamp(180px,35vw,360px);
-    display:grid; place-items:center;
-    padding:clamp(12px,3vw,24px);
-    border:1px solid var(--c-border,rgba(0,0,0,.15));
-    border-radius:12px; background:var(--c-bg,transparent); color:var(--c-text,#111);
-    box-sizing:border-box;
+    width: 100%;
+    min-height: clamp(180px, 35vw, 360px);
+    display: grid;
+    place-items: center;
+    padding: clamp(12px, 3vw, 24px);
+    border: 1px solid var(--c-border, rgba(0, 0, 0, 0.15));
+    border-radius: 12px;
+    background: var(--c-bg, transparent);
+    color: var(--c-text, #111);
+    box-sizing: border-box;
   }
 
   /* DIGITAL */
-  .digital-clock { width:min(90vw, 680px); display:flex; align-items:center; justify-content:center; }
+  .digital-clock {
+    width: min(90vw, 680px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .digital {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Roboto Mono", monospace;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Roboto Mono", monospace;
     font-variant-numeric: tabular-nums;
     font-size: clamp(40px, 14vw, 140px);
-    line-height: 1; letter-spacing: .03em;
+    line-height: 1;
+    letter-spacing: 0.03em;
     user-select: none;
   }
 
   /* Presets: una sola fila + todos visibles */
   .timer-presets {
-    display:flex; flex-wrap:nowrap; gap:.5rem; justify-content:flex-start;
-    margin-top:.75rem; overflow-x:auto; -webkit-overflow-scrolling:touch; padding-block:2px;
-    white-space:nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    margin-top: 0.75rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-block: 2px;
+    white-space: nowrap;
   }
-  .timer-presets .preset { flex:0 0 auto; white-space:nowrap; display:inline-flex; }
+  .timer-presets .preset {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    display: inline-flex;
+  }
 
   .timer-progress {
-    width:100%; height:12px; margin-top:.6rem;
-    border:1px solid var(--c-border,rgba(0,0,0,.15)); border-radius:999px;
-    background:color-mix(in oklab,var(--c-border,rgba(0,0,0,.15)) 20%, transparent); overflow:hidden; box-sizing:border-box;
+    width: 100%;
+    height: 12px;
+    margin-top: 0.6rem;
+    border: 1px solid var(--c-border, rgba(0, 0, 0, 0.15));
+    border-radius: 999px;
+    background: color-mix(
+      in oklab,
+      var(--c-border, rgba(0, 0, 0, 0.15)) 20%,
+      transparent
+    );
+    overflow: hidden;
+    box-sizing: border-box;
   }
-  .timer-progress .bar { height:100%; width:0%; background:var(--c-accent,steelblue); transition:width .2s linear; }
+  .timer-progress .bar {
+    height: 100%;
+    width: 0%;
+    background: var(--c-accent, steelblue);
+    transition: width 0.2s linear;
+  }
 
   /* Estado marcado de Avisar/No avisar */
   .action.is-on,
   .action[aria-pressed="true"] {
-    outline:2px solid var(--c-accent, steelblue);
-    box-shadow:0 0 0 3px color-mix(in srgb, var(--c-accent, steelblue) 25%, transparent);
+    outline: 2px solid var(--c-accent, steelblue);
+    box-shadow: 0 0 0 3px
+      color-mix(in srgb, var(--c-accent, steelblue) 25%, transparent);
   }
-  .action.is-on:disabled { opacity:1; }
+  .action.is-on:disabled {
+    opacity: 1;
+  }
 
   /* Botón salir de FS */
   .dt-fs-exit {
-    position:fixed; top:calc(12px + env(safe-area-inset-top,0px));
-    right:calc(12px + env(safe-area-inset-right,0px)); z-index:10000;
-    display:none; align-items:center; justify-content:center; width:44px; height:44px; border-radius:12px;
-    border:1px solid rgba(255,255,255,.25); background:rgba(0,0,0,.45); color:#fff;
-    backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); cursor:pointer;
+    position: fixed;
+    top: calc(12px + env(safe-area-inset-top, 0px));
+    right: calc(12px + env(safe-area-inset-right, 0px));
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    cursor: pointer;
   }
   #dt-root.is-fs .dt-fs-exit,
-  #dt-root:fullscreen  .dt-fs-exit,
+  #dt-root:fullscreen .dt-fs-exit,
   #dt-root:-webkit-full-screen .dt-fs-exit,
-  #dt-root:-moz-full-screen .dt-fs-exit { display:inline-flex; }
+  #dt-root:-moz-full-screen .dt-fs-exit {
+    display: inline-flex;
+  }
 
-  #dt-root.is-fs, #dt-root:fullscreen, #dt-root:-webkit-full-screen, #dt-root:-moz-full-screen {
-    display:flex; flex-direction:column; min-height:100vh; padding:clamp(8px,2vw,16px); box-sizing:border-box;
+  #dt-root.is-fs,
+  #dt-root:fullscreen,
+  #dt-root:-webkit-full-screen,
+  #dt-root:-moz-full-screen {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: clamp(8px, 2vw, 16px);
+    box-sizing: border-box;
   }
   #dt-root.is-fs .timer-controls,
   #dt-root:fullscreen .timer-controls,
   #dt-root:-webkit-full-screen .timer-controls,
-  #dt-root:-moz-full-screen .timer-controls { margin-bottom:.75rem; }
+  #dt-root:-moz-full-screen .timer-controls {
+    margin-bottom: 0.75rem;
+  }
 
-  @media (max-width:560px){ .timer-controls .lbl { display:none; } }
+  @media (max-width: 560px) {
+    .timer-controls .lbl {
+      display: none;
+    }
+  }
 </style>
 
 <script>
-(function () {
-  /* ---- DOM refs ---- */
-  const root   = document.getElementById("dt-root");
-  const elTime = root.querySelector("#dt-time");         // accesible (sr-only)
-  const elDigital = root.querySelector("#dt-digital");   // visible
+  (function () {
+    /* ---- DOM refs ---- */
+    const root = document.getElementById("dt-root");
+    const elTime = root.querySelector("#dt-time"); // accesible (sr-only)
+    const elDigital = root.querySelector("#dt-digital"); // visible
 
-  const inDur    = root.querySelector("#dt-duration");
-  const btnInc   = root.querySelector("#dt-inc");
-  const btnDec   = root.querySelector("#dt-dec");
-  const btnStart = root.querySelector("#dt-start");
-  const btnPause = root.querySelector("#dt-pause");
-  const btnReset = root.querySelector("#dt-reset");
-  const btnFS    = root.querySelector("#dt-fs");
-  const btnFSx   = root.querySelector("#dt-fs-exit");
+    const inDur = root.querySelector("#dt-duration");
+    const btnInc = root.querySelector("#dt-inc");
+    const btnDec = root.querySelector("#dt-dec");
+    const btnStart = root.querySelector("#dt-start");
+    const btnPause = root.querySelector("#dt-pause");
+    const btnReset = root.querySelector("#dt-reset");
+    const btnFS = root.querySelector("#dt-fs");
+    const btnFSx = root.querySelector("#dt-fs-exit");
 
-  const presets  = root.querySelector(".timer-presets");
-  const progWrap = root.querySelector(".timer-progress");
-  const progBar  = progWrap.querySelector(".bar");
+    const presets = root.querySelector(".timer-presets");
+    const progWrap = root.querySelector(".timer-progress");
+    const progBar = progWrap.querySelector(".bar");
 
-  /* ---- Estado ---- */
-  let intervalSec = 0;   // intervalo entre avisos (s)
-  let running = false;   // ¿avisos activos?
-  let nextBeepAt = 0;    // timestamp ms para siguiente aviso
-  let rafId = null;
+    /* ---- Estado ---- */
+    let intervalSec = 0; // intervalo entre avisos (s)
+    let running = false; // ¿avisos activos?
+    let nextBeepAt = 0; // timestamp ms para siguiente aviso
+    let rafId = null;
 
-  /* ---- Sonido ---- */
-  let audioCtx = null;
-  function ensureAudio() {
-    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    if (audioCtx.state === "suspended") audioCtx.resume();
-  }
-  function beep({ freq=880, dur=0.08, type="sine", gain=0.06 } = {}) {
-    if (!audioCtx) return;
-    const o = audioCtx.createOscillator();
-    const g = audioCtx.createGain();
-    o.type = type; o.frequency.value = freq; g.gain.value = 0;
-    o.connect(g); g.connect(audioCtx.destination);
-    const now = audioCtx.currentTime;
-    g.gain.linearRampToValueAtTime(gain, now + 0.005);
-    g.gain.linearRampToValueAtTime(0.0001, now + dur);
-    o.start(now); o.stop(now + dur + 0.02);
-  }
-  function beepNotify() {
-    if (!audioCtx) return;
-    [{t:0,f:800,d:.07},{t:.12,f:1000,d:.09}]
-      .forEach(s => setTimeout(() => beep({freq:s.f,dur:s.d,gain:.09}), s.t * 1000));
-  }
-
-  /* ---- Utils ---- */
-  const clamp = (n,min,max)=>Math.min(max,Math.max(min,n));
-  const pad2  = (n)=>String(n).padStart(2,"0");
-  const fmtHMS=(s)=>{const h=Math.floor(s/3600),m=Math.floor((s%3600)/60),sec=Math.max(0,s%60);return `${pad2(h)}:${pad2(m)}:${pad2(sec)}`;}
-  const parseHMS=(t)=>{ if(t==null) return null; t=String(t).trim();
-    let m=t.match(/^(\d{1,2}):(\d{2}):(\d{2})$/); if(m){const h=+m[1],mi=+m[2],s=+m[3]; if(mi>59||s>59)return null; return h*3600+mi*60+s;}
-    m=t.match(/^(\d{1,2}):(\d{2})$/); if(m){const mi=+m[1],s=+m[2]; if(mi>59||s>59)return null; return mi*60+s;}
-    return null;
-  };
-
-  /* ---- Reloj digital en tiempo real ---- */
-  function updateDigitalClock(nowMs) {
-    const d = new Date(nowMs);
-    const h = d.getHours(), m = d.getMinutes(), s = d.getSeconds();
-    const txt = `${pad2(h)}:${pad2(m)}:${pad2(s)}`;
-    elDigital.textContent = txt;
-    elTime.textContent = txt; // accesible
-  }
-
-  /* ---- Progreso hasta próximo aviso ---- */
-  function setProgressRemaining(remainingMs) {
-    if (running && intervalSec > 0 && remainingMs != null) {
-      const pct = clamp(Math.round((remainingMs / (intervalSec * 1000)) * 100), 0, 100);
-      progBar.style.width = pct + "%";
-      progWrap.setAttribute("aria-valuenow", String(pct));
-    } else {
-      progBar.style.width = "0%";
-      progWrap.setAttribute("aria-valuenow", "0");
+    /* ---- Sonido ---- */
+    let audioCtx = null;
+    function ensureAudio() {
+      if (!audioCtx)
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      if (audioCtx.state === "suspended") audioCtx.resume();
     }
-  }
-
-  /* ---- Estado visual de botones ---- */
-  function setActiveButtons() {
-    const startOn = running;
-    const pauseOn = !running && intervalSec > 0;
-    btnStart.classList.toggle("is-on", startOn);
-    btnStart.setAttribute("aria-pressed", String(startOn));
-    btnPause.classList.toggle("is-on", pauseOn);
-    btnPause.setAttribute("aria-pressed", String(pauseOn));
-  }
-  function updateButtons(){
-    btnStart.disabled = running || intervalSec <= 0;
-    btnPause.disabled = !running;
-    setActiveButtons();
-  }
-  function syncIntervalInput(){ inDur.value = fmtHMS(intervalSec); }
-
-  /* ---- Avisos ---- */
-  function startAlerts(){
-    if (running || intervalSec <= 0) return;
-    running = true; ensureAudio();
-    nextBeepAt = Date.now() + intervalSec * 1000;
-    updateButtons();
-  }
-  function pauseAlerts(){
-    if (!running) return;
-    running = false;
-    updateButtons();
-    setProgressRemaining(null);
-  }
-  function resetInterval(){
-    pauseAlerts();
-    intervalSec = 0;
-    syncIntervalInput();
-    updateButtons();
-    setProgressRemaining(null);
-  }
-  function setIntervalSeconds(secs, {keepRunning=true} = {}){
-    intervalSec = clamp(Math.floor(secs), 0, 99*3600 + 59*60 + 59);
-    syncIntervalInput();
-    if (running){
-      if (intervalSec <= 0) pauseAlerts();
-      else if (keepRunning) nextBeepAt = Date.now() + intervalSec * 1000;
-      else pauseAlerts();
+    function beep({ freq = 880, dur = 0.08, type = "sine", gain = 0.06 } = {}) {
+      if (!audioCtx) return;
+      const o = audioCtx.createOscillator();
+      const g = audioCtx.createGain();
+      o.type = type;
+      o.frequency.value = freq;
+      g.gain.value = 0;
+      o.connect(g);
+      g.connect(audioCtx.destination);
+      const now = audioCtx.currentTime;
+      g.gain.linearRampToValueAtTime(gain, now + 0.005);
+      g.gain.linearRampToValueAtTime(0.0001, now + dur);
+      o.start(now);
+      o.stop(now + dur + 0.02);
     }
-    updateButtons();
-  }
-
-  /* ---- Eventos UI ---- */
-  btnStart.addEventListener("click", startAlerts);
-  btnPause.addEventListener("click", pauseAlerts);
-  btnReset.addEventListener("click", resetInterval);
-
-  function applyIntervalFromInput(){
-    const secs = parseHMS(inDur.value);
-    if (secs == null || secs < 0) return;
-    setIntervalSeconds(secs, {keepRunning:true});
-  }
-  function incMinute(){ const secs = parseHMS(inDur.value) ?? intervalSec; setIntervalSeconds((secs||0)+60, {keepRunning:true}); }
-  function decMinute(){ const secs = parseHMS(inDur.value) ?? intervalSec; setIntervalSeconds(Math.max(0,(secs||0)-60), {keepRunning:true}); }
-
-  inDur.addEventListener("keydown", (e)=>{
-    if (e.key === "Enter"){ e.preventDefault(); applyIntervalFromInput(); }
-    else if (e.key.toLowerCase() === "r"){ e.preventDefault(); resetInterval(); }
-    else if (e.key === "ArrowUp"){ e.preventDefault(); incMinute(); }
-    else if (e.key === "ArrowDown"){ e.preventDefault(); decMinute(); }
-  });
-  inDur.addEventListener("blur", applyIntervalFromInput);
-  btnInc.addEventListener("click", incMinute);
-  btnDec.addEventListener("click", decMinute);
-
-  // Presets (no inician avisos; solo fijan intervalo)
-  presets.addEventListener("click", (e)=>{
-    const btn = e.target.closest("button.preset[data-seconds]");
-    if (!btn) return;
-    const secs = parseInt(btn.getAttribute("data-seconds"), 10);
-    if (Number.isFinite(secs)) setIntervalSeconds(secs, {keepRunning:true});
-  });
-
-  // Atajos globales
-  document.addEventListener("keydown", (e)=>{
-    const editing = document.activeElement === inDur;
-    if ((e.code === "Space" || e.key === " ") && !editing){ e.preventDefault(); running ? pauseAlerts() : startAlerts(); }
-    else if (e.key?.toLowerCase() === "r" && !editing){ e.preventDefault(); resetInterval(); }
-    else if (e.key?.toLowerCase() === "f" && !editing){ e.preventDefault(); toggleFS(); }
-  });
-
-  /* ---- Pantalla completa ---- */
-  const isFS = () => document.fullscreenElement === root
-                 || document.webkitFullscreenElement === root
-                 || document.mozFullScreenElement === root;
-  async function enterFS(){ try{
-    if (root.requestFullscreen) await root.requestFullscreen({ navigationUI:"hide" });
-    else if (root.webkitRequestFullscreen) root.webkitRequestFullscreen();
-    else if (root.mozRequestFullScreen) root.mozRequestFullScreen();
-  }catch(e){ console.warn("[clock] No se pudo poner en pantalla completa:", e); } }
-  async function exitFS(){ try{
-    if (document.fullscreenElement) await document.exitFullscreen();
-    else if (document.webkitFullscreenElement && document.webkitExitFullscreen) document.webkitExitFullscreen();
-    else if (document.mozFullScreenElement && document.mozCancelFullScreen) document.mozCancelFullScreen();
-  }catch(e){ console.warn("[clock] No se pudo salir de pantalla completa:", e); } }
-  function toggleFS(){ isFS() ? exitFS() : enterFS(); }
-  function onFSChange(){
-    if (isFS()){
-      root.classList.add("is-fs");
-      btnFS.querySelector("i")?.classList.replace("fa-expand","fa-compress");
-      btnFS.title = "Salir de pantalla completa (F)";
-      const lbl = btnFS.querySelector(".lbl"); if (lbl) lbl.textContent = "Salir de pant. completa";
-    }else{
-      root.classList.remove("is-fs");
-      btnFS.querySelector("i")?.classList.replace("fa-compress","fa-expand");
-      btnFS.title = "Pantalla completa (F)";
-      const lbl = btnFS.querySelector(".lbl"); if (lbl) lbl.textContent = "";
+    function beepNotify() {
+      if (!audioCtx) return;
+      [
+        { t: 0, f: 800, d: 0.07 },
+        { t: 0.12, f: 1000, d: 0.09 },
+      ].forEach((s) =>
+        setTimeout(() => beep({ freq: s.f, dur: s.d, gain: 0.09 }), s.t * 1000)
+      );
     }
-  }
-  btnFS.addEventListener("click", toggleFS);
-  btnFSx.addEventListener("click", exitFS);
-  document.addEventListener("fullscreenchange", onFSChange);
 
-  /* ---- Bucle principal ---- */
-  function frame(){
-    const now = Date.now();
-    updateDigitalClock(now);  // reloj en tiempo real
-
-    if (running && intervalSec > 0){
-      if (now >= nextBeepAt){
-        ensureAudio();
-        do { nextBeepAt += intervalSec * 1000; } while (now >= nextBeepAt);
-        beepNotify();
+    /* ---- Utils ---- */
+    const clamp = (n, min, max) => Math.min(max, Math.max(min, n));
+    const pad2 = (n) => String(n).padStart(2, "0");
+    const fmtHMS = (s) => {
+      const h = Math.floor(s / 3600),
+        m = Math.floor((s % 3600) / 60),
+        sec = Math.max(0, s % 60);
+      return `${pad2(h)}:${pad2(m)}:${pad2(sec)}`;
+    };
+    const parseHMS = (t) => {
+      if (t == null) return null;
+      t = String(t).trim();
+      let m = t.match(/^(\d{1,2}):(\d{2}):(\d{2})$/);
+      if (m) {
+        const h = +m[1],
+          mi = +m[2],
+          s = +m[3];
+        if (mi > 59 || s > 59) return null;
+        return h * 3600 + mi * 60 + s;
       }
-      setProgressRemaining(Math.max(0, nextBeepAt - now));
-    } else {
+      m = t.match(/^(\d{1,2}):(\d{2})$/);
+      if (m) {
+        const mi = +m[1],
+          s = +m[2];
+        if (mi > 59 || s > 59) return null;
+        return mi * 60 + s;
+      }
+      return null;
+    };
+
+    /* ---- Reloj digital en tiempo real ---- */
+    function updateDigitalClock(nowMs) {
+      const d = new Date(nowMs);
+      const h = d.getHours(),
+        m = d.getMinutes(),
+        s = d.getSeconds();
+      const txt = `${pad2(h)}:${pad2(m)}:${pad2(s)}`;
+      elDigital.textContent = txt;
+      elTime.textContent = txt; // accesible
+    }
+
+    /* ---- Progreso hasta próximo aviso ---- */
+    function setProgressRemaining(remainingMs) {
+      if (running && intervalSec > 0 && remainingMs != null) {
+        const pct = clamp(
+          Math.round((remainingMs / (intervalSec * 1000)) * 100),
+          0,
+          100
+        );
+        progBar.style.width = pct + "%";
+        progWrap.setAttribute("aria-valuenow", String(pct));
+      } else {
+        progBar.style.width = "0%";
+        progWrap.setAttribute("aria-valuenow", "0");
+      }
+    }
+
+    /* ---- Estado visual de botones ---- */
+    function setActiveButtons() {
+      const startOn = running;
+      const pauseOn = !running && intervalSec > 0;
+      btnStart.classList.toggle("is-on", startOn);
+      btnStart.setAttribute("aria-pressed", String(startOn));
+      btnPause.classList.toggle("is-on", pauseOn);
+      btnPause.setAttribute("aria-pressed", String(pauseOn));
+    }
+    function updateButtons() {
+      btnStart.disabled = running || intervalSec <= 0;
+      btnPause.disabled = !running;
+      setActiveButtons();
+    }
+    function syncIntervalInput() {
+      inDur.value = fmtHMS(intervalSec);
+    }
+
+    /* ---- Avisos ---- */
+    function startAlerts() {
+      if (running || intervalSec <= 0) return;
+      running = true;
+      ensureAudio();
+      nextBeepAt = Date.now() + intervalSec * 1000;
+      updateButtons();
+    }
+    function pauseAlerts() {
+      if (!running) return;
+      running = false;
+      updateButtons();
       setProgressRemaining(null);
     }
-    rafId = requestAnimationFrame(frame);
-  }
+    function resetInterval() {
+      pauseAlerts();
+      intervalSec = 0;
+      syncIntervalInput();
+      updateButtons();
+      setProgressRemaining(null);
+    }
+    function setIntervalSeconds(secs, { keepRunning = true } = {}) {
+      intervalSec = clamp(Math.floor(secs), 0, 99 * 3600 + 59 * 60 + 59);
+      syncIntervalInput();
+      if (running) {
+        if (intervalSec <= 0) pauseAlerts();
+        else if (keepRunning) nextBeepAt = Date.now() + intervalSec * 1000;
+        else pauseAlerts();
+      }
+      updateButtons();
+    }
 
-  // Init
-  inDur.value = "00:00:00";
-  updateButtons();
-  onFSChange();
-  updateDigitalClock(Date.now());
-  if (rafId) cancelAnimationFrame(rafId);
-  rafId = requestAnimationFrame(frame);
+    /* ---- Eventos UI ---- */
+    btnStart.addEventListener("click", startAlerts);
+    btnPause.addEventListener("click", pauseAlerts);
+    btnReset.addEventListener("click", resetInterval);
 
-  // Limpieza si #main se reemplaza
-  const cleanup = () => {
+    function applyIntervalFromInput() {
+      const secs = parseHMS(inDur.value);
+      if (secs == null || secs < 0) return;
+      setIntervalSeconds(secs, { keepRunning: true });
+    }
+    function incMinute() {
+      const secs = parseHMS(inDur.value) ?? intervalSec;
+      setIntervalSeconds((secs || 0) + 60, { keepRunning: true });
+    }
+    function decMinute() {
+      const secs = parseHMS(inDur.value) ?? intervalSec;
+      setIntervalSeconds(Math.max(0, (secs || 0) - 60), { keepRunning: true });
+    }
+
+    inDur.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        applyIntervalFromInput();
+      } else if (e.key.toLowerCase() === "r") {
+        e.preventDefault();
+        resetInterval();
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        incMinute();
+      } else if (e.key === "ArrowDown") {
+        e.preventDefault();
+        decMinute();
+      }
+    });
+    inDur.addEventListener("blur", applyIntervalFromInput);
+    btnInc.addEventListener("click", incMinute);
+    btnDec.addEventListener("click", decMinute);
+
+    // Presets (no inician avisos; solo fijan intervalo)
+    presets.addEventListener("click", (e) => {
+      const btn = e.target.closest("button.preset[data-seconds]");
+      if (!btn) return;
+      const secs = parseInt(btn.getAttribute("data-seconds"), 10);
+      if (Number.isFinite(secs))
+        setIntervalSeconds(secs, { keepRunning: true });
+    });
+
+    // Atajos globales
+    document.addEventListener("keydown", (e) => {
+      const editing = document.activeElement === inDur;
+      if ((e.code === "Space" || e.key === " ") && !editing) {
+        e.preventDefault();
+        running ? pauseAlerts() : startAlerts();
+      } else if (e.key?.toLowerCase() === "r" && !editing) {
+        e.preventDefault();
+        resetInterval();
+      } else if (e.key?.toLowerCase() === "f" && !editing) {
+        e.preventDefault();
+        toggleFS();
+      }
+    });
+
+    /* ---- Pantalla completa ---- */
+    const isFS = () =>
+      document.fullscreenElement === root ||
+      document.webkitFullscreenElement === root ||
+      document.mozFullScreenElement === root;
+    async function enterFS() {
+      try {
+        if (root.requestFullscreen)
+          await root.requestFullscreen({ navigationUI: "hide" });
+        else if (root.webkitRequestFullscreen) root.webkitRequestFullscreen();
+        else if (root.mozRequestFullScreen) root.mozRequestFullScreen();
+      } catch (e) {
+        console.warn("[clock] No se pudo poner en pantalla completa:", e);
+      }
+    }
+    async function exitFS() {
+      try {
+        if (document.fullscreenElement) await document.exitFullscreen();
+        else if (
+          document.webkitFullscreenElement &&
+          document.webkitExitFullscreen
+        )
+          document.webkitExitFullscreen();
+        else if (document.mozFullScreenElement && document.mozCancelFullScreen)
+          document.mozCancelFullScreen();
+      } catch (e) {
+        console.warn("[clock] No se pudo salir de pantalla completa:", e);
+      }
+    }
+    function toggleFS() {
+      isFS() ? exitFS() : enterFS();
+    }
+    function onFSChange() {
+      if (isFS()) {
+        root.classList.add("is-fs");
+        btnFS.querySelector("i")?.classList.replace("fa-expand", "fa-compress");
+        btnFS.title = "Salir de pantalla completa (F)";
+        const lbl = btnFS.querySelector(".lbl");
+        if (lbl) lbl.textContent = "Salir de pant. completa";
+      } else {
+        root.classList.remove("is-fs");
+        btnFS.querySelector("i")?.classList.replace("fa-compress", "fa-expand");
+        btnFS.title = "Pantalla completa (F)";
+        const lbl = btnFS.querySelector(".lbl");
+        if (lbl) lbl.textContent = "";
+      }
+    }
+    btnFS.addEventListener("click", toggleFS);
+    btnFSx.addEventListener("click", exitFS);
+    document.addEventListener("fullscreenchange", onFSChange);
+
+    /* ---- Bucle principal ---- */
+    function frame() {
+      const now = Date.now();
+      updateDigitalClock(now); // reloj en tiempo real
+
+      if (running && intervalSec > 0) {
+        if (now >= nextBeepAt) {
+          ensureAudio();
+          do {
+            nextBeepAt += intervalSec * 1000;
+          } while (now >= nextBeepAt);
+          beepNotify();
+        }
+        setProgressRemaining(Math.max(0, nextBeepAt - now));
+      } else {
+        setProgressRemaining(null);
+      }
+      rafId = requestAnimationFrame(frame);
+    }
+
+    // Init
+    inDur.value = "00:00:00";
+    updateButtons();
+    onFSChange();
+    updateDigitalClock(Date.now());
     if (rafId) cancelAnimationFrame(rafId);
-    document.removeEventListener("fullscreenchange", onFSChange);
-  };
-  document.addEventListener("app:main-updated", cleanup, { once:true });
-})();
+    rafId = requestAnimationFrame(frame);
+
+    // Limpieza si #main se reemplaza
+    const cleanup = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      document.removeEventListener("fullscreenchange", onFSChange);
+    };
+    document.addEventListener("app:main-updated", cleanup, { once: true });
+  })();
 </script>

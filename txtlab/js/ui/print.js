@@ -3,9 +3,17 @@ import { $id } from "../core/dom.js";
 
 /** Escapa HTML para imprimir el contenido tal cual texto plano */
 function escapeHtml(s) {
-  return (s || "").replace(/[&<>"']/g, (m) => ({
-    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
-  }[m]));
+  return (s || "").replace(
+    /[&<>"']/g,
+    (m) =>
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;",
+      }[m])
+  );
 }
 
 /**
@@ -16,7 +24,11 @@ function escapeHtml(s) {
  * @param {string} docTitle    - título de la ventana de impresión
  * @param {{ autoClose?: boolean }} opts - opciones (autoClose=true cierra tras imprimir)
  */
-export function printO(textareaId = "otext", docTitle = "Imprimir · txtlab", opts = { autoClose: true }) {
+export function printO(
+  textareaId = "otext",
+  docTitle = "Imprimir · txtlab",
+  opts = { autoClose: true }
+) {
   const text = $id(textareaId)?.value || "";
   const w = window.open("", "_blank");
   if (!w) {
@@ -61,13 +73,29 @@ export function printO(textareaId = "otext", docTitle = "Imprimir · txtlab", op
 
   // Cuando la ventana termine de cargar, lanza la impresión
   const triggerPrint = () => {
-    try { w.focus(); } catch {}
-    try { w.print(); } catch {}
+    try {
+      w.focus();
+    } catch {}
+    try {
+      w.print();
+    } catch {}
     if (opts?.autoClose) {
       // Cierra tras imprimir si el navegador soporta afterprint; añade un fallback
-      w.addEventListener("afterprint", () => { try { w.close(); } catch {} }, { once: true });
+      w.addEventListener(
+        "afterprint",
+        () => {
+          try {
+            w.close();
+          } catch {}
+        },
+        { once: true }
+      );
       // Fallback por si afterprint no dispara (algunos Safari/Firefox)
-      setTimeout(() => { try { w.close(); } catch {} }, 1500);
+      setTimeout(() => {
+        try {
+          w.close();
+        } catch {}
+      }, 1500);
     }
   };
 
