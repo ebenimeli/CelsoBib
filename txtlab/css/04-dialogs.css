@@ -130,3 +130,14 @@ dialog .dlg-actions .action:focus {
   outline: 2px solid var(--c-focus, #7db3ff);
   outline-offset: 2px;
 }
+
+.subscribe {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  margin: 1em 0; /* opcional: espacio arriba/abajo */
+}
+
+.subscribe iframe {
+  width: 100%;
+  height: 150px;
+}
