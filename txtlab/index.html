@@ -655,14 +655,18 @@
     <form method="dialog" class="dlg">
       <h3 id="welcome-title" data-i18n="welcome_title"><strong>txt</strong>lab</h3>
       <p id="welcome-desc"></p>
-      <p><i class="fa-solid fa-gear"></i> <span data-i18n="welcome_p1">Esta aplicación web es una caja de herramientas
-          para escribir, procesar y transformar texto.</span></p>
-      <p><i class="fa-solid fa-list"></i> <span data-i18n="welcome_p2">Puedes ordenar, agrupar y formatear listas de
+      <p><i class="fa-solid fa-gear"></i> <span data-i18n="welcome_p1">Esta aplicación web es una caja de herramientas para escribir, procesar y transformar texto.</span></p>
+      <!--<p><i class="fa-solid fa-list"></i> <span data-i18n="welcome_p2">Puedes ordenar, agrupar y formatear listas de
           elementos.</span></p>
       <p><i class="fa-solid fa-pen-to-square"></i> <span data-i18n="welcome_p3">Puedes escribir sin distracciones,
           marcarte objetivos y compartir tu progreso de escritura.</span></p>
       <p><i class="fa-solid fa-share"></i> <span data-i18n="welcome_p4">Si te gusta, comparte.</span></p>
-
+      -->
+      <p>
+      <i class="fa-solid fa-envelope"></i> <span data-i18n="subscribe_text">Publico las novedades de txtlab en mi boletín. Suscríbete gratis para recibirlo</span>:
+      </p>
+      <iframe src="https://notasalvuelo.substack.com/embed" width="480" height="150" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+      
       <p class="welcomeshare">
         <a href="https://twitter.com/intent/tweet?text=Prueba%20txtlab%20👉%20https%3A%2F%2Fwww.ebenimeli.org%2Ftxtlab%2F"
           target="_blank" rel="noopener" title="Compartir en Twitter">
@@ -698,6 +702,8 @@
       <!--
       <input type="hidden" name="rating" id="rating-value" value="0">
       -->
+
+      
       <menu class="dlg-actions">
         <button value="ok" class="action" autofocus data-i18n="welcome_cta">Empezar</button>
       </menu>
