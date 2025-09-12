@@ -9,6 +9,8 @@ dialog {
   font-size: 0.9em;
 }
 dialog .dlg {
+  background-color: white;
+  color: black;
   margin: 0;
   padding: 14px;
 }
@@ -133,11 +135,13 @@ dialog .dlg-actions .action:focus {
 
 .subscribe {
   display: flex;
-  justify-content: center; /* centra horizontalmente */
-  margin: 1em 0; /* opcional: espacio arriba/abajo */
+  justify-content: center;
+  margin: 1em 0;
+  background: var(--c-bg);
 }
 
 .subscribe iframe {
   width: 100%;
   height: 150px;
+  background: var(--c-bg);
 }
