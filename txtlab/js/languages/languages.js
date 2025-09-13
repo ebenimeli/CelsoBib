@@ -84,7 +84,9 @@ export async function loadLanguage(fileOrId) {
  *
  * Por defecto atiende #languages y #i18n (ajusta si cambias la estructura).
  */
-export function initLanguageDelegation(scopeSelector = "#languages, #i18n") {
+export function initLanguageDelegation(
+  scopeSelector = "#languages, #deutsch, #english, #valencia, #latin, #i18n"
+) {
   if (initLanguageDelegation._wired) return;
 
   document.addEventListener("click", (e) => {

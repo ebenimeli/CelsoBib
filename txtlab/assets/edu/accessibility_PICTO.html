@@ -1,0 +1,344 @@
+<section id="read-accessible" aria-labelledby="ra-title">
+  <h2 id="ra-title" data-i18n="ra_title">
+    <i class="fa-solid fa-book-open-reader" aria-hidden="true"></i> Lector
+    accesible
+  </h2>
+
+  <p>
+    El lector accesible es una herramienta diseñada para
+    <strong>mejorar la legibilidad y adaptar los textos</strong> a las
+    necesidades de cada persona. Su objetivo es
+    <strong>facilitar la lectura</strong> y ofrecer una experiencia más clara,
+    cómoda y personalizada.
+  </p>
+  <p>
+    Permite <strong>ajustar</strong> tipografía, tamaño de letra, interlineado,
+    espaciado y anchura del texto, además de elegir entre distintos temas
+    visuales con alto contraste o fondos suaves. Incluye
+    <strong>funciones de resaltado</strong>, foco en frases o párrafos, y
+    opciones rápidas para aplicar, restablecer, imprimir o exportar.
+  </p>
+
+  <!-- Barra rápida -->
+  <div class="ra-toolbar">
+    <button
+      class="action"
+      data-action="raApply"
+      title="Aplicar"
+      data-i18n-title="ra_apply_title"
+    >
+      <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+      <span data-i18n="ra_apply"></span>
+    </button>
+    <button
+      class="action"
+      data-action="raReset"
+      title="Restablecer"
+      data-i18n-title="ra_reset_title"
+    >
+      <i class="fa-solid fa-rotate" aria-hidden="true"></i>
+      <span data-i18n="ra_reset"></span>
+    </button>
+    <button
+      class="action"
+      data-action="raSelectAll"
+      title="Seleccionar todo"
+      data-i18n-title="ra_select_all_title"
+    >
+      <i class="fa-solid fa-i-cursor" aria-hidden="true"></i>
+      <span data-i18n="ra_select_all"></span>
+    </button>
+    <button
+      class="action"
+      data-action="raClearMarks"
+      title="Quitar resaltos"
+      data-i18n-title="ra_clear_marks_title"
+    >
+      <i class="fa-solid fa-eraser" aria-hidden="true"></i>
+      <span data-i18n="ra_clear_marks"></span>
+    </button>
+    <button
+      class="action"
+      data-action="raPrint"
+      title="Imprimir o guardar PDF"
+      data-i18n-title="ra_print_title"
+    >
+      <i class="fa-solid fa-print" aria-hidden="true"></i>
+      <span data-i18n="ra_print"></span>
+    </button>
+  </div>
+
+  <!-- Paneles -->
+  <div class="ra-grid">
+    <!-- Tipografía -->
+    <fieldset class="ra-panel">
+      <legend data-i18n="ra_typography">Tipografía</legend>
+
+      <label for="ra-font" data-i18n="ra_font_label">Fuente</label>
+      <select id="ra-font" data-pref="font">
+        <option value="font-opendyslexic">OpenDyslexic</option>
+        <option value="font-lexend">Lexend</option>
+        <option value="font-atkinson">Atkinson Hyperlegible</option>
+        <option value="font-verdana">Verdana</option>
+        <option value="font-tahoma">Tahoma</option>
+        <option value="font-arial">Arial / Helvetica</option>
+        <option value="font-times">Times New Roman</option>
+        <option value="font-system" selected>Sistema</option>
+      </select>
+
+      <label class="ra-range">
+        <span data-i18n="ra_size">Tamaño</span>
+        <input
+          id="ra-fs"
+          type="range"
+          min="14"
+          max="28"
+          step="1"
+          value="18"
+          data-pref="fs"
+        />
+        <output for="ra-fs" id="ra-fs-val">18px</output>
+      </label>
+
+      <label class="ra-range">
+        <span data-i18n="ra_lh">Interlineado</span>
+        <input
+          id="ra-lh"
+          type="range"
+          min="1.2"
+          max="2.2"
+          step="0.1"
+          value="1.6"
+          data-pref="lh"
+        />
+        <output for="ra-lh" id="ra-lh-val">1.6</output>
+      </label>
+
+      <label class="ra-range">
+        <span data-i18n="ra_ls">Interletraje</span>
+        <input
+          id="ra-ls"
+          type="range"
+          min="0"
+          max="0.2"
+          step="0.01"
+          value="0.02"
+          data-pref="ls"
+        />
+        <output for="ra-ls" id="ra-ls-val">0.02em</output>
+      </label>
+
+      <label class="ra-range">
+        <span data-i18n="ra_ws">Interpalabra</span>
+        <input
+          id="ra-ws"
+          type="range"
+          min="0"
+          max="0.5"
+          step="0.02"
+          value="0.08"
+          data-pref="ws"
+        />
+        <output for="ra-ws" id="ra-ws-val">0.08em</output>
+      </label>
+
+      <label class="ra-range">
+        <span data-i18n="ra_mw">Anchura</span>
+        <input
+          id="ra-mw"
+          type="range"
+          min="40"
+          max="90"
+          step="1"
+          value="68"
+          data-pref="mw"
+        />
+        <output for="ra-mw" id="ra-mw-val">68ch</output>
+      </label>
+    </fieldset>
+
+    <!-- Tema -->
+    <fieldset class="ra-panel">
+      <legend data-i18n="ra_theme">Tema</legend>
+      <div class="ra-row">
+        <button
+          class="pill"
+          data-action="raTheme"
+          data-theme="theme-white"
+          data-i18n="ra_white"
+        >
+          Blanco
+        </button>
+        <button
+          class="pill"
+          data-action="raTheme"
+          data-theme="theme-soft"
+          data-i18n="ra_soft"
+        >
+          Suave
+        </button>
+        <button
+          class="pill"
+          data-action="raTheme"
+          data-theme="theme-sepia"
+          data-i18n="ra_sepia"
+        >
+          Sepia
+        </button>
+        <button
+          class="pill"
+          data-action="raTheme"
+          data-theme="theme-blue"
+          data-i18n="ra_blue"
+        >
+          Azulado
+        </button>
+        <button
+          class="pill"
+          data-action="raTheme"
+          data-theme="theme-gray"
+          data-i18n="ra_gray"
+        >
+          Gris
+        </button>
+        <button
+          class="pill"
+          data-action="raTheme"
+          data-theme="theme-dark"
+          data-i18n="ra_dark"
+        >
+          Oscuro
+        </button>
+        <button
+          class="pill"
+          data-action="raTheme"
+          data-theme="theme-high"
+          data-i18n="ra_high"
+        >
+          Alto contraste
+        </button>
+      </div>
+    </fieldset>
+
+    <!-- Procesado -->
+    <fieldset class="ra-panel">
+      <legend data-i18n="ra_processing">Procesado</legend>
+      <div class="ra-row">
+        <button
+          class="pill"
+          id="ra-toggle-line"
+          data-action="raToggleLine"
+          aria-pressed="true"
+        >
+          Resaltar línea: on
+        </button>
+        <button
+          class="pill"
+          id="ra-focus-sent"
+          data-action="raFocusSentence"
+          data-i18n="ra_focus_sentence"
+        >
+          Foco: frases
+        </button>
+        <button
+          class="pill"
+          id="ra-focus-par"
+          data-action="raFocusParagraph"
+          data-i18n="ra_focus_paragraph"
+        >
+          Foco: párrafos
+        </button>
+        <button class="pill" id="ra-focus-off" data-action="raFocusOff">
+          Quitar foco
+        </button>
+      </div>
+    </fieldset>
+
+    <!-- Pictogramas -->
+    <fieldset class="ra-panel">
+      <legend data-i18n="ra_pictos_title">Pictogramas</legend>
+
+      <div class="ra-row">
+        <label class="switch">
+          <input
+            id="ra-pictos-on"
+            type="checkbox"
+            data-pref="pictos_on"
+            checked
+          />
+          <span>Activar pictogramas</span>
+        </label>
+
+        <label>
+          <span>Modo</span>
+          <select id="ra-pictos-mode" data-pref="pictos_mode">
+            <option value="inline" selected>
+              Texto + pictograma (en línea)
+            </option>
+            <option value="margin">Pictograma en el margen</option>
+            <option value="only">Solo pictogramas</option>
+          </select>
+        </label>
+
+        <label class="ra-range">
+          <span>Tamaño</span>
+          <input
+            id="ra-pictos-size"
+            type="range"
+            min="18"
+            max="64"
+            step="2"
+            value="28"
+            data-pref="pictos_size"
+          />
+          <output id="ra-pictos-size-val">28px</output>
+        </label>
+      </div>
+
+      <div class="ra-row">
+        <label>
+          <span>Proveedor</span>
+          <select id="ra-pictos-provider" data-pref="pictos_provider">
+            <option value="arasaac" selected>ARASAAC (online)</option>
+          </select>
+        </label>
+      </div>
+
+      <details class="ra-hint">
+        <summary>Licencia y atribución</summary>
+        <p>
+          Pictogramas de Sergio Palao para ARASAAC (Gobierno de Aragón).
+          Licencia CC BY-NC-SA 4.0. https://arasaac.org
+        </p>
+      </details>
+    </fieldset>
+
+    <!-- Entrada -->
+    <fieldset class="ra-panel ra-input">
+      <legend data-i18n="ra_input">Texto de entrada</legend>
+      <textarea
+        id="ra-input"
+        rows="10"
+        spellcheck="false"
+        data-i18n-placeholder="ra_input_ph"
+        placeholder="Pegad aquí vuestro texto…"
+      >
+Hoy vamos a leer un cuento en la escuela y después jugaremos en el patio con amigos. Luego comeremos una manzana.</textarea
+      >
+      <div class="ra-row"></div>
+    </fieldset>
+  </div>
+
+  <!-- Visor -->
+  <div class="ra-reader">
+    <article
+      id="ra-content"
+      class="ra-content font-system"
+      aria-live="polite"
+      aria-busy="false"
+    ></article>
+    <footer class="ra-attrib" aria-live="polite"></footer>
+  </div>
+
+  <!-- (Se han retirado los modales de diccionario y buscador mientras el proveedor sea solo ARASAAC) -->
+</section>
