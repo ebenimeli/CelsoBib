@@ -1,4 +1,9 @@
-<div id="guesswords-embed" role="group" aria-label="Juego: Guess Words">
+<div
+  id="guesswords-embed"
+  role="group"
+  tabindex="-1"
+  aria-label="Juego: Guess Words"
+>
   <style>
     /* ===== Ocupa todo el ancho y rompe grids externos ===== */
     #guesswords-embed {
@@ -50,12 +55,15 @@
     }
 
     #guesswords-embed .select {
-      color: #000000 !important;
+      color: #000 !important;
     }
 
     #guesswords-embed .btn {
       cursor: pointer;
       background: var(--c-bg, #fff);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
     }
     #guesswords-embed .btn.primary {
       background: var(--c-accent, #2563eb);
@@ -118,14 +126,13 @@
       user-select: none;
       text-transform: uppercase; /* siempre en mayúsculas */
       letter-spacing: 0.02em;
-      color: #000000;
+      color: #000;
     }
     @media (prefers-color-scheme: dark) {
       #guesswords-embed .cell {
         background: color-mix(in oklab, white 6%, transparent);
       }
     }
-
     .cell.fill {
       transform: scale(1.03);
     }
@@ -178,7 +185,8 @@
       white-space: nowrap;
       border: 0;
     }
-    /* Input oculto para móviles */
+
+    /* Input oculto para móviles / composición */
     #guesswords-embed .kbd-capture {
       position: absolute;
       opacity: 0;
@@ -193,6 +201,7 @@
       <div class="left">
         <label for="gw-collection" class="sr-only">Colección</label>
         <select id="gw-collection" class="select" title="Colección"></select>
+
         <button
           id="gw-reload"
           class="btn"
@@ -245,6 +254,7 @@
 
     <div class="status" id="gw-status" aria-live="polite"></div>
 
+    <!-- Input fantasma para composición (acentos/IME) -->
     <input
       id="gw-ghost"
       class="kbd-capture"
@@ -252,6 +262,7 @@
       autocapitalize="none"
       autocomplete="off"
       spellcheck="false"
+      autofocus
     />
   </div>
 
@@ -263,7 +274,7 @@
 
       /* ===== Config ===== */
       const COLLECTION_FILES = [
-        /*"assets/data/guesswords/literature.txt",*/
+        /* "assets/data/guesswords/literature.txt", */
         "assets/data/guesswords/movies.txt",
       ];
       const MAX_ATTEMPTS = 5;
@@ -274,8 +285,8 @@
       const state = {
         collectionPath: null,
         collectionTitle: "",
-        items: [], // ← barajados
-        index: 0, // posición en barajados
+        items: [],
+        index: 0,
         attempt: 1,
         cursorPos: 0,
         score: 0,
@@ -394,10 +405,8 @@
       /* ===== Ronda ===== */
       function setupRound() {
         const item = state.items[state.index];
-        if (!item) {
-          endCollection();
-          return;
-        }
+        if (!item) return endCollection();
+
         state.attempt = 1;
         state.cursorPos = 0;
         state.solved = false;
@@ -406,7 +415,7 @@
         $status.textContent = "";
 
         const tChars = titleChars();
-        buildAllRows(tChars); // 5 filas, solo la 1 visible
+        buildAllRows(tChars);
         refreshMeta();
         focusKeyboard();
       }
@@ -431,7 +440,7 @@
       function setCellChar(rowEl, index, ch) {
         const cell = rowEl.children[index];
         if (!cell) return;
-        cell.textContent = ch.toUpperCase(); // siempre en mayúsculas
+        cell.textContent = ch.toUpperCase(); // conserva tildes/ñ
         cell.classList.add("fill");
         setTimeout(() => cell.classList.remove("fill"), 80);
       }
@@ -451,7 +460,6 @@
       }
 
       function rowFilled(rowEl) {
-        // Todos los caracteres cuentan, incluido el espacio.
         return Array.from(rowEl.children).every(
           (cell) => cell.textContent && cell.textContent.length > 0
         );
@@ -470,12 +478,17 @@
         const chars = titleChars();
 
         if (!rowEl.children[state.cursorPos]) return;
-        if (ch === "\n" || ch.length !== 1) return;
+        if (!ch || ch === "\n") return;
 
-        setCellChar(rowEl, state.cursorPos, ch);
-        // avanzar una posición (incluye espacio como carácter normal)
-        if (state.cursorPos < chars.length - 1) {
-          state.cursorPos += 1;
+        // Puede llegar más de un carácter (pegado/predicción). Ya viene en NFC.
+        const units = Array.from(ch.normalize("NFC"));
+        for (const g of units) {
+          setCellChar(rowEl, state.cursorPos, g);
+          if (state.cursorPos < chars.length - 1) {
+            state.cursorPos += 1;
+          } else {
+            break;
+          }
         }
       }
 
@@ -493,6 +506,13 @@
         }
       }
 
+      function handleDelete() {
+        if (state.solved) return;
+        const rowEl = currentRow();
+        if (!rowEl) return;
+        clearCellChar(rowEl, state.cursorPos); // Supr borra la celda actual
+      }
+
       /* ===== Verificación ===== */
       function verify() {
         if (state.solved) return;
@@ -504,11 +524,10 @@
             "Completa todas las casillas antes de verificar.";
           return;
         }
-        const target = titleChars(); // caracteres originales
-        const guessRaw = readRowGuess(rowEl); // texto mostrado (mayúsculas)
+        const target = titleChars();
+        const guessRaw = readRowGuess(rowEl);
         const guess = Array.from(guessRaw.normalize("NFC"));
 
-        // coloreado: solo verde/rojo; intentos previos permanecen visibles
         for (let i = 0; i < target.length; i++) {
           const cell = rowEl.children[i];
           const ok = norm(guess[i]) === norm(target[i]);
@@ -530,7 +549,6 @@
               "Sin intentos. Era: “" + state.items[state.index].title + "”";
             state.solved = true;
           } else {
-            // mostrar siguiente fila oculta (la anterior queda visible coloreada)
             const nextRow = $board.querySelector(
               '.row[data-row="' + (state.attempt + 1) + '"]'
             );
@@ -554,18 +572,87 @@
       }
 
       /* ===== Eventos ===== */
-      root.addEventListener("keydown", (ev) => {
+
+      // --- COMPOSICIÓN: teclas muertas/IME ---
+      let composing = false;
+      let compBuffer = "";
+
+      $ghost.addEventListener("compositionstart", () => {
+        composing = true;
+        compBuffer = "";
+      });
+
+      $ghost.addEventListener("compositionupdate", (ev) => {
+        compBuffer = (ev.data || "").normalize("NFC");
+      });
+
+      $ghost.addEventListener("compositionend", (ev) => {
+        const data = (ev.data || compBuffer || $ghost.value || "").normalize(
+          "NFC"
+        );
+        if (data) handleCharInput(data);
+        compBuffer = "";
+        composing = false;
+        $ghost.value = "";
+      });
+
+      // beforeinput: SOLO cuando no hay composición en curso (p. ej., pegado simple)
+      $ghost.addEventListener("beforeinput", (ev) => {
+        if (composing) return;
+        const type = ev.inputType || "";
+        if (type.startsWith("insert")) {
+          const data = ev.data != null ? ev.data : $ghost.value;
+          if (data) {
+            for (const ch of Array.from(data.normalize("NFC")))
+              handleCharInput(ch);
+            $ghost.value = "";
+          }
+          ev.preventDefault();
+        }
+      });
+
+      // Pegado explícito (por compatibilidad)
+      $ghost.addEventListener("paste", (ev) => {
+        const text =
+          (ev.clipboardData && ev.clipboardData.getData("text")) || "";
+        if (text) {
+          for (const ch of Array.from(text.normalize("NFC")))
+            handleCharInput(ch);
+          $ghost.value = "";
+          ev.preventDefault();
+        }
+      });
+
+      // Teclas de control en global. Permitimos letras vía composición en el ghost.
+      window.addEventListener("keydown", (ev) => {
+        const t = ev.target;
+        const typingInOther =
+          t &&
+          (t.isContentEditable ||
+            /^(INPUT|TEXTAREA|SELECT)$/i.test(t.tagName)) &&
+          t !== $ghost;
+
+        if (typingInOther) return;
         if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
-        if (ev.key === "Enter") {
+
+        // Validar con Enter (también en el input fantasma)
+        if (ev.key === "Enter" || ev.key === "NumpadEnter") {
           ev.preventDefault();
           verify();
           return;
         }
+        // Borrar
         if (ev.key === "Backspace") {
           ev.preventDefault();
           handleBackspace();
           return;
         }
+        if (ev.key === "Delete") {
+          ev.preventDefault();
+          handleDelete();
+          return;
+        }
+        // Navegación
         if (ev.key === "ArrowLeft") {
           ev.preventDefault();
           moveCursor(-1);
@@ -576,11 +663,31 @@
           moveCursor(+1);
           return;
         }
-        if (ev.key.length === 1) {
+
+        // Primera pulsación sin foco: dirigir al ghost.
+        if (ev.key === "Dead") {
+          // inicia una composición: pon foco al ghost y deja que se componga allí
+          focusKeyboard();
+          return;
+        }
+        if (
+          (ev.key.length === 1 || ev.key === " ") &&
+          document.activeElement !== $ghost
+        ) {
+          // Si no estamos en el ghost, capturamos esta primera tecla "normal"
           ev.preventDefault();
+          focusKeyboard();
           handleCharInput(ev.key);
-        } // incluye espacio
+          return;
+        }
+        // Si ya estamos en el ghost y es letra/espacio, no prevenimos: la composición lo maneja.
       });
+
+      // Click/tap en el área: reenfoca para escribir
+      root.addEventListener("pointerdown", () => {
+        focusKeyboard();
+      });
+
       $check.addEventListener("click", verify);
       $skip.addEventListener("click", nextItem);
       $backspace.addEventListener("click", () => {
@@ -593,19 +700,18 @@
       });
       $reload.addEventListener("click", async () => {
         if ($collection.value) await loadSelectedCollection($collection.value);
+        focusKeyboard();
       });
 
       async function loadSelectedCollection(path) {
         try {
           const { title, items } = await loadCollection(path);
-          // Baraja sin repetición
           shuffle(items);
           state.collectionPath = path;
           state.collectionTitle = title;
           state.items = items;
           state.index = 0;
           state.score = loadScore(path);
-          // actualiza etiqueta del option (por si el título cambió)
           const opt = Array.from($collection.options).find(
             (o) => o.value === path
           );
@@ -624,7 +730,7 @@
           await loadSelectedCollection($collection.options[0].value);
         }
         setTimeout(() => {
-          $ghost.focus({ preventScroll: true });
+          focusKeyboard();
         }, 0);
       })();
     })();
