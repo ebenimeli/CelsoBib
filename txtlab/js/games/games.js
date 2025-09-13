@@ -53,3 +53,7 @@ export function loadGame2() {
 export function loadGame3() {
   loadGame(3);
 }
+
+export function loadGame4() {
+  loadGame(4);
+}

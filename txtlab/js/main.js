@@ -199,6 +199,7 @@ const actionMap = {
   game2: GAMES.loadGame2,
   game1: GAMES.loadGame1,
   snakepong: GAMES.loadGame3,
+  guesswords: GAMES.loadGame4,
 };
 
 /** Global click dispatcher */
