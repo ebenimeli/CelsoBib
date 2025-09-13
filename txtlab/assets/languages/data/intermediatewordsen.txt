@@ -1,0 +1,99 @@
+Inglés (Intermedio)
+el vecindario;the neighborhood
+la ciudad;the city
+el pueblo;the town
+la aldea;the village
+la carretera;the road
+la autopista;the highway
+el cruce;the crossroads
+el semáforo;the traffic light
+el paso de peatones;the crosswalk
+la acera;the sidewalk
+el aparcamiento;the parking lot
+la gasolinera;the gas station
+el supermercado;the supermarket
+la panadería;the bakery
+la carnicería;the butcher’s
+la pescadería;the fishmonger’s
+la farmacia;the pharmacy
+la librería;the bookstore
+la biblioteca;the library
+la escuela;the school
+la universidad;the university
+la oficina;the office
+el banco;the bank
+la fábrica;the factory
+el hospital;the hospital
+la clínica;the clinic
+la estación;the station
+el aeropuerto;the airport
+el puerto;the port
+la playa;the beach
+la montaña;the mountain
+el bosque;the forest
+el campo;the countryside
+el río;the river
+el lago;the lake
+la isla;the island
+el desierto;the desert
+la cascada;the waterfall
+la cueva;the cave
+el puente;the bridge
+el túnel;the tunnel
+el castillo;the castle
+la iglesia;the church
+la mezquita;the mosque
+el templo;the temple
+el museo;the museum
+el teatro;the theater
+el cine;the cinema
+el estadio;the stadium
+el mercado;the market
+la tienda;the shop
+la ropa;the clothes
+el abrigo;the coat
+la chaqueta;the jacket
+la camisa;the shirt
+la blusa;the blouse
+el vestido;the dress
+la falda;the skirt
+los pantalones;the trousers
+los vaqueros;the jeans
+los zapatos;the shoes
+las botas;the boots
+las sandalias;the sandals
+los calcetines;the socks
+los guantes;the gloves
+la bufanda;the scarf
+el sombrero;the hat
+las gafas;the glasses
+el paraguas;the umbrella
+el reloj de pulsera;the wristwatch
+el collar;the necklace
+los pendientes;the earrings
+el anillo;the ring
+la cartera;the wallet
+el bolso;the handbag
+la maleta;the suitcase
+el billete;the ticket
+el pasaporte;the passport
+la frontera;the border
+la aduana;the customs
+el turista;the tourist
+la excursión;the excursion
+el guía;the guide
+el mapa;the map
+la brújula;the compass
+la tienda de campaña;the tent
+el saco de dormir;the sleeping bag
+la hoguera;the campfire
+la linterna;the flashlight
+la mochila;the backpack
+el banco del parque;the bench
+la fuente;the fountain
+la estatua;the statue
+el rascacielos;the skyscraper
+la oficina de correos;the post office
+el buzón;the mailbox
+la carta;the letter
+el sello;the stamp

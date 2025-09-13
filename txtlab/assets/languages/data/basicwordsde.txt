@@ -1,0 +1,99 @@
+Alemán (Básico)
+la mesa;der Tisch
+la silla;der Stuhl
+la cama;das Bett
+la puerta;die Tür
+la ventana;das Fenster
+la lámpara;die Lampe
+el sofá;das Sofa
+la alfombra;der Teppich
+el armario;der Schrank
+la estantería;das Regal
+la cocina;die Küche
+el baño;das Badezimmer
+el pasillo;der Flur
+el comedor;das Esszimmer
+el salón;das Wohnzimmer
+el dormitorio;das Schlafzimmer
+la nevera;der Kühlschrank
+el congelador;die Tiefkühltruhe
+la estufa;der Herd
+el horno;der Backofen
+el microondas;die Mikrowelle
+el fregadero;die Spüle
+el grifo;der Wasserhahn
+el plato;der Teller
+el vaso;das Glas
+la taza;die Tasse
+la cuchara;der Löffel
+el tenedor;die Gabel
+el cuchillo;das Messer
+la sartén;die Pfanne
+la olla;der Topf
+el cubo de basura;der Mülleimer
+la lavadora;die Waschmaschine
+la secadora;der Trockner
+la plancha;das Bügeleisen
+la tabla de planchar;das Bügelbrett
+la escoba;der Besen
+el recogedor;die Kehrschaufel
+la fregona;der Wischmopp
+el cubo;der Eimer
+el detergente;das Waschmittel
+el jabón;die Seife
+la toalla;das Handtuch
+la manta;die Decke
+la almohada;das Kissen
+la sábana;das Bettlaken
+la colcha;die Bettdecke
+la mesita de noche;der Nachttisch
+el despertador;der Wecker
+el cuadro;das Bild
+el espejo;der Spiegel
+la televisión;der Fernseher
+el mando a distancia;die Fernbedienung
+el ordenador;der Computer
+el escritorio;der Schreibtisch
+la silla de oficina;der Bürostuhl
+la lámpara de escritorio;die Schreibtischlampe
+la impresora;der Drucker
+el teléfono;das Telefon
+la radio;das Radio
+el altavoz;der Lautsprecher
+la bombilla;die Glühbirne
+la cortina;der Vorhang
+la persiana;die Jalousie
+la ventana abatible;das Dachfenster
+la pared;die Wand
+el techo;die Decke
+el suelo;der Boden
+la escalera;die Treppe
+el jardín;der Garten
+la terraza;die Terrasse
+el balcón;der Balkon
+el garaje;die Garage
+el sótano;der Keller
+el ático;der Dachboden
+la chimenea;der Kamin
+la barandilla;das Geländer
+el marco;der Rahmen
+el pomo de la puerta;die Türklinke
+la cerradura;das Schloss
+la llave;der Schlüssel
+el timbre;die Klingel
+el buzón;der Briefkasten
+la bombona de gas;die Gasflasche
+el ventilador;der Ventilator
+el aire acondicionado;die Klimaanlage
+la calefacción;die Heizung
+el radiador;der Heizkörper
+la ducha;die Dusche
+la bañera;die Badewanne
+el inodoro;die Toilette
+el papel higiénico;das Toilettenpapier
+el cepillo de dientes;die Zahnbürste
+la pasta de dientes;die Zahnpasta
+el peine;der Kamm
+el secador de pelo;der Haartrockner
+la báscula;die Waage
+la cesta de la ropa;der Wäschekorb

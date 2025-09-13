@@ -1,0 +1,101 @@
+100 paraules (CAS-VAL)
+el albaricoque;l’abricoc
+el alhelí;l’espígol
+el búho;el mussol
+el burro;l’ase
+el caballo;el cavall
+el cabrito;el cabrit
+el cacahuete;el cacauet
+el cachorro;el cadell
+el calcetín;el mitjó
+el caracol marino;el cargol de mar
+el caracol;el caragol
+el ciempiés;centpeus
+el ciervo;el cérvol
+el conejo;el conill
+el cordero;l’anyell
+el cuaderno;la llibreta
+el cuervo;el corb
+el delfín;el dofí
+el desayuno;l’esmorzar
+el erizo;l’eriçó
+el gallo;el gall
+el ganso;l’oca
+el gatito;el gatet
+el gato;el gat
+el grillo;el grill
+el guisante seco;el cigró
+el guisante;el pèsol
+el higo;la figa
+el jabalí;el porc senglar
+el lagarto;el llangardaix
+el lechón;el garrí
+el lobo;el llop
+el maíz;el blat de moro
+el mejillón;el musclo
+el melocotón;la bresquilla
+el membrillo;el codony
+el murciélago;el ratpenat
+el oso;l’ós
+el pato;l’ànec
+el pavo;el gall dindi
+el perejil;el jolivert
+el perro;el gos
+el pingüino;el pingüí
+el polluelo;el pollet
+el potro;el poltre
+el pulpo;el pop
+el ratón;el ratolí
+el saltamontes;llagosta
+el sapo;el gripau
+el tiburón;el tauró
+el tomate;la tomaca
+el topo;el talp
+el toro;el bou
+el zorro;la rabosa
+la abeja;l’abella
+la alcachofa;la carxofa
+la almeja;la cloïssa
+la ardilla;l’esquirol
+la asignatura;la matèria
+la avispa;la vespa
+la ballena;la balena
+la calabaza;la carabassa
+la cena;el sopar
+la cigarra;la cigala
+la coliflor;el bròquil
+la comida;el dinar
+la foca;la foca
+la frambuesa;el gerd
+la fresa;la maduixa
+la galleta;la galeta
+la gallina;la gallina
+la gamba;la gambeta
+la granada;la magrana
+la judía blanca;la mongeta
+la judía verde;la bajoca
+la liebre;la llebre
+la luciérnaga;la cuqueta de llum
+la manteca;el saïm
+la mantequilla;la mantega
+la mariposa;la papallona
+la mariquita;la marieta
+la merienda;el berenar
+la mermelada;la melmelada
+la nevera;la gelera
+la pajita;la canyeta
+la paloma;el colom
+la patata;la creïlla
+la rana;la granota
+la remolacha;la remolatxa
+la sandalia;la espardenya
+la sandía;la síndria
+la sepia;la sípia
+la serpiente;la serp
+la seta;el bolet
+la tarta;el pastís
+la ternera;la vedella
+la vaca;la vaca
+la yegua;l’egua
+la zanahoria;la carlota
+los altramuces;els tramussos

@@ -19,6 +19,7 @@ import { wireCounters } from "./ui/counters.js";
 // Auto-init delegations (efectos secundarios)
 import "./docs/docs.js";
 import "./edu/edu.js";
+import "./languages/languages.js";
 
 import * as T from "./text/transforms.js";
 import * as G from "./text/groups.js";

@@ -76,9 +76,14 @@
         <i class="fa-solid fa-chart-simple"></i>
       </button>
 
+      <!-- LENGUAS -->
+      <button class="tool" data-target="#languages" data-i18n-title="" title="">
+          <i class="fa-solid fa-language"></i>
+      </button>
+
       <!-- TEMPORIZADORES -->
       <button class="tool" data-target="#timer" data-i18n-title="" title="">
-        <i class="fa-solid fa-hourglass-end"></i>
+          <i class="fa-solid fa-hourglass-end"></i>
       </button>
 
       <!-- DOCS -->
@@ -128,6 +133,35 @@
         </button>
         <button class="action" data-action="guesswords" data-i18n="">
           Word Clues
+        </button>
+      </div>
+    </template>
+
+
+    <!-- TEMPLATE: LANGUAGES -->
+    <template id="languages">
+      <button class="action" data-target="#deutsch" data-i18n="">Deutsch</button>
+      <div id="deutsch" class="toolset">
+        <button class="action" data-file="wordcluesde.html" data-i18n="">
+          Word Clues (DE)
+        </button>
+      </div>
+      <button class="action" data-target="#english" data-i18n="">English</button>
+      <div id="english" class="toolset">
+        <button class="action" data-file="wordcluesen.html" data-i18n="">
+          Word Clues (EN)
+        </button>
+      </div>
+      <button class="action" data-target="#valencia" data-i18n="">Valencià</button>
+      <div id="valencia" class="toolset">
+        <button class="action" data-file="wordcluesval.html" data-i18n="">
+          Word Clues (VAL)
+        </button>
+      </div>
+      <button class="action" data-target="#latin" data-i18n="">Lingua Latina</button>
+      <div id="latin" class="toolset">
+        <button class="action" data-file="wordclueslat.html" data-i18n="">
+          Word Clues (Latín)
         </button>
       </div>
     </template>

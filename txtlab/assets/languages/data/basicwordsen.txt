@@ -1,0 +1,101 @@
+Inglés (Básico)
+la mesa;the table
+la silla;the chair
+la cama;the bed
+la puerta;the door
+la ventana;the window
+la casa;the house
+el piso;the floor
+el techo;the ceiling
+la pared;the wall
+la cocina;the kitchen
+el baño;the bathroom
+el salón;the living room
+el comedor;the dining room
+el dormitorio;the bedroom
+el pasillo;the hallway
+el jardín;the garden
+el garaje;the garage
+la terraza;the terrace
+el balcón;the balcony
+la lámpara;the lamp
+la luz;the light
+la bombilla;the bulb
+la cortina;the curtain
+la alfombra;the carpet
+el sofá;the sofa
+la estantería;the shelf
+el armario;the wardrobe
+la mesa de noche;the nightstand
+la cómoda;the dresser
+el espejo;the mirror
+el cuadro;the picture
+la televisión;the television
+el mando;the remote
+el ordenador;the computer
+el escritorio;the desk
+la silla de oficina;the office chair
+el libro;the book
+el cuaderno;the notebook
+el bolígrafo;the pen
+el lápiz;the pencil
+la goma;the eraser
+la regla;the ruler
+la mochila;the backpack
+el reloj;the clock
+el calendario;the calendar
+la cama individual;the single bed
+la cama doble;the double bed
+la sábana;the sheet
+la manta;the blanket
+la almohada;the pillow
+la colcha;the quilt
+la toalla;the towel
+el jabón;the soap
+el champú;the shampoo
+la pasta de dientes;the toothpaste
+el cepillo de dientes;the toothbrush
+el peine;the comb
+el secador;the hairdryer
+la ducha;the shower
+la bañera;the bathtub
+el inodoro;the toilet
+el papel higiénico;the toilet paper
+la cocina de gas;the gas stove
+el horno;the oven
+el microondas;the microwave
+el fregadero;the sink
+el grifo;the tap
+la nevera;the fridge
+el congelador;the freezer
+la sartén;the frying pan
+la olla;the pot
+el plato;the plate
+el vaso;the glass
+la taza;the cup
+el cuchillo;the knife
+el tenedor;the fork
+la cuchara;the spoon
+la mesa de comedor;the dining table
+la silla de comedor;the dining chair
+el cubo de basura;the bin
+la lavadora;the washing machine
+la secadora;the dryer
+la plancha;the iron
+la tabla de planchar;the ironing board
+la escoba;the broom
+el recogedor;the dustpan
+la fregona;the mop
+el cubo;the bucket
+el detergente;the detergent
+la radio;the radio
+el teléfono;the phone
+el altavoz;the speaker
+la cámara;the camera
+el coche;the car
+la bicicleta;the bicycle
+la moto;the motorcycle
+el autobús;the bus
+el tren;the train
+el avión;the airplane
+el barco;the boat
