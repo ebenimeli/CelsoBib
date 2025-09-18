@@ -20,7 +20,6 @@ import { wireCounters } from "./ui/counters.js";
 import "./docs/docs.js";
 import "./edu/edu.js";
 import "./languages/languages.js";
-import "./students/students.js";
 
 import * as T from "./text/transforms.js";
 import * as G from "./text/groups.js";
@@ -125,6 +124,11 @@ document.addEventListener("app:main-updated", async (e) => {
     });
     wireReaderAccessibleShortcuts?.();
     console.debug("[readerAccessible] init OK");
+
+    // 🔹 Cargar pictogramas justo después de montar el lector
+    //    (el módulo busca #ra-input, #ra-content y #ra-pictos-on).
+    await import("./modules/pictograms.js");
+    console.debug("[pictograms] init OK");
   } catch (err) {
     console.error("[readerAccessible] no se pudo cargar/montar:", err);
   }

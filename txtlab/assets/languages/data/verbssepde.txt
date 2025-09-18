@@ -1,0 +1,101 @@
+Trennbare Verben (es-de)
+llamar por teléfono;anrufen
+levantarse;aufstehen
+abrir;aufmachen
+cerrar;zumachen
+encender;anmachen
+apagar;ausmachen
+entrar (subir a un vehículo);einsteigen
+bajar (de un vehículo);aussteigen
+hacer transbordo;umsteigen
+venir con;mitkommen
+llevar (consigo);mitnehmen
+traer;mitbringen
+participar;mitmachen
+preparar;vorbereiten
+presentar / imaginar(se);vorstellen
+leer en voz alta;vorlesen
+proponer;vorschlagen
+reflexionar;nachdenken
+preguntar de nuevo;nachfragen
+consultar (en un libro);nachschlagen
+observar;zuschauen
+ver (con atención);zusehen
+añadir;hinzufügen
+ir allí (en vehículo);hinfahren
+venir aquí;herkommen
+producir;herstellen
+descargar;herunterladen
+subir (archivos);hochladen
+invitar;einladen
+hacer la compra;einkaufen
+dormirse;einschlafen
+mudarse (entrar);einziehen
+ocurrírsele;einfallen
+amueblar / configurar;einrichten
+empaquetar;einpacken
+desempaquetar;auspacken
+salir (de casa);ausgehen
+mirar;ansehen
+probarse (ropa);anprobieren
+ofrecer;anbieten
+aceptar;annehmen
+inscribirse / registrar(se);anmelden
+recoger;abholen
+partir (salir un tren, coche);abfahren
+entregar;abgeben
+quitar / adelgazar;abnehmen
+enviar (correo);abschicken
+cerrar con llave / concluir;abschließen
+apagar (aparato);abschalten
+dejar de;aufhören
+ordenar (habitación);aufräumen
+prestar atención / cuidar;aufpassen
+despertarse;aufwachen
+grabar;aufnehmen
+construir / montar;aufbauen
+rendirse / entregar (un ejercicio);aufgeben
+engordar;zunehmen
+acceder (a datos);zugreifen
+volver;zurückkommen
+devolver;zurückgeben
+devolver la llamada;zurückrufen
+regresar en vehículo;zurückfahren
+colaborar;zusammenarbeiten
+resumir;zusammenfassen
+compilar / reunir;zusammenstellen
+continuar (ir);weitergehen
+seguir trabajando;weiterarbeiten
+continuar (hacer algo);weitermachen
+sujetar / retener;festhalten
+fijar / establecer;festlegen
+dejar libre;freimachen
+ver la tele;fernsehen
+ausentarse;fernbleiben
+ponerse en marcha;losgehen
+salir en coche;losfahren
+comunicar;mitteilen
+jugar (con otros);mitspielen
+pasar por (venir);vorbeikommen
+pasar por (ir);vorbeigehen
+tener planeado;vorhaben
+preferir;vorziehen
+reprochar;vorwerfen
+mostrar;vorzeigen
+ocurrir / pasar;vorkommen
+irse;weggehen
+tirar (a la basura);wegwerfen
+huir;weglaufen
+quitar;wegnehmen
+preparar (comida);zubereiten
+escuchar (atentamente);zuhören
+apañárselas;zurechtkommen
+orientarse;zurechtfinden
+confirmar (aceptar invitación);zusagen
+cancelar;absagen
+llegar;ankommen
+anunciar;ankündigen
+parar / detener(se);anhalten
+mudarse (de vivienda);umziehen
+cambiar (en tienda);umtauschen
+leer de principio a fin;durchlesen

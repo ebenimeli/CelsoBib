@@ -1,0 +1,51 @@
+Marcas (ES)
+Autos;SEAT
+Autos;Cupra
+Autos;Hispano-Suiza
+Autos;Irizar
+Autos;CAF
+Autos;Tata Hispano
+Motos;Rieju
+Motos;Bultaco
+Motos;GasGas
+Motos;Montesa
+Motos;Ossa
+Motos;Derbi
+Ropa deportiva;Joma
+Ropa deportiva;Kelme
+Ropa deportiva;Munich
+Ropa deportiva;Lotto España
+Alimentación;Chupa Chups
+Alimentación;ColaCao
+Alimentación;Nocilla
+Alimentación;Turrones El Almendro
+Alimentación;Valor
+Alimentación;Gallina Blanca
+Alimentación;Panrico
+Alimentación;Bimbo España
+Alimentación;Gallo
+Alimentación;Central Lechera Asturiana
+Alimentación;Pascual
+Alimentación;Carbonell
+Alimentación;Ybarra
+Alimentación;La Española
+Alimentación;El Pozo
+Alimentación;Campofrío
+Alimentación;Lacasitos
+Alimentación;Conguitos
+Alimentación;Don Simón
+Alimentación;Freixenet
+Alimentación;Codorníu
+Alimentación;Mahou
+Alimentación;San Miguel
+Alimentación;Estrella Galicia
+Electrodomésticos;Fagor
+Electrodomésticos;Balay
+Electrodomésticos;Cata
+Electrodomésticos;Teka
+Electrodomésticos;Orbegozo
+Electrodomésticos;Jata
+Electrodomésticos;Taurus
+Electrodomésticos;Solac
+Electrodomésticos;Ufesa
+Electrodomésticos;Mundial

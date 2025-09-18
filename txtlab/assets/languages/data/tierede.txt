@@ -1,0 +1,101 @@
+Tiere (es-de)
+el gato;die Katze
+el perro;der Hund
+el caballo;das Pferd
+la vaca;die Kuh
+el toro;der Stier
+la oveja;das Schaf
+la cabra;die Ziege
+el cerdo;das Schwein
+la gallina;die Henne
+el gallo;der Hahn
+el pavo;der Truthahn
+el pavo real;der Pfau
+el pato;die Ente
+el ganso;die Gans
+el cisne;der Schwan
+la paloma;die Taube
+el águila;der Adler
+el halcón;der Falke
+el búho;der Uhu
+la lechuza;die Eule
+el cuervo;der Rabe
+el gorrión;der Spatz
+el canario;der Kanarienvogel
+el loro;der Papagei
+el colibrí;der Kolibri
+el flamenco;der Flamingo
+el avestruz;der Strauß
+el pingüino;der Pinguin
+el delfín;der Delfin
+la ballena;der Wal
+la orca;der Schwertwal
+la foca;die Robbe
+el león marino;der Seelöwe
+la morsa;das Walross
+el tiburón;der Hai
+la mantarraya;der Mantarochen
+el caballito de mar;das Seepferdchen
+la medusa;die Qualle
+el pulpo;der Krake
+el calamar;der Kalmar
+la estrella de mar;der Seestern
+la anguila;der Aal
+el bacalao;der Kabeljau
+el atún;der Thunfisch
+el salmón;der Lachs
+la trucha;die Forelle
+la carpa;der Karpfen
+el cangrejo;die Krabbe
+la langosta marina;der Hummer
+la serpiente;die Schlange
+la víbora;die Viper
+el lagarto;die Eidechse
+el camaleón;das Chamäleon
+el cocodrilo;das Krokodil
+el caimán;der Kaiman
+la tortuga;die Schildkröte
+la tortuga marina;die Meeresschildkröte
+la rana;der Frosch
+el sapo;die Kröte
+el caracol;die Schnecke
+la babosa;die Nacktschnecke
+la mariposa;der Schmetterling
+la polilla;die Motte
+la abeja;die Biene
+la avispa;die Wespe
+la hormiga;die Ameise
+la libélula;die Libelle
+la mosca;die Fliege
+el mosquito;die Stechmücke
+la mariquita;der Marienkäfer
+el león;der Löwe
+el tigre;der Tiger
+el leopardo;der Leopard
+el guepardo;der Gepard
+el jaguar;der Jaguar
+el puma;der Puma
+el lince;der Luchs
+el zorro;der Fuchs
+el lobo;der Wolf
+el oso;der Bär
+el oso polar;der Eisbär
+el oso pardo;der Braunbär
+el elefante;der Elefant
+el rinoceronte;das Nashorn
+el hipopótamo;das Nilpferd
+la jirafa;die Giraffe
+la cebra;das Zebra
+el camello;das Kamel
+el dromedario;das Dromedar
+el canguro;das Känguru
+el koala;der Koala
+el panda gigante;der Große Panda
+el mono;der Affe
+el chimpancé;der Schimpanse
+el gorila;der Gorilla
+el orangután;der Orang-Utan
+el lémur;der Lemur
+la suricata;das Erdmännchen
+el mapache;der Waschbär
+el tejón;der Dachs

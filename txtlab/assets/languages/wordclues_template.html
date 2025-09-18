@@ -44,6 +44,14 @@
       align-items: center;
       flex-wrap: wrap;
     }
+    #guesswords-embed .topbar .right {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
     #guesswords-embed .select,
     #guesswords-embed .btn {
       font: inherit;
@@ -129,7 +137,7 @@
       transition: transform 0.06s ease, background 0.2s ease, color 0.2s ease,
         border-color 0.2s ease;
       user-select: none;
-      text-transform: uppercase; /* siempre en mayúsculas */
+      text-transform: uppercase;
       letter-spacing: 0.02em;
       color: #000;
     }
@@ -158,6 +166,22 @@
     #guesswords-embed .cell.hint {
       box-shadow: 0 0 0 2px
         color-mix(in oklab, var(--c-accent, #2563eb) 40%, transparent) inset;
+    }
+
+    /* ===== Teclado de caracteres especiales ===== */
+    #guesswords-embed .specials {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 6px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    #guesswords-embed .btn.kbd {
+      padding: 4px 10px;
+      font-weight: 800;
+      min-width: 38px;
+      justify-content: center;
     }
 
     #guesswords-embed .controls {
@@ -212,18 +236,20 @@
       <div class="left">
         <label for="gw-collection" class="sr-only">Colección</label>
         <select id="gw-collection" class="select" title="Colección"></select>
-
         <button
           id="gw-reload"
           class="btn"
-          title="Recargar colección"
+          title="Recargar colección (nueva partida)"
           aria-label="Recargar"
         >
           ↻
         </button>
       </div>
       <div class="right">
-        <span class="score" id="gw-score">Puntos: 000</span>
+        <i class="fa-solid fa-star"></i
+        ><span class="score" id="gw-score">Puntos: 000</span>
+        <i class="fa-solid fa-bullseye"></i>
+        <span class="score" id="gw-solved">Palabras: 0</span>
       </div>
     </div>
 
@@ -236,8 +262,15 @@
       aria-atomic="true"
     ></div>
 
+    <!-- Teclado de caracteres especiales (alemán) -->
+    <div
+      class="specials"
+      id="gw-specials"
+      role="toolbar"
+      aria-label="Teclado de caracteres especiales (alemán)"
+    ></div>
+
     <div class="controls">
-      <!-- Botón Pista, a la izquierda de Verificar -->
       <button
         id="gw-hint"
         class="btn"
@@ -246,7 +279,6 @@
       >
         💡 Pista
       </button>
-
       <button
         id="gw-check"
         class="btn primary"
@@ -293,13 +325,16 @@
       if (!root || root.__mounted) return;
       root.__mounted = true;
 
-      const COLLECTION_FILES = ["assets/languages/data/basicwordslatin.txt"];
-
+      /* ===== Config ===== */
+      const COLLECTION_FILES = [
+        "assets/languages/data/basicwordsde.txt",
+        "assets/languages/data/verbsde.txt",
+      ];
       const MAX_ATTEMPTS = 5;
       const pointsForAttempt = (i) => Math.max(1, MAX_ATTEMPTS + 1 - i);
 
-      // Normaliza comillas/apóstrofos a un único carácter para aceptar ’ ‘ ' ` ´ ‛ ′ ＇
-      const QUOTE_EQUIV = /['’‘`´‛′＇]/g; // U+0027,U+2019,U+2018,U+0060,U+00B4,U+201B,U+2032,U+FF07
+      // Normaliza comillas/apóstrofos a un único carácter
+      const QUOTE_EQUIV = /['’‘`´‛′＇]/g;
       const norm = (s) =>
         (s ?? "").normalize("NFC").replace(QUOTE_EQUIV, "'").toLowerCase();
 
@@ -311,10 +346,11 @@
         index: 0,
         attempt: 1,
         cursorPos: 0,
-        score: 0,
+        score: 0, // puntos acumulados (no persistentes)
+        solvedCount: 0, // palabras resueltas (no persistentes)
         solved: false,
-        hintsUsed: 0, // pistas usadas en la fila actual
-        hintedIdxs: new Set(), // índices revelados por pista en la fila actual
+        hintsUsed: 0,
+        hintedIdxs: new Set(),
       };
 
       /* ===== DOM ===== */
@@ -327,11 +363,13 @@
       const $skip = $("#gw-skip");
       const $backspace = $("#gw-backspace");
       const $score = $("#gw-score");
+      const $solved = $("#gw-solved");
       const $progressItems = $("#gw-progress-items");
       const $attempts = $("#gw-attempts");
       const $status = $("#gw-status");
       const $ghost = $("#gw-ghost");
       const $hint = $("#gw-hint");
+      const $specials = $("#gw-specials");
 
       /* ===== Colecciones ===== */
       async function buildCollectionSelect() {
@@ -342,9 +380,7 @@
             const txt = await (await fetch(path, { cache: "no-store" })).text();
             const first = (txt.split(/\r?\n/)[0] || "").trim();
             if (first) title = first;
-          } catch (e) {
-            console.warn("No se pudo leer título de", path, e);
-          }
+          } catch {}
           const opt = document.createElement("option");
           opt.value = path;
           opt.textContent = title;
@@ -373,25 +409,6 @@
         return { title, items };
       }
 
-      function storageKey(path) {
-        return "emojiGuess:" + path;
-      }
-      function loadScore(path) {
-        try {
-          const raw = localStorage.getItem(storageKey(path));
-          if (!raw) return 0;
-          const data = JSON.parse(raw);
-          return Number.isFinite(data.score) ? data.score : 0;
-        } catch {
-          return 0;
-        }
-      }
-      function saveScore(path, score) {
-        try {
-          localStorage.setItem(storageKey(path), JSON.stringify({ score }));
-        } catch {}
-      }
-
       /* ===== Util ===== */
       function shuffle(arr) {
         for (let i = arr.length - 1; i > 0; i--) {
@@ -402,8 +419,7 @@
       }
       function randomPick(arr) {
         if (!arr.length) return -1;
-        const j = (Math.random() * arr.length) | 0;
-        return arr[j];
+        return arr[(Math.random() * arr.length) | 0];
       }
       function titleChars() {
         return Array.from(state.items[state.index].title.normalize("NFC"));
@@ -418,7 +434,6 @@
 
       /* ===== Pistas (sin colisiones por intento) ===== */
       function maxHintsThisRow() {
-        // Un tercio redondeado, mínimo 1
         const len = titleChars().length;
         return Math.max(1, Math.round(len / 3));
       }
@@ -429,9 +444,7 @@
       function candidateHintIndexes() {
         const len = titleChars().length;
         const out = [];
-        for (let i = 0; i < len; i++) {
-          if (!state.hintedIdxs.has(i)) out.push(i);
-        }
+        for (let i = 0; i < len; i++) if (!state.hintedIdxs.has(i)) out.push(i);
         return out;
       }
       function updateHintUI() {
@@ -439,12 +452,12 @@
         const candidates = candidateHintIndexes();
         const disabled =
           state.solved || state.hintsUsed >= maxH || candidates.length === 0;
-
         if ($hint) {
           $hint.disabled = disabled;
-          const restByCap = Math.max(0, maxH - state.hintsUsed);
-          const restBySlots = Math.max(0, candidates.length);
-          const rest = Math.min(restByCap, restBySlots);
+          const rest = Math.min(
+            Math.max(0, maxH - state.hintsUsed),
+            Math.max(0, candidates.length)
+          );
           $hint.title = disabled
             ? "Sin pistas disponibles en este intento"
             : `Mostrar una letra (quedan ${rest} pista(s) en este intento)`;
@@ -455,9 +468,7 @@
         const rowEl = currentRow();
         if (!rowEl) return;
 
-        const target = titleChars();
         const maxH = maxHintsThisRow();
-
         if (state.hintsUsed >= maxH) {
           $status.textContent = "No quedan pistas en este intento.";
           updateHintUI();
@@ -471,25 +482,57 @@
           return;
         }
 
+        const target = titleChars();
         const idx = randomPick(candidates);
 
+        // Desvela la letra correcta en esa celda
         setCellChar(rowEl, idx, target[idx]);
         const cell = rowEl.children[idx];
         if (cell) {
           cell.classList.remove("ok", "bad");
-          cell.classList.add("hint");
-          cell.classList.add("fill");
+          cell.classList.add("hint", "fill");
           setTimeout(() => cell.classList.remove("fill"), 80);
         }
 
+        // Marcar y contabilizar pista
         state.hintedIdxs.add(idx);
         state.hintsUsed += 1;
 
+        // Penalización: -1 punto por pista (no persistente)
+        state.score -= 1;
+
+        // Recolocar cursor en primera vacía
         const emptyIdx = firstEmptyCellIndex(rowEl);
         if (emptyIdx >= 0) state.cursorPos = emptyIdx;
 
-        $status.textContent = `Pista usada: ${state.hintsUsed}/${maxH}`;
+        $status.textContent = `Pista usada (-1 punto): ${state.hintsUsed}/${maxH}`;
+        refreshMeta();
         updateHintUI();
+      }
+
+      /* ===== Teclado de caracteres especiales ===== */
+      const SPECIAL_KEYS = ["Ä", "Ö", "Ü", "ẞ"];
+      function buildSpecialButtons() {
+        if (!$specials) return;
+        $specials.innerHTML = "";
+        for (const ch of SPECIAL_KEYS) {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "btn kbd";
+          btn.setAttribute("data-char", ch);
+          btn.setAttribute("title", `Insertar ${ch}`);
+          btn.setAttribute("aria-label", `Insertar ${ch}`);
+          btn.textContent = ch;
+          $specials.appendChild(btn);
+        }
+      }
+      if ($specials) {
+        $specials.addEventListener("click", (ev) => {
+          const btn = ev.target.closest("button[data-char]");
+          if (!btn) return;
+          handleCharInput(btn.getAttribute("data-char") || "");
+          focusKeyboard();
+        });
       }
 
       /* ===== Filas ocultas de inicio ===== */
@@ -517,7 +560,7 @@
         state.cursorPos = 0;
         state.solved = false;
         state.hintsUsed = 0;
-        state.hintedIdxs = new Set(); // reset set de pistas por intento
+        state.hintedIdxs = new Set();
 
         $emojis.textContent = item.emojis || "❓";
         $status.textContent = "";
@@ -531,6 +574,7 @@
 
       function refreshMeta() {
         $score.textContent = "Puntos: " + String(state.score).padStart(3, "0");
+        $solved.textContent = "Palabras: " + state.solvedCount;
         $progressItems.textContent =
           state.index + 1 + " / " + state.items.length;
         $attempts.textContent =
@@ -541,7 +585,10 @@
         $emojis.textContent = "🎉";
         $board.innerHTML = "";
         $status.textContent =
-          "¡Colección completada! Puntuación total: " + state.score;
+          "¡Colección completada! Puntuación total: " +
+          state.score +
+          " | Resueltas: " +
+          state.solvedCount;
         refreshMeta();
         updateHintUI();
       }
@@ -550,7 +597,7 @@
       function setCellChar(rowEl, index, ch) {
         const cell = rowEl.children[index];
         if (!cell) return;
-        cell.textContent = ch.toUpperCase(); // conserva tildes/ñ
+        cell.textContent = ch.toUpperCase();
         cell.classList.add("fill");
         setTimeout(() => cell.classList.remove("fill"), 80);
       }
@@ -593,11 +640,8 @@
         const units = Array.from(ch.normalize("NFC"));
         for (const g of units) {
           setCellChar(rowEl, state.cursorPos, g);
-          if (state.cursorPos < chars.length - 1) {
-            state.cursorPos += 1;
-          } else {
-            break;
-          }
+          if (state.cursorPos < chars.length - 1) state.cursorPos += 1;
+          else break;
         }
       }
 
@@ -649,8 +693,7 @@
           state.solved = true;
           const pts = pointsForAttempt(state.attempt);
           state.score += pts;
-          if (state.collectionPath)
-            saveScore(state.collectionPath, state.score);
+          state.solvedCount += 1;
           $status.textContent = "¡Correcto! +" + pts + " puntos";
         } else {
           if (state.attempt >= MAX_ATTEMPTS) {
@@ -664,8 +707,8 @@
             if (nextRow) nextRow.classList.remove("hidden");
             state.attempt++;
             state.cursorPos = 0;
-            state.hintsUsed = 0; // reset pistas
-            state.hintedIdxs = new Set(); // reset índices usados para pista
+            state.hintsUsed = 0;
+            state.hintedIdxs = new Set();
             $status.textContent = "Sigue intentando…";
           }
         }
@@ -684,8 +727,7 @@
       }
 
       /* ===== Eventos ===== */
-
-      // --- COMPOSICIÓN: teclas muertas/IME ---
+      // COMPOSICIÓN: teclas muertas/IME
       let composing = false;
       let compBuffer = "";
 
@@ -693,11 +735,9 @@
         composing = true;
         compBuffer = "";
       });
-
       $ghost.addEventListener("compositionupdate", (ev) => {
         compBuffer = (ev.data || "").normalize("NFC");
       });
-
       $ghost.addEventListener("compositionend", (ev) => {
         const data = (ev.data || compBuffer || $ghost.value || "").normalize(
           "NFC"
@@ -708,7 +748,7 @@
         $ghost.value = "";
       });
 
-      // beforeinput: SOLO cuando no hay composición en curso (p. ej., pegado simple)
+      // beforeinput: sin composición
       $ghost.addEventListener("beforeinput", (ev) => {
         if (composing) return;
         const type = ev.inputType || "";
@@ -723,7 +763,7 @@
         }
       });
 
-      // Pegado explícito (por compatibilidad)
+      // Pegado explícito
       $ghost.addEventListener("paste", (ev) => {
         const text =
           (ev.clipboardData && ev.clipboardData.getData("text")) || "";
@@ -735,7 +775,7 @@
         }
       });
 
-      // Teclas de control en global. Permitimos letras vía composición en el ghost.
+      // Teclas globales
       window.addEventListener("keydown", (ev) => {
         const t = ev.target;
         const typingInOther =
@@ -743,17 +783,14 @@
           (t.isContentEditable ||
             /^(INPUT|TEXTAREA|SELECT)$/i.test(t.tagName)) &&
           t !== $ghost;
-
         if (typingInOther) return;
         if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
 
-        // Validar con Enter
         if (ev.key === "Enter" || ev.key === "NumpadEnter") {
           ev.preventDefault();
           verify();
           return;
         }
-        // Borrar
         if (ev.key === "Backspace") {
           ev.preventDefault();
           handleBackspace();
@@ -764,28 +801,24 @@
           handleDelete();
           return;
         }
-        // Navegación del cursor
         if (ev.key === "ArrowLeft") {
           ev.preventDefault();
           moveCursor(-1);
           return;
         }
-        // Flecha derecha = Siguiente palabra
         if (ev.key === "ArrowRight") {
           ev.preventDefault();
           nextItem();
           focusKeyboard();
           return;
-        }
-        // Flecha arriba = Pista
+        } // Siguiente palabra
         if (ev.key === "ArrowUp") {
           ev.preventDefault();
           revealHint();
           focusKeyboard();
           return;
-        }
+        } // Pista
 
-        // Primera pulsación sin foco: dirigir al ghost.
         if (ev.key === "Dead") {
           focusKeyboard();
           return;
@@ -821,8 +854,14 @@
       $collection.addEventListener("change", async (e) => {
         await loadSelectedCollection(e.target.value);
       });
+
+      // Recargar = nueva partida (sin persistencia)
       $reload.addEventListener("click", async () => {
-        if ($collection.value) await loadSelectedCollection($collection.value);
+        if ($collection.value) {
+          await loadSelectedCollection($collection.value);
+          $status.textContent =
+            "Nueva partida iniciada: puntos y resueltas reiniciados a 0.";
+        }
         focusKeyboard();
       });
 
@@ -834,11 +873,16 @@
           state.collectionTitle = title;
           state.items = items;
           state.index = 0;
-          state.score = loadScore(path);
+
+          // SIEMPRE reiniciar marcador al iniciar/cambiar/recargar
+          state.score = 0;
+          state.solvedCount = 0;
+
           const opt = Array.from($collection.options).find(
             (o) => o.value === path
           );
           if (opt) opt.textContent = title;
+
           setupRound();
         } catch (e) {
           console.error(e);
@@ -849,6 +893,23 @@
       /* ===== Boot ===== */
       (async function init() {
         await buildCollectionSelect();
+        // Construir teclado especial
+        const SPECIAL_KEYS = ["Ä", "Ö", "Ü", "ẞ"];
+        (function buildSpecialButtons() {
+          if (!$specials) return;
+          $specials.innerHTML = "";
+          for (const ch of SPECIAL_KEYS) {
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "btn kbd";
+            btn.setAttribute("data-char", ch);
+            btn.setAttribute("title", `Insertar ${ch}`);
+            btn.setAttribute("aria-label", `Insertar ${ch}`);
+            btn.textContent = ch;
+            $specials.appendChild(btn);
+          }
+        })();
+
         if ($collection.options.length) {
           await loadSelectedCollection($collection.options[0].value);
         }

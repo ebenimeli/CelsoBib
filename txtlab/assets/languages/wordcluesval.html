@@ -70,6 +70,11 @@
       color: #fff;
       border-color: color-mix(in oklab, var(--c-accent, #2563eb) 70%, black);
     }
+    #guesswords-embed .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
     #guesswords-embed .score {
       font-variant-numeric: tabular-nums;
       font-weight: 700;
@@ -149,6 +154,12 @@
       border-color: transparent !important;
     }
 
+    /* Marca opcional para pistas */
+    #guesswords-embed .cell.hint {
+      box-shadow: 0 0 0 2px
+        color-mix(in oklab, var(--c-accent, #2563eb) 40%, transparent) inset;
+    }
+
     #guesswords-embed .controls {
       display: flex;
       justify-content: center;
@@ -226,6 +237,16 @@
     ></div>
 
     <div class="controls">
+      <!-- Botón Pista, a la izquierda de Verificar -->
+      <button
+        id="gw-hint"
+        class="btn"
+        title="Mostrar una letra (pista)"
+        aria-label="Pista"
+      >
+        💡 Pista
+      </button>
+
       <button
         id="gw-check"
         class="btn primary"
@@ -273,10 +294,7 @@
       root.__mounted = true;
 
       /* ===== Config ===== */
-      const COLLECTION_FILES = [
-        /* "assets/data/guesswords/literature.txt", */
-        "assets/languages/data/paraulesval.txt",
-      ];
+      const COLLECTION_FILES = ["assets/languages/data/paraulesval.txt"];
       const MAX_ATTEMPTS = 5;
       const pointsForAttempt = (i) => Math.max(1, MAX_ATTEMPTS + 1 - i);
 
@@ -295,6 +313,8 @@
         cursorPos: 0,
         score: 0,
         solved: false,
+        hintsUsed: 0, // pistas usadas en la fila actual
+        hintedIdxs: new Set(), // índices revelados por pista en la fila actual
       };
 
       /* ===== DOM ===== */
@@ -311,6 +331,7 @@
       const $attempts = $("#gw-attempts");
       const $status = $("#gw-status");
       const $ghost = $("#gw-ghost");
+      const $hint = $("#gw-hint");
 
       /* ===== Colecciones ===== */
       async function buildCollectionSelect() {
@@ -379,6 +400,11 @@
         }
         return arr;
       }
+      function randomPick(arr) {
+        if (!arr.length) return -1;
+        const j = (Math.random() * arr.length) | 0;
+        return arr[j];
+      }
       function titleChars() {
         return Array.from(state.items[state.index].title.normalize("NFC"));
       }
@@ -388,6 +414,82 @@
       function focusKeyboard() {
         $ghost.value = "";
         $ghost.focus({ preventScroll: true });
+      }
+
+      /* ===== Pistas (sin colisiones por intento) ===== */
+      function maxHintsThisRow() {
+        // Un tercio redondeado, mínimo 1
+        const len = titleChars().length;
+        return Math.max(1, Math.round(len / 3));
+      }
+      function firstEmptyCellIndex(rowEl) {
+        const cells = Array.from(rowEl.children);
+        return cells.findIndex((c) => !c.textContent);
+      }
+      function candidateHintIndexes() {
+        const len = titleChars().length;
+        const out = [];
+        for (let i = 0; i < len; i++) {
+          if (!state.hintedIdxs.has(i)) out.push(i);
+        }
+        return out;
+      }
+      function updateHintUI() {
+        const maxH = maxHintsThisRow();
+        const candidates = candidateHintIndexes();
+        const disabled =
+          state.solved || state.hintsUsed >= maxH || candidates.length === 0;
+
+        if ($hint) {
+          $hint.disabled = disabled;
+          const restByCap = Math.max(0, maxH - state.hintsUsed);
+          const restBySlots = Math.max(0, candidates.length);
+          const rest = Math.min(restByCap, restBySlots);
+          $hint.title = disabled
+            ? "Sin pistas disponibles en este intento"
+            : `Mostrar una letra (quedan ${rest} pista(s) en este intento)`;
+        }
+      }
+      function revealHint() {
+        if (state.solved) return;
+        const rowEl = currentRow();
+        if (!rowEl) return;
+
+        const target = titleChars();
+        const maxH = maxHintsThisRow();
+
+        if (state.hintsUsed >= maxH) {
+          $status.textContent = "No quedan pistas en este intento.";
+          updateHintUI();
+          return;
+        }
+
+        const candidates = candidateHintIndexes();
+        if (candidates.length === 0) {
+          $status.textContent = "No quedan posiciones disponibles para pistas.";
+          updateHintUI();
+          return;
+        }
+
+        const idx = randomPick(candidates);
+
+        setCellChar(rowEl, idx, target[idx]);
+        const cell = rowEl.children[idx];
+        if (cell) {
+          cell.classList.remove("ok", "bad");
+          cell.classList.add("hint");
+          cell.classList.add("fill");
+          setTimeout(() => cell.classList.remove("fill"), 80);
+        }
+
+        state.hintedIdxs.add(idx);
+        state.hintsUsed += 1;
+
+        const emptyIdx = firstEmptyCellIndex(rowEl);
+        if (emptyIdx >= 0) state.cursorPos = emptyIdx;
+
+        $status.textContent = `Pista usada: ${state.hintsUsed}/${maxH}`;
+        updateHintUI();
       }
 
       /* ===== Filas ocultas de inicio ===== */
@@ -414,6 +516,8 @@
         state.attempt = 1;
         state.cursorPos = 0;
         state.solved = false;
+        state.hintsUsed = 0;
+        state.hintedIdxs = new Set(); // reset set de pistas por intento
 
         $emojis.textContent = item.emojis || "❓";
         $status.textContent = "";
@@ -421,6 +525,7 @@
         const tChars = titleChars();
         buildAllRows(tChars);
         refreshMeta();
+        updateHintUI();
         focusKeyboard();
       }
 
@@ -438,6 +543,7 @@
         $status.textContent =
           "¡Colección completada! Puntuación total: " + state.score;
         refreshMeta();
+        updateHintUI();
       }
 
       /* ===== Escritura y navegación ===== */
@@ -452,7 +558,7 @@
         const cell = rowEl.children[index];
         if (!cell) return;
         cell.textContent = "";
-        cell.classList.remove("ok", "bad");
+        cell.classList.remove("ok", "bad", "hint");
       }
 
       function moveCursor(delta) {
@@ -484,7 +590,6 @@
         if (!rowEl.children[state.cursorPos]) return;
         if (!ch || ch === "\n") return;
 
-        // Puede llegar más de un carácter (pegado/predicción). Ya viene en NFC.
         const units = Array.from(ch.normalize("NFC"));
         for (const g of units) {
           setCellChar(rowEl, state.cursorPos, g);
@@ -514,7 +619,7 @@
         if (state.solved) return;
         const rowEl = currentRow();
         if (!rowEl) return;
-        clearCellChar(rowEl, state.cursorPos); // Supr borra la celda actual
+        clearCellChar(rowEl, state.cursorPos);
       }
 
       /* ===== Verificación ===== */
@@ -559,10 +664,13 @@
             if (nextRow) nextRow.classList.remove("hidden");
             state.attempt++;
             state.cursorPos = 0;
+            state.hintsUsed = 0; // reset pistas
+            state.hintedIdxs = new Set(); // reset índices usados para pista
             $status.textContent = "Sigue intentando…";
           }
         }
         refreshMeta();
+        updateHintUI();
       }
 
       /* ===== Avance aleatorio sin repetición ===== */
@@ -639,7 +747,7 @@
         if (typingInOther) return;
         if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
 
-        // Validar con Enter (también en el input fantasma)
+        // Validar con Enter
         if (ev.key === "Enter" || ev.key === "NumpadEnter") {
           ev.preventDefault();
           verify();
@@ -656,21 +764,29 @@
           handleDelete();
           return;
         }
-        // Navegación
+        // Navegación del cursor
         if (ev.key === "ArrowLeft") {
           ev.preventDefault();
           moveCursor(-1);
           return;
         }
+        // Flecha derecha = Siguiente palabra
         if (ev.key === "ArrowRight") {
           ev.preventDefault();
-          moveCursor(+1);
+          nextItem();
+          focusKeyboard();
+          return;
+        }
+        // Flecha arriba = Pista
+        if (ev.key === "ArrowUp") {
+          ev.preventDefault();
+          revealHint();
+          focusKeyboard();
           return;
         }
 
         // Primera pulsación sin foco: dirigir al ghost.
         if (ev.key === "Dead") {
-          // inicia una composición: pon foco al ghost y deja que se componga allí
           focusKeyboard();
           return;
         }
@@ -678,13 +794,11 @@
           (ev.key.length === 1 || ev.key === " ") &&
           document.activeElement !== $ghost
         ) {
-          // Si no estamos en el ghost, capturamos esta primera tecla "normal"
           ev.preventDefault();
           focusKeyboard();
           handleCharInput(ev.key);
           return;
         }
-        // Si ya estamos en el ghost y es letra/espacio, no prevenimos: la composición lo maneja.
       });
 
       // Click/tap en el área: reenfoca para escribir
@@ -698,6 +812,11 @@
         handleBackspace();
         focusKeyboard();
       });
+      if ($hint)
+        $hint.addEventListener("click", () => {
+          revealHint();
+          focusKeyboard();
+        });
 
       $collection.addEventListener("change", async (e) => {
         await loadSelectedCollection(e.target.value);

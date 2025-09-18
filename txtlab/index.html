@@ -95,8 +95,14 @@
       </button>
       -->
 
+      <!-- TEACHER -->
       <button class="tool" data-target="#edu" data-i18n-title="" title="Educación">
         <i class="fa-solid fa-chalkboard-user"></i>
+      </button>
+
+      <!-- STUDENT -->
+      <button class="tool" data-target="#students" data-i18n-title="" title="Estudiantes">
+        <i class="fa-solid fa-book-open-reader"></i>
       </button>
 
       <!-- GAMES -->
@@ -237,6 +243,18 @@
       <div id="digcomp" class="toolset">
         <button class="action" data-file="comingsoon.html" data-i18n="">
           Próximamente
+        </button>
+      </div>
+    </template>
+
+
+    <!-- TEMPLATE: STUDENTS -->
+
+    <template id="students">
+      <button class="action" data-target="#geohis" data-i18n="">Geografía e Historia</button>
+      <div id="geohis" class="toolset">
+        <button class="action" data-file="wordcluesgh.html" data-i18n="">
+          <i class="fa-solid fa-gamepad"></i> Geografía
         </button>
       </div>
     </template>
@@ -688,7 +706,12 @@
     <form method="dialog" class="dlg">
       <h3 id="welcome-title" data-i18n="welcome_title"><strong>txt</strong>lab</h3>
       <p id="welcome-desc"></p>
-      <p><i class="fa-solid fa-gear"></i> <span data-i18n="welcome_p1">Esta aplicación web es una caja de herramientas para escribir, procesar y transformar texto.</span></p>
+      <!--<p><i class="fa-solid fa-gear"></i> <span data-i18n="welcome_p1">Esta aplicación web es una caja de herramientas para escribir, procesar y transformar texto.</span></p>-->
+      <p><strong>¡Nuevo!</strong></p>
+      <p><i class="fa-solid fa-language"></i> Sección para las lenguas: juegos interactivos</p>
+      <p><i class="fa-solid fa-chalkboard-user"></i> Rincón del profesor: herramientas para la diversidad</p>
+      <p><i class="fa-solid fa-book-open-reader"></i> Sección para el estudiante: recursos de geografía</p>
+
       <!--<p><i class="fa-solid fa-list"></i> <span data-i18n="welcome_p2">Puedes ordenar, agrupar y formatear listas de
           elementos.</span></p>
       <p><i class="fa-solid fa-pen-to-square"></i> <span data-i18n="welcome_p3">Puedes escribir sin distracciones,

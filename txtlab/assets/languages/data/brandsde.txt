@@ -1,0 +1,76 @@
+Marken (DE)
+Autos;Volkswagen
+Premium-Autos;Mercedes-Benz
+Premium-Autos;BMW
+Autos;Audi
+Sportwagen;Porsche
+Autos;Opel
+Nutzfahrzeuge;MAN
+Reifen;Continental
+Chemie;BASF
+Chemie/Pharma;Bayer
+Industrie/Elektronik;Siemens
+Software/ERP;SAP
+Sportbekleidung;Adidas
+Sportbekleidung;Puma
+Haushaltsgeräte;Miele
+Haushaltsgeräte;Bosch
+Werkzeuge/Gartengeräte;Stihl
+Fotografie/Kameras;Leica
+Audio/Kopfhörer;Sennheiser
+Optik/Objektive;ZEISS
+Küche/Haushalt;WMF
+Küchenmesser/Topfwaren;Zwilling
+Kochgeschirr;Fissler
+Messer;Wüsthof
+Schreibwaren;Staedtler
+Schreibwaren;Faber-Castell
+Büro/Ordnungshelfer;Leitz
+Elektronik-Zubehör;Hama
+Mode;Hugo Boss
+Schuhe/Sandalen;Birkenstock
+Kindersitze/Kinderwagen;Cybex
+Spielzeug;Playmobil
+Spiele/Puzzles;Ravensburger
+Spielzeug;HABA
+Modelleisenbahn;Märklin
+Audio/Studio;Beyerdynamic
+Musikinstrumente;Hohner
+Uhren;Junghans
+Uhren (Luxus);A. Lange & Söhne
+Uhren (Luxus);Glashütte Original
+Optiker/Brillen;Fielmann
+Süßwaren;Haribo
+Lebensmittel;Dr. Oetker
+Kaffee/Rösterei;Tchibo
+Reinigungsgeräte;Kärcher
+Haushaltsgeräte;AEG
+Elektronik;Grundig
+Fluggesellschaft;Lufthansa
+Bahn;Deutsche Bahn
+Versandhandel;Otto
+Supermarkt;Edeka
+Supermarkt;REWE
+Discounter;Aldi
+Discounter;Lidl
+Discounter;Penny
+Discounter;Netto Marken-Discount
+SB-Warenhaus;Kaufland
+SB-Warenhaus;Globus
+Bio-Supermarkt;Alnatura
+Bio-Supermarkt;denn's Biomarkt
+Supermarkt;tegut...
+Discounter;NORMA
+Mode;s.Oliver
+Mode;Tom Tailor
+Mode;Gerry Weber
+Mode (Discount);KiK
+Mode;New Yorker
+Online-Mode;Zalando
+Mode (Versand);bonprix
+Mode;Ernsting's family
+Mode-Einzelhandel;Peek & Cloppenburg
+Outdoor/Mode;Jack Wolfskin
+Luxusmode;Bogner
+Luxusmode;Marc Cain
+Mode;Adler
