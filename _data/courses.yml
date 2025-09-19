@@ -13,16 +13,16 @@
 
 - name: "Profesor@s entre bits y bots: Taller de fomento de la lectura a través de la literatura digital"
   organizer: Universidad Nacional de Educación a Distancia
-  credits:
-  hours:
-  description: ""
+  credits: 1
+  hours: 20
+  description: "Curso de actualización que diagnostica la comprensión lectora juvenil en España y desarrolla soluciones colaborativas basadas en literatura digital e inteligencia artificial para fomentar lectura y equidad."
   modality: Online
-  location:
-  start:
-  end:
+  location: UNED Denia
+  start: 14 de julio
+  end: 16 de julio
   language: ES
-  contents: ""
-  url:
+  contents: "Desgranando la afición lectora de nuestros jóvenes: evidencias, diagnósticos, implicaciones (Mesa redonda) · Recorrido crítico por las iniciativas de fomento de la afición lectora: fortalezas, debilidades · Introducción a la literatura digital para niños y jóvenes · Del cuento a la pantalla: la Inteligencia Artificial como aliada para la creación multimedia · Optimizando la lectura con relatos interactivos en formato digital: ¿individual o social, libre o pautada...? · El uso de la Inteligencia Artificial Generativa para la creación literaria · Máquinas poéticas: taller de creación de poesía experimental · Frankenbot: construye tu propio chatbot literario"
+  url: https://extension.uned.es/actividad/idactividad/42375
 
 - name: "Los desafíos del bilingüismo y la educación bilingüe: Del contexto educativo al contexto familiar"
   organizer: Universidad Nacional de Educación a Distancia
