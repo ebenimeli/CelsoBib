@@ -1,150 +1,1951 @@
+- name: "Metodologías inclusivas y su aplicación en el aula basada en la LOMLOE y en el Diseño Universal para el Aprendizaje (DUA)"
+  type: course
+  organizer: Universidad Nacional de Educación a Distancia
+  credits: 0.5
+  hours: 10
+  certification: "Certificado"
+  description: "Curso sobre LOMLOE y educación inclusiva: atención a la diversidad; DUA para diseñar currículos flexibles y accesibles, minimizando barreras, con herramientas y metodologías prácticas docentes."
+  modality: Online
+  location: UNED Tudela
+  start: 17.10.2025
+  end: 18.10.2025
+  language: ES
+  contents: "Un breve recorrido por la LOMLOE · Modelo DUA · Planificación multinivel · Aprendizaje cooperativo · Paisajes de aprendizaje · Aprendizaje basado en proyectos · Aprendizaje basado en problemas · Visual Thinking · Design Thinking · ABJ vs gamificación · m-learning · Realidad aumentada"
+  url: https://extension.uned.es/actividad/idactividad/47031
+  visibility: public
+
+- name: "Matemáticas y civilización: de las cavernas a la inteligencia artificial"
+  type: course
+  organizer: Universidad Nacional de Educación a Distancia
+  credits: 0.5
+  hours: 12
+  certification: "Certificado"
+  description: "Recorrido histórico por las matemáticas y su papel civilizatorio: número, razón, curvas, inventos e inteligencia artificial, mostrando cómo impulsan pensamiento humano y transforman el presente."
+  modality: Online
+  location: UNED Tudela
+  start: 16.10.2025
+  end: 17.10.2025
+  language: ES
+  contents: "En busca del principio: gestación de las matemáticas · El abogado del terraplanismo · Una piedra en el camino me enseñó que mi destino era rodar y rodar · De la máquina al teorema: Inventos que inspiraron matemáticas · Matemáticas que piensan: del cálculo a la inteligencia artificial"
+  url: https://extension.uned.es/actividad/idactividad/45763
+  visibility: public
+
+- name: "Cero de estadística"
+  type: course
+  organizer: Universidad Nacional de Educación a Distancia
+  credits: 0.5
+  hours: 12
+  certification: "Certificado"
+  description: "Introducción a la Estadística que desarrolla conocimientos básicos y destrezas iniciales para seguir con éxito asignaturas de grado relacionadas, construyendo una base para estudios posteriores."
+  modality: Online
+  location: UNED Ciudad Real - Valdepeñas
+  start: 08.10.2025
+  end: 22.10.2025
+  language: ES
+  contents: "ESTADÍSTICA DESCRIPTIVA: introducción · Variable estadística y tipos · Frecuencias y tabla de distribución · Representación gráfica de datos · Medidas de posición · Medidas de dispersión · Medidas de forma · Cambios de origen y de escala · DISTRIBUCIONES BIDIMENSIONALES: variables bidimensionales · Asociación estadística y causalidad · Tablas y gráficos · Covarianza y correlación lineal · Regresión lineal simple, coeficientes y predicciones · PROBABILIDAD: introducción, definiciones, variable aleatoria y tipos · Función de probabilidad y función de distribución (discreta) · Esperanza y desviación típica (discreta) · Principales distribuciones discretas · Función de probabilidad y función de distribución (continua) · Distribución normal · Cálculo de probabilidades en la normal y tipificación · Variable aleatoria bidimensional"
+  url: https://extension.uned.es/actividad/idactividad/45771
+  visibility: public
+
+- name: "Elaboración y Digitalización de Materiales CLIL"
+  type: master
+  program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
+  organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
+  credits: 5
+  hours: 125
+  description: "La asignatura aborda el aprendizaje integrado de lengua y contenidos (CLIL) en el marco del plurilingüismo europeo. Forma al estudiante en la creación y digitalización de materiales didácticos mediante tecnologías educativas. Proporciona competencias prácticas para elaborar recursos centrados en el contenido, favoreciendo metodologías innovadoras en la enseñanza de lenguas con apoyo tecnológico."
+  modality: Online
+  location: UNED
+  start: febrero 2026
+  end: junio 2026
+  language: ES
+  contents: "CLIL/AICLE integrado en el currículum pre-universitario y universitario · Metodología CLIL y metodología TIC · Uso de las TIC en la preparación de materiales y sesiones AICLE · Herramientas y aplicaciones web para la mejora de las destrezas de comprensión lectora y expresión escrita · Herramientas y aplicaciones web para la mejora de la comprensión auditiva y la comunicación oral"
+  url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=2440916-&codTitulacion=240901&idContenido=1
+  visibility: public
+  highlight: true
+
+- name: "Ontologías, Diccionarios y Lexicones Restringidos Computacionales"
+  type: master
+  program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
+  organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
+  credits: 5
+  hours: 125
+  description: "La asignatura ofrece una introducción al tratamiento computacional del léxico mediante ontologías, diccionarios y lexicones restringidos. Aborda análisis de corpus, codificación conceptual y textual, extracción de léxico y uso de software especializado. Facilita la comprensión de frecuencias, co-ocurrencias y análisis estadístico, proporcionando al alumnado una visión general de recursos léxicos y ontológicos digitales."
+  modality: Online
+  location: UNED
+  start: febrero 2026
+  end: junio 2026
+  language: ES
+  contents: "Introduccion al tratamiento computacional del léxico · El almacenamiento computacional del léxico · Revisión sobre los córpora · La codificación del significado en diccionarios y tesaurus · Bases de datos · Diccionarios · Ontologías"
+  url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24409193&codTitulacion=240901&idContenido=1
+  visibility: public
+
+- name: "La Red Semántica"
+  type: master
+  program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
+  organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
+  credits: 5
+  hours: 125
+  description: "La asignatura introduce la red semántica e Internet 3.0, abordando buscadores, metadatos, RDF, OWL y XML. Ofrece una visión aplicada de bases de datos, inteligencia artificial y web 3D. Forma en competencias clave para la investigación, la gestión de información y el tratamiento de lenguas en entornos digitales y profesionales emergentes."
+  modality: Online
+  location: UNED
+  start: febrero 2026
+  end: junio 2026
+  language: ES
+  contents: "Hacia una red significativa: buscadores verticales y horizontales · Datos y metadatos: etiquetado, ontologías y Ontology Web Language · Resource Description Framework y Extensible Markup Language · La red 3.0: bases de datos, inteligencia artificial y 3D"
+  url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24409189&codTitulacion=240901&idContenido=1
+  visibility: public
+
+- name: "Creación y Edición de Recursos Digitales para la Enseñanza y el Aprendizaje de Lenguas"
+  type: master
+  program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
+  organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
+  credits: 5
+  hours: 125
+  description: "La asignatura analiza el impacto de la digitalización y las TIC en la enseñanza de lenguas. Ofrece fundamentos teóricos y prácticos para crear, editar y difundir materiales audiovisuales interactivos en Internet. Promueve nuevas metodologías comunicativas, fomenta la competencia digital y aprovecha recursos auténticos en línea para un aprendizaje más eficaz, dinámico y motivador."
+  modality: Online
+  location: UNED
+  start: octubre 2025
+  end: febrero 2026
+  language: ES
+  contents: "El espacio virtual de formación y aprendizaje · El currículo y la búsqueda, adaptación, creación y evaluación de recursos didácticos para la enseñanza de lenguas · Fundamentos y recursos para la creación de materiales y recursos digitales sostenibles · La aplicabilidad de los materiales digitales en la enseñanza-aprendizaje de lenguas extranjeras I y II."
+  url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24090077&codTitulacion=240901&idContenido=1
+  visibility: public
+
+- name: "El Análisis de la Lengua Mediante Corpus"
+  type: master
+  program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
+  organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
+  credits: 5
+  hours: 125
+  description: "La asignatura introduce al estudiante en la lingüística del corpus, un enfoque de investigación basado en datos. Enseña recopilación y procesamiento computacional de muestras lingüísticas, análisis cuantitativo y cualitativo, y aplicación en ámbitos profesionales. Desarrolla competencias en el uso de herramientas, fomenta pensamiento crítico, curiosidad intelectual y capacidad para diseñar modelos de análisis fiables."
+  modality: Online
+  location: UNED
+  start: octubre 2025
+  end: febrero 2026
+  language: ES
+  contents: "Fundamentos y valor de los datos cuantitativos frente a la intuición personal · Las recopilaciones de datos lingüísticos y su definición · Los corpus lingüísticos: requisitos formales y científicos. Variantes de los corpus y su especificidad en distintos ámbitos de investigación y de trabajo profesional · La palabra electrónica y su tratamiento · Aplicaciones de las recopilaciones de datos lingüísticos en distintas áreas del lenguaje · Herramientas informáticas para el tratamiento de corpus · El uso de corpus en distintos ámbitos de la investigación lingüística · Aplicaciones informáticas de los corpus en ámbitos profesionales (enseñanza, traducción, ciencias jurídicas y sociales) · Herramientas estadísticas en el análisis mediante corpus."
+  url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24409047&codTitulacion=240901&idContenido=1
+  visibility: public
+
+- name: "Técnicas y Herramientas para la Investigación Cuantitativa"
+  type: master
+  program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
+  organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
+  credits: 5
+  hours: 125
+  description: "La asignatura proporciona al estudiante una introducción a los métodos cuantitativos aplicados al estudio del lenguaje. Aborda estadística descriptiva e inferencial, pruebas de hipótesis, análisis de datos y uso de software especializado. Busca desarrollar competencias técnicas y pensamiento crítico, permitiendo diseñar investigaciones sólidas y comunicar hallazgos de manera clara y fundamentada."
+  modality: Online
+  location: UNED
+  start: octubre 2025
+  end: febrero 2026
+  language: ES
+  contents: "Introducción a la estadística · Pre-procesamiento de datos y selección de variables · Estadística descriptiva · Estadística inferencial I: Análisis de varianza · Estadística inferencial II: Análisis de Regresión · Estadística inferencial III: Corpus · Introducción a la psicometría"
+  url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24090019&codTitulacion=240901&idContenido=1
+  visibility: public
+  highlight: true
+
+- name: "Metodología de la Investigación Lingüística"
+  type: master
+  program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
+  organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
+  credits: 5
+  hours: 125
+  description: "La asignatura introduce al estudiante en la investigación lingüística aplicada al ámbito educativo. A través de un enfoque riguroso y reflexivo, enseña fases, técnicas y métodos del proceso científico. Se fomenta la práctica investigadora, la capacidad crítica y la toma de decisiones fundamentadas. Proporciona competencias para diseñar, implementar y comunicar proyectos de investigación"
+  modality: Online
+  location: UNED
+  start: octubre 2025
+  end: febrero 2026
+  language: ES
+  contents: "Principios del método científico · Método de investigación. Enfoques · Investigación cuantitativa e invesitigación cualitativa · Procesos y fases de una investigación · Elaboración de instrumentos de medida · El informe de investigación"
+  url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24090048&codTitulacion=240901&idContenido=1
+  visibility: public
+
 - name: "Introducción a LaTeX: fundamentos, estructura, edición y herramientas"
+  type: course
   organizer: Universidad Nacional de Educación a Distancia
   credits: 1
   hours: 20
+  certification: "Certificado"
   description: "Curso práctico de 20 horas para aprender LaTeX desde cero: documentos académicos, fórmulas, tablas, gráficos, bibliografía automática, Overleaf, PDF/HTML y presentaciones Beamer con ejercicios guiados."
   modality: Online
   location: UNED Pontevedra
-  start: 15 septiembre 2025
-  end: 30 septiembre 2025
+  start: 15.09.2025
+  end: 30.09.2025
   language: ES
   contents: "¿Qué es LaTeX? Editores y compilación · Estructura básica de un documento · Estilo de texto y documentos modulares · Escritura matemática con LaTeX · Tablas e imágenes · Citas y bibliografía · Diseño avanzado de documentos · Presentaciones con Beamer · Publicación, colaboración y exportación · Trabajo final asistido"
   url: https://extension.uned.es/actividad/idactividad/45621
 
+- name: "Microsoft Innovative Educator Expert 2026"
+  type: course
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: ""
+  modality: Online
+  location:
+  start: 01.09.2025
+  end: 01.09.2025
+  language: ES
+  contents: ""
+  url:
+  visibility: public
+
+- name: "Curso completo de CSS: de principiante a front-end"
+  type: course
+  organizer: midudev
+  credits:
+  hours: 6
+  certification: "Certificado"
+  description: "Este curso ofrece una introducción completa a CSS, desde sus fundamentos hasta técnicas avanzadas. Se abordan selectores, herencia, especificidad, modelo de caja, posicionamiento, Flexbox y Grid. Incluye animaciones, transiciones y proyectos prácticos como galerías y diseños interactivos. Permite comprender y aplicar estilos modernos para crear páginas web atractivas, dinámicas y funcionales."
+  modality: Online
+  location: YouTube
+  start: 07.2025
+  end: 07.2025
+  language: ES
+  contents: "Introducción a CSS · Qué es CSS · Cascada · Recursos recomendados · Dónde poner estilos · Partes de CSS · Colores · Selectores: clases, ID, combinados · Pseudo-clases · Estados simulados (hover, first-child, last-child) · Operadores (primer nivel, hermano siguiente, plus) · Herramienta de práctica · Herencia · Valores especiales · Cascada avanzada · Fallbacks · Especificidad · Estilos en línea · Cómo saltarse la especificidad · Unidades relativas y absolutas · Reset CSS y Normalize · Modelo de la caja · Propiedades · Box-sizing · Overflow · Text-overflow · Position: absolute, relative, fixed, sticky · Centrado con absolute · Z-index · Flexbox: display flex · Flex-direction · Flex-wrap · Flex-flow · Grow-shrink-basis · Justify-content · Align-items · Gap · Orden y distribución de elementos · Grid: fundamentos · Grid vs Flex · Primer Grid · Columnas y filas · Repeat() · Auto-fill/auto-fit · Grid areas · Layouts · Alineación en línea y bloque · Animaciones y transiciones: transiciones, estados, transition-duration, transition all, cubic bezier, atajos, propiedades animables · Animaciones avanzadas: ejemplos prácticos, animation-fill-mode, shorthand animation, FPS, animaciones con scroll, animation timeline · Proyectos prácticos: galería de imágenes, navbar animado, ejercicios de Excel, creación de layouts y animación de galería."
+  url: https://www.youtube.com/watch?v=TlJbu0BMLaY
+  visibility: private
+
 - name: "Profesor@s entre bits y bots: Taller de fomento de la lectura a través de la literatura digital"
+  type: course
   organizer: Universidad Nacional de Educación a Distancia
   credits: 1
   hours: 20
+  certification: "Certificado"
   description: "Curso de actualización que diagnostica la comprensión lectora juvenil en España y desarrolla soluciones colaborativas basadas en literatura digital e inteligencia artificial para fomentar lectura y equidad."
   modality: Online
   location: UNED Denia
-  start: 14 de julio
-  end: 16 de julio
+  start: 14.07.2025
+  end: 16.07.2025
   language: ES
   contents: "Desgranando la afición lectora de nuestros jóvenes: evidencias, diagnósticos, implicaciones (Mesa redonda) · Recorrido crítico por las iniciativas de fomento de la afición lectora: fortalezas, debilidades · Introducción a la literatura digital para niños y jóvenes · Del cuento a la pantalla: la Inteligencia Artificial como aliada para la creación multimedia · Optimizando la lectura con relatos interactivos en formato digital: ¿individual o social, libre o pautada...? · El uso de la Inteligencia Artificial Generativa para la creación literaria · Máquinas poéticas: taller de creación de poesía experimental · Frankenbot: construye tu propio chatbot literario"
   url: https://extension.uned.es/actividad/idactividad/42375
 
 - name: "Los desafíos del bilingüismo y la educación bilingüe: Del contexto educativo al contexto familiar"
+  type: course
   organizer: Universidad Nacional de Educación a Distancia
-  credits:
-  hours:
-  description: ""
+  credits: 1
+  hours: 20
+  certification: "Certificado"
+  description: "Curso integral sobre bilingüismo: desarrollo cognitivo y cultural, estrategias familiares, programas educativos, inclusión, recursos didácticos y formación docente para favorecer aprendizaje lingüístico en contextos escolares y familiares."
   modality: Online
-  location:
-  start:
-  end:
+  location: UNED Campo de Gibraltar - Algeciras
+  start: 09.07.2025
+  end: 11.07.2025
   language: ES
-  contents: ""
-  url:
+  contents: "Introducción al bilingüismo y la educación bilingüe en el contexto español: un desafío para la sociedad · Los programas bilingües en la etapa primaria: Claves para el cambio y el éxito educativo · Diversidad cultural y educación bilingüe: un enfoque intercultural para docentes · Programas de educación bilingüe: El papel de las familias · El profesorado y los equipos directivos de centros ante el desafío de la educación bilingüe · La inclusión como desafío más allá de la educación bilingüe · Recursos Didácticos para la Enseñanza Bilingüe: Libros, materiales digitales, juegos y otros recursos útiles · ¿Cómo usar los corpus lingüísticos para iniciarse en la investigación en el aula bilingüe?"
+  url: https://extension.uned.es/actividad/idactividad/43117
 
 - name: "Como hacer una programación didáctica para educación primaria, secundaria y bachillerato"
+  type: course
   organizer: Universidad Nacional de Educación a Distancia
-  credits:
-  hours:
-  description: ""
+  credits: 1
+  hours: 20
+  certification: "Certificado"
+  description: "Curso teórico-práctico para diseñar, elaborar y defender programaciones didácticas en oposiciones docentes, integrando innovación, realidad educativa y evidencias científicas adaptadas a cada Comunidad Autónoma."
   modality: Online
-  location:
-  start:
-  end:
+  location: UNED
+  start: 04.11.2024
+  end: 18.11.2024
   language: ES
-  contents: ""
-  url:
+  contents: "Implicaciones de la LOMLOE en el diseño de la programación · El formato de la programación · Índice de la Programación en LOMLOE · Introducción / Contextualización · Competencias Clave (Descriptores) y Específicas · Saberes básicos (Contenidos) · Sostenibilidad, Elementos transversales y Educación en valores · Metodología · Evaluación (Enfoques, Técnicas, Procedimientos e Instrumentos) · Medidas de atención al alumnado con necesidad específica de apoyo educativo (DUA) · Actividades complementarias / extraescolares y proyectos de centro · Unidades Didácticas / Situaciones de Aprendizaje · Proyecto lingüístico (optativo) · Procedimientos informativos para garantizar una evaluación objetiva · Mecanismos de revisión, evaluación y modificación de las Programaciones · Autoevaluación de la programación y de la propia práctica docente · Referencias bibliográficas / normativa y anexos · Rúbricas oficiales para la evaluación de la programación en las diferentes comunidades autónomas"
+  url: https://extension.uned.es/actividad/idactividad/37825
+  highlight: true
 
 - name: "Lingüística contrastiva inglés-español y su aplicación a la enseñanza de lenguas extranjeras"
+  type: course
   organizer: Universidad Nacional de Educación a Distancia
-  credits:
-  hours:
-  description: ""
+  credits: 1
+  hours: 20
+  certification: "Certificado"
+  description: "Curso sobre lingüística contrastiva aplicada al inglés y español: fonología, gramática, sintagmas, cláusula, estructura temática e informativa, construcciones, léxico y principios para enseñanza y traducción."
   modality: Online
-  location:
-  start:
-  end:
+  location: UNED Ponferrada
+  start: 01.07.2024
+  end: 03.07.2024
   language: ES
-  contents: ""
-  url:
+  contents: "Introducción a la lingüística contrastiva y aproximación contrastivo-competencial a la enseñanza de lenguas en el aula · Fonología contrastiva: de lo suprasegmental a lo segmental · Lexicología y morfología contrastivas · Gramática de construcciones contrastiva · Gramática contrastiva de la estructura informativa · Gramática contrastiva de la negación · Gramática contrastiva del nombre y del sintagma nominal · Gramática contrastiva de la cláusula y su relación con los actos de habla"
+  url: https://extension.uned.es/actividad/idactividad/36013
 
 - name: "El ajedrez educa y enseña a pensar - Leontxo García"
+  type: talk
   organizer: Universidad Nacional de Educación a Distancia
   credits:
-  hours:
-  description: ""
+  hours: 2
+  certification:
+  description: "Charla sobre retos docentes: motivar alumnado influido por redes y decidir qué enseñar ante futuro incierto. El ajedrez educativo enseña a pensar, beneficios cognitivos probados."
   modality: Online
-  location:
-  start:
-  end:
+  location: UNED Tudela
+  start: 22.07.2024
+  end: 22.07.2024
   language: ES
-  contents: ""
-  url:
+  contents: "Retos docentes: motivar a alumnado influido por redes sociales · Decidir qué enseñar y cómo ante un futuro incierto (horizonte diez años) · Pensar como competencia perdurable · Ajedrez educativo para aprender a pensar jugando · Herramienta pedagógica valiosa en el aula · Beneficios cognitivos y socioemocionales del ajedrez · Evidencia científica de su eficacia · Utilidad terapéutica: retraso del envejecimiento cerebral y del Alzheimer"
+  url: https://extension.uned.es/actividad/idactividad/37427
 
 - name: "Ciclo de Ajedrez Educativo para Docentes y Educadores (Nivel I): Introducción al Ajedrez Educativo y su didáctica"
+  type: course
   organizer: Universidad Nacional de Educación a Distancia
-  credits:
-  hours:
-  description: ""
+  credits: 2
+  hours: 75
+  certification: "Certificado"
+  description: "El Nivel I del Ciclo de Ajedrez Educativo introduce a docentes y educadores en la didáctica del ajedrez desde un enfoque lúdico y competencial. Proporciona recursos, dinámicas y bases metodológicas para enseñar ajedrez en aulas o contextos sociales, otorgando diploma acreditativo y acceso al Nivel II."
   modality: Online
-  location:
-  start:
-  end:
+  location: UNED Tudela
+  start: 23.10.2023
+  end: 29.02.2024
   language: ES
-  contents: ""
-  url:
+  contents: "Modelo de los 7 colores: un modelo de aprendizaje basado en Competencias · ¿Qué es y por qué el Ajedrez Educativo? · Proceso de enseñanza/aprendizaje del Ajedrez en niños y niñas y en personas mayores: objetivos y metodología · Nociones básicas de Ajedrez y su didáctica: El tablero y las piezas, movimientos y valor de las piezas, reglas del juego, sistemas de notación · Fundamentos de Ajedrez moderno (Teoría, Táctica y aproximación a la Estrategia) · Jaque, jaque mate, técnicas de mates básicos y jugadas especiales · Las tablas y el rey ahogado · Fases de una partida · Ataque y defensa: amenazas y seguridad del Rey · Motivos y operaciones tácticas (I) · Curiosidades geométricas · Táctica vs estrategia · Introducción a la Historia del Ajedrez. Leyendas · Didáctica y Tipologías de ejercicios I (Niveles blanco y amarillo) · Funciones del ajedrez: el ajedrez como herramienta didáctica para adquirir y desarrollar aptitudes y mejorar actitudes. Ajedrez en la escuela · Juegos como elementos motivadores para el aprendizaje del alumnado y recurso educativo para el docente · La creación de ejercicios: motivación y aprendizaje · Ajedrez y competencias básicas (Introducción) · Competencias fundamentales orientadas a la vida. El ajedrez y el análisis de riesgos · Ajedrez Educativo, diversidad y ritmos de aprendizaje · Recursos de apoyo para el docente (plataformas online, software de apoyo)"
+  url: https://extension.uned.es/inscripcion/idactividad/32121
+  highlight: true
 
 - name: "El nuevo diseño curricular en LOMLOE. Implicaciones y propuestas para el diseño de programaciones, unidades didácticas y situaciones de aprendizaje"
+  type: course
   organizer: Universidad Nacional de Educación a Distancia
-  credits:
-  hours:
-  description: ""
+  credits: 1
+  hours: 20
+  certification: "Certificado"
+  description: "Curso sobre diseño curricular LOMLOE, elaboración de programaciones y unidades didácticas, metodologías innovadoras, aprendizaje competencial, evaluación formativa y DUA, con participación de inspectores y profesorado experimentado."
   modality: Online
-  location:
-  start:
-  end:
+  location: UNED Palencia
+  start: 05.07.2023
+  end: 07.07.2023
   language: ES
-  contents: ""
-  url:
+  contents: "Programación y Unidad didáctica, Unidad de programación y Situación de Aprendizaje: diferencias conceptuales y propuesta de diseño · Metodologías activas y basadas en evidencias para el desarrollo de un enfoque competencial del currículo · Diseño de una situación de aprendizaje con base en la robótica y el pensamiento computacional · Metodología de selección y secuenciación de criterios e indicadores de evaluación como aspecto clave en el procedimiento de planificación en el entorno LOMLOE · Planificación, elaboración y revisión de la programación didáctica · Las competencias clave y sus procedimientos de evaluación y calificación en la LOMLOE · Situaciones de aprendizaje y Objetivos para el Desarrollo Sostenible · DUA y tecnologías digitales: estrategias didácticas facilitadoras del aprendizaje en la educación"
+  url: https://extension.uned.es/actividad/idactividad/30279
 
 - name: "Educación matemática en la era de la (des)información"
+  type: course
   organizer: Universidad Nacional de Educación a Distancia
   credits:
   hours:
-  description: ""
+  certification:
+  description: "Curso sobre educación matemática que analiza distintas perspectivas e investigaciones, fomenta lectura crítica, identifica tendencias poco fundamentadas y reflexiona sobre su impacto en recursos y prácticas docentes."
   modality: Online
   location:
-  start:
-  end:
+  start: 26.06.2023
+  end: 26.06.2023
   language: ES
-  contents: ""
-  url:
+  contents: "Estudio internacional de la educación matemática · Dificultades para actualizarse e interpretar resultados de investigación especializada · Diversidad de enfoques y perspectivas en matemática educativa · Implicaciones de distintas perspectivas en la enseñanza de matemáticas · Lectura crítica de resultados de investigación · Ejemplos de tendencias educativas sin suficiente evidencia empírica · Impacto de dichas tendencias en recursos y prácticas docentes"
+  url: https://extension.uned.es/actividad/idactividad/30997
 
 - name: "Tecnologías en la sociedad del conocimiento y educación a distancia. Programación, realidad aumentada, inteligencia artificial, enfoques activos y tecnología"
+  type: course
   organizer: Universidad Nacional de Educación a Distancia
-  credits:
-  hours:
-  description: ""
+  credits: 1
+  hours: 20
+  certification: "Certificado"
+  description: "Curso de educación digital y a distancia que desarrolla especialización académica, fomenta integración tecnológica, analiza tecnologías emergentes y potencia comprensión sistemática de procesos educativos innovadores para educadores."
   modality: Online
-  location:
-  start:
-  end:
+  location: UNED Albacete
+  start: 04.07.2022
+  end: 06.07.2022
   language: ES
-  contents: ""
-  url:
+  contents: "La programación en los contextos educativos: Scratch, Macke Block y Unity · La realidad aumentada y la realidad virtual en contextos pedagógicos · Aprendizaje ubicuo y a distancia · Edición de video para crear contenidos · Gamificación, videojuegos y educación · Plataformas y entornos de aprendizaje · Aprendizaje con dispositivos digitales en el ámbito de la ubicuidad · La inteligencia artificial en educación"
+  url: https://extension.uned.es/actividad/idactividad/26832
 
 - name: "Escribir bien en español: corrección, discurso, estilo, género, norma y redacción académica en lengua española"
+  type: course
+  organizer: Universidad Nacional de Educación a Distancia
+  credits: 0.5
+  hours: 10
+  certification: "Certificado"
+  description: "Curso de actualización sobre lengua española que aborda cambios normativos recientes en ortografía, puntuación, acentuación, gramática y vocabulario, impulsados por la ASALE, con certificación de la UNED."
+  modality: Online
+  location: UNED Cantabria
+  start: 13.05.2022
+  end: 14.05.2022
+  language: ES
+  contents: "Errores ortográficos frecuentes: guía de actualización y de supervivencia · Norma, variación, discurso e identidad: la lengua española en el siglo XXI (recursos digitales para la escritura académica) · Incorrecciones e impropiedades en la redacción de textos: algunas soluciones · La lengua española y el lenguaje inclusivo: guía para el uso del género gramatical y cuestiones léxico-culturales actuales"
+  url: https://extension.uned.es/actividad/idactividad/26226
+
+- name: "Una mirada a la evolución del lenguaje"
+  type: talk
   organizer: Universidad Nacional de Educación a Distancia
   credits:
   hours:
+  certification:
+  description: "Curso sobre la evolución del pensamiento simbólico y el lenguaje en Homo sapiens, integrando neurociencia, lingüística y paleoantropología para comprender el desarrollo y la naturaleza humana a lo largo del tiempo."
+  modality: Online
+  location: UNED Tudela
+  start: 17.09.2021
+  end: 17.09.2021
+  language: ES
+  contents: "Capacidad de pensamiento simbólico y lenguaje en Homo sapiens · Desarrollo evolutivo del lenguaje en los últimos dos millones de años · Retos científicos en la comprensión de la naturaleza humana · Aportaciones de la neurociencia al estudio del lenguaje · Perspectivas lingüísticas sobre la evolución del lenguaje · Contribuciones de la paleoantropología a la historia evolutiva del lenguaje"
+  url: https://extension.uned.es/actividad/idactividad/24741
+
+- name: "España y la Revolución Científica (siglos XVI-XVIII) - José Manuel Sánchez Ron"
+  type: talk
+  organizer: Universidad Nacional de Educación a Distancia
+  credits:
+  hours: 2
+  certification:
+  description: "Charla sobre la participación de España en la Revolución Científica, destacando aportes en ciencias naturales ligados a la exploración del Nuevo Mundo y ausencia en la física newtoniana."
+  modality: Online
+  location: UNED Tudela
+  start: 22.06.2021
+  end: 22.06.2021
+  language: ES
+  contents: "Participación de España en la Revolución Científica (siglos XVI y XVII) · Motivos de la ausencia española en el desarrollo de la física newtoniana · Aportaciones en ciencias naturales · Relación entre exploración del Nuevo Mundo y avances científicos"
+  url: https://extension.uned.es/actividad/idactividad/24367
+
+- name: "El libro como sistema: objeto, contenido, idea y conector"
+  organizer: Universidad Nacional de Educación a Distancia
+  credits: 0.5
+  hours: 12
+  certification: "Certificado"
+  description: "Curso que reflexiona sobre el libro como objeto, experiencia y conector cultural, explorando su plasticidad entre contenido e idea, y su papel esencial en lectura y escritura."
+  modality: Online
+  location: UNED Tudela
+  start: 21.04.2020
+  end: 06.05.2020
+  language: ES
+  contents: "Presentación del curso: introducción, glosario y contextualización; historia del libro y la edición · Taxonomía y práctica editorial: edición crítica, fotolibro, libro ilustrado, livre de peintre, libro objeto, libro de artista y ephimeras · El nuevo arte de hacer libros: los *bookworks* de Ulises Carrión · La condición textual: paratexto, marginalias y tipografía · La literatura transforma el libro: de Mallarmé, Roussel, Vanguardias y Pound a la poesía concreta, antipoesía, Oulipo, escritura no-creativa y nuevas discursividades en el cómic · Prácticas artísticas como prácticas editoriales o viceversa: del libro por otros medios (Broodthaers, Xerox Book, Weiner, Art & Language) a las prácticas actuales · La práctica editorial a través de sus manifiestos: análisis estructural, libros de artistas, libro como puesta en escena, apropiación, escritura conceptual, lectura, distribución, autopublicación, contexto social, edición y espacio público, publicación post-digital · Colofón: una poética del libro"
+  url: "https://extension.uned.es/actividad/idactividad/21356"
+
+- name: "Lengua Moderna II. Lengua Extranjera: Alemán"
+  program: "Grado en Lengua y Literatura Españolas"
+  type: degree
+  organizer: Universidad Nacional de Educación a Distancia
+  faculty: "Facultad de Filología"
+  department: "???"
+  study_year: 1
+  credits: 5
+  hours:
+  certification:
+  description:
+  modality: Online
+  location: UNED
+  start:
+  end:
+  language: ES
+  contents:
+  url:
+  visibility: public
+
+- name: "Lengua Extranjera I: Alemán"
+  program: "Grado en Lengua y Literatura Españolas"
+  type: degree
+  organizer: Universidad Nacional de Educación a Distancia
+  faculty: "Facultad de Filología"
+  department: "???"
+  study_year: 1
+  credits: 6
+  hours:
+  certification:
   description: ""
   modality: Online
-  location:
+  location: UNED
   start:
   end:
   language: ES
   contents: ""
   url:
+  visibility: public
+
+- name: "Comunicación Oral y Escrita en Lengua Española II"
+  program: "Grado en Lengua y Literatura Españolas"
+  type: degree
+  organizer: Universidad Nacional de Educación a Distancia
+  faculty: "Facultad de Filología"
+  department: "Departamento de Lengua Española y Lingüística General"
+  study_year: 1
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Online
+  location: UNED
+  start:
+  end:
+  language: ES
+  contents: ""
+  url:
+  visibility: public
+
+- name: "Comunicación Oral y Escrita en Lengua Española I"
+  program: "Grado en Lengua y Literatura Españolas"
+  type: degree
+  organizer: Universidad Nacional de Educación a Distancia
+  faculty: "Facultad de Filología"
+  department: "Departamento de Lengua Española y Lingüística General"
+  study_year: 1
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Online
+  location: UNED
+  start:
+  end:
+  language: ES
+  contents: ""
+  url:
+  visibility: public
+
+- name: "Teoría Lingüística. Métodos, Herramientas y Paradigmas"
+  program: "Grado en Lengua y Literatura Españolas"
+  type: degree
+  organizer: Universidad Nacional de Educación a Distancia
+  faculty: "Facultad de Filología"
+  department: "Departamento de Lengua Española y Lingüística General"
+  study_year: 1
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Online
+  location: UNED
+  start:
+  end:
+  language: ES
+  contents: ""
+  url:
+  visibility: public
+
+- name: "El lenguaje humano"
+  program: "Grado en Lengua y Literatura Españolas"
+  type: degree
+  organizer: Universidad Nacional de Educación a Distancia
+  faculty: "Facultad de Filología"
+  department: "Departamento de Lengua Española y Lingüística General"
+  study_year: 1
+  credits: 6
+  hours:
+  certification:
+  description: "Asignatura que introduce a la Lingüística y al análisis objetivo del lenguaje, atendiendo a su base cerebral y dimensión social. Se imparte en primer semestre de Estudios Ingleses y Lengua y Literatura Españolas. Proporciona fundamentos y terminología, y prepara para Teoría Lingüística y perfiles profesionales interdisciplinares."
+  modality: Online
+  location: UNED
+  start: 01.10.2019
+  end: 01.02.2020
+  language: ES
+  contents: "El lenguaje y la Lingüística · Lengua oral y lengua signada. La escritura · Los sonidos en las lenguas · La estructura de las palabras · La sintaxis · El significado · Lengua y comunicación: pragmática · Variación y cambio lingüístico · Las lenguas del mundo y el mundo de las lenguas · Lenguaje y cognición"
+  url: https://www.uned.es/universidad/inicio/estudios/grados/grado-en-lengua-y-literatura-espanolas/asignaturas.html?codTitulacion=6401&codAsignatura=64901019&idContenido=1
+  visibility: public
+
+- name: "Microsoft Office Specialist"
+  type: course
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Office PowerPoint 2016"
+  modality: Online
+  location:
+  start: 01.07.2018
+  end: 01.07.2018
+  language: ES
+  contents: ""
+  url:
+  visibility: public
+
+- name: "Microsoft Certified Educator"
+  type: course
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Technology Literacy for Educators - 21st Century Learning Design"
+  modality: Online
+  location:
+  start: 01.07.2018
+  end: 01.07.2018
+  language: ES
+  contents: ""
+  url:
+  visibility: public
+
+- name: "Seminario sobre absentismo escolar y violencia juvenil"
+  type: course
+  organizer: "Universidad Miguel Hernández de Elche"
+  credits:
+  hours: 100
+  certification: "Certificado"
+  description: ""
+  modality: Online
+  location:
+  start: 19.01.2009
+  end: 22.02.2009
+  language: ES
+  contents: ""
+  url:
+  visibility: public
+
+- name: "La programación didáctica en la Educación Secundaria y Ciclos Formativos: Planificación de Unidades Didáctica (LOE)"
+  type: course
+  organizer: "Universidad Miguel Hernández de Elche"
+  credits:
+  hours: 100
+  certification: "Certificado"
+  description: ""
+  modality: Online
+  location:
+  start: 02.01.2009
+  end: 03.02.2009
+  language: ES
+  contents: ""
+  url:
+  visibility: public
+
+- name: "Las competencias del profesor. El profesor eficaz. Las destrezas del alumno"
+  type: course
+  organizer: "Universidad Miguel Hernández de Elche"
+  credits:
+  hours: 100
+  certification: "Certificado"
+  description: ""
+  modality: Online
+  location:
+  start: 02.01.2009
+  end: 03.02.2009
+  language: ES
+  contents: ""
+  url:
+  visibility: public
+
+- name: "El tutor y la acción tutorial"
+  type: course
+  organizer: "Universidad Miguel Hernández de Elche"
+  credits:
+  hours: 100
+  certification: "Certificado"
+  description: ""
+  modality: Online
+  location:
+  start: 01.12.2008
+  end: 30.12.2008
+  language: ES
+  contents: ""
+  url:
+  visibility: public
+
+- name: "Organización de institutos de educación secundaria"
+  type: course
+  organizer: "Universidad Miguel Hernández de Elche"
+  credits:
+  hours: 100
+  certification: "Certificado"
+  description: ""
+  modality: Online
+  location:
+  start: 02.11.2008
+  end: 30.11.2008
+  language: ES
+  contents: ""
+  url:
+  visibility: public
+
+- name: "La tecnología de la información y la comunicación en el aula"
+  type: course
+  organizer: "Universidad Miguel Hernández de Elche"
+  credits:
+  hours: 100
+  certification: "Certificado"
+  description: ""
+  modality: Online
+  location:
+  start: 01.10.2008
+  end: 31.10.2009
+  language: ES
+  contents: ""
+  url:
+  visibility: public
+
+- name: "Certificado de Aptitud Pedagógica"
+  type: course
+  organizer: Instituto de Ciencias de la Educación. Universidad de Alicante
+  credits:
+  hours: 300
+  certification: "Certificado"
+  description: "Curso de formación didáctica y psicopedagógica inicial y contacto con realidad educativa para titulados que aspiran a docencia en Secundaria o Formación Profesional. Especialidad Informática."
+  modality: Presencial
+  location: San Vicente del Raspeig (Alicante), España
+  start: 01.10.2006
+  end: 31.03.2007
+  language: ES
+  contents: "Módulo General Psicopedagógico: Psicología del adolescente y atención a la diversidad · Diseño curricular y TIC · Sociología de la Educación / Módulo de Didácticas Específicas: Informática // Prácticum de 100 horas."
+  url: https://web.ua.es/es/secretaria-gral/memoria/2006-07/14_vcae/cap.html
+  visibility: public
+
+- name: "Cómo se Escriben y se Publican Trabajos Científicos"
+  type: phd
+  program: "Programa de Doctorado: Aplicaciones de la Informática"
+  organizer: "Universidad de Alicante"
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de Lenguajes y Sistemas Informáticos (DLSI)"
+  study_year: 1
+  credits: 4
+  hours:
+  certification: "Certificado del Curso de Docencia de Tercer Ciclo de Estudios Universitarios"
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start: 01.10.2006
+  end: 30.06.2007
+  language: ES
+  contents: ""
+  url: "https://dlsi.ua.es/"
+  visibility: public
+
+- name: "Técnicas Avanzadas en Traducción Automática"
+  type: phd
+  program: "Programa de Doctorado: Aplicaciones de la Informática"
+  organizer: "Universidad de Alicante"
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de Lenguajes y Sistemas Informáticos (DLSI)"
+  study_year: 1
+  credits: 4
+  hours:
+  certification: "Certificado del Curso de Docencia de Tercer Ciclo de Estudios Universitarios"
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start: 01.10.2006
+  end: 30.06.2007
+  language: ES
+  contents: ""
+  url: "https://dlsi.ua.es/"
+  visibility: public
+
+- name: "Traducción Automática: Fundamentos y Aplicaciones"
+  type: phd
+  program: "Programa de Doctorado: Aplicaciones de la Informática"
+  organizer: "Universidad de Alicante"
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de Lenguajes y Sistemas Informáticos (DLSI)"
+  study_year: 1
+  credits: 4
+  hours:
+  certification: "Certificado del Curso de Docencia de Tercer Ciclo de Estudios Universitarios"
+  description: "Las asiganatura explora aplicaciones y límites de la traducción automática, fundamentos lingüísticos y computacionales, modelos actuales (transferencia, interlingua, estadísticos, híbridos), su complejidad intrínseca y implementación de módulos."
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start: 01.10.2006
+  end: 30.06.2007
+  language: ES
+  contents: "Introducción · ¿Qué se entiende por traducción? · Aplicaciones de la traducción automática: asimilación y diseminación, preedición y postedición, lenguajes controlados · Ambigüedad y problemas relacionados: el principio de composicionalidad; ambigüedad léxica, sintáctica y mixta; otras fuentes de ambigüedad; problemas de generación, de transferencia y de descripción · Técnicas de traducción automática deductiva: el modelo de transferencia (morfológica, sintáctica, semántica); el modelo de interlingua · La traducción automática real: entre la aplicación ideal del principio de composicionalidad semántica y el modelo palabra por palabra · Programación (totalmente o parcialmente inductiva) de traductores automáticos (memorias de traducción, sistemas estadísticos, sistemas basados en ejemplos) · Evaluación de la traducción automática."
+  url: "https://dlsi.ua.es/"
+  visibility: public
+
+- name: "XML, Marcado de Textos y Bibliotecas Digitales"
+  type: phd
+  program: "Programa de Doctorado: Aplicaciones de la Informática"
+  organizer: "Universidad de Alicante"
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de Lenguajes y Sistemas Informáticos (DLSI)"
+  study_year: 1
+  credits: 4
+  hours:
+  certification: "Certificado del Curso de Docencia de Tercer Ciclo de Estudios Universitarios"
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start: 01.10.2006
+  end: 30.06.2007
+  language: ES
+  contents: ""
+  url: "https://dlsi.ua.es/"
+  visibility: public
+
+- name: "Tecnologías del Lenguaje Humano"
+  type: phd
+  program: "Programa de Doctorado: Aplicaciones de la Informática"
+  organizer: "Universidad de Alicante"
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de Lenguajes y Sistemas Informáticos (DLSI)"
+  study_year: 1
+  credits: 4
+  hours:
+  certification: "Certificado del Curso de Docencia de Tercer Ciclo de Estudios Universitarios"
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start: 01.10.2006
+  end: 30.06.2007
+  language: ES
+  contents: ""
+  url: "https://dlsi.ua.es/"
+  visibility: public
+
+- name: "Portugiesisch I"
+  type: course
+  organizer: "Universität Salzburg"
+  faculty: "Sprachenzentrum"
+  department: "Sprachenzentrum"
+  study_year: 1
+  credits: 4
+  hours:
+  certification: "Certificado"
+  description: ""
+  modality: Presencial
+  location: "Universität Salzburg (Austria)"
+  start: 01.10.2004
+  end: 20.01.2005
+  language: PT,DE
+  contents: ""
+  url:
+  visibility: public
+
+- name: "Sprachkurs Deutsch"
+  type: course
+  organizer: "Deutsch Studio Salzburg"
+  study_year: 1
+  credits: 6
+  hours:
+  certification: "Certificado"
+  description: ""
+  modality: Presencial
+  location: "Deutsch Studio Salzburg · "
+  start: 23.02.2004
+  end: 07.05.2004
+  language: DE
+  contents: ""
+  url:
+  visibility: public
+
+- name: "Java para Dispositivos Móviles (J2ME)"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de Ciencias de la Computación e Inteligencia Artificial"
+  study_year: 1
+  credits: 2
+  hours: 20
+  certification: "Certificado"
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start: 22.09.2003
+  end: 26.09.2003
+  language: ES
+  contents: ""
+  url: "https://web.ua.es/dccia/"
+  visibility: public
+
+- name: "Agentes inteligentes, sistemas multiagentes y aplicaciones"
+  type: course
+  organizer: "Universidad Internacional Menéndez Pelayo"
+  study_year: 1
+  credits:
+  hours: 30
+  certification: "Certificado"
+  description: ""
+  modality: Presencial
+  location: Valencia
+  start: 06.11.2002
+  end: 08.11.2002
+  language: ES
+  contents: ""
+  url:
+  visibility: public
+
+- name: "Análisis Matemático"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 1
+  credits: 7.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Álgebra y Teoría de Matrices"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 1
+  credits: 7.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Fundamentos de los Computadores"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 1
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Estadística I"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 1
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Matemática Discreta"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 1
+  credits: 7.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+  highlight: yes
+
+- name: "Fundamentos Tecnológicos de los Computadores"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 1
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Lógica de Primer Orden"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 1
+  credits: 4.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Fundamentos de la Programación"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 1
+  credits: 9
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Fundamentos Físicos de la Informática"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 1
+  credits: 9
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Lengua Alemana I"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 2
+  credits: 9
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Fundamentos de las Bases de Datos"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 2
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Modelos Abstractos del Cálculo"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 2
+  credits: 4.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Diseño y Gestión de Base de Datos"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 2
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Bases de Datos Avanzadas"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 3
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Tecnología y Control de Robots y Sistemas Sensoriales"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 3
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Fundamentos de los Sistemas Operativos"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 2
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Estructura de Computadores I"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 2
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Tipos Abstractos de Datos"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 2
+  credits: 9
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Programación Metódica"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 2
+  credits: 9
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Análisis y Especificación de Sistemas de Información"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 3
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Ingeniería del Software I"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 3
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Sistemas de Transporte de Datos"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 3
+  credits: 4.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Desarrollo y Gestión de los Sistemas de Información en la Empresa"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 3
+  credits: 4.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Historia de la Informática y Metodología Científica"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 1
+  credits: 4.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Introducción Inglés Científico-Técnico"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 1
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Inglés para Informática I"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 1
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Lenguajes, Gramáticas y Autómatas"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 2
+  credits: 4.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Redes de Computadores"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 3
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Compiladores I"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 3
+  credits: 4.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Sistemas de Información de la Empresa"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 3
+  credits: 4.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Arquitectura de Computadores"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 3
+  credits: 9
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Fundamentos de Inteligencia Artificial"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 4
+  credits: 4.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Ingeniería del Software II"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 4
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Técnicas de Inteligencia Artificial"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 4
+  credits: 4.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Razonamiento Geométrico"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 4
+  credits: 4.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Robótica"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 4
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Sistemas Conexionistas"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 4
+  credits: 4.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Esquemas Algorítmicos"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 3
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Compiladores II"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 3
+  credits: 4.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Sistemas de Información Semiestructurada"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 4
+  credits: 6?
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Tecnologías Web"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 4
+  credits: 6?
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Administración de Sistemas Operativos"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 4
+  credits: 4.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Programación Orientada a Objetos"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 4
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Sistemas Tolerantes a Fallos"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 4
+  credits: 4.5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Implantación de las Tecnologías de la Información"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 5
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Inglés para Informática II"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 5
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Diseño de Sistemas Operativos"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 3
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Arquitectura Avanzada de Computadores I"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 4
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Prácticas en Empresas (18)"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 5
+  credits: 15
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Sistemas Informáticos"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 5
+  credits: 15
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Java para Dispositivos Móviles (J2ME)"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 5
+  credits: 2
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Modular Inicial: Alemán"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 5
+  credits: 3
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Programación en .NET"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 5
+  credits: 5
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: "Programación Avanzada en Java"
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  study_year: 5
+  credits: 3
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
 
 - name: ""
+  type: degree
+  program: "Ingeniería Informática"
+  organizer: Universidad de Alicante
+  faculty: "Escuela Politécnica Superior"
+  department: "Departamento de..."
+  credits: 6
+  hours:
+  certification:
+  description: ""
+  modality: Presencial
+  location: Universidad de Alicante · Campus de San Vicente del Raspeig
+  start:
+  end:
+  language: ES
+  contents: ""
+  url: https://eps.ua.es/
+  visibility: public
+
+- name: ""
+  type:
   organizer: Universidad Nacional de Educación a Distancia
   credits:
   hours:
+  certification:
   description: ""
   modality: Online
   location:
@@ -153,3 +1954,4 @@
   language: ES
   contents: ""
   url:
+  visibility: public
