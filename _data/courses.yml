@@ -1,3 +1,39 @@
+# ToDo
+- name: "Microsoft Innovative Educator Trainer (MIE Trainer)"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description:
+  modality: Online
+  location:
+  start:
+  end:
+  language: ES
+  contents:
+  url:
+  visibility: public
+
+# ToDo
+- name: "Aprendizaje basado en juegos con Minecraft Education Edition"
+  type: course
+  fields: "education,ict"
+  organizer: "Possible Lab"
+  credits:
+  hours:
+  certification: "Certificado"
+  description:
+  modality: Online
+  location:
+  start:
+  end:
+  language: ES
+  contents:
+  url:
+  visibility: public
+
 - name: "Metodologías inclusivas y su aplicación en el aula basada en la LOMLOE y en el Diseño Universal para el Aprendizaje (DUA)"
   type: course
   fields: "education"
@@ -252,6 +288,22 @@
   contents: "Introducción al bilingüismo y la educación bilingüe en el contexto español: un desafío para la sociedad · Los programas bilingües en la etapa primaria: Claves para el cambio y el éxito educativo · Diversidad cultural y educación bilingüe: un enfoque intercultural para docentes · Programas de educación bilingüe: El papel de las familias · El profesorado y los equipos directivos de centros ante el desafío de la educación bilingüe · La inclusión como desafío más allá de la educación bilingüe · Recursos Didácticos para la Enseñanza Bilingüe: Libros, materiales digitales, juegos y otros recursos útiles · ¿Cómo usar los corpus lingüísticos para iniciarse en la investigación en el aula bilingüe?"
   url: https://extension.uned.es/actividad/idactividad/43117
 
+- name: "Cuidado de la voz"
+  type: course
+  fields: "education"
+  organizer: "Quirónprevención"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: ""
+  modality: Online
+  location: UNED
+  start: 02.07.2025
+  end: 02.07.2025
+  language: ES
+  contents: ""
+  url: "https://www.quironprevencion.com/es"
+
 - name: "Como hacer una programación didáctica para educación primaria, secundaria y bachillerato"
   type: course
   fields: "education"
@@ -350,6 +402,40 @@
   contents: "Estudio internacional de la educación matemática · Dificultades para actualizarse e interpretar resultados de investigación especializada · Diversidad de enfoques y perspectivas en matemática educativa · Implicaciones de distintas perspectivas en la enseñanza de matemáticas · Lectura crítica de resultados de investigación · Ejemplos de tendencias educativas sin suficiente evidencia empírica · Impacto de dichas tendencias en recursos y prácticas docentes"
   url: https://extension.uned.es/actividad/idactividad/30997
 
+- name: "LOMLOE"
+  type: course
+  fields: "education"
+  organizer: "Provincia Maristas Mediterránea"
+  credits:
+  hours: 10
+  certification: "Diploma"
+  description:
+  modality: Online
+  location:
+  start: 06.02.2023
+  end: 17.05.2023
+  language: ES
+  contents:
+  url:
+  visibility: public
+
+- name: "Programación y evaluación competencial en Primaria y ESO"
+  type: course
+  fields: "education"
+  organizer: "Provincia Maristas Mediterránea"
+  credits:
+  hours: 9
+  certification: "Diploma"
+  description:
+  modality: Online
+  location:
+  start: 04.07.2022
+  end: 06.07.2022
+  language: ES
+  contents:
+  url:
+  visibility: public
+
 - name: "Tecnologías en la sociedad del conocimiento y educación a distancia. Programación, realidad aumentada, inteligencia artificial, enfoques activos y tecnología"
   type: course
   fields: "education,ict"
@@ -413,6 +499,72 @@
   language: ES
   contents: "Participación de España en la Revolución Científica (siglos XVI y XVII) · Motivos de la ausencia española en el desarrollo de la física newtoniana · Aportaciones en ciencias naturales · Relación entre exploración del Nuevo Mundo y avances científicos"
   url: https://extension.uned.es/actividad/idactividad/24367
+
+- name: "UDIS y Secuencias Didácticas"
+  type: course
+  fields: "education"
+  organizer: "Provincia Maristas Mediterránea"
+  credits:
+  hours: 4
+  certification: "Diploma"
+  description:
+  modality: Online
+  location:
+  start: 26.04.2021
+  end: 15.05.2021
+  language: ES
+  contents:
+  url:
+  visibility: public
+
+- name: "Medidas en el trabajo frente al COVID"
+  type: course
+  fields: "education"
+  organizer: "Quirónprevención"
+  credits:
+  hours: 2
+  certification: "Certificado"
+  description: "Curso práctico sobre COVID-19: medidas, organización laboral, higiene y EPIs, colectivos sensibles, protocolos ante casos, y gestión específica en centros educativos para docentes y alumnado."
+  modality: Online
+  location: UNED
+  start: 19.04.2021
+  end: 02.05.2021
+  language: ES
+  contents: "Módulo I — medidas y prácticas en el centro de trabajo frente al COVID-19: información básica, desplazamientos al trabajo, organización del trabajo, actuaciones en el centro, higiene personal, equipos de protección individual, trabajadores especialmente sensibles, protocolo ante sospecha o activación de caso y recomendaciones al llegar a casa; Módulo II — medidas específicas para profesores y alumnado: alcance de las medidas, inicio de la actividad docente, adecuación y gestión del centro educativo, organización de recursos humanos y de la actividad docente, organización de actividades auxiliares, medidas de información y formación, qué hacer ante un posible caso (control de casos), coordinación de actividades empresariales, consulta y representación, y situación del trabajador."
+  url: "https://www.quironprevencion.com/es"
+
+- name: "Prevención de riesgos en puestos de actividades docentes"
+  type: course
+  fields: "education"
+  organizer: "Quirónprevención"
+  credits:
+  hours: 2
+  certification: "Certificado"
+  description: "Curso sobre prevención laboral: identifica riesgos del puesto, enseña medidas preventivas, emergencias y primeros auxilios, abordando ergonomía, pantallas, electricidad, voz, riesgos psicosociales y accidentes viales."
+  modality: Online
+  location: UNED
+  start: 22.03.2021
+  end: 04.04.2021
+  language: ES
+  contents: "Conceptos básicos de prevención; riesgos asociados al puesto de trabajo y medidas preventivas a adoptar: caídas al mismo nivel, contactos eléctricos, trastornos musculoesqueléticos por manipulación de cargas y por posturas forzadas, pantallas de visualización de datos (carga física y fatiga visual), disconfort térmico, trastornos de la voz, riesgos psicosociales, accidentes de circulación y atropellos; y, por último, situaciones de emergencia y primeros auxilios."
+  url: "https://www.quironprevencion.com/es"
+
+- name: "Evaluación por competencias"
+  type: course
+  fields: "education"
+  organizer: "Provincia Maristas Mediterránea"
+  credits:
+  hours: 6
+  certification: "Diploma"
+  description:
+  modality: Online
+  location:
+  start: 03.12.2020
+  end: 15.12.2020
+  language: ES
+  contents:
+  url:
+  visibility: public
 
 - name: "El libro como sistema: objeto, contenido, idea y conector"
   organizer: Universidad Nacional de Educación a Distancia
@@ -549,8 +701,94 @@
   url: https://www.uned.es/universidad/inicio/estudios/grados/grado-en-lengua-y-literatura-espanolas/asignaturas.html?codTitulacion=6401&codAsignatura=64901019&idContenido=1
   visibility: public
 
+- name: "Programaciones LOMCE con Qualitas Educativa (Ágora)"
+  type: course
+  fields: "education"
+  organizer: "Provincia Maristas Mediterránea"
+  credits:
+  hours: 2
+  certification: "Diploma"
+  description:
+  modality: Online
+  location:
+  start: 01.07.2019
+  end: 01.07.2019
+  language: ES
+  contents:
+  url:
+  visibility: public
+
+- name: "Proyecto «Somos In» e Inteligencia Espiritual"
+  type: course
+  fields: "education"
+  organizer: "Provincia Maristas Mediterránea"
+  credits:
+  hours: 4
+  certification: "Diploma"
+  description:
+  modality: Online
+  location:
+  start: 25.06.2019
+  end: 26.06.2019
+  language: ES
+  contents:
+  url:
+  visibility: public
+
+- name: "Formacion para tutores e-learning"
+  type: course
+  fields: "education"
+  organizer: "Provincia Maristas Mediterránea"
+  credits:
+  hours: 8
+  certification: "Diploma"
+  description:
+  modality: Online
+  location:
+  start: 09.05.2019
+  end: 10.05.2019
+  language: ES
+  contents:
+  url:
+  visibility: public
+
+- name: "Programa TEI"
+  type: course
+  fields: "education"
+  organizer: "Provincia Maristas Mediterránea"
+  credits:
+  hours: 8
+  certification: "Diploma"
+  description:
+  modality: Online
+  location:
+  start: 01.04.2019
+  end: 10.04.2019
+  language: ES
+  contents:
+  url:
+  visibility: public
+
+- name: "Acción tutorial de Secundaria, Bachillerato y Ciclos formativos"
+  type: course
+  fields: "education"
+  organizer: "Conferencia Marista Española"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Curso para fortalecer la acción tutorial: desarrollo personal docente, acompañamiento del alumnado, convivencia escolar, colaboración con familias, habilidades socioemocionales, planificación de tutoría y evaluación"
+  modality: Online
+  location: Valladolid (España)
+  start: 21.01.2019
+  end: 25.01.2019
+  language: ES
+  contents: "Presentación y dinámicas · Identidad personal y rol educador · Convivencia y resolución de conflictos · Tutor marista · Relación tutor-familia · Inteligencia emocional · PAT y Atención a la Diversidad · Evaluación"
+  url: "https://champagnat.org/es/provincia/conferencia-marista-espanola-3/"
+  visibility: public
+
 - name: "Microsoft Office Specialist"
   type: course
+  field: "ict"
   organizer: "Microsoft"
   credits:
   hours:
@@ -1946,18 +2184,2739 @@
   url: https://eps.ua.es/
   visibility: public
 
-- name: ""
-  type:
-  organizer: Universidad Nacional de Educación a Distancia
+- name: "Curso de Formación Especializada en Primeros Auxilios"
+  type: course
+  fields:
+  organizer: "Cruz Roja Española"
+  credits:
+  hours: 40
+  certification: "Diploma"
+  description:
+  modality: Presencial
+  location: Denia (Alicante), España
+  start: 01.04.1998
+  end: 01.04.1998
+  language: ES
+  contents:
+  url: "https://www.cruzroja.es"
+
+- name: "Curso de Monitor de Tiempo Libre"
+  type: course
+  fields: "education"
+  organizer: "Escuela de Formación para el Tiempo Libre «EDETANIA» · Cruz Roja Española"
+  credits:
+  hours: 150
+  certification: "Certificado"
+  description:
+  modality: Presencial
+  location: Alicante, España
+  start: 02.03.1998
+  end: 02.03.1998
+  language: ES
+  contents:
+  url: "https://www.cruzroja.es"
+
+# MICROSOFT
+
+- name: "IA para educadores"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
   credits:
   hours:
-  certification:
-  description:
+  certification: "Certificado"
+  description: "Explore el potencial de la inteligencia artificial en la educación."
   modality: Online
   location:
-  start:
-  end:
-  language: ES
+  start: 2024-06-14
+  end: 2024-06-14
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Diseño de aprendizaje del siglo XXI"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Diseño de aprendizaje del siglo XXI (21CLD) para Educadores es una colección de ocho cursos. Esta ruta de aprendizaje ofrece a los educadores formas claras y prácticas de desarrollar las 21 habilidades utilizando las tecnologías digitales con sus alumnos."
+  modality: Online
+  location:
+  start: 2023-06-25
+  end: 2023-06-25
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Diseño del Aprendizaje en el Siglo XXI"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "El Diseño del Aprendizaje en el Siglo XXI para Educadores, es una colección de 8 cursos compuestos por entre 4 y 6 lecciones cada uno. Este itinerario de aprendizaje proporciona a los Educadores, maneras claras y prácticas de desarrollar las habilidades del siglo XXI, mediante el uso de tecnologías digitales. Los cursos promueven el “Diseño del Aprendizaje en el Siglo XXI”, desarrollando una metodología de investigación a través de un proceso colaborativo basado en la práctica, con el fin de ayudar a los Docentes a transformar la forma en que diseñan las actividades de aprendizaje, para que estas promuevan aprendizajes más profundos y sean atractivas y enriquecedoras para sus estudiantes. La serie consta de 8 cursos, con una duración total estimada de 20 horas incluidos los recursos, videos y el material de autoevaluación. Los Docentes además podrán participar activamente en el curso compartiendo materiales y participando en discusiones continuas como parte de la Comunidad Educativa."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Build cybersecurity resilience in K-12 classrooms with Microsoft tools"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.78
+  certification: "Certificado"
+  description: "Use CISA's findings to boost school cybersecurity and classroom cyber culture. This module equips classroom educators with strategies for effective cybersecurity."
+  modality: Online
+  location:
+  start: 2025-06-28
+  end: 2025-06-28
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Creación de fluidez de lectura con el entrenador de lectura"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1.05
+  certification: "Certificado"
+  description: "Explore Reading Coach, una herramienta gratuita que usa inteligencia artificial y detección de fluidez integrada para personalizar el contenido de lectura y la práctica para los aprendices."
+  modality: Online
+  location:
+  start: 2025-06-28
+  end: 2025-06-28
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Embárcate en tu viaje de IA con herramientas de inteligencia artificial gratuitas de Microsoft Education"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Este módulo está diseñado para presentar a los educadores las eficaces herramientas de inteligencia artificial que Microsoft ofrece a educadores y aprendices de forma gratuita."
+  modality: Online
+  location:
+  start: 2025-06-28
+  end: 2025-06-28
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Colaborar con compañeros con el personal y los equipos de PLC en Microsoft Teams"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Los equipos de personal y los equipos de PLC de Microsoft Teams facilitan la colaboración entre compañeros profesionales e incorporan el uso compartido de archivos y la organización."
+  modality: Online
+  location:
+  start: 2024-06-14
+  end: 2024-06-14
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Organizar contenido, crear asignaciones y evaluar la comprensión de los aprendices en Teams"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.83
+  certification: "Certificado"
+  description: "Cree y organice contenido en Trabajo en clase, administre asignaciones, simplifique las evaluaciones, proporcione comentarios puntuales y realice un seguimiento de las tendencias académicas y DEL dentro de Class Teams."
+  modality: Online
+  location:
+  start: 2024-06-14
+  end: 2024-06-14
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Creación de un centro de aprendizaje digital con Class Teams"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.92
+  certification: "Certificado"
+  description: "Aprenda a usar Microsoft Teams para Educación para compartir contenido, colaborar y comunicarse con estudiantes, tutores, compañeros y la comunidad educativa en general."
+  modality: Online
+  location:
+  start: 2024-06-14
+  end: 2024-06-14
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Mejora de la comunicación y colaboración educativas en Microsoft Teams"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Desbloquee el poder de Microsoft Teams para administradores, educadores y aprendices. Aprenda a colaborar, personalizar y organizar de forma eficaz en Microsoft Teams."
+  modality: Online
+  location:
+  start: 2024-06-14
+  end: 2024-06-14
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Introducción a Microsoft Teams para Educación"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Microsoft Teams en el entorno educativo es un centro de contenido y de colaboración. Obtenga información sobre la estructura y los componentes de un equipo."
+  modality: Online
+  location:
+  start: 2024-06-14
+  end: 2024-06-14
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Equipar y apoyar a los alumnos con herramientas de inteligencia artificial de Microsoft"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Ayude a los estudiantes a detectar, interactuar y crear con inteligencia artificial e inteligencia artificial generativa, incluido el uso responsable de la inteligencia artificial y la ingeniería de consultas."
+  modality: Online
+  location:
+  start: 2024-06-14
+  end: 2024-06-14
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Mejora de la enseñanza y el aprendizaje con Microsoft Copilot"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Obtenga información sobre cómo usar las funcionalidades básicas de Microsoft Copilot que respaldan la enseñanza y el aprendizaje."
+  modality: Online
+  location:
+  start: 2024-06-14
+  end: 2024-06-14
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Capacitar a los educadores para explorar el potencial de la inteligencia artificial"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.88
+  certification: "Certificado"
+  description: "Explore conceptos, técnicas y herramientas esenciales de inteligencia artificial que puedan admitir el aprendizaje personalizado, automatizar tareas diarias y proporcionar información para la educación."
+  modality: Online
+  location:
+  start: 2024-06-14
+  end: 2024-06-14
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Embed 21st century skills with 21st century learning design"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.48
+  certification: "Certificado"
+  description: "Implement 21st century skills and learning into classes using 21CLD for lesson design. Practical activities help educators reflect on their practice and that of other educators."
+  modality: Online
+  location:
+  start: 2023-06-25
+  end: 2023-06-25
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Profundización de las experiencias educativas con 21CLD TIC para la dimensión de aprendizaje"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.85
+  certification: "Certificado"
+  description: "En este módulo se destaca la necesidad que tienen los formadores de usar tecnologías de información y comunicación (TIC) para transformar las experiencias de aprendizaje y crear y diseñar nuevos productos de información y de TIC."
+  modality: Online
+  location:
+  start: 2023-06-25
+  end: 2023-06-25
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Desarrollo de una función ejecutiva de estudiante con la dimensión de autorregulación 21CLD"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.97
+  certification: "Certificado"
+  description: "En este módulo se presenta el concepto de autorregulación y se enseña a los formadores cómo diseñar actividades de aprendizaje para ayudar a los estudiantes a desarrollar esta importante habilidad."
+  modality: Online
+  location:
+  start: 2023-06-25
+  end: 2023-06-25
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Improve communication skills with the 21CLD skilled communication dimension"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.85
+  certification: "Certificado"
+  description: "This module introduces the concept of skilled communication to educators and supports them in designing learning activities to help young people develop this important skill."
+  modality: Online
+  location:
+  start: 2023-06-25
+  end: 2023-06-25
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Innovate learning with the 21CLD real-world problem solving and innovation dimension"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.85
+  certification: "Certificado"
+  description: "This module defines real-world problem solving for educators and explains the dimensions that must be present in such classroom activities to prepare learners with 21st century skills."
+  modality: Online
+  location:
+  start: 2023-06-25
+  end: 2023-06-25
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Practice collaborative skills with the 21CLD collaboration dimension"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "This module helps educators design learning activities for learners to develop collaboration skills. It introduces the levels of collaboration: sharing responsibility, making substantive decisions together, and working interdependently."
+  modality: Online
+  location:
+  start: 2023-06-25
+  end: 2023-06-25
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Develop critical thinking skills with the 21CLD knowledge construction dimension"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.97
+  certification: "Certificado"
+  description: "This module introduces educators to the dimension of knowledge construction which helps learners build deep knowledge that they can transfer and apply in practice."
+  modality: Online
+  location:
+  start: 2023-06-25
+  end: 2023-06-25
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Transform learning with 21st century learning design"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.88
+  certification: "Certificado"
+  description: "Understand the concept of 21st century learning design. Explore learning in the 21st century and innovative teaching practices that support the development of 21st century skills."
+  modality: Online
+  location:
+  start: 2023-06-25
+  end: 2023-06-25
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Create authentic assessments with Microsoft Forms"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.92
+  certification: "Certificado"
+  description: "Use Microsoft Forms for surveys, quizzes, and polls in classes to increase student engagement and voice. Office 365 helps streamline and save time managing learning assessments with Forms in Teams and OneNote. Excel can extend analytics on Forms data."
+  modality: Online
+  location:
+  start: 2023-06-25
+  end: 2023-06-25
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Diseño del aprendizaje en el siglo XXI: Curso 8 - 21CLD en la práctica"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.38
+  certification: "Certificado"
+  description: "> [!Important] > This module is not available in English. The original version can be found in Spanish."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Diseño del aprendizaje en el siglo XXI: Curso 7 - Uso de las TIC para el aprendizaje"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1.52
+  certification: "Certificado"
+  description: "> [!Important] > This module is not available in English. The original version can be found in Spanish."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Diseño del aprendizaje en el siglo XXI: Curso 6 - Resolución de problemas e innovación"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1.32
+  certification: "Certificado"
+  description: "> [!Important] > This module is not available in English. The original version can be found in Spanish."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Diseño del Aprendizaje en el siglo XXI: Curso 5 - Autorregulación"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1.25
+  certification: "Certificado"
+  description: "> [!Important] > This module is not available in English. The original version can be found in Spanish."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Diseño del Aprendizaje en el Siglo XXI: Curso 4 - Construcción de conocimiento"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1.42
+  certification: "Certificado"
+  description: "> [!Important] > This module is not available in English. The original version can be found in Spanish."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Diseño del Aprendizaje en el Siglo XXI: Curso 3 - Habilidades de comunicación"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1.72
+  certification: "Certificado"
+  description: "> [!Important] > This module is not available in English. The original version can be found in Spanish."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Diseño del aprendizaje en el siglo XXI: Curso 2 - Colaboración"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1.35
+  certification: "Certificado"
+  description: "> [!Important] > This module is not available in English. The original version can be found in Spanish."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Diseño del aprendizaje en el siglo XXI: Curso 1 - Introducción 21CLD"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.97
+  certification: "Certificado"
+  description: "> [!Important] > This module is not available in English. The original version can be found in Spanish."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Lead forward: Integrate the best strategies from remote, hybrid, and blended learning for school leaders"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.97
+  certification: "Certificado"
+  description: "Blending learning environments offers students the best of all worlds ..."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Assemble learners and staff with Microsoft Teams meetings"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.88
+  certification: "Certificado"
+  description: "Discover new ways to create and share Microsoft Teams meetings ..."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Converse, collaborate, and build community in Teams"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.92
+  certification: "Certificado"
+  description: "Microsoft Teams in educational settings is a hub for content ..."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Assign and assess learners with assignments and forms in Teams"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Class Teams have all the tools educators need ..."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Work collaboratively with Staff and PLC Teams"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.92
+  certification: "Certificado"
+  description: "Staff Teams and PLC Teams in Microsoft Teams facilitate collaboration ..."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Collaborate with colleagues through live Teams meetings and OneNote"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.93
+  certification: "Certificado"
+  description: "Education colleagues collaborate using Microsoft Teams PLC Teams and Staff Teams ..."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Get started with OneNote"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.83
+  certification: "Certificado"
+  description: "Make learning more powerful and dynamic with Microsoft OneNote ..."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Flipped instruction with PowerPoint Recorder"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.7
+  certification: "Certificado"
+  description: "This module teaches how to use PowerPoint Recorder ..."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Structure Teams through channels, tabs, files, and apps"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "We examine the structure and components of a team ..."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Empower every student with an inclusive classroom"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.97
+  certification: "Certificado"
+  description: "This module is designed for educators of all subject areas ..."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Accessibility: Build the foundation for inclusive learning"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.95
+  certification: "Certificado"
+  description: "This module explores accessibility through several foundational concepts."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Teach forward: Best strategies for hybrid, remote, and blended learning"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.95
+  certification: "Certificado"
+  description: "Blended learning is not a new concept ..."
+  modality: Online
+  location:
+  start: 2023-06-23
+  end: 2023-06-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Surf the 5 C's with Wakelet"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.75
+  certification: "Certificado"
+  description: "This Wakelet course will allow educators ..."
+  modality: Online
+  location:
+  start: 2020-06-06
+  end: 2020-06-06
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Custom Training (Instructor-led training) - Minecraft: Education Edition"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1.5
+  certification: "Certificado"
+  description: "Minecraft: Education Edition"
+  modality: Online
+  location:
+  start: 2020-05-21
+  end: 2020-05-21
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "My Minecraft journey conclusion"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 5
+  certification: "Certificado"
+  description: "My Minecraft journey conclusion"
+  modality: Online
+  location:
+  start: 2019-11-08
+  end: 2019-11-08
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "MEC Achievement 2019"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "MEC Achievement 2019"
+  modality: Online
+  location:
+  start: 2019-11-08
+  end: 2019-11-08
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Custom Training (Instructor-led training) - Minecraft: Education Edition, FlipGrid, Office 365, STEM, Microsoft Imagine Academy"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 48
+  certification: "Certificado"
+  description: "Minecraft: Education Edition, FlipGrid, Office 365, STEM, Microsoft Imagine Academy"
+  modality: Online
+  location:
+  start: 2019-11-04
+  end: 2019-11-04
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Crea tu bot educativo"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1.5
+  certification: "Certificado"
+  description: "Crea tu bot educativo"
+  modality: Online
+  location:
+  start: 2019-10-08
+  end: 2019-10-08
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Working with a visual learning tool (Sensavis)"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Working with a visual learning tool (Sensavis)"
+  modality: Online
+  location:
+  start: 2019-08-09
+  end: 2019-08-09
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Herramientas de Aprendizaje Accesibles en PowerPoint – Flipped Classroom y Presentación"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.75
+  certification: "Certificado"
+  description: "Herramientas de Aprendizaje Accesibles en PowerPoint – Flipped Classroom y Presentación"
+  modality: Online
+  location:
+  start: 2019-08-09
+  end: 2019-08-09
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft Innovative Educator Expert 2019-2020"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Microsoft Innovative Educator Expert 2019-2020"
+  modality: Online
+  location:
+  start: 2019-08-04
+  end: 2019-08-04
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Flipped instruction with PowerPoint Recorder"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Flipped instruction with PowerPoint Recorder"
+  modality: Online
+  location:
+  start: 2018-11-18
+  end: 2018-11-18
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "MEC Achievement 2018"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "MEC Achievement 2018"
+  modality: Online
+  location:
+  start: 2018-11-18
+  end: 2018-11-18
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Flipped instruction with PowerPoint Recorder"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.7
+  certification: "Certificado"
+  description: "This module teaches how to use PowerPoint Recorder ..."
+  modality: Online
+  location:
+  start: 2018-11-18
+  end: 2018-11-18
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Building Blocks of Code 2"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Building Blocks of Code 2"
+  modality: Online
+  location:
+  start: 2018-11-18
+  end: 2018-11-18
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Managing class workflow with Microsoft Teams"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Managing class workflow with Microsoft Teams"
+  modality: Online
+  location:
+  start: 2018-11-18
+  end: 2018-11-18
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Independent learning with math tools in OneNote"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Independent learning with math tools in OneNote"
+  modality: Online
+  location:
+  start: 2018-11-18
+  end: 2018-11-18
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Independent learning with math tools in OneNote"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.97
+  certification: "Certificado"
+  description: "Educators will understand how the OneNote Math button ..."
+  modality: Online
+  location:
+  start: 2018-11-18
+  end: 2018-11-18
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "MIE Trainer 2018-2019"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "MIE Trainer 2018-2019"
+  modality: Online
+  location:
+  start: 2018-11-14
+  end: 2018-11-14
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Building Blocks of Code 1"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Building Blocks of Code 1"
+  modality: Online
+  location:
+  start: 2018-11-13
+  end: 2018-11-13
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft Teams Course 4: Assignments and feedback (presenter-led training)"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 2
+  certification: "Certificado"
+  description: "Microsoft Teams Course 4: Assignments and feedback (presenter-led training)"
+  modality: Online
+  location:
+  start: 2018-11-13
+  end: 2018-11-13
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Black Belt"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 10
+  certification: "Certificado"
+  description: "Black Belt"
+  modality: Online
+  location:
+  start: 2018-11-11
+  end: 2018-11-11
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Step Up to Computer Science"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Step Up to Computer Science"
+  modality: Online
+  location:
+  start: 2018-11-10
+  end: 2018-11-10
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Step up to computer science"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Step up to computer science"
+  modality: Online
+  location:
+  start: 2018-11-10
+  end: 2018-11-10
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Digital Citizenship"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.5
+  certification: "Certificado"
+  description: "Digital Citizenship"
+  modality: Online
+  location:
+  start: 2018-11-10
+  end: 2018-11-10
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Literacy Tools for Inclusive Classrooms (presenter-led training)"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 4
+  certification: "Certificado"
+  description: "Literacy Tools for Inclusive Classrooms (presenter-led training)"
+  modality: Online
+  location:
+  start: 2018-11-09
+  end: 2018-11-09
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Training teachers to author accessible content"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Training teachers to author accessible content"
+  modality: Online
+  location:
+  start: 2018-11-09
+  end: 2018-11-09
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Computational thinking and its importance in education"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Computational thinking and its importance in education"
+  modality: Online
+  location:
+  start: 2018-11-09
+  end: 2018-11-09
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Computational thinking and its importance in education"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.68
+  certification: "Certificado"
+  description: "Computational Thinking is a way of thinking about problems ..."
+  modality: Online
+  location:
+  start: 2018-11-09
+  end: 2018-11-09
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft Teams Course 5: Class Notebook in Microsoft Teams (presenter-led training)"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 2
+  certification: "Certificado"
+  description: "Microsoft Teams Course 5: Class Notebook in Microsoft Teams (presenter-led training)"
+  modality: Online
+  location:
+  start: 2018-11-09
+  end: 2018-11-09
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Twitter Publicist"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Twitter Publicist"
+  modality: Online
+  location:
+  start: 2018-11-09
+  end: 2018-11-09
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Twitter Promoter"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Twitter Promoter"
+  modality: Online
+  location:
+  start: 2018-11-09
+  end: 2018-11-09
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Windows 10 Anniversary Update"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Windows 10 Anniversary Update"
+  modality: Online
+  location:
+  start: 2018-11-09
+  end: 2018-11-09
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Primeros pasos con Minecraft: Education Edition"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.75
+  certification: "Certificado"
+  description: "Primeros pasos con Minecraft: Education Edition"
+  modality: Online
+  location:
+  start: 2018-11-09
+  end: 2018-11-09
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Minecraft: Education Edition y Química"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 2
+  certification: "Certificado"
+  description: "Minecraft: Education Edition y Química"
+  modality: Online
+  location:
+  start: 2018-11-09
+  end: 2018-11-09
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Intune para Educación: Dispositivos Android"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1.5
+  certification: "Certificado"
+  description: "Intune para Educación: Dispositivos Android"
+  modality: Online
+  location:
+  start: 2018-11-09
+  end: 2018-11-09
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft MakeCode & Micro:bit"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 3
+  certification: "Certificado"
+  description: "Microsoft MakeCode & Micro:bit"
+  modality: Online
+  location:
+  start: 2018-11-09
+  end: 2018-11-09
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft MakeCode"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 3
+  certification: "Certificado"
+  description: "Microsoft MakeCode"
+  modality: Online
+  location:
+  start: 2018-11-07
+  end: 2018-11-07
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Minecraft: Education Edition Avanzado"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 3
+  certification: "Certificado"
+  description: "Minecraft: Education Edition Avanzado"
+  modality: Online
+  location:
+  start: 2018-11-07
+  end: 2018-11-07
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft MakeCode & Grove Zero"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 3
+  certification: "Certificado"
+  description: "Microsoft MakeCode & Grove Zero"
+  modality: Online
+  location:
+  start: 2018-11-06
+  end: 2018-11-06
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft SharePoint"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 4
+  certification: "Certificado"
+  description: "Microsoft SharePoint"
+  modality: Online
+  location:
+  start: 2018-11-06
+  end: 2018-11-06
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Intune para Educación"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1.5
+  certification: "Certificado"
+  description: "Intune para Educación"
+  modality: Online
+  location:
+  start: 2018-11-06
+  end: 2018-11-06
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft MakeCode & Chibi Chip"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 3
+  certification: "Certificado"
+  description: "Microsoft MakeCode & Chibi Chip"
+  modality: Online
+  location:
+  start: 2018-11-06
+  end: 2018-11-06
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft MakeCode & Lego"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 3
+  certification: "Certificado"
+  description: "Microsoft MakeCode & Lego"
+  modality: Online
+  location:
+  start: 2018-11-06
+  end: 2018-11-06
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft MakeCode & Adafruit"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 3
+  certification: "Certificado"
+  description: "Microsoft MakeCode & Adafruit"
+  modality: Online
+  location:
+  start: 2018-11-06
+  end: 2018-11-06
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft Fotos"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.5
+  certification: "Certificado"
+  description: "Microsoft Fotos"
+  modality: Online
+  location:
+  start: 2018-11-06
+  end: 2018-11-06
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Skype Ready"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Skype Ready"
+  modality: Online
+  location:
+  start: 2018-11-06
+  end: 2018-11-06
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft MakeCode & Minecraft Education Edition"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 3
+  certification: "Certificado"
+  description: "Microsoft MakeCode & Minecraft Education Edition"
+  modality: Online
+  location:
+  start: 2018-11-04
+  end: 2018-11-04
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Evaluación de contenido con Microsoft Forms"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.5
+  certification: "Certificado"
+  description: "Evaluación de contenido con Microsoft Forms"
+  modality: Online
+  location:
+  start: 2018-11-03
+  end: 2018-11-03
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Redefinición de contenido con OneNote"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Redefinición de contenido con OneNote"
+  modality: Online
+  location:
+  start: 2018-11-03
+  end: 2018-11-03
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Creación de grupos de trabajo con Microsoft Teams"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.75
+  certification: "Certificado"
+  description: "Creación de grupos de trabajo con Microsoft Teams"
+  modality: Online
+  location:
+  start: 2018-11-03
+  end: 2018-11-03
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Teacher Academy: Office 365"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 3
+  certification: "Certificado"
+  description: "Teacher Academy: Office 365"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Teacher Academy: Office 365 ¡En castellano!"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 3
+  certification: "Certificado"
+  description: "Teacher Academy: Office 365 ¡En castellano!"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Crea tu portal de Office 365 Educación"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Crea tu portal de Office 365 Educación"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Introducción a Microsoft Classroom"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Introducción a Microsoft Classroom"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Introducción a: Office Forms"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.5
+  certification: "Certificado"
+  description: "Introducción a: Office Forms"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft Planner"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.5
+  certification: "Certificado"
+  description: "Microsoft Planner"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Conceptos básicos de Windows 10"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.5
+  certification: "Certificado"
+  description: "Conceptos básicos de Windows 10"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Make what's next"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Make what's next"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "La ciencia del Gaming"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "La ciencia del Gaming"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Building Global Citizens"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Building Global Citizens"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Developing workforce ready skills in Office Online"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Developing workforce ready skills in Office Online"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft Correo"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Microsoft Correo"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Introducción a Minecraft y cómo empezar a utilizarlo en el aula"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 3
+  certification: "Certificado"
+  description: "Introducción a Minecraft y cómo empezar a utilizarlo en el aula"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Teacher Academy Windows 10"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Teacher Academy Windows 10"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Physical computing for the non-computer science educator"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Physical computing for the non-computer science educator"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Teaching Sustainable Development Goals"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Teaching Sustainable Development Goals"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Enseñando los Objetivos del Desarrollo Sostenible"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Enseñando los Objetivos del Desarrollo Sostenible"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Problem-Based Learning"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1.5
+  certification: "Certificado"
+  description: "Problem-Based Learning"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Aprendizaje basado en la resolución de problemas (PBL)"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1.5
+  certification: "Certificado"
+  description: "Aprendizaje basado en la resolución de problemas (PBL)"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Profile All-Star"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Profile All-Star"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Presentaciones interactivas con Sway"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.5
+  certification: "Certificado"
+  description: "Presentaciones interactivas con Sway"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Transform learning with 21st century learning design"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Transform learning with 21st century learning design"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Transform learning with 21st century learning design"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.88
+  certification: "Certificado"
+  description: "Understand the concept of 21st century learning design ..."
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "21st century learning design: Course 1 - introducing 21CLD"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "21st century learning design: Course 1 - introducing 21CLD"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft Tareas"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Microsoft Tareas"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Paint 3D"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Paint 3D"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Evaluaciones con Sway"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Evaluaciones con Sway"
+  modality: Online
+  location:
+  start: 2018-11-02
+  end: 2018-11-02
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Skype empresarial"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 3
+  certification: "Certificado"
+  description: "Skype empresarial"
+  modality: Online
+  location:
+  start: 2018-11-01
+  end: 2018-11-01
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Windows 10 Anniversary Update"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Windows 10 Anniversary Update"
+  modality: Online
+  location:
+  start: 2018-11-01
+  end: 2018-11-01
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Windows 10 Anniversary Update"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Windows 10 Anniversary Update"
+  modality: Online
+  location:
+  start: 2018-11-01
+  end: 2018-11-01
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Publicación de contenido con Microsoft Stream"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.5
+  certification: "Certificado"
+  description: "Publicación de contenido con Microsoft Stream"
+  modality: Online
+  location:
+  start: 2018-11-01
+  end: 2018-11-01
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "MIE Trainer: Trainer Academy"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "MIE Trainer: Trainer Academy"
+  modality: Online
+  location:
+  start: 2018-11-01
+  end: 2018-11-01
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "MIE Trainer: Trainer Academy"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1.45
+  certification: "Certificado"
+  description: "The Microsoft Innovative Educator (MIE) Trainer Academy ..."
+  modality: Online
+  location:
+  start: 2018-11-01
+  end: 2018-11-01
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "MIE Trainer: Trainer academy conclusion"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "MIE Trainer: Trainer academy conclusion"
+  modality: Online
+  location:
+  start: 2018-11-01
+  end: 2018-11-01
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Digital storytelling with Microsoft Sway"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Digital storytelling with Microsoft Sway"
+  modality: Online
+  location:
+  start: 2018-11-01
+  end: 2018-11-01
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Create authentic assessments with Microsoft Forms"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Create authentic assessments with Microsoft Forms"
+  modality: Online
+  location:
+  start: 2018-11-01
+  end: 2018-11-01
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Create authentic assessments with Microsoft Forms"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.92
+  certification: "Certificado"
+  description: "Use Microsoft Forms for surveys, quizzes, and polls ..."
+  modality: Online
+  location:
+  start: 2018-11-01
+  end: 2018-11-01
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Get started with OneNote"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Get started with OneNote"
+  modality: Online
+  location:
+  start: 2018-11-01
+  end: 2018-11-01
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Empezamos con OneNote"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.75
+  certification: "Certificado"
+  description: "¿Es la primera vez que usas OneNote o acabas de actualizar de una versión anterior? Usa esta guía para aprender lo básico"
+  modality: Online
+  location:
+  start: 2018-11-01
+  end: 2018-11-01
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Get started with OneNote"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.83
+  certification: "Certificado"
+  description: "Make learning more powerful and dynamic with Microsoft OneNote ..."
+  modality: Online
+  location:
+  start: 2018-11-01
+  end: 2018-11-01
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Introduction to Microsoft Teams – the digital hub for educators and students"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.75
+  certification: "Certificado"
+  description: "Introduction to Microsoft Teams – the digital hub for educators and students"
+  modality: Online
+  location:
+  start: 2018-11-01
+  end: 2018-11-01
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Experience Bing for education"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Experience Bing for education"
+  modality: Online
+  location:
+  start: 2018-11-01
+  end: 2018-11-01
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft Contactos"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.5
+  certification: "Certificado"
+  description: "Microsoft Contactos"
+  modality: Online
+  location:
+  start: 2018-10-25
+  end: 2018-10-25
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft Sway"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Microsoft Sway"
+  modality: Online
+  location:
+  start: 2018-10-24
+  end: 2018-10-24
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Educator Community Influencer"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Educator Community Influencer"
+  modality: Online
+  location:
+  start: 2018-10-24
+  end: 2018-10-24
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft Yammer"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.5
+  certification: "Certificado"
+  description: "Microsoft Yammer"
+  modality: Online
+  location:
+  start: 2018-10-24
+  end: 2018-10-24
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft Stream"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.5
+  certification: "Certificado"
+  description: "Microsoft Stream"
+  modality: Online
+  location:
+  start: 2018-10-24
+  end: 2018-10-24
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Planificación de contenido con Microsoft Planner"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.5
+  certification: "Certificado"
+  description: "Planificación de contenido con Microsoft Planner"
+  modality: Online
+  location:
+  start: 2018-10-24
+  end: 2018-10-24
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft Calendario"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.5
+  certification: "Certificado"
+  description: "Microsoft Calendario"
+  modality: Online
+  location:
+  start: 2018-10-24
+  end: 2018-10-24
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft To-Do"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Microsoft To-Do"
+  modality: Online
+  location:
+  start: 2018-10-24
+  end: 2018-10-24
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Herramientas de Aprendizaje accesibles en PowerPoint – Lenguaje y learning tools"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Herramientas de Aprendizaje accesibles en PowerPoint – Lenguaje y learning tools"
+  modality: Online
+  location:
+  start: 2018-10-24
+  end: 2018-10-24
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Educator Community Contributor"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Educator Community Contributor"
+  modality: Online
+  location:
+  start: 2018-10-24
+  end: 2018-10-24
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Introduction to Sway"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Introduction to Sway"
+  modality: Online
+  location:
+  start: 2018-10-23
+  end: 2018-10-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft Word"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Microsoft Word"
+  modality: Online
+  location:
+  start: 2018-10-23
+  end: 2018-10-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft OneNote y Class Notebook"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1.5
+  certification: "Certificado"
+  description: "Microsoft OneNote y Class Notebook"
+  modality: Online
+  location:
+  start: 2018-10-23
+  end: 2018-10-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft Teams"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1.5
+  certification: "Certificado"
+  description: "Microsoft Teams"
+  modality: Online
+  location:
+  start: 2018-10-23
+  end: 2018-10-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft Excel"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 1
+  certification: "Certificado"
+  description: "Microsoft Excel"
+  modality: Online
+  location:
+  start: 2018-10-23
+  end: 2018-10-23
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft OneDrive"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 3
+  certification: "Certificado"
+  description: "Microsoft OneDrive"
+  modality: Online
+  location:
+  start: 2018-10-23
+  end: 2018-10-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft Forms"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.75
+  certification: "Certificado"
+  description: "Microsoft Forms"
+  modality: Online
+  location:
+  start: 2018-10-23
+  end: 2018-10-23
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Microsoft Innovative Educator Expert 2018-2019"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Microsoft Innovative Educator Expert 2018-2019"
+  modality: Online
+  location:
+  start: 2018-07-29
+  end: 2018-07-29
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Creación y personalización de contenido con PowerPoint"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.5
+  certification: "Certificado"
+  description: "Creación y personalización de contenido con PowerPoint"
+  modality: Online
+  location:
+  start: 2018-07-15
+  end: 2018-07-15
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Certified Microsoft Innovative Educator"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Certified Microsoft Innovative Educator"
+  modality: Online
+  location:
+  start: 2017-10-06
+  end: 2017-10-06
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "MEC Achievement 2017"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "MEC Achievement 2017"
+  modality: Online
+  location:
+  start: 2017-10-06
+  end: 2017-10-06
+  language: "EN"
+  contents:
+  url:
+  visibility: public
+
+- name: "Empezamos con Outlook"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.75
+  certification: "Certificado"
+  description: "Empezamos con Outlook"
+  modality: Online
+  location:
+  start: 2017-10-06
+  end: 2017-10-06
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Empezamos con OneNote"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.75
+  certification: "Certificado"
+  description: "Empezamos con OneNote"
+  modality: Online
+  location:
+  start: 2017-10-06
+  end: 2017-10-06
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Comienza tu viaje con Office365"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours: 0.5
+  certification: "Certificado"
+  description: "Comienza tu viaje con Office365"
+  modality: Online
+  location:
+  start: 2017-10-06
+  end: 2017-10-06
+  language: "ES"
+  contents:
+  url:
+  visibility: public
+
+- name: "Community Member"
+  type: course
+  fields: "education,ict"
+  organizer: "Microsoft"
+  credits:
+  hours:
+  certification: "Certificado"
+  description: "Community Member"
+  modality: Online
+  location:
+  start: 2017-10-06
+  end: 2017-10-06
+  language: "EN"
   contents:
   url:
   visibility: public
