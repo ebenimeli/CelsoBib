@@ -1,10 +1,8 @@
 ---
 layout: page
-title: ""
+title: "🎓 Formación académica"
 description: "Curriculum Vitae · Formación académica y cursos"
 ---
-
-## 🎓 Formación académica
 
 <a href="https://www.linkedin.com/in/ebenimeli/?locale=es_ES" target="_blank">Ver perfil en LinkedIn</a>
 

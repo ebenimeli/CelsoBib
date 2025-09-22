@@ -1,10 +1,8 @@
 ---
 layout: page
-title: ""
+title: "🧭 Temas de interés"
 description: "Curriculum Vitae · Intereses"
 ---
-
-## 🧭 Temas de interés
 
 <a href="https://www.linkedin.com/in/ebenimeli/?locale=es_ES" target="_blank">Ver perfil en LinkedIn</a>
 
