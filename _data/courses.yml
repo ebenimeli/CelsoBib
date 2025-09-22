@@ -1,5 +1,6 @@
 - name: "Metodologías inclusivas y su aplicación en el aula basada en la LOMLOE y en el Diseño Universal para el Aprendizaje (DUA)"
   type: course
+  fields: "education"
   organizer: Universidad Nacional de Educación a Distancia
   credits: 0.5
   hours: 10
@@ -16,6 +17,7 @@
 
 - name: "Matemáticas y civilización: de las cavernas a la inteligencia artificial"
   type: course
+  fields: "education,ict,science"
   organizer: Universidad Nacional de Educación a Distancia
   credits: 0.5
   hours: 12
@@ -31,6 +33,7 @@
   visibility: public
 
 - name: "Cero de estadística"
+  fields: "education,science"
   type: course
   organizer: Universidad Nacional de Educación a Distancia
   credits: 0.5
@@ -47,6 +50,7 @@
   visibility: public
 
 - name: "Elaboración y Digitalización de Materiales CLIL"
+  fields: "education,ict,languages"
   type: master
   program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
   organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
@@ -65,6 +69,7 @@
 
 - name: "Ontologías, Diccionarios y Lexicones Restringidos Computacionales"
   type: master
+  fields: "ict,languages"
   program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
   organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
   credits: 5
@@ -81,6 +86,7 @@
 
 - name: "La Red Semántica"
   type: master
+  fields: "ict,languages"
   program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
   organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
   credits: 5
@@ -97,6 +103,7 @@
 
 - name: "Creación y Edición de Recursos Digitales para la Enseñanza y el Aprendizaje de Lenguas"
   type: master
+  fields: "education,ict,languages"
   program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
   organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
   credits: 5
@@ -113,6 +120,7 @@
 
 - name: "El Análisis de la Lengua Mediante Corpus"
   type: master
+  fields: "ict,languages"
   program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
   organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
   credits: 5
@@ -129,6 +137,7 @@
 
 - name: "Técnicas y Herramientas para la Investigación Cuantitativa"
   type: master
+  fields: "ict,languages,science"
   program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
   organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
   credits: 5
@@ -146,6 +155,7 @@
 
 - name: "Metodología de la Investigación Lingüística"
   type: master
+  fields: "education,languages,science"
   program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
   organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
   credits: 5
@@ -162,6 +172,7 @@
 
 - name: "Introducción a LaTeX: fundamentos, estructura, edición y herramientas"
   type: course
+  fields: "ict"
   organizer: Universidad Nacional de Educación a Distancia
   credits: 1
   hours: 20
@@ -177,6 +188,7 @@
 
 - name: "Microsoft Innovative Educator Expert 2026"
   type: course
+  fields: "education,ict"
   organizer: "Microsoft"
   credits:
   hours:
@@ -193,6 +205,7 @@
 
 - name: "Curso completo de CSS: de principiante a front-end"
   type: course
+  fields: "ict"
   organizer: midudev
   credits:
   hours: 6
@@ -209,6 +222,7 @@
 
 - name: "Profesor@s entre bits y bots: Taller de fomento de la lectura a través de la literatura digital"
   type: course
+  fields: "education,ict,languages"
   organizer: Universidad Nacional de Educación a Distancia
   credits: 1
   hours: 20
@@ -224,6 +238,7 @@
 
 - name: "Los desafíos del bilingüismo y la educación bilingüe: Del contexto educativo al contexto familiar"
   type: course
+  fields: "education,languages"
   organizer: Universidad Nacional de Educación a Distancia
   credits: 1
   hours: 20
@@ -239,6 +254,7 @@
 
 - name: "Como hacer una programación didáctica para educación primaria, secundaria y bachillerato"
   type: course
+  fields: "education"
   organizer: Universidad Nacional de Educación a Distancia
   credits: 1
   hours: 20
@@ -255,6 +271,7 @@
 
 - name: "Lingüística contrastiva inglés-español y su aplicación a la enseñanza de lenguas extranjeras"
   type: course
+  fields: "education,languages"
   organizer: Universidad Nacional de Educación a Distancia
   credits: 1
   hours: 20
@@ -270,6 +287,7 @@
 
 - name: "El ajedrez educa y enseña a pensar - Leontxo García"
   type: talk
+  fields: "education"
   organizer: Universidad Nacional de Educación a Distancia
   credits:
   hours: 2
@@ -285,6 +303,7 @@
 
 - name: "Ciclo de Ajedrez Educativo para Docentes y Educadores (Nivel I): Introducción al Ajedrez Educativo y su didáctica"
   type: course
+  fields: "education"
   organizer: Universidad Nacional de Educación a Distancia
   credits: 2
   hours: 75
@@ -301,6 +320,7 @@
 
 - name: "El nuevo diseño curricular en LOMLOE. Implicaciones y propuestas para el diseño de programaciones, unidades didácticas y situaciones de aprendizaje"
   type: course
+  fields: "education"
   organizer: Universidad Nacional de Educación a Distancia
   credits: 1
   hours: 20
@@ -316,6 +336,7 @@
 
 - name: "Educación matemática en la era de la (des)información"
   type: course
+  fields: "education,science"
   organizer: Universidad Nacional de Educación a Distancia
   credits:
   hours:
@@ -331,6 +352,7 @@
 
 - name: "Tecnologías en la sociedad del conocimiento y educación a distancia. Programación, realidad aumentada, inteligencia artificial, enfoques activos y tecnología"
   type: course
+  fields: "education,ict"
   organizer: Universidad Nacional de Educación a Distancia
   credits: 1
   hours: 20
@@ -346,6 +368,7 @@
 
 - name: "Escribir bien en español: corrección, discurso, estilo, género, norma y redacción académica en lengua española"
   type: course
+  fields: "languages"
   organizer: Universidad Nacional de Educación a Distancia
   credits: 0.5
   hours: 10
@@ -361,6 +384,7 @@
 
 - name: "Una mirada a la evolución del lenguaje"
   type: talk
+  fields: "languages,science"
   organizer: Universidad Nacional de Educación a Distancia
   credits:
   hours:
@@ -376,6 +400,7 @@
 
 - name: "España y la Revolución Científica (siglos XVI-XVIII) - José Manuel Sánchez Ron"
   type: talk
+  fields: "science"
   organizer: Universidad Nacional de Educación a Distancia
   credits:
   hours: 2
@@ -391,6 +416,7 @@
 
 - name: "El libro como sistema: objeto, contenido, idea y conector"
   organizer: Universidad Nacional de Educación a Distancia
+  fields: "languages"
   credits: 0.5
   hours: 12
   certification: "Certificado"
