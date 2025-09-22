@@ -8,7 +8,7 @@ description: "Curriculum Vitae · Formación académica y cursos"
 
 <a href="https://www.linkedin.com/in/ebenimeli/?locale=es_ES" target="_blank">Ver perfil en LinkedIn</a>
 
-<img src="assets/images/profile.jpg" class="profile image-cropper">
+<!--<img src="assets/images/profile.jpg" class="profile image-cropper">-->
 
 - **Ingeniero en Informática**. Escuela Politécnica Superior. Universidad de Alicante (España).<!--[(→ lista de asignaturas cursadas)](pages/inginf.html)-->
 - Telekommunikationstechnik & -systeme (TKS). **Programa ERASMUS**. Fachchochschule Salzburg (Austria).
