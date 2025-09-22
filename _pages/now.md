@@ -11,10 +11,11 @@ description: "¿Qué estoy haciendo ahora?"
 
 Esta es una [_now page_](https://nownownow.com/about), y si tienes una web, deberías publicar una también.
 
-- 🎨 Rediseñando y actualizando los contenidos de esta **web**.
-- 👨🏻‍💻 Programando nuevas funciones para [**txtlab**](https://www.ebenimeli.org/txtlab/), una caja de herramientas para trabajar con texto.
-- 🖋 Preparando el próximo boletín de [_La ventana digital_](https://ebenimeli.substack.com/)
-- 🌱 Preparando esta [_now page_](https://nownownow.com/about) que estás leyendo.
+- ❤️ Estoy de permiso de paternidad, así que mis prioridades son otras.
+- 🖋 Cuando tengo algún rato libre, escribo. Intento preparar el próximo boletín de [_La ventana digital_](https://ebenimeli.substack.com/) y de vez en cuando escribo alguna [nota al vuelo](https://notasalvuelo.substack.com/).
+- 👨🏻‍💻 Recientemente he publicado algunas nuevas funciones que había programado para [**txtlab**](https://www.ebenimeli.org/txtlab/), una caja de herramientas para trabajar con texto. Mejor en Internet que en mi cajón.
+- 📖 [Sigo leyendo](pages/read_now.html) _En busca del origen del lenguaje_ de Sverker Johansson
+- 🌱 Preparando esta [_now page_](https://nownownow.com/about) que estás leyendo. [Escribí una nota](https://notasalvuelo.substack.com/publish/post/174006754) sobre esta iniciativa.
 
 <span class="note">🕒 Última actualización: {{ page.last_modified_at | date: "%d/%m/%Y %H:%M" }}</span>
 
