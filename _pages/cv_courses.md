@@ -10,7 +10,7 @@ description: "Cursos de grado, máster, doctorado y otros"
 <div id="course-filter" role="toolbar" aria-label="Filtrar cursos por tipo">
   <!-- Puedes renombrar las etiquetas visibles sin tocar data-filter -->
   <button type="button" class="filter-btn" data-filter="highlight" aria-pressed="false" title="Solo destacados">
-    <i class="fa-regular fa-star"></i>º
+    <i class="fa-regular fa-star"></i>
   </button>
   <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true" title="Todos los cursos">
     Todos
