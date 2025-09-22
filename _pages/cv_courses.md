@@ -10,7 +10,7 @@ field_labels:
   science: "Ciencia"
 ---
 
-<h2 id="courses-title">Cursos de formación</h2>
+<!--<h2 id="courses-title">Cursos de formación</h2>-->
 
 <!-- ====== FILTRO SUPERIOR ====== -->
 <div id="course-filter" role="toolbar" aria-label="Filtrar cursos por tipo">
@@ -45,7 +45,7 @@ field_labels:
     {% assign cursos = site.data.courses %}
     {% assign buf = "" %}
     {% for c in cursos %}
-    {% assign vis = curso.visibility | default: '' %}
+      {% assign vis = c.visibility | default: '' %}
       {% if vis != 'private' %}
         {%- assign normalized = c.fields
           | downcase
@@ -91,6 +91,22 @@ field_labels:
     {% endfor %}
 
   </fieldset>
+  <br/>
+
+  <!-- ====== BUSCADOR ====== -->
+  <div class="search-wrap" role="search" aria-label="Buscar cursos">
+    <label for="course-search" class="sr-only">Buscar cursos</label>
+    <input
+      id="course-search"
+      type="search"
+      placeholder="Buscar por título, organizador, resumen…"
+      autocomplete="off"
+      enterkeyhint="search"
+    />
+    <button type="button" id="clear-search" class="clear-btn" title="Limpiar búsqueda" aria-label="Limpiar búsqueda">
+      ×
+    </button>
+  </div>
 
 <span id="course-count" aria-live="polite" class="count-badge" title="Resultados visibles"></span>
 
@@ -136,7 +152,9 @@ field_labels:
           {% if curso.faculty %}<li>{{ curso.faculty }} </li>{% endif %}
           {% if curso.department %}<li>{{ curso.department }} </li>{% endif %}
 
-          <li><strong>Resumen:</strong> <span class="course-description">{{ curso.description }}</span>.</li>
+          {% if curso.description %}
+          <li><strong>Resumen:</strong> <span class="course-description">{{ curso.description }}</span></li>
+          {% endif %}
 
           {% assign modality = curso.modality | downcase | strip %}
           {% if curso.location %}
@@ -181,7 +199,9 @@ field_labels:
           </li>
 
           <li><strong>Idiomas:</strong> {{ curso.language | upcase }}</li>
+          {% if curso.contents %}
           <li><strong>Contenidos:</strong> {{ curso.contents }}</li>
+          {% endif %}
 
           {% if curso.certification %}
           <li>
@@ -246,6 +266,7 @@ field_labels:
     flex-wrap: wrap;
     gap: .4rem .75rem;
     align-items: center;
+    font-size: .80rem;
   }
   #field-filters .chk {
     display: inline-flex;
@@ -259,6 +280,38 @@ field_labels:
   #field-filters input[type="checkbox"] {
     accent-color: currentColor;
   }
+
+  /* ====== BUSCADOR ====== */
+  .search-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    border: 1px dotted var(--c-border, #e2e2e2);
+    border-radius: .6rem;
+    padding: .35rem .5rem;
+    background: var(--c-bg);
+    min-width: min(100%, 28rem);
+  }
+  #course-search {
+    color: var(--primary-font-color);
+    border: 0;
+    outline: none;
+    background: transparent;
+    font: inherit;
+    width: 100%;
+    padding: .15rem .25rem;
+  }
+  .clear-btn {
+    border: 0;
+    background: transparent;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: .15rem .25rem;
+    opacity: .7;
+  }
+  .clear-btn:hover,
+  .clear-btn:focus-visible { opacity: 1; }
 
   #course-list {
     display: grid;
@@ -322,7 +375,11 @@ field_labels:
   const chkContainer = document.getElementById('field-filters');
   const chkInputs = () => Array.from(chkContainer.querySelectorAll('input[name="field-filter"]'));
 
-  // Lee ?type=... y ?fields=a,b,c
+  // Buscador
+  const searchInput = document.getElementById('course-search');
+  const clearBtn = document.getElementById('clear-search');
+
+  // Lee ?type=... ?fields=a,b,c ?q=...
   const params = new URLSearchParams(location.search);
   const initialType = (params.get('type') || 'all').toLowerCase();
   const initialFields = (params.get('fields') || '')
@@ -330,12 +387,25 @@ field_labels:
     .split(',')
     .map(s => s.trim())
     .filter(Boolean);
+  const initialQ = (params.get('q') || '').trim();
 
   // Marcar checkboxes desde URL (usa value=clave interna)
   if (initialFields.length) {
-    chkInputs().forEach(chk => {
-      chk.checked = initialFields.includes(chk.value);
-    });
+    // Ojo: los checkboxes aún no están en el DOM cuando esto corre? Sí, ya están.
+    // Marcamos después del querySelector.
+    // Se marcarán al vuelo aquí:
+    // (Si quisieras soportar campos no listados, habría que crearlos dinámicamente.)
+    setTimeout(() => {
+      chkInputs().forEach(chk => {
+        chk.checked = initialFields.includes(chk.value);
+      });
+      if (initialQ) searchInput.value = initialQ;
+      // Aplicar filtros iniciales tras marcar
+      const known = new Set(['all','master','degree','phd','talk','course','highlight']);
+      applyFilters(known.has(initialType) ? initialType : 'all');
+    }, 0);
+  } else {
+    if (initialQ) searchInput.value = initialQ;
   }
 
   let currentType = 'all';
@@ -357,6 +427,8 @@ field_labels:
     });
 
     const selectedFields = getSelectedFields();
+    const q = searchInput.value.trim().toLowerCase();
+    const terms = q ? q.split(/\s+/).filter(Boolean) : [];
     let visible = 0;
 
     items.forEach(el => {
@@ -383,6 +455,16 @@ field_labels:
         show = selectedFields.every(f => fieldSet.has(f));
       }
 
+      // 3) filtro por texto (todas las palabras)
+      if (show && terms.length) {
+        const title = el.querySelector('.course-title')?.textContent || '';
+        const org = el.querySelector('.organizer')?.textContent || '';
+        const desc = el.querySelector('.course-description')?.textContent || '';
+        const haystack = (title + ' ' + org + ' ' + desc + ' ' + (el.dataset.fields || '') + ' ' + (el.dataset.type || ''))
+          .toLowerCase();
+        show = terms.every(t => haystack.includes(t));
+      }
+
       el.classList.toggle('is-hidden', !show);
       if (show) visible++;
     });
@@ -399,7 +481,15 @@ field_labels:
     if (sel.length) url.searchParams.set('fields', sel.join(','));
     else url.searchParams.delete('fields');
 
+    if (q) url.searchParams.set('q', q);
+    else url.searchParams.delete('q');
+
     history.replaceState({}, '', url);
+  }
+
+  // Debounce suave para el buscador (búsqueda en vivo)
+  function debounce(fn, ms = 120) {
+    let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
   }
 
   // Eventos
@@ -407,9 +497,14 @@ field_labels:
     btn.addEventListener('click', () => applyFilters(btn.dataset.filter));
   });
   chkContainer.addEventListener('change', () => applyFilters()); // mantiene currentType
+  searchInput.addEventListener('input', debounce(() => applyFilters())); // en vivo
+  searchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') applyFilters(); });
+  clearBtn.addEventListener('click', () => { searchInput.value = ''; searchInput.focus(); applyFilters(); });
 
-  // Filtro inicial (desde URL o por defecto "all")
-  const known = new Set(['all','master','degree','phd','talk','course','highlight']);
-  applyFilters(known.has(initialType) ? initialType : 'all');
+  // Filtro inicial (desde URL o por defecto "all") — si no hay setTimeout anterior
+  if (!initialFields.length) {
+    const known = new Set(['all','master','degree','phd','talk','course','highlight']);
+    applyFilters(known.has(initialType) ? initialType : 'all');
+  }
 })();
 </script>
