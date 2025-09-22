@@ -9,3 +9,5 @@ missing.sh
 check.sh
 checklog.txt
 repair.sh
+clean.sh
+reset.sh
