@@ -8,6 +8,7 @@ description: "Reflexiones al paso y retales de ideas"
 
 Este es mi boletín más personal. Encontrarás reflexiones al paso, retales de ideas y notas al margen.
 
+- #31 / 26.09.2025 · [Un yatai artesano](https://notasalvuelo.substack.com/p/un-yatai-artesanal)
 - #30 / 22.09.2025 · [Un día desconectado](https://notasalvuelo.substack.com/p/un-dia-desconectado)
 - #29 / 19.09.2025 · [Una brújula personal](https://notasalvuelo.substack.com/p/una-brujula-personal)
 - #28 / 18.09.2025 · [Un lector accesible](https://notasalvuelo.substack.com/p/un-lector-accesible)
