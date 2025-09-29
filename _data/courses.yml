@@ -1,4 +1,3 @@
-# ToDo
 - name: "Microsoft Innovative Educator Trainer (MIE Trainer)"
   type: course
   fields: "education,ict"
@@ -16,7 +15,7 @@
   url:
   visibility: public
 
-# ToDo
+  # ToDo
 - name: "Aprendizaje basado en juegos con Minecraft Education Edition"
   type: course
   fields: "education,ict"
@@ -44,8 +43,8 @@
   description: "Curso sobre LOMLOE y educación inclusiva: atención a la diversidad; DUA para diseñar currículos flexibles y accesibles, minimizando barreras, con herramientas y metodologías prácticas docentes."
   modality: Online
   location: UNED Tudela
-  start: 17.10.2025
-  end: 18.10.2025
+  start: "2025-10-17"
+  end: "2025-10-18"
   language: ES
   contents: "Un breve recorrido por la LOMLOE · Modelo DUA · Planificación multinivel · Aprendizaje cooperativo · Paisajes de aprendizaje · Aprendizaje basado en proyectos · Aprendizaje basado en problemas · Visual Thinking · Design Thinking · ABJ vs gamificación · m-learning · Realidad aumentada"
   url: https://extension.uned.es/actividad/idactividad/47031
@@ -61,8 +60,8 @@
   description: "Recorrido histórico por las matemáticas y su papel en la civilización: número, razón, curvas, inventos e inteligencia artificial, mostrando cómo impulsan pensamiento humano y transforman el presente."
   modality: Online
   location: UNED Tudela
-  start: 16.10.2025
-  end: 17.10.2025
+  start: "2025-10-16"
+  end: "2025-10-17"
   language: ES
   contents: "En busca del principio: gestación de las matemáticas · El abogado del terraplanismo · Una piedra en el camino me enseñó que mi destino era rodar y rodar · De la máquina al teorema: Inventos que inspiraron matemáticas · Matemáticas que piensan: del cálculo a la inteligencia artificial"
   url: https://extension.uned.es/actividad/idactividad/45763
@@ -78,8 +77,8 @@
   description: "Introducción a la Estadística que desarrolla conocimientos básicos y destrezas iniciales para seguir con éxito asignaturas de grado relacionadas, construyendo una base para estudios posteriores."
   modality: Online
   location: UNED Ciudad Real - Valdepeñas
-  start: 08.10.2025
-  end: 22.10.2025
+  start: "2025-10-08"
+  end: "2025-10-22"
   language: ES
   contents: "ESTADÍSTICA DESCRIPTIVA: introducción · Variable estadística y tipos · Frecuencias y tabla de distribución · Representación gráfica de datos · Medidas de posición · Medidas de dispersión · Medidas de forma · Cambios de origen y de escala · DISTRIBUCIONES BIDIMENSIONALES: variables bidimensionales · Asociación estadística y causalidad · Tablas y gráficos · Covarianza y correlación lineal · Regresión lineal simple, coeficientes y predicciones · PROBABILIDAD: introducción, definiciones, variable aleatoria y tipos · Función de probabilidad y función de distribución (discreta) · Esperanza y desviación típica (discreta) · Principales distribuciones discretas · Función de probabilidad y función de distribución (continua) · Distribución normal · Cálculo de probabilidades en la normal y tipificación · Variable aleatoria bidimensional"
   url: https://extension.uned.es/actividad/idactividad/45771
@@ -95,8 +94,8 @@
   description: "La asignatura aborda el aprendizaje integrado de lengua y contenidos (CLIL) en el marco del plurilingüismo europeo. Forma al estudiante en la creación y digitalización de materiales didácticos mediante tecnologías educativas. Proporciona competencias prácticas para elaborar recursos centrados en el contenido, favoreciendo metodologías innovadoras en la enseñanza de lenguas con apoyo tecnológico."
   modality: Online
   location: UNED
-  start: febrero 2026
-  end: junio 2026
+  start: "2026-02-01"
+  end: "2026-06-01"
   language: ES
   contents: "CLIL/AICLE integrado en el currículum pre-universitario y universitario · Metodología CLIL y metodología TIC · Uso de las TIC en la preparación de materiales y sesiones AICLE · Herramientas y aplicaciones web para la mejora de las destrezas de comprensión lectora y expresión escrita · Herramientas y aplicaciones web para la mejora de la comprensión auditiva y la comunicación oral"
   url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=2440916-&codTitulacion=240901&idContenido=1
@@ -113,8 +112,8 @@
   description: "La asignatura ofrece una introducción al tratamiento computacional del léxico mediante ontologías, diccionarios y lexicones restringidos. Aborda análisis de corpus, codificación conceptual y textual, extracción de léxico y uso de software especializado. Facilita la comprensión de frecuencias, co-ocurrencias y análisis estadístico, proporcionando al alumnado una visión general de recursos léxicos y ontológicos digitales."
   modality: Online
   location: UNED
-  start: febrero 2026
-  end: junio 2026
+  start: "2026-02-01"
+  end: "2026-06-01"
   language: ES
   contents: "Introduccion al tratamiento computacional del léxico · El almacenamiento computacional del léxico · Revisión sobre los córpora · La codificación del significado en diccionarios y tesaurus · Bases de datos · Diccionarios · Ontologías"
   url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24409193&codTitulacion=240901&idContenido=1
@@ -130,8 +129,8 @@
   description: "La asignatura introduce la red semántica e Internet 3.0, abordando buscadores, metadatos, RDF, OWL y XML. Ofrece una visión aplicada de bases de datos, inteligencia artificial y web 3D. Forma en competencias clave para la investigación, la gestión de información y el tratamiento de lenguas en entornos digitales y profesionales emergentes."
   modality: Online
   location: UNED
-  start: febrero 2026
-  end: junio 2026
+  start: "2026-02-01"
+  end: "2026-06-01"
   language: ES
   contents: "Hacia una red significativa: buscadores verticales y horizontales · Datos y metadatos: etiquetado, ontologías y Ontology Web Language · Resource Description Framework y Extensible Markup Language · La red 3.0: bases de datos, inteligencia artificial y 3D"
   url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24409189&codTitulacion=240901&idContenido=1
@@ -147,8 +146,8 @@
   description: "La asignatura analiza el impacto de la digitalización y las TIC en la enseñanza de lenguas. Ofrece fundamentos teóricos y prácticos para crear, editar y difundir materiales audiovisuales interactivos en Internet. Promueve nuevas metodologías comunicativas, fomenta la competencia digital y aprovecha recursos auténticos en línea para un aprendizaje más eficaz, dinámico y motivador."
   modality: Online
   location: UNED
-  start: octubre 2025
-  end: febrero 2026
+  start: "2025-10-01"
+  end: "2026-02-01"
   language: ES
   contents: "El espacio virtual de formación y aprendizaje · El currículo y la búsqueda, adaptación, creación y evaluación de recursos didácticos para la enseñanza de lenguas · Fundamentos y recursos para la creación de materiales y recursos digitales sostenibles · La aplicabilidad de los materiales digitales en la enseñanza-aprendizaje de lenguas extranjeras I y II."
   url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24090077&codTitulacion=240901&idContenido=1
@@ -164,8 +163,8 @@
   description: "La asignatura introduce al estudiante en la lingüística del corpus, un enfoque de investigación basado en datos. Enseña recopilación y procesamiento computacional de muestras lingüísticas, análisis cuantitativo y cualitativo, y aplicación en ámbitos profesionales. Desarrolla competencias en el uso de herramientas, fomenta pensamiento crítico, curiosidad intelectual y capacidad para diseñar modelos de análisis fiables."
   modality: Online
   location: UNED
-  start: octubre 2025
-  end: febrero 2026
+  start: "2025-10-01"
+  end: "2026-02-01"
   language: ES
   contents: "Fundamentos y valor de los datos cuantitativos frente a la intuición personal · Las recopilaciones de datos lingüísticos y su definición · Los corpus lingüísticos: requisitos formales y científicos. Variantes de los corpus y su especificidad en distintos ámbitos de investigación y de trabajo profesional · La palabra electrónica y su tratamiento · Aplicaciones de las recopilaciones de datos lingüísticos en distintas áreas del lenguaje · Herramientas informáticas para el tratamiento de corpus · El uso de corpus en distintos ámbitos de la investigación lingüística · Aplicaciones informáticas de los corpus en ámbitos profesionales (enseñanza, traducción, ciencias jurídicas y sociales) · Herramientas estadísticas en el análisis mediante corpus."
   url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24409047&codTitulacion=240901&idContenido=1
@@ -181,8 +180,8 @@
   description: "La asignatura proporciona al estudiante una introducción a los métodos cuantitativos aplicados al estudio del lenguaje. Aborda estadística descriptiva e inferencial, pruebas de hipótesis, análisis de datos y uso de software especializado. Busca desarrollar competencias técnicas y pensamiento crítico, permitiendo diseñar investigaciones sólidas y comunicar hallazgos de manera clara y fundamentada."
   modality: Online
   location: UNED
-  start: octubre 2025
-  end: febrero 2026
+  start: "2025-10-01"
+  end: "2026-02-01"
   language: ES
   contents: "Introducción a la estadística · Pre-procesamiento de datos y selección de variables · Estadística descriptiva · Estadística inferencial I: Análisis de varianza · Estadística inferencial II: Análisis de Regresión · Estadística inferencial III: Corpus · Introducción a la psicometría"
   url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24090019&codTitulacion=240901&idContenido=1
@@ -199,8 +198,8 @@
   description: "La asignatura introduce al estudiante en la investigación lingüística aplicada al ámbito educativo. A través de un enfoque riguroso y reflexivo, enseña fases, técnicas y métodos del proceso científico. Se fomenta la práctica investigadora, la capacidad crítica y la toma de decisiones fundamentadas. Proporciona competencias para diseñar, implementar y comunicar proyectos de investigación"
   modality: Online
   location: UNED
-  start: octubre 2025
-  end: febrero 2026
+  start: "2025-10-01"
+  end: "2026-02-01"
   language: ES
   contents: "Principios del método científico · Método de investigación. Enfoques · Investigación cuantitativa e invesitigación cualitativa · Procesos y fases de una investigación · Elaboración de instrumentos de medida · El informe de investigación"
   url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24090048&codTitulacion=240901&idContenido=1
@@ -216,8 +215,8 @@
   description: "Curso práctico de 20 horas para aprender LaTeX desde cero: documentos académicos, fórmulas, tablas, gráficos, bibliografía automática, Overleaf, PDF/HTML y presentaciones Beamer con ejercicios guiados."
   modality: Online
   location: UNED Pontevedra
-  start: 15.09.2025
-  end: 30.09.2025
+  start: "2025-09-15"
+  end: "2025-09-30"
   language: ES
   contents: "¿Qué es LaTeX? Editores y compilación · Estructura básica de un documento · Estilo de texto y documentos modulares · Escritura matemática con LaTeX · Tablas e imágenes · Citas y bibliografía · Diseño avanzado de documentos · Presentaciones con Beamer · Publicación, colaboración y exportación · Trabajo final asistido"
   url: https://extension.uned.es/actividad/idactividad/45621
@@ -232,8 +231,8 @@
   description:
   modality: Online
   location:
-  start: 01.09.2025
-  end: 01.09.2025
+  start: "2025-09-01"
+  end: "2025-09-01"
   language: ES
   contents:
   url:
@@ -252,7 +251,9 @@
   start: 07.2025
   end: 07.2025
   language: ES
-  contents: "Introducción a CSS · Qué es CSS · Cascada · Recursos recomendados · Dónde poner estilos · Partes de CSS · Colores · Selectores: clases, ID, combinados · Pseudo-clases · Estados simulados (hover, first-child, last-child) · Operadores (primer nivel, hermano siguiente, plus) · Herramienta de práctica · Herencia · Valores especiales · Cascada avanzada · Fallbacks · Especificidad · Estilos en línea · Cómo saltarse la especificidad · Unidades relativas y absolutas · Reset CSS y Normalize · Modelo de la caja · Propiedades · Box-sizing · Overflow · Text-overflow · Position: absolute, relative, fixed, sticky · Centrado con absolute · Z-index · Flexbox: display flex · Flex-direction · Flex-wrap · Flex-flow · Grow-shrink-basis · Justify-content · Align-items · Gap · Orden y distribución de elementos · Grid: fundamentos · Grid vs Flex · Primer Grid · Columnas y filas · Repeat() · Auto-fill/auto-fit · Grid areas · Layouts · Alineación en línea y bloque · Animaciones y transiciones: transiciones, estados, transition-duration, transition all, cubic bezier, atajos, propiedades animables · Animaciones avanzadas: ejemplos prácticos, animation-fill-mode, shorthand animation, FPS, animaciones con scroll, animation timeline · Proyectos prácticos: galería de imágenes, navbar animado, ejercicios de Excel, creación de layouts y animación de galería."
+  contents:
+    "Introducción a CSS · Qué es CSS · Cascada · Recursos recomendados · Dónde poner estilos · Partes de CSS · Colores · Selectores: clases, ID, combinados · Pseudo-clases · Estados simulados (hover, first-child, last-child) · Operadores (primer nivel, hermano siguiente, plus) · Herramienta de práctica · Herencia · Valores especiales · Cascada avanzada · Fallbacks · Especificidad · Estilos en línea · Cómo saltarse la especificidad · Unidades relativas y absolutas · Reset CSS y Normalize · Modelo de la caja · Propiedades · Box-sizing · Overflow · Text-overflow · Position: absolute, relative, fixed, sticky · Centrado con absolute · Z-index · Flexbox: display flex · Flex-direction · Flex-wrap · Flex-flow · Grow-shrink-basis · Justify-content · Align-items · Gap · Orden y distribución de elementos · Grid: fundamentos · Grid vs Flex · Primer Grid · Columnas y filas · Repeat() · Auto-fill/auto-fit · Grid areas · Layouts · Alineación en línea y bloque · Animaciones y transiciones: transiciones,
+    estados, transition-duration, transition all, cubic bezier, atajos, propiedades animables · Animaciones avanzadas: ejemplos prácticos, animation-fill-mode, shorthand animation, FPS, animaciones con scroll, animation timeline · Proyectos prácticos: galería de imágenes, navbar animado, ejercicios de Excel, creación de layouts y animación de galería."
   url: https://www.youtube.com/watch?v=TlJbu0BMLaY
   visibility: private
 
@@ -266,8 +267,8 @@
   description: "Curso de actualización que diagnostica la comprensión lectora juvenil en España y desarrolla soluciones colaborativas basadas en literatura digital e inteligencia artificial para fomentar lectura y equidad."
   modality: Online
   location: UNED Denia
-  start: 14.07.2025
-  end: 16.07.2025
+  start: "2025-07-14"
+  end: "2025-07-16"
   language: ES
   contents: "Desgranando la afición lectora de nuestros jóvenes: evidencias, diagnósticos, implicaciones (Mesa redonda) · Recorrido crítico por las iniciativas de fomento de la afición lectora: fortalezas, debilidades · Introducción a la literatura digital para niños y jóvenes · Del cuento a la pantalla: la Inteligencia Artificial como aliada para la creación multimedia · Optimizando la lectura con relatos interactivos en formato digital: ¿individual o social, libre o pautada...? · El uso de la Inteligencia Artificial Generativa para la creación literaria · Máquinas poéticas: taller de creación de poesía experimental · Frankenbot: construye tu propio chatbot literario"
   url: https://extension.uned.es/actividad/idactividad/42375
@@ -282,8 +283,8 @@
   description: "Curso integral sobre bilingüismo: desarrollo cognitivo y cultural, estrategias familiares, programas educativos, inclusión, recursos didácticos y formación docente para favorecer aprendizaje lingüístico en contextos escolares y familiares."
   modality: Online
   location: UNED Campo de Gibraltar - Algeciras
-  start: 09.07.2025
-  end: 11.07.2025
+  start: "2025-07-09"
+  end: "2025-07-11"
   language: ES
   contents: "Introducción al bilingüismo y la educación bilingüe en el contexto español: un desafío para la sociedad · Los programas bilingües en la etapa primaria: Claves para el cambio y el éxito educativo · Diversidad cultural y educación bilingüe: un enfoque intercultural para docentes · Programas de educación bilingüe: El papel de las familias · El profesorado y los equipos directivos de centros ante el desafío de la educación bilingüe · La inclusión como desafío más allá de la educación bilingüe · Recursos Didácticos para la Enseñanza Bilingüe: Libros, materiales digitales, juegos y otros recursos útiles · ¿Cómo usar los corpus lingüísticos para iniciarse en la investigación en el aula bilingüe?"
   url: https://extension.uned.es/actividad/idactividad/43117
@@ -298,8 +299,8 @@
   description: ""
   modality: Online
   location: UNED
-  start: 02.07.2025
-  end: 02.07.2025
+  start: "2025-07-02"
+  end: "2025-07-02"
   language: ES
   contents: ""
   url: "https://www.quironprevencion.com/es"
@@ -314,8 +315,8 @@
   description: "Curso teórico-práctico para diseñar, elaborar y defender programaciones didácticas en oposiciones docentes, integrando innovación, realidad educativa y evidencias científicas adaptadas a cada Comunidad Autónoma."
   modality: Online
   location: UNED
-  start: 04.11.2024
-  end: 18.11.2024
+  start: "2024-11-04"
+  end: "2024-11-18"
   language: ES
   contents: "Implicaciones de la LOMLOE en el diseño de la programación · El formato de la programación · Índice de la Programación en LOMLOE · Introducción / Contextualización · Competencias Clave (Descriptores) y Específicas · Saberes básicos (Contenidos) · Sostenibilidad, Elementos transversales y Educación en valores · Metodología · Evaluación (Enfoques, Técnicas, Procedimientos e Instrumentos) · Medidas de atención al alumnado con necesidad específica de apoyo educativo (DUA) · Actividades complementarias / extraescolares y proyectos de centro · Unidades Didácticas / Situaciones de Aprendizaje · Proyecto lingüístico (optativo) · Procedimientos informativos para garantizar una evaluación objetiva · Mecanismos de revisión, evaluación y modificación de las Programaciones · Autoevaluación de la programación y de la propia práctica docente · Referencias bibliográficas / normativa y anexos · Rúbricas oficiales para la evaluación de la programación en las diferentes comunidades autónomas"
   url: https://extension.uned.es/actividad/idactividad/37825
@@ -331,8 +332,8 @@
   description: "Curso sobre lingüística contrastiva aplicada al inglés y español: fonología, gramática, sintagmas, cláusula, estructura temática e informativa, construcciones, léxico y principios para enseñanza y traducción."
   modality: Online
   location: UNED Ponferrada
-  start: 01.07.2024
-  end: 03.07.2024
+  start: "2024-07-01"
+  end: "2024-07-03"
   language: ES
   contents: "Introducción a la lingüística contrastiva y aproximación contrastivo-competencial a la enseñanza de lenguas en el aula · Fonología contrastiva: de lo suprasegmental a lo segmental · Lexicología y morfología contrastivas · Gramática de construcciones contrastiva · Gramática contrastiva de la estructura informativa · Gramática contrastiva de la negación · Gramática contrastiva del nombre y del sintagma nominal · Gramática contrastiva de la cláusula y su relación con los actos de habla"
   url: https://extension.uned.es/actividad/idactividad/36013
@@ -347,8 +348,8 @@
   description: "Charla sobre retos docentes: motivar alumnado influido por redes y decidir qué enseñar ante futuro incierto. El ajedrez educativo enseña a pensar, beneficios cognitivos probados."
   modality: Online
   location: UNED Tudela
-  start: 22.07.2024
-  end: 22.07.2024
+  start: "2024-07-22"
+  end: "2024-07-22"
   language: ES
   contents: "Retos docentes: motivar a alumnado influido por redes sociales · Decidir qué enseñar y cómo ante un futuro incierto (horizonte diez años) · Pensar como competencia perdurable · Ajedrez educativo para aprender a pensar jugando · Herramienta pedagógica valiosa en el aula · Beneficios cognitivos y socioemocionales del ajedrez · Evidencia científica de su eficacia · Utilidad terapéutica: retraso del envejecimiento cerebral y del Alzheimer"
   url: https://extension.uned.es/actividad/idactividad/37427
@@ -363,10 +364,12 @@
   description: "El Nivel I del Ciclo de Ajedrez Educativo introduce a docentes y educadores en la didáctica del ajedrez desde un enfoque lúdico y competencial. Proporciona recursos, dinámicas y bases metodológicas para enseñar ajedrez en aulas o contextos sociales, otorgando diploma acreditativo y acceso al Nivel II."
   modality: Online
   location: UNED Tudela
-  start: 23.10.2023
-  end: 29.02.2024
+  start: "2023-10-23"
+  end: "2024-02-29"
   language: ES
-  contents: "Modelo de los 7 colores: un modelo de aprendizaje basado en Competencias · ¿Qué es y por qué el Ajedrez Educativo? · Proceso de enseñanza/aprendizaje del Ajedrez en niños y niñas y en personas mayores: objetivos y metodología · Nociones básicas de Ajedrez y su didáctica: El tablero y las piezas, movimientos y valor de las piezas, reglas del juego, sistemas de notación · Fundamentos de Ajedrez moderno (Teoría, Táctica y aproximación a la Estrategia) · Jaque, jaque mate, técnicas de mates básicos y jugadas especiales · Las tablas y el rey ahogado · Fases de una partida · Ataque y defensa: amenazas y seguridad del Rey · Motivos y operaciones tácticas (I) · Curiosidades geométricas · Táctica vs estrategia · Introducción a la Historia del Ajedrez. Leyendas · Didáctica y Tipologías de ejercicios I (Niveles blanco y amarillo) · Funciones del ajedrez: el ajedrez como herramienta didáctica para adquirir y desarrollar aptitudes y mejorar actitudes. Ajedrez en la escuela · Juegos como elementos motivadores para el aprendizaje del alumnado y recurso educativo para el docente · La creación de ejercicios: motivación y aprendizaje · Ajedrez y competencias básicas (Introducción) · Competencias fundamentales orientadas a la vida. El ajedrez y el análisis de riesgos · Ajedrez Educativo, diversidad y ritmos de aprendizaje · Recursos de apoyo para el docente (plataformas online, software de apoyo)"
+  contents:
+    "Modelo de los 7 colores: un modelo de aprendizaje basado en Competencias · ¿Qué es y por qué el Ajedrez Educativo? · Proceso de enseñanza/aprendizaje del Ajedrez en niños y niñas y en personas mayores: objetivos y metodología · Nociones básicas de Ajedrez y su didáctica: El tablero y las piezas, movimientos y valor de las piezas, reglas del juego, sistemas de notación · Fundamentos de Ajedrez moderno (Teoría, Táctica y aproximación a la Estrategia) · Jaque, jaque mate, técnicas de mates básicos y jugadas especiales · Las tablas y el rey ahogado · Fases de una partida · Ataque y defensa: amenazas y seguridad del Rey · Motivos y operaciones tácticas (I) · Curiosidades geométricas · Táctica vs estrategia · Introducción a la Historia del Ajedrez. Leyendas · Didáctica y Tipologías de ejercicios I (Niveles blanco y amarillo) · Funciones del ajedrez: el ajedrez como herramienta didáctica para adquirir y desarrollar aptitudes y mejorar actitudes. Ajedrez en la escuela · Juegos como
+    elementos motivadores para el aprendizaje del alumnado y recurso educativo para el docente · La creación de ejercicios: motivación y aprendizaje · Ajedrez y competencias básicas (Introducción) · Competencias fundamentales orientadas a la vida. El ajedrez y el análisis de riesgos · Ajedrez Educativo, diversidad y ritmos de aprendizaje · Recursos de apoyo para el docente (plataformas online, software de apoyo)"
   url: https://extension.uned.es/inscripcion/idactividad/32121
   highlight: true
 
@@ -380,8 +383,8 @@
   description: "Curso sobre diseño curricular LOMLOE, elaboración de programaciones y unidades didácticas, metodologías innovadoras, aprendizaje competencial, evaluación formativa y DUA, con participación de inspectores y profesorado experimentado."
   modality: Online
   location: UNED Palencia
-  start: 05.07.2023
-  end: 07.07.2023
+  start: "2023-07-05"
+  end: "2023-07-07"
   language: ES
   contents: "Programación y Unidad didáctica, Unidad de programación y Situación de Aprendizaje: diferencias conceptuales y propuesta de diseño · Metodologías activas y basadas en evidencias para el desarrollo de un enfoque competencial del currículo · Diseño de una situación de aprendizaje con base en la robótica y el pensamiento computacional · Metodología de selección y secuenciación de criterios e indicadores de evaluación como aspecto clave en el procedimiento de planificación en el entorno LOMLOE · Planificación, elaboración y revisión de la programación didáctica · Las competencias clave y sus procedimientos de evaluación y calificación en la LOMLOE · Situaciones de aprendizaje y Objetivos para el Desarrollo Sostenible · DUA y tecnologías digitales: estrategias didácticas facilitadoras del aprendizaje en la educación"
   url: https://extension.uned.es/actividad/idactividad/30279
@@ -396,8 +399,8 @@
   description: "Curso sobre educación matemática que analiza distintas perspectivas e investigaciones, fomenta lectura crítica, identifica tendencias poco fundamentadas y reflexiona sobre su impacto en recursos y prácticas docentes."
   modality: Online
   location:
-  start: 26.06.2023
-  end: 26.06.2023
+  start: "2023-06-26"
+  end: "2023-06-26"
   language: ES
   contents: "Estudio internacional de la educación matemática · Dificultades para actualizarse e interpretar resultados de investigación especializada · Diversidad de enfoques y perspectivas en matemática educativa · Implicaciones de distintas perspectivas en la enseñanza de matemáticas · Lectura crítica de resultados de investigación · Ejemplos de tendencias educativas sin suficiente evidencia empírica · Impacto de dichas tendencias en recursos y prácticas docentes"
   url: https://extension.uned.es/actividad/idactividad/30997
@@ -412,8 +415,8 @@
   description:
   modality: Online
   location:
-  start: 06.02.2023
-  end: 17.05.2023
+  start: "2023-02-06"
+  end: "2023-05-17"
   language: ES
   contents:
   url:
@@ -429,8 +432,8 @@
   description:
   modality: Online
   location:
-  start: 04.07.2022
-  end: 06.07.2022
+  start: "2022-07-04"
+  end: "2022-07-06"
   language: ES
   contents:
   url:
@@ -446,8 +449,8 @@
   description: "Curso de educación digital y a distancia que desarrolla especialización académica, fomenta integración tecnológica, analiza tecnologías emergentes y potencia comprensión sistemática de procesos educativos innovadores para educadores."
   modality: Online
   location: UNED Albacete
-  start: 04.07.2022
-  end: 06.07.2022
+  start: "2022-07-04"
+  end: "2022-07-06"
   language: ES
   contents: "La programación en los contextos educativos: Scratch, Macke Block y Unity · La realidad aumentada y la realidad virtual en contextos pedagógicos · Aprendizaje ubicuo y a distancia · Edición de video para crear contenidos · Gamificación, videojuegos y educación · Plataformas y entornos de aprendizaje · Aprendizaje con dispositivos digitales en el ámbito de la ubicuidad · La inteligencia artificial en educación"
   url: https://extension.uned.es/actividad/idactividad/26832
@@ -462,8 +465,8 @@
   description: "Curso de actualización sobre lengua española que aborda cambios normativos recientes en ortografía, puntuación, acentuación, gramática y vocabulario, impulsados por la ASALE, con certificación de la UNED."
   modality: Online
   location: UNED Cantabria
-  start: 13.05.2022
-  end: 14.05.2022
+  start: "2022-05-13"
+  end: "2022-05-14"
   language: ES
   contents: "Errores ortográficos frecuentes: guía de actualización y de supervivencia · Norma, variación, discurso e identidad: la lengua española en el siglo XXI (recursos digitales para la escritura académica) · Incorrecciones e impropiedades en la redacción de textos: algunas soluciones · La lengua española y el lenguaje inclusivo: guía para el uso del género gramatical y cuestiones léxico-culturales actuales"
   url: https://extension.uned.es/actividad/idactividad/26226
@@ -478,8 +481,8 @@
   description: "Curso sobre la evolución del pensamiento simbólico y el lenguaje en Homo sapiens, integrando neurociencia, lingüística y paleoantropología para comprender el desarrollo y la naturaleza humana a lo largo del tiempo."
   modality: Online
   location: UNED Tudela
-  start: 17.09.2021
-  end: 17.09.2021
+  start: "2021-09-17"
+  end: "2021-09-17"
   language: ES
   contents: "Capacidad de pensamiento simbólico y lenguaje en Homo sapiens · Desarrollo evolutivo del lenguaje en los últimos dos millones de años · Retos científicos en la comprensión de la naturaleza humana · Aportaciones de la neurociencia al estudio del lenguaje · Perspectivas lingüísticas sobre la evolución del lenguaje · Contribuciones de la paleoantropología a la historia evolutiva del lenguaje"
   url: https://extension.uned.es/actividad/idactividad/24741
@@ -494,8 +497,8 @@
   description: "Charla sobre la participación de España en la Revolución Científica, destacando aportes en ciencias naturales ligados a la exploración del Nuevo Mundo y ausencia en la física newtoniana."
   modality: Online
   location: UNED Tudela
-  start: 22.06.2021
-  end: 22.06.2021
+  start: "2021-06-22"
+  end: "2021-06-22"
   language: ES
   contents: "Participación de España en la Revolución Científica (siglos XVI y XVII) · Motivos de la ausencia española en el desarrollo de la física newtoniana · Aportaciones en ciencias naturales · Relación entre exploración del Nuevo Mundo y avances científicos"
   url: https://extension.uned.es/actividad/idactividad/24367
@@ -510,8 +513,8 @@
   description:
   modality: Online
   location:
-  start: 26.04.2021
-  end: 15.05.2021
+  start: "2021-04-26"
+  end: "2021-05-15"
   language: ES
   contents:
   url:
@@ -527,8 +530,8 @@
   description: "Curso práctico sobre COVID-19: medidas, organización laboral, higiene y EPIs, colectivos sensibles, protocolos ante casos, y gestión específica en centros educativos para docentes y alumnado."
   modality: Online
   location: UNED
-  start: 19.04.2021
-  end: 02.05.2021
+  start: "2021-04-19"
+  end: "2021-05-02"
   language: ES
   contents: "Módulo I — medidas y prácticas en el centro de trabajo frente al COVID-19: información básica, desplazamientos al trabajo, organización del trabajo, actuaciones en el centro, higiene personal, equipos de protección individual, trabajadores especialmente sensibles, protocolo ante sospecha o activación de caso y recomendaciones al llegar a casa; Módulo II — medidas específicas para profesores y alumnado: alcance de las medidas, inicio de la actividad docente, adecuación y gestión del centro educativo, organización de recursos humanos y de la actividad docente, organización de actividades auxiliares, medidas de información y formación, qué hacer ante un posible caso (control de casos), coordinación de actividades empresariales, consulta y representación, y situación del trabajador."
   url: "https://www.quironprevencion.com/es"
@@ -543,8 +546,8 @@
   description: "Curso sobre prevención laboral: identifica riesgos del puesto, enseña medidas preventivas, emergencias y primeros auxilios, abordando ergonomía, pantallas, electricidad, voz, riesgos psicosociales y accidentes viales."
   modality: Online
   location: UNED
-  start: 22.03.2021
-  end: 04.04.2021
+  start: "2021-03-22"
+  end: "2021-04-04"
   language: ES
   contents: "Conceptos básicos de prevención; riesgos asociados al puesto de trabajo y medidas preventivas a adoptar: caídas al mismo nivel, contactos eléctricos, trastornos musculoesqueléticos por manipulación de cargas y por posturas forzadas, pantallas de visualización de datos (carga física y fatiga visual), disconfort térmico, trastornos de la voz, riesgos psicosociales, accidentes de circulación y atropellos; y, por último, situaciones de emergencia y primeros auxilios."
   url: "https://www.quironprevencion.com/es"
@@ -559,8 +562,8 @@
   description:
   modality: Online
   location:
-  start: 03.12.2020
-  end: 15.12.2020
+  start: "2020-12-03"
+  end: "2020-12-15"
   language: ES
   contents:
   url:
@@ -575,10 +578,12 @@
   description: "Curso que reflexiona sobre el libro como objeto, experiencia y conector cultural, explorando su plasticidad entre contenido e idea, y su papel esencial en lectura y escritura."
   modality: Online
   location: UNED Tudela
-  start: 21.04.2020
-  end: 06.05.2020
+  start: "2020-04-21"
+  end: "2020-05-06"
   language: ES
-  contents: "Presentación del curso: introducción, glosario y contextualización; historia del libro y la edición · Taxonomía y práctica editorial: edición crítica, fotolibro, libro ilustrado, livre de peintre, libro objeto, libro de artista y ephimeras · El nuevo arte de hacer libros: los *bookworks* de Ulises Carrión · La condición textual: paratexto, marginalias y tipografía · La literatura transforma el libro: de Mallarmé, Roussel, Vanguardias y Pound a la poesía concreta, antipoesía, Oulipo, escritura no-creativa y nuevas discursividades en el cómic · Prácticas artísticas como prácticas editoriales o viceversa: del libro por otros medios (Broodthaers, Xerox Book, Weiner, Art & Language) a las prácticas actuales · La práctica editorial a través de sus manifiestos: análisis estructural, libros de artistas, libro como puesta en escena, apropiación, escritura conceptual, lectura, distribución, autopublicación, contexto social, edición y espacio público, publicación post-digital · Colofón: una poética del libro"
+  contents:
+    "Presentación del curso: introducción, glosario y contextualización; historia del libro y la edición · Taxonomía y práctica editorial: edición crítica, fotolibro, libro ilustrado, livre de peintre, libro objeto, libro de artista y ephimeras · El nuevo arte de hacer libros: los *bookworks* de Ulises Carrión · La condición textual: paratexto, marginalias y tipografía · La literatura transforma el libro: de Mallarmé, Roussel, Vanguardias y Pound a la poesía concreta, antipoesía, Oulipo, escritura no-creativa y nuevas discursividades en el cómic · Prácticas artísticas como prácticas editoriales o viceversa: del libro por otros medios (Broodthaers, Xerox Book, Weiner, Art & Language) a las prácticas actuales · La práctica editorial a través de sus manifiestos: análisis estructural, libros de artistas, libro como puesta en escena, apropiación, escritura conceptual, lectura, distribución, autopublicación, contexto social, edición y espacio público, publicación post-digital · Colofón:
+    una poética del libro"
   url: "https://extension.uned.es/actividad/idactividad/21356"
 
 - name: "Lengua Moderna II. Lengua Extranjera: Alemán"
@@ -694,8 +699,8 @@
   description: "Asignatura que introduce a la Lingüística y al análisis objetivo del lenguaje, atendiendo a su base cerebral y dimensión social. Se imparte en primer semestre de Estudios Ingleses y Lengua y Literatura Españolas. Proporciona fundamentos y terminología, y prepara para Teoría Lingüística y perfiles profesionales interdisciplinares."
   modality: Online
   location: UNED
-  start: 01.10.2019
-  end: 01.02.2020
+  start: "2019-10-01"
+  end: "2020-02-01"
   language: ES
   contents: "El lenguaje y la Lingüística · Lengua oral y lengua signada. La escritura · Los sonidos en las lenguas · La estructura de las palabras · La sintaxis · El significado · Lengua y comunicación: pragmática · Variación y cambio lingüístico · Las lenguas del mundo y el mundo de las lenguas · Lenguaje y cognición"
   url: https://www.uned.es/universidad/inicio/estudios/grados/grado-en-lengua-y-literatura-espanolas/asignaturas.html?codTitulacion=6401&codAsignatura=64901019&idContenido=1
@@ -711,8 +716,8 @@
   description:
   modality: Online
   location:
-  start: 01.07.2019
-  end: 01.07.2019
+  start: "2019-07-01"
+  end: "2019-07-01"
   language: ES
   contents:
   url:
@@ -728,8 +733,8 @@
   description:
   modality: Online
   location:
-  start: 25.06.2019
-  end: 26.06.2019
+  start: "2019-06-25"
+  end: "2019-06-26"
   language: ES
   contents:
   url:
@@ -745,8 +750,8 @@
   description:
   modality: Online
   location:
-  start: 09.05.2019
-  end: 10.05.2019
+  start: "2019-05-09"
+  end: "2019-05-10"
   language: ES
   contents:
   url:
@@ -762,8 +767,8 @@
   description:
   modality: Online
   location:
-  start: 01.04.2019
-  end: 10.04.2019
+  start: "2019-04-01"
+  end: "2019-04-10"
   language: ES
   contents:
   url:
@@ -779,8 +784,8 @@
   description: "Curso para fortalecer la acción tutorial: desarrollo personal docente, acompañamiento del alumnado, convivencia escolar, colaboración con familias, habilidades socioemocionales, planificación de tutoría y evaluación"
   modality: Online
   location: Valladolid (España)
-  start: 21.01.2019
-  end: 25.01.2019
+  start: "2019-01-21"
+  end: "2019-01-25"
   language: ES
   contents: "Presentación y dinámicas · Identidad personal y rol educador · Convivencia y resolución de conflictos · Tutor marista · Relación tutor-familia · Inteligencia emocional · PAT y Atención a la Diversidad · Evaluación"
   url: "https://champagnat.org/es/provincia/conferencia-marista-espanola-3/"
@@ -796,8 +801,8 @@
   description: "Office PowerPoint 2016"
   modality: Online
   location:
-  start: 01.07.2018
-  end: 01.07.2018
+  start: "2018-07-01"
+  end: "2018-07-01"
   language: ES
   contents:
   url:
@@ -812,8 +817,8 @@
   description: "Technology Literacy for Educators - 21st Century Learning Design"
   modality: Online
   location:
-  start: 01.07.2018
-  end: 01.07.2018
+  start: "2018-07-01"
+  end: "2018-07-01"
   language: ES
   contents:
   url:
@@ -828,8 +833,8 @@
   description:
   modality: Online
   location:
-  start: 19.01.2009
-  end: 22.02.2009
+  start: "2009-01-19"
+  end: "2009-02-22"
   language: ES
   contents:
   url:
@@ -844,8 +849,8 @@
   description:
   modality: Online
   location:
-  start: 02.01.2009
-  end: 03.02.2009
+  start: "2009-01-02"
+  end: "2009-02-03"
   language: ES
   contents:
   url:
@@ -860,8 +865,8 @@
   description:
   modality: Online
   location:
-  start: 02.01.2009
-  end: 03.02.2009
+  start: "2009-01-02"
+  end: "2009-02-03"
   language: ES
   contents:
   url:
@@ -876,8 +881,8 @@
   description:
   modality: Online
   location:
-  start: 01.12.2008
-  end: 30.12.2008
+  start: "2008-12-01"
+  end: "2008-12-30"
   language: ES
   contents:
   url:
@@ -892,8 +897,8 @@
   description:
   modality: Online
   location:
-  start: 02.11.2008
-  end: 30.11.2008
+  start: "2008-11-02"
+  end: "2008-11-30"
   language: ES
   contents:
   url:
@@ -908,8 +913,8 @@
   description:
   modality: Online
   location:
-  start: 01.10.2008
-  end: 31.10.2009
+  start: "2008-10-01"
+  end: "2009-10-31"
   language: ES
   contents:
   url:
@@ -924,8 +929,8 @@
   description: "Curso de formación didáctica y psicopedagógica inicial y contacto con realidad educativa para titulados que aspiran a docencia en Secundaria o Formación Profesional. Especialidad Informática."
   modality: Presencial
   location: San Vicente del Raspeig (Alicante), España
-  start: 01.10.2006
-  end: 31.03.2007
+  start: "2006-10-01"
+  end: "2007-03-31"
   language: ES
   contents: "Módulo General Psicopedagógico: Psicología del adolescente y atención a la diversidad · Diseño curricular y TIC · Sociología de la Educación / Módulo de Didácticas Específicas: Informática // Prácticum de 100 horas."
   url: https://web.ua.es/es/secretaria-gral/memoria/2006-07/14_vcae/cap.html
@@ -944,8 +949,8 @@
   description:
   modality: Presencial
   location: Universidad de Alicante · Campus de San Vicente del Raspeig
-  start: 01.10.2006
-  end: 30.06.2007
+  start: "2006-10-01"
+  end: "2007-06-30"
   language: ES
   contents:
   url: "https://dlsi.ua.es/"
@@ -964,8 +969,8 @@
   description:
   modality: Presencial
   location: Universidad de Alicante · Campus de San Vicente del Raspeig
-  start: 01.10.2006
-  end: 30.06.2007
+  start: "2006-10-01"
+  end: "2007-06-30"
   language: ES
   contents:
   url: "https://dlsi.ua.es/"
@@ -984,8 +989,8 @@
   description: "Las asiganatura explora aplicaciones y límites de la traducción automática, fundamentos lingüísticos y computacionales, modelos actuales (transferencia, interlingua, estadísticos, híbridos), su complejidad intrínseca y implementación de módulos."
   modality: Presencial
   location: Universidad de Alicante · Campus de San Vicente del Raspeig
-  start: 01.10.2006
-  end: 30.06.2007
+  start: "2006-10-01"
+  end: "2007-06-30"
   language: ES
   contents: "Introducción · ¿Qué se entiende por traducción? · Aplicaciones de la traducción automática: asimilación y diseminación, preedición y postedición, lenguajes controlados · Ambigüedad y problemas relacionados: el principio de composicionalidad; ambigüedad léxica, sintáctica y mixta; otras fuentes de ambigüedad; problemas de generación, de transferencia y de descripción · Técnicas de traducción automática deductiva: el modelo de transferencia (morfológica, sintáctica, semántica); el modelo de interlingua · La traducción automática real: entre la aplicación ideal del principio de composicionalidad semántica y el modelo palabra por palabra · Programación (totalmente o parcialmente inductiva) de traductores automáticos (memorias de traducción, sistemas estadísticos, sistemas basados en ejemplos) · Evaluación de la traducción automática."
   url: "https://dlsi.ua.es/"
@@ -1004,8 +1009,8 @@
   description:
   modality: Presencial
   location: Universidad de Alicante · Campus de San Vicente del Raspeig
-  start: 01.10.2006
-  end: 30.06.2007
+  start: "2006-10-01"
+  end: "2007-06-30"
   language: ES
   contents:
   url: "https://dlsi.ua.es/"
@@ -1024,8 +1029,8 @@
   description:
   modality: Presencial
   location: Universidad de Alicante · Campus de San Vicente del Raspeig
-  start: 01.10.2006
-  end: 30.06.2007
+  start: "2006-10-01"
+  end: "2007-06-30"
   language: ES
   contents:
   url: "https://dlsi.ua.es/"
@@ -1043,8 +1048,8 @@
   description:
   modality: Presencial
   location: "Universität Salzburg (Austria)"
-  start: 01.10.2004
-  end: 20.01.2005
+  start: "2004-10-01"
+  end: "2005-01-20"
   language: PT,DE
   contents:
   url:
@@ -1060,8 +1065,8 @@
   description:
   modality: Presencial
   location: "Deutsch Studio Salzburg · "
-  start: 23.02.2004
-  end: 07.05.2004
+  start: "2004-02-23"
+  end: "2004-05-07"
   language: DE
   contents:
   url:
@@ -1080,8 +1085,8 @@
   description: "Curso orientado a profesionales que enseña desarrollo en J2ME para móviles, aborda portabilidad, interfaces, juegos y aplicaciones corporativas, ofrece visión global y práctica de la programación en dispositivos móviles."
   modality: Presencial
   location: Universidad de Alicante · Campus de San Vicente del Raspeig
-  start: 22.09.2003
-  end: 26.09.2003
+  start: "2003-09-22"
+  end: "2003-09-26"
   language: ES
   contents: "Introducción a los dispositivos móviles · Entorno de desarrollo · Introducción a Java para MIDs · MIDlets · Interfaz de usuario · Gráficos avanzados · Juegos · Sonido y multimedia · Almacenamiento persistente · Red y E/S"
   url: "https://web.ua.es/dccia/"
@@ -1097,8 +1102,8 @@
   description:
   modality: Presencial
   location: Valencia
-  start: 06.11.2002
-  end: 08.11.2002
+  start: "2002-11-06"
+  end: "2002-11-08"
   language: ES
   contents:
   url:
@@ -2194,8 +2199,8 @@
   description:
   modality: Presencial
   location: Denia (Alicante), España
-  start: 01.04.1998
-  end: 01.04.1998
+  start: "1998-04-01"
+  end: "1998-04-01"
   language: ES
   contents:
   url: "https://www.cruzroja.es"
@@ -2210,13 +2215,13 @@
   description:
   modality: Presencial
   location: Alicante, España
-  start: 02.03.1998
-  end: 02.03.1998
+  start: "1998-03-02"
+  end: "1998-03-02"
   language: ES
   contents:
   url: "https://www.cruzroja.es"
 
-# MICROSOFT
+  # MICROSOFT
 
 - name: "IA para educadores"
   type: course
@@ -2259,7 +2264,9 @@
   credits:
   hours:
   certification: "Certificado"
-  description: "El Diseño del Aprendizaje en el Siglo XXI para Educadores, es una colección de 8 cursos compuestos por entre 4 y 6 lecciones cada uno. Este itinerario de aprendizaje proporciona a los Educadores, maneras claras y prácticas de desarrollar las habilidades del siglo XXI, mediante el uso de tecnologías digitales. Los cursos promueven el “Diseño del Aprendizaje en el Siglo XXI”, desarrollando una metodología de investigación a través de un proceso colaborativo basado en la práctica, con el fin de ayudar a los Docentes a transformar la forma en que diseñan las actividades de aprendizaje, para que estas promuevan aprendizajes más profundos y sean atractivas y enriquecedoras para sus estudiantes. La serie consta de 8 cursos, con una duración total estimada de 20 horas incluidos los recursos, videos y el material de autoevaluación. Los Docentes además podrán participar activamente en el curso compartiendo materiales y participando en discusiones continuas como parte de la Comunidad Educativa."
+  description:
+    "El Diseño del Aprendizaje en el Siglo XXI para Educadores, es una colección de 8 cursos compuestos por entre 4 y 6 lecciones cada uno. Este itinerario de aprendizaje proporciona a los Educadores, maneras claras y prácticas de desarrollar las habilidades del siglo XXI, mediante el uso de tecnologías digitales. Los cursos promueven el “Diseño del Aprendizaje en el Siglo XXI”, desarrollando una metodología de investigación a través de un proceso colaborativo basado en la práctica, con el fin de ayudar a los Docentes a transformar la forma en que diseñan las actividades de aprendizaje, para que estas promuevan aprendizajes más profundos y sean atractivas y enriquecedoras para sus estudiantes. La serie consta de 8 cursos, con una duración total estimada de 20 horas incluidos los recursos, videos y el material de autoevaluación. Los Docentes además podrán participar activamente en el curso compartiendo materiales y participando en discusiones continuas como parte de la Comunidad
+    Educativa."
   modality: Online
   location:
   start: 2023-06-23

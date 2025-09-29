@@ -115,78 +115,91 @@ field_labels:
 <!-- ====== LISTA DE CURSOS ====== -->
 <div id="course-list">
 {% assign cursos = site.data.courses %}
-{% for curso in cursos %}
-  {% if curso.visibility == nil or curso.visibility != 'private' %}
-    {% assign type_slug = curso.type | downcase | strip | replace: ' ', '-' %}
 
-    {% assign fields_slug = "" %}
-    {% if curso.fields %}
-      {% assign fields_slug = curso.fields
-        | downcase
-        | replace: '，', ','
-        | replace: '、', ','
-        | replace: '；', ','
-        | replace: ';', ','
-        | replace: ' ', ''
-        | strip %}
-    {% endif %}
+{%- comment -%}
+Particionamos:
 
-    <div
-      class="course-item {{ type_slug }}"
-      data-type="{{ type_slug }}"
-      data-fields="{{ fields_slug }}"
-      {% if curso.highlight %}data-highlight="true"{% else %}data-highlight="false"{% endif %}
-    >
-      <details class="course{% if curso.highlight %} highlight{% endif %}">
-        <summary>
-          {% if curso.highlight %}<i class="fa-regular fa-star"></i>&nbsp;{% endif %}<span class="course-title">{{ curso.name }}</span>.
-          <span class="organizer">{{ curso.organizer }}</span>.
-          <span class="more">[+ info]</span>
-        </summary>
-        <ul class="details">
-          {% if curso.program %}
-          <li><strong>Programa:</strong> {{ curso.program }}</li>
+1. con_end: tienen end (y no son privados) → ordenar por end desc
+2. solo_start: tienen start y end == nil (y no son privados) → ordenar por start desc
+3. sin_fechas: start == nil y end == nil (y no son privados) → al final
+   {%- endcomment -%}
+
+{% assign con_end = cursos | where_exp: "c", "c.visibility != 'private' or c.visibility == nil" | where_exp: "c", "c.end" | sort: "end" | reverse %}
+{% assign solo_start = cursos | where_exp: "c", "c.visibility != 'private' or c.visibility == nil" | where_exp: "c", "c.end == nil" | where_exp: "c", "c.start" | sort: "start" | reverse %}
+{% assign sin_fechas = cursos | where_exp: "c", "c.visibility != 'private' or c.visibility == nil" | where_exp: "c", "c.start == nil and c.end == nil" %}
+
+{%- assign ordered = con_end | concat: solo_start | concat: sin_fechas -%}
+
+{% for curso in ordered %}
+{% assign type_slug = curso.type | downcase | strip | replace: ' ', '-' %}
+
+{% assign fields_slug = "" %}
+{% if curso.fields %}
+{% assign fields_slug = curso.fields
+      | downcase
+      | replace: '，', ','
+      | replace: '、', ','
+      | replace: '；', ','
+      | replace: ';', ','
+      | replace: ' ', ''
+      | strip %}
+{% endif %}
+
+  <div
+    class="course-item {{ type_slug }}"
+    data-type="{{ type_slug }}"
+    data-fields="{{ fields_slug }}"
+    {% if curso.highlight %}data-highlight="true"{% else %}data-highlight="false"{% endif %}
+  >
+    <details class="course{% if curso.highlight %} highlight{% endif %}">
+      <summary>
+        {% if curso.highlight %}<i class="fa-regular fa-star"></i>&nbsp;{% endif %}<span class="course-title">{{ curso.name }}</span>.
+        <span class="organizer">{{ curso.organizer }}</span>.
+        <span class="more">[+ info]</span>
+      </summary>
+      <ul class="details">
+        {% if curso.program %}
+        <li><strong>Programa:</strong> {{ curso.program }}</li>
+        {% endif %}
+
+        {% if curso.organizer %}<li>{{ curso.organizer }} </li>{% endif %}
+        {% if curso.faculty %}<li>{{ curso.faculty }} </li>{% endif %}
+        {% if curso.department %}<li>{{ curso.department }} </li>{% endif %}
+
+        {% if curso.description %}
+        <li><strong>Resumen:</strong> <span class="course-description">{{ curso.description }}</span></li>
+        {% endif %}
+
+        {% assign modality = curso.modality | downcase | strip %}
+        {% if curso.location %}
+        <li>
+          <strong>Lugar:</strong> {{ curso.location }}
+          {% if modality == 'online' %}
+            <i class="fa-solid fa-hand-pointer" aria-hidden="true"></i><span class="sr-only"> (Online)</span>
           {% endif %}
+        </li>
+        {% endif %}
 
-          {% if curso.organizer %}<li>{{ curso.organizer }} </li>{% endif %}
-          {% if curso.faculty %}<li>{{ curso.faculty }} </li>{% endif %}
-          {% if curso.department %}<li>{{ curso.department }} </li>{% endif %}
-
-          {% if curso.description %}
-          <li><strong>Resumen:</strong> <span class="course-description">{{ curso.description }}</span></li>
-          {% endif %}
-
-          {% assign modality = curso.modality | downcase | strip %}
-          {% if curso.location %}
-          <li>
-            <strong>Lugar:</strong> {{ curso.location }}
-            {% if modality == 'online' %}
-              <i class="fa-solid fa-hand-pointer" aria-hidden="true"></i><span class="sr-only"> (Online)</span>
-            {% endif %}
+        {% if curso.credits or curso.hours %}
+          <li><strong>Créditos:</strong>
+          {% if curso.credits %} {{ curso.credits }} ECTS{% endif %}
+          {% if curso.credits and curso.hours %} / {% endif %}
+          {% if curso.hours %} {{ curso.hours }} horas{% endif %}
           </li>
-          {% endif %}
+        {% endif %}
 
-          {% if curso.credits or curso.hours %}
-            <li><strong>Créditos:</strong>
-            {% if curso.credits %} {{ curso.credits }} ECTS{% endif %}
-            {% if curso.credits and curso.hours %} / {% endif %}
-            {% if curso.hours %} {{ curso.hours }} horas{% endif %}
-            </li>
-          {% endif %}
-          {% assign y_start = curso.start | date: "%Y" %}
-          {% assign y_end   = curso.end   | date: "%Y" %}
+        {% assign months_es = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," %}
 
-          {% assign months_es = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," %}
+        {% assign sd = curso.start | date: "%-d" %}
+        {% assign sm = curso.start | date: "%-m" | minus: 1 %}
+        {% assign sy = curso.start | date: "%Y" %}
 
-          {% assign sd = curso.start | date: "%-d" %}
-          {% assign sm = curso.start | date: "%-m" | minus: 1 %}
-          {% assign sy = curso.start | date: "%Y" %}
+        {% assign ed = curso.end | date: "%-d" %}
+        {% assign em = curso.end | date: "%-m" | minus: 1 %}
+        {% assign ey = curso.end | date: "%Y" %}
 
-          {% assign ed = curso.end | date: "%-d" %}
-          {% assign em = curso.end | date: "%-m" | minus: 1 %}
-          {% assign ey = curso.end | date: "%Y" %}
-
-          <li><strong>Fechas:</strong>
+        <li><strong>Fechas:</strong>
+          {% if curso.start and curso.end %}
             {% if curso.start == curso.end %}
               {{ sd }} {{ months_es[sm] }} {{ sy }}
             {% else %}
@@ -196,34 +209,39 @@ field_labels:
                 {{ sd }} {{ months_es[sm] }} {{ sy }} – {{ ed }} {{ months_es[em] }} {{ ey }}
               {% endif %}
             {% endif %}
-          </li>
-
-          <li><strong>Idiomas:</strong> {{ curso.language | upcase }}</li>
-          {% if curso.contents %}
-          <li><strong>Contenidos:</strong> {{ curso.contents }}</li>
+          {% elsif curso.start %}
+            {{ sd }} {{ months_es[sm] }} {{ sy }}
+          {% elsif curso.end %}
+            {{ ed }} {{ months_es[em] }} {{ ey }}
+          {% else %}
+            —
           {% endif %}
+        </li>
 
-          {% if curso.certification %}
-          <li>
-            <i class="fa-solid fa-award"></i> {{ curso.certification}}
-          </li>
-          {% endif %}
-          {% if curso.url %}
-          <li><strong>+ info: </strong>
-            <a href="{{ curso.url }}" target="_blank" rel="noopener">{{ curso.url | truncate: 25 }}</a>
-          </li>
-          {% endif %}
+        <li><strong>Idiomas:</strong> {{ curso.language | upcase }}</li>
+        {% if curso.contents %}
+        <li><strong>Contenidos:</strong> {{ curso.contents }}</li>
+        {% endif %}
 
-          {% if curso.observations %}
-          <li><strong>Observaciones:</strong> {{ curso.observations }}</li>
-          {% endif %}
-        </ul>
-      </details>
-    </div>
+        {% if curso.certification %}
+        <li>
+          <i class="fa-solid fa-award"></i> {{ curso.certification}}
+        </li>
+        {% endif %}
+        {% if curso.url %}
+        <li><strong>+ info: </strong>
+          <a href="{{ curso.url }}" target="_blank" rel="noopener">{{ curso.url | truncate: 25 }}</a>
+        </li>
+        {% endif %}
 
-{% endif %}
+        {% if curso.observations %}
+        <li><strong>Observaciones:</strong> {{ curso.observations }}</li>
+        {% endif %}
+      </ul>
+    </details>
+
+  </div>
 {% endfor %}
-
 </div>
 
 <!-- ====== ESTILOS MÍNIMOS ====== -->
@@ -389,18 +407,13 @@ field_labels:
     .filter(Boolean);
   const initialQ = (params.get('q') || '').trim();
 
-  // Marcar checkboxes desde URL (usa value=clave interna)
+  // Marcar checkboxes desde URL
   if (initialFields.length) {
-    // Ojo: los checkboxes aún no están en el DOM cuando esto corre? Sí, ya están.
-    // Marcamos después del querySelector.
-    // Se marcarán al vuelo aquí:
-    // (Si quisieras soportar campos no listados, habría que crearlos dinámicamente.)
     setTimeout(() => {
       chkInputs().forEach(chk => {
         chk.checked = initialFields.includes(chk.value);
       });
       if (initialQ) searchInput.value = initialQ;
-      // Aplicar filtros iniciales tras marcar
       const known = new Set(['all','master','degree','phd','talk','course','highlight']);
       applyFilters(known.has(initialType) ? initialType : 'all');
     }, 0);
@@ -413,7 +426,7 @@ field_labels:
   function getSelectedFields() {
     return chkInputs()
       .filter(chk => chk.checked)
-      .map(chk => chk.value); // clave interna (education, ict, ...)
+      .map(chk => chk.value);
   }
 
   function applyFilters(typeFilter) {
@@ -472,7 +485,7 @@ field_labels:
     // Contador
     countEl.textContent = `${visible} curso${visible === 1 ? '' : 's'}`;
 
-    // Sincroniza la URL sin recargar (claves internas)
+    // Sincroniza la URL sin recargar
     const url = new URL(location.href);
     if (currentType === 'all') url.searchParams.delete('type');
     else url.searchParams.set('type', currentType);
@@ -487,7 +500,7 @@ field_labels:
     history.replaceState({}, '', url);
   }
 
-  // Debounce suave para el buscador (búsqueda en vivo)
+  // Debounce suave para el buscador
   function debounce(fn, ms = 120) {
     let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
   }
@@ -496,15 +509,13 @@ field_labels:
   buttons.forEach(btn => {
     btn.addEventListener('click', () => applyFilters(btn.dataset.filter));
   });
-  chkContainer.addEventListener('change', () => applyFilters()); // mantiene currentType
-  searchInput.addEventListener('input', debounce(() => applyFilters())); // en vivo
+  chkContainer.addEventListener('change', () => applyFilters());
+  searchInput.addEventListener('input', debounce(() => applyFilters()));
   searchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') applyFilters(); });
   clearBtn.addEventListener('click', () => { searchInput.value = ''; searchInput.focus(); applyFilters(); });
 
-  // Filtro inicial (desde URL o por defecto "all") — si no hay setTimeout anterior
-  if (!initialFields.length) {
-    const known = new Set(['all','master','degree','phd','talk','course','highlight']);
-    applyFilters(known.has(initialType) ? initialType : 'all');
-  }
+  // Filtro inicial
+  const known = new Set(['all','master','degree','phd','talk','course','highlight']);
+  applyFilters(known.has(initialType) ? initialType : 'all');
 })();
 </script>
