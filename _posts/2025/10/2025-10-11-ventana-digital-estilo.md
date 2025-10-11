@@ -5,7 +5,7 @@ author: Enrique Benimeli
 layout: post
 permalink: /ventana-digital-estilo/
 categories: General
-tags: [actualidad, novedades, publicaciones, verano]
+tags: [actualidad, novedades, publicaciones]
 ---
 
 [![image](assets/images/posts/2025/10/ventanadigital_layout.jpg)](https://ebenimeli.substack.com/)
