@@ -1454,3 +1454,13 @@ progress::-moz-progress-bar {
 .goalperc {
   font-size: 0.8em;
 }
+
+img.profile-image-lp {
+  float: right;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%; /* convierte el cuadrado en círculo */
+  object-fit: cover; /* recorta sin deformar */
+  transition: transform 0.2s;
+  border: 0px dashed #696969;
+}

@@ -1,15 +1,18 @@
 ---
 layout: default
+title: "Blog personal"
+description: "Algunos posts"
 ---
 
 <div class="post-container">
     {% include marquee.html %}
 
-	{% for post in paginator.posts %}
+    {% for post in paginator.posts %}
         <div class="post-list">
             <a class="post-title" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
             <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date: "%d.%m.%Y" }}</time>
         </div>
     {% endfor %}
+
 </div>
 {% include pagination.html %}

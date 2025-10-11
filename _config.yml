@@ -6,7 +6,7 @@ url: "https://www.ebenimeli.org" # Domain Name of host. [username].github.io for
 
 title: Enrique Benimeli
 keywords: ebenimeli, blog
-description: >- 
+description: >-
   Enrique Benimeli - web personal
 lang: es-ES
 timezone: Europe/Madrid
@@ -31,7 +31,6 @@ author:
   discord: ebenimeli
   #email: your-email@email.com # email adress
 
-
 permalink: pretty
 
 markdown: kramdown
@@ -51,40 +50,41 @@ exclude:
   - site/
 
 plugins:
-   - jekyll-paginate
-   - jekyll-sitemap
-   - jekyll-relative-links
-   - jekyll-last-modified-at
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-relative-links
+  - jekyll-last-modified-at
 #   - jekyll-redirect-from
 
 relative_links:
-   enabled: true
-   collections: false
+  enabled: true
+  collections: false
 
-
-paginate: 20
-paginate_path: "/page/:num"
+# ⚠️ NO pongáis aquí: paginate: ni paginate_path:
+pagination:
+  enabled: true
+  per_page: 20
+  permalink: "/page:num/"
+  title: ":title — página :num"
+  collection: posts
+  sort_field: "date"
+  sort_reverse: true
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: "default"
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
       layout: "page"
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-
-
 
 collections:
   posts:

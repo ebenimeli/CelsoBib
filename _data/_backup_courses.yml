@@ -1,0 +1,274 @@
+- name: "Elaboración y Digitalización de Materiales CLIL"
+  program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
+  organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
+  credits: 5
+  hours: 125
+  description: "La asignatura aborda el aprendizaje integrado de lengua y contenidos (CLIL) en el marco del plurilingüismo europeo. Forma al estudiante en la creación y digitalización de materiales didácticos mediante tecnologías educativas. Proporciona competencias prácticas para elaborar recursos centrados en el contenido, favoreciendo metodologías innovadoras en la enseñanza de lenguas con apoyo tecnológico."
+  modality: Online
+  location: UNED
+  start: febrero 2026
+  end: junio 2026
+  language: ES
+  contents: "CLIL/AICLE integrado en el currículum pre-universitario y universitario · Metodología CLIL y metodología TIC · Uso de las TIC en la preparación de materiales y sesiones AICLE · Herramientas y aplicaciones web para la mejora de las destrezas de comprensión lectora y expresión escrita · Herramientas y aplicaciones web para la mejora de la comprensión auditiva y la comunicación oral"
+  url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=2440916-&codTitulacion=240901&idContenido=1
+  visibility: public
+
+- name: "Ontologías, Diccionarios y Lexicones Restringidos Computacionales"
+  program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
+  organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
+  credits: 5
+  hours: 125
+  description: "La asignatura ofrece una introducción al tratamiento computacional del léxico mediante ontologías, diccionarios y lexicones restringidos. Aborda análisis de corpus, codificación conceptual y textual, extracción de léxico y uso de software especializado. Facilita la comprensión de frecuencias, co-ocurrencias y análisis estadístico, proporcionando al alumnado una visión general de recursos léxicos y ontológicos digitales."
+  modality: Online
+  location: UNED
+  start: febrero 2026
+  end: junio 2026
+  language: ES
+  contents: "Introduccion al tratamiento computacional del léxico · El almacenamiento computacional del léxico · Revisión sobre los córpora · La codificación del significado en diccionarios y tesaurus · Bases de datos · Diccionarios · Ontologías"
+  url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24409193&codTitulacion=240901&idContenido=1
+  visibility: public
+
+- name: "La Red Semántica"
+  program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
+  organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
+  credits: 5
+  hours: 125
+  description: "La asignatura introduce la red semántica e Internet 3.0, abordando buscadores, metadatos, RDF, OWL y XML. Ofrece una visión aplicada de bases de datos, inteligencia artificial y web 3D. Forma en competencias clave para la investigación, la gestión de información y el tratamiento de lenguas en entornos digitales y profesionales emergentes."
+  modality: Online
+  location: UNED
+  start: febrero 2026
+  end: junio 2026
+  language: ES
+  contents: "Hacia una red significativa: buscadores verticales y horizontales · Datos y metadatos: etiquetado, ontologías y Ontology Web Language · Resource Description Framework y Extensible Markup Language · La red 3.0: bases de datos, inteligencia artificial y 3D"
+  url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24409189&codTitulacion=240901&idContenido=1
+  visibility: public
+
+- name: "Creación y Edición de Recursos Digitales para la Enseñanza y el Aprendizaje de Lenguas"
+  program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
+  organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
+  credits: 5
+  hours: 125
+  description: "La asignatura analiza el impacto de la digitalización y las TIC en la enseñanza de lenguas. Ofrece fundamentos teóricos y prácticos para crear, editar y difundir materiales audiovisuales interactivos en Internet. Promueve nuevas metodologías comunicativas, fomenta la competencia digital y aprovecha recursos auténticos en línea para un aprendizaje más eficaz, dinámico y motivador."
+  modality: Online
+  location: UNED
+  start: octubre 2025
+  end: febrero 2026
+  language: ES
+  contents: "El espacio virtual de formación y aprendizaje · El currículo y la búsqueda, adaptación, creación y evaluación de recursos didácticos para la enseñanza de lenguas · Fundamentos y recursos para la creación de materiales y recursos digitales sostenibles · La aplicabilidad de los materiales digitales en la enseñanza-aprendizaje de lenguas extranjeras I y II."
+  url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24090077&codTitulacion=240901&idContenido=1
+  visibility: public
+
+- name: "El Análisis de la Lengua Mediante Corpus"
+  program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
+  organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
+  credits: 5
+  hours: 125
+  description: "La asignatura introduce al estudiante en la lingüística del corpus, un enfoque de investigación basado en datos. Enseña recopilación y procesamiento computacional de muestras lingüísticas, análisis cuantitativo y cualitativo, y aplicación en ámbitos profesionales. Desarrolla competencias en el uso de herramientas, fomenta pensamiento crítico, curiosidad intelectual y capacidad para diseñar modelos de análisis fiables."
+  modality: Online
+  location: UNED
+  start: octubre 2025
+  end: febrero 2026
+  language: ES
+  contents: "Fundamentos y valor de los datos cuantitativos frente a la intuición personal · Las recopilaciones de datos lingüísticos y su definición · Los corpus lingüísticos: requisitos formales y científicos. Variantes de los corpus y su especificidad en distintos ámbitos de investigación y de trabajo profesional · La palabra electrónica y su tratamiento · Aplicaciones de las recopilaciones de datos lingüísticos en distintas áreas del lenguaje · Herramientas informáticas para el tratamiento de corpus · El uso de corpus en distintos ámbitos de la investigación lingüística · Aplicaciones informáticas de los corpus en ámbitos profesionales (enseñanza, traducción, ciencias jurídicas y sociales) · Herramientas estadísticas en el análisis mediante corpus."
+  url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24409047&codTitulacion=240901&idContenido=1
+  visibility: public
+
+- name: "Técnicas y Herramientas para la Investigación Cuantitativa"
+  program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
+  organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
+  credits: 5
+  hours: 125
+  description: "La asignatura proporciona al estudiante una introducción a los métodos cuantitativos aplicados al estudio del lenguaje. Aborda estadística descriptiva e inferencial, pruebas de hipótesis, análisis de datos y uso de software especializado. Busca desarrollar competencias técnicas y pensamiento crítico, permitiendo diseñar investigaciones sólidas y comunicar hallazgos de manera clara y fundamentada."
+  modality: Online
+  location: UNED
+  start: octubre 2025
+  end: febrero 2026
+  language: ES
+  contents: "Introducción a la estadística · Pre-procesamiento de datos y selección de variables · Estadística descriptiva · Estadística inferencial I: Análisis de varianza · Estadística inferencial II: Análisis de Regresión · Estadística inferencial III: Corpus · Introducción a la psicometría"
+  url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24090019&codTitulacion=240901&idContenido=1
+  visibility: public
+
+- name: "Metodología de la Investigación Lingüística"
+  program: "Máster Universitario en las Tecnologías de la Información y la Comunicación en la Enseñanza y el Tratamiento de Lenguas"
+  organizer: Facultad de Filología. Universidad Nacional de Educación a Distancia
+  credits: 5
+  hours: 125
+  description: "La asignatura introduce al estudiante en la investigación lingüística aplicada al ámbito educativo. A través de un enfoque riguroso y reflexivo, enseña fases, técnicas y métodos del proceso científico. Se fomenta la práctica investigadora, la capacidad crítica y la toma de decisiones fundamentadas. Proporciona competencias para diseñar, implementar y comunicar proyectos de investigación"
+  modality: Online
+  location: UNED
+  start: octubre 2025
+  end: febrero 2026
+  language: ES
+  contents: "Principios del método científico · Método de investigación. Enfoques · Investigación cuantitativa e invesitigación cualitativa · Procesos y fases de una investigación · Elaboración de instrumentos de medida · El informe de investigación"
+  url: https://www.uned.es/universidad/inicio/estudios/masteres/master-universitario-en-las-tecnologias-de-la-informacion-y-la-comunicacion-en-la-ensenanza-y-el-tratamiento-de-lenguas/asignaturas.html?codAsignatura=24090048&codTitulacion=240901&idContenido=1
+  visibility: public
+
+- name: "Introducción a LaTeX: fundamentos, estructura, edición y herramientas"
+  organizer: Universidad Nacional de Educación a Distancia
+  credits: 1
+  hours: 20
+  description: "Curso práctico de 20 horas para aprender LaTeX desde cero: documentos académicos, fórmulas, tablas, gráficos, bibliografía automática, Overleaf, PDF/HTML y presentaciones Beamer con ejercicios guiados."
+  modality: Online
+  location: UNED Pontevedra
+  start: 15.09.2025
+  end: 30.09.2025
+  language: ES
+  contents: "¿Qué es LaTeX? Editores y compilación · Estructura básica de un documento · Estilo de texto y documentos modulares · Escritura matemática con LaTeX · Tablas e imágenes · Citas y bibliografía · Diseño avanzado de documentos · Presentaciones con Beamer · Publicación, colaboración y exportación · Trabajo final asistido"
+  url: https://extension.uned.es/actividad/idactividad/45621
+
+- name: "Curso completo de CSS: de principiante a front-end"
+  organizer: midudev
+  credits:
+  hours: 6
+  description: "Este curso ofrece una introducción completa a CSS, desde sus fundamentos hasta técnicas avanzadas. Se abordan selectores, herencia, especificidad, modelo de caja, posicionamiento, Flexbox y Grid. Incluye animaciones, transiciones y proyectos prácticos como galerías y diseños interactivos. Permite comprender y aplicar estilos modernos para crear páginas web atractivas, dinámicas y funcionales."
+  modality: Online
+  location: YouTube
+  start: 07.2025
+  end: 07.2025
+  language: ES
+  contents: "Introducción a CSS · Qué es CSS · Cascada · Recursos recomendados · Dónde poner estilos · Partes de CSS · Colores · Selectores: clases, ID, combinados · Pseudo-clases · Estados simulados (hover, first-child, last-child) · Operadores (primer nivel, hermano siguiente, plus) · Herramienta de práctica · Herencia · Valores especiales · Cascada avanzada · Fallbacks · Especificidad · Estilos en línea · Cómo saltarse la especificidad · Unidades relativas y absolutas · Reset CSS y Normalize · Modelo de la caja · Propiedades · Box-sizing · Overflow · Text-overflow · Position: absolute, relative, fixed, sticky · Centrado con absolute · Z-index · Flexbox: display flex · Flex-direction · Flex-wrap · Flex-flow · Grow-shrink-basis · Justify-content · Align-items · Gap · Orden y distribución de elementos · Grid: fundamentos · Grid vs Flex · Primer Grid · Columnas y filas · Repeat() · Auto-fill/auto-fit · Grid areas · Layouts · Alineación en línea y bloque · Animaciones y transiciones: transiciones, estados, transition-duration, transition all, cubic bezier, atajos, propiedades animables · Animaciones avanzadas: ejemplos prácticos, animation-fill-mode, shorthand animation, FPS, animaciones con scroll, animation timeline · Proyectos prácticos: galería de imágenes, navbar animado, ejercicios de Excel, creación de layouts y animación de galería."
+  url: https://www.youtube.com/watch?v=TlJbu0BMLaY
+  visibility: private
+
+- name: "Profesor@s entre bits y bots: Taller de fomento de la lectura a través de la literatura digital"
+  organizer: Universidad Nacional de Educación a Distancia
+  credits: 1
+  hours: 20
+  description: "Curso de actualización que diagnostica la comprensión lectora juvenil en España y desarrolla soluciones colaborativas basadas en literatura digital e inteligencia artificial para fomentar lectura y equidad."
+  modality: Online
+  location: UNED Denia
+  start: 14.07.2025
+  end: 16.07.2025
+  language: ES
+  contents: "Desgranando la afición lectora de nuestros jóvenes: evidencias, diagnósticos, implicaciones (Mesa redonda) · Recorrido crítico por las iniciativas de fomento de la afición lectora: fortalezas, debilidades · Introducción a la literatura digital para niños y jóvenes · Del cuento a la pantalla: la Inteligencia Artificial como aliada para la creación multimedia · Optimizando la lectura con relatos interactivos en formato digital: ¿individual o social, libre o pautada...? · El uso de la Inteligencia Artificial Generativa para la creación literaria · Máquinas poéticas: taller de creación de poesía experimental · Frankenbot: construye tu propio chatbot literario"
+  url: https://extension.uned.es/actividad/idactividad/42375
+
+- name: "Los desafíos del bilingüismo y la educación bilingüe: Del contexto educativo al contexto familiar"
+  organizer: Universidad Nacional de Educación a Distancia
+  credits: 1
+  hours: 20
+  description: "Curso integral sobre bilingüismo: desarrollo cognitivo y cultural, estrategias familiares, programas educativos, inclusión, recursos didácticos y formación docente para favorecer aprendizaje lingüístico en contextos escolares y familiares."
+  modality: Online
+  location: UNED Campo de Gibraltar - Algeciras
+  start: 09.07.2025
+  end: 11.07.2025
+  language: ES
+  contents: "Introducción al bilingüismo y la educación bilingüe en el contexto español: un desafío para la sociedad · Los programas bilingües en la etapa primaria: Claves para el cambio y el éxito educativo · Diversidad cultural y educación bilingüe: un enfoque intercultural para docentes · Programas de educación bilingüe: El papel de las familias · El profesorado y los equipos directivos de centros ante el desafío de la educación bilingüe · La inclusión como desafío más allá de la educación bilingüe · Recursos Didácticos para la Enseñanza Bilingüe: Libros, materiales digitales, juegos y otros recursos útiles · ¿Cómo usar los corpus lingüísticos para iniciarse en la investigación en el aula bilingüe?"
+  url: https://extension.uned.es/actividad/idactividad/43117
+
+- name: "Como hacer una programación didáctica para educación primaria, secundaria y bachillerato"
+  organizer: Universidad Nacional de Educación a Distancia
+  credits:
+  hours:
+  description: ""
+  modality: Online
+  location:
+  start:
+  end:
+  language: ES
+  contents: ""
+  url:
+
+- name: "Lingüística contrastiva inglés-español y su aplicación a la enseñanza de lenguas extranjeras"
+  organizer: Universidad Nacional de Educación a Distancia
+  credits:
+  hours:
+  description: ""
+  modality: Online
+  location:
+  start:
+  end:
+  language: ES
+  contents: ""
+  url:
+
+- name: "El ajedrez educa y enseña a pensar - Leontxo García"
+  organizer: Universidad Nacional de Educación a Distancia
+  credits:
+  hours:
+  description: ""
+  modality: Online
+  location:
+  start:
+  end:
+  language: ES
+  contents: ""
+  url:
+
+- name: "Ciclo de Ajedrez Educativo para Docentes y Educadores (Nivel I): Introducción al Ajedrez Educativo y su didáctica"
+  organizer: Universidad Nacional de Educación a Distancia
+  credits:
+  hours:
+  description: ""
+  modality: Online
+  location:
+  start:
+  end:
+  language: ES
+  contents: ""
+  url:
+
+- name: "El nuevo diseño curricular en LOMLOE. Implicaciones y propuestas para el diseño de programaciones, unidades didácticas y situaciones de aprendizaje"
+  organizer: Universidad Nacional de Educación a Distancia
+  credits:
+  hours:
+  description: ""
+  modality: Online
+  location:
+  start:
+  end:
+  language: ES
+  contents: ""
+  url:
+
+- name: "Educación matemática en la era de la (des)información"
+  organizer: Universidad Nacional de Educación a Distancia
+  credits:
+  hours:
+  description: ""
+  modality: Online
+  location:
+  start:
+  end:
+  language: ES
+  contents: ""
+  url:
+
+- name: "Tecnologías en la sociedad del conocimiento y educación a distancia. Programación, realidad aumentada, inteligencia artificial, enfoques activos y tecnología"
+  organizer: Universidad Nacional de Educación a Distancia
+  credits:
+  hours:
+  description: ""
+  modality: Online
+  location:
+  start:
+  end:
+  language: ES
+  contents: ""
+  url:
+
+- name: "Escribir bien en español: corrección, discurso, estilo, género, norma y redacción académica en lengua española"
+  organizer: Universidad Nacional de Educación a Distancia
+  credits:
+  hours:
+  description: ""
+  modality: Online
+  location:
+  start:
+  end:
+  language: ES
+  contents: ""
+  url:
+
+- name: ""
+  organizer: Universidad Nacional de Educación a Distancia
+  credits:
+  hours:
+  description: ""
+  modality: Online
+  location:
+  start:
+  end:
+  language: ES
+  contents: ""
+  url:

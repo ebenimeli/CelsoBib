@@ -1,0 +1,33 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+pagination:
+  enabled: true
+  collection: posts
+---
+
+<div class="post-container">
+  {% for post in paginator.posts %}
+  <div class="post-list">
+    <a class="post-title" href="{{ post.url | relative_url }}"
+      >{{ post.title }}</a
+    >
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">
+      {{ post.date | date: "%d.%m.%Y" }}
+    </time>
+  </div>
+  {% endfor %}
+</div>
+
+{% if paginator and paginator.total_pages > 1 %}
+<nav class="pagination">
+  {% if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path | relative_url }}">← Anterior</a>
+  {% endif %}
+  <span>Página {{ paginator.page }} de {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path | relative_url }}">Siguiente →</a>
+  {% endif %}
+</nav>
+{% endif %}
