@@ -6,7 +6,7 @@ layout: page
 
 [![image](assets/images/posts/2024/01/post.jpg)](https://ebenimeli.substack.com/)
 
-## 🙋🏻 Hola
+## 🙋🏻‍♂️ Hola
 
 Esta es una web personal, un **cajón de sastre** donde conviven mis intereses [personales](/pages/me.html) y [profesionales](/pages/cv_topics.html). Soy Enrique, [ingeniero en **Informática**](pages/cv_edu.html) y [**profesor**](pages/cv_work.html) de Secundaria. En mis ratos libres, suelo [leer](pages/read_fav.html), [escribir](pages/write.html) y experimentar con proyectos digitales.
 
