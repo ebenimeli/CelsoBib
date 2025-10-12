@@ -4,7 +4,6 @@ layout: null
 
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://www.ebenimeli.org/">
-
  <title>{{ site.title }}</title>
  <link href="{{ site.url }}/atom.xml" rel="self"/>
  <link href="{{ site.url }}/blog"/>
@@ -24,5 +23,4 @@ layout: null
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
-
 </feed>
