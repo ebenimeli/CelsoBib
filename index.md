@@ -4,7 +4,7 @@ layout: page
 
 <div class="post-container">{% include marquee.html %}</div>
 
-[![image](assets/images/posts/2024/01/post.jpg)](https://ebenimeli.substack.com/)
+[![image](assets/images/posts/2024/01/post.jpg)](pages/write.html)
 
 ## 🙋🏻‍♂️ Hola, mundo
 
