@@ -1,6 +1,6 @@
 ---
 title: "Ajustando la ventana digital"
-date: 2025-10-11T22:00:00+00:00
+date: 2025-10-11T08:00:00+00:00
 author: Enrique Benimeli
 layout: post
 permalink: /ventana-digital-estilo/
