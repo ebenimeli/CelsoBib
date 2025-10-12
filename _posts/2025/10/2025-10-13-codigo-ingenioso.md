@@ -8,7 +8,7 @@ categories: Informática
 tags: [QR, Japón, historia, tecnología, informática]
 ---
 
-Escribí hace unos días sobre el origen del código QR y las matemáticas que lo hacen posible. El invento tiene 30 años y la aplicación inicial fue para la industria automovilística japonesa. Este pequeño prodigio matemático lo ideó Masahiro Hara, un ingeniero japonés
+[Escribí hace unos días](https://notasalvuelo.substack.com/p/un-codigo-ingenioso) sobre el **origen del código QR** y las **matemáticas** que lo hacen posible. El invento tiene 30 años y su aplicación inicial fue en la industria automovilística. Este pequeño prodigio matemático lo ideó Masahiro Hara, un ingeniero japonés.
 
 [![image](assets/images/posts/2025/10/qr_ebenimeli.png)](https://notasalvuelo.substack.com/p/un-codigo-ingenioso)
 
