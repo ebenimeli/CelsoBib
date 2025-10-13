@@ -975,13 +975,13 @@ ul.tasks li {
   font-weight: 700;
   font-family: var(--primary-font);
 }
-
+/*
 .blog-post-content a {
   text-decoration: underline;
   text-decoration-style: solid;
   text-decoration-thickness: 0.5px;
 }
-
+*/
 .book-list a {
   text-decoration: none;
 }
