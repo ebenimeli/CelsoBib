@@ -1,27 +1,15 @@
-- timestamp: 2025-10-13 08:52
-  text: "✏️ Códigos QR y matemáticas👉🏼 #status"
-  link: "https://ift.tt/qA3G6Mg"
-  cat: 'write'
-- timestamp: 2025-10-13 08:50
-  text: "«El que se explica se complica» (Anónimo) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2025-10-13 07:50
-  text: "¡Buenos días! Es lunes."
-  link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
-- timestamp: 2025-10-12 12:52
-  text: "✏️ iOS 26 y un poco de orden👉🏼 #status"
+- timestamp: 12/10/2025, 12:52:00 PM
+  text: "iOS 26 y un poco de orden👉🏼 #status"
   link: "https://ift.tt/HoLUBjJ"
-  cat: 'write'
-- timestamp: 2025-10-12 09:59
-  text: "✏️ Ajustando la ventana digital👉🏼 #status"
+  cat: "write"
+- timestamp: 12/10/2025, 09:59:00 AM
+  text: "Ajustando la ventana digital👉🏼 #status"
   link: "https://www.ebenimeli.org/ventana-digital-estilo/"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2025-10-12 09:24
   text: "¡Buenos días! Feliz domingo. #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-12 08:50
   text: "«Haz lo que puedas, con lo que tengas, donde estés» (Theodore Roosevelt) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -29,11 +17,11 @@
 - timestamp: 2025-10-11 23:10
   text: "Algunos cambios en mi web. Nueva página principal #status"
   link: "https://www.ebenimeli.org"
-  cat: 'web'
+  cat: "web"
 - timestamp: 2025-10-11 13:18
   text: "¿Qué tal va el sábado? #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-11 08:50
   text: "«La imaginación es más importante que el conocimiento» (Albert Einstein) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -41,11 +29,11 @@
 - timestamp: 2025-10-10 12:26
   text: "La líder de la oposición venezolana María Corina Machado, Premio Nobel de la Paz 2025 #urgent"
   link: "https://www.abc.es/internacional/maria-corina-machado-premio-nobel-paz-20251010110146-nt.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-10-10 12:26
   text: "¡Hola! Ya es viernes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-10 08:50
   text: "«Sé tú mismo; todos los demás ya están ocupados» (Oscar Wilde) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -53,15 +41,15 @@
 - timestamp: 2025-10-09 21:59
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/Q7Ae0oL"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-10-09 10:31
   text: "Acuerdo de paz entre Israel y Hamás en Gaza anunciado por Trump, en directo: noticias de la guerra y última hora hoy #urgent"
   link: "https://www.abc.es/internacional/negociaciones-israel-hamas-plan-paz-trump-gaza-20251008151026-di.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-10-09 10:30
   text: "¡Buenos días! Feliz jueves."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-09 08:50
   text: "«Enseñar es aprender dos veces» (Joseph Joubert) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -69,15 +57,15 @@
 - timestamp: 2025-10-08 21:59
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/9PGhaJv"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-10-08 12:46
   text: "Premio Planeta 2025: todo lo que tienes que saber #status"
   link: "https://www.planetadelibros.com/blog/actualidad/15/efemerides/12/articulo/premio-planeta-todo-lo-que-necesitas-saber/453"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-10-08 12:43
   text: "¡Hola! Es miércoles."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-08 08:50
   text: "«La educación es el arma más poderosa para cambiar el mundo» (Nelson Mandela) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -85,15 +73,15 @@
 - timestamp: 2025-10-07 21:59
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/h10LPvE"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-10-07 10:42
   text: "🎉 I have been selected as Microsoft Innovative Educator (MIE) Experts for 2025-2026 /v @credly #status"
   link: "https://credly.com/badges/81c507b1-ac82-4468-bbda-5b5b5ab4935a/twitter"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-10-07 09:13
   text: "Me gustó el vídeo «🟢 Open AI redobla las apuestas por la inteligencia artificial y dispara la acción de AMD» #status"
   link: "https://www.youtube.com/watch?v=k43r92OOUg0"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-10-07 08:50
   text: "«La experiencia no es lo que te ocurre, sino lo que haces con lo que te ocurre» (Aldous Huxley) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -101,11 +89,11 @@
 - timestamp: 2025-10-07 08:43
   text: "¡Buenos días! Es martes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-06 09:25
   text: "Viajamos a la Alejandría de Cleopatra en el siglo I a.C. de la mano de de Lloyd Llewellyn-Jones, autor de ‘Las Cleopatras’ #historia #status @SERhistoria"
   link: "https://podcasts.apple.com/es/podcast/ser-historia/id356329864?i=1000729485562"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2025-10-06 08:50
   text: "«Haz lo que puedas, con lo que tengas, donde estés» (Theodore Roosevelt) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -113,19 +101,19 @@
 - timestamp: 2025-10-06 08:45
   text: "¿Por qué hay tan pocos premios Nobel españoles? #status"
   link: "https://podcasts.apple.com/es/podcast/el-mundo-al-d%C3%ADa/id1572264828?i=1000730303764"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2025-10-06 08:08
   text: "¡Buenos días! Vamos a por el lunes. Feliz semana. #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-05 21:59
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/sh1pkYz"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-10-05 10:32
   text: "¡Buenos días! Feliz domingo :)"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-05 08:50
   text: "«Sé tú mismo; todos los demás ya están ocupados» (Oscar Wilde) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -133,11 +121,11 @@
 - timestamp: 2025-10-04 21:59
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/GHlQFCx"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-10-04 10:30
   text: "¡Buenos días! Feliz sábado."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-04 08:50
   text: "«El que se explica se complica» (Anónimo) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -145,23 +133,23 @@
 - timestamp: 2025-10-03 21:59
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/gv9KSLQ"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-10-03 10:13
   text: "Me gustó el vídeo «🟢OpenAI se convierte en la startup más valiosa del mundo» #status"
   link: "https://www.youtube.com/watch?v=KgP8OE_ms9U"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-10-03 10:13
   text: "Me gustó el vídeo «Un día trabajando en la mejor empresa Scopely» #status"
   link: "https://www.youtube.com/watch?v=kIDRLSX0DBg"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-10-03 10:13
   text: "Me gustó el vídeo «London Explained» #status"
   link: "https://www.youtube.com/watch?v=JAj6FesoTi0"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-10-03 09:48
   text: "¡Buenos días! Es viernes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-03 08:50
   text: "«La imaginación es más importante que el conocimiento» (Albert Einstein) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -169,7 +157,7 @@
 - timestamp: 2025-10-02 21:59
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/sxiSDhZ"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-10-02 08:50
   text: "«Sé tú mismo; todos los demás ya están ocupados» (Oscar Wilde) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -177,23 +165,23 @@
 - timestamp: 2025-10-02 07:14
   text: "Buenos días. Es jueves."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-02 01:10
   text: "Nadie Sabe Nada | T13x04 | Fertilidad, polisemia y el indio exhibicionista"
   link: "https://podcasts.apple.com/es/podcast/nadie-sabe-nada/id665143133?i=1000728695060"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2025-10-01 23:41
   text: "Monólogo de Alsina: sobre los Presupuestos Generales del Estado #status"
   link: "https://podcasts.apple.com/es/podcast/m%C3%A1s-de-uno/id983656582?i=1000729468539"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2025-10-01 21:59
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/duGsei9"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-10-01 13:27
   text: "Pues ya es miércoles. Y entramos en octubre."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-01 08:50
   text: "«La mente no es un vaso que haya que llenar, sino un fuego que encender» (Plutarco) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -201,7 +189,7 @@
 - timestamp: 2025-09-30 21:59
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/FVJlfsE"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-30 08:50
   text: "«La educación es el arma más poderosa que puedes usar para cambiar el mundo» (Nelson Mandela) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -209,39 +197,39 @@
 - timestamp: 2025-09-30 02:13
   text: "Me gustó el vídeo «Can I Make PAINT in TWO HOURS in C++?» #status"
   link: "https://www.youtube.com/watch?v=t1B1MyTH9Gk"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-29 21:59
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/7uBNxho"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-29 20:56
   text: "Reunión Trump - Netanyahu por un acuerdo de paz en Gaza, en directo: última hora desde la Casa Blanca hoy #urgent"
   link: "https://www.abc.es/internacional/reunion-trump-netanyahu-acuerdo-paz-gaza-directo-20250929183219-di.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-09-29 20:13
   text: "Me gustó el vídeo «Craft: así ORGANIZO mi vida, trabajo y TODO con UNA APP» #status"
   link: "https://www.youtube.com/watch?v=9WQWPAdPz80"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-29 12:13
   text: "Me gustó el vídeo «FAUSTINO ORO HACE HISTORIA: LA PARTIDA CLAVE» #status"
   link: "https://www.youtube.com/watch?v=-6jS3on-CTI"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-29 12:13
   text: "Me gustó el vídeo «How Much Cash Do Germans Have in Their Pocket? | Easy German 626» #status"
   link: "https://www.youtube.com/watch?v=UqteWIVAdT4"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-29 09:53
   text: "Temporal de lluvias en Valencia, Castellón, Tarragona y resto de España, en directo: carreteras cortadas, avisos rojos de la Aemet por el exhuracán Gabrielle y última hora hoy #urgent"
   link: "https://www.abc.es/sociedad/temporal-lluvias-torrenciales-tormentas-directo-aviso-rojo-20250929081150-di.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-09-29 09:51
   text: "Octubre está al caer."
   link: "https://mastodon.social/tags/say"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-29 09:44
   text: "Bueno días. Es lunes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-29 08:50
   text: "«La experiencia no es lo que te ocurre, sino lo que haces con lo que te ocurre» (Aldous Huxley) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -249,23 +237,23 @@
 - timestamp: 2025-09-28 21:59
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/4mLSIU6"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-28 16:35
   text: "Aemet activa el aviso rojo en Valencia y Castellón y alerta de posibles «inundaciones» en las próximas horas | Las Provincias #urgent"
   link: "https://www.lasprovincias.es/comunitat/el-tiempo/aemet-aviso-naranja-valencia-20250928104715-nt.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-09-28 13:22
   text: "¡Marc Márquez, campeón del Mundo por novena vez! a través de @ABC_Deportes #urgent"
   link: "https://www.abc.es/deportes/motos/marc-marquez-campeon-mundo-novena-vez-20250928074723-nt.html#vca=compartirrrss&amp;vso=abc&amp;vmc=rrss&amp;vli=fixed-twitter"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-09-28 13:19
   text: "Esta mañana de domingo, @cuatro ha emitido de nuevo «Viajeros Cuatro: Alicante»: la isla de Tabarca, el Palmeral de Elche, Orihuela, Denia, Guadalest y Benidorm forman parte del recorrido #status @viajeroscuatro"
   link: "https://www.cuatro.com/viajeroscuatro/viajeros-cuatro-a-la-carta/alicante-programa-completo-hd_18_3167597681.html"
-  cat: 'watch'
+  cat: "watch"
 - timestamp: 2025-09-28 09:15
   text: "¡Buenos días! Feliz domingo."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-28 08:50
   text: "«La educación es el arma más poderosa que puedes usar para cambiar el mundo» (Nelson Mandela) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -273,15 +261,15 @@
 - timestamp: 2025-09-27 21:59
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/3eTSkWH"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-27 11:57
   text: "No quiero crearos una nueva necesidad, pero @muyinteresante ha publicado esta maravilla: «Alan Turing: de la máquina Enigma a la Inteligencia Artificial». Una edición coleccionista. Leyendo estoy… #cs #status"
   link: "https://mastodon.social/tags/read"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-09-27 09:23
   text: "¡Buenos días! Feliz sábado :)"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-27 08:50
   text: "«El que se explica se complica» (Anónimo) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -289,23 +277,23 @@
 - timestamp: 2025-09-26 22:06
   text: "Esta semana, nuevo cronovisor en @SERhistoria ⏱️ En esta ocasión, la pista era clara: Fernando Jiménez del Oso #historia #status"
   link: "https://mastodon.social/tags/podcast"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2025-09-26 21:59
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/MVKfCo4"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-26 19:26
   text: "Últimas notas #status"
   link: "https://www.ebenimeli.org/pages/write_alvuelo.html"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2025-09-26 09:43
   text: "Buenos días. Es viernes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-26 09:04
   text: "🇯🇵 Un yatai artesanal👉🏼 #status #Japón"
   link: "https://notasalvuelo.substack.com/p/un-yatai-artesanal"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2025-09-26 08:50
   text: "«La educación es el arma más poderosa para cambiar el mundo» (Nelson Mandela) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -313,43 +301,43 @@
 - timestamp: 2025-09-26 00:29
   text: "Me gustó esta publicación de culturaliteral1 en X: « #status"
   link: "https://t.co/BZGPkWSNP1"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-25 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/MXkgUsT"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-25 18:49
   text: "Me gustó el vídeo «1800s teenager discovers solar power without even trying» #status"
   link: "https://www.youtube.com/watch?v=1tuV2mhIIl4"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-25 17:44
   text: "Me gustó el vídeo «La gente se está volviendo loca con la IA de Google» #status"
   link: "https://www.youtube.com/watch?v=YYza78KIDVs"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-25 14:29
   text: "Me gustó el vídeo «Restorers Try to Get Lunar Module Guidance Computer Up and Running | WSJ» #status"
   link: "https://www.youtube.com/watch?v=g0PIXvjTasI"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-25 12:54
   text: "Me gustó el vídeo «Apple Did This to iCloud Drive, and it's Brilliant!» #status"
   link: "https://www.youtube.com/watch?v=jXuI5jI40WU"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-25 12:35
   text: "🎉 ¡He alcanzado mi objetivo de escribir 500 palabras! He estado 18 min 21 s escribiendo con txtlab: #status"
   link: "https://ebenimeli.org/txtlab/"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2025-09-25 10:54
   text: "Me gustó el vídeo «What if we could see Spacetime? An immersive experience» #status"
   link: "https://www.youtube.com/watch?v=YNqTamaKMC8"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-25 10:39
   text: "Me gustó el vídeo «✅ El conflicto de ISRAEL y PALESTINA en 13 minutos | Resumen FÁCIL y RÁPIDO» #status"
   link: "https://www.youtube.com/watch?v=tfrJxIKsh04"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-25 09:57
   text: "Buenos días. Es jueves."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-25 08:50
   text: "«La educación es el arma más poderosa para cambiar el mundo» (Nelson Mandela) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -357,35 +345,35 @@
 - timestamp: 2025-09-24 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/cYZsKFz"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-24 20:54
   text: "Me gustó esta publicación de whataweekhuh en X: « #status"
   link: "https://t.co/HAtwLdNXb9"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-24 19:24
   text: "Me gustó el vídeo «3 Top Tipps niños bilingües » #like #status"
   link: "https://mastodon.social/tags/idiomas"
-  cat: 'idiomas'
+  cat: "idiomas"
 - timestamp: 2025-09-24 18:54
   text: "Me gustó el vídeo «One BIC. One Book. Two Classics.» #status"
   link: "https://www.youtube.com/watch?v=X_I6K-c2lCI"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-24 17:09
   text: "Me gustó el vídeo «El Genio que RECHAZÓ 1 MILLÓN de Dólares | Grigori Perelman» #status"
   link: "https://www.youtube.com/watch?v=uQh7O2KKAJw"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-24 16:49
   text: "Me gustó el vídeo «just turn it on and make something.» #status"
   link: "https://www.youtube.com/watch?v=Itn9lI0VK0U"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-24 09:49
   text: "Me gustó el vídeo «Lo de Nvidia es SALVAJE» #status"
   link: "https://www.youtube.com/watch?v=w-S3cqorQf4"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-24 09:21
   text: "Buenos días. Es miércoles. #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-24 08:50
   text: "«Enseñar es aprender dos veces» (Joseph Joubert) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -393,35 +381,35 @@
 - timestamp: 2025-09-24 08:14
   text: "Me gustó esta publicación de aaditsh en X: « List of most important AI research for the past 3 years (for free) #status"
   link: "https://t.co/E10TGiuDN9"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-23 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/502FCVR"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-23 15:34
   text: "Me gustó esta publicación de fermatslibrary en X: « Today we're sharing one of the most cited papers in psychology: &quot;The Magical Number Seven, Plus or Minus Two&quot;.In his 1956 paper G.A. Miller showed that our short-term memory can only handle about 7 &quot;chunks&quot; of information at once. This limit shaped how things like phone numbers #status"
   link: "https://t.co/SMfwwOAopp"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-23 15:31
   text: "Fermat's Library | The Magical Number Seven, Plus or Minus Two annotated/explained version. #science"
   link: "https://fermatslibrary.com/s/the-magical-number-seven-plus-or-minus-two"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-09-23 15:24
   text: "Me gustó esta publicación de CulturaUbu en X: « The link between evolution and language #status"
   link: "https://t.co/pOUxVaEuDx"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-23 13:34
   text: "Me gustó esta publicación de Otrosvendran en X: « 1- Ningún docente en su sano juicio usa el teléfono en el aula2- Están repitiendo cual loritos un argumento que me parece absurdo: &quot;Si los móviles están prohibidos, los docentes deben dar ejemplo&quot;.Pues mira, no. Los docentes deben cumplir con su trabajo. PERO (sigo) 👇 #status"
   link: "https://t.co/ShAOPjhOdj"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-23 13:29
   text: "Me gustó esta publicación de antonello en X: « La parte que más interesante me parece del acuerdo de traspaso de TikTok USA a Oracle:La nueva TikTok estadounidense &quot;alquilará&quot; una copia del algoritmo original de ByteDance, que Oracle volvería a entrenar con datos USA (que se quedarán allí sin acceso para los chinos) #status"
   link: "https://t.co/b949zbyBfe"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-23 09:51
   text: "Es martes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-23 08:50
   text: "«La experiencia no es lo que te ocurre, sino lo que haces con lo que te ocurre» (Aldous Huxley) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -429,15 +417,15 @@
 - timestamp: 2025-09-23 01:00
   text: "Nvidia invertirá 100.000 millones en OpenAI para asegurárselo como cliente a largo plazo | Empresas #status"
   link: "https://www.elmundo.es/economia/empresas/2025/09/22/68d18755e85ece0e6c8b45a1.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-09-22 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/el9So3P"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-22 14:06
   text: "🗒️ Notas al vuelo #status"
   link: "https://www.ebenimeli.org/pages/write_alvuelo.html"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2025-09-22 08:50
   text: "«Ugly action beats perfection. Just do it» (Hidde Douna (@growthbyvisuals)) #status"
   link: https://www.instagram.com/p/DNXWYBZN4nT/?igsh=b2ptZ2tpems2YWdh
@@ -445,27 +433,27 @@
 - timestamp: 2025-09-22 08:05
   text: "¡Buenos días! Vamos a por el lunes. Feliz semana. #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-21 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/pj3tUAn"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-21 19:24
   text: "Me gustó esta publicación de tomgauld en X: « My cartoon for this week’s @newscientist #status"
   link: "https://t.co/Ib8b9YwBLC"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-21 19:24
   text: "Me gustó esta publicación de domingogallardo en X: « Tenía que haber usado este chiste para mi newsletter 😂 #status"
   link: "https://t.co/bjzZgURmCL"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-21 13:44
   text: "Me gustó esta publicación de OffTheMarkComic en X: « Maybe the favorite Where's Waldo parody I've done #status"
   link: "https://t.co/jhuhIlFFuf"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-21 09:46
   text: "¡Buenos días! Feliz domingo. #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-21 08:50
   text: "«La educación es el arma más poderosa que puedes usar para cambiar el mundo» (Nelson Mandela) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -473,19 +461,19 @@
 - timestamp: 2025-09-21 00:55
   text: "Un ciberataque provoca retrasos y cancelaciones en varios aeropuertos de Europa, incluidos Londres, Bruselas y Berlín #urgent"
   link: "https://www.abc.es/internacional/ciberataque-provoca-retrasos-cancelaciones-varios-aeropuertos-europa-20250920094146-nt.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-09-20 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/C6l1GDs"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-20 14:14
   text: "Me gustó esta publicación de EnsedeCiencia en X: « Un clásico. #status"
   link: "https://t.co/R9sNPGSnWg"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-20 10:14
   text: "¡Buenos días! Feliz sábado."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-20 08:50
   text: "«La mente no es un vaso que haya que llenar, sino un fuego que encender» (Plutarco) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -493,31 +481,31 @@
 - timestamp: 2025-09-19 22:56
   text: "La desaparición de Kristin Smart (California, 1996) @criminopatia"
   link: "https://mastodon.social/tags/podcast"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2025-09-19 22:36
   text: "🧭 Una brújula personal #status"
   link: "https://open.substack.com/pub/notasalvuelo/p/una-brujula-personal?r=po383&amp;utm_medium=ios"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2025-09-19 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/QHg3d7R"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-19 16:44
   text: "Me gustó esta publicación de laSextaTV en X: « El negocio oculto de los pisos de estudiantes: guerra por una habitación📺 Esta noche || 22:30h. || @EqInvestigacion #status"
   link: "https://t.co/59pNuPNBb2"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-19 16:44
   text: "Me gustó esta publicación de EnsedeCiencia en X: « ¡Juguetes de tren alucinantes! Este juguete es una mezcla perfecta de diversión y ciencia.crédito TT toyjoyfy. #status"
   link: "https://t.co/xCb8FxU8Yd"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-19 10:24
   text: "Me gustó el vídeo «The Most Dangerous Escalator in Rome» #status"
   link: "https://www.youtube.com/watch?v=tZ8ehplVFp4"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-19 09:59
   text: "Me gustó el vídeo «Probé Codex el modelo para devs de OpenAI» #status"
   link: "https://www.youtube.com/watch?v=Kin0xZP4WpI"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-19 08:50
   text: "«La educación es el arma más poderosa para cambiar el mundo» (Nelson Mandela) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -525,31 +513,31 @@
 - timestamp: 2025-09-19 08:06
   text: "¡Buenos días! Feliz viernes. #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-19 07:04
   text: "Me gustó esta publicación de Ismaellg90 en X: « Cuando desfallezcas, recuerda estos versos de Pessoa. #status"
   link: "https://t.co/8YFLrebFvI"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-18 23:24
   text: "Me gustó esta publicación de fchollet en X: « The 3rd edition of my book Deep Learning with Python is being printed right now, and will be in bookstores within 2 weeks. You can order it now from Amazon or from Manning.This time, we're also releasing the whole thing as a 100% free website.I don't care if it reduces book #status"
   link: "https://t.co/2XkTcJr6d7"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-18 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/F4P3aTl"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-18 15:14
   text: "Me gustó esta publicación de MaristasMedit en X: « Humildad no es reconocerse inferior al que está por encima, sino reconocer la grandeza del que está por debajo. #Evangeliodeldía @FundMChampagnat #like #status"
   link: "https://mastodon.social/tags/SomosDesdeDentro"
-  cat: 'SomosDesdeDentro'
+  cat: "SomosDesdeDentro"
 - timestamp: 2025-09-18 13:45
   text: "¿Qué tal va el jueves?"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-18 12:34
   text: "Me gustó el vídeo «iOS 26 hizo enojar a todos los desarrolladores web» #status"
   link: "https://www.youtube.com/watch?v=Nt1x_UeNMCo"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-18 08:50
   text: "«El aprendizaje nunca agota la mente» (Leonardo da Vinci) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -557,11 +545,11 @@
 - timestamp: 2025-09-17 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/y7kozRw"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-17 18:54
   text: "Me gustó esta publicación de gemagoldie en X: « El tráfico de los sitios webs de noticias está bajando en picado. Como Google ahora ofrece AI overviews en el buscador, la gente ya no pincha en el enlace a la web, se lee el resumen de Gemini que coge la información de esas webs. #status"
   link: "https://t.co/Iydv2Ukpy8"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-17 08:50
   text: "«La mente no es un vaso que haya que llenar, sino un fuego que encender» (Plutarco) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -569,7 +557,7 @@
 - timestamp: 2025-09-16 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/qG4owVF"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-16 08:50
   text: "«Sé tú mismo; todos los demás ya están ocupados» (Oscar Wilde) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -577,23 +565,23 @@
 - timestamp: 2025-09-16 06:19
   text: "Me gustó esta publicación de basicprompts en X: « OpenAI literally just leaked what people use ChatGPT for #status"
   link: "https://t.co/gZj5Me9Fxo"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-15 22:39
   text: "Me gustó esta publicación de perezreverte en X: « Hay días en que uno tiene la impresión de ir a bordo de un autobús de suicidas. Un presidente de España que boicotea la Vuelta a España. Un delegado del Gobierno en Madrid que celebra que les partan la cara a veinte de sus policías. Un ministro del Interior que desaparece en» #status"
   link: "https://mastodon.social/tags/like"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-15 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/CLOIaMR"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-15 21:24
   text: "Me gustó esta publicación de culturedcode en X: « Things is ready for Apple’s OS 26 releases 🎉 with a tastefully refreshed interface, a new app icon, better windowing on iPad, and many more improvements. Check it out → #status"
   link: "https://t.co/YwnLrrHbew"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-15 13:14
   text: "Me gustó esta publicación de applesfera en X: « iOS 26 llega hoy para todos y no es una actualización más. Sus novedades marcan el inicio de una nueva era para el iPhone #status"
   link: "https://t.co/m9cMWJrkJm"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-15 08:50
   text: "«Ugly action beats perfection. Just do it» (Hidde Douna (@growthbyvisuals)) #status"
   link: https://www.instagram.com/p/DNXWYBZN4nT/?igsh=b2ptZ2tpems2YWdh
@@ -601,15 +589,15 @@
 - timestamp: 2025-09-14 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/srt2M75"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-14 15:24
   text: "Me gustó el vídeo «Bohemian Rhapsody para Guitarra por Paola Hermosín» #status"
   link: "https://www.youtube.com/watch?v=72uOEzPOdzg"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-14 08:57
   text: "¡Buenos días! ¡Feliz domingo! #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-14 08:50
   text: "«La educación es el arma más poderosa que puedes usar para cambiar el mundo» (Nelson Mandela) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -617,27 +605,27 @@
 - timestamp: 2025-09-13 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/SajCYmp"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-13 18:06
   text: "Una explosión en un bar de Vallecas deja cinco heridos graves y 20 leves: los bomberos buscan entre los escombros a más víctimas #urgent"
   link: "https://www.elmundo.es/madrid/2025/09/13/68c57ab721efa09d558b459e.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-09-13 13:18
   text: "Nuevo rincón para las lenguas en txtlab: 🌍 #status"
   link: "https://www.ebenimeli.org/txtlab/"
-  cat: 'code'
+  cat: "code"
 - timestamp: 2025-09-13 10:52
   text: "¡Feliz sábado! #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-13 10:39
   text: "Me gustó el vídeo «Ultimate Satisfaction Experience Super Cool Paw Patrol Toys #pawpatrol» #like #status"
   link: "https://mastodon.social/tags/pawpatroltoys"
-  cat: 'pawpatroltoys'
+  cat: "pawpatroltoys"
 - timestamp: 2025-09-13 10:19
   text: "Me gustó esta publicación de domingogallardo en X: « Muchísimos programadores/as siguen escribiendo su código de la manera tradicional y no conocen o desconfían de herramientas como Codex. Se han quedado con las primeras impresiones de herramientas de IA que probaron hace meses y que no funcionaban. Mi consejo: mirad este vídeo y #status"
   link: "https://t.co/QFE8ammsD3"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-13 08:50
   text: "«La mente no es un vaso que haya que llenar, sino un fuego que encender» (Plutarco) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -645,7 +633,7 @@
 - timestamp: 2025-09-12 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/3Mc8P4f"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-12 08:50
   text: "«El aprendizaje nunca agota la mente» (Leonardo da Vinci) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -653,19 +641,19 @@
 - timestamp: 2025-09-11 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/6zRWVw4"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-11 15:19
   text: "Me gustó esta publicación de almormd en X: « 🤔 #status"
   link: "https://t.co/xn9jKyIeJT"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-11 15:19
   text: "Me gustó esta publicación de escritosrame en X: « #status"
   link: "https://t.co/QOlyTtJmFb"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-11 15:19
   text: "Me gustó esta publicación de dilocondibujos_ en X: « Así es #status"
   link: "https://t.co/Fymw9mI7KP"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-11 08:50
   text: "«Sé tú mismo; todos los demás ya están ocupados» (Oscar Wilde) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -673,19 +661,19 @@
 - timestamp: 2025-09-11 07:51
   text: "Qué está pasando con el café | Pausa, episodio 127 #status"
   link: "https://podcasts.apple.com/es/podcast/pausa/id1643737410?i=1000725928017"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2025-09-11 07:50
   text: "¡Buenos días! Feliz jueves. #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-10 22:39
   text: "Me gustó esta publicación de _yesbut_ en X: « #status"
   link: "https://t.co/8aTODIe9V7"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-10 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/FtCan0J"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-10 08:50
   text: "«La mejor forma de predecir el futuro es crearlo» (Peter Drucker) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -693,23 +681,23 @@
 - timestamp: 2025-09-10 08:40
   text: "Polonia derriba drones rusos tras una «violación sin precedentes» en su espacio aéreo #urgent"
   link: "https://www.abc.es/internacional/polonia-derriba-drones-rusos-sobre-espacio-aereo-20250910054738-nt.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-09-10 08:40
   text: "¡Buenos días! Feliz miércoles. #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-10 07:49
   text: "Me gustó esta publicación de ValaAfshar en X: « The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.—Stephen Hawking #status"
   link: "https://t.co/MOx7OiU4vS"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-09 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/YfbTqlL"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-09 15:34
   text: "Me gustó esta publicación de Arteymas_ en X: « El pintor rosa es el primer corto animado protagonizado por La Pantera Rosa, ganó el Oscar al Mejor Cortometraje Animado en la 37ª edición de los Premios Oscar. #status"
   link: "https://t.co/FbgsazlikL"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-09 08:50
   text: "«Haz lo que puedas, con lo que tengas, donde estés» (Theodore Roosevelt) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -717,27 +705,27 @@
 - timestamp: 2025-09-09 07:58
   text: "¡Buenos días! El martes nos ha recibido lluvioso ☔️ #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-09 07:34
   text: "Me gustó esta publicación de ValaAfshar en X: « This is the right way to eat sushi, by renowned chef Nobu Matsuhisa 🍣 #status"
   link: "https://t.co/GLrlpbbqQ9"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-08 22:54
   text: "Nueva versión de txtlab, con un lector accesible y un nuevo juego: #status"
   link: "https://www.ebenimeli.org/txtlab/"
-  cat: 'code'
+  cat: "code"
 - timestamp: 2025-09-08 22:44
   text: "Me gustó esta publicación de Papers_app en X: « Press, hold, and unlock the 4K magic - Pattern #status"
   link: "https://t.co/Icciv1pBWT"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-08 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/Obw8Q37"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-08 17:05
   text: "Me gustó esta publicación de romualdomaestre en X: « Desconozco el autor. Rula por el “guasap” #status"
   link: "https://t.co/TWdRIul1u1"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-08 08:50
   text: "«El aprendizaje nunca agota la mente» (Leonardo da Vinci) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -745,15 +733,15 @@
 - timestamp: 2025-09-07 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/oaGDjTA"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-07 19:54
   text: "Me gustó esta publicación de chesscom en X: « Tuning in to the later to watch some chess players play some tennis 🤓 #like #status"
   link: "https://mastodon.social/tags/USOpen"
-  cat: 'USOpen'
+  cat: "USOpen"
 - timestamp: 2025-09-07 09:54
   text: "¡Buenos días! Feliz domingo. #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-07 08:50
   text: "«La imaginación es más importante que el conocimiento» (Albert Einstein) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -761,19 +749,19 @@
 - timestamp: 2025-09-07 00:19
   text: "Me gustó esta publicación de antena3com en X: « 💥 Vicente Valles recibe el Premio Joan Ramón Mainat 2025 en Vitoria. #status"
   link: "https://t.co/hpJPwDFn4P"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-07 00:19
   text: "Me gustó esta publicación de NachoAres en X: « Y este lunes 8 comienza la SÉPTIMA temporada del podcast Dentro de la Pirámide. Atentos al nuevo episodio dedicado a la Gran Pirámide. #status"
   link: "https://t.co/XIljtl2slR"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-06 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/9b8u2vo"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-06 21:24
   text: "Me gustó esta publicación de AMLengua en X: « &quot;estar como quiere&quot;'Ser muy guapo': “Esas chicas están como quieren”. #like #status"
   link: "https://mastodon.social/tags/DiccionarioDeMexicanismosPropiosYCompartidos"
-  cat: 'DiccionarioDeMexicanismosPropiosYCompartidos'
+  cat: "DiccionarioDeMexicanismosPropiosYCompartidos"
 - timestamp: 2025-09-06 08:50
   text: "«El aprendizaje nunca agota la mente» (Leonardo da Vinci) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -781,15 +769,15 @@
 - timestamp: 2025-09-06 08:19
   text: "¡Buenos días! Feliz sábado."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-05 23:18
   text: "¡Nueva versión de txtlab! Ahora, con temporizadores para todos los gustos y otras novedades #status"
   link: "https://www.ebenimeli.org/txtlab/"
-  cat: 'code'
+  cat: "code"
 - timestamp: 2025-09-05 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/IawYthi"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-05 08:50
   text: "«La imaginación es más importante que el conocimiento» (Albert Einstein) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -797,11 +785,11 @@
 - timestamp: 2025-09-05 08:39
   text: "Me gustó esta publicación de domingogallardo en X: « Trabajando con ChatGPT en el diseño de un Kanban de lectura (nombre sugerido por él) basado en mi repositorio de scripts docflow #status"
   link: "https://t.co/5s3NU1ZbpV"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-04 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/a63VgY2"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-04 08:50
   text: "«Haz lo que puedas, con lo que tengas, donde estés» (Theodore Roosevelt) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -809,27 +797,27 @@
 - timestamp: 2025-09-03 23:13
   text: "Al menos quince muertos y una veintena de heridos al descarrilar un funicular en Lisboa, según medios portugueses #urgent"
   link: "https://www.abc.es/internacional/muerto-veintena-heridos-descarrilar-funicular-lisboa-20250903200003-nt.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-09-03 22:44
   text: "Me gustó esta publicación de El_Hormiguero en X: « .@PerezReverte nos presenta su última novela 'Misión en París', la nueva entrega de ‘Las Aventuras del Capitán Alatriste’ #like #status"
   link: "https://mastodon.social/tags/P%C3%A9rezReverteEH"
-  cat: 'PérezReverteEH'
+  cat: "PérezReverteEH"
 - timestamp: 2025-09-03 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/oJ1K5CR"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-03 21:15
   text: "El ajedrez tendrá también piezas grises para los jugadores que no son ni de izquierdas ni de derechas | El Mundo Today | la actualidad del mañana #chess #status"
   link: "https://www.elmundotoday.com/2025/09/el-ajedrez-tendra-tambien-piezas-grises-para-los-jugadores-que-no-son-ni-de-izquierdas-ni-de-derechas/"
-  cat: 'humor'
+  cat: "humor"
 - timestamp: 2025-09-03 09:15
   text: "Miércoles."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-03 09:14
   text: "Me gustó esta publicación de squidfunk en X: « So seeing the current state of AI, I'm very happy me and my team focused on hard engineering topics around Material for MkDocs in the last 15 months, not building yet another &quot;it has AI now&quot; technology. Close to launch, and no, it's definitely not just a something+AI.» #status"
   link: "https://mastodon.social/tags/like"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-03 08:50
   text: "«La imaginación es más importante que el conocimiento» (Albert Einstein) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -837,11 +825,11 @@
 - timestamp: 2025-09-02 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/Btu93HV"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-02 13:55
   text: "Pues ya es martes…"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-02 08:50
   text: "«La educación es el arma más poderosa para cambiar el mundo» (Nelson Mandela) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -849,19 +837,19 @@
 - timestamp: 2025-09-01 23:19
   text: "Me gustó esta publicación de Nereura9 en X: « Japón 🇯🇵 ~ Un Hilo Raro 🧵1. Una de las razones por las que Japón ha prohibido el turismo en ciertos lugares #status"
   link: "https://t.co/oCpWyTuuhA"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-01 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/n7mfI06"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-09-01 20:44
   text: "Me gustó esta publicación de MsCiencia2 en X: « 🤭 #status"
   link: "https://t.co/q1GUYix9XZ"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-01 20:44
   text: "Me gustó esta publicación de perezreverte en X: « He visto &quot;El cautivo&quot; y me parece una película espléndida, amena, bien hecha. Hay dos minutos polémicos que darán mucho que hablar y no gustarán a todos; pero es una visión libre y sincera (y muy valiente) de Alejandro Amenábar. La recomiendo de verdad. #status"
   link: "https://t.co/Sc3S5xy4gW"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-09-01 08:50
   text: "«La educación no es preparación para la vida; la educación es la vida misma» (John Dewey) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -869,31 +857,31 @@
 - timestamp: 2025-09-01 08:40
   text: "¡Buenos días! Empezamos septiembre. Arrancamos la semana. Vamos a por el lunes. #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-09-01 00:39
   text: "Me gustó el vídeo «Why You Should Be Programming PASCAL in 2025» #status"
   link: "https://www.youtube.com/watch?v=dwnaR0687iI"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-31 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/H6G8mNl"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-08-31 16:34
   text: "Me gustó el vídeo «Transporte de Londres» #status"
   link: "https://www.youtube.com/watch?v=GB4g_D_ZV9k"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-31 15:29
   text: "Me gustó esta publicación de SoySimpsonito en X: « Su control de la lata es excelente… #status"
   link: "https://t.co/SPWXYWQu1W"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-31 14:05
   text: "Nuevo post: «txtlab: un editor sin distracciones (y nostalgia de un Amstrad CPC)» #status"
   link: "https://ift.tt/WtLdCfw"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2025-08-31 09:27
   text: "¡Buenos días! ¡Feliz domingo!"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-31 08:50
   text: "«La educación es el arma más poderosa que puedes usar para cambiar el mundo» (Nelson Mandela) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -901,27 +889,27 @@
 - timestamp: 2025-08-30 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/SmJdQjq"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-08-30 14:05
   text: "Me gustó esta publicación de carl_pullein en X: « It's a Human Problem (Not a Tech Problem) #status"
   link: "https://t.co/Hks6d7zkjM"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-30 13:29
   text: "Me gustó esta publicación de cinefiliacult en X: « HBO Max, o como se llame ahora, es la MEJOR plataforma del mundo.Les dejo 7 MINISeries (Vol. 3) que ya tendrían que haber visto, para saber que esto es así👌🧵:1/7 - The Pitt (2025): Apunten por ahí: la MEJOR nueva serie de este 2025 (de momento)De ahí no me bajo. Escandalosa #status"
   link: "https://t.co/Ic9kpjJK2A"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-30 11:24
   text: "Me gustó esta publicación de OpenAIDevs en X: « GPT-5 is now built into Xcode 26! #status"
   link: "https://t.co/iGKjaXyvZo"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-30 11:09
   text: "Me gustó el vídeo «Python: The Documentary | An origin story» #status"
   link: "https://www.youtube.com/watch?v=GfH4QL4VqJ0"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-30 10:20
   text: "Buenos días. Es sábado."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-30 08:50
   text: "«Ugly action beats perfection. Just do it» (Hidde Douna (@growthbyvisuals)) #status"
   link: https://www.instagram.com/p/DNXWYBZN4nT/?igsh=b2ptZ2tpems2YWdh
@@ -929,43 +917,43 @@
 - timestamp: 2025-08-30 00:09
   text: "Me gustó esta publicación de maxescu en X: « You've seen these paintings a million times.But never like this.Using nano-banana, Seedance, and Kling, I brought them into our modern world, creating an unlikely romance in Central Park, New York City.Enjoy: #status"
   link: "https://t.co/NLVIa4NELd"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-30 00:09
   text: "Me gustó esta publicación de Papers_app en X: « Touch. Pause. See it in 4K - Albert Einstein #status"
   link: "https://t.co/JFlJ8dPTFV"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-29 22:55
   text: "El favor (2023) #status"
   link: "https://www.imdb.com/title/tt20674380/?ref_=ext_shr_other"
-  cat: 'movie'
+  cat: "movie"
 - timestamp: 2025-08-29 22:16
   text: "¿Qué es el principio de equivalencia de Einstein? Una explicación sencilla inspirada en Galileo #sci"
   link: "https://www.muyinteresante.com/fundacion/categoria-ciencia-e-innovacion/principio-de-equivalencia-einstein.html"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-29 22:12
   text: "Lo nuevo de Word te obligará a guardar tus documentos en OneDrive #tech #edu"
   link: "https://hipertextual.com/software/microsoft-word-obliga-guardar-onedrive/"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-29 22:11
   text: "Anthropic usará tus chats con Claude para entrenar su IA #tech #ia"
   link: "https://hipertextual.com/tecnologia/anthropic-conversaciones-claude-entrenar-ia/"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-29 22:10
   text: "El hallazgo de una proteína cerebral abre una vía contra el envejecimiento y la pérdida de memoria #sci"
   link: "https://www.muyinteresante.com/ciencia/proteina-ftl1-revertir-envejecimiento-cerebral.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-29 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/sDj0UWL"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-08-29 08:59
   text: "Me gustó esta publicación de ZhiSu22 en X: « 🏓🤖 Our humanoid robot can now rally over 100 consecutive shots against a human in real table tennis — fully autonomous, sub-second reaction, human-like strikes. #status"
   link: "https://t.co/6DvqhilAjk"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-29 08:52
   text: "Buenos días. Es viernes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-29 08:50
   text: "«Ugly action beats perfection. Just do it» (Hidde Douna (@growthbyvisuals)) #status"
   link: https://www.instagram.com/p/DNXWYBZN4nT/?igsh=b2ptZ2tpems2YWdh
@@ -973,75 +961,75 @@
 - timestamp: 2025-08-28 23:17
   text: "Clic."
   link: "https://mastodon.social/tags/gn"
-  cat: 'gn'
+  cat: "gn"
 - timestamp: 2025-08-28 23:15
   text: "He guardado este artículo en Instapaper: «Matemáticas del Nuevo Mundo: los calendarios, quipus y geometría de las civilizaciones prehispánicas» #status"
   link: "https://ift.tt/3gW0n7E"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-28 23:15
   text: "He guardado este artículo en Instapaper: «Microsoft desafía a OpenAI y anuncia sus primeros modelos de IA» #status"
   link: "https://ift.tt/QH8cGiX"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-28 23:12
   text: "Microsoft desafía a OpenAI y anuncia sus primeros modelos de IA #ia #tech"
   link: "https://hipertextual.com/tecnologia/microsoft-lanza-mai-1-mai-voice-1-modelos-ia/"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-28 23:06
   text: "Robles descarta el regreso a España de la 'mili' como impulsa Alemania | España"
   link: "https://www.elmundo.es/espana/2025/08/28/68b05224fdddffe4108b4591.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-28 23:04
   text: "Me gustó el vídeo «The Greatest DISNEY Songs EVER on The Voice!» #status"
   link: "https://www.youtube.com/watch?v=7MNXPaUhSy4"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-28 23:04
   text: "Me gustó el vídeo «Es aburrido, pero 10 min te ahorran 3 años programando» #status"
   link: "https://www.youtube.com/watch?v=XfvVdtCDYiE"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-28 23:04
   text: "Me gustó esta publicación de LegoLlorchs en X: « - Jefe, ¿hoy también haremos cocina de aprovechamiento?- Sí. Coge una gamba, la cortas a láminas y haces 3 platos de carpaccio de gamba a 12€.- Oído.- Y la hamburguesa de siempre aplástala y chamúscala un poco. Pon Smash Burguer y dobla el precio.- ¿Y las patatas?🧵👇 #status"
   link: "https://t.co/GYvhDR84Iy"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-28 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/ktPqFMm"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-08-28 18:11
   text: "Otra historia de Criminopatía: Mike Williams, un crimen casi perfecto (Florida, 2000) #status"
   link: "https://criminopatia.com/"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2025-08-28 15:01
   text: "31 consejos TIC para un primer día de clase sin sorpresas #status #edu"
   link: "https://www.ochoenpunto.com/31-consejos-tic-profesores-checklist-primer-dia-clase/"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-28 14:59
   text: "Me gustó esta publicación de IrenaBuzarewicz en X: « #status"
   link: "https://t.co/WeQgvwkwci"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-28 14:59
   text: "Me gustó esta publicación de sanz_ismael en X: « 🧠 &quot;La memoria es como un músculo: si la trabajas y la cultivas, crece y se hace sólida. Si no la ejercitas, se diluye ante el bombardeo de información constante.&quot; Aprender a fortalecerla. Enrique Rojas. 📚 #status"
   link: "https://t.co/njarBQGeYU"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-28 14:54
   text: "Me gustó esta publicación de paularambles en X: « my mom just found a new use case for chatgpt #status"
   link: "https://t.co/LmoFHdBLXf"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-28 14:49
   text: "Me gustó esta publicación de ochoenpunto en X: « 👨🏻‍💻 31 consejos TIC para un primer día de clase sin sorpresas✍️ @enriquebenimeli 👉🏼 #status"
   link: "https://t.co/9Alcr9qbY2"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-28 14:34
   text: "La inteligencia artificial ya está configurando el futuro… ¿por qué son tan pocos los que deciden sobre ese futuro? ✍️ @edans #ia #tech"
   link: "https://www.enriquedans.com/2025/08/la-inteligencia-artificial-ya-esta-configurando-el-futuro-por-que-son-tan-pocos-los-que-deciden-sobre-ese-futuro.html"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-28 14:31
   text: "Holanda ha logrado una semana laboral de cuatro días sin querer. Su amor por la conciliación y su sistema de impuestos lo han hecho"
   link: "https://www.genbeta.com/actualidad/holanda-ha-logrado-semana-laboral-cuatro-dias-querer-su-amor-conciliacion-su-sistema-impuestos-han-hecho"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-28 08:45
   text: "¡Buenos días! Es jueves."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-28 08:50
   text: "«La vida es aquello que te pasa mientras estás ocupado haciendo otros planes» (John Lennon) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -1049,23 +1037,23 @@
 - timestamp: 2025-08-27 22:39
   text: "Me gustó esta publicación de expansioncom en X: « ÚLTIMA HORA | Nvidia bate previsiones y aumenta su beneficio un 59% #status"
   link: "https://t.co/Z1yQYWvJLR"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-27 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/1YxAPd5"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-08-27 19:02
   text: "Alemania recupera el servicio militar para reclutar a miles de soldados frente a Rusia | Internacional #status"
   link: "https://www.elmundo.es/internacional/2025/08/27/68aee904fdddffae208b4587.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-27 17:20
   text: "Al menos tres muertos y veinte heridos en un tiroteo en un colegio y una iglesia católicos en Mineápolis #urgent"
   link: "https://www.abc.es/internacional/tirador-abre-fuego-colegio-iglesia-catolicos-mineapolis-20250827164304-nt.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-27 15:09
   text: "Me gustó el vídeo «Netflix tiene un &quot;Hello World&quot; de 1.3MB en producción» #status"
   link: "https://www.youtube.com/watch?v=DrrD1qRskdk"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-27 08:50
   text: "«Haz lo que puedas, con lo que tengas, donde estés» (Theodore Roosevelt) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -1073,79 +1061,79 @@
 - timestamp: 2025-08-27 07:52
   text: "Google Translate's latest feature is its take on Duolingo #tech #languages"
   link: "https://www.engadget.com/apps/google-translates-latest-feature-is-its-take-on-duolingo-160035157.html?src=rss"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-27 07:51
   text: "Es oficial: Apple anuncia el evento de presentación del iPhone 17 #tech"
   link: "https://hipertextual.com/apple/evento-presentacion-iphone-17-oficial/"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-27 07:47
   text: "Apple no descartaría comprar Perplexity o Mistral para enderezar el rumbo de su IA #tech"
   link: "https://hipertextual.com/apple/apple-no-descartaria-comprar-perplexity-o-mistral-ai/"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-27 07:44
   text: "El Ayuntamiento de Elche, paralizado por un ciberataque de ransomware por el que aún no se ha pedido rescate #tech"
   link: "https://www.genbeta.com/seguridad/ayuntamiento-elche-paralizado-ciberataque-ransomware-que-no-se-ha-pedido-rescate"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-27 07:39
   text: "Me gustó esta publicación de ValaAfshar en X: « Wisdom is knowing that everyone you meet knows more about something than you do.» #status"
   link: "https://mastodon.social/tags/like"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-27 07:23
   text: "Buenos días. Es miércoles."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-27 04:09
   text: "Me gustó esta publicación de esferatic en X: « 🔤 Un laboratorio de texto y un rincón para escribir👉🏼 #status"
   link: "https://t.co/E39Myq7FOv"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-26 22:45
   text: "Clic."
   link: "https://mastodon.social/tags/gn"
-  cat: 'gn'
+  cat: "gn"
 - timestamp: 2025-08-26 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/vGdW7TZ"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-08-26 15:14
   text: "Me gustó esta publicación de mtholfsen en X: « A tutorial video showing 11 new features in Teams for Education for summer 2025. Updates include:💬 Copilot Chat✍️ Improved grading feedback🚀 Learning Accelerator updates💡 Tips pane➕ Lots moreVideo link below 👇 #status"
   link: "https://t.co/NtO5BY6xEt"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-26 14:49
   text: "Es oficial: la Seguridad Social cambiará el cálculo de la pensión de jubilación en 2026 | Actualidad Económica #status"
   link: "https://www.elmundo.es/economia/2025/08/26/68acb82de4d4d8351f8b45a1.html?fbclid=PAdGRleAMajG1leHRuA2FlbQIxMQABpwpP7loYZSJPiIOtlb_X9ewigjuSpe5huR1l2Zq5FTbbjlY_-GzdyN67_pqk_aem_gmDdxI7HRec2P9S-hT9gMQ"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-26 12:59
   text: "Me gustó el vídeo «Das legendärste Schnitzel Restaurant der Welt» #status"
   link: "https://www.youtube.com/watch?v=i3E-Y0YtXfA"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-26 11:54
   text: "Me gustó esta publicación de culturaliteral1 en X: « Y luego hay gente que lo llama suerte. #status"
   link: "https://t.co/uS6YdIKxk4"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-26 11:44
   text: "Me gustó el vídeo «¿Por qué triunfan los influencers sin cara?» #status"
   link: "https://www.youtube.com/watch?v=qldY35IJkHw"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-26 10:50
   text: "Nuevo post: «Un laboratorio de texto» #status"
   link: "https://ift.tt/e8RpGN4"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2025-08-26 10:49
   text: "Me gustó esta publicación de domingogallardo en X: « Hablando de apps creadas porque no encuentras la que te gusta, aquí está mi app para MacOS que trackea el tiempo que dedicas a tareas, ClipTimer.¡Incluye la nueva funcionalidad, muy demanda, del panel de edición! #status"
   link: "https://t.co/pyxJHdzeB0"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-26 09:49
   text: "Me gustó el vídeo «Estudiar en Corea del Norte y cómo es la universidad | Entrevista a Lorenzo Ramírez» #status"
   link: "https://www.youtube.com/watch?v=k4ZuQvPaOKI"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-26 09:04
   text: "Me gustó el vídeo «Intel a la deriva» #status"
   link: "https://www.youtube.com/watch?v=lYSjvIhItt8"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-26 08:56
   text: "¡Buenos días! Es martes. #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-26 08:50
   text: "«Enseñar es aprender dos veces» (Joseph Joubert) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -1153,19 +1141,19 @@
 - timestamp: 2025-08-25 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/LKqO40E"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-08-25 19:12
   text: "Muere la actriz Verónica Echegui a los 42 años #urgent"
   link: "https://www.elmundo.es/cultura/cine/2025/08/25/68ac3b13fc6c8378088b457d.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-25 18:24
   text: "Me gustó esta publicación de elmundoes en X: « Apple recuperará el lector de huellas dactilares en su primer iPhone plegable, que llegará en 2026 #status"
   link: "https://t.co/ZRWhp0B5cm"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-25 09:33
   text: "¡Buenos días! Empezamos la semana. Feliz lunes. #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-25 08:50
   text: "«La experiencia no es lo que te ocurre, sino lo que haces con lo que te ocurre» (Aldous Huxley) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -1173,47 +1161,47 @@
 - timestamp: 2025-08-25 00:29
   text: "Me gustó esta publicación de Lentejitas en X: « Pensar #status"
   link: "https://t.co/T9A6BNugF6"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-24 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/tkawvQ8"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-08-24 18:04
   text: "Me gustó el vídeo «SOY CAMPEÓN DE ESPAÑA ABSOLUTO DE BLITZ!» #status"
   link: "https://www.youtube.com/watch?v=Df01b975uOE"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-24 18:02
   text: "Miguel Santos, de 25, años, reivindica las partidas rápidas en busca de espectáculo. Ha ganado el Campeonato de España, pero su dedicación principal es la de entrenar al número tres del mundo #ajedrez #status"
   link: "https://www.elmundo.es/deportes/mas-deporte/2025/08/22/68a881fafc6c83431b8b459e.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-24 17:54
   text: "Me gustó el vídeo «Ojalá que llueva café» #status"
   link: "https://www.youtube.com/watch?v=8l5eFyfS3sw"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-24 17:24
   text: "Me gustó esta publicación de perezreverte en X: « A petición del respetable. Aquí, lo mismo de antes pero en bonito. #status"
   link: "https://t.co/qvUEyKEKgh"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-24 17:24
   text: "Me gustó esta publicación de Arteymas_ en X: « Si tienes esto en tu vida, lo tienes todo! #status"
   link: "https://t.co/xmcUk5VSGR"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-24 13:34
   text: "Me gustó esta publicación de antonello en X: « Dice el Guardian que Sam Altman ha ofrecido a Reino Unido dar ChatGPT Plus a todos los ciudadanos del país... en un acuerdo que costaría el módico precio de 2000 millones de libras&quot;Los allegados a la discusión dicen que Kyle, el Secretario de Tecnología de UK, nunca tomó la #status"
   link: "https://t.co/lLQUDtpOCy"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-24 10:43
   text: "La economía oculta de la IA: del chollo al sablazo, por Martin Varsavsky #ia #status"
   link: "https://theobjective.com/elsubjetivo/opinion/2025-08-18/varsavsky-economia-oculta-ia/"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-24 10:24
   text: "Me gustó el vídeo «¿Se encarecerá la inteligencia artificial?» #status"
   link: "https://www.youtube.com/watch?v=QduFvGi8w-0"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-24 09:55
   text: "¡Buenos días! Feliz domingo."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-24 08:50
   text: "«El aprendizaje nunca agota la mente» (Leonardo da Vinci) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -1221,23 +1209,23 @@
 - timestamp: 2025-08-23 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/cqXbU0F"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-08-23 16:39
   text: "Me gustó el vídeo «COREA DEL NORTE: Consumismo, libertad de expresión y religión | Entrevista a Alejandro Cao de Benós» #status"
   link: "https://www.youtube.com/watch?v=jbs5aP8Fc_8"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-23 10:39
   text: "Smaller images mean faster load times. Squoosh can reduce file size and maintain high quality."
   link: "https://squoosh.app/"
-  cat: 'tools'
+  cat: "tools"
 - timestamp: 2025-08-23 09:49
   text: "Me gustó el vídeo «Zapatero se hace el chino» #status"
   link: "https://www.youtube.com/watch?v=ulcwbkzkDkI"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-23 09:23
   text: "¡Buenos días! Feliz sábado."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-23 08:50
   text: "«Sé tú mismo; todos los demás ya están ocupados» (Oscar Wilde) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -1245,23 +1233,23 @@
 - timestamp: 2025-08-22 23:55
   text: "Clic."
   link: "https://mastodon.social/tags/gn"
-  cat: 'gn'
+  cat: "gn"
 - timestamp: 2025-08-22 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/k6jHEWi"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-08-22 09:39
   text: "Me gustó el vídeo «Morgan and the Golden Family (Feat. Quique González) SARGENTO DE HIERRO Live at Wizink Center» #status"
   link: "https://www.youtube.com/watch?v=vgoTgLgtH-4"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-22 09:38
   text: "Sargento de Hierro (feat. Quique González) [Live at Wizink Center] de Morgan #status"
   link: "https://www.shazam.com/track/678361744?referrer=share"
-  cat: 'music'
+  cat: "music"
 - timestamp: 2025-08-22 08:49
   text: "Me gustó esta publicación de demishassabis en X: « Simulations are the future, &amp; one of the main tools we’ll ultimately use to understand and predict things about the universe. This is why I’m so excited about Genie 3, our latest interactive world simulator - here are some insanely cool things you might have missed about it 🧵: #status"
   link: "https://t.co/O0PgDILTEq"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-22 08:50
   text: "«El que se explica se complica» (Anónimo) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -1269,27 +1257,27 @@
 - timestamp: 2025-08-22 08:41
   text: "¡Buenos días! Feliz viernes. #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-21 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/YGStwVJ"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-08-21 20:29
   text: "Me gustó el vídeo «14 Hours in the Day of Yacht Chef» #status"
   link: "https://www.youtube.com/watch?v=mOx_5-MRlhE"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-21 13:24
   text: "Me gustó el vídeo «The Commit Show S2 #1 ft @mouredev | ¿Vendehúmos? ¿Vale la pena estudiar programación?» #status"
   link: "https://www.youtube.com/watch?v=aTfFxMRz1No"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-21 10:04
   text: "Me gustó esta publicación de RAEinforma en X: « La RAE pone a disposición de los interesados la consulta en línea de las imágenes de las 260 439 papeletas que conforman el Fichero de hilo («a-zuzón»), un gran depósito léxico ahora al alcance de todos: #status"
   link: "https://t.co/peQSiYKc6H"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-21 09:29
   text: "Me gustó el vídeo «The Commit Show #1 ft @midudev | ¿Qué significa ser senior? ¿Despidos masivos en Tech? ¿GPT-4?» #status"
   link: "https://mastodon.social/@midudev"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-21 08:50
   text: "«Sé tú mismo; todos los demás ya están ocupados» (Oscar Wilde) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -1297,67 +1285,67 @@
 - timestamp: 2025-08-21 08:45
   text: "¡Buenos días! Es jueves. #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-21 08:34
   text: "Me gustó esta publicación de AEMET_Esp en X: « 21/08 08:30 Avisos activos hoy en España por lluvias y tormentas. Nivel máximo de aviso: rojo.Actualizaciones en #status"
   link: "https://t.co/BLdoSsO2Qv"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-21 02:52
   text: "Clic."
   link: "https://mastodon.social/tags/gn"
-  cat: 'gn'
+  cat: "gn"
 - timestamp: 2025-08-21 01:59
   text: "Me gustó el vídeo «Cómo China está tomando la delantera tecnológica a nivel global | BBC Mundo» #status"
   link: "https://www.youtube.com/watch?v=jU6qSf-EsIE"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-21 01:54
   text: "Me gustó esta publicación de carlothinks en X: « Ex-Alibaba CTO just made the boldest claim about AI &amp; global power:“China is building the future of AI, not Silicon Valley.”He also revealed why AI by 2030 will look nothing like ChatGPT and how China’s approach is already decades ahead.Here are my top 7 takeaways: 🧵 #status"
   link: "https://t.co/zCbaKb59Yh"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-20 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/fISdqZO"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-08-20 21:29
   text: "Me gustó el vídeo «Quieren comprar Google Chrome...» #status"
   link: "https://www.youtube.com/watch?v=0hylA2hH5tI"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-20 21:29
   text: "Me gustó esta publicación de criminopatia en X: « Mañana. Octava temporada de Criminopatía. #status"
   link: "https://t.co/neG9be44wX"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-20 21:27
   text: "La polémica que genera la nueva serie de Amanda Knox, la estadounidense que fue condenada y después absuelta del asesinato de su compañera de cuarto"
   link: "https://www.bbc.com/mundo/articles/cwy18ylyd2jo"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-20 21:24
   text: "Me gustó esta publicación de Arteymas_ en X: « La batalla de Arsuf de Gustave Dore #status"
   link: "https://t.co/dQdyXVup8P"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-20 21:23
   text: "Tarde de cumpleaños."
   link: "https://mastodon.social/tags/say"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-08-20 13:19
   text: "Me gustó el vídeo «ROADMAP + GUÍA para PROGRAMADORES: Front-End, Back-End Y Full-Stack 2025» #status"
   link: "https://www.youtube.com/watch?v=JOPNVlVFT-o"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-20 12:15
   text: "What's New in Microsoft EDU - Back to School August 2025 | Microsoft Community Hub #edu"
   link: "https://techcommunity.microsoft.com/blog/educationblog/whats-new-in-microsoft-edu---back-to-school-august-2025/4425287"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-20 11:21
   text: "Criminopatía a media mañana :)"
   link: "https://mastodon.social/tags/podcast"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2025-08-20 11:14
   text: "Me gustó esta publicación de elOrdenMundial en X: « 🇫🇷Así es la historia de la bandera de Francia.Égalité, Liberté et Fraternité y la bandera tricolor son dos símbolos inconfundibles de Francia. Ambos tienen sus orígenes en la Revolución francesa de 1789.Sus colores simbolizan la cohesión y unidad del pueblo.¿Conocías la #status"
   link: "https://t.co/4tfAqPwSUY"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-20 10:47
   text: "Nuevo formulario de contacto: #status"
   link: "https://www.ebenimeli.org/contact/"
-  cat: 'web'
+  cat: "web"
 - timestamp: 2025-08-20 08:50
   text: "«El que se explica se complica» (Anónimo) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -1365,107 +1353,107 @@
 - timestamp: 2025-08-20 07:47
   text: "Buenos días. Y llegamos al miércoles."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-20 01:24
   text: "Clic."
   link: "https://mastodon.social/tags/gn"
-  cat: 'gn'
+  cat: "gn"
 - timestamp: 2025-08-20 01:14
   text: "Me gustó esta publicación de EnsedeCiencia en X: « Construyendo un banco junto a un árbol #status"
   link: "https://t.co/FWKqSozdrU"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-20 00:54
   text: "Me gustó el vídeo «Los Bootcamps y Cursos crean MALOS programadores» #status"
   link: "https://www.youtube.com/watch?v=x3b72cY3o0M"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-19 22:59
   text: "Me gustó el vídeo «¿La IA hace más productivos a los programadores?» #status"
   link: "https://www.youtube.com/watch?v=cLK5lHjDWro"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-19 22:49
   text: "Sueño. Hoy. Mucho… 😴"
   link: "https://mastodon.social/tags/say"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-08-19 22:09
   text: "Me gustó el vídeo «How Submarine Sailors Eat, Sleep &amp; Survive for 3 Months Underwater» #status"
   link: "https://www.youtube.com/watch?v=7VIuo3MFv_k"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-19 22:00
   text: "Lo que el día dio de sí: #status"
   link: "https://ift.tt/iJrfAxW"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-08-19 18:49
   text: "He guardado este artículo en Instapaper: «En la era de la nube, hay quien ha dado un giro inesperado: almacenar sus archivos en Blu-Rays. Es mejor de lo que parece» #status"
   link: "https://ift.tt/agImhG6"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-19 18:46
   text: "Si recibes este correo de Booking, no lo abras: es una estafa (muy creíble) #urgent"
   link: "https://www.lasexta.com/tecnologia-tecnoxplora/ciencia/recibes-este-correo-booking-abras-estafa-muy-creible_2025081968a44719db588163100783ad.html?so=so%3Asour-twitter%3Acn-antena3"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-19 18:45
   text: "El acuerdo sobre aranceles y el gasto militar: así convenció Europa a Trump de proteger a Kiev | Internacional #status"
   link: "https://www.elmundo.es/internacional/2025/08/19/68a48844e85ece01488b457b.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-19 18:44
   text: "Me gustó esta publicación de Space_Station en X: « One hour until we’re LIVE with the researchers launching science on NASA’s next resupply mission, SpaceX-33, to space station. ⏰ Submit your questions using and join the conversation. Watch live: #like #status"
   link: "https://mastodon.social/tags/askNASA"
-  cat: 'askNASA'
+  cat: "askNASA"
 - timestamp: 2025-08-19 18:39
   text: "Me gustó esta publicación de chesscom en X: « what's the best part of chess?» #status"
   link: "https://mastodon.social/tags/like"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-19 18:16
   text: "Tarde de piscineo."
   link: "https://mastodon.social/tags/love"
-  cat: 'love'
+  cat: "love"
 - timestamp: 2025-08-19 15:34
   text: "He guardado este artículo en Instapaper: «Computer Science Graduates Face Worst Job Market in Decades» #status"
   link: "https://ift.tt/21Daveg"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-19 14:24
   text: "Me gustó esta publicación de muyinteresante en X: « Una pequeña mutación enzimática podría haber influido en la forma en que los Homo sapiens piensan y actúan desde hace más de 300.000 años. #status"
   link: "https://t.co/S5dvHL3mWb"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-19 14:18
   text: "He guardado este artículo en Instapaper: «El &quot;desgaste silencioso&quot; está acabando con la productividad y la salud mental: los trabajadores están hartos pero ni se dan cuenta» #status"
   link: "https://ift.tt/F6iNwrM"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-19 14:18
   text: "He guardado este artículo en Instapaper: «GPT-5 ha decepcionado a los usuarios de a pie, pero está arrasando entre las grandes empresas. Esta es la razón» #status"
   link: "https://ift.tt/OCkv60m"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-19 13:59
   text: "He guardado este artículo en Instapaper: «La inteligencia artificial y la burbuja que viene y va» #status"
   link: "https://ift.tt/ylrhAv5"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-19 13:54
   text: "He guardado este artículo en Instapaper: «El divorcio de China y NVIDIA es un hecho. El Gobierno de Xi Jinping ya no recomienda chips chinos: los exige» #status"
   link: "https://ift.tt/DRlU42E"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-19 13:49
   text: "Me gustó esta publicación de IrenaBuzarewicz en X: « August 19 #status"
   link: "https://t.co/ulec5Lh39q"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-19 13:44
   text: "Me gustó esta publicación de Papers_app en X: « Pink Panther 🩷🔥Press, hold, and unlock the 4K magic. #status"
   link: "https://t.co/YFhSWryrBg"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-19 13:14
   text: "Me gustó el vídeo «Japan's independent kids | SBS The Feed» #status"
   link: "https://www.youtube.com/watch?v=P7YrN8Q2PDU"
-  cat: 'like'
+  cat: "like"
 - timestamp: 2025-08-19 13:04
   text: "Nubes y claros, pero calor…"
   link: "https://mastodon.social/tags/say"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-08-19 12:34
   text: "Un viaje al siglo XIX #status"
   link: "https://x.com/arteymas_/status/1957181971148439825?s=12"
-  cat: 'love'
+  cat: "love"
 - timestamp: 2025-08-19 11:36
   text: "Sobre las sugerencias. Me encanta esta viñeta:"
   link: "https://www.instagram.com/p/DNSygQdN-n0/?igsh=N3V2ajNqNzF4cmw1"
-  cat: 'love'
+  cat: "love"
 - timestamp: 2025-08-19 08:50
   text: "«Enseñar es aprender dos veces» (Joseph Joubert) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -1473,43 +1461,43 @@
 - timestamp: 2025-08-19 08:18
   text: "Hoy es el Día Internacional de la Fotografía #status"
   link: "https://www.instagram.com/ebenimeli"
-  cat: 'photo'
+  cat: "photo"
 - timestamp: 2025-08-19 08:09
   text: "¡Buenos días! Es martes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-19 02:17
   text: "Clic."
   link: "https://mastodon.social/tags/gn"
-  cat: 'gn'
+  cat: "gn"
 - timestamp: 2025-08-19 00:26
   text: "Hoy, ChatGPT me ha ayudado a solucionar un asuntillo con servidores.. Vaya, vaya…"
   link: "https://mastodon.social/tags/say"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2025-08-18 23:24
   text: "Viendo un par de episodios de «El Ministerio del Tiempo» #status"
   link: "https://www.imdb.com/es-es/title/tt4136774"
-  cat: 'movie'
+  cat: "movie"
 - timestamp: 2025-08-18 12:51
   text: "Incendios graves en España hoy, última hora en directo | Castilla y León sigue en una situación de &quot;extrema gravedad&quot; con 26 incendios activos; Ourense suma 62.000 hectáreas arrasadas y el fuego de Jarilla obliga a evacuar casas aisladas en El Jerte | España #urgent"
   link: "https://www.elmundo.es/espana/2025/08/18/68a2c41c1ee97cbdb6d2a7b3-directo.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-18 12:43
   text: "—¿Tomas algo para ser feliz?—Sí, decisiones."
   link: "https://mastodon.social/tags/quote"
-  cat: 'quote'
+  cat: "quote"
 - timestamp: 2025-08-18 12:37
   text: "El 89% de los universitarios usa la IA generativa: &quot;Hay que evitar que la subida de la inteligencia artificial vaya bajando nuestra inteligencia natural&quot; #edu"
   link: "https://www.elmundo.es/economia/2025/08/11/687faae8e9cf4a98458b4592.html"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-18 11:59
   text: "Entre cifras y letras: gamificando las tablas de multiplicar de Esfera TIC #edu"
   link: "https://www.esferatic.com/2025/07/cifras-y-letras-gamificacion-tablas-multiplicar/"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-18 11:46
   text: "codi.link es un editor para HTML, CSS y JS. Edita tu código en tiempo real y ve el resultado al instante"
   link: "https://codi.link/"
-  cat: 'tools'
+  cat: "tools"
 - timestamp: 2025-08-18 08:50
   text: "«La educación no es preparación para la vida; la educación es la vida misma» (John Dewey) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -1517,11 +1505,11 @@
 - timestamp: 2025-08-18 07:45
   text: "Buenos días. Es lunes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-17 10:08
   text: "¡Buenos días! ¡Feliz domingo! #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-17 08:50
   text: "«Enseñar es aprender dos veces» (Joseph Joubert) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -1529,43 +1517,43 @@
 - timestamp: 2025-08-17 01:08
   text: "Clic."
   link: "https://mastodon.social/tags/gn"
-  cat: 'gn'
+  cat: "gn"
 - timestamp: 2025-08-16 23:27
   text: "He añadido algunos juegos retro a mi web. Podéis jugar a los clásicos Snake, Space Invaders o Pong entre otros: #status"
   link: "https://www.ebenimeli.org/pages/games.html"
-  cat: 'web'
+  cat: "web"
 - timestamp: 2025-08-16 20:47
   text: "Trump da la espalda a Ucrania y apoya la exigencia de más cesiones territoriales a Putin para alcanzar la paz #urgent"
   link: "https://www.abc.es/internacional/trump-espalda-ucrania-apoya-exigencia-cesiones-territoriales-20250816184019-nt.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-16 13:39
   text: "He creado una ‘now page’ en mi web personal"
   link: "https://www.ebenimeli.org/now/"
-  cat: 'web'
+  cat: "web"
 - timestamp: 2025-08-16 13:26
   text: "Yuval Noah Harari: Cómo proteger tu mente en la era de la información basura #status"
   link: "https://www.youtube.com/watch?v=K1OvbwY6GPM"
-  cat: 'learn'
+  cat: "learn"
 - timestamp: 2025-08-16 12:45
   text: "Qué ternura 🐶 🐶 🐶"
   link: "https://mastodon.social/tags/humor"
-  cat: 'humor'
+  cat: "humor"
 - timestamp: 2025-08-16 12:37
   text: "Ugly action beats perfection. Just do it. #status"
   link: "https://www.instagram.com/p/DNXWYBZN4nT/?igsh=b2ptZ2tpems2YWdh"
-  cat: 'quote'
+  cat: "quote"
 - timestamp: 2025-08-16 11:01
   text: "En las oficinas de Figma (@figma). La empresa salió a bolsa recientemente: «Dentro de Figma ✏️ El asesino de Adobe de 50 mil millones» #status"
   link: "https://mastodon.social/@figma"
-  cat: 'video'
+  cat: "video"
 - timestamp: 2025-08-16 09:42
   text: "Reunión de Trump y Putin en Alaska por la guerra Rusia - Ucrania, en directo: declaraciones y última hora del posible acuerdo de paz hoy #urgent"
   link: "https://www.abc.es/internacional/reunion-trump-putin-alaska-guerra-rusia-ucrania-directo-declaraciones-ultima-hora-acuerdo-paz-hoy-20250815162757-di.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-16 08:52
   text: "¡Buenos días! Feliz sábado de verano. #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-16 08:50
   text: "«La educación no es preparación para la vida; la educación es la vida misma» (John Dewey) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -1573,40 +1561,40 @@
 - timestamp: 2025-08-16 00:35
   text: "Prime Target (2025) • Syracuse (S01E02) #status"
   link: "https://www.imdb.com/title/tt32411554/?ref_=ext_shr_other"
-  cat: 'movie'
+  cat: "movie"
 - timestamp: 2025-08-15 19:45
   text: "Muere Javier Lambán, expresidente de Aragón y uno de los barones del PSOE más críticos con Sánchez #urgent"
   link: "https://www.abc.es/espana/aragon/muere-javier-lamban-expresidente-aragon-anos-20250815150219-nt.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-15 19:38
   text: "Terminé de leer «Cómo La Vida Imita al Ajedrez» #status"
   link: https://www.goodreads.com/review/list/1230384?shelf=read
-  cat: 'read'
+  cat: "read"
 
 - timestamp: 2025-08-15 13:27
   text: "Hasta el lunes 18, alerta por temperaturas máximas en toda la Comunitat Valenciana #urgent"
   link: "https://mastodon.social/tags/news"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-15 12:50
   text: "Pues a comer."
   link: "https://mastodon.social/tags/lunch"
-  cat: 'lunch'
+  cat: "lunch"
 - timestamp: 2025-08-15 10:59
   text: "Nueva actualización de código en CelsoBib: New TV series added (Hijack, 2023) #code"
   link: https://github.com/ebenimeli/CelsoBib/commit/0230904f35c3cfc51f2d8f2317a0c69503c76dac
-  cat: 'code'
+  cat: "code"
 - timestamp: 2025-08-15 10:46
   text: "El creador del lenguaje C++ terminó siendo programador &quot;por error&quot;. Pero tiene varios consejos para los jóvenes del sector ✍️ @genbeta #status"
   link: "https://www.genbeta.com/desarrollo/creador-lenguaje-c-termino-siendo-programador-error-tiene-varios-consejos-para-jovenes-sector-2"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-15 10:33
   text: "Doble de cafeína, por favor."
   link: "https://mastodon.social/tags/coffee"
-  cat: 'coffee'
+  cat: "coffee"
 - timestamp: 2025-08-15 10:09
   text: "Euro digital: ¿soberanía de pagos o dinero con correa? ✍️ @edans #status"
   link: "https://www.enriquedans.com/2025/08/euro-digital-soberania-de-pagos-o-dinero-con-correa.html"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-15 09:15
   text: "«La educación es el arma más poderosa que puedes usar para cambiar el mundo» (Nelson Mandela) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -1614,35 +1602,35 @@
 - timestamp: 2025-08-15 09:11
   text: "¡Buenos días! Hemos llegado al viernes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-15 01:52
   text: "Clic."
   link: "https://mastodon.social/tags/gn"
-  cat: 'gn'
+  cat: "gn"
 - timestamp: 2025-08-14 23:16
   text: "Hijack/ Secuestro en el aire (2023) • Draw a Blank (S01E03) #status"
   link: "https://www.imdb.com/title/tt21097778/?ref_=ext_shr_other"
-  cat: 'movie'
+  cat: "movie"
 - timestamp: 2025-08-14 13:52
   text: "Hijack/ Secuestro en el aire (2023) • Final Call (S01E01) #status"
   link: "https://www.imdb.com/title/tt19884306/?ref_=ext_shr_other"
-  cat: 'movie'
+  cat: "movie"
 - timestamp: 2025-08-14 13:22
   text: "¡A comer!"
   link: "https://mastodon.social/tags/lunch"
-  cat: 'lunch'
+  cat: "lunch"
 - timestamp: 2025-08-14 12:41
   text: "Incendios en España hoy, última hora en directo | Suspendido de nuevo el servicio de trenes entre Madrid y Galicia por el fuego en Ourense | España #urgent"
   link: "https://www.elmundo.es/espana/2025/08/14/689d6ea21ee97cbdb6a4814f-directo.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-14 09:55
   text: "«Ahora las maneras son lo de menos» / Es simpático, el imbécil ✍️ @perezreverte en @zendalibros #status"
   link: "https://www.zendalibros.com/perez-reverte-es-simpatico-el-imbecil/"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-14 09:26
   text: "Managing 16 big projects a year without burning out? Yep, it’s possible (Carl Pullein)"
   link: "https://www.youtube.com/watch?v=7Ab5JSpCZRo"
-  cat: 'learn'
+  cat: "learn"
 - timestamp: 2025-08-14 08:50
   text: "«Haz lo que puedas, con lo que tengas, donde estés» (Theodore Roosevelt) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -1650,19 +1638,19 @@
 - timestamp: 2025-08-14 07:56
   text: "¡Buenos días! Feliz jueves. #status"
   link: "https://www.ebenimeli.org/pages/log.html"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-14 01:56
   text: "Mañana más. Clic."
   link: "https://mastodon.social/tags/gn"
-  cat: 'gn'
+  cat: "gn"
 - timestamp: 2025-08-14 00:31
   text: "Silo · The Janitor's Boy (S01E05) #status"
   link: "https://www.imdb.com/es-es/title/tt17073696/?ref_=ttep_ep_5"
-  cat: 'movie'
+  cat: "movie"
 - timestamp: 2025-08-13 23:32
   text: "Día de verano, pero día productivo, que también es posible."
   link: "https://mastodon.social/tags/thought"
-  cat: 'thought'
+  cat: "thought"
 - timestamp: 2025-08-13 22:51
   text: "«El que se explica se complica» (Anónimo)"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -1670,618 +1658,618 @@
 - timestamp: 2025-08-13 17:47
   text: "Crimen en familia (1985) • basada en hechos reales (el caso lo cuentan en el podcast Criminopatía)"
   link: "https://www.imdb.com/title/tt0088966/?ref_=ext_shr_other"
-  cat: 'movie'
+  cat: "movie"
 - timestamp: 2025-08-13 16:36
   text: "El fuego avanza sin control en Orense: cinco grandes incendios activos arrasan más de 10.000 hectáreas #urgent"
   link: "https://www.abc.es/espana/galicia/fuego-avanza-control-orense-cinco-grandes-incendios-20250813143039-nt.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-13 15:47
   text: "Café y podcast de Criminopatía"
   link: "https://criminopatia.com/"
-  cat: 'coffee'
+  cat: "coffee"
 - timestamp: 2025-08-13 13:51
   text: "Nueva actualización de código en CelsoBib: Reorganize menus and submenus, adding new navigation items #code"
   link: https://github.com/ebenimeli/CelsoBib/commit/f7999909a4eb976d1931deb0a9cde4bbe2a8bd02
-  cat: 'code'
+  cat: "code"
 - timestamp: 2025-08-13 11:51
   text: "Revisando y organizando conceptos y recursos de programación con JavaScript #status"
   link: "https://mastodon.social/tags/learn"
-  cat: 'learn'
+  cat: "learn"
 - timestamp: 2025-08-13 09:20
   text: "Si la duda es cómo lograr más sueldo en España, la respuesta es la universidad: &quot;Los ingresos aumentan con el nivel de formación&quot; #status"
   link: "https://www.genbeta.com/actualidad/duda-como-lograr-sueldo-espana-respuesta-universidad-ingresos-aumentan-nivel-formacion"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-13 08:46
   text: "¡Buenos días! Es miércoles."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-12 23:52
   text: "Clic."
   link: "https://mastodon.social/tags/gn"
-  cat: 'gn'
+  cat: "gn"
 - timestamp: 2025-08-12 23:49
   text: "Las imágenes que dejan los devastadores incendios en España #status"
   link: "https://www.elmundo.es/album/espana/2025/08/12/689b1007e4d4d855408b45a2.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-12 23:11
   text: "No hay dos sin tres: «El Ministerio del Tiempo» · Cómo se reescribe el tiempo (S01E03) #status"
   link: "https://www.imdb.com/es-es/title/tt4385520"
-  cat: 'movie'
+  cat: "movie"
 - timestamp: 2025-08-12 23:07
   text: "Nueva actualización de código en CelsoBib: Product recommendation (shop page) #code"
   link: https://github.com/ebenimeli/CelsoBib/commit/932d713a7ab2d04258d0d672fd7674c252f850c2
-  cat: 'code'
+  cat: "code"
 - timestamp: 2025-08-12 20:52
   text: "Ahora: &quot;El Ministerio del Tiempo&quot; • Tiempo de Gloria #status"
   link: "https://www.imdb.com/title/tt4385514/?ref_=ext_shr_other"
-  cat: 'movie'
+  cat: "movie"
 - timestamp: 2025-08-12 20:25
   text: "Viendo &quot;El Ministerio del Tiempo&quot; • El tiempo es el que es S01E01 #status"
   link: "https://www.imdb.com/title/tt4371472/?ref_=ext_shr_other"
-  cat: 'movie'
+  cat: "movie"
 - timestamp: 2025-08-12 19:22
   text: "El tiempo es el que es: ClipTimer para medir y decidir #status"
   link: "https://www.ochoenpunto.com/el-tiempo-es-el-que-es-cliptimer-medir-decidir/"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-12 19:09
   text: "El peor desastre aéreo de la historia de Japón: el accidente del vuelo JAL 123 en 1985"
   link: "https://www.nippon.com/es/guide-to-japan/cs00019/"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-12 19:03
   text: "Nueva actualización de código en CelsoBib: Chess page updated #code"
   link: https://github.com/ebenimeli/CelsoBib/commit/e8bd83e3f8c103949be2dd502bb299166ffa6bd3
-  cat: 'code'
+  cat: "code"
 - timestamp: 2025-08-12 19:03
   text: "La fuga de jóvenes talentos españoles, sin freno: &quot;Volver a España sería dar un paso atrás&quot; - #status"
   link: "https://www.elmundo.es/espana/2025/08/12/689a0a01e85ece9c678b45a0.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-12 17:58
   text: "Los teletrabajadores se vienen arriba en Starbucks y llevan PC de escritorio, impresoras y separadores. La empresa ha tomado medidas"
   link: "https://www.genbeta.com/actualidad/teletrabajadores-se-vienen-arriba-starbucks-llevan-pc-escritorio-impresoras-separadores-empresa-ha-tomado-medidas"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-12 17:42
   text: "Usan la sucesión de Fibonacci para transportar luz, siguiendo el patrón matemático que organiza pétalos, conchas y galaxias"
   link: "https://www.muyinteresante.com/ciencia/fibonacci-luz-guia.html"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-12 16:53
   text: "Nueva actualización de código en CelsoBib: Watchlist updated #code"
   link: https://github.com/ebenimeli/CelsoBib/commit/d67aae2c57efc76de59071c0bd5af0bee3a81db7
-  cat: 'code'
+  cat: "code"
 - timestamp: 2025-08-12 16:54
   text: "Intel está encajando un golpe con la capacidad de noquearla: su director general es sospechoso de vender secretos a China #status"
   link: "https://www.xataka.com/empresas-y-economia/intel-se-enfrenta-a-gran-amenaza-gobierno-eeuu-sospecha-que-su-director-general-aliado-china"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-12 16:27
   text: "Nueva actualización de código en CelsoBib: Bookshelf (next reading) updated #code #status"
   link: https://github.com/ebenimeli/CelsoBib/commit/2d45f852d84f831dba31be04c92f543b0fb2c830
-  cat: 'code'
+  cat: "code"
 - timestamp: 2025-08-12 16:09
   text: "La UME despliega un millar de efectivos para luchar contra la cadena de incendios que afecta a seis comunidades | España #urgent"
   link: "https://www.elmundo.es/espana/2025/08/12/689acbae1ee97cbdb6925e4b-directo.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-12 15:59
   text: "Nueva actualización de código en CelsoBib: Bookshelf now reading updated #code"
   link: https://github.com/ebenimeli/CelsoBib/commit/e5fe6c7bb2751ef825f43849a4bf86bfac9faafa
-  cat: 'code'
+  cat: "code"
 - timestamp: 2025-08-12 14:54
   text: "Nueva actualización de código en CelsoBib: Added Good Night (gn) icon to log page #code"
   link: https://github.com/ebenimeli/CelsoBib/commit/88bfb4a235a6b80c49086d8af81a5bf2d37fd24b
-  cat: 'code'
+  cat: "code"
 - timestamp: 2025-08-12 14:52
   text: "Nueva actualización de código en CelsoBib: Book info update (next): Los Austrias. El vuelo del águila #code"
   link: https://github.com/ebenimeli/CelsoBib/commit/58760e11fd624741e7b7f6a4ff90f165374b73b1
-  cat: 'code'
+  cat: "code"
 - timestamp: 2025-08-12 14:34
   text: "Nueva actualización de código en CelsoBib: Log format and style (left, margin) #code"
   link: https://github.com/ebenimeli/CelsoBib/commit/80912570d4bb6bdd35615c9952dafce8b8788e44
-  cat: 'code'
+  cat: "code"
 - timestamp: 2025-08-12 14:10
   text: "Nueva actualización de código en CelsoBib: Book information updated #code"
   link: https://github.com/ebenimeli/CelsoBib/commit/52a75ac699e643f5f5f16dbb3d3f42e26fd30f2a
-  cat: 'code'
+  cat: "code"
 - timestamp: 2025-08-12 13:57
   text: "Nueva actualización de código en CelsoBib: Python script ignored"
   link: https://github.com/ebenimeli/CelsoBib/commit/a6c4ee181cb2afb4a5511cdbe815ad618cd0342f
-  cat: 'code'
+  cat: "code"
 - timestamp: 2025-08-12 13:23
   text: "Nueva actualización de código en CelsoBib: Update .gitignore"
   link: https://github.com/ebenimeli/CelsoBib/commit/7c3eac21837f511af20a1aaeb8fae9bbfcf0d4ef
-  cat: 'code'
+  cat: "code"
 - timestamp: 2025-08-12 12:39
   text: "Nueva actualización de código en CelsoBib: Learn log icon"
   link: https://github.com/ebenimeli/CelsoBib/commit/185e66cb78fd9245d589a64ab2fc38d82e273552
-  cat: 'code'
+  cat: "code"
 - timestamp: 2025-08-12 10:56
   text: "La tesis doctoral de Marie Curie que lo cambió todo: así nació la era de la radiactividad"
   link: "https://www.muyinteresante.com/ciencia/tesis-de-marie-curie-que-cambio-todo.html"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-12 09:35
   text: "Interior declara la fase de preemergencia por los incendios que azotan varias comunidades #urgent"
   link: "https://www.abc.es/sociedad/interior-declara-fase-preemergencia-incendios-azotan-varias-20250812092933-nt.html#vca=fixed-btn&amp;vso=abces&amp;vmc=unknow&amp;vli=sociedad"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-12 09:32
   text: "Por aquí suena La Soledad de Laura Pausini #status"
   link: "https://www.shazam.com/track/10564224?referrer=share"
-  cat: 'music'
+  cat: "music"
 - timestamp: 2025-08-12 09:31
   text: "Segundo café del día. Necesario. #status"
   link: "https://mastodon.social/tags/coffee"
-  cat: 'coffee'
+  cat: "coffee"
 - timestamp: 2025-08-12 07:59
   text: "¡Buenos días! Vamos a por el martes. #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-08-12 00:35
   text: "Terminar el día con una buena historia… #status"
   link: "https://mastodon.social/tags/podcast"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2025-08-12 00:12
   text: "Una gran bola de fuego proveniente de basura espacial se deja ver en el sureste de España #urgent"
   link: "https://www.elmundo.es/ciencia-y-salud/2025/08/11/6899992be9cf4a8f548b4591-video.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-11 22:01
   text: "Viendo «Ola de crímenes» ... #status"
   link: "https://www.primevideo.com/detail/0RUNM26ILBLWRVYUBKWU9U40KZ/ref=atv_dp_share_cu_r"
-  cat: 'movie'
+  cat: "movie"
 - timestamp: 2025-08-11 19:00
   text: "BBVA continúa con la opa sobre el Sabadell pese a la venta de TSB y el macrodividendo #urgent"
   link: "https://www.abc.es/economia/bbva-continua-opa-sobre-sabadell-pese-venta-20250811182150-nt.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-11 18:42
   text: "Lecturas... #status"
   link: "https://www.ebenimeli.org/pages/bookshelf.html"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-11 18:26
   text: "Microsoft cree que diremos adiós al teclado y al ratón en 2030: esta es su visión del futuro y por qué nos genera dudas #read #status"
   link: "https://www.genbeta.com/windows/microsoft-cree-que-diremos-adios-al-teclado-al-raton-2030-esta-su-vision-futuro-que-nos-genera-dudas"
-  cat: ''
+  cat: ""
 - timestamp: 2025-08-11 17:53
   text: "Los usuarios que amamos a GPT-4o #read #status"
   link: "https://www.error500.net/p/los-usuarios-que-amamos-a-gpt-4o"
-  cat: ''
+  cat: ""
 - timestamp: 2025-08-11 08:57
   text: "El incendio que afecta al paraje natural de Las Médulas obliga a desalojar a 800 vecinos | España #urgent"
   link: "https://www.elmundo.es/espana/2025/08/11/68997d6221efa04c5e8b4572.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-10 19:21
   text: "Las tardes de domingo en verano... #status"
   link: "https://mastodon.social/tags/status"
-  cat: 'thought'
+  cat: "thought"
 - timestamp: 2025-08-10 18:48
   text: "Por si os lo habéis perdido: OpenAI lanza GPT-5, un esperado nuevo motor que le dará más personalidad a ChatGPT #status"
   link: "https://www.elmundo.es/tecnologia/creadores/2025/08/07/6894e317e85ecec3028b4590.html"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-10 18:39
   text: "💭 La vocación no se espera, la vocación se construye👉🏼  de @Yoriento"
   link: "https://open.substack.com/pub/motivadoresclub/p/como-motivar-tu-vida-profesional?r=po383&amp;utm_campaign=post&amp;utm_medium=web&amp;showWelcomeOnShare=false"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-08-10 18:32
   text: "Cuenta atrás para el eclipse del siglo en el observatorio más pequeño de España: &quot;Va a ser un momento crucial para poner en valor nuestros cielos&quot;"
   link: "https://www.elmundo.es/papel/historias/2025/08/10/6894db5321efa0f87d8b45c5.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-10 16:21
   text: "«Vivimos siempre juntos» • Lara Alcázar"
   link: "https://music.apple.com/es/album/vivimos-siempre-juntos/1248830424?i=1248831593"
-  cat: 'music'
+  cat: "music"
 - timestamp: 2025-08-10 16:14
   text: "Netanyahu explica ante la prensa su plan para tomar Gaza"
   link: "https://www.abc.es/internacional/directo-netanyahu-explica-ante-prensa-plan-tomar-20250810151348-nt.html"
-  cat: 'urgent'
+  cat: "urgent"
 - timestamp: 2025-08-10 14:09
   text: "Muere a los 97 años el astronauta Jim Lovell, el comandante del Apolo 13 que pronunció la famosa frase &quot;Houston, tenemos un problema&quot;"
   link: "https://www.elmundo.es/ciencia-y-salud/ciencia/2025/08/08/68965c2bfdddff22528b4575.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-08-10 13:30
   text: "Nadie Sabe Nada | Los mejores momentos de la temporada 12xE4"
   link: "https://podcasts.apple.com/es/podcast/nadie-sabe-nada/id665143133?i=1000721293888"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2025-08-10 11:42
   text: "📋 Ir al médico en otra comunidad autónoma y que no tengan tu historial es un problema: Mi Carpeta Ciudadana tiene la solución"
   link: "https://www.xatakamovil.com/aplicaciones/vas-al-medico-otra-comunidad-autonoma-puede-que-no-tengan-tu-historial-mi-carpeta-ciudadana-tiene-solucion"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-10 08:50
   text: "☀️ ¡Buenos días! Feliz domingo"
   link: "https://mastodon.social/tags/status"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-10 01:45
   text: "Clic."
   link: "https://mastodon.social/tags/status"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-10 00:20
   text: "Vamos con un podcast de Criminopatía."
   link: "https://mastodon.social/tags/status"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-10 00:06
   text: "Portada de EL MUNDO del domingo 10 de agosto de 2025 | Medios"
   link: "https://www.elmundo.es/television/medios/2025/08/09/6897b331e85ece89148b45ce.html"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-10 00:03
   text: "Nuevo post: «El tiempo es el que es»"
   link: "https://www.ebenimeli.org/cliptimer/"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-09 22:45
   text: "Viendo «Odio el verano» (2024)"
   link: "https://www.primevideo.com/detail/0LV1WBYZD4A1S7YIAPVO42JJJO/ref=atv_dp_share_cu_r"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-09 21:51
   text: "El tiempo es el que es: ClipTimer para medir y decidir"
   link: "https://www.ochoenpunto.com/el-tiempo-es-el-que-es-cliptimer-medir-decidir/"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-09 12:06
   text: "Escribiendo un par de cosillas..."
   link: "https://mastodon.social/tags/status"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-09 10:46
   text: "Incendio en la Mezquita de Córdoba: colapsa el techo de una de las capillas y es probable que se hunda otra"
   link: "https://www.abc.es/espana/andalucia/cordoba/incendio-mezquita-cordoba-colapsa-techo-capillas-probable-20250809092853-nts.html#vca=fixed-btn&amp;vso=abces&amp;vmc=unknow&amp;vli=espana"
-  cat: 'urgent'
+  cat: "urgent"
 - timestamp: 2025-08-09 09:23
   text: "La precuela de 'Outlander' llega por fin a la televisión: De qué va, cuándo se estrena y dónde ver"
   link: "https://hipertextual.com/cine-television/precuela-outlander-de-que-va-cuando-se-estrena-donde-ver/"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-09 08:16
   text: "¡Buenos días!"
   link: "https://mastodon.social/tags/status"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-09 02:12
   text: "Clic…"
   link: "https://mastodon.social/tags/status"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-09 00:36
   text: "Antonio Martínez Asensio presenta &quot;100 libros, una vida&quot;"
   link: "https://podcasts.apple.com/es/podcast/m%C3%A1s-de-uno/id983656582?i=1000721180876"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-09 00:11
   text: "No tan rápido, GPT-5: ChatGPT te permitirá seguir usando GPT-4o (por ahora)"
   link: "https://hipertextual.com/tecnologia/chatgpt-plus-gpt-4o-gpt-5/"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-08 23:43
   text: "Ya es tarde…"
   link: "https://mastodon.social/tags/status"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-08 22:55
   text: "Terminé de ver «La frontera». Miniserie recomendable: Año 1987. Un grupo disidente de la banda terrorista ETA planea atentar en París"
   link: "https://www.primevideo.com/detail/0HXNH26TZMLULS9GX6LNC3IK14/ref=atv_dp_share_cu_r"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-08 23:27
   text: "Es tarde…"
   link: ""
-  cat: ''
+  cat: ""
 - timestamp: 2025-08-08 22:36
   text: "Antonio Martínez Asensio presenta &quot;100 libros, una vida&quot;"
   link: "https://podcasts.apple.com/es/podcast/m%C3%A1s-de-uno/id983656582?i=1000721180876"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-08 22:11
   text: "No tan rápido, GPT-5: ChatGPT te permitirá seguir usando GPT-4o (por ahora)"
   link: "https://hipertextual.com/tecnologia/chatgpt-plus-gpt-4o-gpt-5/"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-08 20:57
   text: "Incendio en la Mezquita de Córdoba: los bomberos logran extinguir las llamas provocadas por una barredora"
   link: "https://www.abc.es/espana/andalucia/cordoba/incendio-mezquitacatedral-cordoba-bomberos-trabajan-extinguir-llamas-20250808214452-nts.html"
-  cat: 'urgent'
+  cat: "urgent"
 - timestamp: 2025-08-08 17:28
   text: "Ya tengo GPT-5 en el móvil, pero en la web sigue apareciendo la selección de modelos. Parece que OpenAI suele activar nuevas funciones antes en la app móvil"
   link: "https://openai.com/gpt-5/"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-08 16:56
   text: "What's New in Microsoft EDU webinar - August 2025 | Microsoft Community Hub"
   link: "https://techcommunity.microsoft.com/blog/educationblog/whats-new-in-microsoft-edu-webinar---august-2025/4441310"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-08 16:29
   text: "Viernes de sueño..."
   link: "https://mastodon.social/tags/status"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-08 15:58
   text: "Una empresa española impuso el reconocimiento facial para entrar a sus gimnasios. Resultado: multa de 96.000 euros"
   link: "https://www.xataka.com/legislacion-y-derechos/cadena-gimnasios-impuso-reconocimiento-facial-para-entrar-a-sus-locales-resultado-multa-96-000-euros?utm_source=genbeta&amp;utm_medium=network&amp;utm_campaign=repost"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-08 15:24
   text: "Viendo la presentación de GPT-5 de @OpenAI con el análisis de @DotCSV"
   link: "https://www.youtube.com/watch?v=JxIVgWQSv_c"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-08 13:40
   text: "GPT-5 elimina la característica que más odiabas de ChatGPT"
   link: "https://hipertextual.com/tecnologia/gpt-5-chatgpt-elimina-adulacion-respuestas/"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-08 13:31
   text: "Un astrofísico dice que podremos hacer un viaje como el de 'Inerstellar' en pocos años"
   link: "https://hipertextual.com/ciencia/viajar-agujero-negro-interstellar/"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-08 13:15
   text: "Qué hace GPT-5 en función de lo que estés dispuesto a pagar: un esquema para entender lo nuevo de OpenAI en ChatGPT"
   link: "https://www.xataka.com/robotica-e-ia/que-hace-gpt-5-funcion-que-estes-dispuesto-a-pagar-esquema-para-entender-nuevo-openai-chatgpt/amp"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-08 13:11
   text: "La ola de calor aumenta su duración en España: la Aemet da nueva fecha en otro aviso especial"
   link: "https://www.abc.es/sociedad/ola-calor-aumenta-duracion-espana-aemet-nueva-20250808143750-nt.html#vca=fixed-btn&amp;vso=abces&amp;vmc=unknow&amp;vli=sociedad"
-  cat: 'urgent'
+  cat: "urgent"
 - timestamp: 2025-08-08 12:50
   text: "El Ejército de Israel se prepara para la invasión terrestre de Gaza"
   link: "https://www.abc.es/internacional/ejercito-israel-prepara-invasion-terrestre-gaza-20250808112147-nt.html"
-  cat: 'urgent'
+  cat: "urgent"
 - timestamp: 2025-08-08 12:46
   text: "Últimas publicaciones en blogs y boletines"
   link: "https://www.ebenimeli.org/pages/newsletter.html"
-  cat: 'status'
+  cat: "status"
 - timestamp: 2025-08-06 22:30
   text: "Viendo «La frontera» E1.E3 · Traición. Una miniserie interesante. En Amazon Prime."
   link: https://www.imdb.com/es-es/title/tt37039125/?ref_=ttep_ep_3
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2025-08-06 21:00
   text: "He creado una nueva sección con recomendaciones"
   link: https://www.ebenimeli.org/pages/shop.html
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2025-08-06 17:30
   text: "La Aemet lanza un nuevo aviso especial por la ola de calor en España: hasta cuándo durará y zonas a las que más afectará"
   link: https://www.abc.es/sociedad/aemet-lanza-nuevo-aviso-especial-alarga-ola-20250806144927-nt.html
-  cat: 'urgent'
+  cat: "urgent"
 
 - timestamp: 2025-08-06 13:00
   text: "Los accionistas del Sabadell aprueban la venta de TSB y BBVA decidirá ahora si retira la opa"
   link: https://www.abc.es/economia/accionistas-sabadell-aprueban-venta-tsb-bbva-decidira-20250806110648-nt.html
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2025-08-06 00:10
   text: "Buenas noches..."
-  link: 
-  cat: 'status'
+  link:
+  cat: "status"
 
 - timestamp: 2025-08-05 22:57
   text: "Viendo «La frontera» (2025) · T1.E1 · Miedo"
   link: https://www.imdb.com/es-es/title/tt36412591/
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2025-08-05 22:00
   text: "Viendo «La frontera: el documental»"
   link: https://www.primevideo.com/-/es/detail/La-Frontera-El-Documental/0KXDM0QCFFBIAT519VJQQWJMM6
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2025-08-05 20:10
   text: "Un incendio forestal en Tarifa obliga a desalojar un cámping y chiringuitos como el Tumbao"
   link: https://www.elmundo.es/andalucia/2025/08/05/68922d05fc6c8359678b457e.html
-  cat: 'urgent'
+  cat: "urgent"
 
 - timestamp: 2025-08-05 14:00
   text: "Netanyahu anuncia su intención de ocupar toda Gaza, incluidas las zonas donde hay rehenes"
   link: https://www.abc.es/internacional/netanyahu-anuncia-intencion-ocupar-gaza-incluidas-zonas-20250805082104-nt.html
-  cat: 'urgent'
+  cat: "urgent"
 
 - timestamp: 2025-08-05 13:49
   text: "¡Nueva nota al vuelo! 👉🏼 Un verano especial"
   link: https://notasalvuelo.substack.com/p/un-verano-especial
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2025-07-29 13:00
   text: "¡Nueva nota al vuelo! 👉🏼 Un mono distraído"
   link: https://notasalvuelo.substack.com/p/un-mono-distraido
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2025-07-28 20:00
   text: "¿Cuándo entra en vigor? ¿Quiénes podrían acogerse?: las claves del permiso por maternidad y paternidad que el Gobierno aprueba este martes"
   link: https://www.elmundo.es/espana/2025/07/28/68879705fc6c83c7668b45a4.html
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2025-07-22 08:00
   text: "Boletín #9: Una mente perezosa, una revancha histórica y un apagón general (#9)"
   link: https://ebenimeli.substack.com/p/una-mente-perezosa-una-revancha-historica
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2025-05-29 21:30
   text: "¡Nueva nota al vuelo! 👉🏼 Un cero energético"
   link: https://notasalvuelo.substack.com/p/un-cero-energetico
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2025-05-24 21:30
   text: "¡Nueva nota al vuelo! 👉🏼 Una mente perezosa"
   link: https://notasalvuelo.substack.com/p/una-mente-perezosa
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2025-04-21 12:30
   text: "Muere el Papa Francisco a los 88 años"
   link: https://www.abc.es/sociedad/muere-papa-francisco-anos-20250421100024-nt.html
-  cat: 'urgent'
+  cat: "urgent"
 
 - timestamp: 2025-04-21 14:30
   text: "Notas al vuelo: Una lectura exigente"
   link: https://notasalvuelo.substack.com/p/una-lectura-exigente
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2025-04-20 22:00
   text: "Notas al vuelo: Una biblioteca personal"
   link: https://notasalvuelo.substack.com/p/una-biblioteca-personal
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2024-11-13 10:12
   text: "DIRECTO | Última hora de la DANA en Valencia"
   link: https://www.lasprovincias.es/comunitat/directo-ultima-hora-dana-valencia-20241113082948-di.html
-  cat: 'urgent'
+  cat: "urgent"
 
 - timestamp: 2024-04-04 15:00
   text: "Boletín #4: «Innovación educativa sin pantallas, los supermercados del futuro y un libro jamás leído»"
   link: https://ebenimeli.substack.com/p/innovacion-educativa-sin-pantallas
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2024-03-31 15:00
   text: "Innovación educativa sin pantallas, los supermercados del futuro y un libro jamás leído (#4)"
   link: https://ebenimeli.substack.com/p/innovacion-educativa-sin-pantallas
-  cat: 'write'
+  cat: "write"
 
 - timestamp: 2024-02-29 15:00
   text: "La historia del ordenador, un poema sin IA y un rey atrapado (#3)"
   link: https://ebenimeli.substack.com/p/la-historia-del-ordenador-un-poema
-  cat: 'write'
+  cat: "write"
 
 - timestamp: 2024-02-15 15:00
   text: "Rubik educativo, un sapo con escudo y una reina roja (#2)"
   link: https://ebenimeli.substack.com/p/rubik-educativo-un-sapo-con-escudo
-  cat: 'write'
+  cat: "write"
 
 - timestamp: 2024-01-30 14:00
   text: "Algoritmos para todos, letras digitales y unos hombres buenos (#1)"
   link: https://ebenimeli.substack.com/p/algoritmos-para-todos-letras-digitales
-  cat: 'write'
+  cat: "write"
 
 - timestamp: 2024-01-24 19:00
   text: "Nuevo post: «Automatización con Power Automate: cómo transformar publicaciones de Teams en tareas de Microsoft To Do»"
   link: https://www.ochoenpunto.com/automatizacion-powerautomate-teams-tareas-microsoft-to-do/
-  cat: 'write'
+  cat: "write"
 
 - timestamp: 2024-01-22 19:00
   text: "«We ALL depend on technology to communicate, to bank, and none of us know how to read and write code. It’s important for these kids, right now, starting at 8 years old, to read and write code.»"
   link: https://twitter.com/codeorg/status/1749129795126931871
-  cat: 'quote'
+  cat: "quote"
 
 - timestamp: 2024-01-21 14:00
   text: "Nuevo post: «Gestión de tareas: ¿integral o por ámbitos? Mi experiencia con Microsoft To Do»"
   link: https://www.ochoenpunto.com/gestion-tareas-integral-ambitos-experiencia-microsoft-to-do/
-  cat: 'write'
+  cat: "write"
 
 - timestamp: 2024-01-19 14:00
   text: "Terminando de leer «Hombres buenos» de Arturo Pérez-Reverte"
   link: https://amzn.to/3HrvoCL
-  cat: 'read'
+  cat: "read"
 
 - timestamp: 2023-10-29 07:15
   text: "Cronovisor: Antoni Gaudí, el arquitecto revolucionario"
   link: https://podcasts.apple.com/es/podcast/cronovisor-antoni-gaud%C3%AD-el-arquitecto-revolucionario/id356329864?i=1000632955665
-  cat: 'podcast'
+  cat: "podcast"
 
 - timestamp: 2023-09-09 09:07
   text: "Al menos 1.037 muertos y 1.204 heridos en un terremoto de magnitud 7 en Marruecos"
   link: https://www.elmundo.es/internacional/2023/09/09/64fbb2aefdddff3fb48b458e.html
-  cat: 'news'
+  cat: "news"
 
 - timestamp: 2023-09-08 08:00
   text: "Nuevo post: «31 consejos TIC para un primer día de clase sin sorpresas»"
   link: https://www.ochoenpunto.com/31-consejos-tic-profesores-checklist-primer-dia-clase/
-  cat: 'writing'
+  cat: "writing"
 
 - timestamp: 2023-09-03 07:00
   text: "Nuevo post: «Entradillas en el blog: WordPress excerpt»"
   link: https://www.ebenimeli.org/entradillas-8am
-  cat: 'writing'
+  cat: "writing"
 
 - timestamp: 2023-09-02 08:00
   text: "Viendo «Parot»: El Traslado (S01E04)"
   link: https://www.ebenimeli.org/parot-serie/
-  cat: 'movies'
+  cat: "movies"
 
 - timestamp: 2023-08-29 15:30
   text: "Partida de ajedrez del 29 de agosto. Gano con negras."
   link: https://twitter.com/enriquebenimeli/status/1696521108055556309
-  cat: 'chess'
+  cat: "chess"
 
 - timestamp: 2023-08-25 08:00
   text: "Nuevo artículo en el blog: «Herramientas, métodos y enfoque»"
   link: https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/
-  cat: 'writing'
+  cat: "writing"
 
 - timestamp: 2023-08-23 20:15
   text: "La India conquista el polo sur de la Luna"
   link: https://www.elmundo.es/ciencia-y-salud/ciencia/2023/08/23/64e5fabae85ece7b248b4589.html
-  cat: 'news'
+  cat: "news"
 
 - timestamp: 2023-08-22 20:15
   text: "El Rey designa a Alberto Núñez Feijóo como candidato a la Presidencia del Gobierno"
   link: https://www.abc.es/espana/rey-candidato-investidura-20230822192405-nt.html
-  cat: 'news'
+  cat: "news"
 
 - timestamp: 2023-08-20 14:30
   text: "España se proclama campeona del mundo de fútbol femenino"
   link: https://www.elmundo.es/deportes/futbol/futbol-femenino/mundial/2023/08/20/64e20587fdddfff9058b45b8.html
-  cat: 'news'
+  cat: "news"
 
 - timestamp: 2023-08-15 20:40
   text: "España gana 2-1 a Suecia y jugará la final del Mundial Femenino de fútbol"
   link: https://www.elmundo.es/deportes/futbol/2023/08/15/64db4eeffc6c83d64f8b456d.html
-  cat: 'news'
+  cat: "news"
 
 - timestamp: 2023-07-16 18:00
   text: "Carlos Alcaraz gana Wimbledon: 1-6, 7-6 (6), 6-1, 3-6 y 6-4"
   link: https://www.elmundo.es/deportes/tenis/wimbledon/2023/07/16/64b3d42be9cf4a7a118b456f.html
-  cat: 'news'
+  cat: "news"
 
 - timestamp: 2023-07-12 11:15
   text: "Hoy es el último día de PrimeDay y no os voy a recomendar cacharros que nunca usaréis. Mejor os dejo algunas recomendaciones de libros 👉🏼 📚"
   link: https://www.ebenimeli.org/pages/bookshelf.html
-  cat: 'news'
+  cat: "news"
 
 - timestamp: 2023-07-05 18:52
   text: "Cuenta atrás..."
   link: https://www.ebenimeli.org/pages/log.html
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2023-06-10 08:00
   text: "Intenso fin de semana me espera :)"
   link: https://www.ebenimeli.org/pages/log.html
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2023-05-29 11:25
   text: "Pedro Sánchez adelanta las elecciones generales al 23 de julio."
   link: https://www.abc.es/espana/pedro-sanchez-adelanta-elecciones-generales-julio-20230529112125-nt.html
-  cat: 'urgent'
+  cat: "urgent"
 
 - timestamp: 2023-05-29 07:50
   text: "Vamos con el lunes. ¡Y a por una semana productiva!"
   link: https://www.ebenimeli.org/
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2023-05-28 13:55
   text: "Según la ley electoral, el sobre se entrega al Presidente, que es quien lo deposita. En anteriores elecciones recuerdo haberlo introducido yo. Hoy, no nos han dejado. Pero en otras mesas, se permite."
   link: https://twitter.com/enriquebenimeli/status/1662751987966853121
-  cat: 'thought'
+  cat: "thought"
 
 - timestamp: 2023-05-28 12:17
   text: "Muere Antonio Gala"
   link: https://www.elmundo.es/cultura/literatura/2023/05/28/64732a2321efa0d8108b4571.html
-  cat: 'urgent'
+  cat: "urgent"
 
 - timestamp: 2023-05-24 21:59
   text: "Leyendo «España y su herencia invisible» de José Carlos Gracia. Cuarta parte: «Somos herederos»"
   link: https://www.ebenimeli.org/pages/bookshelf.html
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2023-05-24 19:05
   text: "Revisión GTD diaria completada"
   link: https://www.ochoenpunto.com/10-beneficios-gtd-no-iniciados-metodo/
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2023-05-24 05:39
   text: "Regla n.º 1: «Una cosa detrás de otra»"
   link: https://twitter.com/ValaAfshar/status/1661151603876073481
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2023-05-23 07:20
   text: "Algunos centros de la Comunidad Valenciana cancelan su actividad docente."
   link: https://twitter.com/gvaeducacio/status/1660750103945117696
-  cat: 'urgent'
+  cat: "urgent"
 
 - timestamp: 2023-05-22 22:26
   text: "Leyendo el capítulo sobre Atapuerca del libro «España y su herencia invisible». José Carlos Gracia recuerda su visita al yacimiento que tuvo oportunidad de grabar para su podcast."
   link: https://memoriasdeuntambor.com/atapuerca-la-montana-magica
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2023-05-22 21:51
   text: "Por cierto, Notion está disponible en español desde hace casi un mes."
   link: https://twitter.com/notionhq/status/1651558523359338496?s=46
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2023-05-22 21:01
   text: "¿Recordáis la serie «Periodistas»? Pues las 9 temporadas están disponibles en Prime Video."
   link: https://www.primevideo.com/detail/Periodistas/0M6ZQZC968OM6IO6FMCH79SEN9
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2023-05-22 19:33
   text: "Momento de lectura..."
   link: https://amzn.to/3MPq0wG
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 2023-05-22 07:45
   text: "☔️ Feliz lunes pasado por agua"
   link: http://www.ebenimeli.org/pages/log.html
-  cat: 'status'
+  cat: "status"
 
 - timestamp: 20/05/2023, 18:33:00 AM
   text: "Con este artículo, empiezo la serie de buenas prácticas para una comunicación digital más efectiva. En este decálogo trataré el exceso o la falta de comunicación, los canales inadecuados, las prioridades equivocadas, la duplicidad de la información o los tiempos incorrectos. Este último parece un buen punto de partida: «Cuando la hora importa»"
@@ -2672,7 +2660,6 @@
   text: "Imaginando un GTD remasterizado y sin ruido. Lo que llega de la mano de OPTIMA GTD tiene muy buena pinta."
   link: https://optimainfinito.com/2022/10/imagina-un-gtd-remasterizado-y-sin-ruido.html
   cat: productivity
-
 
 - timestamp: 10/29/2022, 09:26:00 AM
   text: "Hay una aplicación que permite resolver el cubo de Rubik, pero claro, no es lo mismo..."
