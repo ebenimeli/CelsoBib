@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: idx
 ---
 
 <div class="post-container">{% include marquee.html %}</div>
