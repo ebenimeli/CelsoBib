@@ -1,0 +1,861 @@
+<div
+  id="guesswords-embed"
+  role="group"
+  tabindex="-1"
+  aria-label="Juego: Guess Words"
+>
+  <style>
+    /* ===== Ocupa todo el ancho y rompe grids externos ===== */
+    #guesswords-embed {
+      grid-area: 1 / 1 / -1 / -1 !important;
+      grid-column: 1 / -1 !important;
+      grid-row: 1 / -1 !important;
+      place-self: stretch stretch !important;
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0;
+      padding: 0;
+      container-type: inline-size;
+      display: block;
+    }
+
+    /* ===== Estilos propios (namespaced) ===== */
+    #guesswords-embed .frame {
+      width: 100%;
+      background: var(--c-bg, #fff);
+      border: 1px solid var(--c-border, #e6e6e6);
+      border-radius: 12px;
+      position: relative;
+      padding: 10px 10px 14px;
+      color: var(--c-text, #222);
+      box-shadow: 0 8px 24px color-mix(in oklab, black 6%, transparent);
+    }
+
+    #guesswords-embed .topbar {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    #guesswords-embed .left {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    #guesswords-embed .select,
+    #guesswords-embed .btn {
+      font: inherit;
+      color: var(--c-text, #222);
+      background: color-mix(in oklab, white 88%, transparent);
+      border: 1px solid var(--c-border, #ddd);
+      border-radius: 10px;
+      padding: 6px 10px;
+    }
+
+    #guesswords-embed .select {
+      color: #000 !important;
+    }
+
+    #guesswords-embed .btn {
+      cursor: pointer;
+      background: var(--c-bg, #fff);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    #guesswords-embed .btn.primary {
+      background: var(--c-accent, #2563eb);
+      color: #fff;
+      border-color: color-mix(in oklab, var(--c-accent, #2563eb) 70%, black);
+    }
+    #guesswords-embed .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    #guesswords-embed .score {
+      font-variant-numeric: tabular-nums;
+      font-weight: 700;
+    }
+
+    #guesswords-embed .emoji-wrap {
+      text-align: center;
+      font-size: clamp(36px, 8cqi, 64px);
+      line-height: 1.1;
+      margin: 6px 0 8px;
+      user-select: none;
+    }
+
+    #guesswords-embed .board {
+      display: grid;
+      gap: 8px;
+      margin-top: 6px;
+      width: 100%;
+    }
+    /* Una sola línea por intento; scroll si no cabe */
+    #guesswords-embed .row {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 2px;
+      width: 100%;
+    }
+    #guesswords-embed .row.hidden {
+      display: none;
+    }
+    #guesswords-embed .row::-webkit-scrollbar {
+      height: 6px;
+    }
+    #guesswords-embed .row::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 4px;
+    }
+
+    #guesswords-embed .cell {
+      width: clamp(28px, 6cqi, 44px);
+      height: clamp(36px, 8cqi, 54px);
+      border: 1px solid var(--c-border, #e1e1e1);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: clamp(16px, 3.4cqi, 22px);
+      background: #fff;
+      transition: transform 0.06s ease, background 0.2s ease, color 0.2s ease,
+        border-color 0.2s ease;
+      user-select: none;
+      text-transform: uppercase; /* siempre en mayúsculas */
+      letter-spacing: 0.02em;
+      color: #000;
+    }
+    @media (prefers-color-scheme: dark) {
+      #guesswords-embed .cell {
+        background: color-mix(in oklab, white 6%, transparent);
+      }
+    }
+    .cell.fill {
+      transform: scale(1.03);
+    }
+
+    /* Verificación: solo verde/rojo (persisten) */
+    #guesswords-embed .cell.ok {
+      background: #16a34a !important;
+      color: #fff !important;
+      border-color: transparent !important;
+    }
+    #guesswords-embed .cell.bad {
+      background: #ef4444 !important;
+      color: #fff !important;
+      border-color: transparent !important;
+    }
+
+    /* Marca opcional para pistas */
+    #guesswords-embed .cell.hint {
+      box-shadow: 0 0 0 2px
+        color-mix(in oklab, var(--c-accent, #2563eb) 40%, transparent) inset;
+    }
+
+    #guesswords-embed .controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    #guesswords-embed .meta {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 8px;
+      opacity: 0.85;
+      font-size: 0.95rem;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    #guesswords-embed .status {
+      text-align: center;
+      min-height: 1.2em;
+      margin-top: 6px;
+    }
+
+    /* SR-only */
+    #guesswords-embed .sr-only {
+      position: absolute !important;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Input oculto para móviles / composición */
+    #guesswords-embed .kbd-capture {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+      height: 0;
+      width: 0;
+    }
+  </style>
+
+  <div class="frame">
+    <div class="topbar">
+      <div class="left">
+        <label for="gw-collection" class="sr-only">Colección</label>
+        <select id="gw-collection" class="select" title="Colección"></select>
+
+        <button
+          id="gw-reload"
+          class="btn"
+          title="Recargar colección"
+          aria-label="Recargar"
+        >
+          ↻
+        </button>
+      </div>
+      <div class="right">
+        <span class="score" id="gw-score">Puntos: 000</span>
+      </div>
+    </div>
+
+    <div class="emoji-wrap" id="gw-emojis" aria-live="polite">📚✨🎭</div>
+
+    <div
+      class="board"
+      id="gw-board"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+
+    <div class="controls">
+      <!-- Botón Pista, a la izquierda de Verificar -->
+      <button
+        id="gw-hint"
+        class="btn"
+        title="Mostrar una letra (pista)"
+        aria-label="Pista"
+      >
+        💡 Pista
+      </button>
+
+      <button
+        id="gw-check"
+        class="btn primary"
+        title="Verificar (Enter)"
+        aria-label="Verificar"
+      >
+        ✔ Verificar
+      </button>
+      <button id="gw-backspace" class="btn" title="Borrar" aria-label="Borrar">
+        ⌫
+      </button>
+      <button
+        id="gw-skip"
+        class="btn"
+        title="Saltar palabra"
+        aria-label="Saltar"
+      >
+        ⏭ Siguiente
+      </button>
+    </div>
+
+    <div class="meta">
+      <span id="gw-progress-items">0 / 0</span>
+      <span id="gw-attempts">Intento 1 de 5</span>
+    </div>
+
+    <div class="status" id="gw-status" aria-live="polite"></div>
+
+    <!-- Input fantasma para composición (acentos/IME) -->
+    <input
+      id="gw-ghost"
+      class="kbd-capture"
+      type="text"
+      autocapitalize="none"
+      autocomplete="off"
+      spellcheck="false"
+      autofocus
+    />
+  </div>
+
+  <script>
+    (() => {
+      const root = document.getElementById("guesswords-embed");
+      if (!root || root.__mounted) return;
+      root.__mounted = true;
+
+      /* ===== Config ===== */
+      const COLLECTION_FILES = ["assets/students/data/elemquim.txt"];
+      const MAX_ATTEMPTS = 5;
+      const pointsForAttempt = (i) => Math.max(1, MAX_ATTEMPTS + 1 - i);
+
+      // Normaliza comillas/apóstrofos a un único carácter para aceptar ’ ‘ ' ` ´ ‛ ′ ＇
+      const QUOTE_EQUIV = /['’‘`´‛′＇]/g; // U+0027,U+2019,U+2018,U+0060,U+00B4,U+201B,U+2032,U+FF07
+      const norm = (s) =>
+        (s ?? "").normalize("NFC").replace(QUOTE_EQUIV, "'").toLowerCase();
+
+      /* ===== Estado ===== */
+      const state = {
+        collectionPath: null,
+        collectionTitle: "",
+        items: [],
+        index: 0,
+        attempt: 1,
+        cursorPos: 0,
+        score: 0,
+        solved: false,
+        hintsUsed: 0, // pistas usadas en la fila actual
+        hintedIdxs: new Set(), // índices revelados por pista en la fila actual
+      };
+
+      /* ===== DOM ===== */
+      const $ = (sel) => root.querySelector(sel);
+      const $collection = $("#gw-collection");
+      const $reload = $("#gw-reload");
+      const $emojis = $("#gw-emojis");
+      const $board = $("#gw-board");
+      const $check = $("#gw-check");
+      const $skip = $("#gw-skip");
+      const $backspace = $("#gw-backspace");
+      const $score = $("#gw-score");
+      const $progressItems = $("#gw-progress-items");
+      const $attempts = $("#gw-attempts");
+      const $status = $("#gw-status");
+      const $ghost = $("#gw-ghost");
+      const $hint = $("#gw-hint");
+
+      /* ===== Colecciones ===== */
+      async function buildCollectionSelect() {
+        $collection.innerHTML = "";
+        for (const path of COLLECTION_FILES) {
+          let title = path.split("/").pop().replace(".txt", "");
+          try {
+            const txt = await (await fetch(path, { cache: "no-store" })).text();
+            const first = (txt.split(/\r?\n/)[0] || "").trim();
+            if (first) title = first;
+          } catch (e) {
+            console.warn("No se pudo leer título de", path, e);
+          }
+          const opt = document.createElement("option");
+          opt.value = path;
+          opt.textContent = title;
+          $collection.appendChild(opt);
+        }
+      }
+
+      async function loadCollection(path) {
+        const res = await fetch(path, { cache: "no-store" });
+        if (!res.ok) throw new Error("No se pudo cargar " + path);
+        const raw = await res.text();
+        const lines = raw
+          .split(/\r?\n/)
+          .map((s) => s.trim())
+          .filter(Boolean);
+        const title = lines.shift() || "Colección";
+        const items = lines
+          .map((line) => {
+            const idx = line.indexOf(";");
+            if (idx === -1) return null;
+            const emojis = line.slice(0, idx).trim();
+            const title = line.slice(idx + 1).trim();
+            return { emojis, title };
+          })
+          .filter(Boolean);
+        return { title, items };
+      }
+
+      function storageKey(path) {
+        return "emojiGuess:" + path;
+      }
+      function loadScore(path) {
+        try {
+          const raw = localStorage.getItem(storageKey(path));
+          if (!raw) return 0;
+          const data = JSON.parse(raw);
+          return Number.isFinite(data.score) ? data.score : 0;
+        } catch {
+          return 0;
+        }
+      }
+      function saveScore(path, score) {
+        try {
+          localStorage.setItem(storageKey(path), JSON.stringify({ score }));
+        } catch {}
+      }
+
+      /* ===== Util ===== */
+      function shuffle(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = (Math.random() * (i + 1)) | 0;
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+      }
+      function randomPick(arr) {
+        if (!arr.length) return -1;
+        const j = (Math.random() * arr.length) | 0;
+        return arr[j];
+      }
+      function titleChars() {
+        return Array.from(state.items[state.index].title.normalize("NFC"));
+      }
+      function currentRow() {
+        return $board.querySelector('.row[data-row="' + state.attempt + '"]');
+      }
+      function focusKeyboard() {
+        $ghost.value = "";
+        $ghost.focus({ preventScroll: true });
+      }
+
+      /* ===== Pistas (sin colisiones por intento) ===== */
+      function maxHintsThisRow() {
+        // Un tercio redondeado, mínimo 1
+        const len = titleChars().length;
+        return Math.max(1, Math.round(len / 3));
+      }
+      function firstEmptyCellIndex(rowEl) {
+        const cells = Array.from(rowEl.children);
+        return cells.findIndex((c) => !c.textContent);
+      }
+      function candidateHintIndexes() {
+        const len = titleChars().length;
+        const out = [];
+        for (let i = 0; i < len; i++) {
+          if (!state.hintedIdxs.has(i)) out.push(i);
+        }
+        return out;
+      }
+      function updateHintUI() {
+        const maxH = maxHintsThisRow();
+        const candidates = candidateHintIndexes();
+        const disabled =
+          state.solved || state.hintsUsed >= maxH || candidates.length === 0;
+
+        if ($hint) {
+          $hint.disabled = disabled;
+          const restByCap = Math.max(0, maxH - state.hintsUsed);
+          const restBySlots = Math.max(0, candidates.length);
+          const rest = Math.min(restByCap, restBySlots);
+          $hint.title = disabled
+            ? "Sin pistas disponibles en este intento"
+            : `Mostrar una letra (quedan ${rest} pista(s) en este intento)`;
+        }
+      }
+      function revealHint() {
+        if (state.solved) return;
+        const rowEl = currentRow();
+        if (!rowEl) return;
+
+        const target = titleChars();
+        const maxH = maxHintsThisRow();
+
+        if (state.hintsUsed >= maxH) {
+          $status.textContent = "No quedan pistas en este intento.";
+          updateHintUI();
+          return;
+        }
+
+        const candidates = candidateHintIndexes();
+        if (candidates.length === 0) {
+          $status.textContent = "No quedan posiciones disponibles para pistas.";
+          updateHintUI();
+          return;
+        }
+
+        const idx = randomPick(candidates);
+
+        setCellChar(rowEl, idx, target[idx]);
+        const cell = rowEl.children[idx];
+        if (cell) {
+          cell.classList.remove("ok", "bad");
+          cell.classList.add("hint");
+          cell.classList.add("fill");
+          setTimeout(() => cell.classList.remove("fill"), 80);
+        }
+
+        state.hintedIdxs.add(idx);
+        state.hintsUsed += 1;
+
+        const emptyIdx = firstEmptyCellIndex(rowEl);
+        if (emptyIdx >= 0) state.cursorPos = emptyIdx;
+
+        $status.textContent = `Pista usada: ${state.hintsUsed}/${maxH}`;
+        updateHintUI();
+      }
+
+      /* ===== Filas ocultas de inicio ===== */
+      function buildAllRows(tChars) {
+        $board.innerHTML = "";
+        for (let r = 1; r <= MAX_ATTEMPTS; r++) {
+          const row = document.createElement("div");
+          row.className = "row" + (r === 1 ? "" : " hidden");
+          row.setAttribute("data-row", String(r));
+          for (let c = 0; c < tChars.length; c++) {
+            const cell = document.createElement("div");
+            cell.className = "cell";
+            row.appendChild(cell);
+          }
+          $board.appendChild(row);
+        }
+      }
+
+      /* ===== Ronda ===== */
+      function setupRound() {
+        const item = state.items[state.index];
+        if (!item) return endCollection();
+
+        state.attempt = 1;
+        state.cursorPos = 0;
+        state.solved = false;
+        state.hintsUsed = 0;
+        state.hintedIdxs = new Set(); // reset set de pistas por intento
+
+        $emojis.textContent = item.emojis || "❓";
+        $status.textContent = "";
+
+        const tChars = titleChars();
+        buildAllRows(tChars);
+        refreshMeta();
+        updateHintUI();
+        focusKeyboard();
+      }
+
+      function refreshMeta() {
+        $score.textContent = "Puntos: " + String(state.score).padStart(3, "0");
+        $progressItems.textContent =
+          state.index + 1 + " / " + state.items.length;
+        $attempts.textContent =
+          "Intento " + state.attempt + " de " + MAX_ATTEMPTS;
+      }
+
+      function endCollection() {
+        $emojis.textContent = "🎉";
+        $board.innerHTML = "";
+        $status.textContent =
+          "¡Colección completada! Puntuación total: " + state.score;
+        refreshMeta();
+        updateHintUI();
+      }
+
+      /* ===== Escritura y navegación ===== */
+      function setCellChar(rowEl, index, ch) {
+        const cell = rowEl.children[index];
+        if (!cell) return;
+        cell.textContent = ch.toUpperCase(); // conserva tildes/ñ
+        cell.classList.add("fill");
+        setTimeout(() => cell.classList.remove("fill"), 80);
+      }
+      function clearCellChar(rowEl, index) {
+        const cell = rowEl.children[index];
+        if (!cell) return;
+        cell.textContent = "";
+        cell.classList.remove("ok", "bad", "hint");
+      }
+
+      function moveCursor(delta) {
+        const chars = titleChars();
+        let i = state.cursorPos + delta;
+        if (i < 0) i = 0;
+        if (i >= chars.length) i = chars.length - 1;
+        state.cursorPos = i;
+      }
+
+      function rowFilled(rowEl) {
+        return Array.from(rowEl.children).every(
+          (cell) => cell.textContent && cell.textContent.length > 0
+        );
+      }
+
+      function readRowGuess(rowEl) {
+        return Array.from(rowEl.children)
+          .map((cell) => cell.textContent || "")
+          .join("");
+      }
+
+      function handleCharInput(ch) {
+        if (state.solved) return;
+        const rowEl = currentRow();
+        if (!rowEl) return;
+        const chars = titleChars();
+
+        if (!rowEl.children[state.cursorPos]) return;
+        if (!ch || ch === "\n") return;
+
+        const units = Array.from(ch.normalize("NFC"));
+        for (const g of units) {
+          setCellChar(rowEl, state.cursorPos, g);
+          if (state.cursorPos < chars.length - 1) {
+            state.cursorPos += 1;
+          } else {
+            break;
+          }
+        }
+      }
+
+      function handleBackspace() {
+        if (state.solved) return;
+        const rowEl = currentRow();
+        if (!rowEl) return;
+
+        const cell = rowEl.children[state.cursorPos];
+        if (cell && cell.textContent) {
+          clearCellChar(rowEl, state.cursorPos);
+        } else if (state.cursorPos > 0) {
+          state.cursorPos -= 1;
+          clearCellChar(rowEl, state.cursorPos);
+        }
+      }
+
+      function handleDelete() {
+        if (state.solved) return;
+        const rowEl = currentRow();
+        if (!rowEl) return;
+        clearCellChar(rowEl, state.cursorPos);
+      }
+
+      /* ===== Verificación ===== */
+      function verify() {
+        if (state.solved) return;
+        const rowEl = currentRow();
+        if (!rowEl) return;
+
+        if (!rowFilled(rowEl)) {
+          $status.textContent =
+            "Completa todas las casillas antes de verificar.";
+          return;
+        }
+        const target = titleChars();
+        const guessRaw = readRowGuess(rowEl);
+        const guess = Array.from(guessRaw.normalize("NFC"));
+
+        for (let i = 0; i < target.length; i++) {
+          const cell = rowEl.children[i];
+          const ok = norm(guess[i]) === norm(target[i]);
+          cell.classList.toggle("ok", ok);
+          cell.classList.toggle("bad", !ok);
+        }
+
+        const solved = norm(guessRaw) === norm(state.items[state.index].title);
+        if (solved) {
+          state.solved = true;
+          const pts = pointsForAttempt(state.attempt);
+          state.score += pts;
+          if (state.collectionPath)
+            saveScore(state.collectionPath, state.score);
+          $status.textContent = "¡Correcto! +" + pts + " puntos";
+        } else {
+          if (state.attempt >= MAX_ATTEMPTS) {
+            $status.textContent =
+              "Sin intentos. Era: “" + state.items[state.index].title + "”";
+            state.solved = true;
+          } else {
+            const nextRow = $board.querySelector(
+              '.row[data-row="' + (state.attempt + 1) + '"]'
+            );
+            if (nextRow) nextRow.classList.remove("hidden");
+            state.attempt++;
+            state.cursorPos = 0;
+            state.hintsUsed = 0; // reset pistas
+            state.hintedIdxs = new Set(); // reset índices usados para pista
+            $status.textContent = "Sigue intentando…";
+          }
+        }
+        refreshMeta();
+        updateHintUI();
+      }
+
+      /* ===== Avance aleatorio sin repetición ===== */
+      function nextItem() {
+        if (state.index < state.items.length - 1) {
+          state.index++;
+          setupRound();
+        } else {
+          endCollection();
+        }
+      }
+
+      /* ===== Eventos ===== */
+
+      // --- COMPOSICIÓN: teclas muertas/IME ---
+      let composing = false;
+      let compBuffer = "";
+
+      $ghost.addEventListener("compositionstart", () => {
+        composing = true;
+        compBuffer = "";
+      });
+
+      $ghost.addEventListener("compositionupdate", (ev) => {
+        compBuffer = (ev.data || "").normalize("NFC");
+      });
+
+      $ghost.addEventListener("compositionend", (ev) => {
+        const data = (ev.data || compBuffer || $ghost.value || "").normalize(
+          "NFC"
+        );
+        if (data) handleCharInput(data);
+        compBuffer = "";
+        composing = false;
+        $ghost.value = "";
+      });
+
+      // beforeinput: SOLO cuando no hay composición en curso (p. ej., pegado simple)
+      $ghost.addEventListener("beforeinput", (ev) => {
+        if (composing) return;
+        const type = ev.inputType || "";
+        if (type.startsWith("insert")) {
+          const data = ev.data != null ? ev.data : $ghost.value;
+          if (data) {
+            for (const ch of Array.from(data.normalize("NFC")))
+              handleCharInput(ch);
+            $ghost.value = "";
+          }
+          ev.preventDefault();
+        }
+      });
+
+      // Pegado explícito (por compatibilidad)
+      $ghost.addEventListener("paste", (ev) => {
+        const text =
+          (ev.clipboardData && ev.clipboardData.getData("text")) || "";
+        if (text) {
+          for (const ch of Array.from(text.normalize("NFC")))
+            handleCharInput(ch);
+          $ghost.value = "";
+          ev.preventDefault();
+        }
+      });
+
+      // Teclas de control en global. Permitimos letras vía composición en el ghost.
+      window.addEventListener("keydown", (ev) => {
+        const t = ev.target;
+        const typingInOther =
+          t &&
+          (t.isContentEditable ||
+            /^(INPUT|TEXTAREA|SELECT)$/i.test(t.tagName)) &&
+          t !== $ghost;
+
+        if (typingInOther) return;
+        if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
+
+        // Validar con Enter
+        if (ev.key === "Enter" || ev.key === "NumpadEnter") {
+          ev.preventDefault();
+          verify();
+          return;
+        }
+        // Borrar
+        if (ev.key === "Backspace") {
+          ev.preventDefault();
+          handleBackspace();
+          return;
+        }
+        if (ev.key === "Delete") {
+          ev.preventDefault();
+          handleDelete();
+          return;
+        }
+        // Navegación del cursor
+        if (ev.key === "ArrowLeft") {
+          ev.preventDefault();
+          moveCursor(-1);
+          return;
+        }
+        // Flecha derecha = Siguiente palabra
+        if (ev.key === "ArrowRight") {
+          ev.preventDefault();
+          nextItem();
+          focusKeyboard();
+          return;
+        }
+        // Flecha arriba = Pista
+        if (ev.key === "ArrowUp") {
+          ev.preventDefault();
+          revealHint();
+          focusKeyboard();
+          return;
+        }
+
+        // Primera pulsación sin foco: dirigir al ghost.
+        if (ev.key === "Dead") {
+          focusKeyboard();
+          return;
+        }
+        if (
+          (ev.key.length === 1 || ev.key === " ") &&
+          document.activeElement !== $ghost
+        ) {
+          ev.preventDefault();
+          focusKeyboard();
+          handleCharInput(ev.key);
+          return;
+        }
+      });
+
+      // Click/tap en el área: reenfoca para escribir
+      root.addEventListener("pointerdown", () => {
+        focusKeyboard();
+      });
+
+      $check.addEventListener("click", verify);
+      $skip.addEventListener("click", nextItem);
+      $backspace.addEventListener("click", () => {
+        handleBackspace();
+        focusKeyboard();
+      });
+      if ($hint)
+        $hint.addEventListener("click", () => {
+          revealHint();
+          focusKeyboard();
+        });
+
+      $collection.addEventListener("change", async (e) => {
+        await loadSelectedCollection(e.target.value);
+      });
+      $reload.addEventListener("click", async () => {
+        if ($collection.value) await loadSelectedCollection($collection.value);
+        focusKeyboard();
+      });
+
+      async function loadSelectedCollection(path) {
+        try {
+          const { title, items } = await loadCollection(path);
+          shuffle(items);
+          state.collectionPath = path;
+          state.collectionTitle = title;
+          state.items = items;
+          state.index = 0;
+          state.score = loadScore(path);
+          const opt = Array.from($collection.options).find(
+            (o) => o.value === path
+          );
+          if (opt) opt.textContent = title;
+          setupRound();
+        } catch (e) {
+          console.error(e);
+          $status.textContent = "No se pudo cargar la colección: " + e.message;
+        }
+      }
+
+      /* ===== Boot ===== */
+      (async function init() {
+        await buildCollectionSelect();
+        if ($collection.options.length) {
+          await loadSelectedCollection($collection.options[0].value);
+        }
+        setTimeout(() => {
+          focusKeyboard();
+        }, 0);
+      })();
+    })();
+  </script>
+</div>

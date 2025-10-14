@@ -324,7 +324,7 @@ export function initWriteMode() {
     __closeBtn = null;
   };
 
-  // ★★★ Estilos INLINE para FS: textarea con ancho limitado, foco sutil y gutters en wrapper
+  // ★★★ Estilos INLINE para FS: textarea con ancho limitado y gutters en wrapper
   function setFullscreenTextareaStyles(active) {
     if (!itxt) return;
     if (active) {
@@ -337,11 +337,7 @@ export function initWriteMode() {
       itxt.style.boxSizing = "border-box";
       itxt.style.borderRadius = "0";
       itxt.style.border = "none";
-      itxt.style.outline = "none"; // quita focus ring azul
       itxt.style.outlineOffset = "0";
-      itxt.style.boxShadow = "0 0 0 1px rgba(128,128,128,.18)"; // halo sutil
-      itxt.style.webkitAppearance = "none";
-      itxt.style.appearance = "none";
       itxt.style.display = "block";
       itxt.style.background = "var(--write-bg, #000)";
       itxt.style.color = "var(--write-fg, #eee)";
@@ -356,11 +352,7 @@ export function initWriteMode() {
         "boxSizing",
         "borderRadius",
         "border",
-        "outline",
         "outlineOffset",
-        "boxShadow",
-        "webkitAppearance",
-        "appearance",
         "display",
         "background",
         "color",
@@ -381,7 +373,6 @@ export function initWriteMode() {
       __fsWrap.style.justifyItems = "center";
       __fsWrap.style.alignItems = "stretch";
       __fsWrap.style.background = "var(--write-bg, #000)";
-      __fsWrap.style.outline = "none"; // por si el foco cae en el wrapper
     } else {
       [
         "paddingLeft",
@@ -393,7 +384,6 @@ export function initWriteMode() {
         "justifyItems",
         "alignItems",
         "background",
-        "outline",
       ].forEach((p) => __fsWrap.style.removeProperty(p));
     }
   }

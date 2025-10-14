@@ -473,53 +473,34 @@ button.action.is-on .state-dot::after {
 
 /* =====================================================
    MODO CONCENTRACIÓN con WRAPPER (Firefox-friendly)
+   (ÚNICO enfoque en este CSS)
 ===================================================== */
 .itext-wrapper {
   position: relative;
 }
 
-/* El contenedor ocupa toda la pantalla en fullscreen/overlay
-   y crea GUTTERS laterales (márgenes I/D) con padding-inline */
+/* El contenedor ocupa toda la pantalla en fullscreen */
 .itext-wrapper:fullscreen,
 .itext-wrapper:-webkit-full-screen,
-.itext-wrapper:-moz-full-screen,
-.concentration-active .itext-wrapper.concentration-overlay {
+.itext-wrapper:-moz-full-screen {
   position: fixed;
   inset: 0;
   z-index: 99999;
   margin: 0 !important;
-
-  /* Gutters laterales + notch-safe */
-  padding-block: 0 !important;
-  padding-inline: clamp(16px, 6vw, 96px) !important;
-  padding-left: calc(
-    clamp(16px, 6vw, 96px) + env(safe-area-inset-left, 0px)
-  ) !important;
-  padding-right: calc(
-    clamp(16px, 6vw, 96px) + env(safe-area-inset-right, 0px)
-  ) !important;
-
+  padding: 0 !important;
   border: none;
   background: var(--write-bg, #000);
-
-  /* Centrado del contenido */
-  display: grid;
-  align-items: stretch;
-  justify-items: center;
 }
 
-/* El textarea rellena el área de contenido con límite de ancho.
-   Usamos !important para vencer a #main.write-mode-active #itext */
+/* El textarea ocupa 100% del viewport dentro del wrapper */
 .itext-wrapper:fullscreen #itext,
 .itext-wrapper:-webkit-full-screen #itext,
-.itext-wrapper:-moz-full-screen #itext,
-.concentration-active .itext-wrapper.concentration-overlay #itext {
+.itext-wrapper:-moz-full-screen #itext {
   display: block;
-  width: 100% !important;
-  max-width: clamp(68ch, 90vw, 100ch) !important; /* lectura cómoda */
-  height: 100% !important; /* descuenta padding del wrapper */
-  margin: 0; /* centrado lo hace el grid del wrapper */
-  padding: clamp(12px, 2.5vw, 28px) !important; /* respiración interior */
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 1rem; /* cómodo, sin banda superior */
   border: none;
   border-radius: 0;
   outline: none;
@@ -568,56 +549,54 @@ button.action.is-on .state-dot::after {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Textarea en modo concentración: sin borde ni outline */
-.itext-wrapper:fullscreen #itext,
-.itext-wrapper:-webkit-full-screen #itext,
-.itext-wrapper:-moz-full-screen #itext,
-.concentration-active .itext-wrapper.concentration-overlay #itext {
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important; /* por si algún navegador añade sombra */
-}
-
 /* Backdrop (cuando el navegador lo soporta) */
 .itext-wrapper::backdrop {
   background: #000;
 }
 
-/* ===== Fallback si FULLSCREEN es el propio #itext (no el wrapper) ===== */
-#itext:fullscreen,
-#itext:-webkit-full-screen,
-#itext:-moz-full-screen {
-  width: 90vw !important;
-  max-width: clamp(68ch, 90vw, 100ch) !important;
-  height: 100vh !important;
-  margin: 0 auto !important;
-  padding: clamp(12px, 2.5vw, 28px) !important;
+/* Overlay de reserva si no hay Fullscreen API */
+.concentration-active .itext-wrapper.concentration-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: var(--write-bg, #000);
+}
+.concentration-active .itext-wrapper.concentration-overlay #itext {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  padding: 1rem;
+  color: var(--write-fg, #eee);
+  background: var(--write-bg, #000);
+}
+
+/* Márgenes I y D en modo focus */
+
+.itext-wrapper:fullscreen #itext,
+.itext-wrapper:-webkit-full-screen #itext,
+.itext-wrapper:-moz-full-screen #itext,
+.concentration-active .itext-wrapper.concentration-overlay #itext {
+  width: 90vw; /* ya no 100%, sino un poco menos */
+  max-width: 900px; /* ancho máximo cómodo */
+  margin: 0 auto; /* centra horizontalmente */
+  height: 100vh;
+  padding: 1.5rem; /* respiración interior */
   box-sizing: border-box;
 }
 
-/* ===== Ajustes móviles ===== */
+/* Ajustes móviles */
 @media (max-width: 500px) {
-  .itext-wrapper:fullscreen,
-  .itext-wrapper:-webkit-full-screen,
-  .itext-wrapper:-moz-full-screen,
-  .concentration-active .itext-wrapper.concentration-overlay {
-    padding-inline: clamp(8px, 4vw, 24px) !important;
-    padding-left: calc(
-      clamp(8px, 4vw, 24px) + env(safe-area-inset-left, 0px)
-    ) !important;
-    padding-right: calc(
-      clamp(8px, 4vw, 24px) + env(safe-area-inset-right, 0px)
-    ) !important;
-  }
   .itext-wrapper:fullscreen #itext,
   .itext-wrapper:-webkit-full-screen #itext,
-  .itext-wrapper:-moz-full-screen #itext,
-  .concentration-active .itext-wrapper.concentration-overlay #itext {
-    padding: 0.75rem !important;
+  .itext-wrapper:-moz-full-screen #itext {
+    padding: 0.75rem;
   }
 }
 
-/* ===== Estilos “bonitos” fuera de FS (se activan con .is-visible) ===== */
+/* Estilos “bonitos” fuera de FS (se activan con .is-visible) */
 .word-float {
   position: fixed;
   left: 16px;
@@ -702,20 +681,4 @@ button.action.is-on .state-dot::after {
 
 #main h1 {
   font-size: 1.4em;
-}
-
-/* Foco muy sutil en modo concentración */
-.itext-wrapper:fullscreen #itext:focus,
-.itext-wrapper:fullscreen #itext:focus-visible,
-.itext-wrapper:-webkit-full-screen #itext:focus,
-.itext-wrapper:-webkit-full-screen #itext:focus-visible,
-.itext-wrapper:-moz-full-screen #itext:focus,
-.itext-wrapper:-moz-full-screen #itext:focus-visible,
-.concentration-active .itext-wrapper.concentration-overlay #itext:focus,
-.concentration-active
-  .itext-wrapper.concentration-overlay
-  #itext:focus-visible {
-  outline: none !important;
-  box-shadow: 0 0 0 2px rgba(128, 128, 128, 0.15) !important; /* gris clarito */
-  border-radius: 4px; /* esquinas suaves */
 }

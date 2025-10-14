@@ -85,7 +85,7 @@ export async function loadStudent(fileOrId) {
  * Por defecto atiende #students y alias habituales; ajusta a tu estructura si hace falta.
  */
 export function initStudentDelegation(
-  scopeSelector = "#students, #alumnos, #student-list, #geohis"
+  scopeSelector = "#students, #alumnos, #student-list, #geohis, #quimica"
 ) {
   if (initStudentDelegation._wired) return;
 

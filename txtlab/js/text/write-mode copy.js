@@ -324,77 +324,29 @@ export function initWriteMode() {
     __closeBtn = null;
   };
 
-  // ★★★ Estilos INLINE para FS: textarea con ancho limitado, foco sutil y gutters en wrapper
+  // Fallback de estilo en JS (además del CSS) por si algo falla
   function setFullscreenTextareaStyles(active) {
     if (!itxt) return;
     if (active) {
-      // Textarea limitado y centrado
-      itxt.style.width = "100%";
-      itxt.style.maxWidth = "clamp(68ch, 90vw, 100ch)";
-      itxt.style.height = "100%";
-      itxt.style.margin = "0 auto";
-      itxt.style.padding = "clamp(12px, 2.5vw, 28px)";
-      itxt.style.boxSizing = "border-box";
+      itxt.style.width = "100vw";
+      itxt.style.height = "100vh";
+      itxt.style.margin = "0";
       itxt.style.borderRadius = "0";
       itxt.style.border = "none";
-      itxt.style.outline = "none"; // quita focus ring azul
       itxt.style.outlineOffset = "0";
-      itxt.style.boxShadow = "0 0 0 1px rgba(128,128,128,.18)"; // halo sutil
-      itxt.style.webkitAppearance = "none";
-      itxt.style.appearance = "none";
       itxt.style.display = "block";
       itxt.style.background = "var(--write-bg, #000)";
       itxt.style.color = "var(--write-fg, #eee)";
-      itxt.style.resize = "none";
     } else {
-      [
-        "width",
-        "maxWidth",
-        "height",
-        "margin",
-        "padding",
-        "boxSizing",
-        "borderRadius",
-        "border",
-        "outline",
-        "outlineOffset",
-        "boxShadow",
-        "webkitAppearance",
-        "appearance",
-        "display",
-        "background",
-        "color",
-        "resize",
-      ].forEach((p) => itxt.style.removeProperty(p));
-    }
-  }
-
-  function setWrapperGutters(active) {
-    if (!__fsWrap) return;
-    if (active) {
-      __fsWrap.style.paddingLeft = "clamp(16px, 6vw, 96px)";
-      __fsWrap.style.paddingRight = "clamp(16px, 6vw, 96px)";
-      __fsWrap.style.paddingTop = "0";
-      __fsWrap.style.paddingBottom = "0";
-      __fsWrap.style.boxSizing = "border-box";
-      __fsWrap.style.display = "grid";
-      __fsWrap.style.justifyItems = "center";
-      __fsWrap.style.alignItems = "stretch";
-      __fsWrap.style.background = "var(--write-bg, #000)";
-      __fsWrap.style.outline = "none"; // por si el foco cae en el wrapper
-    } else {
-      [
-        "paddingLeft",
-        "paddingRight",
-        "paddingTop",
-        "paddingBottom",
-        "boxSizing",
-        "display",
-        "justifyItems",
-        "alignItems",
-        "background",
-        "outline",
-      ].forEach((p) => __fsWrap.style.removeProperty(p));
+      itxt.style.removeProperty("width");
+      itxt.style.removeProperty("height");
+      itxt.style.removeProperty("margin");
+      itxt.style.removeProperty("border-radius");
+      itxt.style.removeProperty("border");
+      itxt.style.removeProperty("outline-offset");
+      itxt.style.removeProperty("display");
+      itxt.style.removeProperty("background");
+      itxt.style.removeProperty("color");
     }
   }
 
@@ -411,23 +363,14 @@ export function initWriteMode() {
       const wrap = ensureFsWrap();
 
       // Fullscreen en el CONTENEDOR (clave para Firefox)
-      let fsOk = false;
       if (wrap.requestFullscreen) {
-        try {
-          await wrap.requestFullscreen({ navigationUI: "hide" });
-          fsOk = true;
-        } catch {
-          fsOk = false;
-        }
-      }
-      if (!fsOk) {
+        await wrap.requestFullscreen({ navigationUI: "hide" });
+      } else {
         // overlay de reserva
         document.body.classList.add("concentration-active");
         wrap.classList.add("concentration-overlay");
       }
 
-      // Gutters del wrapper + estilos de textarea
-      setWrapperGutters(true);
       setFullscreenTextareaStyles(true);
 
       itxt.focus({ preventScroll: true });
@@ -445,10 +388,7 @@ export function initWriteMode() {
     } catch {}
     document.body.classList.remove("concentration-active");
     __fsWrap?.classList.remove("concentration-overlay");
-
     setFullscreenTextareaStyles(false);
-    setWrapperGutters(false);
-
     hideWordFloat();
     hideCloseBtn();
     unwrapFs();
@@ -461,16 +401,13 @@ export function initWriteMode() {
 
   const onFsChange = () => {
     if (!document.fullscreenElement) {
-      // Salida de FS
       document.body.classList.remove("concentration-active");
       __fsWrap?.classList.remove("concentration-overlay");
       setFullscreenTextareaStyles(false);
-      setWrapperGutters(false);
       hideWordFloat();
       hideCloseBtn();
       unwrapFs();
     } else if (document.fullscreenElement === __fsWrap) {
-      // Entrada/confirmación de FS en nuestro wrapper
       // Asegura que la UI auxiliar vive dentro del subárbol fullscreen
       if (__wordFloat && __wordFloat.parentNode !== __fsWrap) {
         try {
@@ -483,8 +420,6 @@ export function initWriteMode() {
         } catch {}
       }
       ensureMobileCloseBtn(__fsWrap, exitConcentration);
-
-      setWrapperGutters(true);
       setFullscreenTextareaStyles(true);
     }
   };
