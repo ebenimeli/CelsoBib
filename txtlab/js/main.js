@@ -511,3 +511,22 @@ document.addEventListener("click", async (e) => {
     timersLoaded = true;
   }
 });
+
+function openFromHashOrParams() {
+  const params = new URLSearchParams(location.search);
+  // Prioridad: ?t=... si existe; si no, usa #hash
+  const t = params.get("t") || (location.hash ? location.hash.slice(1) : "");
+  if (t) {
+    const sel = t.startsWith("#") ? t : "#" + t;
+    const btn = document.querySelector(`button[data-target="${sel}"]`);
+    if (btn) btn.click();
+  }
+  // Abrir una herramienta/archivo concreto: ?file=wordcluesquim.html
+  const file = params.get("file");
+  if (file) {
+    const fileBtn = document.querySelector(`button[data-file="${file}"]`);
+    if (fileBtn) fileBtn.click();
+  }
+}
+window.addEventListener("DOMContentLoaded", openFromHashOrParams);
+window.addEventListener("hashchange", openFromHashOrParams);
