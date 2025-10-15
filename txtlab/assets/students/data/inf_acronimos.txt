@@ -1,0 +1,62 @@
+¿Qué significa...? (acrónimo -> significado)
+CPU;Central Processing Unit
+GPU;Graphics Processing Unit
+RAM;Random Access Memory
+ROM;Read Only Memory
+SSD;Solid State Drive
+HDD;Hard Disk Drive
+USB;Universal Serial Bus
+HDMI;High Definition Multimedia Interface
+VGA;Video Graphics Array
+BIOS;Basic Input Output System
+POST;Power On Self Test
+UPS;Uninterruptible Power Supply
+PSU;Power Supply Unit
+DNS;Domain Name System
+DHCP;Dynamic Host Configuration Protocol
+IP;Internet Protocol
+MAC;Media Access Control
+LAN;Local Area Network
+WAN;Wide Area Network
+WLAN;Wireless Local Area Network
+HTTP;HyperText Transfer Protocol
+HTTPS;HTTP Secure
+URL;Uniform Resource Locator
+HTML;HyperText Markup Language
+CSS;Cascading Style Sheets
+JS;JavaScript
+SQL;Structured Query Language
+API;Application Programming Interface
+SDK;Software Development Kit
+UI;User Interface
+UX;User Experience
+CLI;Command Line Interface
+GUI;Graphical User Interface
+IDE;Integrated Development Environment
+OS;Operating System
+AI;Artificial Intelligence
+ML;Machine Learning
+DL;Deep Learning
+IoT;Internet of Things
+VPN;Virtual Private Network
+IPsec;Internet Protocol Security
+FTP;File Transfer Protocol
+SMTP;Simple Mail Transfer Protocol
+POP3;Post Office Protocol v3
+IMAP;Internet Message Access Protocol
+JSON;JavaScript Object Notation
+XML;eXtensible Markup Language
+CSV;Comma-Separated Values
+PDF;Portable Document Format
+ZIP;Compressed File Format
+GIF;Graphics Interchange Format
+PNG;Portable Network Graphics
+JPEG;Joint Photographic Experts Group
+W3C;World Wide Web Consortium
+IT;Information Technology
+ICT;Information and Communication Technology
+GNU;GNU’s Not Unix
+GPL;General Public License
+CLI;Command Line Interface
+SSH;Secure Shell
+SSL;Secure Sockets Layer

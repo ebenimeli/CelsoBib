@@ -1,0 +1,52 @@
+Lenguajes de programación
+De bajo nivel, permite comunicarse directamente con el hardware (1949);Assembly
+Primer lenguaje usado para cálculos científicos y numéricos (1957);Fortran
+Diseñado para la gestión de datos empresariales y administrativos (1959);COBOL
+Creado para facilitar el aprendizaje de la programación (1964);BASIC
+Popular en educación, basado en estructuras y control de flujo (1970);Pascal
+Base de muchos lenguajes modernos y del sistema Unix (1972);C
+Introduce la programación orientada a objetos a partir de su antecesor (1983);C++
+Desarrollado por Microsoft, combina eficiencia y orientación a objetos (2000);C#
+Multiplataforma, funciona sobre una máquina virtual (1995);Java
+Fácil de leer y escribir, ampliamente usado en educación e inteligencia artificial (1991);Python
+Permite crear interactividad en las páginas web del navegador (1995);JavaScript
+Lenguaje de propósito general usado en desarrollo web del lado del servidor (1995);PHP
+Utilizado para consultar y manipular bases de datos (1974);SQL
+Enfocado en análisis estadístico y representación de datos (1993);R
+Creado por Apple para desarrollar aplicaciones móviles modernas (2014);Swift
+Desarrollado para Android con enfoque en seguridad y productividad (2011);Kotlin
+Sencillo, flexible y con una sintaxis muy legible, impulsó un famoso framework web (1995);Ruby
+Potente para manejo de texto y expresiones regulares, muy usado en los 90 (1987);Perl
+Diseñado por Google, combina rendimiento y concurrencia eficiente (2009);Go
+Aporta seguridad en memoria y velocidad sin usar recolector de basura (2010);Rust
+Combina paradigmas funcional y orientado a objetos con sintaxis concisa (2004);Scala
+Basado en funciones matemáticas puras, sin efectos secundarios (1990);Haskell
+Se apoya en la lógica y el razonamiento declarativo (1972);Prolog
+Pionero en la inteligencia artificial y en listas enlazadas (1958);Lisp
+Usado en sistemas críticos como defensa o aviación (1983);Ada
+Basado en bloques visuales, pensado para enseñar programación a niños (2003);Scratch
+Herramienta visual educativa de Google para crear programas con bloques (2012);Blockly
+Lenguaje de marcado que estructura el contenido de las páginas web (1993);HTML
+Define la presentación visual y el diseño de las páginas web (1996);CSS
+Extiende JavaScript con tipado estático opcional (2012);TypeScript
+Usado en cálculos numéricos, ingeniería y simulaciones científicas (1984);Matlab
+Ligero, rápido y muy usado en videojuegos y scripts (1993);Lua
+Interpretado por terminales Unix, permite automatizar tareas del sistema (1977);Shell
+Crea y gestiona scripts en entornos de Windows (2006);PowerShell
+Permite automatizar tareas dentro de aplicaciones de Office (1993);VBA
+Histórico en el ecosistema de Apple, previo al actual estándar (1984);Objective-C
+Moderno, desarrollado por Google para interfaces móviles (2011);Dart
+Ideal para cálculo científico y análisis numérico de alto rendimiento (2012);Julia
+Versión educativa reducida orientada a alumnos de primaria (2014);ScratchJr
+Famoso por su tortuga gráfica y enfoque constructivista (1967);Logo
+Usado para crear videojuegos en múltiples plataformas (2008);Cocos
+Funcional, desarrollado por Meta con tipado estático (2016);ReasonML
+Transforma código funcional en JavaScript para aplicaciones web seguras (2012);Elm
+Rápido y eficiente, enfocado en el desarrollo web y de sistemas (2008);Nim
+Pensado para rendimiento, con sintaxis moderna y sin dependencias externas (2015);Zig
+Usado en computación paralela y científica a gran escala (2009);Chapel
+Diseñado para crear contratos inteligentes en blockchain (2015);Solidity
+Utilizado en telecomunicaciones y sistemas concurrentes (1986);Erlang
+Basado en su predecesor, ofrece sintaxis más moderna y legible (2011);Elixir
+Usado para programar dentro de un popular motor de videojuegos (2014);GDScript
+Permite procesar texto y datos desde la línea de comandos en Unix (1977);AWK
