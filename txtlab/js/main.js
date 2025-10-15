@@ -511,7 +511,7 @@ document.addEventListener("click", async (e) => {
     timersLoaded = true;
   }
 });
-
+/*
 function openFromHashOrParams() {
   const params = new URLSearchParams(location.search);
   // Prioridad: ?t=... si existe; si no, usa #hash
@@ -528,5 +528,78 @@ function openFromHashOrParams() {
     if (fileBtn) fileBtn.click();
   }
 }
+window.addEventListener("DOMContentLoaded", openFromHashOrParams);
+window.addEventListener("hashchange", openFromHashOrParams);
+*/
+
+// Utilidades
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const click = (el) => {
+  if (el) el.click();
+  return !!el;
+};
+const btnByTarget = (id) =>
+  document.querySelector(`button[data-target="#${id}"]`);
+const btnByFile = (file) =>
+  document.querySelector(`button[data-file="${file}"]`);
+
+// Extrae t, sub, file de ?t=&sub=&file= y/o del hash #t/sub/file.html
+function parseDeepLink() {
+  const params = new URLSearchParams(location.search);
+  let t = params.get("t") || "";
+  let sub = params.get("sub") || "";
+  let file = params.get("file") || "";
+
+  // Hash tipo #t/sub/file.html (flexible: puede faltar sub o file)
+  if (location.hash) {
+    const parts = location.hash.replace(/^#/, "").split("/").filter(Boolean);
+    if (parts[0] && !t) t = parts[0];
+    if (parts[1]) {
+      if (parts[1].endsWith(".html")) file = file || parts[1];
+      else sub = sub || parts[1];
+    }
+    if (parts[2] && parts[2].endsWith(".html")) file = file || parts[2];
+  }
+  return { t, sub, file };
+}
+
+// Abre sección, luego sub, luego archivo (esperando a que el DOM inyecte cada nivel)
+async function openFromHashOrParams() {
+  const { t, sub, file } = parseDeepLink();
+
+  // 1) Sección principal (template)
+  if (t) {
+    const ok = click(btnByTarget(t.startsWith("#") ? t.slice(1) : t));
+    if (!ok) {
+      // fallback: intenta con selector exacto con '#'
+      const btn = document.querySelector(
+        `button[data-target="${t.startsWith("#") ? t : "#" + t}"]`
+      );
+      click(btn);
+    }
+    // da tiempo a que el script que clona el <template> pinte su contenido
+    await sleep(50);
+  }
+
+  // 2) Sub-sección (toolset)
+  if (sub) {
+    click(btnByTarget(sub.replace(/^#/, "")));
+    await sleep(30);
+  }
+
+  // 3) Archivo concreto (data-file="...html")
+  if (file) {
+    // Si aún no está en DOM (porque depende de abrir la sección/sub), reintenta unas veces.
+    let tries = 0,
+      found = btnByFile(file);
+    while (!found && tries < 10) {
+      await sleep(50);
+      found = btnByFile(file);
+      tries++;
+    }
+    click(found);
+  }
+}
+
 window.addEventListener("DOMContentLoaded", openFromHashOrParams);
 window.addEventListener("hashchange", openFromHashOrParams);
