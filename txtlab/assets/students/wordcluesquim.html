@@ -294,7 +294,13 @@
       root.__mounted = true;
 
       /* ===== Config ===== */
-      const COLLECTION_FILES = ["assets/students/data/elemquim.txt"];
+      const COLLECTION_FILES = [
+        "assets/students/data/elemquim.txt",
+        "assets/students/data/elemquim-inv.txt",
+        "assets/students/data/quim_descubr_ano.txt",
+        "assets/students/data/quim_etimologia_nom.txt",
+        "assets/students/data/quim_etimologia_simb.txt",
+      ];
       const MAX_ATTEMPTS = 5;
       const pointsForAttempt = (i) => Math.max(1, MAX_ATTEMPTS + 1 - i);
 

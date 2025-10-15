@@ -1,4 +1,4 @@
-Tabla periódica
+Tabla periódica (símbolo -> nombre)
 Ac;Actinio
 Ag;Plata
 Al;Aluminio

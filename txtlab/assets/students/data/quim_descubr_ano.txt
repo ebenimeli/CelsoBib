@@ -1,0 +1,65 @@
+Descubrimientos (hito --> año)
+Relatividad;1905
+Neón;1898
+Átomo nuclear;1911
+Reacciones redox;1890
+Helio;1868
+Batería litio;1970
+Penicilina;1928
+Plutonio;1940
+Helio Tierra;1895
+Ley Avogadro;1811
+Bosón Higgs;2012
+Deuterio;1931
+Calcio;1808
+Teflón;1938
+Fósforo;1669
+Espectroscopía;1859
+Ácido-base;1884
+Plasticos;1907
+Pilas Volta;1800
+Polonio;1898
+Amoníaco;1913
+Isótopos;1912
+Petroquímica;1920
+Átomo cuántico;1913
+Grafeno;2004
+Catálisis;1835
+Conserv. masa;1789
+Francio;1939
+Tecnecio;1937
+Fullereno;1985
+Ley periódica;1869
+ADN;1953
+Electrón;1897
+Gases (Boyle);1662
+Cromatografía;1903
+Láser;1960
+Radiactividad;1896
+Neutrón;1932
+Teoría atómica;1808
+Sodio y potasio;1807
+Radón;1898
+Protón;1917
+Cloro;1774
+Uranio;1789
+Microchip;1958
+Bromo;1826
+Vitaminas;1913
+Ecuación onda;1926
+Cromatografía;1903
+Reacción SN1;1935
+Reacción SN2;1935
+Quarks;1964
+Insulina;1921
+Argón;1894
+Amoníaco;1913
+ADN sintético;2010
+Ley de gases;1662
+Radio;1898
+Americio;1944
+Incertidumbre;1927
+Clorofila;1817
+Ley Avogadro;1811
+Polímeros;1933
+Radón;1898

@@ -719,3 +719,7 @@ button.action.is-on .state-dot::after {
   box-shadow: 0 0 0 2px rgba(128, 128, 128, 0.15) !important; /* gris clarito */
   border-radius: 4px; /* esquinas suaves */
 }
+
+p.instruction {
+  text-align: center;
+}
