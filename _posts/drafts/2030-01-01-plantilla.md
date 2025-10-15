@@ -1,6 +1,6 @@
 ---
 title: "Plantilla"
-date: 2030-05-27T08:00:00+00:00
+date: 2030-05-27T08:00:00+02:00
 author: Enrique Benimeli
 layout: post
 permalink: /XXX/
@@ -12,4 +12,4 @@ tags: []
 
 Texto.
 
-**Fuente** · [*Fuente*]()
+**Fuente** · [_Fuente_]()
