@@ -6,8 +6,9 @@ description: "Reflexiones al paso y retales de ideas"
 
 [![image](assets/images/posts/2024/01/post.jpg)](https://ebenimeli.substack.com/)
 
-Este es mi boletín más personal. Encontrarás reflexiones al paso, retales de ideas y notas al margen.
+Este es mi **boletín** más personal. Encontrarás reflexiones al paso, retales de ideas y notas al margen.
 
+- #33 / 22.10.2025 · [Un cajón de ideas](https://notasalvuelo.substack.com/p/un-cajon-de-ideas)
 - #32 / 01.10.2025 · [Un código ingenioso](https://notasalvuelo.substack.com/p/un-codigo-ingenioso)
 - #31 / 26.09.2025 · [Un yatai artesano](https://notasalvuelo.substack.com/p/un-yatai-artesanal)
 - #30 / 22.09.2025 · [Un día desconectado](https://notasalvuelo.substack.com/p/un-dia-desconectado)
