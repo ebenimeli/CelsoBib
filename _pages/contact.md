@@ -5,12 +5,15 @@ permalink: /contact/
 description: "Formas de contacto"
 ---
 
-<p>Si quieres ponerte en contacto conmigo, rellena el siguiente formulario y responderé lo antes posible</p>
+<p>Si quieres ponerte en contacto conmigo, rellena el siguiente formulario y responderé lo antes posible.</p>
 
-<!-- Precalienta la cookie CSRF desde PHP (no bloquea nada) -->
-<img src="/contact.php?token=1" alt="" width="1" height="1" style="position:absolute;left:-9999px;opacity:0;" aria-hidden="true" />
+<!-- Precalienta la cookie CSRF (no bloquea nada, pero puede ser bloqueado por adblockers) -->
 
-<form id="contact-form" action="/contact.php" method="post" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" novalidate>
+<img src="/contact.php?token=1" alt="" width="1" height="1"
+     style="position:absolute;left:-9999px;opacity:0;" aria-hidden="true" loading="eager" />
+
+<form id="contact-form" action="/contact.php" method="post" accept-charset="UTF-8"
+      enctype="application/x-www-form-urlencoded" novalidate>
   <fieldset>
     <legend>Contacto</legend>
 
@@ -50,7 +53,9 @@ description: "Formas de contacto"
     <!-- Consentimiento RGPD -->
     <div class="form-field consent-field">
       <input id="consent" name="consent" type="checkbox" required aria-required="true" />
-      <label for="consent">He leído y acepto la <a href="/privacy/">política de privacidad</a>.</label>
+      <label for="consent">
+        He leído y acepto la <a href="/privacy/" target="_blank" rel="noopener">política de privacidad</a>.
+      </label>
     </div>
 
     <!-- Honeypot anti-spam (oculto con CSS, no type="hidden") -->
@@ -59,12 +64,12 @@ description: "Formas de contacto"
       <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
     </div>
 
-    <!-- Señuelo JS y trampas -->
+    <!-- Señuelos JS -->
     <input type="hidden" id="jsok" name="jsok" value="0" />
     <input type="hidden" id="started" name="started" value="" />
     <input type="hidden" id="csrf" name="csrf" value="" />
 
-    <!-- Mensajes de estado -->
+    <!-- Estado accesible -->
     <p class="form-status" aria-live="polite"></p>
 
     <button type="submit">Enviar</button>
@@ -82,4 +87,79 @@ description: "Formas de contacto"
   .form-status { min-height: 1.2em; }
 </style>
 
-<script src="/assets/js/contact.js" defer></script>
+<!-- contact.js robusto (rellena trampas, CSRF y valida) -->
+<script>
+(function(){
+  "use strict";
+  function getCookie(name) {
+    return document.cookie.split('; ').reduce((acc, cur) => {
+      const [k, ...v] = cur.split('=');
+      if (k === name) return decodeURIComponent(v.join('=') || '');
+      return acc;
+    }, '');
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    const msg = document.getElementById('message');
+    const counter = document.getElementById('counter');
+    const jsok = document.getElementById('jsok');
+    const started = document.getElementById('started');
+    const csrf = document.getElementById('csrf');
+    const status = document.querySelector('.form-status');
+
+    if (!form) return;
+
+    // Contador
+    msg.addEventListener('input', () => {
+      counter.textContent = `${msg.value.length} / ${msg.maxLength}`;
+    });
+
+    // started + jsok
+    started.value = String(Date.now());
+    setTimeout(() => { jsok.value = '1'; }, 800);
+
+    // Intentar obtener cookie CSRF
+    const applyToken = () => {
+      const t = getCookie('csrf_token');
+      if (t) csrf.value = t;
+      return !!t;
+    };
+    if (!applyToken()) {
+      fetch('/contact.php?token=1', { credentials: 'same-origin' })
+        .then(() => setTimeout(applyToken, 250))
+        .catch(() => {});
+    }
+
+    // Validación previa al envío
+    form.addEventListener('submit', e => {
+      if (msg.value.trim().length < 10) {
+        e.preventDefault();
+        alert('El mensaje debe tener al menos 10 caracteres.');
+        return;
+      }
+      if (!document.getElementById('consent').checked) {
+        e.preventDefault();
+        alert('Debes aceptar la política de privacidad.');
+        return;
+      }
+      if (jsok.value !== '1') {
+        e.preventDefault();
+        alert('Debes habilitar JavaScript para enviar el formulario.');
+        return;
+      }
+      if (!csrf.value) {
+        e.preventDefault();
+        alert('Token de seguridad ausente. Recarga la página y vuelve a intentarlo.');
+        return;
+      }
+      if (Date.now() - parseInt(started.value, 10) < 3000) {
+        e.preventDefault();
+        alert('Por favor, espera unos segundos antes de enviar.');
+        return;
+      }
+      if (status) status.textContent = 'Enviando…';
+    });
+  });
+})();
+</script>

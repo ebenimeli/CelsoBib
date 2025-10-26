@@ -1,6 +1,16 @@
-// contact.js (robusto, con fallback CSRF + depuración ligera)
+// assets/js/contact.js
+// Contacto robusto: CSRF fallback + trampas JS + validación + anti doble envío
 (function () {
   "use strict";
+
+  // Cambia a true si quieres ver logs en consola durante pruebas
+  const DEBUG = false;
+  const log = (...args) => {
+    if (DEBUG && window.console) console.log("[contact.js]", ...args);
+  };
+  const warn = (...args) => {
+    if (DEBUG && window.console) console.warn("[contact.js]", ...args);
+  };
 
   function getCookie(name) {
     return document.cookie.split("; ").reduce((acc, cur) => {
@@ -8,6 +18,11 @@
       if (k === name) return decodeURIComponent(v.join("=") || "");
       return acc;
     }, "");
+  }
+
+  function safeMaxLength(el, fallback = 5000) {
+    const ml = parseInt(el.getAttribute("maxlength") || el.maxLength || "", 10);
+    return Number.isFinite(ml) && ml > 0 ? ml : fallback;
   }
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -19,74 +34,65 @@
     const started = document.getElementById("started");
     const csrfField = document.getElementById("csrf");
     const status = document.querySelector(".form-status");
+    const consent = document.getElementById("consent");
 
     if (!form || !message || !counter || !jsok || !started || !csrfField) {
-      console.warn(
-        "contact.js: faltan elementos del formulario (comprueba ids)"
-      );
+      warn("Faltan elementos del formulario (comprueba IDs en el HTML).");
       return;
     }
 
-    // Contador de caracteres
+    // === 1) Contador de caracteres ===
+    const MAX = safeMaxLength(message, 5000);
     const updateCounter = () => {
-      counter.textContent = `${message.value.length} / ${message.maxLength}`;
+      counter.textContent = `${message.value.length} / ${MAX}`;
     };
-    message.addEventListener("input", updateCounter);
+    message.addEventListener("input", updateCounter, { passive: true });
     updateCounter();
 
-    // Rellenar started
+    // === 2) Trampas JS ===
     started.value = String(Date.now());
-    console.log("contact.js: started set to", started.value);
-
-    // Señuelo JS
     setTimeout(() => {
       jsok.value = "1";
-      console.log("contact.js: jsok set to 1");
+      log("jsok=1");
     }, 800);
 
-    // Copiar CSRF desde cookie si existe
+    // === 3) CSRF: intentar desde cookie; si no, pedir token por fetch ===
     const applyCsrfFromCookie = () => {
       const t = getCookie("csrf_token");
       if (t) {
         csrfField.value = t;
-        console.log("contact.js: csrf token applied from cookie");
+        log("CSRF aplicado desde cookie");
         return true;
       }
       return false;
     };
 
-    // Intento inmediato
+    const fetchCsrfWithTimeout = (ms = 4000) => {
+      const ac = new AbortController();
+      const id = setTimeout(() => ac.abort(), ms);
+      return fetch("/contact.php?token=1", {
+        method: "GET",
+        credentials: "same-origin",
+        signal: ac.signal,
+      })
+        .catch((err) => warn("fetch token falló:", err))
+        .finally(() => clearTimeout(id));
+    };
+
     if (!applyCsrfFromCookie()) {
-      // Si no hay cookie, hacemos fetch al endpoint para forzar creación (fallback)
+      // Espera breve por si la <img> ya lo puso; luego fallback por fetch
       setTimeout(() => {
         if (applyCsrfFromCookie()) return;
-        console.log(
-          "contact.js: cookie csrf_token ausente; intentando fetch /contact.php?token=1"
+        log("CSRF cookie ausente; intentando fetch /contact.php?token=1");
+        fetchCsrfWithTimeout(4000).then(() =>
+          setTimeout(applyCsrfFromCookie, 250)
         );
-        fetch("/contact.php?token=1", {
-          method: "GET",
-          credentials: "same-origin",
-        })
-          .then(() => {
-            // small delay para que la cookie sea escrita por el servidor
-            setTimeout(() => {
-              if (applyCsrfFromCookie()) {
-                // ok
-              } else {
-                console.warn(
-                  "contact.js: No se obtuvo csrf_token tras fetch. Revisa bloqueo por extensions/CSP."
-                );
-              }
-            }, 200);
-          })
-          .catch((err) => {
-            console.warn("contact.js: fetch token falló", err);
-          });
       }, 600);
     }
 
-    // Evitar doble envío y validar antes de enviar
+    // === 4) Evitar doble envío + validación previa ===
     let sending = false;
+
     form.addEventListener(
       "submit",
       (e) => {
@@ -95,8 +101,8 @@
           return;
         }
 
-        // Validación mínima cliente
-        const msg = message.value.trim();
+        // Validación rápida en cliente (el servidor valida igualmente)
+        const msg = (message.value || "").trim();
         if (msg.length < 10) {
           e.preventDefault();
           alert("El mensaje debe tener al menos 10 caracteres.");
@@ -104,59 +110,46 @@
           return;
         }
 
-        const consent = document.getElementById("consent");
         if (consent && !consent.checked) {
           e.preventDefault();
           alert("Debes aceptar la política de privacidad antes de enviar.");
           return;
         }
 
-        // Asegurar jsok
         if (jsok.value !== "1") {
           e.preventDefault();
-          alert(
-            "Es necesario que tu navegador ejecute Javascript para enviar el formulario. Por favor, habilita Javascript y vuelve a intentarlo."
-          );
+          alert("Necesitas habilitar JavaScript para enviar el formulario.");
           return;
         }
 
-        // Asegurar started > 3s
         const startedVal = parseInt(started.value || "0", 10);
-        if (isNaN(startedVal) || Date.now() - startedVal < 3000) {
+        if (!Number.isFinite(startedVal) || Date.now() - startedVal < 3000) {
           e.preventDefault();
-          alert(
-            "Por favor espera unos segundos antes de enviar el formulario."
-          );
+          alert("Por favor, espera unos segundos antes de enviar.");
           return;
         }
 
-        // Asegurar CSRF presente
         if (!csrfField.value) {
+          // Intento exprés de recuperar token y reintentar
           e.preventDefault();
           alert(
-            "Token CSRF ausente — recargando token y reintenta. Si el problema persiste, desactiva bloqueadores y comprueba la consola."
+            "No se ha podido obtener el token de seguridad (CSRF). Reintentando…"
           );
-          // Intento rápido de recuperar token antes de abandonar
-          fetch("/contact.php?token=1", {
-            method: "GET",
-            credentials: "same-origin",
-          })
-            .then(() =>
-              setTimeout(() => {
-                const t = getCookie("csrf_token");
-                if (t) {
-                  csrfField.value = t;
-                  form.submit(); // reintentar envío inmediato si conseguimos token
-                } else {
-                  console.warn("contact.js: reintento CSRF no funcionó");
-                }
-              }, 250)
-            )
-            .catch(() => {});
+          fetchCsrfWithTimeout(3000).then(() => {
+            setTimeout(() => {
+              if (applyCsrfFromCookie()) {
+                form.submit(); // reintento automático
+              } else {
+                alert(
+                  "No se pudo obtener el token CSRF. Recarga la página y vuelve a intentarlo (desactiva bloqueadores si persiste)."
+                );
+              }
+            }, 250);
+          });
           return;
         }
 
-        // todo ok: marcar envío
+        // Marca envío y muestra estado
         sending = true;
         if (status) status.textContent = "Enviando…";
       },
