@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "✉️ Contacto"
-#permalink: /contact/
+permalink: /contact/
 description: "Formas de contacto"
 ---
 
