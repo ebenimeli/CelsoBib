@@ -5,7 +5,7 @@ permalink: /contact/
 description: "Formas de contacto"
 ---
 
-<p>Si quieres ponerte en contacto conmigo, rellena el siguiente formulario y responderé lo antes posible.</p>
+<p>Si quieres ponerte en contacto conmigo, rellena el siguiente <strong>formulario</strong> y responderé lo antes posible.</p>
 
 <!-- Precalienta la cookie CSRF (no bloquea nada, pero puede ser bloqueado por adblockers) -->
 
