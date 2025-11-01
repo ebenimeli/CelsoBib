@@ -6,7 +6,7 @@ description: "Reflexiones al paso y retales de ideas"
 
 [![image](assets/images/posts/2024/01/post.jpg)](https://ebenimeli.substack.com/)
 
-Este es mi **boletín** más personal. Encontrarás reflexiones al paso, retales de ideas y notas al margen.
+Este es mi **boletín** más personal. Encontrarás **reflexiones** al paso, retales de **ideas** y **notas** al margen.
 
 - #34 / 01.11.2025 · [Una mochila japonesa](https://notasalvuelo.substack.com/p/una-mochila-japonesa)
 - #33 / 22.10.2025 · [Un cajón de ideas](https://notasalvuelo.substack.com/p/un-cajon-de-ideas)
