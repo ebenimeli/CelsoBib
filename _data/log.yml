@@ -1,19 +1,19 @@
 - timestamp: 2025-11-04 09:52
   text: "¡Buenos días! Es martes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-11-04 08:50
   text: "«La imaginación es más importante que el conocimiento» (Albert Einstein) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
   cat: quote
 - timestamp: 2025-11-04 00:03
-  text: "Un ajedrez japonés (I)"
+  text: "Un ajedrez japonés"
   link: "https://open.substack.com/pub/notasalvuelo/p/un-ajedrez-japones-i?r=po383&amp;utm_medium=ios"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2025-11-03 13:54
   text: "¡Buenos días! Feliz lunes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-11-03 08:50
   text: "«La educación no es preparación para la vida; la educación es la vida misma» (John Dewey) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -25,11 +25,11 @@
 - timestamp: 2025-11-02 09:12
   text: "¡Buenos días! Feliz domingo."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-11-01 17:21
   text: "Una mochila japonesa"
   link: "https://open.substack.com/pub/notasalvuelo/p/una-mochila-japonesa?r=po383&amp;utm_medium=ios"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2025-11-01 08:50
   text: "«La imaginación es más importante que el conocimiento» (Albert Einstein) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -37,11 +37,11 @@
 - timestamp: 2025-11-01 08:16
   text: "A hombros de gigantes: ¿Es el tiempo una ilusión? #science #status"
   link: "https://podcasts.apple.com/es/podcast/a-hombros-de-gigantes/id297965137?i=1000734564336"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2025-11-01 08:13
   text: "¡Buenos días! Feliz sábado y buen fin de semana."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-31 08:50
   text: "«La educación es el arma más poderosa para cambiar el mundo» (Nelson Mandela) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -53,7 +53,7 @@
 - timestamp: 2025-10-30 09:01
   text: "¡Buenos días! Es jueves."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-29 08:50
   text: "«La educación es el arma más poderosa para cambiar el mundo» (Nelson Mandela) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -61,11 +61,11 @@
 - timestamp: 2025-10-29 08:26
   text: "¡Buenos días! Es miércoles."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-28 14:21
   text: "SER Historia | Los misterios de Cristóbal Colón #status @SERhistoria"
   link: "https://podcasts.apple.com/es/podcast/ser-historia/id356329864?i=1000733505227"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2025-10-28 08:50
   text: "«La imaginación es más importante que el conocimiento» (Albert Einstein) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -73,15 +73,15 @@
 - timestamp: 2025-10-28 08:16
   text: "¡Buenos días! Es martes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-28 01:05
   text: "Arturo Pérez-Reverte, escritor: &quot;A mi edad tengo muy pocas certezas y muchas incertidumbres&quot; #edu"
   link: "https://youtube.com/watch?v=LCY2PIBdchU&amp;si=lS9q4-p2m_1xQ-fF"
-  cat: 'watch'
+  cat: "watch"
 - timestamp: 2025-10-27 11:28
   text: "¡Buenos días! Feliz lunes y buena semana."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-27 08:50
   text: "«El aprendizaje nunca agota la mente» (Leonardo da Vinci) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -93,7 +93,7 @@
 - timestamp: 2025-10-25 11:10
   text: "¡Feliz sábado y buen fin de semana!"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-10-25 08:50
   text: "«La mejor forma de predecir el futuro es crearlo» (Peter Drucker) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
