@@ -8,6 +8,7 @@ description: "Reflexiones al paso y retales de ideas"
 
 Este es mi **boletín** más personal. Encontrarás **reflexiones** al paso, retales de **ideas** y **notas** al margen.
 
+- #36 / 07.11.2025 · [Un desafío exponencial](https://notasalvuelo.substack.com/p/una-complejidad-exponencial)
 - #35 / 03.11.2025 · [Un ajedrez japonés](https://notasalvuelo.substack.com/p/un-ajedrez-japones-i)
 - #34 / 01.11.2025 · [Una mochila japonesa](https://notasalvuelo.substack.com/p/una-mochila-japonesa)
 - #33 / 22.10.2025 · [Un cajón de ideas](https://notasalvuelo.substack.com/p/un-cajon-de-ideas)
