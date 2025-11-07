@@ -1,3 +1,11 @@
+- timestamp: 2025-11-07 10:00
+  text: "¡Buenos días! Feliz viernes."
+  link: "https://mastodon.social/tags/gm"
+  cat: 'gm'
+- timestamp: 2025-11-07 08:50
+  text: "«Ugly action beats perfection. Just do it» (Hidde Douna (@growthbyvisuals)) #status"
+  link: https://www.instagram.com/p/DNXWYBZN4nT/?igsh=b2ptZ2tpems2YWdh
+  cat: quote
 - timestamp: 2025-11-06 14:06
   text: "Tertulia: ¿Deben respetar los periodistas su secreto profesional? @MasDeUno"
   link: "https://podcasts.apple.com/es/podcast/m%C3%A1s-de-uno/id983656582?i=1000735536091"
