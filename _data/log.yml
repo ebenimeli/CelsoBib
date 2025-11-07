@@ -1,3 +1,35 @@
+- timestamp: 2025-11-07 10:00
+  text: "¡Buenos días! Feliz viernes."
+  link: "https://mastodon.social/tags/gm"
+  cat: 'gm'
+- timestamp: 2025-11-07 08:50
+  text: "«Ugly action beats perfection. Just do it» (Hidde Douna (@growthbyvisuals)) #status"
+  link: https://www.instagram.com/p/DNXWYBZN4nT/?igsh=b2ptZ2tpems2YWdh
+  cat: quote
+- timestamp: 2025-11-06 14:06
+  text: "Tertulia: ¿Deben respetar los periodistas su secreto profesional? @MasDeUno"
+  link: "https://podcasts.apple.com/es/podcast/m%C3%A1s-de-uno/id983656582?i=1000735536091"
+  cat: 'podcast'
+- timestamp: 2025-11-06 11:39
+  text: "¡Buenos días! Feliz jueves."
+  link: "https://mastodon.social/tags/gm"
+  cat: 'gm'
+- timestamp: 2025-11-06 08:50
+  text: "«La vida es aquello que te pasa mientras estás ocupado haciendo otros planes» (John Lennon) #status"
+  link: https://www.ebenimeli.org/pages/me_quotes.html
+  cat: quote
+- timestamp: 2025-11-06 00:22
+  text: "Ep. 165 - El Sáhara Occidental 50 años después #historia"
+  link: "https://podcasts.apple.com/es/podcast/la-torre-del-faro/id1658580734?i=1000735305065"
+  cat: 'podcast'
+- timestamp: 2025-11-05 16:28
+  text: "¡Hola! Es miércoles."
+  link: "https://mastodon.social/tags/gm"
+  cat: 'gm'
+- timestamp: 2025-11-05 08:50
+  text: "«La experiencia no es lo que te ocurre, sino lo que haces con lo que te ocurre» (Aldous Huxley) #status"
+  link: https://www.ebenimeli.org/pages/me_quotes.html
+  cat: quote
 - timestamp: 2025-11-04 09:52
   text: "¡Buenos días! Es martes."
   link: "https://mastodon.social/tags/gm"
