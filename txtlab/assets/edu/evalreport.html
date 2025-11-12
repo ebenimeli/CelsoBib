@@ -1,0 +1,1884 @@
+<section id="read-accessible" aria-labelledby="ra-title">
+  <style>
+    /* ===== Impresión (A4, 1.5cm por lado) ===== */
+    @media print {
+      :root {
+        color-scheme: light;
+      }
+      @page {
+        size: A4;
+        margin: 15mm;
+      }
+
+      html,
+      body {
+        background: #fff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      body {
+        margin: 0 !important;
+      }
+
+      /* Oculta todo y luego muestra solo el informe */
+      body * {
+        visibility: hidden !important;
+      }
+      #report-card,
+      #report-card * {
+        visibility: visible !important;
+      }
+
+      #report-card {
+        position: absolute !important;
+        inset: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: auto !important;
+        max-width: none !important;
+        background: #fff !important;
+        color: #000 !important;
+        border: none !important;
+        box-shadow: none !important;
+        transform: none !important;
+        break-inside: avoid-page;
+      }
+
+      /* Sin márgenes/padding de contenedores padres */
+      #read-accessible #evalreport-app,
+      #read-accessible .wrap,
+      #read-accessible #evr-grid {
+        position: static !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: auto !important;
+        max-width: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+      }
+
+      /* Tablas con contraste en papel */
+      #report-card .table-wrap {
+        overflow: visible !important;
+      }
+      #read-accessible table {
+        width: 100% !important;
+        table-layout: fixed !important;
+      }
+      #read-accessible th,
+      #read-accessible td {
+        word-wrap: break-word !important;
+      }
+      #read-accessible table,
+      #read-accessible th,
+      #read-accessible td {
+        border-color: #000 !important;
+      }
+
+      /* Quita estética de tarjeta en papel */
+      #report-card .card {
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 0 10px 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+      }
+
+      /* No imprimir los botones */
+      #read-accessible #btnPrint,
+      #read-accessible #btnGotoPrev,
+      #read-accessible #btnGotoCurr,
+      #read-accessible #btnGotoComp,
+      #read-accessible .btnTop {
+        display: none !important;
+      }
+
+      /* *** NO imprimir gráficas (contenedor, canvas y snapshots) *** */
+      #read-accessible .chart-card,
+      #read-accessible canvas.chart,
+      #read-accessible img.print-canvas {
+        display: none !important;
+        visibility: hidden !important;
+      }
+
+      /* No imprimir la barra de progreso */
+      #read-accessible :where(.progress-wrap) {
+        display: none !important;
+      }
+    }
+
+    /* ===== EvalReport (hereda tema) — SCOPED ===== */
+    #read-accessible {
+      --evr-max: 100%;
+      --gap: 14px;
+      --radius: 12px;
+      --border-alpha: 0.18;
+      --muted-alpha: 0.65;
+    }
+
+    #read-accessible :where(#evalreport-app) {
+      display: block;
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+    }
+    #read-accessible :where(.wrap) {
+      width: 100%;
+      max-width: var(--evr-max);
+      margin-inline: auto;
+      padding: 24px 16px;
+      box-sizing: border-box;
+    }
+
+    /* Encabezado LOCAL del módulo */
+    #read-accessible :where(.evr-header) {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    #read-accessible :where(.evr-title) {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+    #read-accessible :where(.toolbar) {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    #read-accessible :where(button) {
+      appearance: none;
+      cursor: pointer;
+      background: transparent;
+      color: inherit;
+      border: 1px solid
+        color-mix(
+          in oklab,
+          currentColor calc(var(--border-alpha) * 100%),
+          transparent
+        );
+      border-radius: 10px;
+      padding: 0.6rem 0.9rem;
+      font-weight: 600;
+      transition: transform 0.12s ease;
+    }
+    #read-accessible :where(button:hover) {
+      background-color: color-mix(in oklab, currentColor 8%, transparent);
+    }
+
+    /* Botones con color */
+    #read-accessible #btnNew {
+      background-color: blueviolet;
+      color: #fff;
+      border: none;
+    }
+    #read-accessible #btnNew:hover {
+      background-color: darkviolet;
+      scale: 1.1;
+    }
+
+    #read-accessible #btnGen {
+      background-color: #16a34a;
+      color: #fff;
+      border: none;
+    }
+    #read-accessible #btnGen:hover {
+      background-color: #15803d;
+      scale: 1.1;
+    }
+
+    #read-accessible #btnFill {
+      background-color: coral;
+      color: #fff;
+      border: none;
+    }
+    #read-accessible #btnFill:hover {
+      background-color: tomato;
+      scale: 1.1;
+    }
+
+    #read-accessible #pdfexample {
+      background-color: steelblue;
+      color: #fff;
+      border: none;
+    }
+    #read-accessible #pdfexample:hover {
+      background-color: RoyalBlue;
+      scale: 1.1;
+    }
+
+    #read-accessible :where(.grid) {
+      display: grid;
+      gap: var(--gap);
+      grid-template-columns: 1fr; /* móvil: 1 columna */
+    }
+    /* Elementos que ocupan todo el ancho */
+    #read-accessible :where(.full) {
+      grid-column: 1 / -1;
+    }
+
+    #read-accessible :where(.card) {
+      border: 1px solid
+        color-mix(
+          in oklab,
+          currentColor calc(var(--border-alpha) * 100%),
+          transparent
+        );
+      border-radius: var(--radius);
+      padding: 14px;
+      background: transparent;
+      box-sizing: border-box;
+    }
+    #read-accessible :where(.card):hover {
+      border: 1px solid steelblue;
+      border-radius: var(--radius);
+      padding: 14px;
+      background: transparent;
+      box-sizing: border-box;
+    }
+
+    #read-accessible :where(.card h2) {
+      margin: 0.2rem 0 0.6rem;
+      font-size: 1.05rem;
+    }
+    #read-accessible :where(.tips) {
+      opacity: var(--muted-alpha);
+      font-size: 0.92rem;
+    }
+
+    #read-accessible :where(label) {
+      display: block;
+      margin: 6px 0 8px;
+      font-weight: 700;
+    }
+    #read-accessible :where(textarea) {
+      width: 100%;
+      min-height: 220px;
+      resize: vertical;
+      box-sizing: border-box;
+      color: inherit;
+      background: transparent;
+      border: 1px solid
+        color-mix(
+          in oklab,
+          currentColor calc(var(--border-alpha) * 100%),
+          transparent
+        );
+      border-radius: 10px;
+      padding: 10px;
+      font: 13px/1.35 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+    }
+
+    #read-accessible :where(#evrep) {
+      margin-top: 8px;
+    }
+    #read-accessible :where(.badge) {
+      display: inline-block;
+      padding: 0.12rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      border: 1px solid
+        color-mix(
+          in oklab,
+          currentColor calc(var(--border-alpha) * 100%),
+          transparent
+        );
+      opacity: var(--muted-alpha);
+    }
+    #read-accessible :where(.statgrid) {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @media (min-width: 800px) {
+      #read-accessible :where(.statgrid) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+    #read-accessible :where(.stat) {
+      border: 1px dashed
+        color-mix(
+          in oklab,
+          currentColor calc(var(--border-alpha) * 100%),
+          transparent
+        );
+      border-radius: 10px;
+      padding: 10px;
+    }
+    #read-accessible :where(.stat .k) {
+      font-size: 0.9rem;
+      opacity: var(--muted-alpha);
+    }
+    #read-accessible :where(.stat .v) {
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    #read-accessible :where(.table-wrap) {
+      overflow-x: auto;
+    }
+    #read-accessible :where(table) {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      border: 1px solid
+        color-mix(
+          in oklab,
+          currentColor calc(var(--border-alpha) * 100%),
+          transparent
+        );
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    #read-accessible :where(th, td) {
+      border-bottom: 1px solid
+        color-mix(
+          in oklab,
+          currentColor calc(var(--border-alpha) * 100%),
+          transparent
+        );
+      padding: 8px 10px;
+      text-align: left;
+    }
+    #read-accessible :where(th) {
+      font-weight: 700;
+    }
+    #read-accessible :where(tr:hover td) {
+      background-color: color-mix(in oklab, currentColor 6%, transparent);
+    }
+
+    #read-accessible :where(.tiny) {
+      font-size: 12px;
+      opacity: var(--muted-alpha);
+    }
+    #read-accessible :where(.mono) {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+    }
+
+    /* === SIN SOMBREADO en comparativas === */
+    #read-accessible :where(.hl-up, .hl-down) {
+      background: transparent !important;
+      outline: none !important;
+    }
+
+    /* Gráficas (canvas) */
+    #read-accessible :where(.charts) {
+      display: grid;
+      gap: 10px;
+    }
+    #read-accessible :where(.chart-card h4) {
+      margin: 0.2rem 0 0.6rem;
+    }
+    #read-accessible :where(canvas.chart) {
+      width: 100%;
+      height: 280px;
+      display: block;
+      border: 1px solid color-mix(in oklab, currentColor 20%, transparent);
+      border-radius: 10px;
+      background: transparent;
+    }
+
+    /* Botonera bajo "Informe" */
+    #read-accessible :where(.report-toolbar) {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 6px 0 2px;
+    }
+    /* Botones ocultos por defecto (hasta que haya informe) */
+    #read-accessible
+      :where(#btnPrint, #btnGotoPrev, #btnGotoCurr, #btnGotoComp) {
+      display: none;
+    }
+
+    /* ===== Progreso de generación ===== */
+    #read-accessible :where(.progress-wrap) {
+      display: none;
+      height: 4px;
+      width: 100%;
+      background: color-mix(in oklab, currentColor 15%, transparent);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+    #read-accessible :where(.progress-wrap.active) {
+      display: block;
+    }
+    #read-accessible :where(.progress-wrap .bar) {
+      width: 0%;
+      height: 100%;
+      background: currentColor;
+      opacity: 0.65;
+      transform: translateZ(0);
+      animation: evr-progress 2s linear forwards;
+    }
+    @keyframes evr-progress {
+      from {
+        width: 0%;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #read-accessible :where(.progress-wrap .bar) {
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+      }
+    }
+
+    /* ===== Footer de sección con botón 'Inicio' ===== */
+    #read-accessible :where(.section-footer) {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    /* 2 columnas a partir de 900px */
+    @media (min-width: 900px) {
+      #read-accessible #evr-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+      }
+    }
+
+    #read-accessible a {
+      color: royalblue;
+      font-weight: normal;
+    }
+    #read-accessible ul {
+      list-style-type: square;
+    }
+  </style>
+
+  <div id="evalreport-app" role="region" aria-labelledby="evr-title">
+    <div class="wrap">
+      <!-- Ancla de inicio -->
+      <div id="top" aria-hidden="true"></div>
+
+      <div class="evr-header">
+        <h1 id="evr-title" class="evr-title">
+          <i class="fa-solid fa-chart-simple"></i> Informe de evaluación:
+          análisis de datos y estadísticas
+        </h1>
+      </div>
+
+      <div class="section-wrap">
+        <img class="section" src="/assets/img/evalreport_g2.png" alt="" />
+      </div>
+
+      <div class="grid" id="evr-grid">
+        <section class="card">
+          <h2>
+            <i class="fa-solid fa-circle-question"></i> Acerca de esta app
+          </h2>
+          <ul class="tips">
+            <li>
+              Esta app es <strong>gratuita</strong> y no requiere instalar nada.
+            </li>
+            <li>
+              Genera un <strong>informe visual</strong> con estadísticas y
+              gráficas a partir de calificaciones.
+            </li>
+            <li>
+              Tan simple como pegar la lista <strong>asignaturas</strong> y una
+              o dos <strong>tablas de notas</strong> y pulsar el botón
+              <strong>Generar informe</strong>.
+            </li>
+            <li>
+              Además, puedes <strong>imprimir o exportar a PDF</strong> el
+              informe.
+            </li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2><i class="fa-solid fa-lock"></i> Protección de datos</h2>
+          <ul class="tips">
+            <li>Los datos de <strong>ejemplo</strong> no son reales.</li>
+            <li>
+              La app <strong>no envía datos</strong> a Internet: todo se procesa
+              en tu ordenador.
+            </li>
+          </ul>
+
+          <h2><i class="fa-solid fa-handshake"></i> Proyecto y autor</h2>
+          <ul class="tips">
+            <li>
+              Este es un proyecto de
+              <a href="https://www.ebenimeli.org/" target="_blank"
+                >Enrique Benimeli</a
+              >. Puedes contactar a través del
+              <a href="https://www.ebenimeli.org/contact/" target="_blank"
+                >formulario de contacto</a
+              >.
+            </li>
+            <li>
+              Si te gusta la herramienta y quieres
+              <strong>apoyar el proyecto</strong>, compártelo.
+              <!--<i class="fa-solid fa-mug-hot"></i>.-->
+            </li>
+          </ul>
+        </section>
+
+        <div class="toolbar full">
+          <button id="btnNew" type="button">
+            <i class="fa-solid fa-rotate-right"></i> Nuevo
+          </button>
+          <button id="btnGen" type="button">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Generar informe
+          </button>
+          <button id="btnFill" type="button">
+            <i class="fa-solid fa-table"></i> Cargar ejemplo
+          </button>
+          <button id="pdfexample" type="button">
+            <i class="fa-solid fa-file-pdf"></i> Ver ejemplo PDF
+          </button>
+        </div>
+
+        <!-- Barra de progreso (3 s) ANTES del informe -->
+        <div id="evrProgress" class="progress-wrap full" aria-hidden="true">
+          <div class="bar"></div>
+        </div>
+
+        <section class="card full" id="report-card">
+          <h2>Informe de evaluación</h2>
+
+          <!-- Botonera de informe -->
+          <div class="report-toolbar" aria-label="Acciones del informe">
+            <button
+              id="btnPrint"
+              type="button"
+              aria-label="Imprimir informe en PDF"
+            >
+              🖨️ Imprimir/PDF
+            </button>
+            <button
+              id="btnGotoPrev"
+              type="button"
+              aria-label="Ir a Evaluación anterior"
+            >
+              ⤵️ Anterior
+            </button>
+            <button
+              id="btnGotoCurr"
+              type="button"
+              aria-label="Ir a Evaluación actual"
+            >
+              ⤵️ Actual
+            </button>
+            <button
+              id="btnGotoComp"
+              type="button"
+              aria-label="Ir a Comparativa"
+            >
+              ⤵️ Comparativa
+            </button>
+          </div>
+
+          <div id="evrep" class="mono tiny">
+            Pulsa “Cargar ejemplo” y luego “Generar informe”, o pega tus datos
+            en: Asignaturas, Evaluación anterior y/o Evaluación actual.
+          </div>
+          <p class="tiny">
+            Un “suspenso” es &lt; 5. Los porcentajes se calculan sobre el total
+            de alumnos.
+          </p>
+        </section>
+
+        <section class="card full">
+          <h2>Asignaturas</h2>
+          <p class="tips">
+            Formato: <strong>código: nombre</strong>, una por línea.
+          </p>
+          <textarea
+            id="taSubjects"
+            placeholder="MAT: Matemáticas&#10;INF: Informática"
+          ></textarea>
+        </section>
+
+        <section class="card full">
+          <h2>Evaluación anterior</h2>
+          <p class="tips">
+            <strong>Encabezado:</strong>
+            <span class="mono">Alumno;MAT;INF;...</span> —
+            <strong>1 fila por alumno</strong>:
+            <span class="mono">Apellidos, Nombre;8.7;4.6;...</span>
+          </p>
+          <textarea
+            id="taPrev"
+            placeholder="Alumno;MAT;INF;...&#10;Apellidos, Nombre;8.7;4.6;..."
+          ></textarea>
+        </section>
+
+        <section class="card full">
+          <h2>Evaluación actual</h2>
+          <p class="tips">
+            Mismo formato y columnas que la evaluación anterior. La lista de
+            alumnos debe estar en el mismo orden.
+          </p>
+          <textarea
+            id="taCurr"
+            placeholder="Alumno;MAT;INF;...&#10;Apellidos, Nombre;8.4;5.3;..."
+          ></textarea>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const AUTOLOAD_EXAMPLE_ON_START = true; // ← cambia a false para desactivar
+
+    /* ===== Utilidades ===== */
+    const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+    const fmt = (x, d = 2) => (isFinite(x) ? Number(x).toFixed(d) : "—");
+    const pc = (part, total) => (total > 0 ? (100 * part) / total : 0);
+    const cleanLine = (s) => s.replace(/\u00A0/g, " ").trim();
+    const toNum = (s) => {
+      if (s == null) return NaN;
+      const t = ("" + s).trim().replace(",", ".");
+      const n = parseFloat(t);
+      return isFinite(n) ? n : NaN;
+    };
+
+    /* ===== Paleta (modo) ===== */
+    function getMode() {
+      const marks = [document.documentElement, document.body];
+      for (const el of marks) {
+        if (!el) continue;
+        const ds = (el.dataset.theme || "").toLowerCase();
+        if (ds.includes("dark")) return "dark";
+        if (ds.includes("light")) return "light";
+        const cl = el.className || "";
+        if (/\bdark\b|\btheme-dark\b/.test(cl)) return "dark";
+        if (/\blight\b|\btheme-light\b/.test(cl)) return "light";
+      }
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      )
+        return "dark";
+      return "light";
+    }
+    function getPalette() {
+      const mode = getMode();
+      if (mode === "dark") {
+        return {
+          mode,
+          text: "#FFFFFF",
+          grid: "rgba(220,220,220,0.25)",
+          axis: "#FFFFFF",
+          barPrevFill: "#DCDCDC",
+          barPrevStroke: "#DCDCDC",
+          barCurrFill: "#C0C0C0",
+          barCurrStroke: "#C0C0C0",
+        };
+      }
+      return {
+        mode: "light",
+        text: "#000000",
+        grid: "rgba(0,0,0,0.4)",
+        axis: "#000000",
+        barPrevFill: "#808080",
+        barPrevStroke: "#808080",
+        barCurrFill: "#2F4F4F",
+        barCurrStroke: "#2F4F4F",
+      };
+    }
+
+    /* ===== Lectura ===== */
+    function parseSubjects(text) {
+      const map = new Map();
+      cleanLine(text)
+        .split(/\r?\n/)
+        .forEach((line) => {
+          if (!line) return;
+          const m = line.match(/^\s*([A-Za-z0-9_]+)\s*:\s*(.+?)\s*$/);
+          if (m) map.set(m[1].trim(), m[2].trim());
+        });
+      return map;
+    }
+    function parseMatrix(text) {
+      const lines = cleanLine(text).split(/\r?\n/).filter(Boolean);
+      if (lines.length === 0) return { headerCodes: [], rows: [] };
+      const head = lines[0]
+        .split(";")
+        .map((s) => s.trim())
+        .filter(Boolean);
+      if (head.length < 2 || head[0].toLowerCase() !== "alumno")
+        return { headerCodes: [], rows: [] };
+      const headerCodes = head.slice(1);
+      const rows = [];
+      for (let i = 1; i < lines.length; i++) {
+        const parts = lines[i].split(";");
+        const name = (parts[0] || "").trim();
+        if (!name) continue;
+        const grades = new Map();
+        for (let c = 1; c < parts.length && c <= headerCodes.length; c++) {
+          const code = headerCodes[c - 1];
+          const val = toNum(parts[c]);
+          if (!isNaN(val)) grades.set(code, clamp(val, 0, 10));
+        }
+        rows.push({ name, grades });
+      }
+      return { headerCodes, rows };
+    }
+
+    /* ===== Estadísticas ===== */
+    function computeStats(matrix) {
+      const subj = matrix.headerCodes,
+        nStud = matrix.rows.length;
+      let totalGrades = 0,
+        sumAll = 0,
+        totalFails = 0;
+      const perStudent = matrix.rows.map((r) => {
+        let sum = 0,
+          cnt = 0,
+          fails = 0;
+        const failsCodes = [];
+        subj.forEach((code) => {
+          const v = r.grades.get(code);
+          if (typeof v === "number" && !isNaN(v)) {
+            sum += v;
+            cnt++;
+            if (v < 5) {
+              totalFails++;
+              fails++;
+              failsCodes.push(code);
+            }
+          }
+        });
+        totalGrades += cnt;
+        sumAll += sum;
+        return { name: r.name, avg: cnt ? sum / cnt : NaN, fails, failsCodes };
+      });
+      const passAll = perStudent.filter((s) => s.fails === 0).length;
+      const fail12 = perStudent.filter(
+        (s) => s.fails === 1 || s.fails === 2
+      ).length;
+      const fail3p = perStudent.filter((s) => s.fails >= 3).length;
+
+      const perSubject = subj
+        .map((code) => {
+          let s = 0,
+            c = 0;
+          matrix.rows.forEach((r) => {
+            const v = r.grades.get(code);
+            if (typeof v === "number" && !isNaN(v)) {
+              s += v;
+              c++;
+            }
+          });
+          return { code, avg: c ? s / c : NaN };
+        })
+        .sort(
+          (a, b) =>
+            (isNaN(b.avg) ? -1 : b.avg) - (isNaN(a.avg) ? -1 : a.avg) ||
+            b.avg - a.avg
+        );
+
+      const studentsOrdered = [...perStudent].sort((a, b) => {
+        if (isNaN(b.avg) && isNaN(a.avg)) return 0;
+        if (isNaN(b.avg)) return -1;
+        if (isNaN(a.avg)) return 1;
+        return b.avg - a.avg;
+      });
+
+      const globalAvg = totalGrades ? sumAll / totalGrades : NaN;
+      return {
+        nStud,
+        subj,
+        totalFails,
+        passAll,
+        fail12,
+        fail3p,
+        globalAvg,
+        perSubject,
+        studentsOrdered,
+        perStudentMap: new Map(perStudent.map((x) => [x.name, x])),
+      };
+    }
+
+    function compareEvaluations(prev, curr) {
+      const students = [];
+      const names = new Set([
+        ...prev.perStudentMap.keys(),
+        ...curr.perStudentMap.keys(),
+      ]);
+      names.forEach((name) => {
+        const a = prev.perStudentMap.get(name),
+          b = curr.perStudentMap.get(name);
+        if (!a || !b || isNaN(a.avg) || isNaN(b.avg)) return;
+        students.push({
+          name,
+          prev: a.avg,
+          curr: b.avg,
+          delta: b.avg - a.avg,
+          prevFails: a.fails,
+          prevCodes: a.failsCodes,
+          currFails: b.fails,
+          currCodes: b.failsCodes,
+        });
+      });
+      students.sort((x, y) => y.delta - x.delta || y.curr - x.curr);
+
+      const codes = new Set([...prev.subj, ...curr.subj]);
+      const subjects = [];
+      codes.forEach((code) => {
+        const pa = prev.perSubject.find((s) => s.code === code)?.avg;
+        const ca = curr.perSubject.find((s) => s.code === code)?.avg;
+        if (!isNaN(pa) && !isNaN(ca))
+          subjects.push({ code, prev: pa, curr: ca, delta: ca - pa });
+      });
+      subjects.sort((x, y) => y.delta - x.delta || y.curr - x.curr);
+
+      const globalDelta =
+        isNaN(prev.globalAvg) || isNaN(curr.globalAvg)
+          ? NaN
+          : curr.globalAvg - prev.globalAvg;
+      return { students, subjects, globalDelta };
+    }
+
+    /* ===== Gráficas (canvas) ===== */
+    function countFailsPerSubject(matrix) {
+      const counts = new Map();
+      matrix.headerCodes.forEach((c) => counts.set(c, 0));
+      matrix.rows.forEach((r) => {
+        matrix.headerCodes.forEach((code) => {
+          const v = r.grades.get(code);
+          if (typeof v === "number" && v < 5)
+            counts.set(code, (counts.get(code) || 0) + 1);
+        });
+      });
+      return counts;
+    }
+    function ensureCanvasSize(canvas) {
+      const rect = canvas.getBoundingClientRect();
+      const ratio = Math.max(1, Math.floor(window.devicePixelRatio || 1));
+      canvas.width = Math.max(320, Math.floor(rect.width * ratio));
+      const cssH =
+        parseFloat(getComputedStyle(canvas).height) || rect.height || 280;
+      canvas.height = Math.max(180, Math.floor(cssH * ratio));
+      return ratio;
+    }
+    function drawBarChart(canvas, labels, values, title = "", series = "curr") {
+      const ratio = ensureCanvasSize(canvas);
+      const ctx = canvas.getContext("2d");
+      const pal = getPalette();
+      const fill = series === "prev" ? pal.barPrevFill : pal.barCurrFill;
+      const stroke = series === "prev" ? pal.barPrevStroke : pal.barCurrStroke;
+
+      const W = canvas.width,
+        H = canvas.height;
+      ctx.clearRect(0, 0, W, H);
+      const m = { t: 28 * ratio, r: 14 * ratio, b: 64 * ratio, l: 52 * ratio };
+      const iw = W - m.l - m.r,
+        ih = H - m.t - m.b;
+
+      ctx.save();
+      ctx.fillStyle = pal.text;
+      ctx.font = `${12 * ratio}px system-ui,sans-serif`;
+      ctx.textBaseline = "top";
+      ctx.fillText(title, m.l, 8 * ratio);
+      ctx.restore();
+
+      const maxVal = Math.max(1, ...values);
+      const n = labels.length,
+        gap = 10 * ratio;
+      const barW = Math.max(8 * ratio, (iw - gap * (n - 1)) / n);
+
+      ctx.save();
+      ctx.strokeStyle = pal.grid;
+      ctx.lineWidth = 1.5 * ratio;
+      ctx.beginPath();
+      ctx.moveTo(m.l, m.t + ih);
+      ctx.lineTo(m.l, m.t);
+      ctx.moveTo(m.l, m.t + ih);
+      ctx.lineTo(m.l + iw, m.t + ih);
+      ctx.stroke();
+      for (let i = 1; i <= 4; i++) {
+        const y = m.t + ih - (ih * i) / 4;
+        ctx.beginPath();
+        ctx.moveTo(m.l, y);
+        ctx.lineTo(m.l + iw, y);
+        ctx.stroke();
+      }
+      ctx.restore();
+
+      for (let i = 0; i < n; i++) {
+        const x = m.l + i * (barW + gap),
+          h = ih * (values[i] / maxVal),
+          y = m.t + ih - h;
+        ctx.save();
+        ctx.fillStyle = fill;
+        ctx.fillRect(x, y, barW, h);
+        ctx.strokeStyle = stroke;
+        ctx.lineWidth = 1.4 * ratio;
+        ctx.strokeRect(
+          x + 0.5 * ratio,
+          y + 0.5 * ratio,
+          barW - 1 * ratio,
+          h - 1 * ratio
+        );
+        ctx.restore();
+      }
+
+      ctx.save();
+      ctx.fillStyle = pal.text;
+      ctx.font = `${11 * ratio}px ui-monospace,monospace`;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "top";
+      for (let i = 0; i < n; i++) {
+        const x = m.l + i * (barW + gap) + barW / 2;
+        ctx.fillText(labels[i], x, m.t + ih + 10 * ratio);
+      }
+      ctx.restore();
+
+      ctx.save();
+      ctx.fillStyle = pal.text;
+      ctx.font = `${11 * ratio}px system-ui,sans-serif`;
+      ctx.textAlign = "right";
+      ctx.textBaseline = "middle";
+      for (let i = 0; i <= 4; i++) {
+        const v = Math.round((maxVal * i) / 4);
+        const y = m.t + ih - (ih * i) / 4;
+        ctx.fillText(String(v), m.l - 10 * ratio, y);
+      }
+      ctx.restore();
+    }
+    function drawDualBarChart(canvas, labels, prevVals, currVals, title = "") {
+      const ratio = ensureCanvasSize(canvas);
+      const ctx = canvas.getContext("2d");
+      const pal = getPalette();
+      const W = canvas.width,
+        H = canvas.height;
+      ctx.clearRect(0, 0, W, H);
+      const m = { t: 28 * ratio, r: 14 * ratio, b: 66 * ratio, l: 52 * ratio };
+      const iw = W - m.l - m.r,
+        ih = H - m.t - m.b;
+
+      ctx.save();
+      ctx.fillStyle = pal.text;
+      ctx.font = `${12 * ratio}px system-ui,sans-serif`;
+      ctx.textBaseline = "top";
+      ctx.fillText(title, m.l, 8 * ratio);
+
+      // leyenda
+      const ly = 8 * ratio,
+        lx = m.l + 260 * ratio;
+      ctx.fillStyle = pal.barPrevFill;
+      ctx.fillRect(lx, ly, 18 * ratio, 10 * ratio);
+      ctx.fillStyle = pal.text;
+      ctx.fillText("Anterior", lx + 24 * ratio, ly + 1 * ratio);
+      ctx.fillStyle = pal.barCurrFill;
+      ctx.fillRect(lx + 120 * ratio, ly, 18 * ratio, 10 * ratio);
+      ctx.fillStyle = pal.text;
+      ctx.fillText("Actual", lx + 144 * ratio, ly + 1 * ratio);
+      ctx.restore();
+
+      const maxVal = Math.max(1, ...prevVals, ...currVals);
+      const n = labels.length,
+        gap = 12 * ratio,
+        groupW = Math.max(16 * ratio, (iw - gap * (n - 1)) / n),
+        barGap = 5 * ratio,
+        barW = (groupW - barGap) / 2;
+
+      // ejes
+      ctx.save();
+      ctx.strokeStyle = pal.grid;
+      ctx.lineWidth = 1.5 * ratio;
+      ctx.beginPath();
+      ctx.moveTo(m.l, m.t + ih);
+      ctx.lineTo(m.l + iw, m.t + ih);
+      ctx.stroke();
+      for (let i = 1; i <= 4; i++) {
+        const y = m.t + ih - (ih * i) / 4;
+        ctx.beginPath();
+        ctx.moveTo(m.l, y);
+        ctx.lineTo(m.l + iw, y);
+        ctx.stroke();
+      }
+      ctx.restore();
+
+      // barras
+      for (let i = 0; i < n; i++) {
+        const baseX = m.l + i * (groupW + gap);
+
+        const h1 = ih * (prevVals[i] / maxVal),
+          y1 = m.t + ih - h1;
+        const h2 = ih * (currVals[i] / maxVal),
+          y2 = m.t + ih - h2;
+
+        // anterior
+        ctx.save();
+        ctx.fillStyle = pal.barPrevFill;
+        ctx.fillRect(baseX, y1, barW, h1);
+        ctx.strokeStyle = pal.barPrevStroke;
+        ctx.lineWidth = 1.6 * ratio;
+        ctx.strokeRect(
+          baseX + 0.5 * ratio,
+          y1 + 0.5 * ratio,
+          barW - 1 * ratio,
+          h1 - 1 * ratio
+        );
+        ctx.restore();
+
+        // actual
+        ctx.save();
+        ctx.fillStyle = pal.barCurrFill;
+        ctx.fillRect(baseX + barW + barGap, y2, barW, h2);
+        ctx.strokeStyle = pal.barCurrStroke;
+        ctx.lineWidth = 1.6 * ratio;
+        ctx.strokeRect(
+          baseX + barW + barGap + 0.5 * ratio,
+          y2 + 0.5 * ratio,
+          barW - 1 * ratio,
+          h2 - 1 * ratio
+        );
+        ctx.restore();
+      }
+
+      // etiquetas eje X
+      ctx.save();
+      ctx.fillStyle = pal.text;
+      ctx.font = `${11 * ratio}px ui-monospace,monospace`;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "top";
+      for (let i = 0; i < n; i++) {
+        const x = m.l + i * (groupW + gap) + groupW / 2;
+        ctx.fillText(labels[i], x, m.t + ih + 10 * ratio);
+      }
+      ctx.restore();
+
+      // valores eje Y
+      ctx.save();
+      ctx.fillStyle = pal.text;
+      ctx.font = `${11 * ratio}px system-ui,sans-serif`;
+      ctx.textAlign = "right";
+      ctx.textBaseline = "middle";
+      for (let i = 0; i <= 4; i++) {
+        const v = Math.round((maxVal * i) / 4);
+        const y = m.t + ih - (ih * i) / 4;
+        ctx.fillText(String(v), m.l - 10 * ratio, y);
+      }
+      ctx.restore();
+    }
+
+    /* ===== Render HTML ===== */
+
+    function renderGradesTable(matrix) {
+      if (!matrix || !matrix.headerCodes?.length || !matrix.rows?.length)
+        return "";
+      const thead = `<thead>
+       <tr>
+         <th style="width:34%">Alumno</th>
+         ${matrix.headerCodes.map((c) => `<th class="mono">${c}</th>`).join("")}
+       </tr>
+     </thead>`;
+
+      const tbody = `<tbody>
+       ${matrix.rows
+         .map((r) => {
+           const cells = matrix.headerCodes
+             .map((code) => {
+               const v = r.grades.get(code);
+               const isFail = isFinite(v) && v < 5;
+               const style = isFail
+                 ? ' style="background:Tomato;color:white;font-weight:600;"'
+                 : "";
+               return `<td${style}>${isFinite(v) ? fmt(v, 1) : "—"}</td>`;
+             })
+             .join("");
+           return `<tr><td>${r.name}</td>${cells}</tr>`;
+         })
+         .join("")}
+     </tbody>`;
+
+      return `
+    <div class="table-wrap">
+      <table aria-label="Tabla de calificaciones">
+        ${thead}
+        ${tbody}
+      </table>
+    </div>`;
+    }
+    function renderStats(title, stats, anchorId, which, matrixForTable) {
+      const p = (n) => fmt(pc(n, stats.nStud), 1) + "%";
+      const idAttr = anchorId ? ` id="${anchorId}"` : "";
+      const chartId =
+        which === "prev" ? "chartPrev" : which === "curr" ? "chartCurr" : null;
+      const chartBlock = chartId
+        ? `
+        <div class="card chart-card" style="margin-top:10px">
+          <h3>Gráfica de suspensos por asignatura</h3>
+          <div class="charts">
+            <div>
+              <h4>${title}</h4>
+              <canvas id="${chartId}" class="chart" aria-label="Suspensos por asignatura (${title})" role="img"></canvas>
+            </div>
+          </div>
+        </div>`
+        : "";
+
+      const backTop = `
+        <div class="section-footer">
+          <button type="button" class="btnTop" data-target="top">⬆️ Inicio</button>
+        </div>`;
+
+      // *** Aquí colocamos primero la TABLA DE CALIFICACIONES ***
+      const gradesTableBlock = `
+        <h4 style="margin-top:6px">Tabla de calificaciones</h4>
+        ${renderGradesTable(matrixForTable)}
+      `;
+
+      return `
+      <div class="card"${idAttr} style="margin-top:8px">
+        <h3>${title} <span class="badge">${stats.nStud} alumnos</span></h3>
+
+        ${gradesTableBlock}
+
+        <h4 style="margin-top:14px">Resumen</h4>
+        <div class="statgrid">
+          <div class="stat"><div class="k">Aprueban todo</div><div class="v">${
+            stats.passAll
+          } <span class="tiny">(${p(stats.passAll)})</span></div></div>
+          <div class="stat"><div class="k">Suspenden 1–2</div><div class="v">${
+            stats.fail12
+          } <span class="tiny">(${p(stats.fail12)})</span></div></div>
+          <div class="stat"><div class="k">Suspenden ≥3</div><div class="v">${
+            stats.fail3p
+          } <span class="tiny">(${p(stats.fail3p)})</span></div></div>
+          <div class="stat"><div class="k">Suspensos totales</div><div class="v">${
+            stats.totalFails
+          }</div></div>
+          <div class="stat"><div class="k">Promedio global</div><div class="v">${fmt(
+            stats.globalAvg,
+            2
+          )}</div></div>
+        </div>
+
+        <h4 style="margin-top:14px">Asignaturas por promedio</h4>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th style="width:40%">Asignatura</th><th style="width:20%">Código</th><th>Promedio</th></tr></thead>
+            <tbody>
+              ${stats.perSubject
+                .map(
+                  (s) =>
+                    `<tr><td data-code="${s.code}" class="subjName">—</td><td>${
+                      s.code
+                    }</td><td>${fmt(s.avg, 2)}</td></tr>`
+                )
+                .join("")}
+            </tbody>
+          </table>
+        </div>
+
+        <h4 style="margin-top:14px">Alumnos por promedio</h4>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th style="width:50%">Alumno</th><th>Promedio</th><th>Suspensos (códigos)</th></tr></thead>
+            <tbody>
+              ${stats.studentsOrdered
+                .map((s) => {
+                  const codes = s.failsCodes?.join(", ") || "—";
+                  return `<tr><td>${s.name}</td><td>${fmt(s.avg, 2)}</td><td>${
+                    s.fails
+                  } <span class="tiny mono">— ${codes}</span></td></tr>`;
+                })
+                .join("")}
+            </tbody>
+          </table>
+        </div>
+
+        ${chartBlock}
+        ${backTop}
+      </div>`;
+    }
+
+    /* === COMPARATIVA === */
+    function renderComparison(cmp, anchorId = "sec-comp") {
+      const fmtRow = (d) => {
+        const pcPrev = d.prevFails ?? 0,
+          pcCurr = d.currFails ?? 0;
+        const lcPrev = (d.prevCodes || []).join(", ") || "—";
+        const lcCurr = (d.currCodes || []).join(", ") || "—";
+        return `
+          <tr>
+            <td>${d.name}</td>
+            <td>${fmt(d.prev, 2)}</td>
+            <td>${pcPrev}</td>
+            <td class="mono tiny">${lcPrev}</td>
+            <td>${fmt(d.curr, 2)}</td>
+            <td>${pcCurr}</td>
+            <td class="mono tiny">${lcCurr}</td>
+            <td>${fmt(d.delta, 2)}</td>
+          </tr>`;
+      };
+      return `
+        <div class="card" id="${anchorId}" style="margin-top:12px">
+          <h3>Comparativa entre evaluaciones</h3>
+          <div class="statgrid">
+            <div class="stat">
+              <div class="k">Δ Promedio global (actual − anterior)</div>
+              <div class="v">${fmt(cmp.globalDelta, 2)}</div>
+            </div>
+          </div>
+
+          <h4 style="margin-top:14px">Δ Promedio por asignatura</h4>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th style="width:34%">Asignatura</th><th style="width:10%">Código</th><th>Anterior</th><th>Actual</th><th>Δ</th></tr></thead>
+              <tbody>
+                ${cmp.subjects
+                  .map(
+                    (s) => `
+                  <tr>
+                    <td class="subjName" data-code="${s.code}">—</td>
+                    <td>${s.code}</td>
+                    <td>${fmt(s.prev, 2)}</td>
+                    <td>${fmt(s.curr, 2)}</td>
+                    <td>${fmt(s.delta, 2)}</td>
+                  </tr>`
+                  )
+                  .join("")}
+              </tbody>
+            </table>
+          </div>
+
+          <h4 style="margin-top:14px">Δ Promedio por alumno</h4>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th style="width:26%">Alumno</th><th>Prom. ant.</th><th>Susp. ant.</th><th>Cód. ant.</th><th>Prom. act.</th><th>Susp. act.</th><th>Cód. act.</th><th>Δ</th></tr></thead>
+              <tbody>${cmp.students.map(fmtRow).join("")}</tbody>
+            </table>
+          </div>
+
+          <div class="card chart-card" style="margin-top:10px">
+            <h3>Gráfica comparativa de suspensos</h3>
+            <div class="charts">
+              <div>
+                <h4>Anterior vs. Actual</h4>
+                <canvas id="chartCompare" class="chart" aria-label="Comparativa de suspensos por asignatura" role="img"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-footer">
+            <button type="button" class="btnTop" data-target="top">⬆️ Inicio</button>
+          </div>
+        </div>`;
+    }
+
+    function applySubjectNames(container, codesToNames) {
+      container.querySelectorAll(".subjName").forEach((td) => {
+        const code = td.getAttribute("data-code");
+        td.textContent = codesToNames.get(code) || code;
+      });
+    }
+
+    /* ===== Datos de ejemplo ===== */
+    const defaultSubjectsList = [
+      ["MAT", "Matemáticas"],
+      ["LEN", "Lengua y Literatura"],
+      ["ING", "Inglés"],
+      ["HIS", "Historia"],
+      ["GEO", "Geografía"],
+      ["FQ", "Física y Química"],
+      ["BIO", "Biología"],
+      ["INF", "Informatica"],
+      ["TEC", "Tecnología"],
+      ["EF", "Educación Física"],
+    ];
+    const surnames = [
+      "Lovelace",
+      "Babbage",
+      "Turing",
+      "Shannon",
+      "Hopper",
+      "Knuth",
+      "Ritchie",
+      "Kernighan",
+      "Torvalds",
+      "Stallman",
+      "Berners-Lee",
+      "Gates",
+      "Jobs",
+      "Wozniak",
+      "Allen",
+      "Kay",
+      "Cerf",
+      "Kahn",
+      "Hamilton",
+      "Liskov",
+      "von Neumann",
+      "Engelbart",
+      "Moore",
+      "Metcalfe",
+      "Dijkstra",
+      "McCarthy",
+      "Thompson",
+      "Stroustrup",
+      "Wirth",
+      "Backus",
+    ];
+
+    const names = [
+      "Ada",
+      "Charles",
+      "Alan",
+      "Claude",
+      "Grace",
+      "Donald",
+      "Dennis",
+      "Brian",
+      "Linus",
+      "Richard",
+      "Tim",
+      "Bill",
+      "Steve",
+      "Steve",
+      "Paul",
+      "Alan",
+      "Vinton",
+      "Robert",
+      "Margaret",
+      "Barbara",
+      "John",
+      "Douglas",
+      "Gordon",
+      "Robert",
+      "Edsger",
+      "John",
+      "Ken",
+      "Bjarne",
+      "Niklaus",
+      "John",
+    ];
+
+    function makeExampleData() {
+      const students = [];
+      for (let i = 0; i < 30; i++) {
+        const s = surnames[i % surnames.length]; // un solo apellido
+        const n = names[i % names.length];
+        students.push(`${s}, ${n}`); // formato: "Apellido, Nombre"
+      }
+
+      const codes = defaultSubjectsList.map((x) => x[0]);
+      const prev = [],
+        curr = [];
+      for (const alum of students) {
+        const pr = [alum],
+          cu = [alum];
+        for (const c of codes) {
+          const base = clamp(Math.random() * 6 + 3.2, 0, 10);
+          const delta = Math.random() * 6 - 3;
+          pr.push(clamp(base, 0, 10));
+          cu.push(clamp(base + delta, 0, 10));
+        }
+        prev.push(pr);
+        curr.push(cu);
+      }
+      const header = "Alumno;" + codes.join(";") + ";";
+      const rowsPrev = prev
+        .map(
+          (r) =>
+            r[0] +
+            ";" +
+            r
+              .slice(1)
+              .map((v) => v.toFixed(1))
+              .join(";") +
+            ";"
+        )
+        .join("\n");
+      const rowsCurr = curr
+        .map(
+          (r) =>
+            r[0] +
+            ";" +
+            r
+              .slice(1)
+              .map((v) => v.toFixed(1))
+              .join(";") +
+            ";"
+        )
+        .join("\n");
+      const subjText = defaultSubjectsList
+        .map((x) => `${x[0]}: ${x[1]}`)
+        .join("\n");
+      return {
+        subjText,
+        prevText: header + "\n" + rowsPrev,
+        currText: header + "\n" + rowsCurr,
+      };
+    }
+
+    /* ===== Interacción + redibujado ===== */
+    const taSubjects = document.getElementById("taSubjects");
+    const taPrev = document.getElementById("taPrev");
+    const taCurr = document.getElementById("taCurr");
+    const btnFill = document.getElementById("btnFill");
+    const btnGen = document.getElementById("btnGen");
+    const btnPrint = document.getElementById("btnPrint");
+    const btnGotoPrev = document.getElementById("btnGotoPrev");
+    const btnGotoCurr = document.getElementById("btnGotoCurr");
+    const btnGotoComp = document.getElementById("btnGotoComp");
+    const evrep = document.getElementById("evrep");
+    const progressWrap = document.getElementById("evrProgress");
+
+    let lastCharts = null; // { singles:[{canvas,labels,values,title,series}], dual:{...}|null }
+    let cleanupPrintImages = null;
+
+    /* ======== Flag: NO incluir gráficas en impresión ======== */
+    const INCLUDE_CHARTS_ON_PRINT = false;
+
+    function hideReportButtons() {
+      btnPrint.style.display = "none";
+      btnGotoPrev.style.display = "none";
+      btnGotoCurr.style.display = "none";
+      btnGotoComp.style.display = "none";
+    }
+
+    btnFill.addEventListener("click", () => {
+      const ex = makeExampleData();
+      taSubjects.value = ex.subjText;
+      taPrev.value = ex.prevText;
+      taCurr.value = ex.currText;
+      evrep.textContent = "Datos de ejemplo cargados. Pulsa “Generar informe”.";
+      lastCharts = null;
+      hideReportButtons();
+    });
+
+    function resetAll() {
+      taSubjects.value = "";
+      taPrev.value = "";
+      taCurr.value = "";
+
+      document
+        .querySelectorAll("#report-card img.print-canvas")
+        .forEach((img) => img.remove());
+
+      evrep.innerHTML = `
+      <div class="mono tiny">
+        Pulsa “Cargar ejemplo” y luego “Generar informe”, o pega tus datos en:
+        Asignaturas, Evaluación anterior y Evaluación actual.
+      </div>`;
+
+      hideReportButtons();
+      lastCharts = null;
+
+      progressWrap.classList.remove("active");
+      document.getElementById("evr-title")?.removeAttribute("aria-busy");
+
+      taSubjects.focus();
+    }
+    document.getElementById("btnNew").addEventListener("click", resetAll);
+
+    // --- núcleo de generación
+    function generateReport() {
+      try {
+        let codesToNames = parseSubjects(taSubjects.value);
+        if (codesToNames.size === 0)
+          defaultSubjectsList.forEach(([c, n]) => codesToNames.set(c, n));
+
+        const mPrev = parseMatrix(taPrev.value),
+          mCurr = parseMatrix(taCurr.value);
+        const hasPrev = mPrev.headerCodes.length > 0 && mPrev.rows.length > 0;
+        const hasCurr = mCurr.headerCodes.length > 0 && mCurr.rows.length > 0;
+        if (!hasPrev && !hasCurr)
+          throw new Error(
+            "Debes pegar al menos una matriz de calificaciones (B o C)."
+          );
+
+        lastCharts = { singles: [], dual: null };
+
+        if (hasPrev && hasCurr) {
+          const statsPrev = computeStats(mPrev),
+            statsCurr = computeStats(mCurr);
+          const cmp = compareEvaluations(statsPrev, statsCurr);
+
+          evrep.innerHTML =
+            `${renderStats(
+              "Evaluación anterior",
+              statsPrev,
+              "sec-prev",
+              "prev",
+              mPrev
+            )}` +
+            `${renderStats(
+              "Evaluación actual",
+              statsCurr,
+              "sec-curr",
+              "curr",
+              mCurr
+            )}` +
+            `${renderComparison(cmp, "sec-comp")}`;
+          applySubjectNames(evrep, codesToNames);
+
+          const countsPrev = countFailsPerSubject(mPrev),
+            countsCurr = countFailsPerSubject(mCurr);
+          const allCodes = Array.from(
+            new Set([...mPrev.headerCodes, ...mCurr.headerCodes])
+          );
+          const labelsPrev = mPrev.headerCodes,
+            valuesPrev = labelsPrev.map((c) => countsPrev.get(c) || 0);
+          const labelsCurr = mCurr.headerCodes,
+            valuesCurr = labelsCurr.map((c) => countsCurr.get(c) || 0);
+          const compPrevVals = allCodes.map((c) => countsPrev.get(c) || 0),
+            compCurrVals = allCodes.map((c) => countsCurr.get(c) || 0);
+
+          const cPrev = document.getElementById("chartPrev");
+          const cCurr = document.getElementById("chartCurr");
+          const cComp = document.getElementById("chartCompare");
+
+          drawBarChart(
+            cPrev,
+            labelsPrev,
+            valuesPrev,
+            "Suspensos por asignatura — Anterior",
+            "prev"
+          );
+          drawBarChart(
+            cCurr,
+            labelsCurr,
+            valuesCurr,
+            "Suspensos por asignatura — Actual",
+            "curr"
+          );
+          drawDualBarChart(
+            cComp,
+            allCodes,
+            compPrevVals,
+            compCurrVals,
+            "Comparativa de suspensos (Anterior vs. Actual)"
+          );
+
+          lastCharts.singles.push({
+            canvas: cPrev,
+            labels: labelsPrev,
+            values: valuesPrev,
+            title: "Suspensos por asignatura — Anterior",
+            series: "prev",
+          });
+          lastCharts.singles.push({
+            canvas: cCurr,
+            labels: labelsCurr,
+            values: valuesCurr,
+            title: "Suspensos por asignatura — Actual",
+            series: "curr",
+          });
+          lastCharts.dual = {
+            canvas: cComp,
+            labels: allCodes,
+            prevVals: compPrevVals,
+            currVals: compCurrVals,
+            title: "Comparativa de suspensos (Anterior vs. Actual)",
+          };
+        } else if (hasPrev) {
+          const statsPrev = computeStats(mPrev);
+          evrep.innerHTML = `${renderStats(
+            "Evaluación anterior",
+            statsPrev,
+            "sec-prev",
+            "prev",
+            mPrev
+          )}`;
+          applySubjectNames(evrep, codesToNames);
+
+          const countsPrev = countFailsPerSubject(mPrev);
+          const labelsPrev = mPrev.headerCodes,
+            valuesPrev = labelsPrev.map((c) => countsPrev.get(c) || 0);
+          const cPrev = document.getElementById("chartPrev");
+          drawBarChart(
+            cPrev,
+            labelsPrev,
+            valuesPrev,
+            "Suspensos por asignatura — Anterior",
+            "prev"
+          );
+          lastCharts.singles.push({
+            canvas: cPrev,
+            labels: labelsPrev,
+            values: valuesPrev,
+            title: "Suspensos por asignatura — Anterior",
+            series: "prev",
+          });
+        } else {
+          const statsCurr = computeStats(mCurr);
+          evrep.innerHTML = `${renderStats(
+            "Evaluación actual",
+            statsCurr,
+            "sec-curr",
+            "curr",
+            mCurr
+          )}`;
+          applySubjectNames(evrep, codesToNames);
+
+          const countsCurr = countFailsPerSubject(mCurr);
+          const labelsCurr = mCurr.headerCodes,
+            valuesCurr = labelsCurr.map((c) => countsCurr.get(c) || 0);
+          const cCurr = document.getElementById("chartCurr");
+          drawBarChart(
+            cCurr,
+            labelsCurr,
+            valuesCurr,
+            "Suspensos por asignatura — Actual",
+            "curr"
+          );
+          lastCharts.singles.push({
+            canvas: cCurr,
+            labels: labelsCurr,
+            values: valuesCurr,
+            title: "Suspensos por asignatura — Actual",
+            series: "curr",
+          });
+        }
+
+        /* Mostrar botones disponibles según anclas existentes */
+        btnPrint.style.display = "inline-block";
+        btnGotoPrev.style.display = document.getElementById("sec-prev")
+          ? "inline-block"
+          : "none";
+        btnGotoCurr.style.display = document.getElementById("sec-curr")
+          ? "inline-block"
+          : "none";
+        btnGotoComp.style.display = document.getElementById("sec-comp")
+          ? "inline-block"
+          : "none";
+      } catch (err) {
+        console.error(err);
+        evrep.innerHTML = `<div class="card">⚠️ ${err.message || err}</div>`;
+        lastCharts = null;
+        hideReportButtons();
+      }
+    }
+
+    /* ===== Impresión — snapshots CONDICIONALES ===== */
+    function snapshotCanvasesForPrint() {
+      if (!INCLUDE_CHARTS_ON_PRINT) {
+        return () => {};
+      }
+      document
+        .querySelectorAll("#report-card img.print-canvas")
+        .forEach((img) => img.remove());
+      const imgs = [];
+      document.querySelectorAll("#report-card canvas").forEach((cv) => {
+        try {
+          ensureCanvasSize(cv);
+          const img = new Image();
+          img.className = "print-canvas";
+          img.alt = cv.getAttribute("aria-label") || "gráfico";
+          img.src = cv.toDataURL("image/png");
+          cv.insertAdjacentElement("afterend", img);
+          imgs.push(img);
+        } catch (e) {
+          console.warn("No se pudo convertir canvas:", e);
+        }
+      });
+      return () => {
+        imgs.forEach((img) => img.remove());
+      };
+    }
+
+    // botón imprimir
+    btnPrint.addEventListener("click", () => {
+      cleanupPrintImages?.();
+      if (INCLUDE_CHARTS_ON_PRINT) {
+        cleanupPrintImages = snapshotCanvasesForPrint();
+        void document.body.offsetHeight;
+      } else {
+        cleanupPrintImages = null;
+      }
+      const after = () => {
+        cleanupPrintImages?.();
+        cleanupPrintImages = null;
+        window.removeEventListener("afterprint", after);
+      };
+      window.addEventListener("afterprint", after);
+      window.print();
+      setTimeout(() => {
+        cleanupPrintImages?.();
+        cleanupPrintImages = null;
+      }, 2000);
+    });
+
+    // Scroll suave a secciones
+    function gotoAnchor(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      el.setAttribute("tabindex", "-1");
+      el.focus({ preventScroll: true });
+      setTimeout(() => el.removeAttribute("tabindex"), 300);
+    }
+    btnGotoPrev.addEventListener("click", () => gotoAnchor("sec-prev"));
+    btnGotoCurr.addEventListener("click", () => gotoAnchor("sec-curr"));
+    btnGotoComp.addEventListener("click", () => gotoAnchor("sec-comp"));
+
+    // Delegación para botones "Inicio" de cada sección
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest(".btnTop");
+      if (btn) {
+        e.preventDefault();
+        gotoAnchor(btn.dataset.target || "top");
+      }
+    });
+
+    // Ctrl/Cmd+P
+    window.addEventListener("beforeprint", () => {
+      if (!INCLUDE_CHARTS_ON_PRINT) return;
+      if (document.getElementById("evrep").children.length) {
+        cleanupPrintImages?.();
+        requestAnimationFrame(() => {
+          cleanupPrintImages = snapshotCanvasesForPrint();
+          requestAnimationFrame(() => void document.body.offsetHeight);
+        });
+      }
+    });
+    window.addEventListener("afterprint", () => {
+      cleanupPrintImages?.();
+      cleanupPrintImages = null;
+    });
+
+    // Fallback matchMedia
+    if (window.matchMedia) {
+      const mqPrint = window.matchMedia("print");
+      const onChange = (e) => {
+        if (!INCLUDE_CHARTS_ON_PRINT) return;
+        if (e.matches) {
+          if (document.getElementById("evrep").children.length) {
+            cleanupPrintImages?.();
+            cleanupPrintImages = snapshotCanvasesForPrint();
+            void document.body.offsetHeight;
+          }
+        } else {
+          cleanupPrintImages?.();
+          cleanupPrintImages = null;
+        }
+      };
+      if (mqPrint.addEventListener)
+        mqPrint.addEventListener("change", onChange);
+      else if (mqPrint.addListener) mqPrint.addListener(onChange);
+    }
+
+    // Semilla de asignaturas si vacío
+    (function seedSubjectsOnce() {
+      if (!taSubjects.value.trim()) {
+        taSubjects.value = defaultSubjectsList
+          .map((x) => `${x[0]}: ${x[1]}`)
+          .join("\n");
+      }
+    })();
+
+    // Redibujado responsivo
+    let resizeTimer = null;
+    window.addEventListener("resize", () => {
+      if (!lastCharts) return;
+      if (resizeTimer) cancelAnimationFrame(resizeTimer);
+      resizeTimer = requestAnimationFrame(() => {
+        if (lastCharts.singles?.length) {
+          lastCharts.singles.forEach((s) =>
+            drawBarChart(s.canvas, s.labels, s.values, s.title, s.series)
+          );
+        }
+        if (lastCharts.dual) {
+          const d = lastCharts.dual;
+          drawDualBarChart(d.canvas, d.labels, d.prevVals, d.currVals, d.title);
+        }
+      });
+    });
+
+    // Redibujo al cambiar tema del SO
+    if (window.matchMedia) {
+      const mq = window.matchMedia("(prefers-color-scheme: dark)");
+      const rerender = () => {
+        if (document.getElementById("evrep").children.length && lastCharts) {
+          window.dispatchEvent(new Event("resize"));
+        }
+      };
+      if (mq.addEventListener) mq.addEventListener("change", rerender);
+      else if (mq.addListener) mq.addListener(rerender);
+    }
+
+    /* ===== Barra de progreso (3 s) ===== */
+    function runWithProgress(fn, ms = 3000) {
+      const progressWrap = document.getElementById("evrProgress");
+      progressWrap.classList.add("active");
+      const bar = progressWrap.querySelector(".bar");
+      bar.style.animation = "none";
+      void bar.offsetWidth;
+      bar.style.animation = "";
+
+      btnGen.disabled = true;
+      btnFill.disabled = true;
+      btnPrint.disabled = true;
+      document.getElementById("evr-title")?.setAttribute("aria-busy", "true");
+
+      setTimeout(() => {
+        try {
+          fn();
+        } finally {
+          progressWrap.classList.remove("active");
+          btnGen.disabled = false;
+          btnFill.disabled = false;
+          btnPrint.disabled = false;
+          document.getElementById("evr-title")?.removeAttribute("aria-busy");
+        }
+      }, ms);
+    }
+
+    // Listener del botón Generar (con progreso)
+    btnGen.addEventListener("click", () =>
+      runWithProgress(generateReport, 2000)
+    );
+
+    document.getElementById("pdfexample").addEventListener("click", () => {
+      window.open("assets/files/ejemplo_informe.pdf", "_blank");
+    });
+
+    /* ===== AUTO: cargar ejemplo y generar al iniciar (robusto) ===== */
+    (function setupAutoload() {
+      let didAutoload = false;
+
+      function doAutoload() {
+        if (didAutoload || !AUTOLOAD_EXAMPLE_ON_START) return;
+        didAutoload = true;
+        try {
+          const ex = makeExampleData();
+          taSubjects.value = ex.subjText;
+          taPrev.value = ex.prevText;
+          taCurr.value = ex.currText;
+          evrep.textContent = "Generando informe de ejemplo…";
+          runWithProgress(generateReport, 800);
+        } catch (e) {
+          console.error("Autocarga de ejemplo falló:", e);
+        }
+      }
+
+      if (
+        document.readyState === "complete" ||
+        document.readyState === "interactive"
+      ) {
+        requestAnimationFrame(doAutoload);
+      } else {
+        const onReady = () => {
+          doAutoload();
+          window.removeEventListener("DOMContentLoaded", onReady);
+          window.removeEventListener("load", onReady);
+        };
+        window.addEventListener("DOMContentLoaded", onReady, { once: true });
+        window.addEventListener("load", onReady, { once: true });
+      }
+    })();
+  </script>
+</section>

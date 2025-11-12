@@ -1,4 +1,4 @@
-¿Qué significa...? (acrónimo -> significado)
+¿Qué significa...?
 CPU;Central Processing Unit
 GPU;Graphics Processing Unit
 RAM;Random Access Memory
@@ -9,7 +9,6 @@ USB;Universal Serial Bus
 HDMI;High Definition Multimedia Interface
 VGA;Video Graphics Array
 BIOS;Basic Input Output System
-POST;Power On Self Test
 UPS;Uninterruptible Power Supply
 PSU;Power Supply Unit
 DNS;Domain Name System

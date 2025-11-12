@@ -81,7 +81,9 @@ export async function loadEdu(fileOrId) {
  * Por defecto atiende #diversity (tu panel) y #education (por si lo renombras).
  * Puedes ajustar el selector si cambias la estructura.
  */
-export function initEduDelegation(scopeSelector = "#diversity, #education") {
+export function initEduDelegation(
+  scopeSelector = "#diversity, #education, #evaluation"
+) {
   if (initEduDelegation._wired) return;
 
   document.addEventListener("click", (e) => {

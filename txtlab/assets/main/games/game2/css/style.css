@@ -6,11 +6,13 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: sans-serif;
+  background-color: #f0f0f0;
 }
 
 /* PANEL SUPERIOR */
 #top-panel {
   width: 100%;
+  background: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   padding: 10px;
   box-sizing: border-box;
@@ -62,7 +64,6 @@ body {
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
-  width: 100%;
 }
 #panel img,
 #panel .blank {
@@ -79,9 +80,9 @@ body {
 #input-area {
   width: 100%;
   padding: 10px;
+  background: #fff;
   box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
   box-sizing: border-box;
-  width: 100%;
 }
 #wordInput {
   width: 100%;

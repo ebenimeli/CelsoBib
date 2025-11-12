@@ -1,298 +1,528 @@
-<style>
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 100vh;
-    margin: 0;
-    font-family: sans-serif;
-  }
+<div id="ws-embed" role="group" aria-label="Juego: Sopa de letras">
+  <style>
+    /* ===== INTEGRACIÓN EN #main ===== */
+    #ws-embed {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      width: 100%;
+      padding: 8px;
+      container-type: inline-size;
+      color: var(--c-text, #222);
+    }
+    #ws-embed .frame {
+      background: var(--c-bg, #fff);
+      border: 1px solid var(--c-border, #ddd);
+      border-radius: 12px;
+      padding: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    #ws-embed .grid {
+      --cell: 34px;
+      display: grid;
+      gap: 2px;
+      user-select: none;
+      touch-action: none;
+      margin-top: 8px;
+      justify-content: start;
+      background: var(--c-muted, #f5f5f5);
+      padding: 8px;
+      border-radius: 8px;
+    }
+    #ws-embed .cell {
+      width: var(--cell);
+      height: var(--cell);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      line-height: 1;
+    }
 
-  div#main{
-    min-height: 500px;
-  }
-  
-  /* PANEL SUPERIOR */
-  #top-panel {
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+    }
+    #top-panel {
+      width: 100%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    #top-panel button {
+      padding: 8px 12px;
+      font-size: 1em;
+      cursor: pointer;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 6px;
+    }
+    #selectedImg {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+    }
 
-  #top-panel button {
-    padding: 8px 12px;
-    font-size: 1em;
-    cursor: pointer;
-    background-color: green;
-    color: white;
-  }
+    /* Fila de controles (debajo del botón) */
+    #controls {
+      width: 100%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+      padding: 8px 10px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    #controls label {
+      font-size: 0.95em;
+    }
+    #durSlider {
+      width: 220px;
+    }
+    #durValue {
+      font-variant-numeric: tabular-nums;
+    }
 
-  /* Imagen cuadrada junto al botón */
-  #selectedImg {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border: 2px solid #ddd;
-    border-radius: 4px;
-  }
+    #panel {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    #panel img,
+    #panel .blank {
+      object-fit: contain;
+      height: auto;
+      box-sizing: border-box;
+    }
+    #panel .blank {
+      border: 2px dashed #ccc;
+      background-color: #fff;
+    }
+    #input-area {
+      width: 100%;
+      padding: 10px;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+    }
+    #wordInput {
+      width: 100%;
+      padding: 10px;
+      font-size: 1.2em;
+      box-sizing: border-box;
+      text-transform: uppercase;
+    }
 
-  /* Contenedor de las imágenes de palabras */
-  #image-buttons {
-    margin-left: auto;
-    display: flex;
-    gap: 8px;
-  }
+    p.musicnotes {
+      font-size: 0.8em;
+      text-align: center;
+      display: block;
+    }
+  </style>
 
-  #image-buttons .word-icon {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border: 2px solid #ddd;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: transform 0.1s;
-  }
+  <div id="top-panel">
+    <button id="pickWordBtn">Siguiente palabra</button>
+    <img id="selectedImg" src="" alt="Palabra actual" />
+  </div>
 
-  #image-buttons .word-icon:hover {
-    transform: scale(1.1);
-    border-color: #aaa;
-  }
+  <!-- NUEVO: fila de controles -->
+  <div id="controls">
+    <label for="durSlider">Duración de la nota:</label>
+    <input
+      type="range"
+      id="durSlider"
+      min="0.05"
+      max="3.0"
+      step="0.05"
+      value="1.0"
+    />
+    <span id="durValue">1.0 s</span>
+  </div>
 
-  /* PANEL CENTRAL */
-  #panel {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 100%;
-  }
+  <p class="musicnotes">
+    Escala: <i class="fa-solid fa-music"></i> CDEFGHI JKLMNÑO ...
+    <i class="fa-solid fa-music"></i>
+  </p>
 
-  #panel img,
-  #panel .blank {
-    object-fit: contain;
-    height: auto;
-    /*max-height: 200px;*/
-    box-sizing: border-box;
-  }
+  <p class="musicnotes">
+    <i class="fa-solid fa-music"></i> C C G G H H G - F F E E D D C - G G F F E
+    E D - G G F F E E D - C C G G H H G - F F E E D D C
+    <i class="fa-solid fa-music"></i>
+  </p>
+  <div id="input-area">
+    <input
+      type="text"
+      id="wordInput"
+      placeholder="Escribe una palabra..."
+      autocomplete="off"
+    />
+  </div>
 
-  #panel img {
-    border-radius: 20px;
-  }
+  <div id="panel"></div>
 
-  #panel .blank {
-    border: 2px dashed #ccc;
-    background-color: #fff;
-  }
+  <script>
+    (() => {
+      /* ======= DOM ======= */
+      const panel = document.getElementById("panel");
+      const input = document.getElementById("wordInput");
+      const pickBtn = document.getElementById("pickWordBtn");
+      const selectedImg = document.getElementById("selectedImg");
+      const durSlider = document.getElementById("durSlider"); // NUEVO
+      const durValue = document.getElementById("durValue"); // NUEVO
 
-  /* PANEL INFERIOR */
-  #input-area {
-    width: 100%;
-    padding: 10px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    width: 100%;
-  }
+      /* ======= Datos ======= */
+      const wordList = [
+        "ABEJA",
+        "BOLA",
+        "CASA",
+        "DADO",
+        "ELEFANTE",
+        "FLOR",
+        "GATO",
+        "HOJA",
+        "ISLA",
+        "JUEGO",
+        "KOALA",
+        "LUNA",
+        "MANO",
+        "NUBE",
+        "ÑU",
+        "OJO",
+        "PATO",
+        "QUESO",
+        "RANA",
+        "SOL",
+        "TREN",
+        "UVA",
+        "VACA",
+        "WIFI",
+        "TAXI", // versión abreviada de xilófono (puedes usar "XILOF" si prefieres)
+        "YEMA",
+        "ZORRO",
+      ];
 
-  #wordInput {
-    width: 100%;
-    padding: 10px;
-    font-size: 1.2em;
-    box-sizing: border-box;
-    text-transform: uppercase;
-  }
-</style>
+      const wordImageNames = [];
 
-<div class="game-root">
-<!-- Panel superior con botón, imagen seleccionada y 8 iconos -->
-<div id="top-panel">
-  <button id="pickWordBtn">Siguiente palabra</button>
-  <img id="selectedImg" src="" alt="Palabra actual" hidden />  
-  <!--
-    <div id="image-buttons">
-      <img src="images/spidey.jpg" alt="SPIDEY" data-word="SPIDEY" class="word-icon">
-      <img src="images/spin.jpg" alt="SPIN" data-word="SPIN" class="word-icon">
-      <img src="images/fantasma.jpg" alt="FANTASMA" data-word="FANTASMA" class="word-icon">
-      <img src="images/hulk.jpg" alt="HULK" data-word="HULK" class="word-icon">
-      <img src="images/duende.jpg" alt="DUENDE VERDE" data-word="DUENDE VERDE" class="word-icon">
-      <img src="images/doc_ock.jpg" alt="DOC OCK" data-word="DOC OCK" class="word-icon">
-      <img src="images/rhino.jpg" alt="RHINO" data-word="RHINO" class="word-icon">
-      <img src="images/sandman.jpg" alt="HOMBRE DE ARENA" data-word="HOMBRE DE ARENA" class="word-icon">
-    </div>
-    -->
-</div>
-<br />
-<!-- Panel inferior con cuadro de texto -->
-<div id="input-area">
-  <input type="text" id="wordInput" placeholder="Escribe una palabra..." autocomplete="off" />
-</div>
-<!-- Panel central de imágenes -->
-<div id="panel"></div>
-<br />
+      // Bases de assets (ajusta si cambian tus rutas)
+      const IMG_BASE = "assets/main/games/game2/images/";
+      const LETTERS_BASE = IMG_BASE + "letters/";
+      const NUMBERS_BASE = IMG_BASE + "numbers/";
+      const AUDIO_BASE = "assets/main/games/game2/audio/";
 
+      // Rutas candidatas para la miniatura (foto) junto al botón
+      const CANDIDATE_BASES = [IMG_BASE, "images/", "./"];
 
-</div>
+      // Whitelist de audios de palabra (edita con tus mp3 reales, sin extensión)
+      const AVAILABLE_WORD_AUDIOS = new Set([
+        "spidey",
+        "gato",
+        "sol",
+        "luna",
+        "hulk",
+        "rhino",
+        "spin",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+      ]);
 
-<script>
-  // Elementos del DOM
-  const panel = document.getElementById('panel');
-  const input = document.getElementById('wordInput');
-  const pickBtn = document.getElementById('pickWordBtn');
-  const selectedImg = document.getElementById('selectedImg');
-  const wordIcons = document.querySelectorAll('.word-icon');
+      // Índice de navegación (apunta a la siguiente palabra al pulsar “siguiente”)
+      let currentIndex = 0;
 
-  // Lista de palabras e imágenes
-  const wordList = ['GATO', 'SOL', 'LUNA'];
-  const wordImages = [
-    'assets/img/letters/gato.jpg',
-    'assets/img/letters/sol.jpg',
-    'assets/img/letters/luna.jpg',
-  ];
-
-  let currentIndex = 0;
-
-  // AudioContext y frecuencias
-  const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-  const lowFreq = 220;
-  const highFreq = 880;
-
-  // Funciones de sonido
-  function playFreq(freq, duration = 0.3, startTime = audioCtx.currentTime) {
-    const osc = audioCtx.createOscillator();
-    const gain = audioCtx.createGain();
-    osc.type = 'sine';
-    osc.frequency.value = freq;
-    osc.connect(gain);
-    gain.connect(audioCtx.destination);
-    gain.gain.setValueAtTime(0.2, startTime);
-    osc.start(startTime);
-    osc.stop(startTime + duration);
-  }
-
-  function playScale() {
-    const scaleFreqs = [261.63, 293.66, 329.63, 349.23, 392.00, 440.00, 493.88, 523.25];
-    const interval = 0.10;
-    scaleFreqs.forEach((freq, i) => {
-      playFreq(freq, 0.3, audioCtx.currentTime + i * interval);
-    });
-  }
-
-  function playNote(letter) {
-    const idx = letter.charCodeAt(0) - 65;
-    const freq = lowFreq + (idx / 25) * (highFreq - lowFreq);
-    playFreq(freq);
-  }
-
-  function playDeleteSound() {
-    playFreq(100, 0.15);
-  }
-
-  // Audio especial para Spidey
-  const spideyAudio = new Audio('audio/spidey.mp3');
-  spideyAudio.preload = 'auto';
-  function playSpidey() {
-    spideyAudio.currentTime = 0;
-    spideyAudio.play().catch(err => console.error(err));
-  }
-
-  // Actualiza panel central según el texto
-  function updatePanel() {
-    const value = input.value;
-    panel.innerHTML = '';
-    if (!value) return;
-    const letters = value.split('');
-    const effectiveCount = Math.max(letters.length, 3);
-    const widthPct = 100 / effectiveCount;
-
-    letters.forEach(letter => {
-      if (letter === ' ') {
-        const blank = document.createElement('div');
-        blank.className = 'blank';
-        blank.style.flex = `0 0 ${widthPct}%`;
-        blank.style.margin = '2px';
-        blank.style.aspectRatio = '1/1';
-        panel.appendChild(blank);
-      } else if (/[A-Z]/.test(letter)) {
-        const img = document.createElement('img');
-        img.src = `assets/img/letters/letters/letter_${letter}.jpg`;
-        img.alt = letter;
-        img.style.flex = `0 0 ${widthPct}%`;
-        img.style.maxWidth = `${widthPct}%`;
-        img.style.margin = '2px';
-        panel.appendChild(img);
+      /* ======= Carga de imagen con fallback de rutas ======= */
+      function setImageFromCandidates(imgEl, filename, altText = "") {
+        let i = 0;
+        imgEl.style.display = "none";
+        imgEl.removeAttribute("src");
+        imgEl.alt = "";
+        function tryNext() {
+          if (i >= CANDIDATE_BASES.length) {
+            imgEl.style.display = "none";
+            imgEl.setAttribute("aria-hidden", "true");
+            return;
+          }
+          const url = CANDIDATE_BASES[i] + filename;
+          const probe = new Image();
+          probe.onload = () => {
+            imgEl.src = url;
+            imgEl.alt = altText;
+            imgEl.style.display = "";
+            imgEl.removeAttribute("aria-hidden");
+          };
+          probe.onerror = () => {
+            i++;
+            tryNext();
+          };
+          probe.src = url;
+        }
+        tryNext();
       }
-    });
-  }
 
-  // Actualiza miniatura junto al botón
-function updateSelectedImage() {
-  const img = document.getElementById('selectedImg'); // puede no existir
-  if (!img) return; // no hay miniatura en el DOM → no mostramos nada
+      /* ======= Audio ======= */
+      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
-  const src = wordImages[currentIndex];       // o la que toque
-  const alt = wordList[currentIndex] || '';
+      // Duración configurable (por el usuario con el slider)
+      let noteDuration = parseFloat(durSlider.value); // NUEVO
 
-  if (!src) {
-    img.hidden = true;         // oculta de forma accesible
-    img.removeAttribute('src'); // evita el icono de imagen rota
-    img.alt = '';
-    return;
-  }
+      function playFreq(
+        freq,
+        duration = noteDuration,
+        startTime = audioCtx.currentTime
+      ) {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = "sine";
+        osc.frequency.value = freq;
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        gain.gain.setValueAtTime(0.22, startTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration);
+        osc.start(startTime);
+        osc.stop(startTime + duration);
+      }
+      function playDeleteSound() {
+        playFreq(100, 0.15);
+      } // sigue siendo cortito
 
-  img.src = src;
-  img.alt = alt;
-  img.hidden = false;          // muéstrala cuando hay imagen
-}
+      /* ======= Escala empezando en LA (A) y subiendo octavas cada 7 letras ======= */
+      const SCALE_BASE_AB = [
+        440.0, 493.88, 523.25, 587.33, 659.25, 698.46, 783.99,
+      ]; // A4..G5
+      const ALPHABET = [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "Ñ",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+      ];
 
-  // Inicialización al cargar la página
-  document.addEventListener('DOMContentLoaded', () => {
-    input.value = wordList[currentIndex];
-    updatePanel();
-    updateSelectedImage();
-    currentIndex = (currentIndex + 1) % wordList.length;
-  });
+      function letterToFreq(letter) {
+        const L = letter.toUpperCase();
+        const pos = ALPHABET.indexOf(L);
+        if (pos === -1) return null;
+        const degree = pos % 7; // A..G
+        const octShift = Math.floor(pos / 7); // +1 octava por bloque de 7
+        return SCALE_BASE_AB[degree] * Math.pow(2, octShift);
+      }
+      function playNote(letter) {
+        const f = letterToFreq(letter);
+        if (f) playFreq(f, noteDuration); // usa duración ajustable
+      }
 
-  // Siguiente palabra
-  pickBtn.addEventListener('click', () => {
-    input.value = wordList[currentIndex];
-    updatePanel();
-    try { updateSelectedImage(); } catch (_) {}
+      // Audio especial (opcional)
+      const spideyAudio = new Audio(AUDIO_BASE + "spidey.mp3");
+      spideyAudio.preload = "auto";
+      function playSpidey() {
+        spideyAudio.currentTime = 0;
+        spideyAudio.play().catch(() => {});
+      }
 
-  currentIndex = (currentIndex + 1) % wordList.length;  // siempre avanza
-});
+      // Audios de dígitos 0–9
+      const numberAudios = {};
+      for (let i = 0; i <= 9; i++) {
+        const a = new Audio(`${AUDIO_BASE}say${i}.mp3`);
+        a.preload = "auto";
+        numberAudios[i] = a;
+      }
+      function playNumberAudio(numChar) {
+        const a = numberAudios[numChar];
+        if (!a) return;
+        a.currentTime = 0;
+        a.play().catch(() => {});
+      }
 
-  // Click en iconos de palabra
-  wordIcons.forEach((img, idx) => {
-    img.addEventListener('click', () => {
-      input.value = img.dataset.word;
-      updatePanel();
-      if (idx === 0) {
-        playSpidey();
+      function maybePlayWordAudio(wordUpper) {
+        const key = wordUpper.trim().toLowerCase();
+        if (!key || key.length < 2) return;
+        if (!AVAILABLE_WORD_AUDIOS.has(key)) return;
+        const a = new Audio(`${AUDIO_BASE}${key}.mp3`);
+        a.play().catch(() => {});
+      }
+
+      /* ======= Render del panel ======= */
+      function updatePanel() {
+        const value = input.value;
+        panel.innerHTML = "";
+        if (!value) return;
+        const letters = value.split("");
+        const effectiveCount = Math.max(letters.length, 3);
+        const widthPct = 100 / effectiveCount;
+        letters.forEach((ch) => {
+          if (ch === " ") {
+            const blank = document.createElement("div");
+            blank.className = "blank";
+            blank.style.flex = `0 0 ${widthPct}%`;
+            blank.style.margin = "2px";
+            blank.style.aspectRatio = "1/1";
+            panel.appendChild(blank);
+          } else if (/[A-ZÑ0-9]/i.test(ch)) {
+            const img = document.createElement("img");
+            const isLetter = /[A-ZÑ]/i.test(ch);
+            img.src = isLetter
+              ? LETTERS_BASE + ch.toUpperCase() + ".png"
+              : NUMBERS_BASE + ch + ".png";
+            img.alt = ch;
+            img.style.flex = `0 0 ${widthPct}%`;
+            img.style.maxWidth = `${widthPct}%`;
+            img.style.margin = "2px";
+            panel.appendChild(img);
+          }
+        });
+      }
+
+      /* ======= Mostrar por índice + miniatura ======= */
+      function showWordAt(idx) {
+        const n = wordList.length;
+        const safeIdx = ((idx % n) + n) % n;
+        input.value = wordList[safeIdx];
+        updatePanel();
+        setImageFromCandidates(
+          selectedImg,
+          wordImageNames[safeIdx],
+          wordList[safeIdx]
+        );
+      }
+
+      /* ======= Navegación ======= */
+      function nextWord() {
+        showWordAt(currentIndex);
+        currentIndex = (currentIndex + 1) % wordList.length;
+      }
+      function prevWord() {
+        const n = wordList.length;
+        const prevIdx = (currentIndex - 2 + n) % n;
+        showWordAt(prevIdx);
+        currentIndex = (prevIdx + 1) % n;
+      }
+
+      /* ======= Inicialización robusta ======= */
+      function init() {
+        if (audioCtx.state === "suspended") {
+          audioCtx.resume().catch(() => {});
+        }
+        // Inicializa el label del slider
+        durValue.textContent = `${noteDuration.toFixed(2)} s`;
+        showWordAt(0);
+        currentIndex = 1 % wordList.length;
+      }
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
       } else {
-        playScale();
+        init();
       }
-    });
-  });
 
-  // Sonido al borrar
-  input.addEventListener('keydown', e => {
-    if (e.key === 'Backspace' || e.key === 'Delete') playDeleteSound();
-  });
+      /* ======= Botón siguiente ======= */
+      pickBtn.addEventListener("click", nextWord);
 
-  // Forzar mayúsculas, reproducir nota y actualizar panel
-  input.addEventListener('input', e => {
-    input.value = input.value.toUpperCase();
-    const char = e.data ? e.data.toUpperCase() : null;
-    if (char && /[A-Z]/.test(char)) playNote(char);
-    updatePanel();
-  });
+      /* ======= Slider de duración ======= */
+      durSlider.addEventListener("input", () => {
+        noteDuration = Math.max(0.01, parseFloat(durSlider.value) || 0.25);
+        durValue.textContent = `${noteDuration.toFixed(2)} s`;
+      });
 
+      /* ======= Teclado global: flechas y dígitos ======= */
+      document.addEventListener("keydown", (e) => {
+        if (audioCtx.state === "suspended") audioCtx.resume().catch(() => {});
+        if (e.key === "ArrowRight") {
+          e.preventDefault();
+          nextWord();
+          return;
+        }
+        if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          prevWord();
+          return;
+        }
+        const isDigitTop = /^Digit[0-9]$/.test(e.code);
+        const isDigitPad = /^Numpad[0-9]$/.test(e.code);
+        if (isDigitTop || isDigitPad) {
+          const k = e.key;
+          if (/^[0-9]$/.test(k)) {
+            if (e.target !== input) {
+              input.value += k;
+              updatePanel();
+            }
+            playNumberAudio(k);
+          }
+        }
+      });
 
-</script>
+      /* ======= Input: mayúsculas, nota por letra (con duración ajustable), audio palabra (debounce) ======= */
+      let wordAudioTimeout = null;
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Backspace" || e.key === "Delete") playDeleteSound();
+      });
+      input.addEventListener("input", (e) => {
+        input.value = input.value
+          .replace(/[a-zñ]/g, (m) => m.toUpperCase())
+          .replace(/\s+/g, " ");
+        const char = e.data ? e.data.toUpperCase() : null;
+        if (char && /^[A-ZÑ]$/.test(char)) playNote(char);
+        if (char && /^[0-9]$/.test(char)) playNumberAudio(char);
+        updatePanel();
+        clearTimeout(wordAudioTimeout);
+        const word = input.value.trim();
+        if (word.length > 1) {
+          wordAudioTimeout = setTimeout(() => {
+            maybePlayWordAudio(word);
+          }, 2000);
+        }
+      });
+    })();
+  </script>
+</div>
