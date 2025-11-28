@@ -33,6 +33,23 @@
   url:
   visibility: public
 
+- name: "Inteligencia Artificial en Educación: ChatGPT y otros recursos para la Inclusión Digital"
+  type: course
+  fields: "education"
+  organizer: Universidad Nacional de Educación a Distancia
+  credits: 1.0
+  hours: 20
+  certification: "Certificado"
+  description: "El curso ofrece un espacio de formación y reflexión sobre la integración responsable de la Inteligencia Artificial en la educación. A partir de una aproximación interdisciplinar y accesible, se exploran conceptos clave, herramientas como ChatGPT y casos prácticos. Se promueve una mirada crítica que aborde tanto las oportunidades como los riesgos éticos y pedagógicos, con el fin de fomentar una innovación educativa informada, equitativa e inclusiva en un entorno cada vez más automatizado."
+  modality: Online
+  location: UNED A Coruña
+  start: "2025-11-05"
+  end: "2025-12-17"
+  language: ES
+  contents: "Fundamentación y marco teórico de la Inteligencia Artificial · Herramientas de IA para organizar y gestionar información · Búsqueda, análisis y verificación de información con IA · Diseño y creación de contenidos digitales con IA · Multimedia y expresión creativa con IA · Dilemas éticos y ciudadanía digital · La inteligencia artificial aplicada en la atención a la diversidad"
+  url: https://extension.uned.es/actividad/idactividad/45919
+  visibility: public
+
 - name: "Metodologías inclusivas y su aplicación en el aula basada en la LOMLOE y en el Diseño Universal para el Aprendizaje (DUA)"
   type: course
   fields: "education"
@@ -48,23 +65,6 @@
   language: ES
   contents: "Un breve recorrido por la LOMLOE · Modelo DUA · Planificación multinivel · Aprendizaje cooperativo · Paisajes de aprendizaje · Aprendizaje basado en proyectos · Aprendizaje basado en problemas · Visual Thinking · Design Thinking · ABJ vs gamificación · m-learning · Realidad aumentada"
   url: https://extension.uned.es/actividad/idactividad/47031
-  visibility: public
-
-- name: "Matemáticas y civilización: de las cavernas a la inteligencia artificial"
-  type: course
-  fields: "education,ict,science"
-  organizer: Universidad Nacional de Educación a Distancia
-  credits: 0.5
-  hours: 12
-  certification: "Certificado"
-  description: "Recorrido histórico por las matemáticas y su papel en la civilización: número, razón, curvas, inventos e inteligencia artificial, mostrando cómo impulsan pensamiento humano y transforman el presente."
-  modality: Online
-  location: UNED Tudela
-  start: "2025-10-16"
-  end: "2025-10-17"
-  language: ES
-  contents: "En busca del principio: gestación de las matemáticas · El abogado del terraplanismo · Una piedra en el camino me enseñó que mi destino era rodar y rodar · De la máquina al teorema: Inventos que inspiraron matemáticas · Matemáticas que piensan: del cálculo a la inteligencia artificial"
-  url: https://extension.uned.es/actividad/idactividad/45763
   visibility: public
 
 - name: "Cero de estadística"
