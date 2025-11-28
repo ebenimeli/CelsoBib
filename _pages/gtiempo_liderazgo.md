@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "🕗 Gestión del tiempo · Desarollo del liderazgo"
+title: "🕗 Gestión del tiempo · Desarrollo del liderazgo"
 description: "Recursos"
 ---
 
