@@ -1,63 +1,11 @@
-- timestamp: 2025-11-28 08:50
-  text: "«La imaginación es más importante que el conocimiento» (Albert Einstein) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2025-11-27 08:50
-  text: "«Si te cuesta la paz mental, entonces es demasiado caro» (Anónimo) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2025-11-26 08:50
-  text: "«Sé tú mismo; todos los demás ya están ocupados» (Oscar Wilde) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2025-11-25 08:50
-  text: "«Haz lo que puedas, con lo que tengas, donde estés» (Theodore Roosevelt) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2025-11-24 08:50
-  text: "«La atención es la forma más pura de generosidad» (S. Weil) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2025-11-23 08:50
-  text: "«Haz lo que puedas, con lo que tengas, donde estés» (Theodore Roosevelt) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2025-11-22 08:50
-  text: "«La experiencia no es lo que te ocurre, sino lo que haces con lo que te ocurre» (Aldous Huxley) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2025-11-21 11:09
-  text: "¡Buenos días! Feliz viernes."
-  link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
-- timestamp: 2025-11-21 08:50
-  text: "«Sé tú mismo; todos los demás ya están ocupados» (Oscar Wilde) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2025-11-20 08:50
-  text: "«La vida es aquello que te pasa mientras estás ocupado haciendo otros planes» (John Lennon) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2025-11-19 08:50
-  text: "«Si te cuesta la paz mental, entonces es demasiado caro» (Anónimo) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2025-11-18 08:50
-  text: "«La felicidad es darse cuenta de que nada es demasiado importante» (Antonio Gala) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2025-11-17 08:50
-  text: "«La mejor forma de predecir el futuro es crearlo» (Peter Drucker) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
 - timestamp: 2025-11-17 09:20
   text: "¡Buenos días! A por el lunes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-11-16 16:51
   text: "Un mito educativo"
   link: "https://open.substack.com/pub/notasalvuelo/p/un-mito-educativo?r=po383&amp;utm_medium=ios"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2025-11-16 08:50
   text: "«Ugly action beats perfection. Just do it» (Hidde Douna (@growthbyvisuals)) #status"
   link: https://www.instagram.com/p/DNXWYBZN4nT/?igsh=b2ptZ2tpems2YWdh
@@ -69,7 +17,7 @@
 - timestamp: 2025-11-14 10:50
   text: "¡Buenos días! Feliz viernes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-11-14 08:50
   text: "«El aprendizaje nunca agota la mente» (Leonardo da Vinci) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -77,7 +25,7 @@
 - timestamp: 2025-11-13 19:33
   text: "Una letra musical"
   link: "https://open.substack.com/pub/notasalvuelo/p/una-letra-musical?r=po383&amp;utm_medium=ios"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2025-11-13 08:50
   text: "«Integridad es hacer lo correcto aunque nadie nos esté mirando» (J. Stovall) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -85,7 +33,7 @@
 - timestamp: 2025-11-12 19:33
   text: "Una evaluación productiva"
   link: "https://open.substack.com/pub/notasalvuelo/p/una-evaluacion-productiva?r=po383&amp;utm_medium=ios"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2025-11-12 08:50
   text: "«Haz lo que puedas, con lo que tengas, donde estés» (Theodore Roosevelt) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -93,11 +41,11 @@
 - timestamp: 2025-11-12 00:11
   text: "Ruy López de Segura, el primer gran ajedrecista de la historia #chess @SERhistoria"
   link: "https://podcasts.apple.com/es/podcast/ser-historia/id356329864?i=1000736247804"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2025-11-12 00:10
   text: "Hoy es martes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-11-11 08:50
   text: "«El aprendizaje nunca agota la mente» (Leonardo da Vinci) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -113,11 +61,11 @@
 - timestamp: 2025-11-09 00:04
   text: "Un animal salvaje #book (8%)"
   link: "https://www.goodreads.com/book/show/204780055"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-11-08 15:45
   text: "Terminé de leer «Lo que esconde tu nombre» #status"
   link: https://www.goodreads.com/review/list/1230384?shelf=read
-  cat: 'read'
+  cat: "read"
 
 - timestamp: 2025-11-08 08:50
   text: "«La imaginación es más importante que el conocimiento» (Albert Einstein) #status"
@@ -126,19 +74,19 @@
 - timestamp: 2025-11-08 08:47
   text: "Muere James Watson, codescubridor de la estructura del ADN, a los 97 años #urgent"
   link: "https://www.abc.es/ciencia/muere-james-watson-codescubridor-estructura-adn-anos-20251107205156-nt.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-11-08 08:18
   text: "¡Buenos días! ¡Feliz sábado!"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-11-07 13:06
   text: "Un desafío exponencial"
   link: "https://open.substack.com/pub/notasalvuelo/p/una-complejidad-exponencial?r=po383&amp;utm_medium=ios"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2025-11-07 10:00
   text: "¡Buenos días! Feliz viernes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-11-07 08:50
   text: "«Ugly action beats perfection. Just do it» (Hidde Douna (@growthbyvisuals)) #status"
   link: https://www.instagram.com/p/DNXWYBZN4nT/?igsh=b2ptZ2tpems2YWdh
@@ -146,11 +94,11 @@
 - timestamp: 2025-11-06 14:06
   text: "Tertulia: ¿Deben respetar los periodistas su secreto profesional? @MasDeUno"
   link: "https://podcasts.apple.com/es/podcast/m%C3%A1s-de-uno/id983656582?i=1000735536091"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2025-11-06 11:39
   text: "¡Buenos días! Feliz jueves."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-11-06 08:50
   text: "«La vida es aquello que te pasa mientras estás ocupado haciendo otros planes» (John Lennon) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -158,11 +106,11 @@
 - timestamp: 2025-11-06 00:22
   text: "Ep. 165 - El Sáhara Occidental 50 años después #historia"
   link: "https://podcasts.apple.com/es/podcast/la-torre-del-faro/id1658580734?i=1000735305065"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2025-11-05 16:28
   text: "¡Hola! Es miércoles."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-11-05 08:50
   text: "«La experiencia no es lo que te ocurre, sino lo que haces con lo que te ocurre» (Aldous Huxley) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
