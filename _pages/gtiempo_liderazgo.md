@@ -8,7 +8,7 @@ description: "Recursos"
 
 ⬇️ [Descargar presentación (PDF)](https://hhmaristas-my.sharepoint.com/:b:/g/personal/enriquebb_maristasmediterranea_com/IQDrDROoPz3qQazkXT6UBli4AeCK1WQhbrhb9dhKv1gU5m0?e=flnzyA)
 
-⬇️ [Gestión del tiempo · En acción (24 propuestas PDF)](https://hhmaristas-my.sharepoint.com/:b:/g/personal/enriquebb_maristasmediterranea_com/IQAMfv3mDJ69T69ic9gqpUchAdLszsaCRCAbSrdErkEPQ6I?e=23227V)
+💡 Gestión del tiempo · En acción (24 propuestas PDF) · [⬇️ ES](https://hhmaristas-my.sharepoint.com/:b:/g/personal/enriquebb_maristasmediterranea_com/IQBP1UM1Gn2RT4QqUu2WqAldATjUxlwrI--UGIZhntHotjg?e=Ob1uaR) · [⬇️ FR](https://hhmaristas-my.sharepoint.com/:b:/g/personal/enriquebb_maristasmediterranea_com/IQDT9LAGalprT56VbwAW-njpAXWtfLbYLMrAllej0iGEVuY?e=0crnsd)· [⬇️ IT](https://hhmaristas-my.sharepoint.com/:b:/g/personal/enriquebb_maristasmediterranea_com/IQDfmRq52WmVRJ3n3Cfo9mIJAdiDTuG7YrxDUOUxcbNb7RI?e=VnT9cF)
 
 ## Resumen de la formación
 
@@ -32,6 +32,8 @@ Todo ello se concreta en 24 propuestas prácticas para el centro: desde una eval
 - [Notas al vuelo](https://notasalvuelo.substack.com/)
 
 ## Libros
+
+![image](/assets/images/pages/gtiempo_liderazgo/libros_16.jpg)
 
 1. **[¡Tráguese ese sapo!](https://amzn.to/4odnUGo)**, de Brian Tracy
 2. **[Céntrate (Deep Work): Las cuatro reglas para el éxito en la era de la distracción](https://amzn.to/4abMMuI)**, de Cal Newport
