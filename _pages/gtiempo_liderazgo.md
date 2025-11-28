@@ -8,6 +8,8 @@ description: "Recursos"
 
 ⬇️ [Descargar presentación (PDF)](https://hhmaristas-my.sharepoint.com/:b:/g/personal/enriquebb_maristasmediterranea_com/IQDrDROoPz3qQazkXT6UBli4AeCK1WQhbrhb9dhKv1gU5m0?e=flnzyA)
 
+⬇️ [Gestión del tiempo · En acción (24 propuestas PDF)](https://hhmaristas-my.sharepoint.com/:b:/g/personal/enriquebb_maristasmediterranea_com/IQAMfv3mDJ69T69ic9gqpUchAdLszsaCRCAbSrdErkEPQ6I?e=23227V)
+
 ## Resumen de la formación
 
 Este webinar, dirigido a equipos directivos en el marco del **desarrollo del liderazgo** propone pasar de trabajar más a trabajar mejor mediante una visión poliédrica de la gestión del tiempo.
