@@ -8,6 +8,11 @@ description: "Reflexiones al paso y retales de ideas"
 
 Este es mi **boletín** más personal. Encontrarás **reflexiones** al paso, retales de **ideas** y **notas** al margen.
 
+- #43 / 01.12.2025 · [Un texto plano](https://notasalvuelo.substack.com/p/un-texto-plano)
+- #42 / 29.11.2025 · [Un kanji gastronómico](https://notasalvuelo.substack.com/p/un-kanji-gastronomico)
+- #41 / 20.11.2025 · [Un orden kaizen](https://notasalvuelo.substack.com/p/un-orden-kaizen)
+- #40 / 18.11.2025 · [Una lección japonesa](https://notasalvuelo.substack.com/p/una-leccion-japonesa)
+- #39 / 16.11.2025 · [Un mito educativo](https://notasalvuelo.substack.com/p/un-mito-educativo)
 - #38 / 13.11.2025 · [Una letra musical](https://notasalvuelo.substack.com/p/una-letra-musical)
 - #37 / 12.11.2025 · [Una evaluación productiva](https://notasalvuelo.substack.com/p/una-evaluacion-productiva)
 - #36 / 07.11.2025 · [Un desafío exponencial](https://notasalvuelo.substack.com/p/una-complejidad-exponencial)
