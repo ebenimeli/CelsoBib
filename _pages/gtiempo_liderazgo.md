@@ -18,7 +18,7 @@ Partimos del diagnóstico de la sobrecarga docente y presentamos diez ejes clave
 
 Todo ello se concreta en 24 propuestas prácticas para el centro: desde una evaluación realmente productiva y un colegio “en orden”, hasta mejores reuniones, automatización de tareas repetitivas y un pequeño kit común de herramientas. La formación invita a construir una cultura del trabajo más sostenible, centrada en lo importante.
 
-## Selección de herramientas
+## Selección de herramientas y guías
 
 - [Cómo convertir Excel de calificaciones en CSV para generar el informe de evaluación](https://notasalvuelo.substack.com/p/un-texto-plano)
 - [Generador de informes de evaluación](https://notasalvuelo.substack.com/p/una-evaluacion-productiva)
