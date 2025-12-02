@@ -20,13 +20,15 @@ Todo ello se concreta en 24 propuestas prácticas para el centro: desde una eval
 
 ## Selección de herramientas
 
+- [Cómo convertir Excel de calificaciones en CSV para generar el informe de evaluación](https://notasalvuelo.substack.com/p/un-texto-plano)
 - [Generador de informes de evaluación](https://notasalvuelo.substack.com/p/una-evaluacion-productiva)
 - [Asistente para observaciones del alumno](https://www.esferatic.com/obs/)
 - [Herramienta para organizar listas y grupos](https://www.ebenimeli.org/txtlab/#tblists)
 
-## Blogs y boletines
+## Blogs, boletines y canales
 
 - [Ocho en punto](https://www.ochoenpunto.com/)
+- [Canal de Telegram 8am](https://t.me/ochoenpunto)
 - [Esfera TIC](https://www.esferatic.com/)
 - [La ventana digital](https://ebenimeli.substack.com/)
 - [Notas al vuelo](https://notasalvuelo.substack.com/)
