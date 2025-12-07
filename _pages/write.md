@@ -22,16 +22,16 @@ Actualmente, escribo en varios **blogs** y **boletines**:
 
 <!--
 - 31.05.2026 · BOL [La ventana digital #16]()
-- 24.05.2026 · ???
-- 17.05.2026 · WEB
-- 10.05.2026 · 8AM
+- 24.05.2026 · ??? []()
+- 17.05.2026 · WEB []()
+- 10.05.2026 · 8AM []()
 - 03.05.2026 · EDU [Un ajedrez japonés y un desafío exponencial]()
 -->
 <!-- MAYO -->
 <!--
 - 26.05.2026 · BOL [La ventana digital #15]()
-- 19.05.2026 · WEB
-- 12.05.2026 · 8AM
+- 19.05.2026 · WEB []()
+- 12.05.2026 · 8AM []()
 - 05.04.2026 · EDU [Una letra musica]()
 -->
 <!-- ABRIL -->
@@ -39,7 +39,7 @@ Actualmente, escribo en varios **blogs** y **boletines**:
 - 29.03.2026 · BOL [La ventana digital #14]()
 - 22.03.2026 · WEB []()
 - 15.03.2026 · EDU [Un kanji gastronómico]()
-- 08.03.2026 · 8AM
+- 08.03.2026 · 8AM []()
 - 01.03.2026 · EDU [Una evaluación productiva + un texto plano]()
 -->
 <!-- MARZO -->
