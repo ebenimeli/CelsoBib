@@ -8,6 +8,10 @@ description: "Recursos"
 
 ⬇️ [Descargar presentación (PDF)](https://hhmaristas-my.sharepoint.com/:b:/g/personal/enriquebb_maristasmediterranea_com/IQBn0-940F9MTpHYya_fD8_oAYZzT4r_om3Um1rXKWglJAQ?e=2aqLte)
 
+🗒️ [Descargar presentación Notas 3x1 (PDF)](https://hhmaristas-my.sharepoint.com/:b:/g/personal/enriquebb_maristasmediterranea_com/IQA2CE37HwTLQYu_1lPK_WwjAa54vhA6KQAWemYzhYGCrv4?e=OlW8R7)
+
+🗒️ [Descargar presentación Notas 2x1 (PDF)](https://hhmaristas-my.sharepoint.com/:b:/g/personal/enriquebb_maristasmediterranea_com/IQDIM6NahyLoQqkrioBd8MLeAedsIJbA4PVJDCcQoaEfNZA?e=4piz3h)
+
 💡 Gestión del tiempo · En acción (24 propuestas PDF) · [⬇️ ES](https://hhmaristas-my.sharepoint.com/:b:/g/personal/enriquebb_maristasmediterranea_com/IQCDItm4I4fPQLk7R66x_tiSAapGDqLXTHqUZ_lGYyAACR0?e=kUcwwi)
 
 ## Resumen de la formación
