@@ -4,14 +4,11 @@ title: "🕗 Gestión del tiempo · Nuevos Lideres Maristas para la Misión"
 description: "Recursos"
 ---
 
-<!--
-[![image](assets/images/pages/gtiempo_liderazgo/pres_gtiempo.jpg)](https://hhmaristas-my.sharepoint.com/:b:/g/personal/enriquebb_maristasmediterranea_com/IQDrDROoPz3qQazkXT6UBli4AeCK1WQhbrhb9dhKv1gU5m0?e=flnzyA)
+[![image](assets/images/pages/gtiempo_mision/pres_gtiempo_mision.jpg)](https://hhmaristas-my.sharepoint.com/:b:/g/personal/enriquebb_maristasmediterranea_com/IQBn0-940F9MTpHYya_fD8_oAYZzT4r_om3Um1rXKWglJAQ?e=2aqLte)
 
-⬇️ [Descargar presentación (PDF)](https://hhmaristas-my.sharepoint.com/:b:/g/personal/enriquebb_maristasmediterranea_com/IQDrDROoPz3qQazkXT6UBli4AeCK1WQhbrhb9dhKv1gU5m0?e=flnzyA)
+⬇️ [Descargar presentación (PDF)](https://hhmaristas-my.sharepoint.com/:b:/g/personal/enriquebb_maristasmediterranea_com/IQBn0-940F9MTpHYya_fD8_oAYZzT4r_om3Um1rXKWglJAQ?e=2aqLte)
 
-💡 Gestión del tiempo · En acción (24 propuestas PDF) · [⬇️ ES](https://hhmaristas-my.sharepoint.com/:b:/g/personal/enriquebb_maristasmediterranea_com/IQBP1UM1Gn2RT4QqUu2WqAldATjUxlwrI--UGIZhntHotjg?e=Ob1uaR)
-
--->
+💡 Gestión del tiempo · En acción (24 propuestas PDF) · [⬇️ ES](https://hhmaristas-my.sharepoint.com/:b:/g/personal/enriquebb_maristasmediterranea_com/IQCDItm4I4fPQLk7R66x_tiSAapGDqLXTHqUZ_lGYyAACR0?e=kUcwwi)
 
 ## Resumen de la formación
 
