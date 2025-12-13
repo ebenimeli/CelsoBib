@@ -24,44 +24,47 @@ Actualmente, escribo en varios **blogs** y **boletines**:
 - 31.05.2026 · BOL [La ventana digital #16]()
 - 24.05.2026 · ??? []()
 - 17.05.2026 · WEB []()
-- 10.05.2026 · 8AM []()
-- 03.05.2026 · EDU [Un ajedrez japonés y un desafío exponencial]()
+- 10.05.2026 · EDU [Un ajedrez japonés y un desafío exponencial]()
+- 03.05.2026 · 8AM []()
 -->
 <!-- MAYO -->
 <!--
 - 26.05.2026 · BOL [La ventana digital #15]()
 - 19.05.2026 · WEB []()
-- 12.05.2026 · 8AM []()
-- 05.04.2026 · EDU [Una letra musica]()
+- 12.04.2026 · EDU [Una letra musica]()
+- 05.05.2026 · 8AM []()
 -->
 <!-- ABRIL -->
 <!--
 - 29.03.2026 · BOL [La ventana digital #14]()
 - 22.03.2026 · WEB []()
 - 15.03.2026 · EDU [Un kanji gastronómico]()
-- 08.03.2026 · 8AM []()
-- 01.03.2026 · EDU [Una evaluación productiva + un texto plano]()
+- 08.03.2026 · EDU [Una evaluación productiva + un texto plano]()
+- 01.03.2026 · 8AM []()
 -->
 <!-- MARZO -->
 <!--
 - 22.02.2026 · BOL [La ventana digital #13]()
 - 15.02.2026 · WEB []()
-- 08.02.2026 · 8AM []()
-- 01.02.2026 · EDU [Una lección japonesa]()
+- 08.02.2026 · EDU [Una lección japonesa]()
+- 01.02.2026 · 8AM []()
 -->
 <!-- FEBRERO -->
 <!--
 - 25.01.2026 · BOL [La ventana digital #12: Tiempo]()
 - 18.01.2026 · WEB []()
-- 11.01.2026 · 8AM [Gestión del tiempo]()
-- 04.01.2026 · EDU [Un mito educativo]()
+- 11.01.2026 · EDU []()
+- 04.01.2026 · 8AM [Sobre pausar y detener proyectos]()
 -->
 <!-- ENERO -->
 <!--
 - 28.12.2025 · BOL [La ventana digital #11]()
 - 21.12.2025 · WEB []()
-- 14.12.2025 · 8AM [Sobre pausar y detener proyectos]()
 -->
 
-- 07.12.2025 · [La sencillez japonesa para organizar espacios y tareas](https://www.ochoenpunto.com/sencillez-japon-organizar-espacios-tareas/)
+**Diciembre 2025**
+
+- [Un mito educativo y una mirada a Oriente](https://www.esferatic.com/2025/12/mito-educativo-mirada-oriente/)
+- [La sencillez japonesa para organizar espacios y tareas](https://www.ochoenpunto.com/sencillez-japon-organizar-espacios-tareas/)
+
 <!-- DICIEMBRE -->
