@@ -25,6 +25,19 @@ Todo ello se concreta en 24 propuestas prácticas para el centro: desde una eval
 - [Asistente para observaciones del alumno](https://www.esferatic.com/obs/)
 - [Herramienta para organizar listas y grupos](https://www.ebenimeli.org/txtlab/#tblists)
 
+## Selección de artículos y notas
+
+- [Cómo ahorrar tiempo (I): el teléfono móvil y las redes sociales](https://www.ochoenpunto.com/como-ahorrar-tiempo-i-el-telefono-movil-y-las-redes-sociales/)
+- [Cómo ahorrar tiempo (II): tu hora productiva y el consumo de televisión](https://www.ochoenpunto.com/ahorrar-tiempo-tu-hora-productiva-consumo-tv/)
+- [Cómo ahorrar tiempo (III): menos perfeccionismo y más velocidad](https://www.ochoenpunto.com/ahorrar-tiempo-velocidad-perfeccionismo/)
+- [El «gen» de la productividad: 40 cosas que hacen (y no hacen) las personas superefectivas](https://www.ochoenpunto.com/gen-productividad-40-cosas-personas-superefectivas/)
+- [25 cosas que matan la productividad](https://www.ochoenpunto.com/25-cosas-que-matan-la-productividad/)
+- [Un horizonte despejado (sobre proyectos)](https://notasalvuelo.substack.com/p/un-horizonte-despejado)
+- [12 meses, 12 hábitos: un reto en 2025](https://www.ochoenpunto.com/12-meses-12-habitos-reto-2025/)
+- [Cajón de sastre con 16 ideas para mejorar tu productividad](https://www.ochoenpunto.com/cajon-de-sastre-16-ideas-mejorar-productividad/)
+- [Jueves de revisión y viernes de progreso](https://www.ochoenpunto.com/jueves-revision-y-viernes-progreso/)
+- [Herramientas, métodos y enfoque](https://www.ochoenpunto.com/herramientas-metodos-y-enfoque/) -[22 microhábitos de 2 minutos](https://www.ochoenpunto.com/22-microhabitos-de-2-minutos/)
+
 ## Blogs, boletines y canales
 
 - [Ocho en punto](https://www.ochoenpunto.com/)
