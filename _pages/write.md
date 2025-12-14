@@ -57,14 +57,15 @@ Actualmente, escribo en varios **blogs** y **boletines**:
 - 04.01.2026 · 8AM [Sobre pausar y detener proyectos]()
 -->
 <!-- ENERO -->
+
+**Diciembre 2025**
+
 <!--
 - 28.12.2025 · BOL [La ventana digital #11]()
 - 21.12.2025 · WEB []()
 -->
 
-**Diciembre 2025**
-
-- [Un mito educativo y una mirada a Oriente](https://www.esferatic.com/2025/12/mito-educativo-mirada-oriente/)
-- [La sencillez japonesa para organizar espacios y tareas](https://www.ochoenpunto.com/sencillez-japon-organizar-espacios-tareas/)
+- [Un mito educativo y una mirada a Oriente](https://www.esferatic.com/2025/12/mito-educativo-mirada-oriente/) (_Esfera TIC_)
+- [La sencillez japonesa para organizar espacios y tareas](https://www.ochoenpunto.com/sencillez-japon-organizar-espacios-tareas/) (_Ocho en punto_)
 
 <!-- DICIEMBRE -->

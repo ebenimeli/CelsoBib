@@ -31,6 +31,7 @@ Todo ello se concreta en 24 propuestas prácticas: desde una evaluación realmen
 
 ## Selección de artículos y notas
 
+- [Toma el control de tus proyectos: simplifica, decide y suelta](https://www.ochoenpunto.com/toma-el-control-de-tus-proyectos-simplifica-decide-y-suelta/)
 - [Cómo ahorrar tiempo (I): el teléfono móvil y las redes sociales](https://www.ochoenpunto.com/como-ahorrar-tiempo-i-el-telefono-movil-y-las-redes-sociales/)
 - [Cómo ahorrar tiempo (II): tu hora productiva y el consumo de televisión](https://www.ochoenpunto.com/ahorrar-tiempo-tu-hora-productiva-consumo-tv/)
 - [Cómo ahorrar tiempo (III): menos perfeccionismo y más velocidad](https://www.ochoenpunto.com/ahorrar-tiempo-velocidad-perfeccionismo/)
