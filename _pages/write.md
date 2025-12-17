@@ -54,7 +54,7 @@ Actualmente, escribo en varios **blogs** y **boletines**:
 - 25.01.2026 · BOL [La ventana digital #12: Tiempo]()
 - 18.01.2026 · WEB []()
 - 11.01.2026 · EDU []()
-- 04.01.2026 · 8AM [Sobre pausar y detener proyectos]()
+- 04.01.2026 · 8AM [Gestión del tiempo: 26 consejos]()
 -->
 <!-- ENERO -->
 
@@ -65,8 +65,8 @@ Actualmente, escribo en varios **blogs** y **boletines**:
 - 21.12.2025 · WEB []()
 -->
 
-- [El origen del código QR y las matemáticas que lo hacen posible](https://www.esferatic.com/2025/12/origen-japon-codigo-qr-matematicas/)
-- [Toma el control de tus proyectos: simplifica, decide y suelta](https://www.ochoenpunto.com/toma-el-control-de-tus-proyectos-simplifica-decide-y-suelta/)
+- [El origen del código QR y las matemáticas que lo hacen posible](https://www.esferatic.com/2025/12/origen-japon-codigo-qr-matematicas/) (Esfera TIC)
+- [Toma el control de tus proyectos: simplifica, decide y suelta](https://www.ochoenpunto.com/toma-el-control-de-tus-proyectos-simplifica-decide-y-suelta/) (Ocho en punto)
 - [Un mito educativo y una mirada a Oriente](https://www.esferatic.com/2025/12/mito-educativo-mirada-oriente/) (_Esfera TIC_)
 - [La sencillez japonesa para organizar espacios y tareas](https://www.ochoenpunto.com/sencillez-japon-organizar-espacios-tareas/) (_Ocho en punto_)
 
