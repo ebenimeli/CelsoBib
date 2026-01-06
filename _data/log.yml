@@ -1,7 +1,7 @@
 - timestamp: 2026-01-06 10:54
   text: "Buenos días. Es martes. ¡Feliz Día de Reyes!"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2026-01-06 08:50
   text: "«Enseñar es aprender dos veces» (Joseph Joubert) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -9,43 +9,11 @@
 - timestamp: 2026-01-06 00:04
   text: "¡Feliz Noche de Reyes! 💫 🎁 #ReyesMagos"
   link: "https://mastodon.social/tags/say"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2026-01-05 20:28
   text: "¿25 años ya de «La sombra del viento»?"
   link: "https://mastodon.social/tags/read"
-  cat: 'read'
-- timestamp: 2026-01-05 08:50
-  text: "«La educación es el arma más poderosa para cambiar el mundo» (Nelson Mandela) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2026-01-04 08:50
-  text: "«Ugly action beats perfection. Just do it» (Hidde Douna (@growthbyvisuals)) #status"
-  link: https://www.instagram.com/p/DNXWYBZN4nT/?igsh=b2ptZ2tpems2YWdh
-  cat: quote
-- timestamp: 2026-01-03 08:50
-  text: "«El aprendizaje nunca agota la mente» (Leonardo da Vinci) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2026-01-02 08:50
-  text: "«La experiencia no es lo que te ocurre, sino lo que haces con lo que te ocurre» (Aldous Huxley) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2026-01-01 08:50
-  text: "«El aprendizaje nunca agota la mente» (Leonardo da Vinci) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2025-12-31 08:50
-  text: "«Enseñar es aprender dos veces» (Joseph Joubert) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2025-12-30 08:50
-  text: "«La vida no es más que un interminable ensayo de una obra que jamás se va a estrenar» (Amélie) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
-- timestamp: 2025-12-29 08:50
-  text: "«El que se explica se complica» (Anónimo) #status"
-  link: https://www.ebenimeli.org/pages/me_quotes.html
-  cat: quote
+  cat: "read"
 - timestamp: 2025-12-28 08:50
   text: "«La mejor forma de predecir el futuro es crearlo» (Peter Drucker) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -53,15 +21,15 @@
 - timestamp: 2025-12-27 15:52
   text: "✏️ La undécima ventana digital👉🏼 #status"
   link: "https://ift.tt/2SP6oGZ"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2025-12-27 15:12
   text: "¡Feliz sábado!"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-12-27 15:07
   text: "«¿Cómo cierras el año cuando nadie te está mirando?» #status"
   link: "https://www.patreon.com/posts/como-cierras-el-146207231"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2025-12-27 08:50
   text: "«La felicidad es darse cuenta de que nada es demasiado importante» (Antonio Gala) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -77,7 +45,7 @@
 - timestamp: 2025-12-24 17:52
   text: "✏️ Feliz Navidad👉🏼 #status"
   link: "https://ift.tt/9fs6uMA"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2025-12-24 08:50
   text: "«La educación no es preparación para la vida; la educación es la vida misma» (John Dewey) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -113,15 +81,15 @@
 - timestamp: 2025-12-17 08:39
   text: "¡Buenos días! Feliz miércoles."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-12-16 14:25
   text: "El Apple Watch y el iPhone ya no comparten redes Wi-Fi. Esto es lo qua ha cambiado en iOS 26.2 y watchOS 26.2 #status"
   link: "https://www.applesfera.com/apple-watch/apple-watch-iphone-no-comparten-redes-wi-fi-esto-qua-ha-cambiado-ios-26-2-watchos-26-2"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-12-16 12:08
   text: "¡Buenos días! Feliz martes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-12-16 08:50
   text: "«La experiencia no es lo que te ocurre, sino lo que haces con lo que te ocurre» (Aldous Huxley) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -129,7 +97,7 @@
 - timestamp: 2025-12-15 11:08
   text: "¡Buenos días! Feliz lunes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-12-15 08:50
   text: "«Haz lo que puedas, con lo que tengas, donde estés» (Theodore Roosevelt) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -137,19 +105,19 @@
 - timestamp: 2025-12-14 12:19
   text: "Al menos diez muertos, entre ellos un atacante, en un tiroteo contra un festival judío en la playa más popular de Sídney #urgent"
   link: "https://www.abc.es/internacional/dos-detenidos-tras-presunto-ataque-tiros-banistas-20251214100724-nt.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-12-14 12:18
   text: "Feliz domingo."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-12-14 09:56
   text: "La Aemet activa avisos de nivel rojo en Valencia y Andalucía ante las lluvias torrenciales"
   link: "https://www.elmundo.es/espana/2025/12/14/693e181dfdddff78468b4577.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2025-12-14 09:53
   text: "Toma el control de tus proyectos: simplifica, decide y suelta"
   link: "https://www.ochoenpunto.com/toma-el-control-de-tus-proyectos-simplifica-decide-y-suelta/"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2025-12-14 08:50
   text: "«No todas las opiniones son respetables. Lo que es respetable es tu derecho a opinar. Que la opinión sea respetable dependerá de su calidad» (José Antonio Marina) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -157,7 +125,7 @@
 - timestamp: 2025-12-13 11:20
   text: "¡Buenos días! Feliz sábado."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-12-13 08:50
   text: "«No todas las opiniones son respetables. Lo que es respetable es tu derecho a opinar. Que la opinión sea respetable dependerá de su calidad» (José Antonio Marina) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -189,7 +157,7 @@
 - timestamp: 2025-12-07 07:54
   text: "Buenos días y feliz domingo"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-12-06 08:50
   text: "«Everyone must choose one of two pains: The pain discipline or the pain of regret» (Anónimo) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -197,7 +165,7 @@
 - timestamp: 2025-12-06 08:47
   text: "¡Buenos días! Feliz sábado."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2025-12-05 08:50
   text: "«La mejor forma de predecir el futuro es crearlo» (Peter Drucker) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -213,7 +181,7 @@
 - timestamp: 2025-12-02 20:23
   text: "Poco he pasado yo por Instagram para publicar… Se me juntan las Navidades de 2024 con las de este año… 🤣"
   link: "https://mastodon.social/tags/photo"
-  cat: 'photo'
+  cat: "photo"
 - timestamp: 2025-12-02 12:05
   text: "Apenas sin darnos cuenta, diciembre. Feliz martes."
   link: "https://mastodon.social/tags/gm"
