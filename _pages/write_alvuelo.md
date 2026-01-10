@@ -8,6 +8,8 @@ description: "Reflexiones al paso y retales de ideas"
 
 Este es mi **boletín** más personal. Encontrarás **reflexiones** al paso, retales de **ideas** y **notas** al margen.
 
+- #45 / 10.01.2026 · [Una velocidad consciente](https://notasalvuelo.substack.com/p/una-velocidad-consciente)
+- #44 / 07.12.2025 · [Un horizonte despejado](https://notasalvuelo.substack.com/p/un-horizonte-despejado)
 - #43 / 01.12.2025 · [Un texto plano](https://notasalvuelo.substack.com/p/un-texto-plano)
 - #42 / 29.11.2025 · [Un kanji gastronómico](https://notasalvuelo.substack.com/p/un-kanji-gastronomico)
 - #41 / 20.11.2025 · [Un orden kaizen](https://notasalvuelo.substack.com/p/un-orden-kaizen)
