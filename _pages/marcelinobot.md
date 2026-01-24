@@ -16,7 +16,7 @@ description: "San Marcelino Champagnat"
 
 San Marcelino Champagnat (1789-1840) fue un sacerdote francés y fundador de los Hermanos Maristas, una congregación dedicada a la educación cristiana de los jóvenes, especialmente de aquellos más necesitados. Su legado continúa vivo a través de numerosas instituciones educativas y sociales en todo el mundo.
 
-## ¿Qué funciones tiene MarcelinoBot?
+## ¿Qué información ofrece MarcelinoBot?
 
 - **Evangelio del día**: recibe el evangelio todas las mañanas antes de empezar el día.
 - **Frase del día**: una frase inspiradora de San Marcelino Champagnat.
