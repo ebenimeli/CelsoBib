@@ -29,6 +29,8 @@ San Marcelino Champagnat (1789-1840) fue un sacerdote francés y fundador de los
 
 Para unirte a MarcelinoBot, simplemente [haz clic en el siguiente enlace](https://t.me/+uZ_2jC8gTfczYjc0) o escanea con tu aplicación de Telegram el **código QR** que aparece en la imagen superior.
 
+[![image](/assets/images/pages/marcelino/marcelinobot_link.jpg)](https://t.me/+uZ_2jC8gTfczYjc0)
+
 ## ¿Es gratuito?
 
 Sí. MarcelinoBot es completamente **gratuito** y está disponible para cualquier persona interesada en la espiritualidad marista.
