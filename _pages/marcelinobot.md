@@ -26,7 +26,7 @@ San Marcelino Champagnat (1789-1840) fue un sacerdote francés y fundador de los
 - **Frase del día**: lee una frase inspiradora de San Marcelino Champagnat.
 - **Datos sobre San Marcelino Champagnat**: conoce más sobre su vida y obra.
 - **Santoral diario**: descubre qué santos se celebran cada día.
-- **Información meteorológica**: recibe la previsión del tiempo (datos de [AEMET](https://www.aemet.es/)) de algunas ciudades con colegios y obras sociales maristas. De moomento, de la Provincia Mediterránea.
+- **Información meteorológica**: recibe la previsión del tiempo (datos de [AEMET](https://www.aemet.es/)) de algunas ciudades con colegios y obras sociales maristas. De momento, de la Provincia Mediterránea.
 - **Noticias maristas**: mantente informado sobre las últimas noticias de la comunidad marista.
 
 ## ¿Cómo unirse a MarcelinoBot?
