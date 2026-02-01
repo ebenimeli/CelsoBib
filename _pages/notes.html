@@ -1,0 +1,28 @@
+---
+layout: page
+title: ""
+permalink: /notes/
+description: "Notas breves"
+---
+
+<div class="w-100">
+  <div class="logs">
+    {% assign meses =
+    "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre"
+    | split: "," %} {% for log in site.data.log %} {% if log.cat == "note" %}
+    <div class="noteitem">
+      <span class="notetext"> {{ log.text }} </span>
+
+      {% if log.link %}
+      <span class="notelink">
+        <a title="{{ log.timestamp }}" href="{{ log.link }}">▶</a>
+      </span>
+      {% endif %} {% assign d = log.timestamp | date: "%-d" %} {% assign m =
+      log.timestamp | date: "%-m" | minus: 1 %} {% assign y = log.timestamp |
+      date: "%Y" %}
+
+      <div class="notedate">{{ d }} de {{ meses[m] }} de {{ y }}</div>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+</div>
