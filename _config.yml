@@ -9,6 +9,7 @@ keywords: ebenimeli, blog
 description: >-
   Enrique Benimeli - web personal
 lang: es-ES
+locale: es_ES
 timezone: Europe/Madrid
 #repo: https://github.com/onepase/Ephesus # site repo [optional]
 #google_verify:      XXX # Put your Google Verification here

@@ -29,11 +29,11 @@
 - timestamp: 2026-01-26 08:07
   text: "¡Buenos días! Empieza la semana. Vamos a por el lunes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2026-01-25 18:28
   text: "Qué cortos son los domingos…"
   link: "https://mastodon.social/tags/say"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2026-01-25 08:50
   text: "«El que se explica se complica» (Anónimo) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -41,11 +41,11 @@
 - timestamp: 2026-01-25 08:41
   text: "¡Buenos días! Feliz domingo."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2026-01-24 14:01
   text: "Sábado."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2026-01-24 08:50
   text: "«Enseñar es aprender dos veces» (Joseph Joubert) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -61,7 +61,7 @@
 - timestamp: 2026-01-21 14:20
   text: "Miércoles."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2026-01-21 08:50
   text: "«La experiencia no es lo que te ocurre, sino lo que haces con lo que te ocurre» (Aldous Huxley) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -73,15 +73,15 @@
 - timestamp: 2026-01-20 08:24
   text: "Buenos días. Es martes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2026-01-19 23:03
   text: "Un lunes cuesta arriba."
   link: "https://mastodon.social/tags/cm"
-  cat: 'cm'
+  cat: "cm"
 - timestamp: 2026-01-19 21:42
   text: "Preparando nuevos contenidos: Inside Digital Devices: Key Features and Functions"
   link: "https://docs.esferatic.com/ict1/contents/unit01/s12_intro.html"
-  cat: 'edu'
+  cat: "edu"
 - timestamp: 2026-01-19 08:50
   text: "«La atención es la forma más pura de generosidad» (S. Weil) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -89,15 +89,15 @@
 - timestamp: 2026-01-19 08:45
   text: "Descarrilamiento de dos trenes en Adamuz (Córdoba) #urgent"
   link: "https://www.abc.es/espana/andalucia/cordoba/dos-muertos-veintena-heridos-accidente-tren-andalucia-20260118210913-nts.html"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2026-01-19 08:43
   text: "Buenos días. Es lunes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2026-01-18 14:39
   text: "Aprovechando bien el domingo…"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2026-01-18 08:50
   text: "«La vida no es más que un interminable ensayo de una obra que jamás se va a estrenar» (Amélie) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -105,11 +105,11 @@
 - timestamp: 2026-01-17 12:08
   text: "Casi 10 años del Brexit… ¿ya? #status"
   link: "https://es.wikipedia.org/wiki/Salida_del_Reino_Unido_de_la_Uni%C3%B3n_Europea"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2026-01-17 11:32
   text: "¡Buenos días! Feliz sábado y buen fin de semana tengan ustedes. #status"
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2026-01-17 08:50
   text: "«El aprendizaje nunca agota la mente» (Leonardo da Vinci) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -121,27 +121,27 @@
 - timestamp: 2026-01-16 09:17
   text: "¡Buenos días! Al fin viernes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2026-01-16 09:10
   text: "El fin de los AirPods: así será el primer dispositivo físico de OpenAI (ChatGPT) #cs"
   link: "https://hipertextual.com/tecnologia/el-fin-de-los-airpods-asi-sera-el-primer-dispositivo-fisico-de-openai-chatgpt/"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2026-01-16 08:55
   text: "OpenAI quietly rolls out a dedicated ChatGPT translation tool #status"
   link: "https://www.engadget.com/ai/openai-quietly-rolls-out-a-dedicated-chatgpt-translation-tool-133000974.html?src=rss"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2026-01-16 08:40
   text: "Wikimedia announces AI partners including Meta and Microsoft"
   link: "https://www.engadget.com/ai/wikimedia-announces-ai-partners-including-meta-and-microsoft-162834383.html?src=rss"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2026-01-15 11:44
   text: "Todavía es jueves… Café. Necesario hoy."
   link: "https://mastodon.social/tags/coffee"
-  cat: 'coffee'
+  cat: "coffee"
 - timestamp: 2026-01-15 10:18
   text: "¡Buenos días! Es jueves."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2026-01-15 08:50
   text: "«La imaginación es más importante que el conocimiento» (Albert Einstein) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -149,15 +149,15 @@
 - timestamp: 2026-01-15 08:13
   text: "Por qué tener 10 años y ser del 2016 no es lo mismo: la mentira que siempre &quot;te cuela&quot; tu cerebro #science"
   link: "https://hipertextual.com/ciencia/cerebro-medida-paso-del-tiempo/"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2026-01-15 08:10
   text: "Cuidado con Copilot: este ataque puede robar tus datos con un solo clic"
   link: "https://hipertextual.com/seguridad/reprompt-vulnerabilidad-copilot-robo-datos-ia/"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2026-01-14 10:16
   text: "¡Buenos días! Es miércoles."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2026-01-14 08:50
   text: "«El aprendizaje nunca agota la mente» (Leonardo da Vinci) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -165,19 +165,19 @@
 - timestamp: 2026-01-13 22:55
   text: "De qué van y dónde ver las principales nominadas a los Premios Goya 2026 #status"
   link: "https://hipertextual.com/cine-television/de-que-van-y-donde-ver-las-principales-nominadas-a-los-premios-goya-2026/"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2026-01-13 22:48
   text: "Confirmado: la cobertura móvil por satélite de Starlink llega a España. Va a cambiar la forma en la que usas internet #status"
   link: "https://hipertextual.com/mobile/confirmado-la-cobertura-movil-por-satelite-de-starlink-llega-a-espana-va-a-cambiar-la-forma-en-la-que-usas-internet/"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2026-01-13 22:46
   text: "«WhatsApp se pone seria con los menores de edad. Sus cuentas van a cambiar tanto que estarán gestionadas por los padres» #edu"
   link: "https://hipertextual.com/tecnologia/whatsapp-se-pone-seria-con-los-menores-de-edad-sus-cuentas-van-a-cambiar-tanto-que-estaran-gestionadas-por-los-padres/"
-  cat: 'news'
+  cat: "news"
 - timestamp: 2026-01-13 11:42
   text: "Buenos días. Es martes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2026-01-13 08:50
   text: "«El que se explica se complica» (Anónimo) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -185,7 +185,7 @@
 - timestamp: 2026-01-12 22:47
   text: "Lunes superado. Y bien aprovechado; no me quejo. A ver si vamos tomando buen ritmo."
   link: "https://mastodon.social/tags/say"
-  cat: 'say'
+  cat: "say"
 - timestamp: 2026-01-12 08:50
   text: "«No todas las opiniones son respetables. Lo que es respetable es tu derecho a opinar. Que la opinión sea respetable dependerá de su calidad» (José Antonio Marina) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -193,7 +193,7 @@
 - timestamp: 2026-01-12 08:12
   text: "¡Buenos días! Vamos a por el lunes."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2026-01-11 08:50
   text: "«El que se explica se complica» (Anónimo) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html
@@ -201,31 +201,31 @@
 - timestamp: 2026-01-11 08:57
   text: "Nos dio la risa."
   link: "https://mastodon.social/tags/quote"
-  cat: 'quote'
+  cat: "quote"
 - timestamp: 2026-01-11 08:51
   text: "Ritual de domingo al despertar: asomarme a @SERhistoria para descubrir qué regalo nos ha dejado, como si de una mañana de Reyes se tratara #status"
   link: "https://podcasts.apple.com/es/podcast/ser-historia/id356329864?i=1000744638400"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2026-01-11 08:35
   text: "¡Buenos días! Feliz domingo."
   link: "https://mastodon.social/tags/gm"
-  cat: 'gm'
+  cat: "gm"
 - timestamp: 2026-01-11 01:03
   text: "El ContraPlano - Cónclave"
   link: "https://go.ivoox.com/rf/166358958"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2026-01-11 01:02
   text: "El sinsentido de Groenlandia #status"
   link: "https://go.ivoox.com/rf/166166728"
-  cat: 'podcast'
+  cat: "podcast"
 - timestamp: 2026-01-10 14:54
   text: "llms.txt: un pequeño archivo para no perderse en la web en la era de la inteligencia artificial de @edans #cs #status"
   link: "https://www.enriquedans.com/2026/01/llms-txt-un-pequeno-archivo-para-no-perderse-en-la-web-en-la-era-de-la-inteligencia-artificial.html"
-  cat: 'read'
+  cat: "read"
 - timestamp: 2026-01-10 11:09
   text: "Una velocidad consciente"
   link: "https://notasalvuelo.substack.com/p/una-velocidad-consciente"
-  cat: 'write'
+  cat: "write"
 - timestamp: 2026-01-10 08:50
   text: "«Sé tú mismo; todos los demás ya están ocupados» (Oscar Wilde) #status"
   link: https://www.ebenimeli.org/pages/me_quotes.html

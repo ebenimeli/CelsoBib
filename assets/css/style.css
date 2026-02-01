@@ -352,7 +352,9 @@ a {
   padding: 3px;
   border-radius: 10px;
   box-shadow: var(--shadow-img);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 figure {
@@ -534,8 +536,13 @@ ul.courses {
   opacity: 0;
   transform: translateY(-8px);
   will-change: max-height;
-  transition: max-height 0.4s ease, opacity 0.3s ease, transform 0.3s ease,
-    margin 0.3s ease, padding 0.3s ease, border 0.3s ease;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    margin 0.3s ease,
+    padding 0.3s ease,
+    border 0.3s ease;
 }
 
 #submenu a {
@@ -599,7 +606,9 @@ ul.courses {
 /* === INTERCAMBIO DESLIZANTE ENTRE #main-menu y #main-menu2 === */
 #main-menu,
 #main-menu2 {
-  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease;
   position: absolute; /* se apilan uno sobre otro */
   top: 40px; /* ajusta según tu layout */
   left: 0;
@@ -651,7 +660,9 @@ ul.courses {
   display: flex; /* asegúrate de que sigue siendo flex */
   gap: 0.4rem;
   padding: 0.5rem 1rem; /* el padding que ya usabas */
-  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease;
   will-change: transform, opacity;
 
   /* Estado base: oculto a la derecha (no parpadea) */
@@ -794,6 +805,23 @@ div.logs ul li {
   border-bottom: 1px dotted #000000;
   padding-top: 3px;
   padding-bottom: 3px;
+}
+
+.noteitem {
+  border-bottom: 1px solid;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.notelink {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.notedate {
+  text-align: right;
 }
 
 .sleep {
@@ -1366,7 +1394,9 @@ textarea {
   background: #fff;
   background: #dcdcdc;
 
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
 }
 
 input:focus,
