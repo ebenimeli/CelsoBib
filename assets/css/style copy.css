@@ -1498,6 +1498,7 @@ img.profile-image-lp {
   transition: transform 0.2s;
   border: 0px dashed #696969;
 }
+
 .book-century {
   display: flex;
   flex-wrap: wrap;
@@ -1508,11 +1509,6 @@ img.profile-image-lp {
 .book-century a {
   position: relative;
   z-index: 1;
-}
-
-/* Elevar TODO el contenedor cuando se hace hover */
-.book-century a:hover {
-  z-index: 1000;
 }
 
 /* Portada normal */
@@ -1531,17 +1527,16 @@ img.profile-image-lp {
     box-shadow 0.25s ease;
 }
 
-/* Zoom al pasar el ratón */
-.book-century a:hover .book-cover {
+/* Zoom al pasar el ratón (desde esquina superior derecha y hacia arriba) */
+.book-century a:hover .book-cover,
+.book-century .book-cover:hover {
   transform: scale(2) translate(75%, -50%);
   box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+  z-index: 999;
 }
 
+/* Desactivar zoom en dispositivos táctiles */
 @media (hover: none) {
-  .book-century a:hover {
-    z-index: 1;
-  }
-
   .book-century a:hover .book-cover {
     transform: none;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);

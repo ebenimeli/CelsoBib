@@ -1,0 +1,197 @@
+---
+layout: page
+title: ""
+description: "Historia"
+---
+
+<h2>📚 Lecturas de historia</h2>
+
+{% assign history_books = site.data.books | where_exp: "b", "b.genre contains 'historia'" %}
+{% assign period_blocks = site.data.periods | sort: "period_start" %}
+
+{% assign blocks_str = "-30,-29,-28,-27,-26,-25,-24,-23,-22,-21,-20,-19,-18,-17,-16,-15,-14,-13,-12,-11,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21" %}
+{% assign blocks = blocks_str | split: "," %}
+
+<!-- 🔘 NAVEGACIÓN -->
+<div class="period-nav">
+  <button id="btn-first">⏮️</button>
+  <button id="btn-prev">◀ Siglo</button>
+  <button id="btn-zero">0</button>
+  <button id="btn-next">Siglo ▶</button>
+  <button id="btn-last">⏭️</button>
+  <span id="period-indicator"></span>
+</div>
+
+<style>
+.period-nav{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  margin:12px 0 18px 0;
+  flex-wrap:wrap;
+}
+.period-nav button{
+  padding:6px 14px;
+  border-radius:18px;
+  border:1px solid #ccc;
+  background:#f7f7f7;
+  cursor:pointer;
+  font-size:0.9rem;
+}
+.period-nav button:hover{
+  background:#eaeaea;
+}
+#period-indicator{
+  margin-left:8px;
+  opacity:.8;
+  font-size:0.9rem;
+}
+</style>
+
+<!-- 📚 CONTENIDO -->
+<div class="book-list">
+  {% for b in blocks %}
+    {% assign block = b | plus: 0 %}
+    {% assign block_start = block | times: 100 %}
+    {% assign block_end = block_start | plus: 99 %}
+
+    {% if block_start < 0 %}
+      {% assign block_label = block_start | times: -1 | append: " a. C." %}
+    {% else %}
+      {% assign block_label = block_start %}
+    {% endif %}
+
+    {% assign pblock = period_blocks | where: "period_start", block_start | first %}
+    {% if pblock and pblock.title %}
+      {% assign block_label = pblock.title %}
+    {% endif %}
+
+    {% assign has_any = false %}
+    {% for book in history_books %}
+      {% if book.period_start != nil and book.period_end != nil %}
+        {% assign bs = book.period_start | plus: 0 %}
+        {% assign be = book.period_end | plus: 0 %}
+        {% if bs > be %}
+          {% assign tmp = bs %}
+          {% assign bs = be %}
+          {% assign be = tmp %}
+        {% endif %}
+        {% if bs <= block_end and be >= block_start %}
+          {% assign has_any = true %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% if has_any %}
+      <section class="period-section"
+               data-block="{{ block }}"
+               data-start="{{ block_start }}"
+               data-label="{{ block_label | escape }}"
+               style="display:none;">
+
+        <h2 class="year">{{ block_label }}</h2>
+
+        {% if pblock and pblock.description %}
+          <p class="period-description">{{ pblock.description }}</p>
+        {% endif %}
+
+        <div class="book-century">
+          {% for book in history_books %}
+            {% if book.cover and book.period_start != nil and book.period_end != nil %}
+              {% assign bs = book.period_start | plus: 0 %}
+              {% assign be = book.period_end | plus: 0 %}
+              {% if bs > be %}
+                {% assign tmp = bs %}
+                {% assign bs = be %}
+                {% assign be = tmp %}
+              {% endif %}
+              {% if bs <= block_end and be >= block_start %}
+                {% if book.link %}
+                  <a href="{{ book.link }}">
+                    <img src="assets/images/books/{{ book.cover }}"
+                         class="book-cover"
+                         alt="{{ book.title }}" />
+                  </a>
+                {% else %}
+                  <img src="assets/images/books/{{ book.cover }}"
+                       class="book-cover"
+                       alt="{{ book.title }}" />
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<!-- 🧠 LÓGICA -->
+<script>
+(function () {
+  const sections = Array.from(document.querySelectorAll(".period-section"));
+  const indicator = document.getElementById("period-indicator");
+
+  const btnPrev  = document.getElementById("btn-prev");
+  const btnNext  = document.getElementById("btn-next");
+  const btnZero  = document.getElementById("btn-zero");
+  const btnFirst = document.getElementById("btn-first");
+  const btnLast  = document.getElementById("btn-last");
+
+  if (!sections.length) return;
+
+  sections.sort((a, b) => Number(a.dataset.block) - Number(b.dataset.block));
+
+  const firstIndex = 0;
+  const lastIndex  = sections.length - 1;
+  let currentIndex = 0;
+
+  function show(idx){
+    idx = Math.max(firstIndex, Math.min(lastIndex, idx));
+    sections.forEach((s,i)=>s.style.display = i===idx ? "" : "none");
+
+    const s = sections[idx];
+    indicator.textContent =
+      `${s.dataset.label} (${s.dataset.start}–${Number(s.dataset.start)+99})`;
+
+    try{ localStorage.setItem("history_active_block", s.dataset.block); }catch(e){}
+    currentIndex = idx;
+  }
+
+  function idxByBlock(b){
+    return sections.findIndex(s => Number(s.dataset.block) === Number(b));
+  }
+
+  let saved=null;
+  try{ saved=localStorage.getItem("history_active_block"); }catch(e){}
+  if(saved!==null){
+    const i=idxByBlock(saved);
+    if(i>=0) currentIndex=i;
+  } else {
+    const i0=idxByBlock(0);
+    currentIndex = i0>=0 ? i0 : firstIndex;
+  }
+
+  show(currentIndex);
+
+  btnPrev.onclick = ()=>show(currentIndex-1);
+  btnNext.onclick = ()=>show(currentIndex+1);
+  btnFirst.onclick= ()=>show(firstIndex);
+  btnLast.onclick = ()=>show(lastIndex);
+  btnZero.onclick = ()=>{
+    const i0=idxByBlock(0);
+    if(i0>=0) show(i0);
+  };
+
+  document.addEventListener("keydown",e=>{
+    if(e.key==="ArrowLeft") show(currentIndex-1);
+    if(e.key==="ArrowRight") show(currentIndex+1);
+    if(e.key==="Home") show(firstIndex);
+    if(e.key==="End") show(lastIndex);
+    if(e.key==="0"){
+      const i0=idxByBlock(0);
+      if(i0>=0) show(i0);
+    }
+  });
+})();
+</script>

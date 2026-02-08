@@ -1,3 +1,16 @@
+- title: "Iberos"
+  author: Rafael Fontán Barreiro
+  link: https://amzn.to/4rBRTtC
+  image:
+  description:
+  genre: [historia]
+  period_start: -600
+  period_end: -50
+  onpage: 10
+  pages: 200
+  synopsis: "Los siglos centrales del primer milenio antes de nuestra era vieron el nacimiento de las Iberias, su desarrollo y, finalmente, su integración como Hispania en el mundo romano. Es el tiempo brillante de la protohistoria de la Península Ibérica, de la incorporación de sus habitantes al mundo mediterráneo, propiciada fundamentalmente por la colonización de fenicios y griegos, y por contactos asiduos con otros pueblos de aquella koiné. Los iberos son imprescindibles para entender nuestra historia posterior, pero son muchas las limitaciones que nos impiden profundizar en su conocimiento. Es el caso, para empezar, de la escritura: el signario de una lengua que podemos leer, pero no interpretar. O el del misterio de unas murallas construidas no para la guerra, sino para ser imagen del poder. O el de la enigmática destrucción de muchos de sus monumentos funerarios poco tiempo después de haber sido erigidos, de lo que constituye un buen ejemplo el conjunto de esculturas mutiladas del Cerrillo Blanco (Porcuna), hoy en el Museo de Jaén. Este libro presenta al lector el estado actual de la cuestión basándose en la nutrida bibliografía más reciente. Pero es, sobre todo, un exigente y osado intento de reconstrucción. Precisamente porque los iberos no estaban solos, debemos estudiarlos sin perder de vista a los pueblos con los que compartían tiempo y paisaje, los más conocidos por todos. Lo iberos no son, desde luego, el «pueblo pintoresco» de la periferia. Este libro pretende sacarlos de la penumbra en la que tradicionalmente se los han estado entre las culturas del Mediterráneo, y hacerlos lucir con el resplandor que merecen."
+  cover: "iberos.jpg"
+
 - title: En busca del origen del lenguaje
   author: Sverker Johansson
   link: https://amzn.to/3fhFRGt
@@ -187,6 +200,8 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   image:
   description:
   genre: [historia]
+  period_start: -3000
+  period_end: 476
   #completed: 2023
   onpage: 65
   pages: 498
