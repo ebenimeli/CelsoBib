@@ -7,17 +7,18 @@ description: "Historia"
 <h2>📚 Lecturas de historia</h2>
 
 {% assign history_books = site.data.books | where_exp: "b", "b.genre contains 'historia'" %}
-{% assign period_blocks = site.data.periods | sort: "period_start" %}
-
-{% assign blocks_str = "-30,-29,-28,-27,-26,-25,-24,-23,-22,-21,-20,-19,-18,-17,-16,-15,-14,-13,-12,-11,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21" %}
-{% assign blocks = blocks_str | split: "," %}
+{% assign periods = site.data.periods | sort: "period_start" %}
 
 <!-- 🔘 NAVEGACIÓN -->
 <div class="period-nav">
+  <div class="step-wrap">
+    <input id="year-step" type="number" inputmode="numeric" min="1" step="1" value="100" />
+  </div>
+
   <button id="btn-first">⏮️</button>
-  <button id="btn-prev">◀ Siglo</button>
+  <button id="btn-prev">◀ -100</button>
   <button id="btn-zero">0</button>
-  <button id="btn-next">Siglo ▶</button>
+  <button id="btn-next">+100 ▶</button>
   <button id="btn-last">⏭️</button>
   <span id="period-indicator"></span>
 </div>
@@ -38,37 +39,67 @@ description: "Historia"
   cursor:pointer;
   font-size:0.9rem;
 }
-.period-nav button:hover{
-  background:#eaeaea;
-}
+.period-nav button:hover{ background:#eaeaea; }
 #period-indicator{
   margin-left:8px;
   opacity:.8;
   font-size:0.9rem;
 }
+.step-wrap{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:4px 10px;
+  border:1px solid #ccc;
+  border-radius:18px;
+  background:#fff;
+}
+#year-step{
+  width:88px;
+  padding:4px 8px;
+  border:1px solid #ddd;
+  border-radius:12px;
+  font-size:0.9rem;
+}
+
+/* contenido */
+.period-title{ margin: 0 0 8px 0; }
+.period-description{ margin: 0 0 14px 0; opacity:.9; }
+.book-century{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.book-century a{ position:relative; z-index:1; }
+.book-cover{
+  width:120px;
+  height:180px;
+  object-fit:cover;
+  border-radius:6px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+  transform-origin: top right;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.book-century a:hover .book-cover,
+.book-century .book-cover:hover{
+  transform: scale(2) translate(75%, -50%);
+  box-shadow:0 18px 40px rgba(0,0,0,0.35);
+  z-index:999;
+}
+.hidden{ display:none !important; }
 </style>
 
-<!-- 📚 CONTENIDO -->
-<div class="book-list">
-  {% for b in blocks %}
-    {% assign block = b | plus: 0 %}
-    {% assign block_start = block | times: 100 %}
-    {% assign block_end = block_start | plus: 99 %}
+<!-- 📚 CONTENIDO (dinámico por JS) -->
+<section id="history-view">
+  <h2 id="range-title" class="period-title"></h2>
 
-    {% if block_start < 0 %}
-      {% assign block_label = block_start | times: -1 | append: " a. C." %}
-    {% else %}
-      {% assign block_label = block_start %}
-    {% endif %}
+  <!-- aquí se insertarán descripciones de periods.yml que intersecten -->
+  <div id="range-periods"></div>
 
-    {% assign pblock = period_blocks | where: "period_start", block_start | first %}
-    {% if pblock and pblock.title %}
-      {% assign block_label = pblock.title %}
-    {% endif %}
-
-    {% assign has_any = false %}
+  <!-- libros filtrados -->
+  <div id="range-books" class="book-century">
     {% for book in history_books %}
-      {% if book.period_start != nil and book.period_end != nil %}
+      {% if book.cover and book.period_start != nil and book.period_end != nil %}
         {% assign bs = book.period_start | plus: 0 %}
         {% assign be = book.period_end | plus: 0 %}
         {% if bs > be %}
@@ -76,121 +107,271 @@ description: "Historia"
           {% assign bs = be %}
           {% assign be = tmp %}
         {% endif %}
-        {% if bs <= block_end and be >= block_start %}
-          {% assign has_any = true %}
+
+        {% if book.link %}
+          <a class="book-item"
+             href="{{ book.link }}"
+             data-bs="{{ bs }}"
+             data-be="{{ be }}"
+             title="{{ book.title | escape }} ({{ bs }}–{{ be }})">
+            <img src="assets/images/books/{{ book.cover }}"
+                 class="book-cover"
+                 alt="{{ book.title | escape }}" />
+          </a>
+        {% else %}
+          <span class="book-item"
+                data-bs="{{ bs }}"
+                data-be="{{ be }}"
+                title="{{ book.title | escape }} ({{ bs }}–{{ be }})">
+            <img src="assets/images/books/{{ book.cover }}"
+                 class="book-cover"
+                 alt="{{ book.title | escape }}" />
+          </span>
         {% endif %}
       {% endif %}
     {% endfor %}
+  </div>
 
-    {% if has_any %}
-      <section class="period-section"
-               data-block="{{ block }}"
-               data-start="{{ block_start }}"
-               data-label="{{ block_label | escape }}"
-               style="display:none;">
+  <p id="empty-msg" class="hidden" style="opacity:.8; margin-top:12px;">
+    No hay libros para este intervalo.
+  </p>
 
-        <h2 class="year">{{ block_label }}</h2>
-
-        {% if pblock and pblock.description %}
-          <p class="period-description">{{ pblock.description }}</p>
-        {% endif %}
-
-        <div class="book-century">
-          {% for book in history_books %}
-            {% if book.cover and book.period_start != nil and book.period_end != nil %}
-              {% assign bs = book.period_start | plus: 0 %}
-              {% assign be = book.period_end | plus: 0 %}
-              {% if bs > be %}
-                {% assign tmp = bs %}
-                {% assign bs = be %}
-                {% assign be = tmp %}
-              {% endif %}
-              {% if bs <= block_end and be >= block_start %}
-                {% if book.link %}
-                  <a href="{{ book.link }}">
-                    <img src="assets/images/books/{{ book.cover }}"
-                         class="book-cover"
-                         alt="{{ book.title }}" />
-                  </a>
-                {% else %}
-                  <img src="assets/images/books/{{ book.cover }}"
-                       class="book-cover"
-                       alt="{{ book.title }}" />
-                {% endif %}
-              {% endif %}
-            {% endif %}
-          {% endfor %}
-        </div>
-      </section>
-    {% endif %}
-  {% endfor %}
-</div>
+  <!-- periodos (datos) -->
+  <template id="periods-data">
+    {% for p in periods %}
+      {% assign ps = p.period_start | plus: 0 %}
+      {% assign pe = p.period_end | default: ps | plus: 0 %}
+      {% if ps > pe %}
+        {% assign tmp = ps %}
+        {% assign ps = pe %}
+        {% assign pe = tmp %}
+      {% endif %}
+      <div class="period-item"
+           data-ps="{{ ps }}"
+           data-pe="{{ pe }}"
+           data-title="{{ p.title | default: '' | escape }}"
+           data-desc="{{ p.description | default: '' | escape }}">
+      </div>
+    {% endfor %}
+  </template>
+</section>
 
 <!-- 🧠 LÓGICA -->
 <script>
-(function () {
-  const sections = Array.from(document.querySelectorAll(".period-section"));
-  const indicator = document.getElementById("period-indicator");
+(function(){
+  const stepInput = document.getElementById("year-step");
 
   const btnPrev  = document.getElementById("btn-prev");
   const btnNext  = document.getElementById("btn-next");
   const btnZero  = document.getElementById("btn-zero");
   const btnFirst = document.getElementById("btn-first");
   const btnLast  = document.getElementById("btn-last");
+  const indicator= document.getElementById("period-indicator");
 
-  if (!sections.length) return;
+  const titleEl  = document.getElementById("range-title");
+  const periodsEl= document.getElementById("range-periods");
+  const emptyMsg = document.getElementById("empty-msg");
 
-  sections.sort((a, b) => Number(a.dataset.block) - Number(b.dataset.block));
+  const bookItems = Array.from(document.querySelectorAll(".book-item"));
+  const periodItems = Array.from(
+    document.getElementById("periods-data").content.querySelectorAll(".period-item")
+  ).map(el => ({
+    ps: Number(el.dataset.ps),
+    pe: Number(el.dataset.pe),
+    title: el.dataset.title || "",
+    desc: el.dataset.desc || ""
+  }));
 
-  const firstIndex = 0;
-  const lastIndex  = sections.length - 1;
-  let currentIndex = 0;
+  if(!bookItems.length && !periodItems.length) return;
 
-  function show(idx){
-    idx = Math.max(firstIndex, Math.min(lastIndex, idx));
-    sections.forEach((s,i)=>s.style.display = i===idx ? "" : "none");
-
-    const s = sections[idx];
-    indicator.textContent =
-      `${s.dataset.label} (${s.dataset.start}–${Number(s.dataset.start)+99})`;
-
-    try{ localStorage.setItem("history_active_block", s.dataset.block); }catch(e){}
-    currentIndex = idx;
+  function clampStep(v){
+    const n = Number(v);
+    if(!Number.isFinite(n)) return 100;
+    return Math.max(1, Math.floor(n));
   }
 
-  function idxByBlock(b){
-    return sections.findIndex(s => Number(s.dataset.block) === Number(b));
+  function getStep(){
+    let step = 100;
+    try{
+      const saved = localStorage.getItem("history_year_step");
+      if(saved !== null) step = clampStep(saved);
+    }catch(e){}
+    step = clampStep(stepInput.value || step);
+    stepInput.value = String(step);
+    return step;
   }
 
-  let saved=null;
-  try{ saved=localStorage.getItem("history_active_block"); }catch(e){}
-  if(saved!==null){
-    const i=idxByBlock(saved);
-    if(i>=0) currentIndex=i;
-  } else {
-    const i0=idxByBlock(0);
-    currentIndex = i0>=0 ? i0 : firstIndex;
+  function setButtons(step){
+    btnPrev.textContent = `◀ -${step}`;
+    btnNext.textContent = `+${step} ▶`;
   }
 
-  show(currentIndex);
+  // Intersección de intervalos [a1,a2] con [b1,b2]
+  function intersects(a1,a2,b1,b2){
+    return a1 <= b2 && a2 >= b1;
+  }
 
-  btnPrev.onclick = ()=>show(currentIndex-1);
-  btnNext.onclick = ()=>show(currentIndex+1);
-  btnFirst.onclick= ()=>show(firstIndex);
-  btnLast.onclick = ()=>show(lastIndex);
+  // Etiqueta “bonita” para el título
+  function formatYear(y){
+    // Si prefieres “a. C.”:
+    // return y < 0 ? `${Math.abs(y)} a. C.` : String(y);
+    return String(y);
+  }
+
+  // Elegimos límites navegables a partir de los libros (y si no, de periods)
+  const allStarts = [];
+  const allEnds = [];
+
+  for(const el of bookItems){
+    const bs = Number(el.dataset.bs);
+    const be = Number(el.dataset.be);
+    allStarts.push(bs);
+    allEnds.push(be);
+  }
+  for(const p of periodItems){
+    allStarts.push(p.ps);
+    allEnds.push(p.pe);
+  }
+
+  let minYear = Math.min(...allStarts);
+  let maxYear = Math.max(...allEnds);
+
+  // Estado: start actual
+  let currentStart = 0;
+
+  function loadState(){
+    try{
+      const savedStart = localStorage.getItem("history_range_start");
+      if(savedStart !== null && savedStart !== ""){
+        currentStart = Number(savedStart);
+      } else {
+        currentStart = 0;
+      }
+    }catch(e){
+      currentStart = 0;
+    }
+    if(!Number.isFinite(currentStart)) currentStart = 0;
+    currentStart = Math.max(minYear, Math.min(maxYear, currentStart));
+  }
+
+  function saveState(){
+    try{ localStorage.setItem("history_range_start", String(currentStart)); }catch(e){}
+  }
+
+  function render(){
+    const step = getStep();
+    const start = currentStart;
+    const end = start + (step - 1);
+
+    // título + indicador
+    titleEl.textContent = `${formatYear(start)}–${formatYear(end)}`;
+    indicator.textContent = `(${start}–${end})`;
+
+    // periods.yml: mostrar SOLO los que intersecten
+    periodsEl.innerHTML = "";
+    const matches = periodItems.filter(p => p.title || p.desc).filter(p => intersects(p.ps, p.pe, start, end));
+
+    if(matches.length){
+      for(const p of matches){
+        const wrap = document.createElement("div");
+        wrap.style.marginBottom = "10px";
+
+        if(p.title){
+          const h = document.createElement("div");
+          h.style.fontWeight = "600";
+          h.textContent = p.title;
+          wrap.appendChild(h);
+        }
+        if(p.desc){
+          const d = document.createElement("div");
+          d.className = "period-description";
+          d.textContent = p.desc;
+          wrap.appendChild(d);
+        }
+        periodsEl.appendChild(wrap);
+      }
+    }
+
+    // libros: mostrar SOLO los que intersecten
+    let anyBook = false;
+    for(const el of bookItems){
+      const bs = Number(el.dataset.bs);
+      const be = Number(el.dataset.be);
+      const ok = intersects(bs, be, start, end);
+      el.classList.toggle("hidden", !ok);
+      if(ok) anyBook = true;
+    }
+
+    emptyMsg.classList.toggle("hidden", anyBook);
+    setButtons(step);
+    saveState();
+  }
+
+  function jump(delta){
+    const step = getStep();
+    currentStart = currentStart + delta * step;
+    // clamp
+    currentStart = Math.max(minYear, Math.min(maxYear, currentStart));
+    render();
+  }
+
+  function goFirst(){
+    currentStart = minYear;
+    render();
+  }
+
+  function goLast(){
+    const step = getStep();
+    currentStart = maxYear - (step - 1);
+    currentStart = Math.max(minYear, currentStart);
+    render();
+  }
+
+  // init step desde storage
+  (function initStep(){
+    let step = 100;
+    try{
+      const saved = localStorage.getItem("history_year_step");
+      if(saved !== null) step = clampStep(saved);
+    }catch(e){}
+    stepInput.value = String(step);
+    setButtons(step);
+  })();
+
+  loadState();
+  render();
+
+  btnPrev.onclick = ()=>jump(-1);
+  btnNext.onclick = ()=>jump(1);
+  btnFirst.onclick= ()=>goFirst();
+  btnLast.onclick = ()=>goLast();
   btnZero.onclick = ()=>{
-    const i0=idxByBlock(0);
-    if(i0>=0) show(i0);
+    currentStart = 0;
+    currentStart = Math.max(minYear, Math.min(maxYear, currentStart));
+    render();
   };
 
-  document.addEventListener("keydown",e=>{
-    if(e.key==="ArrowLeft") show(currentIndex-1);
-    if(e.key==="ArrowRight") show(currentIndex+1);
-    if(e.key==="Home") show(firstIndex);
-    if(e.key==="End") show(lastIndex);
-    if(e.key==="0"){
-      const i0=idxByBlock(0);
-      if(i0>=0) show(i0);
+  stepInput.addEventListener("change", ()=>{
+    const step = getStep();
+    try{ localStorage.setItem("history_year_step", String(step)); }catch(e){}
+    // al cambiar step, ajustamos “last” y re-render
+    render();
+  });
+
+  stepInput.addEventListener("keydown", (e)=>{
+    if(e.key === "Enter") stepInput.blur();
+  });
+
+  document.addEventListener("keydown", (e)=>{
+    if(e.target === stepInput) return;
+    if(e.key === "ArrowLeft") jump(-1);
+    if(e.key === "ArrowRight") jump(1);
+    if(e.key === "Home") goFirst();
+    if(e.key === "End") goLast();
+    if(e.key === "0"){
+      currentStart = 0;
+      currentStart = Math.max(minYear, Math.min(maxYear, currentStart));
+      render();
     }
   });
 })();
