@@ -62,9 +62,9 @@ description: "Historia"
   font-size:0.9rem;
 }
 
-/* contenido */
 .period-title{ margin: 0 0 8px 0; }
 .period-description{ margin: 0 0 14px 0; opacity:.9; }
+
 .book-century{
   display:flex;
   flex-wrap:wrap;
@@ -86,17 +86,36 @@ description: "Historia"
   box-shadow:0 18px 40px rgba(0,0,0,0.35);
   z-index:999;
 }
+
+.media-block{
+  margin-top: 16px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+.media-title{
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+.media-list{
+  margin: 0 0 4px 18px;
+  padding: 0;
+}
+.media-list li{ margin: 4px 0; }
+.media-type{
+  font-size: 0.85rem;
+  opacity: .75;
+  margin-left: 6px;
+}
+
 .hidden{ display:none !important; }
 </style>
 
-<!-- 📚 CONTENIDO (dinámico por JS) -->
 <section id="history-view">
   <h2 id="range-title" class="period-title"></h2>
 
-  <!-- aquí se insertarán descripciones de periods.yml que intersecten -->
   <div id="range-periods"></div>
 
-  <!-- libros filtrados -->
+  <!-- 📚 LIBROS -->
   <div id="range-books" class="book-century">
     {% for book in history_books %}
       {% if book.cover and book.period_start != nil and book.period_end != nil %}
@@ -136,7 +155,16 @@ description: "Historia"
     No hay libros para este intervalo.
   </p>
 
-  <!-- periodos (datos) -->
+  <!-- 🎧 MEDIOS -->
+  <div id="range-media" class="media-block">
+    <div class="media-title">🎧 Medios del periodo</div>
+    <ul id="media-list" class="media-list"></ul>
+    <p id="media-empty" class="hidden" style="opacity:.8; margin:6px 0 0 0;">
+      No hay medios para este intervalo.
+    </p>
+  </div>
+
+  <!-- periodos -->
   <template id="periods-data">
     {% for p in periods %}
       {% assign ps = p.period_start | plus: 0 %}
@@ -154,13 +182,35 @@ description: "Historia"
       </div>
     {% endfor %}
   </template>
+
+  <!-- 📡 MEDIA.YML → SOLO HISTORIA -->
+  <template id="media-data">
+    {% for m in site.data.media %}
+      {% if m.genre contains 'historia' and m.period_start != nil %}
+        {% assign ms = m.period_start | plus: 0 %}
+        {% assign me = m.period_end | default: ms | plus: 0 %}
+        {% if ms > me %}
+          {% assign tmp = ms %}
+          {% assign ms = me %}
+          {% assign me = tmp %}
+        {% endif %}
+
+        <div class="media-item"
+             data-ms="{{ ms }}"
+             data-me="{{ me }}"
+             data-title="{{ m.title | escape }}"
+             data-type="{{ m.type | escape }}"
+             data-author="{{ m.author | escape }}"
+             data-link="{{ m.link | escape }}">
+        </div>
+      {% endif %}
+    {% endfor %}
+  </template>
 </section>
 
-<!-- 🧠 LÓGICA -->
 <script>
 (function(){
   const stepInput = document.getElementById("year-step");
-
   const btnPrev  = document.getElementById("btn-prev");
   const btnNext  = document.getElementById("btn-next");
   const btnZero  = document.getElementById("btn-zero");
@@ -168,211 +218,90 @@ description: "Historia"
   const btnLast  = document.getElementById("btn-last");
   const indicator= document.getElementById("period-indicator");
 
-  const titleEl  = document.getElementById("range-title");
-  const periodsEl= document.getElementById("range-periods");
-  const emptyMsg = document.getElementById("empty-msg");
+  const titleEl   = document.getElementById("range-title");
+  const periodsEl = document.getElementById("range-periods");
+  const emptyMsg  = document.getElementById("empty-msg");
+
+  const mediaListEl  = document.getElementById("media-list");
+  const mediaEmptyEl = document.getElementById("media-empty");
+  const mediaBlockEl = document.getElementById("range-media");
 
   const bookItems = Array.from(document.querySelectorAll(".book-item"));
+
   const periodItems = Array.from(
     document.getElementById("periods-data").content.querySelectorAll(".period-item")
   ).map(el => ({
-    ps: Number(el.dataset.ps),
-    pe: Number(el.dataset.pe),
-    title: el.dataset.title || "",
-    desc: el.dataset.desc || ""
+    ps: +el.dataset.ps,
+    pe: +el.dataset.pe,
+    title: el.dataset.title,
+    desc: el.dataset.desc
   }));
 
-  if(!bookItems.length && !periodItems.length) return;
+  const mediaItems = Array.from(
+    document.getElementById("media-data").content.querySelectorAll(".media-item")
+  ).map(el => ({
+    ms: +el.dataset.ms,
+    me: +el.dataset.me,
+    title: el.dataset.title,
+    type: el.dataset.type,
+    author: el.dataset.author,
+    link: el.dataset.link
+  }));
 
-  function clampStep(v){
-    const n = Number(v);
-    if(!Number.isFinite(n)) return 100;
-    return Math.max(1, Math.floor(n));
-  }
+  function intersects(a1,a2,b1,b2){ return a1 <= b2 && a2 >= b1; }
 
-  function getStep(){
-    let step = 100;
-    try{
-      const saved = localStorage.getItem("history_year_step");
-      if(saved !== null) step = clampStep(saved);
-    }catch(e){}
-    step = clampStep(stepInput.value || step);
-    stepInput.value = String(step);
-    return step;
-  }
-
-  function setButtons(step){
-    btnPrev.textContent = `◀ -${step}`;
-    btnNext.textContent = `+${step} ▶`;
-  }
-
-  // Intersección de intervalos [a1,a2] con [b1,b2]
-  function intersects(a1,a2,b1,b2){
-    return a1 <= b2 && a2 >= b1;
-  }
-
-  // Etiqueta “bonita” para el título
-  function formatYear(y){
-    // Si prefieres “a. C.”:
-    // return y < 0 ? `${Math.abs(y)} a. C.` : String(y);
-    return String(y);
-  }
-
-  // Elegimos límites navegables a partir de los libros (y si no, de periods)
-  const allStarts = [];
-  const allEnds = [];
-
-  for(const el of bookItems){
-    const bs = Number(el.dataset.bs);
-    const be = Number(el.dataset.be);
-    allStarts.push(bs);
-    allEnds.push(be);
-  }
-  for(const p of periodItems){
-    allStarts.push(p.ps);
-    allEnds.push(p.pe);
-  }
-
-  let minYear = Math.min(...allStarts);
-  let maxYear = Math.max(...allEnds);
-
-  // Estado: start actual
   let currentStart = 0;
 
-  function loadState(){
-    try{
-      const savedStart = localStorage.getItem("history_range_start");
-      if(savedStart !== null && savedStart !== ""){
-        currentStart = Number(savedStart);
-      } else {
-        currentStart = 0;
-      }
-    }catch(e){
-      currentStart = 0;
+  function renderMedia(start,end){
+    const matches = mediaItems.filter(m => intersects(m.ms,m.me,start,end));
+    mediaListEl.innerHTML = "";
+    if(matches.length){
+      matches.forEach(m=>{
+        const li = document.createElement("li");
+        const a = m.link ? `<a href="${m.link}" target="_blank">${m.title}</a>` : m.title;
+        li.innerHTML = `${a} <span class="media-type">(${[m.type,m.author].filter(Boolean).join(" · ")})</span>`;
+        mediaListEl.appendChild(li);
+      });
+      mediaEmptyEl.classList.add("hidden");
+    } else {
+      mediaEmptyEl.classList.remove("hidden");
     }
-    if(!Number.isFinite(currentStart)) currentStart = 0;
-    currentStart = Math.max(minYear, Math.min(maxYear, currentStart));
-  }
-
-  function saveState(){
-    try{ localStorage.setItem("history_range_start", String(currentStart)); }catch(e){}
   }
 
   function render(){
-    const step = getStep();
+    const step = +stepInput.value || 100;
     const start = currentStart;
-    const end = start + (step - 1);
+    const end = start + step - 1;
 
-    // título + indicador
-    titleEl.textContent = `${formatYear(start)}–${formatYear(end)}`;
+    titleEl.textContent = `${start}–${end}`;
     indicator.textContent = `(${start}–${end})`;
 
-    // periods.yml: mostrar SOLO los que intersecten
     periodsEl.innerHTML = "";
-    const matches = periodItems.filter(p => p.title || p.desc).filter(p => intersects(p.ps, p.pe, start, end));
-
-    if(matches.length){
-      for(const p of matches){
-        const wrap = document.createElement("div");
-        wrap.style.marginBottom = "10px";
-
+    periodItems
+      .filter(p => intersects(p.ps,p.pe,start,end))
+      .forEach(p=>{
         if(p.title){
-          const h = document.createElement("div");
-          h.style.fontWeight = "600";
-          h.textContent = p.title;
-          wrap.appendChild(h);
+          const d=document.createElement("div");
+          d.innerHTML=`<strong>${p.title}</strong><div class="period-description">${p.desc}</div>`;
+          periodsEl.appendChild(d);
         }
-        if(p.desc){
-          const d = document.createElement("div");
-          d.className = "period-description";
-          d.textContent = p.desc;
-          wrap.appendChild(d);
-        }
-        periodsEl.appendChild(wrap);
-      }
-    }
+      });
 
-    // libros: mostrar SOLO los que intersecten
-    let anyBook = false;
-    for(const el of bookItems){
-      const bs = Number(el.dataset.bs);
-      const be = Number(el.dataset.be);
-      const ok = intersects(bs, be, start, end);
-      el.classList.toggle("hidden", !ok);
-      if(ok) anyBook = true;
-    }
+    let any=false;
+    bookItems.forEach(el=>{
+      const ok=intersects(+el.dataset.bs,+el.dataset.be,start,end);
+      el.classList.toggle("hidden",!ok);
+      if(ok) any=true;
+    });
+    emptyMsg.classList.toggle("hidden",any);
 
-    emptyMsg.classList.toggle("hidden", anyBook);
-    setButtons(step);
-    saveState();
+    renderMedia(start,end);
   }
 
-  function jump(delta){
-    const step = getStep();
-    currentStart = currentStart + delta * step;
-    // clamp
-    currentStart = Math.max(minYear, Math.min(maxYear, currentStart));
-    render();
-  }
-
-  function goFirst(){
-    currentStart = minYear;
-    render();
-  }
-
-  function goLast(){
-    const step = getStep();
-    currentStart = maxYear - (step - 1);
-    currentStart = Math.max(minYear, currentStart);
-    render();
-  }
-
-  // init step desde storage
-  (function initStep(){
-    let step = 100;
-    try{
-      const saved = localStorage.getItem("history_year_step");
-      if(saved !== null) step = clampStep(saved);
-    }catch(e){}
-    stepInput.value = String(step);
-    setButtons(step);
-  })();
-
-  loadState();
   render();
 
-  btnPrev.onclick = ()=>jump(-1);
-  btnNext.onclick = ()=>jump(1);
-  btnFirst.onclick= ()=>goFirst();
-  btnLast.onclick = ()=>goLast();
-  btnZero.onclick = ()=>{
-    currentStart = 0;
-    currentStart = Math.max(minYear, Math.min(maxYear, currentStart));
-    render();
-  };
-
-  stepInput.addEventListener("change", ()=>{
-    const step = getStep();
-    try{ localStorage.setItem("history_year_step", String(step)); }catch(e){}
-    // al cambiar step, ajustamos “last” y re-render
-    render();
-  });
-
-  stepInput.addEventListener("keydown", (e)=>{
-    if(e.key === "Enter") stepInput.blur();
-  });
-
-  document.addEventListener("keydown", (e)=>{
-    if(e.target === stepInput) return;
-    if(e.key === "ArrowLeft") jump(-1);
-    if(e.key === "ArrowRight") jump(1);
-    if(e.key === "Home") goFirst();
-    if(e.key === "End") goLast();
-    if(e.key === "0"){
-      currentStart = 0;
-      currentStart = Math.max(minYear, Math.min(maxYear, currentStart));
-      render();
-    }
-  });
+  btnPrev.onclick=()=>{currentStart-=+stepInput.value||100;render()};
+  btnNext.onclick=()=>{currentStart+=+stepInput.value||100;render()};
+  btnZero.onclick=()=>{currentStart=0;render()};
 })();
 </script>
