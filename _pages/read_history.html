@@ -264,6 +264,31 @@ description: "Historia"
     btnNext.textContent = `+${step} ▶`;
   }
 
+  // 🔎 Calcula el mínimo y máximo "real" (books + media)
+  // min = menor start; max = mayor end (para que el último intervalo incluya algo)
+  function computeDataBounds(){
+    let min = Infinity;
+    let max = -Infinity;
+
+    bookItems.forEach(el=>{
+      const bs = +el.dataset.bs;
+      const be = +el.dataset.be;
+      if (Number.isFinite(bs)) min = Math.min(min, bs);
+      if (Number.isFinite(be)) max = Math.max(max, be);
+    });
+
+    mediaItems.forEach(m=>{
+      if (Number.isFinite(m.ms)) min = Math.min(min, m.ms);
+      if (Number.isFinite(m.me)) max = Math.max(max, m.me);
+    });
+
+    if (!Number.isFinite(min) || !Number.isFinite(max)) {
+      // Si no hay datos, cae a 0
+      return { min: 0, max: 0 };
+    }
+    return { min, max };
+  }
+
   function renderMedia(start,end){
     const matches = mediaItems.filter(m => intersects(m.ms,m.me,start,end));
     mediaListEl.innerHTML = "";
@@ -319,6 +344,21 @@ description: "Historia"
   btnPrev.onclick = ()=>{ currentStart -= getStep(); render(); };
   btnNext.onclick = ()=>{ currentStart += getStep(); render(); };
   btnZero.onclick = ()=>{ currentStart = 0; render(); };
+
+  // ✅ Ir al primer/último intervalo con datos (books o media)
+  btnFirst.onclick = ()=>{
+    const { min } = computeDataBounds();
+    currentStart = min;          // empieza donde aparece el primer dato
+    render();
+  };
+
+  btnLast.onclick = ()=>{
+    const { max } = computeDataBounds();
+    const step = getStep();
+    // Queremos el inicio del intervalo tal que (inicio + step - 1) >= max
+    currentStart = max - (step - 1);
+    render();
+  };
 
   // ✅ Actualiza etiquetas y re-render al cambiar el step
   stepInput.addEventListener("input", ()=> render());
