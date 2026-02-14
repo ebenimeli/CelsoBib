@@ -1,3 +1,15 @@
+- title: "Las Pirámides de Guiza explicadas"
+  type: documental
+  author: Manuel Bravo
+  link: https://www.youtube.com/watch?v=X1-8OWSKoyU
+  image:
+  description:
+  genre: [historia]
+  period_start: -2600
+  period_end: -2500
+  synopsis: 
+  cover: 
+
 - title: "El Desastre del 98"
   type: podcast
   author: Memorias de un tambor
@@ -9,7 +21,6 @@
   period_end: 1898
   synopsis: 
   cover: 
-
 
 - title: "Tiempo de valientes"
   type: serie

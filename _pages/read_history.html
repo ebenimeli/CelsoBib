@@ -224,7 +224,6 @@ description: "Historia"
 
   const mediaListEl  = document.getElementById("media-list");
   const mediaEmptyEl = document.getElementById("media-empty");
-  const mediaBlockEl = document.getElementById("range-media");
 
   const bookItems = Array.from(document.querySelectorAll(".book-item"));
 
@@ -252,13 +251,26 @@ description: "Historia"
 
   let currentStart = 0;
 
+  function getStep(){
+    const v = parseInt(stepInput.value, 10);
+    const step = Number.isFinite(v) ? Math.max(1, v) : 100;
+    if (String(step) !== String(stepInput.value)) stepInput.value = step;
+    return step;
+  }
+
+  function updateButtonLabels(){
+    const step = getStep();
+    btnPrev.textContent = `◀ -${step}`;
+    btnNext.textContent = `+${step} ▶`;
+  }
+
   function renderMedia(start,end){
     const matches = mediaItems.filter(m => intersects(m.ms,m.me,start,end));
     mediaListEl.innerHTML = "";
     if(matches.length){
       matches.forEach(m=>{
         const li = document.createElement("li");
-        const a = m.link ? `<a href="${m.link}" target="_blank">${m.title}</a>` : m.title;
+        const a = m.link ? `<a href="${m.link}" target="_blank" rel="noopener">${m.title}</a>` : m.title;
         li.innerHTML = `${a} <span class="media-type">(${[m.type,m.author].filter(Boolean).join(" · ")})</span>`;
         mediaListEl.appendChild(li);
       });
@@ -269,39 +281,48 @@ description: "Historia"
   }
 
   function render(){
-    const step = +stepInput.value || 100;
+    const step = getStep();
+    updateButtonLabels();
+
     const start = currentStart;
     const end = start + step - 1;
 
-    titleEl.textContent = `${start}–${end}`;
-    indicator.textContent = `(${start}–${end})`;
+    titleEl.textContent = `De ${start} a ${end}`;
+    indicator.textContent = `(${start} a ${end})`;
 
     periodsEl.innerHTML = "";
     periodItems
       .filter(p => intersects(p.ps,p.pe,start,end))
       .forEach(p=>{
         if(p.title){
-          const d=document.createElement("div");
-          d.innerHTML=`<strong>${p.title}</strong><div class="period-description">${p.desc}</div>`;
+          const d = document.createElement("div");
+          d.innerHTML = `<strong>${p.title}</strong><div class="period-description">${p.desc}</div>`;
           periodsEl.appendChild(d);
         }
       });
 
-    let any=false;
+    let any = false;
     bookItems.forEach(el=>{
-      const ok=intersects(+el.dataset.bs,+el.dataset.be,start,end);
-      el.classList.toggle("hidden",!ok);
-      if(ok) any=true;
+      const ok = intersects(+el.dataset.bs, +el.dataset.be, start, end);
+      el.classList.toggle("hidden", !ok);
+      if(ok) any = true;
     });
-    emptyMsg.classList.toggle("hidden",any);
+    emptyMsg.classList.toggle("hidden", any);
 
-    renderMedia(start,end);
+    renderMedia(start, end);
   }
 
+  // Inicial
   render();
 
-  btnPrev.onclick=()=>{currentStart-=+stepInput.value||100;render()};
-  btnNext.onclick=()=>{currentStart+=+stepInput.value||100;render()};
-  btnZero.onclick=()=>{currentStart=0;render()};
+  // Navegación
+  btnPrev.onclick = ()=>{ currentStart -= getStep(); render(); };
+  btnNext.onclick = ()=>{ currentStart += getStep(); render(); };
+  btnZero.onclick = ()=>{ currentStart = 0; render(); };
+
+  // ✅ Actualiza etiquetas y re-render al cambiar el step
+  stepInput.addEventListener("input", ()=> render());
+  stepInput.addEventListener("change", ()=> render());
+
 })();
 </script>
