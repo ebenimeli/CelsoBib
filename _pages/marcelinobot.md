@@ -6,7 +6,7 @@ description: "San Marcelino Champagnat"
 
 # MarcelinoHoy
 
-[![image](/assets/images/pages/marcelino/macelinohoy.jpg)](https://t.me/+uZ_2jC8gTfczYjc0)
+[![image](/assets/images/pages/marcelino/marcelinohoy.jpg)](https://t.me/+uZ_2jC8gTfczYjc0)
 
 ## ¿Qué es MarcelinoHoy?
 
@@ -33,7 +33,7 @@ San Marcelino Champagnat (1789-1840) fue un sacerdote francés y fundador de los
 
 Para unirte a MarcelinoHoy, simplemente [haz clic en el siguiente enlace](https://t.me/+uZ_2jC8gTfczYjc0) o escanea con tu aplicación de Telegram el **código QR** que aparece en la imagen superior.
 
-[![image](/assets/images/pages/marcelino/marcelinobot_link.jpg)](https://t.me/+uZ_2jC8gTfczYjc0)
+[![image](/assets/images/pages/marcelino/marcelinohoy_link.jpg)](https://t.me/+uZ_2jC8gTfczYjc0)
 
 ## ¿Es gratuito?
 
