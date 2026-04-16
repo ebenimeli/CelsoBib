@@ -285,8 +285,8 @@ body {
 }
 
 .profile-image {
-  width: 128px;
-  height: 128px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   transition: transform 0.2s;
   border: 0px dashed #696969;
@@ -1016,6 +1016,16 @@ ul.tasks li {
 
 .book-list a {
   text-decoration: none;
+}
+
+img.profile2 {
+  width: 150px;
+  float: right;
+  padding-left: 10px;
+
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
 }
 
 img.profile {
