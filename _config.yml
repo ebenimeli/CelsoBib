@@ -19,7 +19,7 @@ timezone: Europe/Madrid
 # Author settings
 author:
   name: Enrique Benimeli
-  bio: Código, aula y palabras
+  bio: Código, aula y palabras<br/>
   picture: assets/images/prompt3.png
   github: ebenimeli # github username
   twitter: enriquebenimeli # twitter username
