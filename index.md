@@ -39,8 +39,9 @@ Estos son los últimos _posts_ que he publicado:
 
 ## ✉️ Redes y contacto
 
+<!--
 <a href="/contact/">
     <img src="assets/images/profile.jpg" class="profile-image-lp">
 </a>
-
+-->
 Si quieres **escribirme**, puedes hacerlo a través del [formulario de contacto](/contact/). También puedes enviarme un [mensaje directo en X](https://x.com/enriquebenimeli) o [en LinkedIn](https://www.linkedin.com/in/ebenimeli/?locale=es_ES) para contactar conmigo. También puedes encontrarme en [Instagram](https://www.instagram.com/ebenimeli/). Me encantará leerte.
