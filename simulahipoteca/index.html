@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simulador de hipoteca</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Simulación orientativa</p>
+
+      <h1>Simulador de hipoteca</h1>
+
+      <p>
+        Calcula cuotas, bonificaciones, productos asociados y amortizaciones
+        anticipadas.
+      </p>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <!-- PANEL IZQUIERDO -->
+    <section class="panel form-panel">
+
+      <div class="panel-header">
+        <h2>Parámetros</h2>
+
+        <button id="resetBtn" type="button">
+          Restaurar valores
+        </button>
+      </div>
+
+      <form id="mortgageForm">
+
+        <!-- DATOS PRINCIPALES -->
+        <fieldset>
+          <legend>Datos principales</legend>
+
+          <label>
+            Importe compraventa (€)
+            <input id="purchaseAmount" type="number" step="0.01" />
+          </label>
+
+          <label>
+            Importe solicitado (€)
+            <input id="loanAmount" type="number" step="0.01" />
+          </label>
+
+          <label>
+            Duración (meses)
+            <input id="durationMonths" type="number" step="1" />
+          </label>
+
+          <label>
+            Año de inicio
+            <input id="startYear" type="number" step="1" />
+          </label>
+
+          <label>
+            Mes de inicio
+            <input id="startMonth" type="number" min="1" max="12" step="1" />
+          </label>
+        </fieldset>
+
+        <!-- TIPOS -->
+        <fieldset>
+          <legend>Tipos y bonificaciones</legend>
+
+          <label>
+            Tipo 1er año (%)
+            <input id="firstYearRate" type="number" step="0.001" />
+          </label>
+
+          <label>
+            Tipo base desde año 2 (%)
+            <input id="laterRateWithoutBonus" type="number" step="0.001" />
+          </label>
+
+          <label>
+            Bonificación nómina (%)
+            <input id="bonusPayroll" type="number" step="0.01" />
+          </label>
+
+          <label>
+            Bonificación seguro hogar (%)
+            <input id="bonusHomeInsurance" type="number" step="0.01" />
+          </label>
+
+          <label>
+            Bonificación seguro vida (%)
+            <input id="bonusLifeInsurance" type="number" step="0.01" />
+          </label>
+
+          <label>
+            Bonificación seguro pagos (%)
+            <input id="bonusPaymentProtection" type="number" step="0.01" />
+          </label>
+
+          <label>
+            Bonificación máxima (%)
+            <input id="maxBonus" type="number" step="0.01" />
+          </label>
+
+          <label>
+            Meses primer periodo
+            <input id="firstYearMonths" type="number" step="1" />
+          </label>
+        </fieldset>
+
+        <!-- PRODUCTOS -->
+        <fieldset>
+          <legend>Productos activos</legend>
+
+          <label class="check">
+            <input id="usePayroll" type="checkbox" />
+            Nómina
+          </label>
+
+          <label class="check">
+            <input id="useHomeInsurance" type="checkbox" />
+            Seguro de hogar
+          </label>
+
+          <label class="check">
+            <input id="useLifeInsurance" type="checkbox" />
+            Seguro de vida
+          </label>
+
+          <label class="check">
+            <input id="usePaymentProtection" type="checkbox" />
+            Protección de pagos
+          </label>
+        </fieldset>
+
+        <!-- COSTES -->
+        <fieldset>
+          <legend>Coste anual de productos</legend>
+
+          <label>
+            Seguro de vida anual (€)
+            <input id="annualLifeInsurance" type="number" step="0.01" />
+          </label>
+
+          <label>
+            Seguro de hogar anual (€)
+            <input id="annualHomeInsurance" type="number" step="0.01" />
+          </label>
+
+          <label>
+            Protección de pagos anual (€)
+            <input id="annualPaymentProtection" type="number" step="0.01" />
+          </label>
+        </fieldset>
+
+        <!-- COMISIONES -->
+        <fieldset>
+          <legend>Comisiones por amortización anticipada</legend>
+
+          <label>
+            Primeros 10 años (%)
+            <input id="earlyRepaymentFirst10Years" type="number" step="0.001" />
+          </label>
+
+          <label>
+            Resto de años (%)
+            <input id="earlyRepaymentAfter10Years" type="number" step="0.001" />
+          </label>
+        </fieldset>
+
+        <!-- AMORTIZACIONES -->
+        <fieldset>
+          <legend>Amortizaciones anticipadas</legend>
+
+          <div id="repaymentsList" class="repayments"></div>
+
+          <button
+            id="addRepaymentBtn"
+            type="button"
+            class="secondary"
+          >
+            Añadir amortización
+          </button>
+        </fieldset>
+
+      </form>
+    </section>
+
+    <!-- PANEL DERECHO -->
+    <section class="results">
+
+      <!-- RESUMEN -->
+      <section class="panel">
+
+        <div class="panel-header">
+          <h2>Resumen</h2>
+
+          <button id="downloadCsvBtn" type="button">
+            Descargar CSV
+          </button>
+        </div>
+
+        <div id="summaryCards" class="cards"></div>
+      </section>
+
+      <!-- AMORTIZACIONES -->
+      <section class="panel">
+        <h2>Amortizaciones aplicadas</h2>
+
+        <div id="appliedRepayments"></div>
+      </section>
+
+      <!-- TABLA -->
+      <section class="panel table-panel">
+
+        <div class="panel-header">
+
+          <h2>Tabla de amortización</h2>
+
+          <div class="table-filters">
+
+            <label class="inline-filter">
+              <input
+                id="showYearTotals"
+                type="checkbox"
+                checked
+              />
+              Mostrar totales anuales
+            </label>
+
+            <label class="inline-filter">
+              <input
+                id="showOnlyYearTotals"
+                type="checkbox"
+              />
+              Ver solo totales anuales
+            </label>
+
+          </div>
+        </div>
+
+        <div class="table-wrap">
+
+          <table id="scheduleTable">
+
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Fecha</th>
+                <th>Intereses</th>
+                <th>Capital amortizado</th>
+                <th>Total cuota</th>
+                <th>Capital pendiente</th>
+                <th>Tipo interés</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+
+            <tbody></tbody>
+
+          </table>
+        </div>
+      </section>
+
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
