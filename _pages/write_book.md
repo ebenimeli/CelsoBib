@@ -4,4 +4,4 @@ title: "📓 En proceso"
 description: "En proceso"
 ---
 
-<!-- {% include goal.html %} -->
+{% include goal.html %}

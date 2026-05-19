@@ -1,33 +1,9 @@
-- date: 20/08/2025
-  write: 326
-  day: Wed
-  riseearly: ''
-  sleep: 0
-  read: 0
-  lang: 0
-  walk: 0
-  chess: 0
-  getridof: 0
-  getridof_t: '(0)'
-  declutter: 0
-  screentime: 0
-  gtd: 'yes'
-  journal: 'no'
-  family: 'yes'
+- date: 10/05/2026
+  write_log: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  book_words: 12072
+  day: Sun
 
-- date: 19/08/2025
-  write: 7000
-  day: Wed
-  riseearly: ''
-  sleep: 0
-  read: 0
-  lang: 0
-  walk: 0
-  chess: 0
-  getridof: 0
-  getridof_t: '(0)'
-  declutter: 0
-  screentime: 0
-  gtd: 'yes'
-  journal: 'no'
-  family: 'yes'
+- date: 09/05/2026
+  write_log: 'Recupero mi proyecto en Scrivener. Cuento con borradores y notas.Es un buen punto de partida para retomar la escritura.'
+  book_words: 321
+  day: Sat

@@ -1,25 +1,105 @@
 {% assign TOTAL_GOAL = 40000.0 %}
-{% assign words = 0 %}
 
-{% for item in site.data.projects %}
-  {% assign w = item.write | default: 0 %}
-  {% assign words = words | plus: w %}
-{% endfor %}
+{%- comment -%}
+Tomamos el número total de palabras del registro más reciente
+(el primero del YML)
+{%- endcomment -%}
+
+{% if site.data.projects and site.data.projects.size > 0 %}
+  {% assign latest = site.data.projects | first %}
+  {% assign words = latest.book_words | default: 0 %}
+  {% assign last_date = latest.date | default: latest.day | default: '' %}
+
+  {%- comment -%}
+  Calculamos diferencia respecto al registro anterior
+  {%- endcomment -%}
+
+  {% assign previous = site.data.projects[1] %}
+  
+  {% if previous %}
+    {% assign previous_words = previous.book_words | default: 0 %}
+  {% else %}
+    {% assign previous_words = 0 %}
+  {% endif %}
+
+  {% assign last_words = words | minus: previous_words %}
+{% else %}
+  {% assign words = 0 %}
+  {% assign last_words = 0 %}
+{% endif %}
 
 {% assign progress_num = words | times: 100.0 | divided_by: TOTAL_GOAL | round: 1 %}
 {% assign progress_str = progress_num | append: '%' %}
 
-{%- comment -%} Último registro (el primero del YML) {%- endcomment -%}
-{% if site.data.projects and site.data.projects.size > 0 %}
-  {% assign latest = site.data.projects | first %}
-  {% assign last_words = latest.write | default: 0 %}
-  {% assign last_date = latest.date | default: latest.day | default: '' %}
-{% endif %}
-
 <span class="goalperc"> 
-  {{ words }}/{{TOTAL_GOAL | round}} palabras · {{ progress_str }}
+  {{ progress_str }}
 </span>
+
 <progress class="goal" value="{{ progress_num }}" max="100"></progress>
+
 <span class="goalperc">
-    Actualizado:&nbsp;{%- if last_date != '' -%} {{ last_date }} (+{{ last_words }} palabras){%- endif -%}
+  Actualizado:&nbsp;
+  {%- if last_date != '' -%}
+
+    {% if last_words > 0 %}
+      {{ last_date }} (+{{ last_words }} palabras)
+    {% elsif last_words < 0 %}
+      {{ last_date }} ({{ last_words }} palabras)
+    {% else %}
+      {{ last_date }} (sin cambios)
+    {% endif %}
+
+  {%- endif -%}
 </span>
+
+{% assign total_days = site.data.projects | size %}
+
+<ul class="writelogs">
+{% for item in site.data.projects %}
+
+  {% assign day_number = total_days | minus: forloop.index0 %}
+  {% assign log = item.write_log | default: '' %}
+  {% assign log_date = item.date | default: item.day | default: '' %}
+  {% assign current_words = item.book_words | default: 0 %}
+
+  {%- comment -%}
+  Comparar con el siguiente elemento del array
+  porque el YML está ordenado del más reciente al más antiguo
+  {%- endcomment -%}
+
+  {% assign next_index = forloop.index %}
+  {% assign previous_item = site.data.projects[next_index] %}
+
+  {% if previous_item %}
+    {% assign previous_words = previous_item.book_words | default: 0 %}
+  {% else %}
+    {% assign previous_words = 0 %}
+  {% endif %}
+
+  {% assign diff_words = current_words | minus: previous_words %}
+
+  {% if log != '' %}
+    <li>
+  {% if diff_words > 0 %}
+    ▲
+  {% elsif diff_words < 0 %}
+    ▼
+  {% else %}
+    ▬
+  {% endif %}
+
+  <strong>Día {{ day_number }}.</strong>
+  {{ log }}
+
+  {% if diff_words > 0 %}
+    (+{{ diff_words }} palabras · {{ log_date }})
+  {% elsif diff_words < 0 %}
+    ({{ diff_words }} palabras · {{ log_date }})
+  {% else %}
+    (0 palabras · {{ log_date }})
+  {% endif %}
+</li>
+  {% endif %}
+
+{% endfor %}
+</ul>

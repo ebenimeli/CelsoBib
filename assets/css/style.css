@@ -1557,3 +1557,16 @@ img.profile-image-lp {
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   }
 }
+
+
+.writelogs {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.writelogs li {
+  border-bottom: 1px dotted #696969;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
