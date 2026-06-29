@@ -23,6 +23,7 @@ También se abordan recursos como apuntes, presentaciones, infografías, vídeos
 - [Generador de informes de evaluación](https://notasalvuelo.substack.com/p/una-evaluacion-productiva)
 - [Asistente para observaciones del alumno](https://www.esferatic.com/obs/)
 - [Herramienta para organizar listas y grupos](https://www.ebenimeli.org/txtlab/#tblists)
+- [MarcelinoHoy (Bot)](https://www.ebenimeli.org/pages/marcelinobot.html)
 
 ## Blogs, boletines y canales
 
