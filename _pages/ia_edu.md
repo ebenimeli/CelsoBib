@@ -18,7 +18,7 @@ También se abordan recursos como apuntes, presentaciones, infografías, vídeos
 
 ## Selección de herramientas y guías
 
-- IA Generativas | [ChatGPT](https://chatgpt.com/) | [Claude](https://claude.ai/) | [Gemini](https://gemini.google.com/) | [NotebookLM](https://notebooklm.google.com/) | [HeyGen](https://www.heygen.com/)
+- IA Generativas · [ChatGPT](https://chatgpt.com/) · [Claude](https://claude.ai/) · [Gemini](https://gemini.google.com/) · [NotebookLM](https://notebooklm.google.com/) · [HeyGen](https://www.heygen.com/)
 - [Cómo convertir Excel de calificaciones en CSV para generar el informe de evaluación](https://notasalvuelo.substack.com/p/un-texto-plano)
 - [Generador de informes de evaluación](https://notasalvuelo.substack.com/p/una-evaluacion-productiva)
 - [Asistente para observaciones del alumno](https://www.esferatic.com/obs/)
