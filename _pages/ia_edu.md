@@ -28,7 +28,6 @@ También se abordan recursos como apuntes, presentaciones, infografías, vídeos
 ## Blogs, boletines y canales
 
 - [Ocho en punto](https://www.ochoenpunto.com/)
-- [Canal de Telegram 8am](https://t.me/ochoenpunto)
 - [Esfera TIC](https://www.esferatic.com/)
 - [La ventana digital](https://ebenimeli.substack.com/)
 - [Notas al vuelo](https://notasalvuelo.substack.com/)
