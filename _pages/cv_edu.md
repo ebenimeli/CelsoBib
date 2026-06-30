@@ -23,7 +23,7 @@ Se muestran los más recientes.
 
 - Plataforma Globaleduca
 - Autolesiones y pensamientos suicidas: prevenir, detectar y actuar. Dr. José Cervera Martínez.
-- Prevención de riesgos laborales en personal docente. Quirón Prevención.
+- Prevención de riesgos laborales en personal docente. Quirón Prevención
 - Cómo salvar vidas en centros educativos
 - Ajedrez y matemáticas: del tablero a la vida del jugador profesional - Pepe Cuenca
 - Ciclo de Ajedrez Educativo para Docentes y Educadores (Nivel II): Monitor de Ajedrez Educativo
