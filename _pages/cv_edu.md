@@ -25,8 +25,10 @@ Se muestran los más recientes.
 - Autolesiones y pensamientos suicidas: prevenir, detectar y actuar. Dr. José Cervera Martínez.
 - Prevención de riesgos laborales en personal docente. Quirón Prevención
 - Cómo salvar vidas en centros educativos
+- Educación mediática en el aula
 - Ajedrez y matemáticas: del tablero a la vida del jugador profesional - Pepe Cuenca
 - Ciclo de Ajedrez Educativo para Docentes y Educadores (Nivel II): Monitor de Ajedrez Educativo
+- Usos de la IA en la investigación educativa: comportamiento ético y responsable
 - Introducción a git
 - Inteligencia Artificial en Educación: ChatGPT y otros recursos para la Inclusión Digital
 - Metodologías inclusivas y su aplicación en el aula basada en la LOMLOE y en el Diseño Universal para el Aprendizaje (DUA)
