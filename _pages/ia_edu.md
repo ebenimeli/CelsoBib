@@ -16,6 +16,20 @@ A lo largo de la formación se muestra cómo la IA puede ayudar a preparar el cu
 
 También se abordan recursos como apuntes, presentaciones, infografías, vídeos, podcasts, cuestionarios interactivos y documentos de aula, así como el uso de la IA en evaluación, protección de datos, rúbricas, personalización y calificación responsable.
 
+## Artículos y recursos sobre inteligencia artificial y educación
+
+- [El cuaderno de Ada](https://elcuadernodeada.substack.com/p/ada-lovelace-una-mirada-al-futuro). Tecnología educativa, competencia digital e inteligencia artificial · #1
+- [La inteligencia artificial quiere quitarnos trabajo, no el trabajo](https://elcuadernodeada.substack.com/p/la-inteligencia-artificial-quiere). IA y educación: una mirada práctica sobre cómo la inteligencia artificial puede ayudarnos a enseñar mejor, trabajar con más criterio y reducir carga innecesaria · #2
+- [Ada Lovelace: una mirada al futuro digital desde el siglo XIX](https://elcuadernodeada.substack.com/p/ada-lovelace-una-mirada-al-futuro). De la máquina analítica a la inteligencia artificial generativa: una mirada a la figura de Ada y una colección de prompts para un viaje al presente · #3
+
+## Blogs, boletines y canales
+
+- [El cuaderno de Ada](https://elcuadernodeada.substack.com/)
+- [Ocho en punto](https://www.ochoenpunto.com/)
+- [Esfera TIC](https://www.esferatic.com/)
+- [La ventana digital](https://ebenimeli.substack.com/)
+- [Notas al vuelo](https://notasalvuelo.substack.com/)
+
 ## Selección de herramientas y guías
 
 - IA Generativas · [ChatGPT](https://chatgpt.com/) · [Claude](https://claude.ai/) · [Gemini](https://gemini.google.com/) · [NotebookLM](https://notebooklm.google.com/) · [HeyGen](https://www.heygen.com/)
@@ -24,10 +38,3 @@ También se abordan recursos como apuntes, presentaciones, infografías, vídeos
 - [Asistente para observaciones del alumno](https://www.esferatic.com/obs/)
 - [Herramienta para organizar listas y grupos](https://www.ebenimeli.org/txtlab/#tblists)
 - [MarcelinoHoy (Bot)](https://www.ebenimeli.org/pages/marcelinobot.html)
-
-## Blogs, boletines y canales
-
-- [Ocho en punto](https://www.ochoenpunto.com/)
-- [Esfera TIC](https://www.esferatic.com/)
-- [La ventana digital](https://ebenimeli.substack.com/)
-- [Notas al vuelo](https://notasalvuelo.substack.com/)
