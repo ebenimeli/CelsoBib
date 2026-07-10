@@ -20,7 +20,7 @@ description: "Curriculum Vitae · Formación académica y cursos"
 
 Se muestran los más recientes.
 
-- Plataforma Globaleduca
+- Introducción a la plataforma digital Globaleduca para docentes
 - Autolesiones y pensamientos suicidas: prevenir, detectar y actuar. Dr. José Cervera Martínez.
 - Prevención de riesgos laborales en personal docente. Quirón Prevención
 - Cómo salvar vidas en centros educativos
