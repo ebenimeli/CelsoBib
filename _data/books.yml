@@ -1,3 +1,18 @@
+- title: La tabla de Flandes
+  author: Arturo Pérez-Reverte
+  link: https://amzn.to/4vqolRi
+  image:
+  description:
+  genre: [novela]
+  completed: 
+  onpage: 100
+  pages: 412
+  synopsis: "Un enigma del pasado y un misterio del presente se unen en un apasionante juego de trampas. A finales del siglo XV un viejo maestro flamenco introduce en uno de sus cuadros, en forma de partida de ajedrez, la clave de un secreto que pudo cambiar la historia de Europa. Cinco siglos después, una joven restauradora de arte, un anticuario homosexual y un excéntrico jugador de ajedrez unen sus fuerzas para tratar de resolver el enigma. La investigación les conducirá a través de una apasionante pesquisa en la que los movimientos del juego irán abriendo las puertas de un misterio que acabará por envolver a todos sus protagonistas. La tabla de Flandes es un apasionante juego de trampas e inversiones -pintura, música, literatura, historia, lógica matemática- que Arturo Pérez-Reverte encaja con diabólica destreza."
+  cover: "tabla_flandes.jpg"
+  highlight: "yes"
+  #updated: "28 oct."
+  rating: 
+
 - title: "Antiguo Egipto: Introducción a su historia y cultura"
   author: Salima Ikran
   link: https://amzn.to/4rizO4h
@@ -41,7 +56,7 @@ En busca del origen del lenguaje es el libro definitivo para entender cómo se o
   cover: "origenlenguaje.jpeg"
   onpage: 75
   pages: 400
-  highlight: yes
+  highlight: no
 
 - title: "Nexus: Una breve historia de las redes de información desde la Edad de Piedra hasta la IA"
   author: Yuval Noah Harari 
