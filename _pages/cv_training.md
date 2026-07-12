@@ -4,7 +4,9 @@ title: "📚 Oferta formativa"
 description: "CV · Cursos y talleres"
 ---
 
-En esta sección se presenta la oferta formativa de cursos y talleres que imparto.
+En esta sección presento la oferta formativa de **cursos y talleres** que imparto. Si estás en interesado en alguno de ellos, puedes ponerte en **contacto** conmigo a través del [formulario de contacto](/contact/).
+
+---
 
 ## 🤖 Inteligencia artificial aplicada a la práctica docente
 
@@ -30,7 +32,7 @@ La formación también muestra cómo trasladar estos aprendizajes al aula median
 
 ---
 
-## 🕣 Gestión del tiempo
+## 🕣 Gestión del tiempo: estrategias, técnicas y herramientas para una organización efectiva
 
 [![image](/assets/images/pages/cv_training/curso_gestion_tiempo_ebenimeli_h.png)]()
 
