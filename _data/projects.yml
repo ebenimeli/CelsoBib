@@ -1,9 +1,9 @@
-- date: 10/05/2026
+- date: 18/07/2026
   write_log: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-  book_words: 12072
-  day: Sun
-
-- date: 09/05/2026
-  write_log: 'Recupero mi proyecto en Scrivener. Cuento con borradores y notas.Es un buen punto de partida para retomar la escritura.'
-  book_words: 321
+  book_words: 4680
   day: Sat
+
+- date: 17/07/2026
+  write_log: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  book_words: 0
+  day: Fri
