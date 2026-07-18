@@ -1,9 +1,4 @@
 - date: 18/07/2026
-  write_log: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  write_log: 'Acabo de recopilar algunas páginas.'
   book_words: 4680
   day: Sat
-
-- date: 17/07/2026
-  write_log: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-  book_words: 0
-  day: Fri
