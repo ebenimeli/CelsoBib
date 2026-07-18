@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "📓 En proceso"
+title: "📓 Manuscrito"
 description: "En proceso"
 ---
 
