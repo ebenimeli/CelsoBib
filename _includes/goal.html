@@ -91,10 +91,14 @@ Tomamos el número total de palabras del registro más reciente
   <strong>Día {{ day_number }}.</strong>
   {{ log }}
 
+    {%- comment -%}
+      log_date eliminado
+    {%- endcomment -%}
+
   {% if diff_words > 0 %}
-    (+{{ diff_words }} palabras · {{ log_date }})
+    (+{{ diff_words }} palabras)
   {% elsif diff_words < 0 %}
-    ({{ diff_words }} palabras · {{ log_date }})
+    ({{ diff_words }} palabras)
   {% else %}
     (0 palabras · {{ log_date }})
   {% endif %}
