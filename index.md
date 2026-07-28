@@ -10,7 +10,7 @@ layout: idx
 
 Esta es una web personal, un **cajón de sastre** donde conviven mis intereses [personales](/pages/me.html) y [profesionales](/pages/cv_topics.html). Soy Enrique, [ingeniero en **Informática**](pages/cv_edu.html) y [**profesor**](pages/cv_work.html) de Secundaria. En mis ratos libres, suelo [leer](pages/read_fav.html), [escribir](pages/write.html) y experimentar con proyectos digitales.
 
-## 🌱 Aquí y ahora
+## 🌱 Proyectos
 
 Aquí encontrarás [mi blog](/blog/) más personal, junto a enlaces a otros espacios donde [escribo](pages/write.html) con frecuencia: [boletines](https://substack.com/@ebenimeli), notas y proyectos en torno a [educación](https://www.esferatic.com/), [organización](https://www.ochoenpunto.com/), tecnología y cultura digital. Si te apetece, empieza por las [_Notas al vuelo_](pages/write_alvuelo.html) o visita mi [_/now page_](/now/) donde cuento en qué ando últimamente.
 
