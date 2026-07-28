@@ -17,9 +17,3 @@ Esta es una [_now page_](https://nownownow.com/about), y si tienes una web, debe
 - 🌱 Sigo actualizando esta [_now page_](https://nownownow.com/about) que estás leyendo. [Escribí una nota](https://notasalvuelo.substack.com/publish/post/174006754) sobre esta iniciativa.
 
 <span class="note">🕒 Última actualización: {{ page.last_modified_at | date: "%d/%m/%Y %H:%M" }}</span>
-
-<!--
-📍 Viviendo en **España**
-
-> «Viaja. Tanto como puedas. Tan lejos como puedas. Tanto tiempo como puedas. La vida no está hecha para vivirla en un solo lugar.»
--->
