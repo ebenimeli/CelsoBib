@@ -6,22 +6,6 @@
   text: "El robo de Villena #status"
   link: "https://go.ivoox.com/rf/179663132"
   cat: 'podcast'
-- timestamp: 2026-08-28 22:49
-  text: "El robo de Villena #status"
-  link: "https://go.ivoox.com/rf/179663132"
-  cat: 'podcast'
-- timestamp: 2026-08-28 22:49
-  text: "El robo de Villena #status"
-  link: "https://go.ivoox.com/rf/179663132"
-  cat: 'podcast'
-- timestamp: 2026-08-28 22:49
-  text: "El robo de Villena #status"
-  link: "https://go.ivoox.com/rf/179663132"
-  cat: 'podcast'
-- timestamp: 2026-08-28 22:49
-  text: "El robo de Villena #status"
-  link: "https://go.ivoox.com/rf/179663132"
-  cat: 'podcast'
 - timestamp: 2026-08-28 14:04
   text: "Viernes."
   link: "https://mastodon.social/tags/gm"
@@ -38,6 +22,10 @@
   text: "Más de 200 personas evacuadas en El Saler por un incendio forestal junto al parque natural de La Albufera #urgent"
   link: "https://www.elmundo.es/comunidad-valenciana/2026/08/27/6a902273e9cf4afb558b45bd.html"
   cat: 'news'
+- timestamp: 2026-08-27 07:04
+  text: "Jueves."
+  link: ""
+  cat: 'gm'
 - timestamp: 2026-08-26 19:34
   text: "Una colosal catástrofe natural devasta la frontera entre Nepal y China #urgent"
   link: "https://www.abc.es/internacional/colosal-catastrofe-natural-devasta-frontera-nepal-china-20260826190558-nt.html"
