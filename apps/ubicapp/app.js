@@ -1,1 +1,4711 @@
-(()=>{"use strict";const e="app-spaces-state-v2",t="app-spaces-state-v1",n=112,a="manual",o="individual",r=2e3,s=2e3,i=Object.freeze({manual:"Manual",individual:"Individual",pairs:"2 mesas juntas",trios:"3 mesas juntas","two-three-two":"Esquema 2-3-2",circular:"Circular",team4:"Equipos x4",team5:"Equipos x5",team6:"Equipos x6","cooperative-abbc":"Cooperativo ABBC"}),l=["de Cervantes Saavedra, Miguel / L","García Lorca, Federico / L","Pérez Galdós, Benito / L","Pardo Bazán, Emilia / L","Machado Ruiz, Antonio / L","Ramón y Cajal, Santiago / C","Ochoa de Albornoz, Severo / C","Salas Falgueras, Margarita / C","Torres Quevedo, Leonardo / C","de la Cierva Codorníu, Juan / C","Ruiz Picasso, Pablo / A","Dalí Domènech, Salvador / A","de Goya y Lucientes, Francisco / A","Sorolla Bastida, Joaquín / A","de Quevedo Villegas, Francisco / L","Campoamor Rodríguez, Clara / H","Hernández Gilabert, Miguel / L","Jiménez Mantecón, Juan Ramón / L","Delibes Setién, Miguel / L","Cela Trulock, Camilo José / L","Ortega y Gasset, José / P","Unamuno Jugo, Miguel de / P","Peral Caballero, Isaac / C","Marañón Posadillo, Gregorio / C","Rodrigo Vidre, Joaquín / M","Albéniz Pascual, Isaac / M","Buñuel Portolés, Luis / M","García Berlanga, Luis / M","Falla Matheu, Manuel de / M","Segovia Torres, Andrés / M"],c=["# Formato: Apellidos, Nombre / grupo","# Grupos: L=Literatura, C=Ciencia, A=Arte, H=Historia, P=Pensamiento, M=Música","# Las letras pueden utilizarse en las restricciones para referirse a grupos de personas.","#"],u=Object.freeze(["B","A","B","C","B","A","B","C","B","A","B","C","B","A","B","C","B","A","B","C","B","A","B","C","B","A","B","C","B","A"]),d=l.map((e,t)=>`${e.replace(/\s*\/\s*[A-Za-z]\s*$/,"")} / ${u[t]}`),p=["# Ejemplo para distribuciones cooperativas","# Grupos: A, B y C","# Distribución: A=8, B=15, C=7","# Adecuado para probar el esquema Cooperativo ABBC","#"],m=["# Restricciones individuales","1x2","3-4","5--6","","# Restricciones entre grupos","AxB","B-C","A--C","","# Restricciones dentro del mismo grupo","AxA","B-B","C--C","","# Posición","F: 7","B: 8","L: 9","R: 10"].join("\n"),h=Array.from({length:30},()=>"Apellidos, Nombre"),g=Object.freeze({far:10,together:12,near:5,front:4,back:4,left:4,right:4}),f=Object.freeze({far:10,together:12,near:5,front:4,back:4,left:4,right:4,orderedBack:6}),b=Object.freeze({composition:28,pattern:3}),v=Object.freeze({A:"#cfe8d5",B:"#f7d7b5",C:"#cfe0f5",D:"#dfd3f2",E:"#f4e7a8",F:"#f3c7c3",G:"#cbe7e4",H:"#edd1e2",I:"#d9e6b8",J:"#f0d9c5",K:"#cbdcf0",L:"#e2d5c5",M:"#c9e2c8",N:"#f0c8ae",O:"#c8d8e8",P:"#d9c6e8",Q:"#eadf9d",R:"#e8bdb8",S:"#bfe0dc",T:"#e5c4d9",U:"#d1dfad",V:"#e8d0bb",W:"#bed4ec",X:"#d8cdbb",Y:"#bfd9bf",Z:"#e9c09f"}),y=e=>document.querySelector(e),x={classroom:y("#classroom"),addTableBtn:y("#addTableBtn"),deleteTableBtn:y("#deleteTableBtn"),increaseSizeBtn:y("#increaseSizeBtn"),decreaseSizeBtn:y("#decreaseSizeBtn"),layoutSelect:y("#layoutSelect"),clearTablesBtn:y("#clearTablesBtn"),tableCountInput:y("#tableCountInput"),addTablesBtn:y("#addTablesBtn"),rotateTableBtn:y("#rotateTableBtn"),lockTableBtn:y("#lockTableBtn"),addZoneBtn:y("#addZoneBtn"),spaceNameInput:y("#spaceNameInput"),spaceNameDisplay:y("#spaceNameDisplay"),classroomWrap:y("#classroomWrap"),personSearchInput:y("#personSearchInput"),peopleListBtn:y("#peopleListBtn"),viewExampleBtn:y("#viewExampleBtn"),outputBar:y("#outputBar"),toggleOutputBtn:y("#toggleOutputBtn"),outputContent:y("#outputContent"),calculationProgress:y("#calculationProgress"),progressLabel:y("#progressLabel"),progressPercent:y("#progressPercent"),progressTrack:y("#progressTrack"),progressFill:y("#progressFill"),tableTooltip:y("#tableTooltip"),downloadPdfBtn:y("#downloadPdfBtn"),themeSelect:y("#themeSelect"),resetBtn:y("#resetBtn"),organizeBtn:y("#organizeBtn"),randomizeBtn:y("#randomizeBtn"),generateAlternativesCheckbox:y("#generateAlternativesCheckbox"),alternativesBar:y("#alternativesBar"),alternativesButtons:y("#alternativesButtons"),exampleSelect:y("#exampleSelect"),clearPeopleBtn:y("#clearPeopleBtn"),viewSpaceBtn:y("#viewSpaceBtn"),peoplePanel:y("#peoplePanel"),studentsInput:y("#studentsInput"),studentErrors:y("#studentErrors"),constraintsInput:y("#constraintsInput"),studentCountBadge:y("#studentCountBadge"),constraintCountBadge:y("#constraintCountBadge"),constraintErrors:y("#constraintErrors"),metrics:y("#metrics"),message:y("#message"),solutionPanel:y("#solutionPanel"),saveStatus:y("#saveStatus"),helpOpenBtn:y("#helpOpenBtn"),helpOpenFooterBtn:y("#helpOpenFooterBtn"),helpModal:y("#helpModal"),helpModalDialog:y("#helpModalDialog"),helpCloseBtn:y("#helpCloseBtn"),helpFrame:y("#helpFrame"),splashModal:y("#splashModal"),splashDialog:y("#splashDialog"),splashProgressTrack:y("#splashProgressTrack"),splashProgressFill:y("#splashProgressFill"),appShell:document.querySelector("main.app-shell"),topInfoBar:document.querySelector("body > .info-bar:not(.site-footer)"),siteFooter:document.querySelector("body > .site-footer")},B={tables:[],tableWidth:n,tableHeight:54,theme:"light",spaceLayout:a,layoutActive:!1,lastSolution:null,dragging:null,marquee:null,selectedTableId:null,selectedTableIds:new Set,outputCollapsed:!1,saveTimer:null,tooltipTimer:null,progressSequence:0,progressSession:null,scrollTimer:null,spaceName:"",cooperativeBlockPositions:[],zones:[],selectedZoneId:null,zoneMode:!1,zoneDraft:null,zoneDragging:null,examplePreset:"custom",helpModalOpen:!1,helpReturnFocus:null,alternatives:[],alternativeSlotPositions:null,selectedAlternativeIndex:-1,alternativeContext:null};function M(e,t,n){return Math.max(t,Math.min(n,e))}function w(){B.scrollTimer&&(clearTimeout(B.scrollTimer),B.scrollTimer=null)}function $(e=0){w(),B.scrollTimer=setTimeout(()=>{B.scrollTimer=null,window.scrollY<=1||requestAnimationFrame(()=>{requestAnimationFrame(()=>{window.scrollTo({top:0,behavior:"smooth"})})})},Math.max(0,Number(e)||0))}function C(e){w();const t=B.progressSession;t&&t.token===e?t.onHidden.push(()=>$(s)):$(s)}function S(){const e=String(B.spaceName||"").trim();x.spaceNameInput&&x.spaceNameInput.value!==B.spaceName&&(x.spaceNameInput.value=B.spaceName),x.spaceNameDisplay&&(x.spaceNameDisplay.textContent=e,x.spaceNameDisplay.hidden=!e),x.classroomWrap&&x.classroomWrap.classList.toggle("has-space-name",Boolean(e))}function A(){B.spaceName=x.spaceNameInput?.value||"",S(),un()}function N(e){[x.topInfoBar,x.appShell,x.siteFooter].forEach(t=>{t&&(t.inert=e)}),document.body.classList.toggle("splash-modal-open",e)}function L(){return Boolean(x.generateAlternativesCheckbox?.checked)}function I(){return"manual"!==B.spaceLayout}function T(){return B.tables.map(e=>({xNorm:e.xNorm,yNorm:e.yNorm,rotation:Z(e.rotation)}))}function E(e){return Array.isArray(e)?e.join(","):""}function k(e,t,n=null){if(!Array.isArray(e)||!Array.isArray(t)||e.length!==t.length||!e.length)return 1;const a=Array.isArray(n)&&n.length?n:Array.from({length:e.length},(e,t)=>t);let o=0;return a.forEach(n=>{e[n]!==t[n]&&o++}),a.length?o/a.length:0}function z(e,t,n){if(!e||!Array.isArray(e.assignment))return null;if(!t?.length)return null;const a=Mt(e.assignment,t,n);return a.maxPossible?Math.max(0,100*(1-a.total/a.maxPossible)):100}function P(e,t,n){const a=wt(n),o=[],r=new Set;if([...e].filter(e=>e?.assignment).sort((e,t)=>(e.score??1/0)-(t.score??1/0)).forEach(e=>{const t=E(e.assignment);r.has(t)||(r.add(t),o.push({...e,assignment:e.assignment.slice()}))}),o.length<=t)return o;const s=[o[0]],i=[.25,.2,.12,.01];for(const e of i){for(const n of o){if(s.length>=t)break;if(s.includes(n))continue;s.every(t=>k(n.assignment,t.assignment,a.movableStudents)>=e)&&s.push(n)}if(s.length>=t)break}return s.slice(0,t)}function F(){if(x.alternativesBar&&x.alternativesButtons){if(!B.alternatives.length)return x.alternativesBar.hidden=!0,void(x.alternativesButtons.innerHTML="");x.alternativesBar.hidden=!1,x.alternativesButtons.innerHTML="",B.alternatives.forEach((e,t)=>{const n=document.createElement("button");n.type="button",n.className="alternative-btn"+(t===B.selectedAlternativeIndex?" active":"");const a=String.fromCharCode(65+t),o=Number.isFinite(e.quality)?` · ${r=e.quality,Number(r).toLocaleString("es-ES",{minimumFractionDigits:1,maximumFractionDigits:1})} %`:"";var r;n.textContent=`${a}${o}`,n.setAttribute("aria-pressed",String(t===B.selectedAlternativeIndex)),n.setAttribute("aria-label",`Alternativa ${a}${o}`),n.addEventListener("click",()=>H(t)),x.alternativesButtons.appendChild(n)})}}function D(e={}){const t=B.alternatives.length>0;return B.alternatives=[],B.alternativeSlotPositions=null,B.selectedAlternativeIndex=-1,B.alternativeContext=null,F(),e.uncheck&&x.generateAlternativesCheckbox&&(x.generateAlternativesCheckbox.checked=!1),t}function q(e,t,n){B.alternatives=e.map(e=>({...e,assignment:e.assignment.slice()})),B.alternativeSlotPositions=t.map(e=>({...e})),B.alternativeContext=n||null,B.selectedAlternativeIndex=B.alternatives.length?0:-1,F()}function H(e){const t=B.alternatives[e],n=B.alternativeContext;t&&n&&B.alternativeSlotPositions&&(B.selectedAlternativeIndex=e,function(e){if(!Array.isArray(e))return;const t=I();B.tables.forEach((n,a)=>{const o=e[a];o&&(n.xNorm=o.xNorm,n.yNorm=o.yNorm,t&&null!=o.rotation&&(n.rotation=Z(o.rotation)))})}(B.alternativeSlotPositions),function(e){const t=B.alternativeContext;if(t&&e){if("random"===t.mode)return Gt(),void Ht();if("cooperative"===t.mode)return Gt(),void zt(xe(t.students,e.assignment));Wt(e,t.constraints,t.distanceMatrix),qt(t.students,t.constraints,e,t.distanceMatrix,t.contradictions||[])}}(t),It(t.assignment,n.students.length,B.alternativeSlotPositions),F(),B.layoutActive=!1,un())}function W(e,t){return e.left<t.right&&e.right>t.left&&e.top<t.bottom&&e.bottom>t.top}function G(e,t=x.classroom.clientWidth,n=x.classroom.clientHeight){const a=Math.max(1,t),o=Math.max(1,n),r=M(e.xNorm*a,0,a),s=M(e.yNorm*o,0,o),i=M(e.widthNorm*a,0,a-r),l=M(e.heightNorm*o,0,o-s);return{left:r,top:s,width:i,height:l,right:r+i,bottom:s+l}}function R(e,t,n,a=B.tableWidth,o=B.tableHeight){const r=Z(e?.rotation),s=90===r||270===r,i=(s?o:a)/2,l=(s?a:o)/2;return{left:t-i,top:n-l,right:t+i,bottom:n+l,width:2*i,height:2*l}}function j(e,t=null){return B.zones.some(n=>n.id!==t&&W(e,G(n)))}function X(e,t,n,a=B.tableWidth,o=B.tableHeight){return j(R(e,t,n,a,o))}function O(e){return B.tables.some(t=>{const n=we(t);return W(e,R(t,n.cx,n.cy))})}function Y(){let e=1;const t=new Set(B.zones.map(e=>e.id));for(;t.has(e);)e++;return e}function Z(e){const t=((Number(e)||0)%360+360)%360,n=90*Math.round(t/90);return 360===n?0:n}function U(e){const t=Z(e?.rotation),n=90===t||270===t;return{halfW:(n?B.tableHeight:B.tableWidth)/2,halfH:(n?B.tableWidth:B.tableHeight)/2}}function J(e){const t=e.slice();for(let e=t.length-1;e>0;e--){const n=Math.floor(Math.random()*(e+1));[t[e],t[n]]=[t[n],t[e]]}return t}function Q(e){return e.replace(/^\s*\d+\s*[.)]\s*/,"").trim()}function V(e){let t=0;return e.split(/\r?\n/).map(e=>{const n=e.trim();return n?n.startsWith("#")?e:(t+=1,`${t}. ${Q(e)}`):""}).join("\n")}function K(e,t){return[...t,"",...e.map((e,t)=>`${t+1}. ${e}`)].join("\n")}function _(){return K(l,c)}function ee(){return K(d,p)}function te(){return h.map((e,t)=>`${t+1}. ${e}`).join("\n")}function ne(e){return String(e||"").replace(/\r\n/g,"\n").trimEnd()}function ae(e=x.studentsInput?.value||""){const t=ne(e);return t===ne(_())?"characters":t===ne(ee())?"cooperative":t===ne(te())?"simple":"custom"}function oe(){x.exampleSelect&&(B.examplePreset=ae(),x.exampleSelect.value=B.examplePreset)}function re(e){const t=function(e){return"characters"===e?_():"cooperative"===e?ee():"simple"===e?te():null}(e);if(!t)return void oe();if("custom"===ae()&&!window.confirm("¿Quieres sustituir la lista actual por el ejemplo seleccionado?"))return B.examplePreset="custom",void(x.exampleSelect.value="custom");D(),x.studentsInput.value=t,B.examplePreset=e,x.exampleSelect.value=e,B.lastSolution=null,ze(),Gt(),tn(),zt('<div class="output-summary-head"><strong>Ejemplo cargado.</strong></div><div class="output-note">Se ha cargado un nuevo ejemplo. Revisa las restricciones relacionadas con grupos.</div>'),un()}function se(){window.confirm("¿Quieres borrar completamente la lista de personas?")&&(D(),x.studentsInput.value="",B.examplePreset="custom",x.exampleSelect&&(x.exampleSelect.value="custom"),B.lastSolution=null,ze(),Gt(),tn(),zt('<div class="output-summary-head"><strong>Lista de personas borrada.</strong></div><div class="output-note">Las mesas, las restricciones y las zonas protegidas se han conservado.</div>'),un())}function ie(){const e=[];return x.studentsInput.value.split(/\r?\n/).forEach((t,n)=>{const a=t.trim();if(!a||a.startsWith("#"))return;const o=Q(t);let r=o,s=null,i=null;if(o.includes("/")){const e=o.match(/^(.*?)\s*\/\s*([A-Za-z])\s*$/);e?(r=e[1].trim(),s=e[2].toUpperCase()):(r=o.split("/")[0].trim(),i=`Línea ${n+1}: la etiqueta de grupo debe ser una única letra de A a Z.`)}const l=r.indexOf(",");let c="",u=r;l>=0&&(c=r.slice(0,l).trim(),u=r.slice(l+1).trim());const d=c.split(/\s+/).filter(Boolean).slice(0,2).map(e=>`${e.charAt(0).toLocaleUpperCase("es")}.`).join(""),p=d?`${u} ${d}`:u,m=e.length+1;e.push({id:m,raw:o,fullName:r,firstName:u,surnames:c,displayName:p,group:s,groupError:i,sourceLine:n+1})}),e}function le(e){return e.map(e=>e.groupError).filter(Boolean)}function ce(){const e=V(x.studentsInput.value);e!==x.studentsInput.value&&(x.studentsInput.value=e,gn())}function ue(e){const t=Array.isArray(e)?e:null,n=t?t.length:Number(e)||0,a=t?function(e){const t=new Map;return e.forEach(e=>{e.group&&(t.has(e.group)||t.set(e.group,[]),t.get(e.group).push(e.id))}),t}(t):new Map,o=new Set(a.keys()),r=x.constraintsInput.value.split(/\r?\n/),s=[],i=[],l=new Set,c=(e,t,n)=>{const a=e.filter(e=>!o.has(e));return!a.length||(i.push(`Línea ${t+1}: grupo(s) inexistente(s): ${[...new Set(a)].join(", ")}.`),!1)};return r.forEach((e,t)=>{const o=e.trim();if(!o||o.startsWith("#"))return;let r,u=null;if(r=o.match(/^([A-Za-z])\s*x\s*([A-Za-z])$/)){const e=r[1].toUpperCase(),n=r[2].toUpperCase();if(!c([e,n],t))return;u={type:"groupFar",groupA:e,groupB:n,membersA:a.get(e),membersB:a.get(n),raw:o,line:t+1}}else if(r=o.match(/^([A-Za-z])\s*--\s*([A-Za-z])$/)){const e=r[1].toUpperCase(),n=r[2].toUpperCase();if(!c([e,n],t))return;u={type:"groupNear",groupA:e,groupB:n,membersA:a.get(e),membersB:a.get(n),raw:o,line:t+1}}else if(r=o.match(/^([A-Za-z])\s*-\s*([A-Za-z])$/)){const e=r[1].toUpperCase(),n=r[2].toUpperCase();if(!c([e,n],t))return;u={type:"groupTogether",groupA:e,groupB:n,membersA:a.get(e),membersB:a.get(n),raw:o,line:t+1}}else if(r=o.match(/^(\d+)\s*x\s*(\d+)$/i))u={type:"far",a:Number(r[1]),b:Number(r[2]),raw:o,line:t+1};else if(r=o.match(/^(\d+)\s*--\s*(\d+)$/))u={type:"near",a:Number(r[1]),b:Number(r[2]),raw:o,line:t+1};else if(r=o.match(/^(\d+)\s*-\s*(\d+)$/))u={type:"together",a:Number(r[1]),b:Number(r[2]),raw:o,line:t+1};else if(r=o.match(/^([LR])\s*:\s*(.+)$/i)){const e=r[2].split(",").map(e=>e.trim()).filter(Boolean);if(!e.length)return void i.push(`Línea ${t+1}: lista inválida en “${o}”.`);const s=[],l=[];for(const n of e)if(/^\d+$/.test(n))s.push(Number(n));else{if(!/^[A-Za-z]$/.test(n))return void i.push(`Línea ${t+1}: usa solo números de personas o letras de grupo en “${o}”.`);l.push(n.toUpperCase())}const d=s.length!==new Set(s).size,p=l.length!==new Set(l).size;if(d||p)return void i.push(`Línea ${t+1}: hay referencias repetidas en “${o}”.`);if(!c(l,t))return;const m=s.filter(e=>e<1||e>n);if(m.length)return void i.push(`Línea ${t+1}: persona(s) inexistente(s): ${[...new Set(m)].join(", ")}.`);const h=l.flatMap(e=>a.get(e)||[]);u={type:"L"===r[1].toUpperCase()?"left":"right",ids:s,groups:l,memberIds:[...new Set([...s,...h])],raw:o,line:t+1}}else{if(!(r=o.match(/^([FB])\s*:\s*(.+)$/i)))return void i.push(`Línea ${t+1}: sintaxis no reconocida “${o}”.`);{const e=r[2].split(",").map(e=>e.trim()).filter(Boolean);if(!e.length)return void i.push(`Línea ${t+1}: lista inválida en “${o}”.`);const n=e.every(e=>/^\d+$/.test(e)),s=e.every(e=>/^[A-Za-z]$/.test(e));if(n){const n=e.map(Number);u={type:"F"===r[1].toUpperCase()?"front":"back",ids:n,raw:o,line:t+1}}else{if(!s)return void i.push(`Línea ${t+1}: usa solo números de personas o solo letras de grupo en “${o}”.`);{const n=e.map(e=>e.toUpperCase());if(new Set(n).size!==n.length)return void i.push(`Línea ${t+1}: hay grupos repetidos en “${o}”.`);if(!c(n,t))return;u={type:"F"===r[1].toUpperCase()?"groupFront":"groupBack",groups:n,groupMembers:n.map(e=>a.get(e)),memberIds:[...new Set(n.flatMap(e=>a.get(e)))],raw:o,line:t+1}}}}}if(u.ids){const e=u.ids.filter(e=>e<1||e>n);if(e.length)return void i.push(`Línea ${t+1}: persona(s) inexistente(s): ${[...new Set(e)].join(", ")}.`)}else if("a"in u){const e=[u.a,u.b].filter(e=>e<1||e>n);if(e.length)return void i.push(`Línea ${t+1}: persona(s) inexistente(s): ${[...new Set(e)].join(", ")}.`);if(u.a===u.b)return void i.push(`Línea ${t+1}: una restricción binaria necesita dos personas distintas.`)}const d=function(e){if("left"===e.type||"right"===e.type)return`${e.type}:ids=${e.ids.slice().sort((e,t)=>e-t).join(",")};groups=${e.groups.slice().sort().join(",")}`;if("groupFront"===e.type)return`${e.type}:${e.groups.slice().sort().join(",")}`;if("groupBack"===e.type)return`${e.type}:${e.groups.join(",")}`;if("groupFar"===e.type||"groupTogether"===e.type||"groupNear"===e.type){const t=[e.groupA,e.groupB].sort();return`${e.type}:${t[0]}:${t[1]}`}if(e.ids)return`${e.type}:${e.ids.slice().sort((e,t)=>e-t).join(",")}`;const t=[e.a,e.b].sort((e,t)=>e-t);return`${e.type}:${t[0]}:${t[1]}`}(u);l.has(d)?i.push(`Línea ${t+1}: restricción duplicada “${o}”.`):(l.add(d),s.push(u))}),{constraints:s,errors:i}}function de(e,t,n,a,o){const{halfW:r,halfH:s}=U(e),i=M(t,r,Math.max(r,a-r)),l=M(n,s,Math.max(s,o-s));e.xNorm=a?i/a:.5,e.yNorm=o?l/o:.5}function pe(e,t,n=1,a=1){const o=e.map((e,n)=>({table:e,col:n%t,row:Math.floor(n/t)})),r=o.length?Math.max(...o.map(e=>e.col))+1:1,s=o.length?Math.max(...o.map(e=>e.row))+1:1;return{placements:o,width:r*B.tableWidth+Math.max(0,r-1)*n,height:s*B.tableHeight+Math.max(0,s-1)*a,innerGapX:n,innerGapY:a}}function me(e,t){const n=[];for(let a=0;a<e.length;a+=t)n.push(e.slice(a,a+t));return n}function he(e,t,n){const a=[];let o=[],r=0;for(const s of e){const e=o.length?r+n+s.width:s.width;o.length&&e>t?(a.push(o),o=[s],r=s.width):(o.push(s),r=e)}return o.length&&a.push(o),a}function ge(e,t){return e.map(e=>({groups:e,width:e.reduce((e,t)=>e+t.width,0)+Math.max(0,e.length-1)*t,height:Math.max(...e.map(e=>e.height),B.tableHeight)}))}function fe(e,t,n){return e.placements.map(a=>{const o=t+(Number.isFinite(a.centerX)?a.centerX:a.col*(B.tableWidth+e.innerGapX)+B.tableWidth/2),r=n+(Number.isFinite(a.centerY)?a.centerY:a.row*(B.tableHeight+e.innerGapY)+B.tableHeight/2);return{table:a.table,cx:o,cy:r,rect:R(a.table,o,r)}})}function be(e,t,n,a,o,r=[]){const s=fe(e,t,n);for(const e of s){const t=e.rect;if(t.left<0||t.top<0||t.right>a||t.bottom>o)return!1;if(j(t))return!1;if(r.some(e=>W(t,e)))return!1}return!0}function ve(e,t,n,a,o,r=[]){if(be(e,t,n,a,o,r))return{left:t,top:n};const s=Math.max(0,a-e.width),i=Math.max(0,o-e.height),l=[];for(let e=0;e<=s+.1;e+=10)l.push(Math.min(e,s));l.includes(s)||l.push(s),l.sort((e,n)=>Math.abs(e-t)-Math.abs(n-t));const c=[];for(let e=0;e<=i+.1;e+=10)c.push(Math.min(e,i));c.includes(i)||c.push(i),c.sort((e,t)=>(e>=n?0:1)-(t>=n?0:1)||Math.abs(e-n)-Math.abs(t-n));for(const t of c)for(const n of l)if(be(e,n,t,a,o,r))return{left:n,top:t};return null}function ye(e,t={}){const n=e.length;if(!n||n>B.tables.length)return null;const a=new Set(B.tables.map(e=>e.id));if(e.some(e=>!a.has(e.id)))return null;const o=yt();if(!o.length)return null;const r=wt(n),s=Array(n).fill(null),i=new Map;for(const[e,t]of r.fixedAssignments)s[e]=t,i.set(t,e);const l=new Set(r.movableStudents),c=new Set(r.availableSlots),u=new Map;if(e.forEach((e,t)=>{if(!l.has(t))return;const n=e.group||"";u.has(n)||u.set(n,[]),u.get(n).push(t)}),t.shufflePools)for(const[e,t]of u)u.set(e,J(t));const d=e=>{const t=u.get(e)||[];for(;t.length;){const e=t.shift();if(l.has(e))return l.delete(e),e}return null},p=["A","B","B","C"],m=o.map(t=>{const n={A:0,B:0,C:0};let a=!1,o=0;return t.forEach(t=>{const r=i.get(t);if(null==r)return;o++;const s=e[r]?.group;s in n?n[s]++:a=!0}),(n.A>1||n.B>2||n.C>1)&&(a=!0),{block:t,counts:n,incompatible:a,fixedCount:o}}).sort((e,t)=>Number(e.incompatible)-Number(t.incompatible)||t.fixedCount-e.fixedCount);m.forEach(e=>{if(e.incompatible)return!1;const t={A:1-e.counts.A,B:2-e.counts.B,C:1-e.counts.C};if(!(e=>["A","B","C"].every(t=>(u.get(t)||[]).reduce((e,t)=>e+Number(l.has(t)),0)>=e[t]))(t))return!1;const n=e.block.filter(e=>c.has(e));for(let n=0;n<e.block.length;n++){const a=e.block[n],o=p[n];if(!c.has(a)||t[o]<=0)continue;const r=d(o);null!=r&&(s[r]=a,c.delete(a),t[o]--)}for(const e of["A","B","C"])for(;t[e]>0;){const a=n.find(e=>c.has(e)),o=d(e);if(null==a||null==o)return!1;s[o]=a,c.delete(a),t[e]--}return!0});for(const e of m)for(let t=0;t<e.block.length;t++){const n=e.block[t];if(!c.has(n))continue;const a=d(p[t]);null!=a&&(s[a]=n,c.delete(n))}const h=[...l],g=[...c];return h.forEach((e,t)=>{const n=g[t];null!=n&&(s[e]=n,l.delete(e),c.delete(n))}),s.every(e=>null!=e)?s:null}function xe(e,t){const n=xt(e);if(!n||!t)return'<div class="output-summary-head"><strong>Esquema Cooperativo ABBC aplicado.</strong></div><div class="output-note">No hay suficientes datos para evaluar equipos A-B-B-C completos.</div>';const a=Bt(n,t),o=4*a.completeCount,r=Math.max(0,e.length-o),s=['<div class="output-summary-head"><strong>Esquema Cooperativo ABBC aplicado.</strong></div>',`<div class="output-note">${a.completeCount} equipo(s) completo(s) A-B-B-C${n.targetComplete?` de un máximo posible de ${n.targetComplete}`:""}.</div>`];return r&&s.push(`<div class="output-note">${r} persona(s) no forman parte de un equipo ABBC completo.</div>`),s.join("")}function Be(e={}){B.spaceLayout="manual",B.layoutActive=!1,x.layoutSelect&&(x.layoutSelect.value="manual"),e.save&&un()}function Me(e,t={}){const n=Object.keys(i).includes(e)?e:a;if("manual"===n)return D(),Be(),!1!==t.message&&Ut("Esquema “Manual” seleccionado. Las mesas no se han movido.","info"),void(!1!==t.save&&un());const o=B.tables.slice().sort((e,t)=>e.id-t.id);if(!o.length)return;D(),o.forEach(e=>{e.rotation=0});const r=new Map(o.filter(e=>e.locked).map(e=>[e.id,{xNorm:e.xNorm,yNorm:e.yNorm}]));B.spaceLayout=n,B.layoutActive=!0,x.layoutSelect&&(x.layoutSelect.value=n);let l=[];if("circular"===n)!function(e){const t=Math.max(1,x.classroom.clientWidth),n=Math.max(1,x.classroom.clientHeight),a=t/2,o=n/2,r=10,s=Math.max(B.tableWidth/2,t/2-B.tableWidth/2-24),i=Math.max(B.tableHeight/2,n/2-B.tableHeight/2-24),l=[],c=(a,o)=>{const s=R(e[Math.min(l.length,e.length-1)]||{rotation:0},a,o);return!(s.left<0||s.right>t||s.top<0||s.bottom>n)&&!j(s)&&l.every(e=>Math.abs(a-e.x)>=B.tableWidth+r||Math.abs(o-e.y)>=B.tableHeight+r)},u=[1,.86,.72,.58,.44,.3,.16];for(let t=0;t<u.length&&l.length<e.length;t++){const n=u[t],r=240,d=-Math.PI/2+(t%2?Math.PI/40:0);for(let t=0;t<r&&l.length<e.length;t++){const e=d+2*Math.PI*t/r,u=a+s*n*Math.cos(e),p=o+i*n*Math.sin(e);c(u,p)&&l.push({x:u,y:p})}}if(l.length<e.length){const u=B.tableWidth+r,d=B.tableHeight+r;for(let r=B.tableHeight/2+5;r<=n-B.tableHeight/2&&l.length<e.length;r+=d)for(let n=B.tableWidth/2+5;n<=t-B.tableWidth/2&&l.length<e.length;n+=u)Math.pow((n-a)/s,2)+Math.pow((r-o)/i,2)<=.92&&c(n,r)&&l.push({x:n,y:r})}if(l.length<e.length){const r=[],u=B.tableWidth+4,d=B.tableHeight+4;for(let e=B.tableHeight/2;e<=n-B.tableHeight/2;e+=d)for(let n=B.tableWidth/2;n<=t-B.tableWidth/2;n+=u)r.push({x:n,y:e});r.sort((e,t)=>Math.pow((e.x-a)/s,2)+Math.pow((e.y-o)/i,2)-(Math.pow((t.x-a)/s,2)+Math.pow((t.y-o)/i,2)));for(const t of r){if(l.length>=e.length)break;c(t.x,t.y)&&l.push(t)}}e.forEach((e,a)=>{const o=l[a];o&&de(e,o.x,o.y,t,n)})}(o),B.cooperativeBlockPositions=[];else{let e=[],t={};"individual"===n?(e=me(o,2).map(e=>pe(e,2,16,1)),t={groupGapX:48,minGroupGapX:8,rowGap:24,minRowGap:8}):"pairs"===n?(e=me(o,2).map(e=>pe(e,2,1,1)),t={groupGapX:40,minGroupGapX:12,rowGap:26,minRowGap:8}):"trios"===n?(e=me(o,3).map(e=>pe(e,3,1,1)),t={groupGapX:46,minGroupGapX:10,rowGap:24,minRowGap:6}):"two-three-two"===n?(e=function(e){const t=[];let n=0;for(;e.length-n>=7;)for(const a of[2,3,2])t.push(pe(e.slice(n,n+a),a,1,1)),n+=a;const a=e.length-n,o={1:[1],2:[2],3:[3],4:[2,2],5:[2,3],6:[3,3]};for(const r of o[a]||[])t.push(pe(e.slice(n,n+r),r,1,1)),n+=r;return t}(o),t={groupGapX:44,minGroupGapX:10,rowGap:24,minRowGap:6}):"team4"===n||"cooperative-abbc"===n?(e=me(o,4).map(e=>pe(e,2,1,1)),t={groupGapX:42,minGroupGapX:12,rowGap:34,minRowGap:8}):"team5"===n?(e=me(o,5).map(e=>function(e){if(e.forEach(e=>{e.rotation=0}),e.length<5)return pe(e,2,1,1);const t=2*B.tableWidth+1,n=2*B.tableHeight+1,a=e[4];a.rotation=90;const o=B.tableHeight,r=B.tableWidth,s=Math.max(n,r),i=(s-n)/2,l=e.slice(0,4).map((e,t)=>({table:e,centerX:t%2*(B.tableWidth+1)+B.tableWidth/2,centerY:i+Math.floor(t/2)*(B.tableHeight+1)+B.tableHeight/2}));return l.push({table:a,centerX:t+2+o/2,centerY:s/2}),{placements:l,width:t+2+o,height:s,innerGapX:1,innerGapY:1}}(e)),t={groupGapX:38,minGroupGapX:10,rowGap:30,minRowGap:7}):"team6"===n&&(e=me(o,6).map(e=>pe(e,3,1,1)),t={groupGapX:44,minGroupGapX:12,rowGap:34,minRowGap:8}),function(e,t={}){const n=Math.max(1,x.classroom.clientWidth),a=Math.max(1,x.classroom.clientHeight),o=Math.max(8,Math.min(32,.025*n)),r=Math.max(6,Math.min(14,.012*a)),s=Math.max(B.tableWidth,n-2*o),i=Math.max(B.tableHeight,a-2*r),l=t.groupGapX??38,c=t.minGroupGapX??10,u=t.rowGap??28,d=t.minRowGap??6,p=[...new Set([l,Math.round(.78*l),Math.round(.55*l),c].map(e=>Math.max(c,e)))].sort((e,t)=>t-e);let m=null;for(const t of p){const n=ge(he(e,s,t),t),a=n.reduce((e,t)=>e+t.height,0),o=n.length>1?(i-a)/(n.length-1):u,r=n.length>1?Math.min(u,o):0;if(m={rows:n,gapX:t,rowGap:Math.max(0,r),rowHeights:a},a+Math.max(0,r)*Math.max(0,n.length-1)<=i+.5&&r>=d)break}if(!m||!m.rows.length)return;const h=[];let g=r;for(const e of m.rows){let t=o+Math.max(0,(s-e.width)/2);for(const o of e.groups){const r=ve(o,t,g+(e.height-o.height)/2,n,a,h);o._layoutPlaced=Boolean(r),r?fe(o,r.left,r.top).forEach(e=>{de(e.table,e.cx,e.cy,n,a),h.push(e.rect)}):o.placements.forEach(e=>{const t=we(e.table);h.push(R(e.table,t.cx,t.cy))}),t+=o.width+m.gapX}g+=e.height+m.rowGap}}(e,t),l=e}for(const e of o){const t=r.get(e.id);t&&(e.xNorm=t.xNorm,e.yNorm=t.yNorm)}if("cooperative-abbc"===n){c=l,B.cooperativeBlockPositions=c.filter(e=>4===e.placements.length&&!1!==e._layoutPlaced).map(e=>e.placements.slice().sort((e,t)=>e.row-t.row||e.col-t.col).map(e=>({xNorm:e.table.xNorm,yNorm:e.table.yNorm})));const e=ie(),n=T();if(L()&&!1!==t.message){const t=xt(e),a=ht(),o=[],r=new Set;for(let n=0;n<18&&o.length<8;n++){const n=ye(e,{shufflePools:!0});if(!n)continue;const s=E(n);if(r.has(s))continue;r.add(s);const i=t?Mt(n,[t],a).total:0;o.push({assignment:n,score:i,evaluated:1})}const s=P(o,3,e.length).map(e=>({...e,quality:t?z(e,[t],a):null}));s.length?(q(s,n,{mode:"cooperative",students:e}),H(0)):(D(),zt('<div class="output-summary-head"><strong>Esquema Cooperativo ABBC aplicado.</strong></div><div class="output-note">Se ha creado la disposición física en equipos de cuatro, pero no ha sido posible completar la asignación ABBC con el estado actual.</div>'))}else{D();const t=ye(e);if(t){const a=xe(e,t);It(t,e.length,n),zt(a)}else zt('<div class="output-summary-head"><strong>Esquema Cooperativo ABBC aplicado.</strong></div><div class="output-note">Se ha creado la disposición física en equipos de cuatro, pero no ha sido posible completar la asignación ABBC con el estado actual.</div>')}}else D(),B.cooperativeBlockPositions=[];var c;B.selectedTableId=null,B.selectedTableIds.clear(),B.layoutActive=!0,B.lastSolution=null,x.solutionPanel.hidden=!0,x.solutionPanel.innerHTML="","cooperative-abbc"!==n&&Pt(),ze(),et(),!1!==t.message&&Ut("cooperative-abbc"===n?"Esquema “Cooperativo ABBC” aplicado: equipos de cuatro con composición A-B-B-C cuando es posible.":`Esquema “${i[n]}” aplicado. Solo se han cambiado las posiciones de las mesas.`,"success"),!1!==t.save&&un(),!1!==t.scroll&&!1!==t.message&&$(s)}function we(e){const t=x.classroom.clientWidth,n=x.classroom.clientHeight,{halfW:a,halfH:o}=U(e),r=M(e.xNorm*t,a,Math.max(a,t-a)),s=M(e.yNorm*n,o,Math.max(o,n-o));return{cx:r,cy:s,left:r-B.tableWidth/2,top:s-B.tableHeight/2}}function $e(){x.classroom?.querySelectorAll(".constraint-related, .constraint-source").forEach(e=>{e.classList.remove("constraint-related","constraint-source")})}function Ce(){x.classroom?.querySelector(".constraint-relations-layer")?.remove()}function Se(){clearTimeout(B.tooltipTimer),B.tooltipTimer=null,$e(),Ce(),x.tableTooltip&&(x.tableTooltip.hidden=!0,x.tableTooltip.replaceChildren())}function Ae(){return Boolean(B.dragging||B.marquee||B.zoneMode||B.zoneDraft||B.zoneDragging)}function Ne(e){return e?e.surnames?`${e.firstName} ${e.surnames}`.trim():e.fullName:""}function Le(e,t,n,a){const o=e.left-a.left+e.width/2,r=e.top-a.top+e.height/2,s=t-o,i=n-r,l=Math.max(1,e.width/2),c=Math.max(1,e.height/2),u=1/Math.max(Math.abs(s)/l,Math.abs(i)/c,1e-9);return{x:o+s*u,y:r+i*u}}function Ie(e,t){if(!t||"mouse"!==e.pointerType||!x.tableTooltip||Ae())return;clearTimeout(B.tooltipTimer),$e(),Ce();const n=e.currentTarget;B.tooltipTimer=setTimeout(()=>{if(!n?.isConnected||Ae())return;const e=ie(),a=e.find(e=>e.id===t);if(!a)return;const o=function(e,t){const n=ue(t),a=new Map(t.map(e=>[e.id,e])),o=[],r=new Set,s=new Set,i=[],l=new Set,c=(t,n=[])=>{t&&!r.has(t)&&(r.add(t),o.push(t),n.forEach(t=>{t!==e.id&&s.add(t)}))},u=(t,n)=>{if(!t||t===e.id)return;const a="far"===n?"far":"near",o=`${t}:${a}`;l.has(o)||(l.add(o),i.push({otherId:t,visualType:a}))},d={far:e=>`Debe estar lejos de ${Ne(e)}`,together:e=>`Debe estar cerca de ${Ne(e)}`,near:e=>`Debe permanecer relativamente cerca de ${Ne(e)}`},p={groupFar:(e,t)=>t?`Debe mantener distancia con las demás personas del grupo ${e}`:`Debe mantener distancia con las personas del grupo ${e}`,groupTogether:(e,t)=>t?`Debe estar cerca de las demás personas del grupo ${e}`:`Debe estar cerca de las personas del grupo ${e}`,groupNear:(e,t)=>t?`Debe permanecer relativamente cerca de las demás personas del grupo ${e}`:`Debe permanecer relativamente cerca de las personas del grupo ${e}`};for(const t of n.constraints){if("far"===t.type||"together"===t.type||"near"===t.type){if(t.a!==e.id&&t.b!==e.id)continue;const n=t.a===e.id?t.b:t.a,o=a.get(n);o&&(c(d[t.type](o),[n]),u(n,t.type));continue}if("groupFar"!==t.type&&"groupTogether"!==t.type&&"groupNear"!==t.type)"left"!==t.type&&"right"!==t.type||!t.memberIds?.includes(e.id)?"front"!==t.type&&"back"!==t.type||!t.ids?.includes(e.id)?"groupFront"!==t.type&&"groupBack"!==t.type||!t.memberIds?.includes(e.id)||c("groupFront"===t.type?"Debe situarse hacia delante":"Debe situarse hacia detrás"):c("front"===t.type?"Debe situarse hacia delante":"Debe situarse hacia detrás"):c("left"===t.type?"Debe situarse hacia la izquierda":"Debe situarse hacia la derecha");else{if(!e.group)continue;if(t.groupA===t.groupB){if(e.group!==t.groupA)continue;c(p[t.type](t.groupA,!0));continue}e.group===t.groupA?c(p[t.type](t.groupB,!1)):e.group===t.groupB&&c(p[t.type](t.groupA,!1))}}return{items:o,relatedIds:[...s],directRelations:i}}(a,e);var r,s;!function(e,t){if(!x.tableTooltip)return;x.tableTooltip.replaceChildren();const n=document.createElement("div");if(n.className="table-tooltip-name",n.textContent=Ne(e),x.tableTooltip.appendChild(n),e.group){const t=document.createElement("div");t.className="table-tooltip-meta",t.textContent=`Grupo ${e.group}`,x.tableTooltip.appendChild(t)}if(t.items.length){const e=document.createElement("ul");e.className="table-tooltip-constraints",t.items.forEach(t=>{const n=document.createElement("li");n.textContent=t,e.appendChild(n)}),x.tableTooltip.appendChild(e)}}(a,o),x.tableTooltip.hidden=!1,function(e){if(!x.tableTooltip||x.tableTooltip.hidden||!e?.isConnected)return;const t=e.getBoundingClientRect(),n=x.tableTooltip.getBoundingClientRect();let a=t.right+12;a+n.width>window.innerWidth-8&&(a=t.left-n.width-12),a=M(a,8,Math.max(8,window.innerWidth-n.width-8));let o=t.top+t.height/2-n.height/2;o=M(o,8,Math.max(8,window.innerHeight-n.height-8)),x.tableTooltip.style.left=`${a}px`,x.tableTooltip.style.top=`${o}px`}(n),r=n,s=o.relatedIds,$e(),r?.classList.add("constraint-source"),s.forEach(e=>{x.classroom?.querySelector(`.table-node[data-table-id="${e}"]`)?.classList.add("constraint-related")}),function(e,t){if(Ce(),!x.classroom||!e?.isConnected||!t?.length)return;const n=x.classroom.getBoundingClientRect();if(!n.width||!n.height)return;const a="http://www.w3.org/2000/svg",o=document.createElementNS(a,"svg");o.classList.add("constraint-relations-layer"),o.setAttribute("viewBox",`0 0 ${n.width} ${n.height}`),o.setAttribute("preserveAspectRatio","none"),o.setAttribute("aria-hidden","true");const r=e.getBoundingClientRect(),s={x:r.left-n.left+r.width/2,y:r.top-n.top+r.height/2};t.forEach(e=>{const t=x.classroom.querySelector(`.table-node[data-table-id="${e.otherId}"]`);if(!t)return;const i=t.getBoundingClientRect(),l={x:i.left-n.left+i.width/2,y:i.top-n.top+i.height/2},c=Le(r,l.x,l.y,n),u=Le(i,s.x,s.y,n),d=document.createElementNS(a,"line");d.classList.add("constraint-relation-line","far"===e.visualType?"is-far":"is-near"),d.setAttribute("x1",c.x.toFixed(2)),d.setAttribute("y1",c.y.toFixed(2)),d.setAttribute("x2",u.x.toFixed(2)),d.setAttribute("y2",u.y.toFixed(2)),o.appendChild(d)}),o.childElementCount&&x.classroom.appendChild(o)}(n,o.directRelations)},350)}function Te(e){return String(e||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("es").trim()}function Ee(e,t){return!(!e||!t)&&[e.fullName,e.firstName,e.surnames,e.displayName].map(Te).some(e=>e.includes(t))}function ke(){ze()}function ze(){const e=ie(),t=new Map(e.map(e=>[e.id,e])),n=Te(x.personSearchInput?.value),a=document.createDocumentFragment();x.classroom.innerHTML="",x.classroom.appendChild(function(){const e=document.createDocumentFragment(),t=Math.max(1,x.classroom.clientWidth),n=Math.max(1,x.classroom.clientHeight);for(const a of B.zones){const o=G(a,t,n),r=document.createElement("div");r.className="zone-protected"+(B.selectedZoneId===a.id?" selected":""),r.dataset.zoneId=String(a.id),r.style.left=`${o.left}px`,r.style.top=`${o.top}px`,r.style.width=`${o.width}px`,r.style.height=`${o.height}px`,r.textContent="ZONA PROTEGIDA",r.setAttribute("aria-label",`Zona protegida ${a.id}`),r.addEventListener("pointerdown",je),r.addEventListener("contextmenu",Re),e.appendChild(r)}return e}());for(const e of B.tables){const o=we(e),r=document.createElement("div"),s=t.get(e.id),i=Z(e.rotation),l=B.selectedTableIds.has(e.id),c=Ee(s,n);r.className=`table-node${s?"":" empty"}${l?" group-selected":""}${B.selectedTableId===e.id?" selected":""}${e.locked?" locked":""}${c?" search-match":""}`,r.dataset.tableId=String(e.id),r.style.width=`${B.tableWidth}px`,r.style.height=`${B.tableHeight}px`,r.style.left=`${o.left}px`,r.style.top=`${o.top}px`,r.style.transform=`rotate(${i}deg)`,r.style.setProperty("--counter-rotation",-i+"deg"),s?.group&&(r.classList.add("group-tagged"),r.style.setProperty("--group-table-fill",v[s.group]||"#e2e2e2"));const u=e.locked?" · bloqueada":"",d=s?.group?` · grupo ${s.group}`:"";r.setAttribute("aria-label",s?`${s.fullName}. Mesa ${e.id}${d}${u}`:`Mesa ${e.id} · libre${u}`);const p=document.createElement("span");p.className="table-id",p.textContent=String(e.id);const m=document.createElement("span");m.className="student-label",m.textContent=s?`${s.displayName}${s.group?` (${s.group})`:""}`:"Libre",r.append(p,m),s&&(r.addEventListener("pointerenter",e=>Ie(e,s.id)),r.addEventListener("pointerleave",Se)),r.addEventListener("pointerdown",Je),r.addEventListener("contextmenu",lt),a.appendChild(r)}x.classroom.appendChild(a)}function Pe(e={}){B.selectedTableId=null,B.selectedTableIds.clear(),!1!==e.render&&ze(),et(),nt()}function Fe(e){const t=x.classroom.getBoundingClientRect();return{x:M(e.clientX-t.left,0,t.width),y:M(e.clientY-t.top,0,t.height),rect:t}}function De(){const e=B.marquee?.node;e?.parentNode&&e.parentNode.removeChild(e)}function qe(e){B.zoneMode=Boolean(e),x.addZoneBtn?.classList.toggle("zone-mode-active",B.zoneMode),x.addZoneBtn?.setAttribute("aria-pressed",String(B.zoneMode)),x.classroom?.classList.toggle("zone-draw-mode",B.zoneMode),!B.zoneMode&&B.zoneDraft?.node?.parentNode&&B.zoneDraft.node.remove(),B.zoneMode||(B.zoneDraft=null)}function He(){Se(),B.selectedZoneId=null,B.selectedTableId=null,B.selectedTableIds.clear(),qe(!0),ze(),et(),Ut("Arrastra sobre una zona vacía del espacio para crear una zona protegida. Pulsa Escape para cancelar.","info")}function We(e){const t=B.zoneDraft;if(!t||e.pointerId!==t.pointerId)return!1;const n=Fe(e);return t.currentX=n.x,t.currentY=n.y,!t.moved&&Math.hypot(t.currentX-t.startX,t.currentY-t.startY)<4||(t.moved=!0,function(e){e.node||(e.node=document.createElement("div"),e.node.className="zone-draft",x.classroom.appendChild(e.node));const t=Math.min(e.startX,e.currentX),n=Math.min(e.startY,e.currentY),a=Math.abs(e.currentX-e.startX),o=Math.abs(e.currentY-e.startY);e.node.style.left=`${t}px`,e.node.style.top=`${n}px`,e.node.style.width=`${a}px`,e.node.style.height=`${o}px`}(t)),!0}function Ge(e,t=!0){const n=B.zones.find(t=>t.id===Number(e));n&&(t&&!window.confirm("¿Eliminar esta zona protegida?")||(D(),B.zones=B.zones.filter(e=>e.id!==n.id),B.selectedZoneId===n.id&&(B.selectedZoneId=null),B.layoutActive=!1,ze(),Ut("Zona protegida eliminada.","success"),un()))}function Re(e){e.preventDefault(),e.stopPropagation();const t=Number(e.currentTarget.dataset.zoneId);B.selectedZoneId=t,Ge(t,!0)}function je(e){if(B.zoneMode)return;if(0!==e.button&&"mouse"===e.pointerType)return;e.stopPropagation(),e.preventDefault();const t=e.currentTarget,n=Number(t.dataset.zoneId),a=B.zones.find(e=>e.id===n);if(!a)return;B.selectedZoneId=n,B.selectedTableId=null,B.selectedTableIds.clear(),ze(),et();const o=x.classroom.querySelector(`.zone-protected[data-zone-id="${n}"]`);if(!o)return;const r=G(a,Math.max(1,x.classroom.clientWidth),Math.max(1,x.classroom.clientHeight));B.zoneDragging={pointerId:e.pointerId,zone:a,node:o,startClientX:e.clientX,startClientY:e.clientY,startLeft:r.left,startTop:r.top,width:r.width,height:r.height,lastLeft:r.left,lastTop:r.top},o.setPointerCapture?.(e.pointerId),o.addEventListener("pointermove",Xe),o.addEventListener("pointerup",Oe),o.addEventListener("pointercancel",Oe)}function Xe(e){const t=B.zoneDragging;if(!t||e.pointerId!==t.pointerId)return;const n=Math.max(1,x.classroom.clientWidth),a=Math.max(1,x.classroom.clientHeight),o=M(t.startLeft+e.clientX-t.startClientX,0,n-t.width),r=M(t.startTop+e.clientY-t.startClientY,0,a-t.height);O({left:o,top:r,width:t.width,height:t.height,right:o+t.width,bottom:r+t.height})||(t.lastLeft=o,t.lastTop=r,t.zone.xNorm=o/n,t.zone.yNorm=r/a,t.node.style.left=`${o}px`,t.node.style.top=`${r}px`)}function Oe(e){const t=B.zoneDragging;t&&e.pointerId===t.pointerId&&(t.node.removeEventListener("pointermove",Xe),t.node.removeEventListener("pointerup",Oe),t.node.removeEventListener("pointercancel",Oe),B.zoneDragging=null,B.layoutActive=!1,ze(),un())}function Ye(e){if(e.target!==x.classroom)return;if(0!==e.button&&"mouse"===e.pointerType)return;if(Se(),B.zoneMode)return void function(e){const t=Fe(e);B.zoneDraft={pointerId:e.pointerId,startX:t.x,startY:t.y,currentX:t.x,currentY:t.y,moved:!1,node:null},x.classroom.setPointerCapture?.(e.pointerId),e.preventDefault()}(e);B.selectedZoneId=null;const t=Fe(e);B.marquee={pointerId:e.pointerId,startX:t.x,startY:t.y,currentX:t.x,currentY:t.y,moved:!1,node:null},x.classroom.setPointerCapture?.(e.pointerId),e.preventDefault()}function Ze(e){if(We(e))return;const t=B.marquee;if(!t||e.pointerId!==t.pointerId)return;const n=Fe(e);t.currentX=n.x,t.currentY=n.y;const a=Math.hypot(t.currentX-t.startX,t.currentY-t.startY);!t.moved&&a<4||(t.moved=!0,function(e){e.node||(e.node=document.createElement("div"),e.node.className="selection-marquee",x.classroom.appendChild(e.node));const t=Math.min(e.startX,e.currentX),n=Math.min(e.startY,e.currentY),a=Math.abs(e.currentX-e.startX),o=Math.abs(e.currentY-e.startY);e.node.style.left=`${t}px`,e.node.style.top=`${n}px`,e.node.style.width=`${a}px`,e.node.style.height=`${o}px`}(t))}function Ue(e){if(function(e){const t=B.zoneDraft;if(!t||e.pointerId!==t.pointerId)return!1;const n=Fe(e);t.currentX=n.x,t.currentY=n.y,t.node?.remove();const a=Math.min(t.startX,t.currentX),o=Math.min(t.startY,t.currentY),r=Math.abs(t.currentX-t.startX),s=Math.abs(t.currentY-t.startY);if(B.zoneDraft=null,qe(!1),!t.moved||r<18||s<18)return Ut("La zona protegida debe tener un tamaño mínimo.","warning"),ze(),!0;if(O({left:a,top:o,width:r,height:s,right:a+r,bottom:o+s}))return Ut("La zona no puede superponerse con mesas existentes.","error"),ze(),!0;const i=Math.max(1,x.classroom.clientWidth),l=Math.max(1,x.classroom.clientHeight),c={id:Y(),xNorm:a/i,yNorm:o/l,widthNorm:r/i,heightNorm:s/l};return D(),B.zones.push(c),B.selectedZoneId=c.id,B.layoutActive=!1,ze(),Ut("Zona protegida creada. Las mesas no podrán ocuparla.","success"),un(),!0}(e))return;const t=B.marquee;if(!t||e.pointerId!==t.pointerId)return;const n=Fe(e);if(t.currentX=n.x,t.currentY=n.y,De(),!t.moved)return B.marquee=null,void Pe();const a=Math.min(t.startX,t.currentX),o=Math.max(t.startX,t.currentX),r=Math.min(t.startY,t.currentY),s=Math.max(t.startY,t.currentY),i=B.tables.filter(e=>!e.locked).filter(e=>{const t=we(e);return t.cx>=a&&t.cx<=o&&t.cy>=r&&t.cy<=s}).map(e=>e.id);B.selectedTableIds=new Set(i),B.selectedTableId=i[0]??null,B.marquee=null,ze(),et(),nt()}function Je(e){if(Se(),0!==e.button&&"mouse"===e.pointerType)return;const t=e.currentTarget,n=Number(t.dataset.tableId),a=B.tables.find(e=>e.id===n);if(!a)return;B.selectedZoneId=null;const o=B.selectedTableIds.has(n)&&B.selectedTableIds.size>1;if(o||(B.selectedTableIds=new Set([n])),B.selectedTableId=n,et(),nt(),x.classroom.querySelectorAll(".table-node.selected").forEach(e=>e.classList.remove("selected")),o||(x.classroom.querySelectorAll(".table-node.group-selected").forEach(e=>e.classList.remove("group-selected")),t.classList.add("group-selected")),t.classList.add("selected"),e.preventDefault(),a.locked)return;const r=x.classroom.getBoundingClientRect(),s=Array.from(B.selectedTableIds).map(e=>B.tables.find(t=>t.id===e)).filter(e=>e&&!e.locked);s.some(e=>e.id===n)||s.push(a);const i=s.map(e=>{const t=we(e);return{table:e,node:x.classroom.querySelector(`.table-node[data-table-id="${e.id}"]`),startCx:t.cx,startCy:t.cy,extents:U(e)}});let l=-1/0,c=1/0,u=-1/0,d=1/0;for(const e of i)l=Math.max(l,e.extents.halfW-e.startCx),c=Math.min(c,r.width-e.extents.halfW-e.startCx),u=Math.max(u,e.extents.halfH-e.startCy),d=Math.min(d,r.height-e.extents.halfH-e.startCy);B.dragging={pointerId:e.pointerId,table:a,node:t,group:i,startClientX:e.clientX,startClientY:e.clientY,minDx:l,maxDx:c,minDy:u,maxDy:d,lastDx:0,lastDy:0},t.setPointerCapture?.(e.pointerId),t.classList.add("dragging");const p=we(a);_e(t,p.cx,p.cy),t.addEventListener("pointermove",Qe),t.addEventListener("pointerup",Ve),t.addEventListener("pointercancel",Ve)}function Qe(e){if(!B.dragging||e.pointerId!==B.dragging.pointerId)return;const{table:t,node:n,group:a,startClientX:o,startClientY:r,minDx:s,maxDx:i,minDy:l,maxDy:c}=B.dragging,u=x.classroom.getBoundingClientRect(),d=M(e.clientX-o,s,i),p=M(e.clientY-r,l,c);if(a.some(e=>{const t=e.startCx+d,n=e.startCy+p;return X(e.table,t,n)}))return;0===d&&0===p||D(),B.dragging.lastDx=d,B.dragging.lastDy=p;for(const e of a){const t=e.startCx+d,n=e.startCy+p;e.table.xNorm=u.width?t/u.width:.5,e.table.yNorm=u.height?n/u.height:.5,e.node&&(e.node.style.left=t-B.tableWidth/2+"px",e.node.style.top=n-B.tableHeight/2+"px")}const m=a.find(e=>e.table.id===t.id);m&&_e(n,m.startCx+d,m.startCy+p)}function Ve(e){if(!B.dragging||e.pointerId!==B.dragging.pointerId)return;const{node:t,lastDx:n=0,lastDy:a=0}=B.dragging,o=Math.abs(n)>.5||Math.abs(a)>.5;t.classList.remove("dragging"),t.querySelector(".coordinates")?.remove(),t.removeEventListener("pointermove",Qe),t.removeEventListener("pointerup",Ve),t.removeEventListener("pointercancel",Ve),B.dragging=null,o?Be():B.layoutActive=!1,B.lastSolution=null,Gt(),un()}function Ke(e){const t=document.activeElement?.tagName?.toLowerCase(),n="textarea"===t||"input"===t||document.activeElement?.isContentEditable;return"Delete"!==e.key&&"Backspace"!==e.key||null==B.selectedZoneId||n?"Escape"===e.key?B.zoneMode||B.zoneDraft?(B.zoneDraft?.node?.remove(),B.zoneDraft=null,qe(!1),void Jt()):null!=B.selectedZoneId?(B.selectedZoneId=null,void ze()):void((B.marquee||0!==B.selectedTableIds.size||null!=B.selectedTableId)&&(De(),B.marquee=null,Pe())):void 0:(e.preventDefault(),void Ge(B.selectedZoneId,!0))}function _e(e,t,n){let a=e.querySelector(".coordinates");a||(a=document.createElement("span"),a.className="coordinates",e.appendChild(a)),a.textContent=`x ${Math.round(t)} · y ${Math.round(n)}`}function et(){if(!x.deleteTableBtn)return;const e=B.tables.some(e=>e.id===B.selectedTableId);x.deleteTableBtn.disabled=!e,x.deleteTableBtn.title=e?`Eliminar mesa ${B.selectedTableId}`:"Selecciona una mesa para eliminarla",nt()}function tt(){return B.tables.find(e=>e.id===B.selectedTableId)||null}function nt(){const e=tt();x.rotateTableBtn&&(x.rotateTableBtn.disabled=!e,x.rotateTableBtn.title=e?`Girar mesa ${e.id} 90°`:"Selecciona una mesa para girarla"),x.lockTableBtn&&(x.lockTableBtn.disabled=!e,x.lockTableBtn.textContent=e?.locked?"Desbloquear mesa":"Bloquear mesa",x.lockTableBtn.title=e?e.locked?`Desbloquear mesa ${e.id}`:`Bloquear mesa ${e.id} en su posición actual`:"Selecciona una mesa para bloquearla")}function at(){const e=tt();if(!e)return;const t=Z(e.rotation),n=(t+90)%360,a=we(e);if(e.rotation=n,X(e,a.cx,a.cy))return e.rotation=t,void Ut("No se puede girar la mesa porque invadiría una zona protegida.","warning");D(),Be(),B.lastSolution=null,Gt(),ze(),nt(),Ut(`Mesa ${e.id} girada 90°. La orientación del texto indica desde qué lado se sentaría la persona.`,"success"),un()}function ot(){const e=tt();e&&(D(),e.locked=!e.locked,B.layoutActive=!1,B.lastSolution=null,Gt(),ze(),nt(),Ut(e.locked?`Mesa ${e.id} bloqueada. Conservará esta posición al organizar, mezclar o aplicar un esquema.`:`Mesa ${e.id} desbloqueada.`,"success"),un())}function rt(e,t=!0){const n=B.tables.find(t=>t.id===Number(e));if(!n)return;const a=ie(),o=n.id<=a.length,r=o?`¿Eliminar la mesa ${n.id} y también a la persona ${n.id} de la lista?`:`¿Eliminar la mesa ${n.id}?`;if(t&&!window.confirm(r))return;D(),B.tables=B.tables.filter(e=>e.id!==n.id),B.cooperativeBlockPositions=[];let s=0;var i;o&&(!function(e){const t=ie();if(e<1||e>t.length)return!1;let n=0,a=0;const o=[];for(const t of x.studentsInput.value.split(/\r?\n/)){const r=t.trim();r&&!r.startsWith("#")?(n+=1,n!==e&&(a+=1,o.push(`${a}. ${Q(t)}`))):o.push(t)}x.studentsInput.value=o.join("\n")}(n.id),s=function(e){const t=x.constraintsInput.value.split(/\r?\n/),n=[];let a=0;const o=t=>t>e?t-1:t;for(const r of t){const t=r.trim();if(!t){n.push(r);continue}let s;if(s=t.match(/^(\d+)\s*x\s*(\d+)$/i)){const t=Number(s[1]),r=Number(s[2]);if(t===e||r===e){a++;continue}n.push(`${o(t)}x${o(r)}`);continue}if(s=t.match(/^(\d+)\s*--\s*(\d+)$/)){const t=Number(s[1]),r=Number(s[2]);if(t===e||r===e){a++;continue}n.push(`${o(t)}--${o(r)}`);continue}if(s=t.match(/^(\d+)\s*-\s*(\d+)$/)){const t=Number(s[1]),r=Number(s[2]);if(t===e||r===e){a++;continue}n.push(`${o(t)}-${o(r)}`);continue}if(s=t.match(/^([LR])\s*:\s*(.+)$/i)){const t=s[2].split(",").map(e=>e.trim()).filter(Boolean),r=[];let i=!1;for(const n of t)if(/^\d+$/.test(n)){const t=Number(n);if(t===e){i=!0,a++;continue}const s=o(t);s!==t&&(i=!0),r.push(String(s))}else r.push(n);if(!r.length)continue;n.push(`${s[1].toUpperCase()}: ${r.join(",")}`);continue}if(s=t.match(/^([FB])\s*:\s*(.+)$/i)){const t=s[2].split(",").map(e=>e.trim()).filter(Boolean);if(t.length&&t.every(e=>/^\d+$/.test(e))){const r=t.map(Number),i=r.filter(t=>t!==e).map(o);if(!i.length){a++;continue}i.length!==r.length&&a++,n.push(`${s[1].toUpperCase()}: ${i.join(",")}`);continue}}n.push(r)}return x.constraintsInput.value=n.join("\n").replace(/\n{3,}/g,"\n\n").trim(),a}(n.id),i=n.id,B.tables=B.tables.map(e=>({...e,id:e.id>i?e.id-1:e.id}))),B.selectedTableId=null,B.selectedTableIds.clear(),Be(),B.lastSolution=null,Gt(),ze(),tn(),et();const l=o?` También se eliminó la persona ${n.id} y se renumeraron personas y mesas.${s?` Se ajustaron las restricciones (${s} referencia(s) eliminada(s)).`:" Las restricciones se reajustaron automáticamente."}`:"";Ut(`Mesa ${n.id} eliminada.${l}`,"success"),un()}function st(){null!=B.selectedTableId&&rt(B.selectedTableId,!0)}function it(){if(!B.tables.length)return void Ut("El espacio ya está vacía.","info");window.confirm("¿Eliminar todas las mesas del espacio? La lista de personas, las restricciones y las zonas protegidas se conservarán.")&&(D(),B.tables=[],B.selectedTableId=null,B.selectedTableIds.clear(),Be(),B.lastSolution=null,Gt(),ze(),tn(),et(),Ut("Espacio vaciado. La lista de personas y las restricciones se han conservado.","success"),un())}function lt(e){Se(),e.preventDefault();const t=Number(e.currentTarget.dataset.tableId);B.selectedTableId=t,B.selectedTableIds=new Set([t]),ze(),et(),rt(t,!0)}function ct(){const e=new Set(B.tables.map(e=>e.id));let t=1;for(;e.has(t);)t++;return t}function ut(){const e=Math.max(1,x.classroom.clientWidth),t=Math.max(1,x.classroom.clientHeight),n=B.tableWidth/2,a=B.tableHeight/2,o=B.tableWidth+10,r=B.tableHeight+10;for(let s=a+12;s<=t-a-12+.1;s+=r)for(let r=n+12;r<=e-n-12+.1;r+=o){const o=B.tables.some(e=>{const t=we(e),o=U(e);return Math.abs(t.cx-r)<o.halfW+n+5&&Math.abs(t.cy-s)<o.halfH+a+5}),i=j({left:r-n,top:s-a,right:r+n,bottom:s+a});if(!o&&!i)return{x:r,y:s,width:e,height:t}}for(let o=a;o<=t-a;o+=8)for(let r=n;r<=e-n;r+=8){if(!j({left:r-n,top:o-a,right:r+n,bottom:o+a}))return{x:r,y:o,width:e,height:t}}return null}function dt(e=1){const t=Math.floor(Number(e));if(!Number.isFinite(t)||t<1||t>999)return Ut("Indica un número entero positivo de mesas entre 1 y 999.","error"),void x.tableCountInput?.focus();D();const n=t;let a=null,o=0;for(let e=0;e<n;e++){const e=ct(),t=ut();if(!t)break;B.tables.push({id:e,xNorm:t.width?t.x/t.width:.1,yNorm:t.height?t.y/t.height:.1,rotation:0,locked:!1}),a=e,o++}o?(B.selectedTableId=a,B.selectedTableIds=new Set(null==a?[]:[a]),Be(),B.lastSolution=null,Gt(),ze(),tn(),Ut(`${o} ${1===o?"mesa añadida":"mesas añadidas"} al espacio.${o<n?" No había espacio válido para añadir más sin invadir zonas protegidas.":""}`,o<n?"warning":"success"),un()):Ut("No hay espacio libre suficiente fuera de las zonas protegidas para añadir una mesa.","error")}function pt(){dt(1)}function mt(e){const t=M(B.tableWidth+e,72,180),n=t/B.tableWidth,a=Math.round(M(B.tableHeight*n,36,88));!function(e=B.tableWidth,t=B.tableHeight){const n=Math.max(1,x.classroom.clientWidth),a=Math.max(1,x.classroom.clientHeight);return B.tables.some(o=>X(o,o.xNorm*n,o.yNorm*a,e,t))}(t,a)?(D(),B.tableWidth=t,B.tableHeight=a,B.lastSolution=null,Gt(),B.layoutActive?Me(B.spaceLayout,{message:!1,save:!1,scroll:!1}):ze(),un()):Ut("No se puede cambiar el tamaño porque alguna mesa invadiría una zona protegida.","warning")}function ht(){const e=B.tables.length,t=Array.from({length:e},()=>Array(e).fill(0)),n=Math.max(1,x.classroom.clientWidth),a=Math.max(1,x.classroom.clientHeight),o=Math.hypot(n,a),r=B.tables.map(e=>({x:e.xNorm*n,y:e.yNorm*a}));for(let n=0;n<e;n++)for(let a=n+1;a<e;a++){const e=r[n].x-r[a].x,s=r[n].y-r[a].y,i=M(Math.hypot(e,s)/o,0,1);t[n][a]=i,t[a][n]=i}return t}function gt(e,t,n,a){let o=0,r=0;if(e===t||e.length===t.length&&e.every((e,n)=>e===t[n])){for(let t=0;t<e.length;t++)for(let s=t+1;s<e.length;s++){const i=n[e[t]-1],l=n[e[s]-1];null!=i&&null!=l&&(o+=a[i][l],r++)}return r?o/r:null}for(const s of e)for(const e of t){const t=n[s-1],i=n[e-1];null!=t&&null!=i&&(o+=a[t][i],r++)}return r?o/r:0}function ft(e,t){if(!e.length)return.5;let n=0,a=0;return e.forEach(e=>{const o=t[e-1];null!=o&&B.tables[o]&&(n+=B.tables[o].yNorm,a++)}),a?n/a:.5}function bt(e,t){return e.length?e.reduce((e,n)=>e+ft(n,t),0)/e.length:.5}function vt(e,t){if(e.length<2)return 0;const n=e.map(e=>ft(e,t));let a=0;for(let e=0;e<n.length-1;e++)a+=M(n[e]+.04-n[e+1],0,1);return a/(n.length-1)}function yt(e=B.cooperativeBlockPositions){if(!Array.isArray(e)||!e.length||!B.tables.length)return[];const t=new Set(B.tables.map((e,t)=>t));return e.map(e=>e.map(e=>{let n=null,a=1/0;for(const o of t){const t=B.tables[o],r=Math.hypot(t.xNorm-e.xNorm,t.yNorm-e.yNorm);r<a&&(a=r,n=o)}return null!=n&&t.delete(n),n}).filter(e=>null!=e)).filter(e=>4===e.length)}function xt(e){if("cooperative-abbc"!==B.spaceLayout)return null;const t=yt();if(!t.length)return null;const n=e.map(e=>e.group||null),a={A:0,B:0,C:0};n.forEach(e=>{e in a&&a[e]++});return{type:"cooperativeABBC",blocks:t,groups:n,targetComplete:Math.min(t.length,a.A,Math.floor(a.B/2),a.C),raw:"Cooperativo ABBC",line:0}}function Bt(e,t){const n=new Map;t.forEach((e,t)=>{null!=e&&n.set(e,t)});const a=["A","B","B","C"];let o=0,r=0,s=0,i=0;for(const t of e.blocks){const l=t.map(t=>{const a=n.get(t);return null==a?null:e.groups[a]}),c={A:0,B:0,C:0};l.forEach(e=>{e in c&&c[e]++});const u=1===c.A&&2===c.B&&1===c.C;u&&o++,r+=Math.min(c.A,1)+Math.min(c.B,2)+Math.min(c.C,1),u&&l.forEach((e,t)=>{i++,e===a[t]&&s++})}const l=e.targetComplete>0?M(o/e.targetComplete,0,1):1,c=e.blocks.length?r/(4*e.blocks.length):1,u=i?s/i:1;return{completeCount:o,targetComplete:e.targetComplete,partialSatisfaction:M(c,0,1),completeSatisfaction:l,patternSatisfaction:M(u,0,1)}}function Mt(e,t,n){let a=0,o=0;for(const r of t)if("far"===r.type||"together"===r.type||"near"===r.type){const t=r.a-1,s=r.b-1,i=n[e[t]][e[s]];"far"===r.type?(a+=g.far*(1-i),o+=g.far):"together"===r.type?(a+=g.together*i,o+=g.together):(a+=g.near*i,o+=g.near)}else if("front"===r.type||"back"===r.type){const t="front"===r.type?g.front:g.back;for(const n of r.ids){const s=e[n-1],i=B.tables[s].yNorm;a+=t*("front"===r.type?i:1-i),o+=t}}else if("left"===r.type||"right"===r.type){const t="left"===r.type?g.left:g.right,n=r.memberIds.map(t=>{const n=e[t-1];return null!=n&&B.tables[n]?B.tables[n].xNorm:null}).filter(e=>null!=e);if(n.length){const e=n.reduce((e,t)=>e+t,0)/n.length;a+=t*("left"===r.type?e:1-e),o+=t}}else if("groupFar"===r.type||"groupTogether"===r.type||"groupNear"===r.type){const t=gt(r.membersA,r.membersB,e,n);if(null==t)continue;"groupFar"===r.type?(a+=f.far*(1-t),o+=f.far):"groupTogether"===r.type?(a+=f.together*t,o+=f.together):(a+=f.near*t,o+=f.near)}else if("groupFront"===r.type){const t=bt(r.groupMembers,e);a+=f.front*t,o+=f.front}else if("groupBack"===r.type){const t=bt(r.groupMembers,e);a+=f.back*(1-t),o+=f.back,r.groups.length>1&&(a+=f.orderedBack*vt(r.groupMembers,e),o+=f.orderedBack)}else if("cooperativeABBC"===r.type){const t=Bt(r,e);a+=b.composition*(1-t.completeSatisfaction),o+=b.composition,t.targetComplete>0&&(a+=b.pattern*(1-t.patternSatisfaction),o+=b.pattern)}return{total:a,maxPossible:o}}function wt(e){const t=new Map,n=new Set;B.tables.forEach((a,o)=>{a.locked&&(n.add(o),a.id>=1&&a.id<=e&&t.set(a.id-1,o))});const a=Array.from({length:e},(e,t)=>t).filter(e=>!t.has(e)),o=Array.from({length:B.tables.length},(e,t)=>t).filter(e=>!n.has(e));return{fixedAssignments:t,reservedSlots:n,movableStudents:a,availableSlots:o}}function $t(e,t,n=wt(e)){const a=Array(e).fill(null);for(const[e,t]of n.fixedAssignments)a[e]=t;const o=J(n.availableSlots);return n.movableStudents.forEach((e,t)=>{a[e]=o[t]}),a}function Ct(e,t,n){const a=e.slice(),o=a.length,r=n?.movableStudents||Array.from({length:o},(e,t)=>t),s=n?.reservedSlots||new Set;if(0===o||0===r.length)return a;if(t>o&&Math.random()<.32){const e=r[Math.floor(Math.random()*r.length)],n=new Set(a),o=[];for(let e=0;e<t;e++)n.has(e)||s.has(e)||o.push(e);if(o.length)return a[e]=o[Math.floor(Math.random()*o.length)],a}if(r.length>1){let e=Math.floor(Math.random()*r.length),t=Math.floor(Math.random()*r.length);for(;t===e;)t=Math.floor(Math.random()*r.length);const n=r[e],o=r[t];[a[n],a[o]]=[a[o],a[n]]}return a}function St(e){const t=M(Number(e)||0,0,100);x.progressFill&&(x.progressFill.style.width=`${t}%`),x.progressPercent&&(x.progressPercent.textContent=`${Math.round(t)}%`),x.progressTrack&&x.progressTrack.setAttribute("aria-valuenow",String(Math.round(t)))}function At(e){w();const t=++B.progressSequence;return B.progressSession?.timer&&clearInterval(B.progressSession.timer),B.progressSession={token:t,startedAt:performance.now(),reported:0,completed:!1,completionLabel:"Completado",timer:null,onHidden:[]},x.calculationProgress&&(x.calculationProgress.hidden=!1),x.progressLabel&&(x.progressLabel.textContent=e),St(0),B.progressSession.timer=setInterval(()=>{const e=B.progressSession;if(!e||e.token!==t)return;const n=performance.now()-e.startedAt;if(e.completed){if(n<r){const t=Math.min(96,n/r*96);return void St(Math.max(e.reported,t))}return St(100),x.progressLabel&&(x.progressLabel.textContent=e.completionLabel),clearInterval(e.timer),e.timer=null,void setTimeout(()=>{if(B.progressSession?.token!==t)return;const e=B.progressSession;x.calculationProgress&&(x.calculationProgress.hidden=!0),B.progressSession=null;for(const t of e.onHidden.splice(0))try{t()}catch(e){console.warn("No se pudo completar una acción posterior al progreso:",e)}},300)}const a=Math.min(70,n/r*70);St(Math.max(e.reported,a))},60),t}function Nt(e,t,n=null){const a=B.progressSession;a&&a.token===e&&(a.reported=Math.max(a.reported,M(Number(t)||0,0,98)),n&&x.progressLabel&&(x.progressLabel.textContent=n),St(a.reported))}function Lt(e,t="Completado"){const n=B.progressSession;n&&n.token===e&&(n.completed=!0,n.completionLabel=t)}function It(e,t,n=null){const a=Array.isArray(n)?n.map(e=>({xNorm:e.xNorm,yNorm:e.yNorm,rotation:null==e.rotation?null:Z(e.rotation)})):T(),o=I(),r=wt(t),s=new Set(r.reservedSlots);for(let n=0;n<t;n++){const t=n+1,r=B.tables.find(e=>e.id===t),i=e[n],l=a[i];r&&l&&(r.locked||(r.xNorm=l.xNorm,r.yNorm=l.yNorm,o&&null!=l.rotation&&(r.rotation=Z(l.rotation))),s.add(i))}const i=a.map((e,t)=>t).filter(e=>!s.has(e));B.tables.filter(e=>e.id>t&&!e.locked).sort((e,t)=>e.id-t.id).forEach((e,t)=>{const n=a[i[t]];n&&(e.xNorm=n.xNorm,e.yNorm=n.yNorm,o&&null!=n.rotation&&(e.rotation=Z(n.rotation)))}),ze()}function Tt(e,t,n){if("far"===e.type||"together"===e.type||"near"===e.type){const a=n[t[e.a-1]][t[e.b-1]],o="far"===e.type?a:1-a;return{raw:e.raw,satisfaction:M(o,0,1)}}if("front"===e.type||"back"===e.type){const n=e.ids.map(n=>{const a=B.tables[t[n-1]].yNorm;return"front"===e.type?1-a:a}),a=n.reduce((e,t)=>e+t,0)/n.length;return{raw:e.raw,satisfaction:M(a,0,1)}}if("left"===e.type||"right"===e.type){const n=e.memberIds.map(n=>{const a=t[n-1],o=null!=a&&B.tables[a]?B.tables[a].xNorm:.5;return"left"===e.type?1-o:o}),a=n.length?n.reduce((e,t)=>e+t,0)/n.length:1;return{raw:e.raw,satisfaction:M(a,0,1)}}if("groupFar"===e.type||"groupTogether"===e.type||"groupNear"===e.type){const a=gt(e.membersA,e.membersB,t,n);if(null==a)return{raw:e.raw,satisfaction:1};const o="groupFar"===e.type?a:1-a;return{raw:e.raw,satisfaction:M(o,0,1)}}if("groupFront"===e.type)return{raw:e.raw,satisfaction:M(1-bt(e.groupMembers,t),0,1)};if("groupBack"===e.type){const n=M(bt(e.groupMembers,t),0,1);if(e.groups.length<2)return{raw:e.raw,satisfaction:n};const a=1-vt(e.groupMembers,t),o=(n*f.back+a*f.orderedBack)/(f.back+f.orderedBack);return{raw:e.raw,satisfaction:M(o,0,1)}}if("cooperativeABBC"===e.type){const n=Bt(e,t),a=n.targetComplete>0?(n.completeSatisfaction*b.composition+n.patternSatisfaction*b.pattern)/(b.composition+b.pattern):1;return{raw:e.raw,satisfaction:M(a,0,1)}}return{raw:e.raw,satisfaction:0}}function Et(e){return e.length?1===e.length?e[0]:2===e.length?`${e[0]} y ${e[1]}`:`${e.slice(0,-1).join(", ")} y ${e[e.length-1]}`:""}function kt(e,t){return e[t-1]?.displayName||`Persona ${t}`}function zt(e){x.outputContent&&(x.outputContent.innerHTML=e)}function Pt(){zt('<span class="output-placeholder">Aquí aparecerán los resultados y la explicación de las restricciones después de organizar el espacio.</span>')}function Ft(){x.outputContent&&x.toggleOutputBtn&&(x.outputContent.hidden=B.outputCollapsed,x.toggleOutputBtn.textContent=B.outputCollapsed?"Mostrar":"Ocultar",x.toggleOutputBtn.setAttribute("aria-expanded",String(!B.outputCollapsed)))}function Dt(){B.outputCollapsed=!B.outputCollapsed,Ft(),un()}function qt(e,t,n,a,o=[]){if(!n)return void Pt();const r=Mt(n.assignment,t,a),s=r.maxPossible?Math.max(0,Math.round(100*(1-r.total/r.maxPossible))):100;if(!t.length)return void zt('<div class="output-summary-head"><strong>Organización completada.</strong><span>No se han indicado restricciones.</span></div><div class="output-note">La distribución se ha generado sin criterios de proximidad, distancia, delante o detrás.</div>');const i=t.map(t=>{const o=function(e){const t=Math.round(100*M(e,0,1));return t>=85?{text:`${t}% · muy bien`,className:"score-good"}:t>=65?{text:`${t}% · razonable`,className:"score-medium"}:{text:`${t}% · mejorable`,className:"score-low"}}(Tt(t,n.assignment,a).satisfaction);return`<li>${Rt(function(e,t){if("left"===e.type||"right"===e.type){const n=e.ids.map(e=>kt(t,e));return 1===e.groups.length?n.push(`las personas del grupo ${e.groups[0]}`):e.groups.length>1&&n.push(`las personas de los grupos ${Et(e.groups)}`),`${Et(n)} ${1===e.memberIds.length?"debe situarse":"deben situarse"} lo más a la ${"left"===e.type?"izquierda":"derecha"} posible.`}if("cooperativeABBC"===e.type)return"El esquema Cooperativo ABBC debe conservar el máximo número posible de equipos con 1 persona del grupo A, 2 de grupo B y 1 de grupo C.";if("far"===e.type)return`${kt(t,e.a)} no debe sentarse junto a ${kt(t,e.b)}; debe quedar lo más lejos posible.`;if("together"===e.type)return`${kt(t,e.a)} se debe sentar junto a ${kt(t,e.b)}.`;if("near"===e.type)return`${kt(t,e.a)} se debe sentar cerca de ${kt(t,e.b)}.`;if("groupFar"===e.type)return e.groupA===e.groupB?`Las personas del grupo ${e.groupA} deben sentarse lo más alejadas posible unas de otras.`:`Las personas del grupo ${e.groupA} deben situarse lo más lejos posible de las personas del grupo ${e.groupB}.`;if("groupTogether"===e.type)return e.groupA===e.groupB?`Las personas del grupo ${e.groupA} deben sentarse lo más cerca posible unas de otras.`:`Las personas del grupo ${e.groupA} deben situarse lo más cerca posible de las personas del grupo ${e.groupB}.`;if("groupNear"===e.type)return e.groupA===e.groupB?`Las personas del grupo ${e.groupA} deberían sentarse relativamente cerca unas de otras.`:`Las personas del grupo ${e.groupA} deberían situarse relativamente cerca de las personas del grupo ${e.groupB}.`;if("groupFront"===e.type)return 1===e.groups.length?`Las personas del grupo ${e.groups[0]} deben situarse lo más adelante posible.`:`Las personas de los grupos ${Et(e.groups)} deben situarse lo más adelante posible.`;if("groupBack"===e.type){const t=e.groups;if(1===t.length)return`Las personas del grupo ${t[0]} deben situarse lo más atrás posible.`;const n=t.slice(1).map((e,n)=>`el grupo ${e} quede detrás del grupo ${t[n]}`).join(" y ");return`Los grupos ${Et(t)} deben situarse en la parte trasera, procurando que ${n}.`}const n=e.ids.map(e=>kt(t,e)),a=Et(n),o=1===n.length;return"front"===e.type?`${a} ${o?"se debe sentar":"se deben sentar"} lo más adelante posible.`:`${a} ${o?"se debe sentar":"se deben sentar"} lo más atrás posible.`}(t,e))} <span class="constraint-score ${o.className}">${Rt(o.text)}</span></li>`}).join(""),l=o.length?`<div class="output-note"><strong>Aviso:</strong> ${Rt(o.join(" "))}</div>`:"";zt(`<div class="output-summary-head"><strong>Resumen de la organización</strong><span>Calidad global: ${s}%</span><span>${t.length} restricción${1===t.length?"":"es"}</span></div><ul class="output-list">${i}</ul>${l}`)}function Ht(){zt('<div class="output-summary-head"><strong>Distribución aleatoria aplicada.</strong></div><div class="output-note">Las restricciones no se han utilizado para generar esta distribución.</div>')}function Wt(e,t,n){if(!e)return void Gt();const a=Mt(e.assignment,t,n),o=a.maxPossible?Math.max(0,Math.round(100*(1-a.total/a.maxPossible))):100,r=t.map(t=>Tt(t,e.assignment,n)).sort((e,t)=>e.satisfaction-t.satisfaction).slice(0,3).filter(e=>e.satisfaction<.72);x.solutionPanel.innerHTML=[`<span><strong>Calidad:</strong> ${o}%</span>`,`<span><strong>Coste:</strong> ${a.total.toFixed(3)}</span>`,`<span><strong>Restricciones:</strong> ${t.length}</span>`,`<span><strong>Evaluaciones:</strong> ${e.evaluated.toLocaleString("es-ES")}</span>`,...r.length?[`<span><strong>A mejorar:</strong> ${r.map(e=>`${Rt(e.raw)} (${Math.round(100*e.satisfaction)}%)`).join(" · ")}</span>`]:[]].join(""),x.solutionPanel.hidden=!1}function Gt(){x.solutionPanel.hidden=!0,x.solutionPanel.innerHTML="",Pt()}function Rt(e){return String(e).replace(/[&<>'"]/g,e=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[e]))}function jt(e,t,n){if(e.measureText(t).width<=n)return t;let a=t;for(;a.length>1&&e.measureText(`${a}…`).width>n;)a=a.slice(0,-1);return`${a}…`}function Xt(){const e=Math.max(1,x.classroom.clientWidth),t=Math.max(1,x.classroom.clientHeight),n=1600,a=Math.max(1,Math.round(n*t/e)),o=String(B.spaceName||"").trim(),r=o?86:0,s=a+r,i=n/e,l=a/t,c=function(){const e=getComputedStyle(document.body),t=t=>e.getPropertyValue(t).trim();return{room:t("--room")||"#ffffff",grid:t("--room-grid")||"rgba(0,0,0,.04)",table:t("--table")||"#ffffff",tableBorder:t("--table-border")||"#171717",tableText:t("--table-text")||"#171717",muted:t("--muted")||"#686868",zoneBorder:t("--muted")||"#686868",zoneFill:t("--surface-2")||"#f1f1ef"}}(),u=ie(),d=new Map(u.map(e=>[e.id,e])),p=document.createElement("canvas");p.width=n,p.height=s;const m=p.getContext("2d",{alpha:!1});m.fillStyle=c.room,m.fillRect(0,0,n,s),o&&(m.fillStyle=c.tableText,m.textAlign="center",m.textBaseline="middle",m.font="700 34px Arial, sans-serif",m.fillText(jt(m,o,1520),800,r/2)),m.strokeStyle=c.grid,m.lineWidth=Math.max(1,i),m.beginPath();const h=32*i,g=32*l;for(let e=h;e<n;e+=h)m.moveTo(Math.round(e)+.5,r),m.lineTo(Math.round(e)+.5,s);for(let e=g;e<a;e+=g){const t=r+e;m.moveTo(0,Math.round(t)+.5),m.lineTo(n,Math.round(t)+.5)}m.stroke(),m.save(),m.setLineDash([9*i,6*i]),m.lineWidth=Math.max(1.5,i);for(const n of B.zones){const a=G(n,e,t),o=a.left*i,s=r+a.top*l,u=a.width*i,d=a.height*l;m.fillStyle=c.zoneFill,m.fillRect(o,s,u,d),m.strokeStyle=c.zoneBorder,m.strokeRect(o,s,u,d),m.fillStyle=c.muted,m.textAlign="center",m.textBaseline="middle",m.font=`700 ${Math.max(12,9*Math.min(i,l))}px Arial, sans-serif`,m.fillText("ZONA PROTEGIDA",o+u/2,s+d/2)}m.restore();const f=B.tableWidth*i,b=B.tableHeight*l,v=f/2,y=b/2;for(const e of B.tables){const t=d.get(e.id),o=Z(e.rotation),s=90===o||270===o,u=s?y:v,p=s?v:y,h=M(e.xNorm*n,u,n-u),g=r+M(e.yNorm*a,p,a-p);m.save(),m.translate(h,g),m.rotate(o*Math.PI/180);const x=-v,B=-y;m.fillStyle=c.table,m.fillRect(x,B,f,b),m.strokeStyle=c.tableBorder,m.lineWidth=Math.max(1.5,i),m.strokeRect(x,B,f,b),m.fillStyle=c.muted,m.textAlign="left",m.textBaseline="top",m.font=`500 ${Math.max(12,9*i)}px Arial, sans-serif`,m.fillText(String(e.id),x+5*i,B+4*l);const w=t?t.displayName:"Libre";m.fillStyle=t?c.tableText:c.muted,m.textAlign="center",m.textBaseline="middle",m.font=`600 ${Math.max(15,12*Math.min(i,l))}px Arial, sans-serif`;const $=jt(m,w,Math.max(10,f-12*i));m.fillText($,0,1*l),m.restore()}return m.strokeStyle=c.tableBorder,m.lineWidth=Math.max(1.5,i),m.strokeRect(.75*i,r+.75*l,n-1.5*i,a-1.5*l),p}function Ot(e){return(new TextEncoder).encode(e)}function Yt(e){const t=e.reduce((e,t)=>e+t.length,0),n=new Uint8Array(t);let a=0;for(const t of e)n.set(t,a),a+=t.length;return n}function Zt(){const e=x.downloadPdfBtn.textContent;x.downloadPdfBtn.disabled=!0,x.downloadPdfBtn.textContent="Preparando…";try{const e=Xt(),t=function(e,t,n){const a=595.28,o=841.89,r=Math.min(547.28/t,793.89/n),s=t*r,i=n*r,l=(a-s)/2,c=(o-i)/2,u=Ot(`q\n${s.toFixed(3)} 0 0 ${i.toFixed(3)} ${l.toFixed(3)} ${c.toFixed(3)} cm\n/Im0 Do\nQ\n`),d=[null,Ot("<< /Type /Catalog /Pages 2 0 R >>"),Ot("<< /Type /Pages /Kids [3 0 R] /Count 1 >>"),Ot("<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /XObject << /Im0 5 0 R >> >> /Contents 4 0 R >>"),Yt([Ot(`<< /Length ${u.length} >>\nstream\n`),u,Ot("endstream")]),Yt([Ot(`<< /Type /XObject /Subtype /Image /Width ${t} /Height ${n} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${e.length} >>\nstream\n`),e,Ot("\nendstream")])],p=[Ot("%PDF-1.4\n")],m=new Array(d.length).fill(0);let h=p[0].length;for(let e=1;e<d.length;e++){m[e]=h;const t=Yt([Ot(`${e} 0 obj\n`),d[e],Ot("\nendobj\n")]);p.push(t),h+=t.length}const g=h;let f=`xref\n0 ${d.length}\n0000000000 65535 f \n`;for(let e=1;e<d.length;e++)f+=`${String(m[e]).padStart(10,"0")} 00000 n \n`;return f+=`trailer\n<< /Size ${d.length} /Root 1 0 R >>\nstartxref\n${g}\n%%EOF`,p.push(Ot(f)),Yt(p)}(function(e){const t=e.split(",")[1],n=atob(t),a=new Uint8Array(n.length);for(let e=0;e<n.length;e++)a[e]=n.charCodeAt(e);return a}(e.toDataURL("image/jpeg",.96)),e.width,e.height),n=new Blob([t],{type:"application/pdf"}),a=URL.createObjectURL(n),o=document.createElement("a");o.href=a,o.download="ubicapp-plano.pdf",document.body.appendChild(o),o.click(),o.remove(),setTimeout(()=>URL.revokeObjectURL(a),1e3),Ut("Plano descargado en PDF A4 vertical.","success")}catch(e){console.error("No se pudo generar el PDF:",e),Ut("No se pudo generar el PDF del plano.","error")}finally{x.downloadPdfBtn.disabled=!1,x.downloadPdfBtn.textContent=e}}function Ut(e,t="error"){x.message.textContent=e,x.message.className=`message ${t}`,x.message.hidden=!e}function Jt(){x.message.hidden=!0,x.message.textContent=""}function Qt(e){if(x.studentErrors){if(!e.length)return x.studentErrors.hidden=!0,void(x.studentErrors.innerHTML="");x.studentErrors.innerHTML=`<ul>${e.map(e=>`<li>${Rt(e)}</li>`).join("")}</ul>`,x.studentErrors.hidden=!1}}function Vt(e){if(!e.length)return x.constraintErrors.hidden=!0,void(x.constraintErrors.innerHTML="");x.constraintErrors.innerHTML=`<ul>${e.map(e=>`<li>${Rt(e)}</li>`).join("")}</ul>`,x.constraintErrors.hidden=!1}function Kt(){const e=ie(),t=ue(e),n=le(e),a=[...n,...t.errors];if(Qt(n),Vt(t.errors),!e.length)return Ut("Añade al menos una persona.","error"),null;if(e.length>B.tables.length)return Ut(`Hay ${e.length} personas y solo ${B.tables.length} mesas. Añade al menos ${e.length-B.tables.length} mesa(s).`,"error"),null;const o=new Set(B.tables.map(e=>e.id)),r=e.map(e=>e.id).filter(e=>!o.has(e));if(r.length)return Ut(`Falta(n) la(s) mesa(s) ${r.join(", ")}. Cada persona debe conservar la mesa con su mismo número.`,"error"),null;if(a.length)return Ut("Corrige las etiquetas de grupo o las restricciones marcadas antes de organizar.","error"),null;const s=function(e){const t=new Map,n=new Map,a=[];for(const a of e){if("a"in a){const[e,n]=[a.a,a.b].sort((e,t)=>e-t),o=`${e}:${n}`;t.has(o)||t.set(o,new Set),t.get(o).add(a.type)}if(a.groupA&&a.groupB){const[e,t]=[a.groupA,a.groupB].sort(),o=`${e}:${t}`;n.has(o)||n.set(o,new Set),n.get(o).add(a.type)}}for(const[e,n]of t.entries())n.has("far")&&(n.has("together")||n.has("near"))&&a.push(`Las personas ${e.replace(":"," y ")} tienen restricciones de separación y proximidad simultáneas.`);for(const[e,t]of n.entries())if(t.has("groupFar")&&(t.has("groupTogether")||t.has("groupNear"))){const[t,n]=e.split(":");a.push(t===n?`El grupo ${t} tiene restricciones internas de separación y proximidad simultáneas.`:`Los grupos ${t} y ${n} tienen restricciones de separación y proximidad simultáneas.`)}const o=new Set,r=new Set,s=new Set,i=new Set;e.forEach(e=>{"front"===e.type&&e.ids.forEach(e=>o.add(e)),"back"===e.type&&e.ids.forEach(e=>r.add(e)),"groupFront"===e.type&&e.groups.forEach(e=>s.add(e)),"groupBack"===e.type&&e.groups.forEach(e=>i.add(e))}),[...o].filter(e=>r.has(e)).forEach(e=>{a.push(`La persona ${e} aparece a la vez en DELANTE y DETRÁS.`)}),[...s].filter(e=>i.has(e)).forEach(e=>{a.push(`El grupo ${e} aparece a la vez en DELANTE y DETRÁS.`)});const l=new Set,c=new Set;return e.forEach(e=>{"left"===e.type&&e.memberIds.forEach(e=>l.add(e)),"right"===e.type&&e.memberIds.forEach(e=>c.add(e))}),[...l].filter(e=>c.has(e)).forEach(e=>{a.push(`La persona ${e} aparece a la vez en IZQUIERDA y DERECHA.`)}),a}(t.constraints);return s.length?Ut(`Aviso: ${s.join(" ")}`,"warning"):Jt(),{students:e,constraints:t.constraints,contradictions:s}}async function _t(){const e=Kt();if(!e)return;D();const t=L(),n=T(),a=At(t?"Generando alternativas…":"Buscando una buena distribución…");x.organizeBtn.disabled=!0,x.randomizeBtn.disabled=!0;const o=x.organizeBtn.textContent;x.organizeBtn.textContent="Organizando…",await new Promise(requestAnimationFrame);try{const o=ht(),r=xt(e.students),s=r?[...e.constraints,r]:e.constraints;let i,l=[];if(0===s.length)if(t){Nt(a,52,"Generando tres distribuciones…");const t=[],n=new Set;for(let a=0;a<24&&t.length<3;a++){const a=$t(e.students.length,B.tables.length,wt(e.students.length)),o=E(a);n.has(o)||(n.add(o),t.push({assignment:a,score:0,evaluated:1,quality:null}))}l=t,i=l[0]}else Nt(a,70,"Generando distribución…"),i={assignment:$t(e.students.length,B.tables.length,wt(e.students.length)),score:0,evaluated:1};else i=await async function(e,t,n,a=null,o={}){const r=B.tables.length,s=wt(e),i=Math.max(1,t.length+e),l=Math.min(18e3,Math.max(5e3,260*i)),c=Number.isFinite(o.restarts)?Math.max(1,Math.floor(o.restarts)):r>35?4:5;let u=null;const d=[];let p=0;const m=l*c;for(let o=0;o<c;o++){let o=$t(e,0,s),i=Mt(o,t,n).total,c=o.slice(),h=i;const g=Math.max(.08,i/Math.max(1,4*t.length));for(let e=0;e<l;e++){const u=e/l,d=Math.max(5e-4,g*Math.pow(.002,u)),f=Ct(o,r,s),b=Mt(f,t,n).total,v=b-i;(v<=0||Math.random()<Math.exp(-v/d))&&(o=f,i=b,i<h&&(c=o.slice(),h=i)),p++,e>0&&e%3e3==0&&(a&&a(p/m),await new Promise(requestAnimationFrame))}const f={assignment:c.slice(),score:h,evaluated:p};d.push(f),(!u||h<u.score)&&(u={assignment:c.slice(),score:h}),a&&a(p/m),await new Promise(requestAnimationFrame)}return a&&a(1),{...u,evaluated:p,candidates:d}}(e.students.length,s,o,e=>Nt(a,96*e,t?"Buscando alternativas distintas…":r?"Optimizando restricciones y equipos ABBC…":"Optimizando restricciones…"),t?{restarts:B.tables.length>35?8:10}:{}),t&&(l=P(i.candidates||[i],3,e.students.length).map(e=>({...e,quality:z(e,s,o)})),i=l[0]||i);t&&l.length?(q(l,n,{mode:"organized",students:e.students,constraints:s,distanceMatrix:o,contradictions:e.contradictions}),H(0),l.length<3?Ut(`Se han encontrado ${l.length} alternativa(s) suficientemente distinta(s).`,"warning"):e.contradictions.length||Ut("Se han generado 3 alternativas distintas. Selecciona A, B o C para compararlas.","success")):(Wt(i,s,o),qt(e.students,s,i,o,e.contradictions),It(i.assignment,e.students.length,n),e.contradictions.length||Ut("Organización calculada: cada persona conserva su mismo número de mesa.","success")),B.layoutActive=!1,B.lastSolution=null,un(),Lt(a,t?"Alternativas generadas":"Distribución completada"),C(a)}catch(e){throw Lt(a,"No se pudo completar"),e}finally{x.organizeBtn.textContent=o,tn()}}function en(){const e=ie();if(!e.length)return void Ut("Añade al menos una persona.","error");if(e.length>B.tables.length)return void Ut(`Hay ${e.length} personas y solo ${B.tables.length} mesas.`,"error");const t=new Set(B.tables.map(e=>e.id)),n=e.map(e=>e.id).filter(e=>!t.has(e));if(n.length)return void Ut(`Falta(n) la(s) mesa(s) ${n.join(", ")}. Cada persona debe conservar la mesa con su mismo número.`,"error");D();const a=L(),o=T(),r=At(a?"Generando alternativas aleatorias…":"Generando distribución aleatoria…");if(Nt(r,28),a){const t=[],n=new Set;for(let a=0;a<30&&t.length<3;a++){const a=$t(e.length,B.tables.length,wt(e.length)),o=E(a);n.has(o)||(n.add(o),t.push({assignment:a,score:0,evaluated:1,quality:null}))}q(t,o,{mode:"random",students:e}),t.length&&H(0),Ut(`${t.length} alternativa(s) aleatoria(s) generada(s).`,"success")}else{It($t(e.length,B.tables.length,wt(e.length)),e.length,o),Gt(),Ht(),Ut("Posiciones aleatorias aplicadas manteniendo cada pareja persona-mesa.","success")}B.layoutActive=!1,B.lastSolution=null,un(),Nt(r,72),Lt(r,a?"Alternativas generadas":"Distribución completada"),C(r)}function tn(){const e=ie(),t=ue(e),n=le(e),a=[...n,...t.errors],o=x.constraintsInput.value.split(/\r?\n/).filter(e=>{const t=e.trim();return t&&!t.startsWith("#")}).length;x.studentCountBadge.textContent=String(e.length),x.constraintCountBadge.textContent=String(o),x.metrics.innerHTML=`\n      <span>${B.tables.length} mesas</span>\n      <span>${e.length} personas</span>\n      <span>${o} restricciones</span>\n    `;const r=new Set(B.tables.map(e=>e.id)),s=e.some(e=>!r.has(e.id)),i=e.length>B.tables.length||0===e.length||s;x.organizeBtn.disabled=i||a.length>0,x.randomizeBtn.disabled=i,x.clearTablesBtn.disabled=0===B.tables.length,et(),Qt(n),Vt(t.errors)}function nn(){if(x.helpFrame)try{const e=x.helpFrame.contentDocument?.body;e&&(e.dataset.theme=B.theme)}catch(e){}}function an(e){const t=[document.querySelector(".info-bar"),document.querySelector(".app-shell"),document.querySelector(".site-footer")].filter(Boolean);for(const n of t)"inert"in n&&(n.inert=e),e?n.setAttribute("aria-hidden","true"):n.removeAttribute("aria-hidden")}function on(){if(x.helpModal&&!B.helpModalOpen){if(B.helpModalOpen=!0,B.helpReturnFocus=document.activeElement instanceof HTMLElement?document.activeElement:x.helpOpenBtn,B.helpReturnFocus?.blur?.(),x.helpModal.hidden=!1,document.body.classList.add("help-modal-open"),an(!0),x.helpFrame&&!x.helpFrame.getAttribute("src"))x.helpFrame.setAttribute("src",x.helpFrame.dataset.src||"help.html?embedded=1");else try{x.helpFrame?.contentWindow?.scrollTo(0,0)}catch(e){}requestAnimationFrame(()=>{nn(),x.helpCloseBtn?.focus()})}}function rn(){if(!x.helpModal||!B.helpModalOpen)return;B.helpModalOpen=!1,x.helpModal.hidden=!0,document.body.classList.remove("help-modal-open"),an(!1);const e=B.helpReturnFocus&&document.contains(B.helpReturnFocus)?B.helpReturnFocus:x.helpOpenBtn;B.helpReturnFocus=null,requestAnimationFrame(()=>e?.focus())}function sn(e){e.target===x.helpModal&&rn()}function ln(e){if(!B.helpModalOpen)return;if("Escape"===e.key)return e.preventDefault(),e.stopPropagation(),void rn();if("Tab"!==e.key)return;const t=[x.helpCloseBtn,x.helpFrame].filter(e=>e&&!e.hidden&&!e.disabled);if(!t.length)return e.preventDefault(),void x.helpModalDialog?.focus();const n=t.indexOf(document.activeElement);e.shiftKey&&n<=0?(e.preventDefault(),t[t.length-1].focus()):e.shiftKey||n!==t.length-1||(e.preventDefault(),t[0].focus())}function cn(e){B.theme=["light","dark","blue","warm"].includes(e)?e:"light",document.body.dataset.theme=B.theme,x.themeSelect.value=B.theme,nn()}function un(){clearTimeout(B.saveTimer),x.saveStatus.textContent="Guardando…",B.saveTimer=setTimeout(()=>{const t={version:3,tables:B.tables,tableWidth:B.tableWidth,tableHeight:B.tableHeight,theme:B.theme,spaceLayout:B.spaceLayout,layoutActive:B.layoutActive,students:x.studentsInput.value,constraints:x.constraintsInput.value,lastSolution:B.lastSolution,outputCollapsed:B.outputCollapsed,cooperativeBlockPositions:B.cooperativeBlockPositions,zones:B.zones,examplePreset:B.examplePreset,spaceName:B.spaceName};localStorage.setItem(e,JSON.stringify(t)),x.saveStatus.textContent="Guardado",setTimeout(()=>{"Guardado"===x.saveStatus.textContent&&(x.saveStatus.textContent="Listo")},1e3)},180)}function dn(){Se(),D(),function(){B.tables=[],B.cooperativeBlockPositions=[],B.zones=[],B.selectedZoneId=null,B.zoneMode=!1,B.zoneDraft=null,B.zoneDragging=null,B.selectedTableId=null,B.selectedTableIds.clear(),B.tableWidth=n,B.tableHeight=54,B.spaceLayout=a,B.layoutActive=!0;for(let e=0;e<30;e++){const t=Math.floor(e/5),n=e%5;B.tables.push({id:e+1,xNorm:(n+.5)/5,yNorm:(t+.5)/6,rotation:0,locked:!1})}}(),x.studentsInput.value=ee(),B.examplePreset="cooperative",x.exampleSelect&&(x.exampleSelect.value=B.examplePreset),x.constraintsInput.value=m,B.spaceName="",x.spaceNameInput&&(x.spaceNameInput.value=""),x.personSearchInput&&(x.personSearchInput.value=""),S(),B.spaceLayout=o,B.layoutActive=!0,B.outputCollapsed=!1,B.cooperativeBlockPositions=[],B.zones=[],B.selectedZoneId=null,B.selectedTableId=null,B.selectedTableIds.clear(),qe(!1),B.lastSolution=null,x.layoutSelect&&(x.layoutSelect.value=o),x.generateAlternativesCheckbox&&(x.generateAlternativesCheckbox.checked=!0),Jt(),Gt(),Me(o,{message:!1,save:!1,scroll:!1}),Ft(),oe(),tn()}function pn(){Boolean(B.tables.length||B.zones.length||String(x.studentsInput?.value||"").trim()||String(x.constraintsInput?.value||"").trim()||String(B.spaceName||"").trim()||B.alternatives.length)&&!window.confirm("¿Quieres cargar el ejemplo y sustituir el contenido actual?")||(w(),dn(),un(),_t().catch(e=>{console.error("No se pudo organizar el ejemplo ABC:",e),Ut("No se pudo completar la organización del ejemplo ABC.","error")}))}function mn(e={}){w(),Se(),D({uncheck:!0}),B.tables=[],B.tableWidth=n,B.tableHeight=54,B.spaceLayout=a,B.layoutActive=!1,B.lastSolution=null,B.selectedTableId=null,B.selectedTableIds.clear(),B.cooperativeBlockPositions=[],B.zones=[],B.selectedZoneId=null,B.zoneDraft=null,B.zoneDragging=null,B.outputCollapsed=!1,B.examplePreset="custom",B.spaceName="",qe(!1),x.studentsInput.value="",x.constraintsInput.value="",x.spaceNameInput&&(x.spaceNameInput.value=""),x.personSearchInput&&(x.personSearchInput.value=""),x.exampleSelect&&(x.exampleSelect.value="custom"),x.layoutSelect&&(x.layoutSelect.value=a),x.generateAlternativesCheckbox&&(x.generateAlternativesCheckbox.checked=!1),S(),Jt(),Gt(),Pt(),Ft(),ze(),oe(),tn(),et(),e.save&&un()}function hn(){window.confirm("¿Quieres crear un nuevo espacio? Se eliminará la configuración actual.")&&(localStorage.removeItem(e),localStorage.removeItem(t),mn({save:!0}))}function gn(){Se(),D(),B.lastSolution=null,oe(),ze(),Gt(),tn(),un()}function fn(){Se(),D(),B.lastSolution=null,Gt(),tn(),un()}function bn(){w(),x.peoplePanel?.scrollIntoView({behavior:"smooth",block:"start"})}function vn(){w(),window.scrollTo({top:0,behavior:"smooth"})}async function yn(e){const t=Object.prototype.hasOwnProperty.call(i,e)?e:a;if("manual"===t)return void Me(t);const n=String(x.constraintsInput?.value||"").split(/\r?\n/).some(e=>{const t=e.trim();return Boolean(t&&!t.startsWith("#"))});Me(t,{scroll:!n}),n&&await _t()}!function(){const o=function(){const o=localStorage.getItem(e)||localStorage.getItem(t);if(!o)return!1;try{const e=JSON.parse(o);return!!Array.isArray(e.tables)&&(B.tables=e.tables.filter(e=>Number.isFinite(e.id)&&Number.isFinite(e.xNorm)&&Number.isFinite(e.yNorm)).map(e=>({id:Number(e.id),xNorm:M(Number(e.xNorm),0,1),yNorm:M(Number(e.yNorm),0,1),rotation:Z(e.rotation),locked:Boolean(e.locked)})),B.tableWidth=M(Number(e.tableWidth)||n,72,180),B.tableHeight=M(Number(e.tableHeight)||54,36,88),B.lastSolution=null,B.selectedTableId=null,B.selectedTableIds.clear(),x.studentsInput.value=V("string"==typeof e.students?e.students:_()),B.examplePreset=ae(x.studentsInput.value),x.exampleSelect&&(x.exampleSelect.value=B.examplePreset),x.constraintsInput.value="string"==typeof e.constraints?e.constraints:"",B.spaceName="string"==typeof e.spaceName?e.spaceName:"",x.spaceNameInput&&(x.spaceNameInput.value=B.spaceName),S(),cn(e.theme||"light"),B.spaceLayout=Object.prototype.hasOwnProperty.call(i,e.spaceLayout)?e.spaceLayout:a,B.layoutActive="manual"!==B.spaceLayout&&"boolean"==typeof e.layoutActive&&e.layoutActive,B.outputCollapsed=Boolean(e.outputCollapsed),B.zones=Array.isArray(e.zones)?e.zones.filter(e=>Number.isFinite(e.id)&&Number.isFinite(e.xNorm)&&Number.isFinite(e.yNorm)&&Number.isFinite(e.widthNorm)&&Number.isFinite(e.heightNorm)).map(e=>({id:Number(e.id),xNorm:M(Number(e.xNorm),0,1),yNorm:M(Number(e.yNorm),0,1),widthNorm:M(Number(e.widthNorm),.01,1),heightNorm:M(Number(e.heightNorm),.01,1)})):[],B.selectedZoneId=null,B.zoneMode=!1,B.zoneDraft=null,B.zoneDragging=null,B.cooperativeBlockPositions=Array.isArray(e.cooperativeBlockPositions)?e.cooperativeBlockPositions.map(e=>Array.isArray(e)?e.filter(e=>e&&Number.isFinite(e.xNorm)&&Number.isFinite(e.yNorm)).map(e=>({xNorm:M(Number(e.xNorm),0,1),yNorm:M(Number(e.yNorm),0,1)})):[]).filter(e=>4===e.length):[],x.layoutSelect&&(x.layoutSelect.value=B.spaceLayout),!0)}catch(e){return console.warn("No se pudo restaurar UbicApp:",e),!1}}();o||mn({save:!1}),x.addTableBtn.addEventListener("click",pt),x.addTablesBtn.addEventListener("click",()=>dt(x.tableCountInput.value)),x.tableCountInput.addEventListener("keydown",e=>{"Enter"===e.key&&(e.preventDefault(),dt(x.tableCountInput.value))}),x.tableCountInput.addEventListener("change",()=>{const e=Math.floor(Number(x.tableCountInput.value));x.tableCountInput.value=String(Number.isFinite(e)&&e>0?e:1)}),x.deleteTableBtn.addEventListener("click",st),x.increaseSizeBtn.addEventListener("click",()=>mt(8)),x.decreaseSizeBtn.addEventListener("click",()=>mt(-8)),x.layoutSelect.addEventListener("change",e=>{yn(e.target.value)}),x.clearTablesBtn.addEventListener("click",it),x.rotateTableBtn.addEventListener("click",at),x.lockTableBtn.addEventListener("click",ot),x.addZoneBtn.addEventListener("click",He),x.spaceNameInput&&x.spaceNameInput.addEventListener("input",A),x.personSearchInput&&x.personSearchInput.addEventListener("input",ke),x.peopleListBtn&&x.peopleListBtn.addEventListener("click",bn),x.viewExampleBtn&&x.viewExampleBtn.addEventListener("click",pn),x.toggleOutputBtn.addEventListener("click",Dt),x.downloadPdfBtn.addEventListener("click",Zt),x.organizeBtn.addEventListener("click",_t),x.randomizeBtn.addEventListener("click",en),x.generateAlternativesCheckbox&&x.generateAlternativesCheckbox.addEventListener("change",()=>{x.generateAlternativesCheckbox.checked||D()}),x.resetBtn.addEventListener("click",hn),x.themeSelect.addEventListener("change",e=>{cn(e.target.value),un()}),x.exampleSelect&&x.exampleSelect.addEventListener("change",e=>re(e.target.value)),x.clearPeopleBtn&&x.clearPeopleBtn.addEventListener("click",se),x.viewSpaceBtn&&x.viewSpaceBtn.addEventListener("click",vn),x.studentsInput.addEventListener("input",gn),x.studentsInput.addEventListener("blur",ce),x.constraintsInput.addEventListener("input",fn),x.classroom.addEventListener("pointerdown",Ye),x.classroom.addEventListener("pointermove",Ze),x.classroom.addEventListener("pointerup",Ue),x.classroom.addEventListener("pointercancel",Ue),x.helpOpenBtn&&x.helpOpenBtn.addEventListener("click",on),x.helpOpenFooterBtn&&x.helpOpenFooterBtn.addEventListener("click",on),x.helpCloseBtn&&x.helpCloseBtn.addEventListener("click",rn),x.helpModal&&x.helpModal.addEventListener("click",sn),x.helpFrame&&x.helpFrame.addEventListener("load",nn),window.addEventListener("message",e=>{e.source===x.helpFrame?.contentWindow&&"roomplanner-help-close"===e.data?.type&&rn()}),document.addEventListener("keydown",ln,!0),document.addEventListener("keydown",Ke),new ResizeObserver(()=>{B.layoutActive?Me(B.spaceLayout,{message:!1,save:!1,scroll:!1}):ze()}).observe(x.classroom),Ft(),Pt(),o&&(x.layoutSelect&&(x.layoutSelect.value=B.spaceLayout),ze()),oe(),S(),tn(),function(e=null){const t=()=>{N(!1),"function"==typeof e&&requestAnimationFrame(()=>{try{e()}catch(e){console.warn("No se pudo completar la inicialización posterior al splash:",e)}})};x.splashModal&&x.splashProgressFill?(N(!0),x.splashModal.hidden=!1,x.splashModal.setAttribute("aria-hidden","false"),x.splashDialog?.focus({preventScroll:!0}),x.splashProgressFill.style.transition="none",x.splashProgressFill.style.width="0%",x.splashProgressTrack&&x.splashProgressTrack.setAttribute("aria-valuenow","0"),requestAnimationFrame(()=>{requestAnimationFrame(()=>{x.splashProgressFill.style.transition="width 5000ms linear",x.splashProgressFill.style.width="100%",x.splashProgressTrack&&x.splashProgressTrack.setAttribute("aria-valuenow","100")})}),setTimeout(()=>{x.splashModal.classList.add("closing"),setTimeout(()=>{x.splashModal.hidden=!0,x.splashModal.setAttribute("aria-hidden","true"),x.splashModal.classList.remove("closing"),t()},320)},5e3)):t()}()}()})();
+(() => {
+  'use strict';
+
+  const STORAGE_KEY = 'app-spaces-state-v2';
+  const LEGACY_STORAGE_KEY = 'app-spaces-state-v1';
+  const INITIAL_TABLE_COUNT = 30;
+  const INITIAL_ROWS = 6;
+  const INITIAL_COLS = 5;
+  const INITIAL_TABLE_WIDTH = 112;
+  const INITIAL_TABLE_HEIGHT = 54;
+  const MIN_TABLE_WIDTH = 72;
+  const MAX_TABLE_WIDTH = 180;
+  const TABLE_SIZE_STEP = 8;
+  const DEFAULT_SPACE_LAYOUT = 'manual';
+  const DIDACTIC_SPACE_LAYOUT = 'individual';
+  const MIN_PROGRESS_VISIBLE_MS = 2000;
+  const TOOLTIP_DELAY_MS = 350;
+  const SPLASH_VISIBLE_MS = 5000;
+  const POST_PROGRESS_SCROLL_DELAY_MS = 2000;
+  const VISIT_COUNTER_BASE_URL = 'https://abacus.jasoncameron.dev';
+  const VISIT_COUNTER_KEY = 'ubicapp-visits-v1';
+  const VISIT_COUNTER_TIMEOUT_MS = 6000;
+
+  const SPACE_LAYOUT_LABELS = Object.freeze({
+    manual: 'Manual',
+    individual: 'Individual',
+    pairs: '2 mesas juntas',
+    trios: '3 mesas juntas',
+    'two-three-two': 'Esquema 2-3-2',
+    circular: 'Circular',
+    team4: 'Equipos x4',
+    team5: 'Equipos x5',
+    team6: 'Equipos x6',
+    'cooperative-abbc': 'Cooperativo ABBC'
+  });
+
+  const DEFAULT_STUDENTS = [
+    'de Cervantes Saavedra, Miguel / L',
+    'García Lorca, Federico / L',
+    'Pérez Galdós, Benito / L',
+    'Pardo Bazán, Emilia / L',
+    'Machado Ruiz, Antonio / L',
+    'Ramón y Cajal, Santiago / C',
+    'Ochoa de Albornoz, Severo / C',
+    'Salas Falgueras, Margarita / C',
+    'Torres Quevedo, Leonardo / C',
+    'de la Cierva Codorníu, Juan / C',
+    'Ruiz Picasso, Pablo / A',
+    'Dalí Domènech, Salvador / A',
+    'de Goya y Lucientes, Francisco / A',
+    'Sorolla Bastida, Joaquín / A',
+    'Quevedo Villegas, Francisco de / L',
+    'Campoamor Rodríguez, Clara / H',
+    'Hernández Gilabert, Miguel / L',
+    'Jiménez Mantecón, Juan Ramón / L',
+    'Delibes Setién, Miguel / L',
+    'Cela Trulock, Camilo José / L',
+    'Ortega y Gasset, José / P',
+    'Unamuno Jugo, Miguel de / P',
+    'Peral Caballero, Isaac / C',
+    'Marañón Posadillo, Gregorio / C',
+    'Rodrigo Vidre, Joaquín / M',
+    'Albéniz Pascual, Isaac / M',
+    'Buñuel Portolés, Luis / M',
+    'García Berlanga, Luis / M',
+    'Falla Matheu, Manuel de / M',
+    'Segovia Torres, Andrés / M'
+  ];
+
+  const DEFAULT_STUDENT_COMMENTS = [
+    '# Formato: Apellidos, Nombre / grupo',
+    '# Grupos: L=Literatura, C=Ciencia, A=Arte, H=Historia, P=Pensamiento, M=Música',
+    '# Las letras pueden utilizarse en las restricciones para referirse a grupos de personas.',
+    '#'
+  ];
+
+
+  const COOPERATIVE_GROUP_LABELS = Object.freeze([
+    'B','A','B','C','B','A','B','C','B','A',
+    'B','C','B','A','B','C','B','A','B','C',
+    'B','A','B','C','B','A','B','C','B','A'
+  ]);
+
+  const COOPERATIVE_STUDENTS = DEFAULT_STUDENTS.map((entry, index) => {
+    const baseName = entry.replace(/\s*\/\s*[A-Za-z]\s*$/, '');
+    return `${baseName} / ${COOPERATIVE_GROUP_LABELS[index]}`;
+  });
+
+  const COOPERATIVE_STUDENT_COMMENTS = [
+    '# Ejemplo para distribuciones cooperativas',
+    '# Grupos: A, B y C',
+    '# Distribución: A=8, B=15, C=7',
+    '# Adecuado para probar el esquema Cooperativo ABBC',
+    '#'
+  ];
+
+  const DIDACTIC_CONSTRAINTS_TEXT = [
+    '# Restricciones individuales',
+    '1x2',
+    '3-4',
+    '5--6',
+    '',
+    '# Restricciones entre grupos',
+    'AxB',
+    'B-C',
+    'A--C',
+    '',
+    '# Restricciones dentro del mismo grupo',
+    'AxA',
+    'B-B',
+    'C--C',
+    '',
+    '# Posición',
+    'F: 7',
+    'B: 8',
+    'L: 9',
+    'R: 10'
+  ].join('\n');
+
+  const SIMPLE_STUDENTS = Array.from({ length: 30 }, () => 'Apellidos, Nombre');
+
+  const WEIGHTS = Object.freeze({
+    far: 10,
+    together: 12,
+    near: 5,
+    front: 4,
+    back: 4,
+    left: 4,
+    right: 4
+  });
+
+  const GROUP_WEIGHTS = Object.freeze({
+    far: 10,
+    together: 12,
+    near: 5,
+    front: 4,
+    back: 4,
+    left: 4,
+    right: 4,
+    orderedBack: 6
+  });
+
+  const COOPERATIVE_ABBC_WEIGHTS = Object.freeze({
+    composition: 28,
+    pattern: 3
+  });
+
+  const GROUP_COLORS = Object.freeze({
+    A: '#cfe8d5', B: '#f7d7b5', C: '#cfe0f5', D: '#dfd3f2', E: '#f4e7a8', F: '#f3c7c3',
+    G: '#cbe7e4', H: '#edd1e2', I: '#d9e6b8', J: '#f0d9c5', K: '#cbdcf0', L: '#e2d5c5',
+    M: '#c9e2c8', N: '#f0c8ae', O: '#c8d8e8', P: '#d9c6e8', Q: '#eadf9d', R: '#e8bdb8',
+    S: '#bfe0dc', T: '#e5c4d9', U: '#d1dfad', V: '#e8d0bb', W: '#bed4ec', X: '#d8cdbb',
+    Y: '#bfd9bf', Z: '#e9c09f'
+  });
+
+  const $ = (selector) => document.querySelector(selector);
+  const elements = {
+    classroom: $('#classroom'),
+    addTableBtn: $('#addTableBtn'),
+    deleteTableBtn: $('#deleteTableBtn'),
+    increaseSizeBtn: $('#increaseSizeBtn'),
+    decreaseSizeBtn: $('#decreaseSizeBtn'),
+    layoutSelect: $('#layoutSelect'),
+    clearTablesBtn: $('#clearTablesBtn'),
+    tableCountInput: $('#tableCountInput'),
+    addTablesBtn: $('#addTablesBtn'),
+    rotateTableBtn: $('#rotateTableBtn'),
+    lockTableBtn: $('#lockTableBtn'),
+    addZoneBtn: $('#addZoneBtn'),
+    spaceNameInput: $('#spaceNameInput'),
+    spaceNameDisplay: $('#spaceNameDisplay'),
+    classroomWrap: $('#classroomWrap'),
+    personSearchInput: $('#personSearchInput'),
+    peopleListBtn: $('#peopleListBtn'),
+    viewExampleBtn: $('#viewExampleBtn'),
+    outputBar: $('#outputBar'),
+    toggleOutputBtn: $('#toggleOutputBtn'),
+    outputContent: $('#outputContent'),
+    calculationProgress: $('#calculationProgress'),
+    progressLabel: $('#progressLabel'),
+    progressPercent: $('#progressPercent'),
+    progressTrack: $('#progressTrack'),
+    progressFill: $('#progressFill'),
+    tableTooltip: $('#tableTooltip'),
+    downloadPdfBtn: $('#downloadPdfBtn'),
+    themeSelect: $('#themeSelect'),
+    resetBtn: $('#resetBtn'),
+    organizeBtn: $('#organizeBtn'),
+    randomizeBtn: $('#randomizeBtn'),
+    generateAlternativesCheckbox: $('#generateAlternativesCheckbox'),
+    alternativesBar: $('#alternativesBar'),
+    alternativesButtons: $('#alternativesButtons'),
+    exampleSelect: $('#exampleSelect'),
+    clearPeopleBtn: $('#clearPeopleBtn'),
+    viewSpaceBtn: $('#viewSpaceBtn'),
+    peoplePanel: $('#peoplePanel'),
+    studentsInput: $('#studentsInput'),
+    studentErrors: $('#studentErrors'),
+    constraintsInput: $('#constraintsInput'),
+    studentCountBadge: $('#studentCountBadge'),
+    constraintCountBadge: $('#constraintCountBadge'),
+    constraintErrors: $('#constraintErrors'),
+    metrics: $('#metrics'),
+    message: $('#message'),
+    solutionPanel: $('#solutionPanel'),
+    saveStatus: $('#saveStatus'),
+    helpOpenBtn: $('#helpOpenBtn'),
+    helpOpenFooterBtn: $('#helpOpenFooterBtn'),
+    visitCountSeparator: $('#visitCountSeparator'),
+    visitCount: $('#visitCount'),
+    helpModal: $('#helpModal'),
+    helpModalDialog: $('#helpModalDialog'),
+    helpCloseBtn: $('#helpCloseBtn'),
+    helpFrame: $('#helpFrame'),
+    splashModal: $('#splashModal'),
+    splashDialog: $('#splashDialog'),
+    splashProgressTrack: $('#splashProgressTrack'),
+    splashProgressFill: $('#splashProgressFill'),
+    appShell: document.querySelector('main.app-shell'),
+    topInfoBar: document.querySelector('body > .info-bar:not(.site-footer)'),
+    siteFooter: document.querySelector('body > .site-footer')
+  };
+
+  const state = {
+    tables: [],
+    tableWidth: INITIAL_TABLE_WIDTH,
+    tableHeight: INITIAL_TABLE_HEIGHT,
+    theme: 'light',
+    spaceLayout: DEFAULT_SPACE_LAYOUT,
+    layoutActive: false,
+    lastSolution: null,
+    dragging: null,
+    marquee: null,
+    selectedTableId: null,
+    selectedTableIds: new Set(),
+    outputCollapsed: false,
+    saveTimer: null,
+    tooltipTimer: null,
+    progressSequence: 0,
+    progressSession: null,
+    scrollTimer: null,
+    spaceName: '',
+    cooperativeBlockPositions: [],
+    zones: [],
+    selectedZoneId: null,
+    zoneMode: false,
+    zoneDraft: null,
+    zoneDragging: null,
+    examplePreset: 'custom',
+    helpModalOpen: false,
+    helpReturnFocus: null,
+    alternatives: [],
+    alternativeSlotPositions: null,
+    selectedAlternativeIndex: -1,
+    alternativeContext: null
+  };
+
+  function clamp(value, min, max) {
+    return Math.max(min, Math.min(max, value));
+  }
+
+
+  function cancelPendingPageTopScroll() {
+    if (state.scrollTimer) {
+      clearTimeout(state.scrollTimer);
+      state.scrollTimer = null;
+    }
+  }
+
+  function scrollToPageTopSoon(delayMs = 0) {
+    cancelPendingPageTopScroll();
+    state.scrollTimer = setTimeout(() => {
+      state.scrollTimer = null;
+      if (window.scrollY <= 1) return;
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      });
+    }, Math.max(0, Number(delayMs) || 0));
+  }
+
+  function scheduleScrollAfterProgress(token) {
+    cancelPendingPageTopScroll();
+    const session = state.progressSession;
+    if (!session || session.token !== token) {
+      scrollToPageTopSoon(POST_PROGRESS_SCROLL_DELAY_MS);
+      return;
+    }
+    session.onHidden.push(() => scrollToPageTopSoon(POST_PROGRESS_SCROLL_DELAY_MS));
+  }
+
+  function updateSpaceNameDisplay() {
+    const value = String(state.spaceName || '').trim();
+    if (elements.spaceNameInput && elements.spaceNameInput.value !== state.spaceName) {
+      elements.spaceNameInput.value = state.spaceName;
+    }
+    if (elements.spaceNameDisplay) {
+      elements.spaceNameDisplay.textContent = value;
+      elements.spaceNameDisplay.hidden = !value;
+    }
+    if (elements.classroomWrap) elements.classroomWrap.classList.toggle('has-space-name', Boolean(value));
+  }
+
+  function onSpaceNameChanged() {
+    state.spaceName = elements.spaceNameInput?.value || '';
+    updateSpaceNameDisplay();
+    saveStateSoon();
+  }
+
+  function setSplashInteractionBlocked(blocked) {
+    [elements.topInfoBar, elements.appShell, elements.siteFooter].forEach(element => {
+      if (element) element.inert = blocked;
+    });
+    document.body.classList.toggle('splash-modal-open', blocked);
+  }
+
+  function startSplashScreen(onComplete = null) {
+    const complete = () => {
+      setSplashInteractionBlocked(false);
+      if (typeof onComplete === 'function') {
+        requestAnimationFrame(() => {
+          try { onComplete(); } catch (error) { console.warn('No se pudo completar la inicialización posterior al splash:', error); }
+        });
+      }
+    };
+
+    if (!elements.splashModal || !elements.splashProgressFill) {
+      complete();
+      return;
+    }
+    setSplashInteractionBlocked(true);
+    elements.splashModal.hidden = false;
+    elements.splashModal.setAttribute('aria-hidden', 'false');
+    elements.splashDialog?.focus({ preventScroll: true });
+    elements.splashProgressFill.style.transition = 'none';
+    elements.splashProgressFill.style.width = '0%';
+    if (elements.splashProgressTrack) elements.splashProgressTrack.setAttribute('aria-valuenow', '0');
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        elements.splashProgressFill.style.transition = `width ${SPLASH_VISIBLE_MS}ms linear`;
+        elements.splashProgressFill.style.width = '100%';
+        if (elements.splashProgressTrack) elements.splashProgressTrack.setAttribute('aria-valuenow', '100');
+      });
+    });
+
+    setTimeout(() => {
+      elements.splashModal.classList.add('closing');
+      setTimeout(() => {
+        elements.splashModal.hidden = true;
+        elements.splashModal.setAttribute('aria-hidden', 'true');
+        elements.splashModal.classList.remove('closing');
+        complete();
+      }, 320);
+    }, SPLASH_VISIBLE_MS);
+  }
+
+
+  function alternativesEnabled() {
+    return Boolean(elements.generateAlternativesCheckbox?.checked);
+  }
+
+  function layoutUsesSlotRotation() {
+    // En cualquier esquema automático, la orientación forma parte de la geometría
+    // física del slot. Así, una pareja persona-mesa adopta la rotación de la
+    // posición que ocupa y no arrastra una orientación heredada de otro esquema.
+    return state.spaceLayout !== 'manual';
+  }
+
+  function captureAssignmentSlots() {
+    return state.tables.map(table => ({
+      xNorm: table.xNorm,
+      yNorm: table.yNorm,
+      rotation: normalizeRotation(table.rotation)
+    }));
+  }
+
+  function restoreAssignmentSlots(slotPositions) {
+    if (!Array.isArray(slotPositions)) return;
+    const restoreRotation = layoutUsesSlotRotation();
+    state.tables.forEach((table, index) => {
+      const slot = slotPositions[index];
+      if (!slot) return;
+      table.xNorm = slot.xNorm;
+      table.yNorm = slot.yNorm;
+      if (restoreRotation && slot.rotation != null) table.rotation = normalizeRotation(slot.rotation);
+    });
+  }
+
+  function assignmentSignature(assignment) {
+    return Array.isArray(assignment) ? assignment.join(',') : '';
+  }
+
+  function assignmentDifferenceRatio(a, b, movableIndexes = null) {
+    if (!Array.isArray(a) || !Array.isArray(b) || a.length !== b.length || !a.length) return 1;
+    const indexes = Array.isArray(movableIndexes) && movableIndexes.length
+      ? movableIndexes
+      : Array.from({ length: a.length }, (_, index) => index);
+    let different = 0;
+    indexes.forEach(index => { if (a[index] !== b[index]) different++; });
+    return indexes.length ? different / indexes.length : 0;
+  }
+
+  function solutionQuality(solution, constraints, distanceMatrix) {
+    if (!solution || !Array.isArray(solution.assignment)) return null;
+    if (!constraints?.length) return null;
+    const scoreInfo = calculateCost(solution.assignment, constraints, distanceMatrix);
+    return scoreInfo.maxPossible
+      ? Math.max(0, (1 - scoreInfo.total / scoreInfo.maxPossible) * 100)
+      : 100;
+  }
+
+  function formatAlternativeQuality(value) {
+    return Number(value).toLocaleString('es-ES', {
+      minimumFractionDigits: 1,
+      maximumFractionDigits: 1
+    });
+  }
+
+  function selectDiverseAlternatives(candidates, count, studentCount) {
+    const lockInfo = getAssignmentLockInfo(studentCount);
+    const unique = [];
+    const seen = new Set();
+    [...candidates]
+      .filter(candidate => candidate?.assignment)
+      .sort((a, b) => (a.score ?? Infinity) - (b.score ?? Infinity))
+      .forEach(candidate => {
+        const signature = assignmentSignature(candidate.assignment);
+        if (seen.has(signature)) return;
+        seen.add(signature);
+        unique.push({ ...candidate, assignment: candidate.assignment.slice() });
+      });
+
+    if (unique.length <= count) return unique;
+    const selected = [unique[0]];
+    const thresholds = [0.25, 0.20, 0.12, 0.01];
+    for (const threshold of thresholds) {
+      for (const candidate of unique) {
+        if (selected.length >= count) break;
+        if (selected.includes(candidate)) continue;
+        const diverse = selected.every(existing =>
+          assignmentDifferenceRatio(candidate.assignment, existing.assignment, lockInfo.movableStudents) >= threshold
+        );
+        if (diverse) selected.push(candidate);
+      }
+      if (selected.length >= count) break;
+    }
+    return selected.slice(0, count);
+  }
+
+  function renderAlternativesBar() {
+    if (!elements.alternativesBar || !elements.alternativesButtons) return;
+    if (!state.alternatives.length) {
+      elements.alternativesBar.hidden = true;
+      elements.alternativesButtons.innerHTML = '';
+      return;
+    }
+    elements.alternativesBar.hidden = false;
+    elements.alternativesButtons.innerHTML = '';
+    state.alternatives.forEach((alternative, index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = `alternative-btn${index === state.selectedAlternativeIndex ? ' active' : ''}`;
+      const label = String.fromCharCode(65 + index);
+      const qualityText = Number.isFinite(alternative.quality)
+        ? ` · ${formatAlternativeQuality(alternative.quality)} %`
+        : '';
+      button.textContent = `${label}${qualityText}`;
+      button.setAttribute('aria-pressed', String(index === state.selectedAlternativeIndex));
+      button.setAttribute('aria-label', `Alternativa ${label}${qualityText}`);
+      button.addEventListener('click', () => applyAlternative(index));
+      elements.alternativesButtons.appendChild(button);
+    });
+  }
+
+  function clearAlternatives(options = {}) {
+    const hadAlternatives = state.alternatives.length > 0;
+    state.alternatives = [];
+    state.alternativeSlotPositions = null;
+    state.selectedAlternativeIndex = -1;
+    state.alternativeContext = null;
+    renderAlternativesBar();
+    if (options.uncheck && elements.generateAlternativesCheckbox) elements.generateAlternativesCheckbox.checked = false;
+    return hadAlternatives;
+  }
+
+  function setAlternatives(alternatives, slotPositions, context) {
+    state.alternatives = alternatives.map(item => ({ ...item, assignment: item.assignment.slice() }));
+    state.alternativeSlotPositions = slotPositions.map(position => ({ ...position }));
+    state.alternativeContext = context || null;
+    state.selectedAlternativeIndex = state.alternatives.length ? 0 : -1;
+    renderAlternativesBar();
+  }
+
+  function renderAlternativeOutput(alternative) {
+    const context = state.alternativeContext;
+    if (!context || !alternative) return;
+    if (context.mode === 'random') {
+      hideSolution();
+      renderRandomOutput();
+      return;
+    }
+    if (context.mode === 'cooperative') {
+      hideSolution();
+      setOutputHtml(cooperativeABBCSummaryHtml(context.students, alternative.assignment));
+      return;
+    }
+    renderSolution(alternative, context.constraints, context.distanceMatrix);
+    renderConstraintSummary(
+      context.students,
+      context.constraints,
+      alternative,
+      context.distanceMatrix,
+      context.contradictions || []
+    );
+  }
+
+  function applyAlternative(index) {
+    const alternative = state.alternatives[index];
+    const context = state.alternativeContext;
+    if (!alternative || !context || !state.alternativeSlotPositions) return;
+    state.selectedAlternativeIndex = index;
+    // Las puntuaciones y explicaciones se calculan siempre contra las posiciones base
+    // que existían al generar las alternativas, no contra la alternativa anterior.
+    restoreAssignmentSlots(state.alternativeSlotPositions);
+    renderAlternativeOutput(alternative);
+    applyPositionAssignment(alternative.assignment, context.students.length, state.alternativeSlotPositions);
+    renderAlternativesBar();
+    state.layoutActive = false;
+    saveStateSoon();
+  }
+
+  function rectsOverlap(a, b) {
+    return a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top;
+  }
+
+  function zonePixelRect(zone, width = elements.classroom.clientWidth, height = elements.classroom.clientHeight) {
+    const w = Math.max(1, width);
+    const h = Math.max(1, height);
+    const left = clamp(zone.xNorm * w, 0, w);
+    const top = clamp(zone.yNorm * h, 0, h);
+    const zoneWidth = clamp(zone.widthNorm * w, 0, w - left);
+    const zoneHeight = clamp(zone.heightNorm * h, 0, h - top);
+    return { left, top, width: zoneWidth, height: zoneHeight, right: left + zoneWidth, bottom: top + zoneHeight };
+  }
+
+  function tableRectAtPixelCenter(table, cx, cy, tableWidth = state.tableWidth, tableHeight = state.tableHeight) {
+    const rotation = normalizeRotation(table?.rotation);
+    const quarterTurn = rotation === 90 || rotation === 270;
+    const halfW = (quarterTurn ? tableHeight : tableWidth) / 2;
+    const halfH = (quarterTurn ? tableWidth : tableHeight) / 2;
+    return { left: cx - halfW, top: cy - halfH, right: cx + halfW, bottom: cy + halfH, width: halfW * 2, height: halfH * 2 };
+  }
+
+  function rectOverlapsProtectedZone(rect, ignoredZoneId = null) {
+    return state.zones.some(zone => zone.id !== ignoredZoneId && rectsOverlap(rect, zonePixelRect(zone)));
+  }
+
+  function tableOverlapsProtectedZoneAt(table, cx, cy, tableWidth = state.tableWidth, tableHeight = state.tableHeight) {
+    return rectOverlapsProtectedZone(tableRectAtPixelCenter(table, cx, cy, tableWidth, tableHeight));
+  }
+
+  function anyTableOverlapsProtectedZone(tableWidth = state.tableWidth, tableHeight = state.tableHeight) {
+    const roomWidth = Math.max(1, elements.classroom.clientWidth);
+    const roomHeight = Math.max(1, elements.classroom.clientHeight);
+    return state.tables.some(table => {
+      const cx = table.xNorm * roomWidth;
+      const cy = table.yNorm * roomHeight;
+      return tableOverlapsProtectedZoneAt(table, cx, cy, tableWidth, tableHeight);
+    });
+  }
+
+  function zoneRectOverlapsAnyTable(rect) {
+    return state.tables.some(table => {
+      const geometry = tablePixelGeometry(table);
+      return rectsOverlap(rect, tableRectAtPixelCenter(table, geometry.cx, geometry.cy));
+    });
+  }
+
+  function nextZoneId() {
+    let id = 1;
+    const used = new Set(state.zones.map(zone => zone.id));
+    while (used.has(id)) id++;
+    return id;
+  }
+
+  function normalizeRotation(value) {
+    const rotation = ((Number(value) || 0) % 360 + 360) % 360;
+    const snapped = Math.round(rotation / 90) * 90;
+    return snapped === 360 ? 0 : snapped;
+  }
+
+  function tableVisualHalfExtents(table) {
+    const rotation = normalizeRotation(table?.rotation);
+    const quarterTurn = rotation === 90 || rotation === 270;
+    return {
+      halfW: (quarterTurn ? state.tableHeight : state.tableWidth) / 2,
+      halfH: (quarterTurn ? state.tableWidth : state.tableHeight) / 2
+    };
+  }
+
+  function shuffle(array) {
+    const result = array.slice();
+    for (let i = result.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [result[i], result[j]] = [result[j], result[i]];
+    }
+    return result;
+  }
+
+  function stripStudentNumber(line) {
+    return line.replace(/^\s*\d+\s*[.)]\s*/, '').trim();
+  }
+
+  function numberStudentLines(value) {
+    let studentNumber = 0;
+    return value
+      .split(/\r?\n/)
+      .map(line => {
+        const trimmed = line.trim();
+        if (!trimmed) return '';
+        if (trimmed.startsWith('#')) return line;
+        studentNumber += 1;
+        return `${studentNumber}. ${stripStudentNumber(line)}`;
+      })
+      .join('\n');
+  }
+
+  function studentsTextFromTemplate(students, comments) {
+    const numberedStudents = students.map((name, index) => `${index + 1}. ${name}`);
+    return [...comments, '', ...numberedStudents].join('\n');
+  }
+
+  function defaultStudentsText() {
+    return studentsTextFromTemplate(DEFAULT_STUDENTS, DEFAULT_STUDENT_COMMENTS);
+  }
+
+  function cooperativeStudentsText() {
+    return studentsTextFromTemplate(COOPERATIVE_STUDENTS, COOPERATIVE_STUDENT_COMMENTS);
+  }
+
+  function simpleStudentsText() {
+    return SIMPLE_STUDENTS.map((name, index) => `${index + 1}. ${name}`).join('\n');
+  }
+
+  function normalizeExampleText(value) {
+    return String(value || '').replace(/\r\n/g, '\n').trimEnd();
+  }
+
+  function detectExamplePreset(value = elements.studentsInput?.value || '') {
+    const normalized = normalizeExampleText(value);
+    if (normalized === normalizeExampleText(defaultStudentsText())) return 'characters';
+    if (normalized === normalizeExampleText(cooperativeStudentsText())) return 'cooperative';
+    if (normalized === normalizeExampleText(simpleStudentsText())) return 'simple';
+    return 'custom';
+  }
+
+  function updateExampleSelect() {
+    if (!elements.exampleSelect) return;
+    state.examplePreset = detectExamplePreset();
+    elements.exampleSelect.value = state.examplePreset;
+  }
+
+  function selectedExampleText(preset) {
+    if (preset === 'characters') return defaultStudentsText();
+    if (preset === 'cooperative') return cooperativeStudentsText();
+    if (preset === 'simple') return simpleStudentsText();
+    return null;
+  }
+
+  function loadPeopleExample(preset) {
+    const nextText = selectedExampleText(preset);
+    if (!nextText) {
+      updateExampleSelect();
+      return;
+    }
+
+    const previousPreset = detectExamplePreset();
+    const currentIsCustom = previousPreset === 'custom';
+    if (currentIsCustom && !window.confirm('¿Quieres sustituir la lista actual por el ejemplo seleccionado?')) {
+      state.examplePreset = 'custom';
+      elements.exampleSelect.value = 'custom';
+      return;
+    }
+
+    clearAlternatives();
+    elements.studentsInput.value = nextText;
+    state.examplePreset = preset;
+    elements.exampleSelect.value = preset;
+    state.lastSolution = null;
+    renderTables();
+    hideSolution();
+    updateUIState();
+    setOutputHtml(
+      '<div class="output-summary-head"><strong>Ejemplo cargado.</strong></div>' +
+      '<div class="output-note">Se ha cargado un nuevo ejemplo. Revisa las restricciones relacionadas con grupos.</div>'
+    );
+    saveStateSoon();
+  }
+
+  function clearPeopleList() {
+    if (!window.confirm('¿Quieres borrar completamente la lista de personas?')) return;
+    clearAlternatives();
+
+    elements.studentsInput.value = '';
+    state.examplePreset = 'custom';
+    if (elements.exampleSelect) elements.exampleSelect.value = 'custom';
+    state.lastSolution = null;
+    renderTables();
+    hideSolution();
+    updateUIState();
+    setOutputHtml(
+      '<div class="output-summary-head"><strong>Lista de personas borrada.</strong></div>' +
+      '<div class="output-note">Las mesas, las restricciones y las zonas protegidas se han conservado.</div>'
+    );
+    saveStateSoon();
+  }
+
+  function parseStudents() {
+    const students = [];
+    const lines = elements.studentsInput.value.split(/\r?\n/);
+
+    lines.forEach((sourceLine, lineIndex) => {
+      const trimmed = sourceLine.trim();
+      if (!trimmed || trimmed.startsWith('#')) return;
+
+      const raw = stripStudentNumber(sourceLine);
+      let fullName = raw;
+      let group = null;
+      let groupError = null;
+
+      if (raw.includes('/')) {
+        const groupMatch = raw.match(/^(.*?)\s*\/\s*([A-Za-z])\s*$/);
+        if (groupMatch) {
+          fullName = groupMatch[1].trim();
+          group = groupMatch[2].toUpperCase();
+        } else {
+          fullName = raw.split('/')[0].trim();
+          groupError = `Línea ${lineIndex + 1}: la etiqueta de grupo debe ser una única letra de A a Z.`;
+        }
+      }
+
+      const commaIndex = fullName.indexOf(',');
+      let surnames = '';
+      let firstName = fullName;
+      if (commaIndex >= 0) {
+        surnames = fullName.slice(0, commaIndex).trim();
+        firstName = fullName.slice(commaIndex + 1).trim();
+      }
+
+      const surnameParts = surnames.split(/\s+/).filter(Boolean);
+      const initials = surnameParts.slice(0, 2)
+        .map(part => `${part.charAt(0).toLocaleUpperCase('es')}.`)
+        .join('');
+
+      const displayName = initials ? `${firstName} ${initials}` : firstName;
+      const id = students.length + 1;
+
+      students.push({
+        id,
+        raw,
+        fullName,
+        firstName,
+        surnames,
+        displayName,
+        group,
+        groupError,
+        sourceLine: lineIndex + 1
+      });
+    });
+
+    return students;
+  }
+
+  function getStudentGroupErrors(students) {
+    return students.map(student => student.groupError).filter(Boolean);
+  }
+
+  function renumberStudents() {
+    const numbered = numberStudentLines(elements.studentsInput.value);
+    if (numbered === elements.studentsInput.value) return;
+    elements.studentsInput.value = numbered;
+    onStudentsChanged();
+  }
+
+  function buildGroupMembers(students) {
+    const members = new Map();
+    students.forEach(student => {
+      if (!student.group) return;
+      if (!members.has(student.group)) members.set(student.group, []);
+      members.get(student.group).push(student.id);
+    });
+    return members;
+  }
+
+  function parseConstraints(studentsOrCount) {
+    const students = Array.isArray(studentsOrCount) ? studentsOrCount : null;
+    const studentCount = students ? students.length : Number(studentsOrCount) || 0;
+    const groupMembers = students ? buildGroupMembers(students) : new Map();
+    const existingGroups = new Set(groupMembers.keys());
+    const lines = elements.constraintsInput.value.split(/\r?\n/);
+    const constraints = [];
+    const errors = [];
+    const seen = new Set();
+
+    const validateGroups = (groups, lineIndex, line) => {
+      const missing = groups.filter(group => !existingGroups.has(group));
+      if (missing.length) {
+        errors.push(`Línea ${lineIndex + 1}: grupo(s) inexistente(s): ${[...new Set(missing)].join(', ')}.`);
+        return false;
+      }
+      return true;
+    };
+
+    lines.forEach((rawLine, lineIndex) => {
+      const line = rawLine.trim();
+      if (!line || line.startsWith('#')) return;
+
+      let constraint = null;
+      let match;
+
+      if ((match = line.match(/^([A-Za-z])\s*x\s*([A-Za-z])$/))) {
+        const groupA = match[1].toUpperCase();
+        const groupB = match[2].toUpperCase();
+        if (!validateGroups([groupA, groupB], lineIndex, line)) return;
+        constraint = { type: 'groupFar', groupA, groupB, membersA: groupMembers.get(groupA), membersB: groupMembers.get(groupB), raw: line, line: lineIndex + 1 };
+      } else if ((match = line.match(/^([A-Za-z])\s*--\s*([A-Za-z])$/))) {
+        const groupA = match[1].toUpperCase();
+        const groupB = match[2].toUpperCase();
+        if (!validateGroups([groupA, groupB], lineIndex, line)) return;
+        constraint = { type: 'groupNear', groupA, groupB, membersA: groupMembers.get(groupA), membersB: groupMembers.get(groupB), raw: line, line: lineIndex + 1 };
+      } else if ((match = line.match(/^([A-Za-z])\s*-\s*([A-Za-z])$/))) {
+        const groupA = match[1].toUpperCase();
+        const groupB = match[2].toUpperCase();
+        if (!validateGroups([groupA, groupB], lineIndex, line)) return;
+        constraint = { type: 'groupTogether', groupA, groupB, membersA: groupMembers.get(groupA), membersB: groupMembers.get(groupB), raw: line, line: lineIndex + 1 };
+      } else if ((match = line.match(/^(\d+)\s*x\s*(\d+)$/i))) {
+        constraint = { type: 'far', a: Number(match[1]), b: Number(match[2]), raw: line, line: lineIndex + 1 };
+      } else if ((match = line.match(/^(\d+)\s*--\s*(\d+)$/))) {
+        constraint = { type: 'near', a: Number(match[1]), b: Number(match[2]), raw: line, line: lineIndex + 1 };
+      } else if ((match = line.match(/^(\d+)\s*-\s*(\d+)$/))) {
+        constraint = { type: 'together', a: Number(match[1]), b: Number(match[2]), raw: line, line: lineIndex + 1 };
+      } else if ((match = line.match(/^([LR])\s*:\s*(.+)$/i))) {
+        const values = match[2]
+          .split(',')
+          .map(value => value.trim())
+          .filter(Boolean);
+
+        if (!values.length) {
+          errors.push(`Línea ${lineIndex + 1}: lista inválida en “${line}”.`);
+          return;
+        }
+
+        const ids = [];
+        const groups = [];
+        for (const value of values) {
+          if (/^\d+$/.test(value)) ids.push(Number(value));
+          else if (/^[A-Za-z]$/.test(value)) groups.push(value.toUpperCase());
+          else {
+            errors.push(`Línea ${lineIndex + 1}: usa solo números de personas o letras de grupo en “${line}”.`);
+            return;
+          }
+        }
+
+        const duplicateIds = ids.length !== new Set(ids).size;
+        const duplicateGroups = groups.length !== new Set(groups).size;
+        if (duplicateIds || duplicateGroups) {
+          errors.push(`Línea ${lineIndex + 1}: hay referencias repetidas en “${line}”.`);
+          return;
+        }
+        if (!validateGroups(groups, lineIndex, line)) return;
+
+        const invalidIds = ids.filter(id => id < 1 || id > studentCount);
+        if (invalidIds.length) {
+          errors.push(`Línea ${lineIndex + 1}: persona(s) inexistente(s): ${[...new Set(invalidIds)].join(', ')}.`);
+          return;
+        }
+
+        const groupIds = groups.flatMap(group => groupMembers.get(group) || []);
+        constraint = {
+          type: match[1].toUpperCase() === 'L' ? 'left' : 'right',
+          ids,
+          groups,
+          memberIds: [...new Set([...ids, ...groupIds])],
+          raw: line,
+          line: lineIndex + 1
+        };
+      } else if ((match = line.match(/^([FB])\s*:\s*(.+)$/i))) {
+        const values = match[2]
+          .split(',')
+          .map(value => value.trim())
+          .filter(Boolean);
+
+        if (!values.length) {
+          errors.push(`Línea ${lineIndex + 1}: lista inválida en “${line}”.`);
+          return;
+        }
+
+        const allNumeric = values.every(value => /^\d+$/.test(value));
+        const allGroups = values.every(value => /^[A-Za-z]$/.test(value));
+
+        if (allNumeric) {
+          const numericIds = values.map(Number);
+          constraint = {
+            type: match[1].toUpperCase() === 'F' ? 'front' : 'back',
+            ids: numericIds,
+            raw: line,
+            line: lineIndex + 1
+          };
+        } else if (allGroups) {
+          const groups = values.map(value => value.toUpperCase());
+          if (new Set(groups).size !== groups.length) {
+            errors.push(`Línea ${lineIndex + 1}: hay grupos repetidos en “${line}”.`);
+            return;
+          }
+          if (!validateGroups(groups, lineIndex, line)) return;
+          constraint = {
+            type: match[1].toUpperCase() === 'F' ? 'groupFront' : 'groupBack',
+            groups,
+            groupMembers: groups.map(group => groupMembers.get(group)),
+            memberIds: [...new Set(groups.flatMap(group => groupMembers.get(group)))],
+            raw: line,
+            line: lineIndex + 1
+          };
+        } else {
+          errors.push(`Línea ${lineIndex + 1}: usa solo números de personas o solo letras de grupo en “${line}”.`);
+          return;
+        }
+      } else {
+        errors.push(`Línea ${lineIndex + 1}: sintaxis no reconocida “${line}”.`);
+        return;
+      }
+
+      if (constraint.ids) {
+        const invalidIds = constraint.ids.filter(id => id < 1 || id > studentCount);
+        if (invalidIds.length) {
+          errors.push(`Línea ${lineIndex + 1}: persona(s) inexistente(s): ${[...new Set(invalidIds)].join(', ')}.`);
+          return;
+        }
+      } else if ('a' in constraint) {
+        const invalidIds = [constraint.a, constraint.b].filter(id => id < 1 || id > studentCount);
+        if (invalidIds.length) {
+          errors.push(`Línea ${lineIndex + 1}: persona(s) inexistente(s): ${[...new Set(invalidIds)].join(', ')}.`);
+          return;
+        }
+        if (constraint.a === constraint.b) {
+          errors.push(`Línea ${lineIndex + 1}: una restricción binaria necesita dos personas distintas.`);
+          return;
+        }
+      }
+
+      const normalizedKey = normalizeConstraintKey(constraint);
+      if (seen.has(normalizedKey)) {
+        errors.push(`Línea ${lineIndex + 1}: restricción duplicada “${line}”.`);
+        return;
+      }
+      seen.add(normalizedKey);
+      constraints.push(constraint);
+    });
+
+    return { constraints, errors };
+  }
+
+  function normalizeConstraintKey(c) {
+    if (c.type === 'left' || c.type === 'right') {
+      return `${c.type}:ids=${c.ids.slice().sort((a, b) => a - b).join(',')};groups=${c.groups.slice().sort().join(',')}`;
+    }
+    if (c.type === 'groupFront') {
+      return `${c.type}:${c.groups.slice().sort().join(',')}`;
+    }
+    if (c.type === 'groupBack') {
+      return `${c.type}:${c.groups.join(',')}`;
+    }
+    if (c.type === 'groupFar' || c.type === 'groupTogether' || c.type === 'groupNear') {
+      const pair = [c.groupA, c.groupB].sort();
+      return `${c.type}:${pair[0]}:${pair[1]}`;
+    }
+    if (c.ids) {
+      return `${c.type}:${c.ids.slice().sort((a, b) => a - b).join(',')}`;
+    }
+    const pair = [c.a, c.b].sort((a, b) => a - b);
+    return `${c.type}:${pair[0]}:${pair[1]}`;
+  }
+
+  function findContradictions(constraints) {
+    const pairTypes = new Map();
+    const groupPairTypes = new Map();
+    const warnings = [];
+
+    for (const c of constraints) {
+      if ('a' in c) {
+        const [a, b] = [c.a, c.b].sort((x, y) => x - y);
+        const key = `${a}:${b}`;
+        if (!pairTypes.has(key)) pairTypes.set(key, new Set());
+        pairTypes.get(key).add(c.type);
+      }
+      if (c.groupA && c.groupB) {
+        const [a, b] = [c.groupA, c.groupB].sort();
+        const key = `${a}:${b}`;
+        if (!groupPairTypes.has(key)) groupPairTypes.set(key, new Set());
+        groupPairTypes.get(key).add(c.type);
+      }
+    }
+
+    for (const [key, types] of pairTypes.entries()) {
+      if (types.has('far') && (types.has('together') || types.has('near'))) {
+        warnings.push(`Las personas ${key.replace(':', ' y ')} tienen restricciones de separación y proximidad simultáneas.`);
+      }
+    }
+
+    for (const [key, types] of groupPairTypes.entries()) {
+      if (types.has('groupFar') && (types.has('groupTogether') || types.has('groupNear'))) {
+        const [a, b] = key.split(':');
+        warnings.push(a === b
+          ? `El grupo ${a} tiene restricciones internas de separación y proximidad simultáneas.`
+          : `Los grupos ${a} y ${b} tienen restricciones de separación y proximidad simultáneas.`);
+      }
+    }
+
+    const fronts = new Set();
+    const backs = new Set();
+    const groupFronts = new Set();
+    const groupBacks = new Set();
+    constraints.forEach(c => {
+      if (c.type === 'front') c.ids.forEach(id => fronts.add(id));
+      if (c.type === 'back') c.ids.forEach(id => backs.add(id));
+      if (c.type === 'groupFront') c.groups.forEach(group => groupFronts.add(group));
+      if (c.type === 'groupBack') c.groups.forEach(group => groupBacks.add(group));
+    });
+    [...fronts].filter(id => backs.has(id)).forEach(id => {
+      warnings.push(`La persona ${id} aparece a la vez en DELANTE y DETRÁS.`);
+    });
+    [...groupFronts].filter(group => groupBacks.has(group)).forEach(group => {
+      warnings.push(`El grupo ${group} aparece a la vez en DELANTE y DETRÁS.`);
+    });
+
+    const leftMembers = new Set();
+    const rightMembers = new Set();
+    constraints.forEach(c => {
+      if (c.type === 'left') c.memberIds.forEach(id => leftMembers.add(id));
+      if (c.type === 'right') c.memberIds.forEach(id => rightMembers.add(id));
+    });
+    [...leftMembers].filter(id => rightMembers.has(id)).forEach(id => {
+      warnings.push(`La persona ${id} aparece a la vez en IZQUIERDA y DERECHA.`);
+    });
+
+    return warnings;
+  }
+
+  function makeInitialTables() {
+    state.tables = [];
+    state.cooperativeBlockPositions = [];
+    state.zones = [];
+    state.selectedZoneId = null;
+    state.zoneMode = false;
+    state.zoneDraft = null;
+    state.zoneDragging = null;
+    state.selectedTableId = null;
+    state.selectedTableIds.clear();
+    state.tableWidth = INITIAL_TABLE_WIDTH;
+    state.tableHeight = INITIAL_TABLE_HEIGHT;
+    state.spaceLayout = DEFAULT_SPACE_LAYOUT;
+    state.layoutActive = true;
+
+    for (let i = 0; i < INITIAL_TABLE_COUNT; i++) {
+      const row = Math.floor(i / INITIAL_COLS);
+      const col = i % INITIAL_COLS;
+      state.tables.push({
+        id: i + 1,
+        xNorm: (col + 0.5) / INITIAL_COLS,
+        yNorm: (row + 0.5) / INITIAL_ROWS,
+        rotation: 0,
+        locked: false
+      });
+    }
+  }
+
+  function sortedTables() {
+    return state.tables.slice().sort((a, b) => a.id - b.id);
+  }
+
+  function setTablePixelCenter(table, cx, cy, roomWidth, roomHeight) {
+    const { halfW, halfH } = tableVisualHalfExtents(table);
+    const safeX = clamp(cx, halfW, Math.max(halfW, roomWidth - halfW));
+    const safeY = clamp(cy, halfH, Math.max(halfH, roomHeight - halfH));
+    table.xNorm = roomWidth ? safeX / roomWidth : 0.5;
+    table.yNorm = roomHeight ? safeY / roomHeight : 0.5;
+  }
+
+  function buildShapeGroup(tables, cols, innerGapX = 1, innerGapY = 1) {
+    const placements = tables.map((table, index) => ({
+      table,
+      col: index % cols,
+      row: Math.floor(index / cols)
+    }));
+    const usedCols = placements.length ? Math.max(...placements.map(item => item.col)) + 1 : 1;
+    const usedRows = placements.length ? Math.max(...placements.map(item => item.row)) + 1 : 1;
+    return {
+      placements,
+      width: usedCols * state.tableWidth + Math.max(0, usedCols - 1) * innerGapX,
+      height: usedRows * state.tableHeight + Math.max(0, usedRows - 1) * innerGapY,
+      innerGapX,
+      innerGapY
+    };
+  }
+
+  function buildTeam5Group(tables) {
+    // La orientación es parte del esquema, no de la identidad de la mesa.
+    // Las posiciones normales quedan a 0° y solo la quinta posición de cada
+    // equipo completo queda girada 90° mirando hacia el bloque de cuatro.
+    tables.forEach(table => { table.rotation = 0; });
+    if (tables.length < 5) return buildShapeGroup(tables, 2, 1, 1);
+
+    const innerGap = 1;
+    const sideGap = 2;
+    const team4Width = state.tableWidth * 2 + innerGap;
+    const team4Height = state.tableHeight * 2 + innerGap;
+    const fifth = tables[4];
+    fifth.rotation = 90;
+
+    const fifthWidth = state.tableHeight;
+    const fifthHeight = state.tableWidth;
+    const groupHeight = Math.max(team4Height, fifthHeight);
+    const team4Top = (groupHeight - team4Height) / 2;
+    const placements = tables.slice(0, 4).map((table, index) => ({
+      table,
+      centerX: (index % 2) * (state.tableWidth + innerGap) + state.tableWidth / 2,
+      centerY: team4Top + Math.floor(index / 2) * (state.tableHeight + innerGap) + state.tableHeight / 2
+    }));
+
+    placements.push({
+      table: fifth,
+      centerX: team4Width + sideGap + fifthWidth / 2,
+      centerY: groupHeight / 2
+    });
+
+    return {
+      placements,
+      width: team4Width + sideGap + fifthWidth,
+      height: groupHeight,
+      innerGapX: innerGap,
+      innerGapY: innerGap
+    };
+  }
+
+  function chunkTables(tables, size) {
+    const chunks = [];
+    for (let i = 0; i < tables.length; i += size) chunks.push(tables.slice(i, i + size));
+    return chunks;
+  }
+
+  function buildPattern232Groups(tables) {
+    const groups = [];
+    let index = 0;
+    while (tables.length - index >= 7) {
+      for (const size of [2, 3, 2]) {
+        groups.push(buildShapeGroup(tables.slice(index, index + size), size, 1, 1));
+        index += size;
+      }
+    }
+    const remaining = tables.length - index;
+    const remainderPatterns = { 1: [1], 2: [2], 3: [3], 4: [2, 2], 5: [2, 3], 6: [3, 3] };
+    for (const size of remainderPatterns[remaining] || []) {
+      groups.push(buildShapeGroup(tables.slice(index, index + size), size, 1, 1));
+      index += size;
+    }
+    return groups;
+  }
+
+  function packGroupsIntoRows(groups, availableWidth, gapX) {
+    const rows = [];
+    let row = [];
+    let rowWidth = 0;
+    for (const group of groups) {
+      const nextWidth = row.length ? rowWidth + gapX + group.width : group.width;
+      if (row.length && nextWidth > availableWidth) {
+        rows.push(row);
+        row = [group];
+        rowWidth = group.width;
+      } else {
+        row.push(group);
+        rowWidth = nextWidth;
+      }
+    }
+    if (row.length) rows.push(row);
+    return rows;
+  }
+
+  function measureRows(rows, gapX) {
+    return rows.map(row => ({
+      groups: row,
+      width: row.reduce((sum, group) => sum + group.width, 0) + Math.max(0, row.length - 1) * gapX,
+      height: Math.max(...row.map(group => group.height), state.tableHeight)
+    }));
+  }
+
+  function groupPlacementRects(group, left, top) {
+    return group.placements.map(placement => {
+      const cx = left + (Number.isFinite(placement.centerX)
+        ? placement.centerX
+        : placement.col * (state.tableWidth + group.innerGapX) + state.tableWidth / 2);
+      const cy = top + (Number.isFinite(placement.centerY)
+        ? placement.centerY
+        : placement.row * (state.tableHeight + group.innerGapY) + state.tableHeight / 2);
+      return { table: placement.table, cx, cy, rect: tableRectAtPixelCenter(placement.table, cx, cy) };
+    });
+  }
+
+  function groupPlacementIsValid(group, left, top, roomWidth, roomHeight, placedRects = []) {
+    const candidates = groupPlacementRects(group, left, top);
+    for (const candidate of candidates) {
+      const rect = candidate.rect;
+      if (rect.left < 0 || rect.top < 0 || rect.right > roomWidth || rect.bottom > roomHeight) return false;
+      if (rectOverlapsProtectedZone(rect)) return false;
+      if (placedRects.some(other => rectsOverlap(rect, other))) return false;
+    }
+    return true;
+  }
+
+  function findValidGroupPlacement(group, preferredLeft, preferredTop, roomWidth, roomHeight, placedRects = []) {
+    if (groupPlacementIsValid(group, preferredLeft, preferredTop, roomWidth, roomHeight, placedRects)) {
+      return { left: preferredLeft, top: preferredTop };
+    }
+
+    const step = 10;
+    const maxLeft = Math.max(0, roomWidth - group.width);
+    const maxTop = Math.max(0, roomHeight - group.height);
+    const xs = [];
+    for (let x = 0; x <= maxLeft + 0.1; x += step) xs.push(Math.min(x, maxLeft));
+    if (!xs.includes(maxLeft)) xs.push(maxLeft);
+    xs.sort((a, b) => Math.abs(a - preferredLeft) - Math.abs(b - preferredLeft));
+
+    const ys = [];
+    for (let y = 0; y <= maxTop + 0.1; y += step) ys.push(Math.min(y, maxTop));
+    if (!ys.includes(maxTop)) ys.push(maxTop);
+    ys.sort((a, b) => {
+      const aBehind = a >= preferredTop ? 0 : 1;
+      const bBehind = b >= preferredTop ? 0 : 1;
+      return aBehind - bBehind || Math.abs(a - preferredTop) - Math.abs(b - preferredTop);
+    });
+
+    for (const y of ys) {
+      for (const x of xs) {
+        if (groupPlacementIsValid(group, x, y, roomWidth, roomHeight, placedRects)) return { left: x, top: y };
+      }
+    }
+    return null;
+  }
+
+  function placeGroupedLayout(groups, options = {}) {
+    const roomWidth = Math.max(1, elements.classroom.clientWidth);
+    const roomHeight = Math.max(1, elements.classroom.clientHeight);
+    const marginX = Math.max(8, Math.min(32, roomWidth * 0.025));
+    const marginY = Math.max(6, Math.min(14, roomHeight * 0.012));
+    const availableWidth = Math.max(state.tableWidth, roomWidth - marginX * 2);
+    const availableHeight = Math.max(state.tableHeight, roomHeight - marginY * 2);
+    const preferredGapX = options.groupGapX ?? 38;
+    const minGapX = options.minGroupGapX ?? 10;
+    const preferredRowGap = options.rowGap ?? 28;
+    const minRowGap = options.minRowGap ?? 6;
+    const gapCandidates = [...new Set([
+      preferredGapX,
+      Math.round(preferredGapX * 0.78),
+      Math.round(preferredGapX * 0.55),
+      minGapX
+    ].map(value => Math.max(minGapX, value)))].sort((a, b) => b - a);
+
+    let chosen = null;
+    for (const gapX of gapCandidates) {
+      const packed = measureRows(packGroupsIntoRows(groups, availableWidth, gapX), gapX);
+      const rowHeights = packed.reduce((sum, row) => sum + row.height, 0);
+      const maxRowGap = packed.length > 1 ? (availableHeight - rowHeights) / (packed.length - 1) : preferredRowGap;
+      const rowGap = packed.length > 1 ? Math.min(preferredRowGap, maxRowGap) : 0;
+      chosen = { rows: packed, gapX, rowGap: Math.max(0, rowGap), rowHeights };
+      if (rowHeights + Math.max(0, rowGap) * Math.max(0, packed.length - 1) <= availableHeight + 0.5 && rowGap >= minRowGap) break;
+    }
+    if (!chosen || !chosen.rows.length) return;
+
+    const placedRects = [];
+    let y = marginY;
+    for (const row of chosen.rows) {
+      let x = marginX + Math.max(0, (availableWidth - row.width) / 2);
+      for (const group of row.groups) {
+        const preferredTop = y + (row.height - group.height) / 2;
+        const target = findValidGroupPlacement(group, x, preferredTop, roomWidth, roomHeight, placedRects);
+        group._layoutPlaced = Boolean(target);
+        if (target) {
+          const placements = groupPlacementRects(group, target.left, target.top);
+          placements.forEach(item => {
+            setTablePixelCenter(item.table, item.cx, item.cy, roomWidth, roomHeight);
+            placedRects.push(item.rect);
+          });
+        } else {
+          // Si el bloque no cabe sin invadir una zona, se conserva en su última posición válida.
+          group.placements.forEach(placement => {
+            const geometry = tablePixelGeometry(placement.table);
+            placedRects.push(tableRectAtPixelCenter(placement.table, geometry.cx, geometry.cy));
+          });
+        }
+        x += group.width + chosen.gapX;
+      }
+      y += row.height + chosen.rowGap;
+    }
+  }
+
+  function captureCooperativeBlockPositions(groups) {
+    state.cooperativeBlockPositions = groups
+      .filter(group => group.placements.length === 4 && group._layoutPlaced !== false)
+      .map(group => group.placements
+        .slice()
+        .sort((a, b) => (a.row - b.row) || (a.col - b.col))
+        .map(placement => ({ xNorm: placement.table.xNorm, yNorm: placement.table.yNorm })));
+  }
+
+  function generateCooperativeABBCAssignment(students, options = {}) {
+    const studentCount = students.length;
+    if (!studentCount || studentCount > state.tables.length) return null;
+    const tableIds = new Set(state.tables.map(table => table.id));
+    if (students.some(student => !tableIds.has(student.id))) return null;
+
+    const blocks = resolveCooperativeBlocksToSlots();
+    if (!blocks.length) return null;
+    const lockInfo = getAssignmentLockInfo(studentCount);
+    const assignment = Array(studentCount).fill(null);
+    const fixedBySlot = new Map();
+    for (const [studentIndex, slotIndex] of lockInfo.fixedAssignments) {
+      assignment[studentIndex] = slotIndex;
+      fixedBySlot.set(slotIndex, studentIndex);
+    }
+
+    const availableStudents = new Set(lockInfo.movableStudents);
+    const freeSlots = new Set(lockInfo.availableSlots);
+    const pools = new Map();
+    students.forEach((student, index) => {
+      if (!availableStudents.has(index)) return;
+      const group = student.group || '';
+      if (!pools.has(group)) pools.set(group, []);
+      pools.get(group).push(index);
+    });
+    if (options.shufflePools) {
+      for (const [group, pool] of pools) pools.set(group, shuffle(pool));
+    }
+
+    const takeStudent = group => {
+      const pool = pools.get(group) || [];
+      while (pool.length) {
+        const studentIndex = pool.shift();
+        if (availableStudents.has(studentIndex)) {
+          availableStudents.delete(studentIndex);
+          return studentIndex;
+        }
+      }
+      return null;
+    };
+
+    const expected = ['A', 'B', 'B', 'C'];
+    const blockPlans = blocks.map(block => {
+      const counts = { A: 0, B: 0, C: 0 };
+      let incompatible = false;
+      let fixedCount = 0;
+      block.forEach(slot => {
+        const studentIndex = fixedBySlot.get(slot);
+        if (studentIndex == null) return;
+        fixedCount++;
+        const group = students[studentIndex]?.group;
+        if (!(group in counts)) incompatible = true;
+        else counts[group]++;
+      });
+      if (counts.A > 1 || counts.B > 2 || counts.C > 1) incompatible = true;
+      return { block, counts, incompatible, fixedCount };
+    }).sort((a, b) => Number(a.incompatible) - Number(b.incompatible) || b.fixedCount - a.fixedCount);
+
+    const canSupply = needs => ['A', 'B', 'C'].every(group => {
+      const pool = pools.get(group) || [];
+      const count = pool.reduce((sum, studentIndex) => sum + Number(availableStudents.has(studentIndex)), 0);
+      return count >= needs[group];
+    });
+
+    const fillCompleteBlock = plan => {
+      if (plan.incompatible) return false;
+      const needs = { A: 1 - plan.counts.A, B: 2 - plan.counts.B, C: 1 - plan.counts.C };
+      if (!canSupply(needs)) return false;
+      const emptySlots = plan.block.filter(slot => freeSlots.has(slot));
+
+      // Prioridad secundaria: A B / B C, sin sacrificar la composición del equipo.
+      for (let position = 0; position < plan.block.length; position++) {
+        const slot = plan.block[position];
+        const group = expected[position];
+        if (!freeSlots.has(slot) || needs[group] <= 0) continue;
+        const studentIndex = takeStudent(group);
+        if (studentIndex == null) continue;
+        assignment[studentIndex] = slot;
+        freeSlots.delete(slot);
+        needs[group]--;
+      }
+
+      for (const group of ['A', 'B', 'C']) {
+        while (needs[group] > 0) {
+          const slot = emptySlots.find(candidate => freeSlots.has(candidate));
+          const studentIndex = takeStudent(group);
+          if (slot == null || studentIndex == null) return false;
+          assignment[studentIndex] = slot;
+          freeSlots.delete(slot);
+          needs[group]--;
+        }
+      }
+      return true;
+    };
+
+    // Completar primero los equipos que ya contienen personas bloqueadas compatibles.
+    blockPlans.forEach(fillCompleteBlock);
+
+    // En bloques incompletos, usar las posiciones preferidas cuando todavía haya grupos A/B/C disponibles.
+    for (const plan of blockPlans) {
+      for (let position = 0; position < plan.block.length; position++) {
+        const slot = plan.block[position];
+        if (!freeSlots.has(slot)) continue;
+        const studentIndex = takeStudent(expected[position]);
+        if (studentIndex == null) continue;
+        assignment[studentIndex] = slot;
+        freeSlots.delete(slot);
+      }
+    }
+
+    // El resto de personas ocupa las posiciones libres sin modificar sus grupos.
+    const remainingStudents = [...availableStudents];
+    const remainingSlots = [...freeSlots];
+    remainingStudents.forEach((studentIndex, index) => {
+      const slot = remainingSlots[index];
+      if (slot == null) return;
+      assignment[studentIndex] = slot;
+      availableStudents.delete(studentIndex);
+      freeSlots.delete(slot);
+    });
+
+    return assignment.every(slot => slot != null) ? assignment : null;
+  }
+
+  function cooperativeABBCSummaryHtml(students, assignment) {
+    const constraint = buildCooperativeABBCConstraint(students);
+    if (!constraint || !assignment) {
+      return '<div class="output-summary-head"><strong>Esquema Cooperativo ABBC aplicado.</strong></div>' +
+        '<div class="output-note">No hay suficientes datos para evaluar equipos A-B-B-C completos.</div>';
+    }
+    const evaluation = evaluateCooperativeABBC(constraint, assignment);
+    const included = evaluation.completeCount * 4;
+    const outside = Math.max(0, students.length - included);
+    const details = [
+      `<div class="output-summary-head"><strong>Esquema Cooperativo ABBC aplicado.</strong></div>`,
+      `<div class="output-note">${evaluation.completeCount} equipo(s) completo(s) A-B-B-C${constraint.targetComplete ? ` de un máximo posible de ${constraint.targetComplete}` : ''}.</div>`
+    ];
+    if (outside) details.push(`<div class="output-note">${outside} persona(s) no forman parte de un equipo ABBC completo.</div>`);
+    return details.join('');
+  }
+
+  function placeCircularLayout(tables) {
+    const roomWidth = Math.max(1, elements.classroom.clientWidth);
+    const roomHeight = Math.max(1, elements.classroom.clientHeight);
+    const centerX = roomWidth / 2;
+    const centerY = roomHeight / 2;
+    const gap = 10;
+    const rx = Math.max(state.tableWidth / 2, roomWidth / 2 - state.tableWidth / 2 - 24);
+    const ry = Math.max(state.tableHeight / 2, roomHeight / 2 - state.tableHeight / 2 - 24);
+    const positions = [];
+    const canPlace = (x, y) => {
+      const table = tables[Math.min(positions.length, tables.length - 1)] || { rotation: 0 };
+      const rect = tableRectAtPixelCenter(table, x, y);
+      if (rect.left < 0 || rect.right > roomWidth || rect.top < 0 || rect.bottom > roomHeight) return false;
+      if (rectOverlapsProtectedZone(rect)) return false;
+      return positions.every(position => (
+        Math.abs(x - position.x) >= state.tableWidth + gap ||
+        Math.abs(y - position.y) >= state.tableHeight + gap
+      ));
+    };
+
+    const ringFactors = [1, 0.86, 0.72, 0.58, 0.44, 0.30, 0.16];
+    for (let ringIndex = 0; ringIndex < ringFactors.length && positions.length < tables.length; ringIndex++) {
+      const factor = ringFactors[ringIndex];
+      const samples = 240;
+      const phase = -Math.PI / 2 + (ringIndex % 2 ? Math.PI / 40 : 0);
+      for (let i = 0; i < samples && positions.length < tables.length; i++) {
+        const angle = phase + (Math.PI * 2 * i) / samples;
+        const x = centerX + rx * factor * Math.cos(angle);
+        const y = centerY + ry * factor * Math.sin(angle);
+        if (canPlace(x, y)) positions.push({ x, y });
+      }
+    }
+
+    if (positions.length < tables.length) {
+      const stepX = state.tableWidth + gap;
+      const stepY = state.tableHeight + gap;
+      for (let y = state.tableHeight / 2 + gap / 2; y <= roomHeight - state.tableHeight / 2 && positions.length < tables.length; y += stepY) {
+        for (let x = state.tableWidth / 2 + gap / 2; x <= roomWidth - state.tableWidth / 2 && positions.length < tables.length; x += stepX) {
+          const ellipseValue = Math.pow((x - centerX) / rx, 2) + Math.pow((y - centerY) / ry, 2);
+          if (ellipseValue <= 0.92 && canPlace(x, y)) positions.push({ x, y });
+        }
+      }
+    }
+
+    if (positions.length < tables.length) {
+      const candidates = [];
+      const stepX = state.tableWidth + 4;
+      const stepY = state.tableHeight + 4;
+      for (let y = state.tableHeight / 2; y <= roomHeight - state.tableHeight / 2; y += stepY) {
+        for (let x = state.tableWidth / 2; x <= roomWidth - state.tableWidth / 2; x += stepX) {
+          candidates.push({ x, y });
+        }
+      }
+      candidates.sort((a, b) => {
+        const da = Math.pow((a.x - centerX) / rx, 2) + Math.pow((a.y - centerY) / ry, 2);
+        const db = Math.pow((b.x - centerX) / rx, 2) + Math.pow((b.y - centerY) / ry, 2);
+        return da - db;
+      });
+      for (const candidate of candidates) {
+        if (positions.length >= tables.length) break;
+        if (canPlace(candidate.x, candidate.y)) positions.push(candidate);
+      }
+    }
+
+    tables.forEach((table, index) => {
+      const position = positions[index];
+      if (position) setTablePixelCenter(table, position.x, position.y, roomWidth, roomHeight);
+    });
+  }
+
+  function markManualLayout(options = {}) {
+    state.spaceLayout = 'manual';
+    state.layoutActive = false;
+    if (elements.layoutSelect) elements.layoutSelect.value = 'manual';
+    if (options.save) saveStateSoon();
+  }
+
+  function applySpaceLayout(layoutName, options = {}) {
+    const allowed = Object.keys(SPACE_LAYOUT_LABELS);
+    const layout = allowed.includes(layoutName) ? layoutName : DEFAULT_SPACE_LAYOUT;
+
+    if (layout === 'manual') {
+      clearAlternatives();
+      markManualLayout();
+      if (options.message !== false) showMessage('Esquema “Manual” seleccionado. Las mesas no se han movido.', 'info');
+      if (options.save !== false) saveStateSoon();
+      return;
+    }
+
+    const tables = sortedTables();
+    if (!tables.length) return;
+    clearAlternatives();
+
+    // Cada esquema automático debe imponer por completo su geometría. Partimos
+    // de la orientación base (0°) para eliminar rotaciones residuales del esquema
+    // anterior; los esquemas que necesiten otra orientación (como Equipos x5)
+    // la establecen después al construir sus propios slots.
+    tables.forEach(table => { table.rotation = 0; });
+
+    const lockedPositions = new Map(
+      tables.filter(table => table.locked).map(table => [table.id, { xNorm: table.xNorm, yNorm: table.yNorm }])
+    );
+    state.spaceLayout = layout;
+    state.layoutActive = true;
+    if (elements.layoutSelect) elements.layoutSelect.value = layout;
+
+    let placedGroups = [];
+    if (layout === 'circular') {
+      placeCircularLayout(tables);
+      state.cooperativeBlockPositions = [];
+    } else {
+      let groups = [];
+      let config = {};
+      if (layout === 'individual') {
+        groups = chunkTables(tables, 2).map(chunk => buildShapeGroup(chunk, 2, 16, 1));
+        config = { groupGapX: 48, minGroupGapX: 8, rowGap: 24, minRowGap: 8 };
+      } else if (layout === 'pairs') {
+        groups = chunkTables(tables, 2).map(chunk => buildShapeGroup(chunk, 2, 1, 1));
+        config = { groupGapX: 40, minGroupGapX: 12, rowGap: 26, minRowGap: 8 };
+      } else if (layout === 'trios') {
+        groups = chunkTables(tables, 3).map(chunk => buildShapeGroup(chunk, 3, 1, 1));
+        config = { groupGapX: 46, minGroupGapX: 10, rowGap: 24, minRowGap: 6 };
+      } else if (layout === 'two-three-two') {
+        groups = buildPattern232Groups(tables);
+        config = { groupGapX: 44, minGroupGapX: 10, rowGap: 24, minRowGap: 6 };
+      } else if (layout === 'team4' || layout === 'cooperative-abbc') {
+        groups = chunkTables(tables, 4).map(chunk => buildShapeGroup(chunk, 2, 1, 1));
+        config = { groupGapX: 42, minGroupGapX: 12, rowGap: 34, minRowGap: 8 };
+      } else if (layout === 'team5') {
+        groups = chunkTables(tables, 5).map(chunk => buildTeam5Group(chunk));
+        config = { groupGapX: 38, minGroupGapX: 10, rowGap: 30, minRowGap: 7 };
+      } else if (layout === 'team6') {
+        groups = chunkTables(tables, 6).map(chunk => buildShapeGroup(chunk, 3, 1, 1));
+        config = { groupGapX: 44, minGroupGapX: 12, rowGap: 34, minRowGap: 8 };
+      }
+      placeGroupedLayout(groups, config);
+      placedGroups = groups;
+    }
+
+    for (const table of tables) {
+      const locked = lockedPositions.get(table.id);
+      if (!locked) continue;
+      table.xNorm = locked.xNorm;
+      table.yNorm = locked.yNorm;
+    }
+
+    if (layout === 'cooperative-abbc') {
+      // Guardamos las cuatro posiciones de cada equipo después de respetar las mesas bloqueadas.
+      captureCooperativeBlockPositions(placedGroups);
+      const students = parseStudents();
+      const slotPositions = captureAssignmentSlots();
+      if (alternativesEnabled() && options.message !== false) {
+        const cooperativeConstraint = buildCooperativeABBCConstraint(students);
+        const distanceMatrix = calculateDistanceMatrix();
+        const candidates = [];
+        const seen = new Set();
+        for (let attempt = 0; attempt < 18 && candidates.length < 8; attempt++) {
+          const assignment = generateCooperativeABBCAssignment(students, { shufflePools: true });
+          if (!assignment) continue;
+          const signature = assignmentSignature(assignment);
+          if (seen.has(signature)) continue;
+          seen.add(signature);
+          const score = cooperativeConstraint ? calculateCost(assignment, [cooperativeConstraint], distanceMatrix).total : 0;
+          candidates.push({ assignment, score, evaluated: 1 });
+        }
+        const alternatives = selectDiverseAlternatives(candidates, 3, students.length).map(candidate => ({
+          ...candidate,
+          quality: cooperativeConstraint ? solutionQuality(candidate, [cooperativeConstraint], distanceMatrix) : null
+        }));
+        if (alternatives.length) {
+          setAlternatives(alternatives, slotPositions, { mode: 'cooperative', students });
+          applyAlternative(0);
+        } else {
+          clearAlternatives();
+          setOutputHtml(
+            '<div class="output-summary-head"><strong>Esquema Cooperativo ABBC aplicado.</strong></div>' +
+            '<div class="output-note">Se ha creado la disposición física en equipos de cuatro, pero no ha sido posible completar la asignación ABBC con el estado actual.</div>'
+          );
+        }
+      } else {
+        clearAlternatives();
+        const assignment = generateCooperativeABBCAssignment(students);
+        if (assignment) {
+          const summaryHtml = cooperativeABBCSummaryHtml(students, assignment);
+          applyPositionAssignment(assignment, students.length, slotPositions);
+          setOutputHtml(summaryHtml);
+        } else {
+          setOutputHtml(
+            '<div class="output-summary-head"><strong>Esquema Cooperativo ABBC aplicado.</strong></div>' +
+            '<div class="output-note">Se ha creado la disposición física en equipos de cuatro, pero no ha sido posible completar la asignación ABBC con el estado actual.</div>'
+          );
+        }
+      }
+    } else {
+      clearAlternatives();
+      state.cooperativeBlockPositions = [];
+    }
+
+    state.selectedTableId = null;
+    state.selectedTableIds.clear();
+    state.layoutActive = true;
+    state.lastSolution = null;
+    elements.solutionPanel.hidden = true;
+    elements.solutionPanel.innerHTML = '';
+    if (layout !== 'cooperative-abbc') resetOutput();
+    renderTables();
+    updateDeleteButton();
+    if (options.message !== false) {
+      if (layout === 'cooperative-abbc') {
+        showMessage('Esquema “Cooperativo ABBC” aplicado: equipos de cuatro con composición A-B-B-C cuando es posible.', 'success');
+      } else {
+        showMessage(`Esquema “${SPACE_LAYOUT_LABELS[layout]}” aplicado. Solo se han cambiado las posiciones de las mesas.`, 'success');
+      }
+    }
+    if (options.save !== false) saveStateSoon();
+    if (options.scroll !== false && options.message !== false) scrollToPageTopSoon(POST_PROGRESS_SCROLL_DELAY_MS);
+  }
+
+  function tablePixelGeometry(table) {
+    const width = elements.classroom.clientWidth;
+    const height = elements.classroom.clientHeight;
+    const { halfW: visualHalfW, halfH: visualHalfH } = tableVisualHalfExtents(table);
+    const cx = clamp(table.xNorm * width, visualHalfW, Math.max(visualHalfW, width - visualHalfW));
+    const cy = clamp(table.yNorm * height, visualHalfH, Math.max(visualHalfH, height - visualHalfH));
+    return {
+      cx,
+      cy,
+      left: cx - state.tableWidth / 2,
+      top: cy - state.tableHeight / 2
+    };
+  }
+
+  function clearConstraintRelatedHighlights() {
+    elements.classroom?.querySelectorAll('.constraint-related, .constraint-source').forEach(node => {
+      node.classList.remove('constraint-related', 'constraint-source');
+    });
+  }
+
+  function clearConstraintRelationLines() {
+    elements.classroom?.querySelector('.constraint-relations-layer')?.remove();
+  }
+
+  function hideTableTooltip() {
+    clearTimeout(state.tooltipTimer);
+    state.tooltipTimer = null;
+    clearConstraintRelatedHighlights();
+    clearConstraintRelationLines();
+    if (elements.tableTooltip) {
+      elements.tableTooltip.hidden = true;
+      elements.tableTooltip.replaceChildren();
+    }
+  }
+
+  function tooltipInteractionInProgress() {
+    return Boolean(state.dragging || state.marquee || state.zoneMode || state.zoneDraft || state.zoneDragging);
+  }
+
+  function readableStudentName(student) {
+    if (!student) return '';
+    return student.surnames ? `${student.firstName} ${student.surnames}`.trim() : student.fullName;
+  }
+
+  function buildStudentConstraintContext(student, students) {
+    const parsed = parseConstraints(students);
+    const studentMap = new Map(students.map(item => [item.id, item]));
+    const items = [];
+    const seenMessages = new Set();
+    const relatedIds = new Set();
+    const directRelations = [];
+    const seenDirectRelations = new Set();
+
+    const addItem = (text, ids = []) => {
+      if (!text || seenMessages.has(text)) return;
+      seenMessages.add(text);
+      items.push(text);
+      ids.forEach(id => {
+        if (id !== student.id) relatedIds.add(id);
+      });
+    };
+
+    const addDirectRelation = (otherId, relationType) => {
+      if (!otherId || otherId === student.id) return;
+      const visualType = relationType === 'far' ? 'far' : 'near';
+      const key = `${otherId}:${visualType}`;
+      if (seenDirectRelations.has(key)) return;
+      seenDirectRelations.add(key);
+      directRelations.push({ otherId, visualType });
+    };
+
+    const individualText = {
+      far: other => `Debe estar lejos de ${readableStudentName(other)}`,
+      together: other => `Debe estar cerca de ${readableStudentName(other)}`,
+      near: other => `Debe permanecer relativamente cerca de ${readableStudentName(other)}`
+    };
+
+    const groupText = {
+      groupFar: (group, same) => same
+        ? `Debe mantener distancia con las demás personas del grupo ${group}`
+        : `Debe mantener distancia con las personas del grupo ${group}`,
+      groupTogether: (group, same) => same
+        ? `Debe estar cerca de las demás personas del grupo ${group}`
+        : `Debe estar cerca de las personas del grupo ${group}`,
+      groupNear: (group, same) => same
+        ? `Debe permanecer relativamente cerca de las demás personas del grupo ${group}`
+        : `Debe permanecer relativamente cerca de las personas del grupo ${group}`
+    };
+
+    for (const constraint of parsed.constraints) {
+      if (constraint.type === 'far' || constraint.type === 'together' || constraint.type === 'near') {
+        if (constraint.a !== student.id && constraint.b !== student.id) continue;
+        const otherId = constraint.a === student.id ? constraint.b : constraint.a;
+        const other = studentMap.get(otherId);
+        if (other) {
+          addItem(individualText[constraint.type](other), [otherId]);
+          addDirectRelation(otherId, constraint.type);
+        }
+        continue;
+      }
+
+      if (constraint.type === 'groupFar' || constraint.type === 'groupTogether' || constraint.type === 'groupNear') {
+        if (!student.group) continue;
+        const sameGroup = constraint.groupA === constraint.groupB;
+        if (sameGroup) {
+          if (student.group !== constraint.groupA) continue;
+          addItem(groupText[constraint.type](constraint.groupA, true));
+          continue;
+        }
+
+        if (student.group === constraint.groupA) {
+          addItem(groupText[constraint.type](constraint.groupB, false));
+        } else if (student.group === constraint.groupB) {
+          addItem(groupText[constraint.type](constraint.groupA, false));
+        }
+        continue;
+      }
+
+      if ((constraint.type === 'left' || constraint.type === 'right') && constraint.memberIds?.includes(student.id)) {
+        addItem(constraint.type === 'left' ? 'Debe situarse hacia la izquierda' : 'Debe situarse hacia la derecha');
+        continue;
+      }
+
+      if ((constraint.type === 'front' || constraint.type === 'back') && constraint.ids?.includes(student.id)) {
+        addItem(constraint.type === 'front' ? 'Debe situarse hacia delante' : 'Debe situarse hacia detrás');
+        continue;
+      }
+
+      if ((constraint.type === 'groupFront' || constraint.type === 'groupBack') && constraint.memberIds?.includes(student.id)) {
+        addItem(constraint.type === 'groupFront' ? 'Debe situarse hacia delante' : 'Debe situarse hacia detrás');
+      }
+    }
+
+    return { items, relatedIds: [...relatedIds], directRelations };
+  }
+
+  function renderTableTooltip(student, context) {
+    if (!elements.tableTooltip) return;
+    elements.tableTooltip.replaceChildren();
+
+    const title = document.createElement('div');
+    title.className = 'table-tooltip-name';
+    title.textContent = readableStudentName(student);
+    elements.tableTooltip.appendChild(title);
+
+    if (student.group) {
+      const meta = document.createElement('div');
+      meta.className = 'table-tooltip-meta';
+      meta.textContent = `Grupo ${student.group}`;
+      elements.tableTooltip.appendChild(meta);
+    }
+
+    if (context.items.length) {
+      const list = document.createElement('ul');
+      list.className = 'table-tooltip-constraints';
+      context.items.forEach(text => {
+        const item = document.createElement('li');
+        item.textContent = text;
+        list.appendChild(item);
+      });
+      elements.tableTooltip.appendChild(list);
+    }
+  }
+
+  function positionTableTooltipBesideTable(tableNode) {
+    if (!elements.tableTooltip || elements.tableTooltip.hidden || !tableNode?.isConnected) return;
+    const gap = 12;
+    const margin = 8;
+    const anchor = tableNode.getBoundingClientRect();
+    const rect = elements.tableTooltip.getBoundingClientRect();
+
+    let left = anchor.right + gap;
+    if (left + rect.width > window.innerWidth - margin) left = anchor.left - rect.width - gap;
+    left = clamp(left, margin, Math.max(margin, window.innerWidth - rect.width - margin));
+
+    let top = anchor.top + anchor.height / 2 - rect.height / 2;
+    top = clamp(top, margin, Math.max(margin, window.innerHeight - rect.height - margin));
+
+    elements.tableTooltip.style.left = `${left}px`;
+    elements.tableTooltip.style.top = `${top}px`;
+  }
+
+  function highlightConstraintRelatedTables(sourceNode, ids) {
+    clearConstraintRelatedHighlights();
+    sourceNode?.classList.add('constraint-source');
+    ids.forEach(id => {
+      elements.classroom?.querySelector(`.table-node[data-table-id="${id}"]`)?.classList.add('constraint-related');
+    });
+  }
+
+  function pointOnRectEdge(rect, towardX, towardY, classroomRect) {
+    const centerX = rect.left - classroomRect.left + rect.width / 2;
+    const centerY = rect.top - classroomRect.top + rect.height / 2;
+    const dx = towardX - centerX;
+    const dy = towardY - centerY;
+    const halfW = Math.max(1, rect.width / 2);
+    const halfH = Math.max(1, rect.height / 2);
+    const scale = 1 / Math.max(Math.abs(dx) / halfW, Math.abs(dy) / halfH, 1e-9);
+    return {
+      x: centerX + dx * scale,
+      y: centerY + dy * scale
+    };
+  }
+
+  function renderConstraintRelationLines(sourceNode, relations) {
+    clearConstraintRelationLines();
+    if (!elements.classroom || !sourceNode?.isConnected || !relations?.length) return;
+
+    const classroomRect = elements.classroom.getBoundingClientRect();
+    if (!classroomRect.width || !classroomRect.height) return;
+
+    const namespace = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(namespace, 'svg');
+    svg.classList.add('constraint-relations-layer');
+    svg.setAttribute('viewBox', `0 0 ${classroomRect.width} ${classroomRect.height}`);
+    svg.setAttribute('preserveAspectRatio', 'none');
+    svg.setAttribute('aria-hidden', 'true');
+
+    const sourceRect = sourceNode.getBoundingClientRect();
+    const sourceCenter = {
+      x: sourceRect.left - classroomRect.left + sourceRect.width / 2,
+      y: sourceRect.top - classroomRect.top + sourceRect.height / 2
+    };
+
+    relations.forEach(relation => {
+      const targetNode = elements.classroom.querySelector(`.table-node[data-table-id="${relation.otherId}"]`);
+      if (!targetNode) return;
+
+      const targetRect = targetNode.getBoundingClientRect();
+      const targetCenter = {
+        x: targetRect.left - classroomRect.left + targetRect.width / 2,
+        y: targetRect.top - classroomRect.top + targetRect.height / 2
+      };
+      const start = pointOnRectEdge(sourceRect, targetCenter.x, targetCenter.y, classroomRect);
+      const end = pointOnRectEdge(targetRect, sourceCenter.x, sourceCenter.y, classroomRect);
+
+      const line = document.createElementNS(namespace, 'line');
+      line.classList.add('constraint-relation-line', relation.visualType === 'far' ? 'is-far' : 'is-near');
+      line.setAttribute('x1', start.x.toFixed(2));
+      line.setAttribute('y1', start.y.toFixed(2));
+      line.setAttribute('x2', end.x.toFixed(2));
+      line.setAttribute('y2', end.y.toFixed(2));
+      svg.appendChild(line);
+    });
+
+    if (svg.childElementCount) elements.classroom.appendChild(svg);
+  }
+
+  function scheduleTableTooltip(event, studentId) {
+    if (!studentId || event.pointerType !== 'mouse' || !elements.tableTooltip || tooltipInteractionInProgress()) return;
+    clearTimeout(state.tooltipTimer);
+    clearConstraintRelatedHighlights();
+    clearConstraintRelationLines();
+    const tableNode = event.currentTarget;
+
+    state.tooltipTimer = setTimeout(() => {
+      if (!tableNode?.isConnected || tooltipInteractionInProgress()) return;
+      const students = parseStudents();
+      const student = students.find(item => item.id === studentId);
+      if (!student) return;
+
+      const context = buildStudentConstraintContext(student, students);
+      renderTableTooltip(student, context);
+      elements.tableTooltip.hidden = false;
+      positionTableTooltipBesideTable(tableNode);
+      highlightConstraintRelatedTables(tableNode, context.relatedIds);
+      renderConstraintRelationLines(tableNode, context.directRelations);
+    }, TOOLTIP_DELAY_MS);
+  }
+
+  function normalizeSearchText(value) {
+    return String(value || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLocaleLowerCase('es')
+      .trim();
+  }
+
+  function studentMatchesSearch(student, query) {
+    if (!student || !query) return false;
+    return [student.fullName, student.firstName, student.surnames, student.displayName]
+      .map(normalizeSearchText)
+      .some(value => value.includes(query));
+  }
+
+  function refreshPersonSearch() {
+    renderTables();
+  }
+
+  function renderZones() {
+    const fragment = document.createDocumentFragment();
+    const roomWidth = Math.max(1, elements.classroom.clientWidth);
+    const roomHeight = Math.max(1, elements.classroom.clientHeight);
+
+    for (const zone of state.zones) {
+      const rect = zonePixelRect(zone, roomWidth, roomHeight);
+      const node = document.createElement('div');
+      node.className = `zone-protected${state.selectedZoneId === zone.id ? ' selected' : ''}`;
+      node.dataset.zoneId = String(zone.id);
+      node.style.left = `${rect.left}px`;
+      node.style.top = `${rect.top}px`;
+      node.style.width = `${rect.width}px`;
+      node.style.height = `${rect.height}px`;
+      node.textContent = 'ZONA PROTEGIDA';
+      node.setAttribute('aria-label', `Zona protegida ${zone.id}`);
+      node.addEventListener('pointerdown', onZonePointerDown);
+      node.addEventListener('contextmenu', onZoneContextMenu);
+      fragment.appendChild(node);
+    }
+    return fragment;
+  }
+
+  function renderTables() {
+    const students = parseStudents();
+    const studentMap = new Map(students.map(student => [student.id, student]));
+    const searchQuery = normalizeSearchText(elements.personSearchInput?.value);
+    const fragment = document.createDocumentFragment();
+
+    elements.classroom.innerHTML = '';
+    elements.classroom.appendChild(renderZones());
+
+    for (const table of state.tables) {
+      const geometry = tablePixelGeometry(table);
+      const node = document.createElement('div');
+      const student = studentMap.get(table.id);
+
+      const rotation = normalizeRotation(table.rotation);
+      const inMultiSelection = state.selectedTableIds.has(table.id);
+      const searchMatch = studentMatchesSearch(student, searchQuery);
+      node.className = `table-node${student ? '' : ' empty'}${inMultiSelection ? ' group-selected' : ''}${state.selectedTableId === table.id ? ' selected' : ''}${table.locked ? ' locked' : ''}${searchMatch ? ' search-match' : ''}`;
+      node.dataset.tableId = String(table.id);
+      node.style.width = `${state.tableWidth}px`;
+      node.style.height = `${state.tableHeight}px`;
+      node.style.left = `${geometry.left}px`;
+      node.style.top = `${geometry.top}px`;
+      node.style.transform = `rotate(${rotation}deg)`;
+      node.style.setProperty('--counter-rotation', `${-rotation}deg`);
+      if (student?.group) {
+        node.classList.add('group-tagged');
+        node.style.setProperty('--group-table-fill', GROUP_COLORS[student.group] || '#e2e2e2');
+      }
+      const lockText = table.locked ? ' · bloqueada' : '';
+      const groupText = student?.group ? ` · grupo ${student.group}` : '';
+      node.setAttribute('aria-label', student ? `${student.fullName}. Mesa ${table.id}${groupText}${lockText}` : `Mesa ${table.id} · libre${lockText}`);
+
+      const idTag = document.createElement('span');
+      idTag.className = 'table-id';
+      idTag.textContent = String(table.id);
+
+      const label = document.createElement('span');
+      label.className = 'student-label';
+      label.textContent = student ? `${student.displayName}${student.group ? ` (${student.group})` : ''}` : 'Libre';
+
+      node.append(idTag, label);
+      if (student) {
+        node.addEventListener('pointerenter', event => scheduleTableTooltip(event, student.id));
+        node.addEventListener('pointerleave', hideTableTooltip);
+      }
+      node.addEventListener('pointerdown', onTablePointerDown);
+      node.addEventListener('contextmenu', onTableContextMenu);
+      fragment.appendChild(node);
+    }
+
+    elements.classroom.appendChild(fragment);
+  }
+
+  function clearTableSelection(options = {}) {
+    state.selectedTableId = null;
+    state.selectedTableIds.clear();
+    if (options.render !== false) renderTables();
+    updateDeleteButton();
+    updateTableActionButtons();
+  }
+
+  function selectOnlyTable(tableId, options = {}) {
+    state.selectedZoneId = null;
+    state.selectedTableId = tableId;
+    state.selectedTableIds = new Set(tableId == null ? [] : [tableId]);
+    if (options.render !== false) renderTables();
+    updateDeleteButton();
+    updateTableActionButtons();
+  }
+
+  function classroomPoint(event) {
+    const rect = elements.classroom.getBoundingClientRect();
+    return {
+      x: clamp(event.clientX - rect.left, 0, rect.width),
+      y: clamp(event.clientY - rect.top, 0, rect.height),
+      rect
+    };
+  }
+
+  function removeMarqueeNode() {
+    const node = state.marquee?.node;
+    if (node?.parentNode) node.parentNode.removeChild(node);
+  }
+
+  function updateMarqueeNode(marquee) {
+    if (!marquee.node) {
+      marquee.node = document.createElement('div');
+      marquee.node.className = 'selection-marquee';
+      elements.classroom.appendChild(marquee.node);
+    }
+    const left = Math.min(marquee.startX, marquee.currentX);
+    const top = Math.min(marquee.startY, marquee.currentY);
+    const width = Math.abs(marquee.currentX - marquee.startX);
+    const height = Math.abs(marquee.currentY - marquee.startY);
+    marquee.node.style.left = `${left}px`;
+    marquee.node.style.top = `${top}px`;
+    marquee.node.style.width = `${width}px`;
+    marquee.node.style.height = `${height}px`;
+  }
+
+  function setZoneMode(active) {
+    state.zoneMode = Boolean(active);
+    elements.addZoneBtn?.classList.toggle('zone-mode-active', state.zoneMode);
+    elements.addZoneBtn?.setAttribute('aria-pressed', String(state.zoneMode));
+    elements.classroom?.classList.toggle('zone-draw-mode', state.zoneMode);
+    if (!state.zoneMode && state.zoneDraft?.node?.parentNode) state.zoneDraft.node.remove();
+    if (!state.zoneMode) state.zoneDraft = null;
+  }
+
+  function activateZoneMode() {
+    hideTableTooltip();
+    state.selectedZoneId = null;
+    state.selectedTableId = null;
+    state.selectedTableIds.clear();
+    setZoneMode(true);
+    renderTables();
+    updateDeleteButton();
+    showMessage('Arrastra sobre una zona vacía del espacio para crear una zona protegida. Pulsa Escape para cancelar.', 'info');
+  }
+
+  function updateZoneDraftNode(draft) {
+    if (!draft.node) {
+      draft.node = document.createElement('div');
+      draft.node.className = 'zone-draft';
+      elements.classroom.appendChild(draft.node);
+    }
+    const left = Math.min(draft.startX, draft.currentX);
+    const top = Math.min(draft.startY, draft.currentY);
+    const width = Math.abs(draft.currentX - draft.startX);
+    const height = Math.abs(draft.currentY - draft.startY);
+    draft.node.style.left = `${left}px`;
+    draft.node.style.top = `${top}px`;
+    draft.node.style.width = `${width}px`;
+    draft.node.style.height = `${height}px`;
+  }
+
+  function startZoneDraft(event) {
+    const point = classroomPoint(event);
+    state.zoneDraft = {
+      pointerId: event.pointerId,
+      startX: point.x,
+      startY: point.y,
+      currentX: point.x,
+      currentY: point.y,
+      moved: false,
+      node: null
+    };
+    elements.classroom.setPointerCapture?.(event.pointerId);
+    event.preventDefault();
+  }
+
+  function moveZoneDraft(event) {
+    const draft = state.zoneDraft;
+    if (!draft || event.pointerId !== draft.pointerId) return false;
+    const point = classroomPoint(event);
+    draft.currentX = point.x;
+    draft.currentY = point.y;
+    if (!draft.moved && Math.hypot(draft.currentX - draft.startX, draft.currentY - draft.startY) < 4) return true;
+    draft.moved = true;
+    updateZoneDraftNode(draft);
+    return true;
+  }
+
+  function finishZoneDraft(event) {
+    const draft = state.zoneDraft;
+    if (!draft || event.pointerId !== draft.pointerId) return false;
+    const point = classroomPoint(event);
+    draft.currentX = point.x;
+    draft.currentY = point.y;
+    draft.node?.remove();
+
+    const left = Math.min(draft.startX, draft.currentX);
+    const top = Math.min(draft.startY, draft.currentY);
+    const width = Math.abs(draft.currentX - draft.startX);
+    const height = Math.abs(draft.currentY - draft.startY);
+    state.zoneDraft = null;
+    setZoneMode(false);
+
+    if (!draft.moved || width < 18 || height < 18) {
+      showMessage('La zona protegida debe tener un tamaño mínimo.', 'warning');
+      renderTables();
+      return true;
+    }
+
+    const rect = { left, top, width, height, right: left + width, bottom: top + height };
+    if (zoneRectOverlapsAnyTable(rect)) {
+      showMessage('La zona no puede superponerse con mesas existentes.', 'error');
+      renderTables();
+      return true;
+    }
+
+    const roomWidth = Math.max(1, elements.classroom.clientWidth);
+    const roomHeight = Math.max(1, elements.classroom.clientHeight);
+    const zone = {
+      id: nextZoneId(),
+      xNorm: left / roomWidth,
+      yNorm: top / roomHeight,
+      widthNorm: width / roomWidth,
+      heightNorm: height / roomHeight
+    };
+    clearAlternatives();
+    state.zones.push(zone);
+    state.selectedZoneId = zone.id;
+    state.layoutActive = false;
+    renderTables();
+    showMessage('Zona protegida creada. Las mesas no podrán ocuparla.', 'success');
+    saveStateSoon();
+    return true;
+  }
+
+  function deleteZone(zoneId, askConfirmation = true) {
+    const zone = state.zones.find(item => item.id === Number(zoneId));
+    if (!zone) return;
+    if (askConfirmation && !window.confirm('¿Eliminar esta zona protegida?')) return;
+    clearAlternatives();
+    state.zones = state.zones.filter(item => item.id !== zone.id);
+    if (state.selectedZoneId === zone.id) state.selectedZoneId = null;
+    state.layoutActive = false;
+    renderTables();
+    showMessage('Zona protegida eliminada.', 'success');
+    saveStateSoon();
+  }
+
+  function onZoneContextMenu(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    const zoneId = Number(event.currentTarget.dataset.zoneId);
+    state.selectedZoneId = zoneId;
+    deleteZone(zoneId, true);
+  }
+
+  function onZonePointerDown(event) {
+    if (state.zoneMode) return;
+    if (event.button !== 0 && event.pointerType === 'mouse') return;
+    event.stopPropagation();
+    event.preventDefault();
+    const node = event.currentTarget;
+    const zoneId = Number(node.dataset.zoneId);
+    const zone = state.zones.find(item => item.id === zoneId);
+    if (!zone) return;
+
+    state.selectedZoneId = zoneId;
+    state.selectedTableId = null;
+    state.selectedTableIds.clear();
+    renderTables();
+    updateDeleteButton();
+    const freshNode = elements.classroom.querySelector(`.zone-protected[data-zone-id="${zoneId}"]`);
+    if (!freshNode) return;
+
+    const roomWidth = Math.max(1, elements.classroom.clientWidth);
+    const roomHeight = Math.max(1, elements.classroom.clientHeight);
+    const rect = zonePixelRect(zone, roomWidth, roomHeight);
+    state.zoneDragging = {
+      pointerId: event.pointerId,
+      zone,
+      node: freshNode,
+      startClientX: event.clientX,
+      startClientY: event.clientY,
+      startLeft: rect.left,
+      startTop: rect.top,
+      width: rect.width,
+      height: rect.height,
+      lastLeft: rect.left,
+      lastTop: rect.top
+    };
+    freshNode.setPointerCapture?.(event.pointerId);
+    freshNode.addEventListener('pointermove', onZonePointerMove);
+    freshNode.addEventListener('pointerup', onZonePointerUp);
+    freshNode.addEventListener('pointercancel', onZonePointerUp);
+  }
+
+  function onZonePointerMove(event) {
+    const drag = state.zoneDragging;
+    if (!drag || event.pointerId !== drag.pointerId) return;
+    const roomWidth = Math.max(1, elements.classroom.clientWidth);
+    const roomHeight = Math.max(1, elements.classroom.clientHeight);
+    const left = clamp(drag.startLeft + event.clientX - drag.startClientX, 0, roomWidth - drag.width);
+    const top = clamp(drag.startTop + event.clientY - drag.startClientY, 0, roomHeight - drag.height);
+    const rect = { left, top, width: drag.width, height: drag.height, right: left + drag.width, bottom: top + drag.height };
+    if (zoneRectOverlapsAnyTable(rect)) return;
+
+    drag.lastLeft = left;
+    drag.lastTop = top;
+    drag.zone.xNorm = left / roomWidth;
+    drag.zone.yNorm = top / roomHeight;
+    drag.node.style.left = `${left}px`;
+    drag.node.style.top = `${top}px`;
+  }
+
+  function onZonePointerUp(event) {
+    const drag = state.zoneDragging;
+    if (!drag || event.pointerId !== drag.pointerId) return;
+    drag.node.removeEventListener('pointermove', onZonePointerMove);
+    drag.node.removeEventListener('pointerup', onZonePointerUp);
+    drag.node.removeEventListener('pointercancel', onZonePointerUp);
+    state.zoneDragging = null;
+    state.layoutActive = false;
+    renderTables();
+    saveStateSoon();
+  }
+
+  function onClassroomPointerDown(event) {
+    if (event.target !== elements.classroom) return;
+    if (event.button !== 0 && event.pointerType === 'mouse') return;
+
+    hideTableTooltip();
+    if (state.zoneMode) {
+      startZoneDraft(event);
+      return;
+    }
+    state.selectedZoneId = null;
+    const point = classroomPoint(event);
+    state.marquee = {
+      pointerId: event.pointerId,
+      startX: point.x,
+      startY: point.y,
+      currentX: point.x,
+      currentY: point.y,
+      moved: false,
+      node: null
+    };
+
+    elements.classroom.setPointerCapture?.(event.pointerId);
+    event.preventDefault();
+  }
+
+  function onClassroomPointerMove(event) {
+    if (moveZoneDraft(event)) return;
+    const marquee = state.marquee;
+    if (!marquee || event.pointerId !== marquee.pointerId) return;
+    const point = classroomPoint(event);
+    marquee.currentX = point.x;
+    marquee.currentY = point.y;
+
+    const distance = Math.hypot(marquee.currentX - marquee.startX, marquee.currentY - marquee.startY);
+    if (!marquee.moved && distance < 4) return;
+    marquee.moved = true;
+    updateMarqueeNode(marquee);
+  }
+
+  function onClassroomPointerUp(event) {
+    if (finishZoneDraft(event)) return;
+    const marquee = state.marquee;
+    if (!marquee || event.pointerId !== marquee.pointerId) return;
+
+    const point = classroomPoint(event);
+    marquee.currentX = point.x;
+    marquee.currentY = point.y;
+    removeMarqueeNode();
+
+    if (!marquee.moved) {
+      state.marquee = null;
+      clearTableSelection();
+      return;
+    }
+
+    const left = Math.min(marquee.startX, marquee.currentX);
+    const right = Math.max(marquee.startX, marquee.currentX);
+    const top = Math.min(marquee.startY, marquee.currentY);
+    const bottom = Math.max(marquee.startY, marquee.currentY);
+
+    const selectedIds = state.tables
+      .filter(table => !table.locked)
+      .filter(table => {
+        const geometry = tablePixelGeometry(table);
+        return geometry.cx >= left && geometry.cx <= right && geometry.cy >= top && geometry.cy <= bottom;
+      })
+      .map(table => table.id);
+
+    state.selectedTableIds = new Set(selectedIds);
+    state.selectedTableId = selectedIds[0] ?? null;
+    state.marquee = null;
+    renderTables();
+    updateDeleteButton();
+    updateTableActionButtons();
+  }
+
+  function onTablePointerDown(event) {
+    hideTableTooltip();
+    if (event.button !== 0 && event.pointerType === 'mouse') return;
+    const node = event.currentTarget;
+    const tableId = Number(node.dataset.tableId);
+    const table = state.tables.find(item => item.id === tableId);
+    if (!table) return;
+    state.selectedZoneId = null;
+
+    const alreadyInGroup = state.selectedTableIds.has(tableId) && state.selectedTableIds.size > 1;
+    if (!alreadyInGroup) {
+      state.selectedTableIds = new Set([tableId]);
+    }
+    state.selectedTableId = tableId;
+    updateDeleteButton();
+    updateTableActionButtons();
+
+    elements.classroom.querySelectorAll('.table-node.selected').forEach(item => item.classList.remove('selected'));
+    if (!alreadyInGroup) {
+      elements.classroom.querySelectorAll('.table-node.group-selected').forEach(item => item.classList.remove('group-selected'));
+      node.classList.add('group-selected');
+    }
+    node.classList.add('selected');
+
+    event.preventDefault();
+    if (table.locked) return;
+
+    const rect = elements.classroom.getBoundingClientRect();
+    const movableTables = Array.from(state.selectedTableIds)
+      .map(id => state.tables.find(item => item.id === id))
+      .filter(item => item && !item.locked);
+
+    if (!movableTables.some(item => item.id === tableId)) movableTables.push(table);
+
+    const group = movableTables.map(item => {
+      const geometry = tablePixelGeometry(item);
+      return {
+        table: item,
+        node: elements.classroom.querySelector(`.table-node[data-table-id="${item.id}"]`),
+        startCx: geometry.cx,
+        startCy: geometry.cy,
+        extents: tableVisualHalfExtents(item)
+      };
+    });
+
+    let minDx = -Infinity;
+    let maxDx = Infinity;
+    let minDy = -Infinity;
+    let maxDy = Infinity;
+    for (const item of group) {
+      minDx = Math.max(minDx, item.extents.halfW - item.startCx);
+      maxDx = Math.min(maxDx, rect.width - item.extents.halfW - item.startCx);
+      minDy = Math.max(minDy, item.extents.halfH - item.startCy);
+      maxDy = Math.min(maxDy, rect.height - item.extents.halfH - item.startCy);
+    }
+
+    state.dragging = {
+      pointerId: event.pointerId,
+      table,
+      node,
+      group,
+      startClientX: event.clientX,
+      startClientY: event.clientY,
+      minDx,
+      maxDx,
+      minDy,
+      maxDy,
+      lastDx: 0,
+      lastDy: 0
+    };
+
+    node.setPointerCapture?.(event.pointerId);
+    node.classList.add('dragging');
+    const anchorGeometry = tablePixelGeometry(table);
+    updateCoordinateBubble(node, anchorGeometry.cx, anchorGeometry.cy);
+    node.addEventListener('pointermove', onTablePointerMove);
+    node.addEventListener('pointerup', onTablePointerUp);
+    node.addEventListener('pointercancel', onTablePointerUp);
+  }
+
+  function onTablePointerMove(event) {
+    if (!state.dragging || event.pointerId !== state.dragging.pointerId) return;
+    const { table, node, group, startClientX, startClientY, minDx, maxDx, minDy, maxDy } = state.dragging;
+    const rect = elements.classroom.getBoundingClientRect();
+
+    const dx = clamp(event.clientX - startClientX, minDx, maxDx);
+    const dy = clamp(event.clientY - startClientY, minDy, maxDy);
+    const collidesWithZone = group.some(item => {
+      const cx = item.startCx + dx;
+      const cy = item.startCy + dy;
+      return tableOverlapsProtectedZoneAt(item.table, cx, cy);
+    });
+    if (collidesWithZone) return;
+    if (dx !== 0 || dy !== 0) clearAlternatives();
+
+    state.dragging.lastDx = dx;
+    state.dragging.lastDy = dy;
+    for (const item of group) {
+      const cx = item.startCx + dx;
+      const cy = item.startCy + dy;
+      item.table.xNorm = rect.width ? cx / rect.width : 0.5;
+      item.table.yNorm = rect.height ? cy / rect.height : 0.5;
+      if (item.node) {
+        item.node.style.left = `${cx - state.tableWidth / 2}px`;
+        item.node.style.top = `${cy - state.tableHeight / 2}px`;
+      }
+    }
+
+    const anchor = group.find(item => item.table.id === table.id);
+    if (anchor) updateCoordinateBubble(node, anchor.startCx + dx, anchor.startCy + dy);
+  }
+
+  function onTablePointerUp(event) {
+    if (!state.dragging || event.pointerId !== state.dragging.pointerId) return;
+    const { node, lastDx = 0, lastDy = 0 } = state.dragging;
+    const moved = Math.abs(lastDx) > 0.5 || Math.abs(lastDy) > 0.5;
+    node.classList.remove('dragging');
+    node.querySelector('.coordinates')?.remove();
+    node.removeEventListener('pointermove', onTablePointerMove);
+    node.removeEventListener('pointerup', onTablePointerUp);
+    node.removeEventListener('pointercancel', onTablePointerUp);
+    state.dragging = null;
+    if (moved) markManualLayout();
+    else state.layoutActive = false;
+    state.lastSolution = null;
+    hideSolution();
+    saveStateSoon();
+  }
+
+  function onSelectionKeyDown(event) {
+    const activeTag = document.activeElement?.tagName?.toLowerCase();
+    const editing = activeTag === 'textarea' || activeTag === 'input' || document.activeElement?.isContentEditable;
+
+    if ((event.key === 'Delete' || event.key === 'Backspace') && state.selectedZoneId != null && !editing) {
+      event.preventDefault();
+      deleteZone(state.selectedZoneId, true);
+      return;
+    }
+
+    if (event.key !== 'Escape') return;
+    if (state.zoneMode || state.zoneDraft) {
+      state.zoneDraft?.node?.remove();
+      state.zoneDraft = null;
+      setZoneMode(false);
+      clearMessage();
+      return;
+    }
+    if (state.selectedZoneId != null) {
+      state.selectedZoneId = null;
+      renderTables();
+      return;
+    }
+    if (!state.marquee && state.selectedTableIds.size === 0 && state.selectedTableId == null) return;
+    removeMarqueeNode();
+    state.marquee = null;
+    clearTableSelection();
+  }
+
+  function updateCoordinateBubble(node, cx, cy) {
+    let bubble = node.querySelector('.coordinates');
+    if (!bubble) {
+      bubble = document.createElement('span');
+      bubble.className = 'coordinates';
+      node.appendChild(bubble);
+    }
+    bubble.textContent = `x ${Math.round(cx)} · y ${Math.round(cy)}`;
+  }
+
+  function updateDeleteButton() {
+    if (!elements.deleteTableBtn) return;
+    const exists = state.tables.some(table => table.id === state.selectedTableId);
+    elements.deleteTableBtn.disabled = !exists;
+    elements.deleteTableBtn.title = exists ? `Eliminar mesa ${state.selectedTableId}` : 'Selecciona una mesa para eliminarla';
+    updateTableActionButtons();
+  }
+
+  function selectedTable() {
+    return state.tables.find(table => table.id === state.selectedTableId) || null;
+  }
+
+  function updateTableActionButtons() {
+    const table = selectedTable();
+    if (elements.rotateTableBtn) {
+      elements.rotateTableBtn.disabled = !table;
+      elements.rotateTableBtn.title = table ? `Girar mesa ${table.id} 90°` : 'Selecciona una mesa para girarla';
+    }
+    if (elements.lockTableBtn) {
+      elements.lockTableBtn.disabled = !table;
+      elements.lockTableBtn.textContent = table?.locked ? 'Desbloquear mesa' : 'Bloquear mesa';
+      elements.lockTableBtn.title = table
+        ? (table.locked ? `Desbloquear mesa ${table.id}` : `Bloquear mesa ${table.id} en su posición actual`)
+        : 'Selecciona una mesa para bloquearla';
+    }
+  }
+
+  function rotateSelectedTable() {
+    const table = selectedTable();
+    if (!table) return;
+    const previousRotation = normalizeRotation(table.rotation);
+    const nextRotation = (previousRotation + 90) % 360;
+    const geometry = tablePixelGeometry(table);
+    table.rotation = nextRotation;
+    if (tableOverlapsProtectedZoneAt(table, geometry.cx, geometry.cy)) {
+      table.rotation = previousRotation;
+      showMessage('No se puede girar la mesa porque invadiría una zona protegida.', 'warning');
+      return;
+    }
+    clearAlternatives();
+    markManualLayout();
+    state.lastSolution = null;
+    hideSolution();
+    renderTables();
+    updateTableActionButtons();
+    showMessage(`Mesa ${table.id} girada 90°. La orientación del texto indica desde qué lado se sentaría la persona.`, 'success');
+    saveStateSoon();
+  }
+
+  function toggleSelectedTableLock() {
+    const table = selectedTable();
+    if (!table) return;
+    clearAlternatives();
+    table.locked = !table.locked;
+    state.layoutActive = false;
+    state.lastSolution = null;
+    hideSolution();
+    renderTables();
+    updateTableActionButtons();
+    showMessage(
+      table.locked
+        ? `Mesa ${table.id} bloqueada. Conservará esta posición al organizar, mezclar o aplicar un esquema.`
+        : `Mesa ${table.id} desbloqueada.`,
+      'success'
+    );
+    saveStateSoon();
+  }
+
+  function rewriteConstraintsAfterDeletion(deletedId) {
+    const lines = elements.constraintsInput.value.split(/\r?\n/);
+    const rewritten = [];
+    let removedCount = 0;
+
+    const remapId = id => id > deletedId ? id - 1 : id;
+
+    for (const rawLine of lines) {
+      const line = rawLine.trim();
+      if (!line) {
+        rewritten.push(rawLine);
+        continue;
+      }
+
+      let match;
+      if ((match = line.match(/^(\d+)\s*x\s*(\d+)$/i))) {
+        const a = Number(match[1]);
+        const b = Number(match[2]);
+        if (a === deletedId || b === deletedId) {
+          removedCount++;
+          continue;
+        }
+        rewritten.push(`${remapId(a)}x${remapId(b)}`);
+        continue;
+      }
+
+      if ((match = line.match(/^(\d+)\s*--\s*(\d+)$/))) {
+        const a = Number(match[1]);
+        const b = Number(match[2]);
+        if (a === deletedId || b === deletedId) {
+          removedCount++;
+          continue;
+        }
+        rewritten.push(`${remapId(a)}--${remapId(b)}`);
+        continue;
+      }
+
+      if ((match = line.match(/^(\d+)\s*-\s*(\d+)$/))) {
+        const a = Number(match[1]);
+        const b = Number(match[2]);
+        if (a === deletedId || b === deletedId) {
+          removedCount++;
+          continue;
+        }
+        rewritten.push(`${remapId(a)}-${remapId(b)}`);
+        continue;
+      }
+
+      if ((match = line.match(/^([LR])\s*:\s*(.+)$/i))) {
+        const tokens = match[2].split(',').map(value => value.trim()).filter(Boolean);
+        const rewrittenTokens = [];
+        let changed = false;
+        for (const token of tokens) {
+          if (/^\d+$/.test(token)) {
+            const id = Number(token);
+            if (id === deletedId) {
+              changed = true;
+              removedCount++;
+              continue;
+            }
+            const remapped = remapId(id);
+            if (remapped !== id) changed = true;
+            rewrittenTokens.push(String(remapped));
+          } else {
+            rewrittenTokens.push(token);
+          }
+        }
+        if (!rewrittenTokens.length) continue;
+        rewritten.push(`${match[1].toUpperCase()}: ${rewrittenTokens.join(',')}`);
+        continue;
+      }
+
+      if ((match = line.match(/^([FB])\s*:\s*(.+)$/i))) {
+        const tokens = match[2].split(',').map(value => value.trim()).filter(Boolean);
+        if (tokens.length && tokens.every(value => /^\d+$/.test(value))) {
+          const ids = tokens.map(Number);
+          const remaining = ids.filter(id => id !== deletedId).map(remapId);
+          if (!remaining.length) {
+            removedCount++;
+            continue;
+          }
+          if (remaining.length !== ids.length) removedCount++;
+          rewritten.push(`${match[1].toUpperCase()}: ${remaining.join(',')}`);
+          continue;
+        }
+      }
+
+      // Preserve malformed/unknown lines verbatim so the user can still correct them.
+      rewritten.push(rawLine);
+    }
+
+    elements.constraintsInput.value = rewritten.join('\n').replace(/\n{3,}/g, '\n\n').trim();
+    return removedCount;
+  }
+
+  function removeStudentForTable(deletedId) {
+    const students = parseStudents();
+    if (deletedId < 1 || deletedId > students.length) return false;
+
+    let currentStudentId = 0;
+    let nextStudentNumber = 0;
+    const rewritten = [];
+
+    for (const sourceLine of elements.studentsInput.value.split(/\r?\n/)) {
+      const trimmed = sourceLine.trim();
+      if (!trimmed || trimmed.startsWith('#')) {
+        rewritten.push(sourceLine);
+        continue;
+      }
+
+      currentStudentId += 1;
+      if (currentStudentId === deletedId) continue;
+
+      nextStudentNumber += 1;
+      rewritten.push(`${nextStudentNumber}. ${stripStudentNumber(sourceLine)}`);
+    }
+
+    elements.studentsInput.value = rewritten.join('\n');
+    return true;
+  }
+
+  function renumberTablesAfterDeletion(deletedId) {
+    state.tables = state.tables.map(table => ({
+      ...table,
+      id: table.id > deletedId ? table.id - 1 : table.id
+    }));
+  }
+
+  function deleteTable(tableId, askConfirmation = true) {
+    const table = state.tables.find(item => item.id === Number(tableId));
+    if (!table) return;
+
+    const students = parseStudents();
+    const hasStudent = table.id <= students.length;
+    const confirmationText = hasStudent
+      ? `¿Eliminar la mesa ${table.id} y también a la persona ${table.id} de la lista?`
+      : `¿Eliminar la mesa ${table.id}?`;
+
+    if (askConfirmation && !window.confirm(confirmationText)) return;
+
+    clearAlternatives();
+    state.tables = state.tables.filter(item => item.id !== table.id);
+    state.cooperativeBlockPositions = [];
+
+    let constraintsRemoved = 0;
+    if (hasStudent) {
+      removeStudentForTable(table.id);
+      constraintsRemoved = rewriteConstraintsAfterDeletion(table.id);
+      renumberTablesAfterDeletion(table.id);
+    }
+
+    state.selectedTableId = null;
+    state.selectedTableIds.clear();
+    markManualLayout();
+    state.lastSolution = null;
+    hideSolution();
+    renderTables();
+    updateUIState();
+    updateDeleteButton();
+
+    const suffix = hasStudent
+      ? ` También se eliminó la persona ${table.id} y se renumeraron personas y mesas.${constraintsRemoved ? ` Se ajustaron las restricciones (${constraintsRemoved} referencia(s) eliminada(s)).` : ' Las restricciones se reajustaron automáticamente.'}`
+      : '';
+    showMessage(`Mesa ${table.id} eliminada.${suffix}`, 'success');
+    saveStateSoon();
+  }
+
+  function deleteSelectedTable() {
+    if (state.selectedTableId == null) return;
+    deleteTable(state.selectedTableId, true);
+  }
+
+  function clearTables() {
+    if (!state.tables.length) {
+      showMessage('El espacio ya está vacía.', 'info');
+      return;
+    }
+
+    const confirmed = window.confirm(
+      '¿Eliminar todas las mesas del espacio? La lista de personas, las restricciones y las zonas protegidas se conservarán.'
+    );
+    if (!confirmed) return;
+
+    clearAlternatives();
+    state.tables = [];
+    state.selectedTableId = null;
+    state.selectedTableIds.clear();
+    markManualLayout();
+    state.lastSolution = null;
+    hideSolution();
+    renderTables();
+    updateUIState();
+    updateDeleteButton();
+    showMessage('Espacio vaciado. La lista de personas y las restricciones se han conservado.', 'success');
+    saveStateSoon();
+  }
+
+  function onTableContextMenu(event) {
+    hideTableTooltip();
+    event.preventDefault();
+    const tableId = Number(event.currentTarget.dataset.tableId);
+    state.selectedTableId = tableId;
+    state.selectedTableIds = new Set([tableId]);
+    renderTables();
+    updateDeleteButton();
+    deleteTable(tableId, true);
+  }
+
+  function nextAvailableTableId() {
+    const usedIds = new Set(state.tables.map(table => table.id));
+    let id = 1;
+    while (usedIds.has(id)) id++;
+    return id;
+  }
+
+  function findFreeTablePosition() {
+    const width = Math.max(1, elements.classroom.clientWidth);
+    const height = Math.max(1, elements.classroom.clientHeight);
+    const halfW = state.tableWidth / 2;
+    const halfH = state.tableHeight / 2;
+    const gapX = 10;
+    const gapY = 10;
+    const stepX = state.tableWidth + gapX;
+    const stepY = state.tableHeight + gapY;
+    const marginX = 12;
+    const marginY = 12;
+
+    for (let y = halfH + marginY; y <= height - halfH - marginY + 0.1; y += stepY) {
+      for (let x = halfW + marginX; x <= width - halfW - marginX + 0.1; x += stepX) {
+        const overlaps = state.tables.some(table => {
+          const geometry = tablePixelGeometry(table);
+          const extents = tableVisualHalfExtents(table);
+          return Math.abs(geometry.cx - x) < extents.halfW + halfW + gapX / 2 &&
+                 Math.abs(geometry.cy - y) < extents.halfH + halfH + gapY / 2;
+        });
+        const zoneBlocked = rectOverlapsProtectedZone({ left: x - halfW, top: y - halfH, right: x + halfW, bottom: y + halfH });
+        if (!overlaps && !zoneBlocked) return { x, y, width, height };
+      }
+    }
+
+    // Si el espacio está muy lleno, buscamos cualquier punto que al menos no invada una zona protegida.
+    for (let y = halfH; y <= height - halfH; y += 8) {
+      for (let x = halfW; x <= width - halfW; x += 8) {
+        const rect = { left: x - halfW, top: y - halfH, right: x + halfW, bottom: y + halfH };
+        if (!rectOverlapsProtectedZone(rect)) return { x, y, width, height };
+      }
+    }
+    return null;
+  }
+
+  function addTables(count = 1) {
+    const numericCount = Math.floor(Number(count));
+    if (!Number.isFinite(numericCount) || numericCount < 1 || numericCount > 999) {
+      showMessage('Indica un número entero positivo de mesas entre 1 y 999.', 'error');
+      elements.tableCountInput?.focus();
+      return;
+    }
+
+    clearAlternatives();
+    const safeCount = numericCount;
+    let lastId = null;
+    let addedCount = 0;
+
+    for (let i = 0; i < safeCount; i++) {
+      const id = nextAvailableTableId();
+      const position = findFreeTablePosition();
+      if (!position) break;
+      state.tables.push({
+        id,
+        xNorm: position.width ? position.x / position.width : 0.1,
+        yNorm: position.height ? position.y / position.height : 0.1,
+        rotation: 0,
+        locked: false
+      });
+      lastId = id;
+      addedCount++;
+    }
+
+    if (!addedCount) {
+      showMessage('No hay espacio libre suficiente fuera de las zonas protegidas para añadir una mesa.', 'error');
+      return;
+    }
+
+    state.selectedTableId = lastId;
+    state.selectedTableIds = new Set(lastId == null ? [] : [lastId]);
+    markManualLayout();
+    state.lastSolution = null;
+    hideSolution();
+    renderTables();
+    updateUIState();
+    showMessage(`${addedCount} ${addedCount === 1 ? 'mesa añadida' : 'mesas añadidas'} al espacio.${addedCount < safeCount ? ' No había espacio válido para añadir más sin invadir zonas protegidas.' : ''}`, addedCount < safeCount ? 'warning' : 'success');
+    saveStateSoon();
+  }
+
+  function addTable() {
+    addTables(1);
+  }
+
+  function resizeTables(delta) {
+    const nextWidth = clamp(state.tableWidth + delta, MIN_TABLE_WIDTH, MAX_TABLE_WIDTH);
+    const ratio = nextWidth / state.tableWidth;
+    const nextHeight = Math.round(clamp(state.tableHeight * ratio, 36, 88));
+    if (anyTableOverlapsProtectedZone(nextWidth, nextHeight)) {
+      showMessage('No se puede cambiar el tamaño porque alguna mesa invadiría una zona protegida.', 'warning');
+      return;
+    }
+    clearAlternatives();
+    state.tableWidth = nextWidth;
+    state.tableHeight = nextHeight;
+    state.lastSolution = null;
+    hideSolution();
+    if (state.layoutActive) applySpaceLayout(state.spaceLayout, { message: false, save: false, scroll: false });
+    else renderTables();
+    saveStateSoon();
+  }
+
+  function calculateDistanceMatrix() {
+    const n = state.tables.length;
+    const matrix = Array.from({ length: n }, () => Array(n).fill(0));
+    const width = Math.max(1, elements.classroom.clientWidth);
+    const height = Math.max(1, elements.classroom.clientHeight);
+    const maxDistance = Math.hypot(width, height);
+    const positions = state.tables.map(table => ({
+      x: table.xNorm * width,
+      y: table.yNorm * height
+    }));
+
+    for (let i = 0; i < n; i++) {
+      for (let j = i + 1; j < n; j++) {
+        const dx = positions[i].x - positions[j].x;
+        const dy = positions[i].y - positions[j].y;
+        const d = clamp(Math.hypot(dx, dy) / maxDistance, 0, 1);
+        matrix[i][j] = d;
+        matrix[j][i] = d;
+      }
+    }
+
+    return matrix;
+  }
+
+  function assignmentToStudentDistanceMatrix(assignment, studentCount, distanceMatrix) {
+    const matrix = Array.from({ length: studentCount }, () => Array(studentCount).fill(0));
+    for (let i = 0; i < studentCount; i++) {
+      for (let j = i + 1; j < studentCount; j++) {
+        const ti = assignment[i];
+        const tj = assignment[j];
+        const d = distanceMatrix[ti][tj];
+        matrix[i][j] = d;
+        matrix[j][i] = d;
+      }
+    }
+    return matrix;
+  }
+
+  function averageGroupDistance(memberIdsA, memberIdsB, assignment, distanceMatrix) {
+    let sum = 0;
+    let count = 0;
+    const sameGroup = memberIdsA === memberIdsB || (
+      memberIdsA.length === memberIdsB.length &&
+      memberIdsA.every((id, index) => id === memberIdsB[index])
+    );
+
+    if (sameGroup) {
+      // Para relaciones de un grupo consigo mismo (p. ej. L-L o LxL),
+      // se evalúa cada pareja distinta una sola vez: nunca persona↔ella misma
+      // ni la misma relación en ambos sentidos.
+      for (let i = 0; i < memberIdsA.length; i++) {
+        for (let j = i + 1; j < memberIdsA.length; j++) {
+          const ai = assignment[memberIdsA[i] - 1];
+          const bi = assignment[memberIdsA[j] - 1];
+          if (ai == null || bi == null) continue;
+          sum += distanceMatrix[ai][bi];
+          count++;
+        }
+      }
+      return count ? sum / count : null;
+    }
+
+    for (const a of memberIdsA) {
+      for (const b of memberIdsB) {
+        const ai = assignment[a - 1];
+        const bi = assignment[b - 1];
+        if (ai == null || bi == null) continue;
+        sum += distanceMatrix[ai][bi];
+        count++;
+      }
+    }
+    return count ? sum / count : 0;
+  }
+
+  function averageMemberY(memberIds, assignment) {
+    if (!memberIds.length) return 0.5;
+    let sum = 0;
+    let count = 0;
+    memberIds.forEach(id => {
+      const tableIndex = assignment[id - 1];
+      if (tableIndex == null || !state.tables[tableIndex]) return;
+      sum += state.tables[tableIndex].yNorm;
+      count++;
+    });
+    return count ? sum / count : 0.5;
+  }
+
+  function averageGroupY(groupMembers, assignment) {
+    if (!groupMembers.length) return 0.5;
+    return groupMembers.reduce((sum, memberIds) => sum + averageMemberY(memberIds, assignment), 0) / groupMembers.length;
+  }
+
+  function orderedBackPenalty(groupMembers, assignment) {
+    if (groupMembers.length < 2) return 0;
+    const ORDER_MARGIN = 0.04;
+    const means = groupMembers.map(ids => averageMemberY(ids, assignment));
+    let penalty = 0;
+    for (let i = 0; i < means.length - 1; i++) {
+      penalty += clamp(means[i] + ORDER_MARGIN - means[i + 1], 0, 1);
+    }
+    return penalty / (means.length - 1);
+  }
+
+  function averageMemberX(memberIds, assignment) {
+    if (!memberIds.length) return 0.5;
+    let sum = 0;
+    let count = 0;
+    memberIds.forEach(id => {
+      const tableIndex = assignment[id - 1];
+      if (tableIndex == null || !state.tables[tableIndex]) return;
+      sum += state.tables[tableIndex].xNorm;
+      count++;
+    });
+    return count ? sum / count : 0.5;
+  }
+
+  function resolveCooperativeBlocksToSlots(blockPositions = state.cooperativeBlockPositions) {
+    if (!Array.isArray(blockPositions) || !blockPositions.length || !state.tables.length) return [];
+    const unused = new Set(state.tables.map((_, index) => index));
+    return blockPositions.map(block => block.map(position => {
+      let bestIndex = null;
+      let bestDistance = Infinity;
+      for (const index of unused) {
+        const table = state.tables[index];
+        const distance = Math.hypot(table.xNorm - position.xNorm, table.yNorm - position.yNorm);
+        if (distance < bestDistance) {
+          bestDistance = distance;
+          bestIndex = index;
+        }
+      }
+      if (bestIndex != null) unused.delete(bestIndex);
+      return bestIndex;
+    }).filter(index => index != null)).filter(block => block.length === 4);
+  }
+
+  function buildCooperativeABBCConstraint(students) {
+    if (state.spaceLayout !== 'cooperative-abbc') return null;
+    const blocks = resolveCooperativeBlocksToSlots();
+    if (!blocks.length) return null;
+    const groups = students.map(student => student.group || null);
+    const counts = { A: 0, B: 0, C: 0 };
+    groups.forEach(group => { if (group in counts) counts[group]++; });
+    const targetComplete = Math.min(blocks.length, counts.A, Math.floor(counts.B / 2), counts.C);
+    return {
+      type: 'cooperativeABBC',
+      blocks,
+      groups,
+      targetComplete,
+      raw: 'Cooperativo ABBC',
+      line: 0
+    };
+  }
+
+  function evaluateCooperativeABBC(constraint, assignment) {
+    const slotToStudent = new Map();
+    assignment.forEach((slotIndex, studentIndex) => {
+      if (slotIndex != null) slotToStudent.set(slotIndex, studentIndex);
+    });
+    const expected = ['A', 'B', 'B', 'C'];
+    let completeCount = 0;
+    let matchedTotal = 0;
+    let patternMatches = 0;
+    let completePatternSlots = 0;
+
+    for (const block of constraint.blocks) {
+      const blockGroups = block.map(slot => {
+        const studentIndex = slotToStudent.get(slot);
+        return studentIndex == null ? null : constraint.groups[studentIndex];
+      });
+      const counts = { A: 0, B: 0, C: 0 };
+      blockGroups.forEach(group => { if (group in counts) counts[group]++; });
+      const complete = counts.A === 1 && counts.B === 2 && counts.C === 1;
+      if (complete) completeCount++;
+      matchedTotal += Math.min(counts.A, 1) + Math.min(counts.B, 2) + Math.min(counts.C, 1);
+      if (complete) {
+        blockGroups.forEach((group, index) => {
+          completePatternSlots++;
+          if (group === expected[index]) patternMatches++;
+        });
+      }
+    }
+
+    const completeSatisfaction = constraint.targetComplete > 0
+      ? clamp(completeCount / constraint.targetComplete, 0, 1)
+      : 1;
+    const partialSatisfaction = constraint.blocks.length
+      ? matchedTotal / (constraint.blocks.length * 4)
+      : 1;
+    const patternSatisfaction = completePatternSlots
+      ? patternMatches / completePatternSlots
+      : 1;
+
+    return {
+      completeCount,
+      targetComplete: constraint.targetComplete,
+      partialSatisfaction: clamp(partialSatisfaction, 0, 1),
+      completeSatisfaction,
+      patternSatisfaction: clamp(patternSatisfaction, 0, 1)
+    };
+  }
+
+  function calculateCost(assignment, constraints, distanceMatrix) {
+    let total = 0;
+    let maxPossible = 0;
+
+    for (const c of constraints) {
+      if (c.type === 'far' || c.type === 'together' || c.type === 'near') {
+        const ai = c.a - 1;
+        const bi = c.b - 1;
+        const d = distanceMatrix[assignment[ai]][assignment[bi]];
+        if (c.type === 'far') {
+          total += WEIGHTS.far * (1 - d);
+          maxPossible += WEIGHTS.far;
+        } else if (c.type === 'together') {
+          total += WEIGHTS.together * d;
+          maxPossible += WEIGHTS.together;
+        } else {
+          total += WEIGHTS.near * d;
+          maxPossible += WEIGHTS.near;
+        }
+      } else if (c.type === 'front' || c.type === 'back') {
+        const weight = c.type === 'front' ? WEIGHTS.front : WEIGHTS.back;
+        for (const studentId of c.ids) {
+          const tableIndex = assignment[studentId - 1];
+          const y = state.tables[tableIndex].yNorm;
+          total += weight * (c.type === 'front' ? y : 1 - y);
+          maxPossible += weight;
+        }
+      } else if (c.type === 'left' || c.type === 'right') {
+        const weight = c.type === 'left' ? WEIGHTS.left : WEIGHTS.right;
+        const xs = c.memberIds.map(studentId => {
+          const tableIndex = assignment[studentId - 1];
+          return tableIndex == null || !state.tables[tableIndex] ? null : state.tables[tableIndex].xNorm;
+        }).filter(value => value != null);
+        if (xs.length) {
+          const avgX = xs.reduce((sum, value) => sum + value, 0) / xs.length;
+          total += weight * (c.type === 'left' ? avgX : 1 - avgX);
+          maxPossible += weight;
+        }
+      } else if (c.type === 'groupFar' || c.type === 'groupTogether' || c.type === 'groupNear') {
+        const d = averageGroupDistance(c.membersA, c.membersB, assignment, distanceMatrix);
+        // Un grupo con una sola persona no tiene parejas internas que evaluar.
+        // La restricción no añade coste ni domina artificialmente la solución.
+        if (d == null) continue;
+        if (c.type === 'groupFar') {
+          total += GROUP_WEIGHTS.far * (1 - d);
+          maxPossible += GROUP_WEIGHTS.far;
+        } else if (c.type === 'groupTogether') {
+          total += GROUP_WEIGHTS.together * d;
+          maxPossible += GROUP_WEIGHTS.together;
+        } else {
+          total += GROUP_WEIGHTS.near * d;
+          maxPossible += GROUP_WEIGHTS.near;
+        }
+      } else if (c.type === 'groupFront') {
+        const avgY = averageGroupY(c.groupMembers, assignment);
+        total += GROUP_WEIGHTS.front * avgY;
+        maxPossible += GROUP_WEIGHTS.front;
+      } else if (c.type === 'groupBack') {
+        const avgY = averageGroupY(c.groupMembers, assignment);
+        total += GROUP_WEIGHTS.back * (1 - avgY);
+        maxPossible += GROUP_WEIGHTS.back;
+        if (c.groups.length > 1) {
+          total += GROUP_WEIGHTS.orderedBack * orderedBackPenalty(c.groupMembers, assignment);
+          maxPossible += GROUP_WEIGHTS.orderedBack;
+        }
+      } else if (c.type === 'cooperativeABBC') {
+        const evaluation = evaluateCooperativeABBC(c, assignment);
+        total += COOPERATIVE_ABBC_WEIGHTS.composition * (1 - evaluation.completeSatisfaction);
+        maxPossible += COOPERATIVE_ABBC_WEIGHTS.composition;
+        if (evaluation.targetComplete > 0) {
+          total += COOPERATIVE_ABBC_WEIGHTS.pattern * (1 - evaluation.patternSatisfaction);
+          maxPossible += COOPERATIVE_ABBC_WEIGHTS.pattern;
+        }
+      }
+    }
+
+    return { total, maxPossible };
+  }
+
+  function getAssignmentLockInfo(studentCount) {
+    const fixedAssignments = new Map();
+    const reservedSlots = new Set();
+
+    state.tables.forEach((table, slotIndex) => {
+      if (!table.locked) return;
+      reservedSlots.add(slotIndex);
+      if (table.id >= 1 && table.id <= studentCount) {
+        fixedAssignments.set(table.id - 1, slotIndex);
+      }
+    });
+
+    const movableStudents = Array.from({ length: studentCount }, (_, index) => index)
+      .filter(index => !fixedAssignments.has(index));
+    const availableSlots = Array.from({ length: state.tables.length }, (_, index) => index)
+      .filter(index => !reservedSlots.has(index));
+
+    return { fixedAssignments, reservedSlots, movableStudents, availableSlots };
+  }
+
+  function generateRandomAssignment(studentCount, tableCount, lockInfo = getAssignmentLockInfo(studentCount)) {
+    const assignment = Array(studentCount).fill(null);
+    for (const [studentIndex, slotIndex] of lockInfo.fixedAssignments) {
+      assignment[studentIndex] = slotIndex;
+    }
+
+    const shuffledSlots = shuffle(lockInfo.availableSlots);
+    lockInfo.movableStudents.forEach((studentIndex, index) => {
+      assignment[studentIndex] = shuffledSlots[index];
+    });
+    return assignment;
+  }
+
+  function mutateAssignment(assignment, tableCount, lockInfo) {
+    const candidate = assignment.slice();
+    const studentCount = candidate.length;
+    const movableStudents = lockInfo?.movableStudents || Array.from({ length: studentCount }, (_, index) => index);
+    const reservedSlots = lockInfo?.reservedSlots || new Set();
+    if (studentCount === 0 || movableStudents.length === 0) return candidate;
+
+    if (tableCount > studentCount && Math.random() < 0.32) {
+      const studentIndex = movableStudents[Math.floor(Math.random() * movableStudents.length)];
+      const used = new Set(candidate);
+      const freeTables = [];
+      for (let i = 0; i < tableCount; i++) {
+        if (!used.has(i) && !reservedSlots.has(i)) freeTables.push(i);
+      }
+      if (freeTables.length) {
+        candidate[studentIndex] = freeTables[Math.floor(Math.random() * freeTables.length)];
+        return candidate;
+      }
+    }
+
+    if (movableStudents.length > 1) {
+      let ai = Math.floor(Math.random() * movableStudents.length);
+      let bi = Math.floor(Math.random() * movableStudents.length);
+      while (bi === ai) bi = Math.floor(Math.random() * movableStudents.length);
+      const a = movableStudents[ai];
+      const b = movableStudents[bi];
+      [candidate[a], candidate[b]] = [candidate[b], candidate[a]];
+    }
+
+    return candidate;
+  }
+
+  function setProgressVisual(percent) {
+    const value = clamp(Number(percent) || 0, 0, 100);
+    if (elements.progressFill) elements.progressFill.style.width = `${value}%`;
+    if (elements.progressPercent) elements.progressPercent.textContent = `${Math.round(value)}%`;
+    if (elements.progressTrack) elements.progressTrack.setAttribute('aria-valuenow', String(Math.round(value)));
+  }
+
+  function startCalculationProgress(label) {
+    cancelPendingPageTopScroll();
+    const token = ++state.progressSequence;
+    if (state.progressSession?.timer) clearInterval(state.progressSession.timer);
+    state.progressSession = {
+      token,
+      startedAt: performance.now(),
+      reported: 0,
+      completed: false,
+      completionLabel: 'Completado',
+      timer: null,
+      onHidden: []
+    };
+
+    if (elements.calculationProgress) elements.calculationProgress.hidden = false;
+    if (elements.progressLabel) elements.progressLabel.textContent = label;
+    setProgressVisual(0);
+
+    state.progressSession.timer = setInterval(() => {
+      const session = state.progressSession;
+      if (!session || session.token !== token) return;
+      const elapsed = performance.now() - session.startedAt;
+
+      if (session.completed) {
+        if (elapsed < MIN_PROGRESS_VISIBLE_MS) {
+          const synthetic = Math.min(96, (elapsed / MIN_PROGRESS_VISIBLE_MS) * 96);
+          setProgressVisual(Math.max(session.reported, synthetic));
+          return;
+        }
+
+        setProgressVisual(100);
+        if (elements.progressLabel) elements.progressLabel.textContent = session.completionLabel;
+        clearInterval(session.timer);
+        session.timer = null;
+        setTimeout(() => {
+          if (state.progressSession?.token !== token) return;
+          const completedSession = state.progressSession;
+          if (elements.calculationProgress) elements.calculationProgress.hidden = true;
+          state.progressSession = null;
+          for (const callback of completedSession.onHidden.splice(0)) {
+            try { callback(); } catch (error) { console.warn('No se pudo completar una acción posterior al progreso:', error); }
+          }
+        }, 300);
+        return;
+      }
+
+      const synthetic = Math.min(70, (elapsed / MIN_PROGRESS_VISIBLE_MS) * 70);
+      setProgressVisual(Math.max(session.reported, synthetic));
+    }, 60);
+
+    return token;
+  }
+
+  function reportCalculationProgress(token, percent, label = null) {
+    const session = state.progressSession;
+    if (!session || session.token !== token) return;
+    session.reported = Math.max(session.reported, clamp(Number(percent) || 0, 0, 98));
+    if (label && elements.progressLabel) elements.progressLabel.textContent = label;
+    setProgressVisual(session.reported);
+  }
+
+  function finishCalculationProgress(token, completionLabel = 'Completado') {
+    const session = state.progressSession;
+    if (!session || session.token !== token) return;
+    session.completed = true;
+    session.completionLabel = completionLabel;
+  }
+
+  async function optimizeAssignment(studentCount, constraints, distanceMatrix, onProgress = null, options = {}) {
+    const tableCount = state.tables.length;
+    const lockInfo = getAssignmentLockInfo(studentCount);
+    const complexity = Math.max(1, constraints.length + studentCount);
+    const iterationsPerRestart = Math.min(18000, Math.max(5000, complexity * 260));
+    const restarts = Number.isFinite(options.restarts) ? Math.max(1, Math.floor(options.restarts)) : (tableCount > 35 ? 4 : 5);
+    let globalBest = null;
+    const restartSolutions = [];
+    let evaluated = 0;
+    const totalIterations = iterationsPerRestart * restarts;
+
+    for (let restart = 0; restart < restarts; restart++) {
+      let current = generateRandomAssignment(studentCount, tableCount, lockInfo);
+      let currentScore = calculateCost(current, constraints, distanceMatrix).total;
+      let best = current.slice();
+      let bestScore = currentScore;
+      const initialTemp = Math.max(0.08, currentScore / Math.max(1, constraints.length * 4));
+
+      for (let i = 0; i < iterationsPerRestart; i++) {
+        const progress = i / iterationsPerRestart;
+        const temperature = Math.max(0.0005, initialTemp * Math.pow(0.002, progress));
+        const candidate = mutateAssignment(current, tableCount, lockInfo);
+        const candidateScore = calculateCost(candidate, constraints, distanceMatrix).total;
+        const delta = candidateScore - currentScore;
+
+        if (delta <= 0 || Math.random() < Math.exp(-delta / temperature)) {
+          current = candidate;
+          currentScore = candidateScore;
+          if (currentScore < bestScore) {
+            best = current.slice();
+            bestScore = currentScore;
+          }
+        }
+
+        evaluated++;
+        if (i > 0 && i % 3000 === 0) {
+          if (onProgress) onProgress(evaluated / totalIterations);
+          await new Promise(requestAnimationFrame);
+        }
+      }
+
+      const restartSolution = { assignment: best.slice(), score: bestScore, evaluated };
+      restartSolutions.push(restartSolution);
+      if (!globalBest || bestScore < globalBest.score) {
+        globalBest = { assignment: best.slice(), score: bestScore };
+      }
+      if (onProgress) onProgress(evaluated / totalIterations);
+      await new Promise(requestAnimationFrame);
+    }
+
+    if (onProgress) onProgress(1);
+    return { ...globalBest, evaluated, candidates: restartSolutions };
+  }
+
+  function applyPositionAssignment(assignment, studentCount, slotPositionsOverride = null) {
+    // La solución asigna cada unidad persona-mesa a una POSICIÓN existente del espacio.
+    // Mesa 1 siempre sigue siendo de la persona 1, mesa 2 de la persona 2, etc.
+    // Las mesas bloqueadas reservan su posición y nunca se desplazan.
+    const slotPositions = Array.isArray(slotPositionsOverride)
+      ? slotPositionsOverride.map(position => ({
+          xNorm: position.xNorm,
+          yNorm: position.yNorm,
+          rotation: position.rotation == null ? null : normalizeRotation(position.rotation)
+        }))
+      : captureAssignmentSlots();
+    const applySlotRotation = layoutUsesSlotRotation();
+    const lockInfo = getAssignmentLockInfo(studentCount);
+    const usedSlots = new Set(lockInfo.reservedSlots);
+
+    for (let studentIndex = 0; studentIndex < studentCount; studentIndex++) {
+      const tableId = studentIndex + 1;
+      const table = state.tables.find(item => item.id === tableId);
+      const slotIndex = assignment[studentIndex];
+      const slot = slotPositions[slotIndex];
+      if (!table || !slot) continue;
+
+      if (!table.locked) {
+        table.xNorm = slot.xNorm;
+        table.yNorm = slot.yNorm;
+        if (applySlotRotation && slot.rotation != null) table.rotation = normalizeRotation(slot.rotation);
+      }
+      usedSlots.add(slotIndex);
+    }
+
+    // Si hay mesas libres, ocupan las posiciones que no hayan sido utilizadas
+    // por las unidades persona-mesa. Las mesas libres bloqueadas tampoco cambian.
+    const freeSlotIndexes = slotPositions
+      .map((_, index) => index)
+      .filter(index => !usedSlots.has(index));
+
+    const extraTables = state.tables
+      .filter(table => table.id > studentCount && !table.locked)
+      .sort((a, b) => a.id - b.id);
+
+    extraTables.forEach((table, index) => {
+      const slot = slotPositions[freeSlotIndexes[index]];
+      if (!slot) return;
+      table.xNorm = slot.xNorm;
+      table.yNorm = slot.yNorm;
+      if (applySlotRotation && slot.rotation != null) table.rotation = normalizeRotation(slot.rotation);
+    });
+
+    renderTables();
+  }
+
+  function describeConstraint(c, assignment, distanceMatrix) {
+    if (c.type === 'far' || c.type === 'together' || c.type === 'near') {
+      const d = distanceMatrix[assignment[c.a - 1]][assignment[c.b - 1]];
+      const satisfaction = c.type === 'far' ? d : 1 - d;
+      return { raw: c.raw, satisfaction: clamp(satisfaction, 0, 1) };
+    }
+
+    if (c.type === 'front' || c.type === 'back') {
+      const values = c.ids.map(id => {
+        const y = state.tables[assignment[id - 1]].yNorm;
+        return c.type === 'front' ? 1 - y : y;
+      });
+      const satisfaction = values.reduce((a, b) => a + b, 0) / values.length;
+      return { raw: c.raw, satisfaction: clamp(satisfaction, 0, 1) };
+    }
+
+    if (c.type === 'left' || c.type === 'right') {
+      const values = c.memberIds.map(id => {
+        const slotIndex = assignment[id - 1];
+        const x = slotIndex == null || !state.tables[slotIndex] ? 0.5 : state.tables[slotIndex].xNorm;
+        return c.type === 'left' ? 1 - x : x;
+      });
+      const satisfaction = values.length ? values.reduce((a, b) => a + b, 0) / values.length : 1;
+      return { raw: c.raw, satisfaction: clamp(satisfaction, 0, 1) };
+    }
+
+    if (c.type === 'groupFar' || c.type === 'groupTogether' || c.type === 'groupNear') {
+      const d = averageGroupDistance(c.membersA, c.membersB, assignment, distanceMatrix);
+      if (d == null) return { raw: c.raw, satisfaction: 1 };
+      const satisfaction = c.type === 'groupFar' ? d : 1 - d;
+      return { raw: c.raw, satisfaction: clamp(satisfaction, 0, 1) };
+    }
+
+    if (c.type === 'groupFront') {
+      return { raw: c.raw, satisfaction: clamp(1 - averageGroupY(c.groupMembers, assignment), 0, 1) };
+    }
+
+    if (c.type === 'groupBack') {
+      const backSatisfaction = clamp(averageGroupY(c.groupMembers, assignment), 0, 1);
+      if (c.groups.length < 2) return { raw: c.raw, satisfaction: backSatisfaction };
+      const orderSatisfaction = 1 - orderedBackPenalty(c.groupMembers, assignment);
+      const satisfaction = (
+        backSatisfaction * GROUP_WEIGHTS.back +
+        orderSatisfaction * GROUP_WEIGHTS.orderedBack
+      ) / (GROUP_WEIGHTS.back + GROUP_WEIGHTS.orderedBack);
+      return { raw: c.raw, satisfaction: clamp(satisfaction, 0, 1) };
+    }
+
+    if (c.type === 'cooperativeABBC') {
+      const evaluation = evaluateCooperativeABBC(c, assignment);
+      const satisfaction = evaluation.targetComplete > 0
+        ? (evaluation.completeSatisfaction * COOPERATIVE_ABBC_WEIGHTS.composition + evaluation.patternSatisfaction * COOPERATIVE_ABBC_WEIGHTS.pattern) /
+          (COOPERATIVE_ABBC_WEIGHTS.composition + COOPERATIVE_ABBC_WEIGHTS.pattern)
+        : 1;
+      return { raw: c.raw, satisfaction: clamp(satisfaction, 0, 1) };
+    }
+
+    return { raw: c.raw, satisfaction: 0 };
+  }
+
+  function joinNames(names) {
+    if (!names.length) return '';
+    if (names.length === 1) return names[0];
+    if (names.length === 2) return `${names[0]} y ${names[1]}`;
+    return `${names.slice(0, -1).join(', ')} y ${names[names.length - 1]}`;
+  }
+
+  function studentDisplayName(students, id) {
+    return students[id - 1]?.displayName || `Persona ${id}`;
+  }
+
+  function humanizeConstraint(constraint, students) {
+    if (constraint.type === 'left' || constraint.type === 'right') {
+      const parts = constraint.ids.map(id => studentDisplayName(students, id));
+      if (constraint.groups.length === 1) parts.push(`las personas del grupo ${constraint.groups[0]}`);
+      else if (constraint.groups.length > 1) parts.push(`las personas de los grupos ${joinNames(constraint.groups)}`);
+      const subject = joinNames(parts);
+      const singular = constraint.memberIds.length === 1;
+      const side = constraint.type === 'left' ? 'izquierda' : 'derecha';
+      return `${subject} ${singular ? 'debe situarse' : 'deben situarse'} lo más a la ${side} posible.`;
+    }
+    if (constraint.type === 'cooperativeABBC') {
+      return 'El esquema Cooperativo ABBC debe conservar el máximo número posible de equipos con 1 persona del grupo A, 2 de grupo B y 1 de grupo C.';
+    }
+    if (constraint.type === 'far') {
+      return `${studentDisplayName(students, constraint.a)} no debe sentarse junto a ${studentDisplayName(students, constraint.b)}; debe quedar lo más lejos posible.`;
+    }
+    if (constraint.type === 'together') {
+      return `${studentDisplayName(students, constraint.a)} se debe sentar junto a ${studentDisplayName(students, constraint.b)}.`;
+    }
+    if (constraint.type === 'near') {
+      return `${studentDisplayName(students, constraint.a)} se debe sentar cerca de ${studentDisplayName(students, constraint.b)}.`;
+    }
+    if (constraint.type === 'groupFar') {
+      if (constraint.groupA === constraint.groupB) {
+        return `Las personas del grupo ${constraint.groupA} deben sentarse lo más alejadas posible unas de otras.`;
+      }
+      return `Las personas del grupo ${constraint.groupA} deben situarse lo más lejos posible de las personas del grupo ${constraint.groupB}.`;
+    }
+    if (constraint.type === 'groupTogether') {
+      if (constraint.groupA === constraint.groupB) {
+        return `Las personas del grupo ${constraint.groupA} deben sentarse lo más cerca posible unas de otras.`;
+      }
+      return `Las personas del grupo ${constraint.groupA} deben situarse lo más cerca posible de las personas del grupo ${constraint.groupB}.`;
+    }
+    if (constraint.type === 'groupNear') {
+      if (constraint.groupA === constraint.groupB) {
+        return `Las personas del grupo ${constraint.groupA} deberían sentarse relativamente cerca unas de otras.`;
+      }
+      return `Las personas del grupo ${constraint.groupA} deberían situarse relativamente cerca de las personas del grupo ${constraint.groupB}.`;
+    }
+    if (constraint.type === 'groupFront') {
+      if (constraint.groups.length === 1) {
+        return `Las personas del grupo ${constraint.groups[0]} deben situarse lo más adelante posible.`;
+      }
+      return `Las personas de los grupos ${joinNames(constraint.groups)} deben situarse lo más adelante posible.`;
+    }
+    if (constraint.type === 'groupBack') {
+      const groups = constraint.groups;
+      if (groups.length === 1) {
+        return `Las personas del grupo ${groups[0]} deben situarse lo más atrás posible.`;
+      }
+      const order = groups.slice(1).map((group, index) => `el grupo ${group} quede detrás del grupo ${groups[index]}`).join(' y ');
+      return `Los grupos ${joinNames(groups)} deben situarse en la parte trasera, procurando que ${order}.`;
+    }
+
+    const names = constraint.ids.map(id => studentDisplayName(students, id));
+    const subject = joinNames(names);
+    const singular = names.length === 1;
+    if (constraint.type === 'front') {
+      return `${subject} ${singular ? 'se debe sentar' : 'se deben sentar'} lo más adelante posible.`;
+    }
+    return `${subject} ${singular ? 'se debe sentar' : 'se deben sentar'} lo más atrás posible.`;
+  }
+
+  function satisfactionLabel(value) {
+    const percent = Math.round(clamp(value, 0, 1) * 100);
+    if (percent >= 85) return { text: `${percent}% · muy bien`, className: 'score-good' };
+    if (percent >= 65) return { text: `${percent}% · razonable`, className: 'score-medium' };
+    return { text: `${percent}% · mejorable`, className: 'score-low' };
+  }
+
+  function setOutputHtml(html) {
+    if (!elements.outputContent) return;
+    elements.outputContent.innerHTML = html;
+  }
+
+  function resetOutput() {
+    setOutputHtml('<span class="output-placeholder">Aquí aparecerán los resultados y la explicación de las restricciones después de organizar el espacio.</span>');
+  }
+
+  function updateOutputVisibility() {
+    if (!elements.outputContent || !elements.toggleOutputBtn) return;
+    elements.outputContent.hidden = state.outputCollapsed;
+    elements.toggleOutputBtn.textContent = state.outputCollapsed ? 'Mostrar' : 'Ocultar';
+    elements.toggleOutputBtn.setAttribute('aria-expanded', String(!state.outputCollapsed));
+  }
+
+  function toggleOutputVisibility() {
+    state.outputCollapsed = !state.outputCollapsed;
+    updateOutputVisibility();
+    saveStateSoon();
+  }
+
+  function renderConstraintSummary(students, constraints, solution, distanceMatrix, contradictions = []) {
+    if (!solution) {
+      resetOutput();
+      return;
+    }
+
+    const scoreInfo = calculateCost(solution.assignment, constraints, distanceMatrix);
+    const quality = scoreInfo.maxPossible
+      ? Math.max(0, Math.round((1 - scoreInfo.total / scoreInfo.maxPossible) * 100))
+      : 100;
+
+    if (!constraints.length) {
+      setOutputHtml(
+        `<div class="output-summary-head"><strong>Organización completada.</strong><span>No se han indicado restricciones.</span></div>` +
+        `<div class="output-note">La distribución se ha generado sin criterios de proximidad, distancia, delante o detrás.</div>`
+      );
+      return;
+    }
+
+    const items = constraints.map(constraint => {
+      const description = describeConstraint(constraint, solution.assignment, distanceMatrix);
+      const score = satisfactionLabel(description.satisfaction);
+      return `<li>${escapeHtml(humanizeConstraint(constraint, students))} <span class="constraint-score ${score.className}">${escapeHtml(score.text)}</span></li>`;
+    }).join('');
+
+    const warning = contradictions.length
+      ? `<div class="output-note"><strong>Aviso:</strong> ${escapeHtml(contradictions.join(' '))}</div>`
+      : '';
+
+    setOutputHtml(
+      `<div class="output-summary-head"><strong>Resumen de la organización</strong><span>Calidad global: ${quality}%</span><span>${constraints.length} restricción${constraints.length === 1 ? '' : 'es'}</span></div>` +
+      `<ul class="output-list">${items}</ul>${warning}`
+    );
+  }
+
+  function renderRandomOutput() {
+    setOutputHtml(
+      '<div class="output-summary-head"><strong>Distribución aleatoria aplicada.</strong></div>' +
+      '<div class="output-note">Las restricciones no se han utilizado para generar esta distribución.</div>'
+    );
+  }
+
+  function renderSolution(solution, constraints, distanceMatrix) {
+    if (!solution) {
+      hideSolution();
+      return;
+    }
+
+    const scoreInfo = calculateCost(solution.assignment, constraints, distanceMatrix);
+    const quality = scoreInfo.maxPossible
+      ? Math.max(0, Math.round((1 - scoreInfo.total / scoreInfo.maxPossible) * 100))
+      : 100;
+
+    const weakest = constraints
+      .map(c => describeConstraint(c, solution.assignment, distanceMatrix))
+      .sort((a, b) => a.satisfaction - b.satisfaction)
+      .slice(0, 3)
+      .filter(item => item.satisfaction < 0.72);
+
+    elements.solutionPanel.innerHTML = [
+      `<span><strong>Calidad:</strong> ${quality}%</span>`,
+      `<span><strong>Coste:</strong> ${scoreInfo.total.toFixed(3)}</span>`,
+      `<span><strong>Restricciones:</strong> ${constraints.length}</span>`,
+      `<span><strong>Evaluaciones:</strong> ${solution.evaluated.toLocaleString('es-ES')}</span>`,
+      ...(weakest.length ? [`<span><strong>A mejorar:</strong> ${weakest.map(item => `${escapeHtml(item.raw)} (${Math.round(item.satisfaction * 100)}%)`).join(' · ')}</span>`] : [])
+    ].join('');
+    elements.solutionPanel.hidden = false;
+  }
+
+  function hideSolution() {
+    elements.solutionPanel.hidden = true;
+    elements.solutionPanel.innerHTML = '';
+    resetOutput();
+  }
+
+  function escapeHtml(value) {
+    return String(value).replace(/[&<>'"]/g, char => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+    }[char]));
+  }
+
+  function getPdfExportColors() {
+    const styles = getComputedStyle(document.body);
+    const read = name => styles.getPropertyValue(name).trim();
+    return {
+      room: read('--room') || '#ffffff',
+      grid: read('--room-grid') || 'rgba(0,0,0,.04)',
+      table: read('--table') || '#ffffff',
+      tableBorder: read('--table-border') || '#171717',
+      tableText: read('--table-text') || '#171717',
+      muted: read('--muted') || '#686868',
+      zoneBorder: read('--muted') || '#686868',
+      zoneFill: read('--surface-2') || '#f1f1ef'
+    };
+  }
+
+  function fitCanvasText(ctx, text, maxWidth) {
+    if (ctx.measureText(text).width <= maxWidth) return text;
+    const ellipsis = '…';
+    let value = text;
+    while (value.length > 1 && ctx.measureText(`${value}${ellipsis}`).width > maxWidth) {
+      value = value.slice(0, -1);
+    }
+    return `${value}${ellipsis}`;
+  }
+
+  function renderClassroomToCanvas() {
+    const sourceWidth = Math.max(1, elements.classroom.clientWidth);
+    const sourceHeight = Math.max(1, elements.classroom.clientHeight);
+    const exportWidth = 1600;
+    const roomExportHeight = Math.max(1, Math.round(exportWidth * sourceHeight / sourceWidth));
+    const spaceTitle = String(state.spaceName || '').trim();
+    const titleAreaHeight = spaceTitle ? 86 : 0;
+    const exportHeight = roomExportHeight + titleAreaHeight;
+    const scaleX = exportWidth / sourceWidth;
+    const scaleY = roomExportHeight / sourceHeight;
+    const colors = getPdfExportColors();
+    const students = parseStudents();
+    const studentMap = new Map(students.map(student => [student.id, student]));
+
+    const canvas = document.createElement('canvas');
+    canvas.width = exportWidth;
+    canvas.height = exportHeight;
+    const ctx = canvas.getContext('2d', { alpha: false });
+
+    ctx.fillStyle = colors.room;
+    ctx.fillRect(0, 0, exportWidth, exportHeight);
+
+    if (spaceTitle) {
+      ctx.fillStyle = colors.tableText;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.font = '700 34px Arial, sans-serif';
+      ctx.fillText(fitCanvasText(ctx, spaceTitle, exportWidth - 80), exportWidth / 2, titleAreaHeight / 2);
+    }
+
+    ctx.strokeStyle = colors.grid;
+    ctx.lineWidth = Math.max(1, scaleX);
+    ctx.beginPath();
+    const gridX = 32 * scaleX;
+    const gridY = 32 * scaleY;
+    for (let x = gridX; x < exportWidth; x += gridX) {
+      ctx.moveTo(Math.round(x) + 0.5, titleAreaHeight);
+      ctx.lineTo(Math.round(x) + 0.5, exportHeight);
+    }
+    for (let y = gridY; y < roomExportHeight; y += gridY) {
+      const shiftedY = titleAreaHeight + y;
+      ctx.moveTo(0, Math.round(shiftedY) + 0.5);
+      ctx.lineTo(exportWidth, Math.round(shiftedY) + 0.5);
+    }
+    ctx.stroke();
+
+    // Las zonas protegidas forman parte de la estructura física del espacio y se exportan detrás de las mesas.
+    ctx.save();
+    ctx.setLineDash([9 * scaleX, 6 * scaleX]);
+    ctx.lineWidth = Math.max(1.5, scaleX);
+    for (const zone of state.zones) {
+      const rect = zonePixelRect(zone, sourceWidth, sourceHeight);
+      const left = rect.left * scaleX;
+      const top = titleAreaHeight + rect.top * scaleY;
+      const width = rect.width * scaleX;
+      const height = rect.height * scaleY;
+      ctx.fillStyle = colors.zoneFill;
+      ctx.fillRect(left, top, width, height);
+      ctx.strokeStyle = colors.zoneBorder;
+      ctx.strokeRect(left, top, width, height);
+      ctx.fillStyle = colors.muted;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.font = `700 ${Math.max(12, 9 * Math.min(scaleX, scaleY))}px Arial, sans-serif`;
+      ctx.fillText('ZONA PROTEGIDA', left + width / 2, top + height / 2);
+    }
+    ctx.restore();
+
+    const tableWidth = state.tableWidth * scaleX;
+    const tableHeight = state.tableHeight * scaleY;
+    const halfW = tableWidth / 2;
+    const halfH = tableHeight / 2;
+
+    for (const table of state.tables) {
+      const student = studentMap.get(table.id);
+      const rotation = normalizeRotation(table.rotation);
+      const quarterTurn = rotation === 90 || rotation === 270;
+      const visualHalfW = quarterTurn ? halfH : halfW;
+      const visualHalfH = quarterTurn ? halfW : halfH;
+      const cx = clamp(table.xNorm * exportWidth, visualHalfW, exportWidth - visualHalfW);
+      const cy = titleAreaHeight + clamp(table.yNorm * roomExportHeight, visualHalfH, roomExportHeight - visualHalfH);
+
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate(rotation * Math.PI / 180);
+      const left = -halfW;
+      const top = -halfH;
+
+      ctx.fillStyle = colors.table;
+      ctx.fillRect(left, top, tableWidth, tableHeight);
+      ctx.strokeStyle = colors.tableBorder;
+      ctx.lineWidth = Math.max(1.5, scaleX);
+      ctx.strokeRect(left, top, tableWidth, tableHeight);
+
+      ctx.fillStyle = colors.muted;
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'top';
+      ctx.font = `500 ${Math.max(12, 9 * scaleX)}px Arial, sans-serif`;
+      ctx.fillText(String(table.id), left + 5 * scaleX, top + 4 * scaleY);
+
+      const label = student ? student.displayName : 'Libre';
+      ctx.fillStyle = student ? colors.tableText : colors.muted;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.font = `600 ${Math.max(15, 12 * Math.min(scaleX, scaleY))}px Arial, sans-serif`;
+      const fitted = fitCanvasText(ctx, label, Math.max(10, tableWidth - 12 * scaleX));
+      ctx.fillText(fitted, 0, 1 * scaleY);
+      ctx.restore();
+    }
+
+    ctx.strokeStyle = colors.tableBorder;
+    ctx.lineWidth = Math.max(1.5, scaleX);
+    ctx.strokeRect(0.75 * scaleX, titleAreaHeight + 0.75 * scaleY, exportWidth - 1.5 * scaleX, roomExportHeight - 1.5 * scaleY);
+
+    return canvas;
+  }
+
+  function asciiBytes(value) {
+    return new TextEncoder().encode(value);
+  }
+
+  function concatBytes(parts) {
+    const total = parts.reduce((sum, part) => sum + part.length, 0);
+    const output = new Uint8Array(total);
+    let offset = 0;
+    for (const part of parts) {
+      output.set(part, offset);
+      offset += part.length;
+    }
+    return output;
+  }
+
+  function dataUrlToBytes(dataUrl) {
+    const base64 = dataUrl.split(',')[1];
+    const binary = atob(base64);
+    const bytes = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+    return bytes;
+  }
+
+  function buildSinglePageA4Pdf(jpegBytes, imageWidth, imageHeight) {
+    const pageWidth = 595.28;
+    const pageHeight = 841.89;
+    const margin = 24;
+    const availableWidth = pageWidth - margin * 2;
+    const availableHeight = pageHeight - margin * 2;
+    const scale = Math.min(availableWidth / imageWidth, availableHeight / imageHeight);
+    const drawWidth = imageWidth * scale;
+    const drawHeight = imageHeight * scale;
+    const x = (pageWidth - drawWidth) / 2;
+    const y = (pageHeight - drawHeight) / 2;
+    const content = `q\n${drawWidth.toFixed(3)} 0 0 ${drawHeight.toFixed(3)} ${x.toFixed(3)} ${y.toFixed(3)} cm\n/Im0 Do\nQ\n`;
+    const contentBytes = asciiBytes(content);
+
+    const objects = [
+      null,
+      asciiBytes('<< /Type /Catalog /Pages 2 0 R >>'),
+      asciiBytes('<< /Type /Pages /Kids [3 0 R] /Count 1 >>'),
+      asciiBytes(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${pageWidth} ${pageHeight}] /Resources << /XObject << /Im0 5 0 R >> >> /Contents 4 0 R >>`),
+      concatBytes([
+        asciiBytes(`<< /Length ${contentBytes.length} >>\nstream\n`),
+        contentBytes,
+        asciiBytes('endstream')
+      ]),
+      concatBytes([
+        asciiBytes(`<< /Type /XObject /Subtype /Image /Width ${imageWidth} /Height ${imageHeight} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${jpegBytes.length} >>\nstream\n`),
+        jpegBytes,
+        asciiBytes('\nendstream')
+      ])
+    ];
+
+    const parts = [asciiBytes('%PDF-1.4\n')];
+    const offsets = new Array(objects.length).fill(0);
+    let length = parts[0].length;
+
+    for (let id = 1; id < objects.length; id++) {
+      offsets[id] = length;
+      const objectBytes = concatBytes([
+        asciiBytes(`${id} 0 obj\n`),
+        objects[id],
+        asciiBytes('\nendobj\n')
+      ]);
+      parts.push(objectBytes);
+      length += objectBytes.length;
+    }
+
+    const xrefOffset = length;
+    let xref = `xref\n0 ${objects.length}\n0000000000 65535 f \n`;
+    for (let id = 1; id < objects.length; id++) {
+      xref += `${String(offsets[id]).padStart(10, '0')} 00000 n \n`;
+    }
+    xref += `trailer\n<< /Size ${objects.length} /Root 1 0 R >>\nstartxref\n${xrefOffset}\n%%EOF`;
+    parts.push(asciiBytes(xref));
+
+    return concatBytes(parts);
+  }
+
+  function downloadClassroomPdf() {
+    const originalText = elements.downloadPdfBtn.textContent;
+    elements.downloadPdfBtn.disabled = true;
+    elements.downloadPdfBtn.textContent = 'Preparando…';
+
+    try {
+      const canvas = renderClassroomToCanvas();
+      const jpegBytes = dataUrlToBytes(canvas.toDataURL('image/jpeg', 0.96));
+      const pdfBytes = buildSinglePageA4Pdf(jpegBytes, canvas.width, canvas.height);
+      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'ubicapp-plano.pdf';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      showMessage('Plano descargado en PDF A4 vertical.', 'success');
+    } catch (error) {
+      console.error('No se pudo generar el PDF:', error);
+      showMessage('No se pudo generar el PDF del plano.', 'error');
+    } finally {
+      elements.downloadPdfBtn.disabled = false;
+      elements.downloadPdfBtn.textContent = originalText;
+    }
+  }
+
+  function showMessage(text, type = 'error') {
+    elements.message.textContent = text;
+    elements.message.className = `message ${type}`;
+    elements.message.hidden = !text;
+  }
+
+  function clearMessage() {
+    elements.message.hidden = true;
+    elements.message.textContent = '';
+  }
+
+  function renderStudentErrors(errors) {
+    if (!elements.studentErrors) return;
+    if (!errors.length) {
+      elements.studentErrors.hidden = true;
+      elements.studentErrors.innerHTML = '';
+      return;
+    }
+
+    elements.studentErrors.innerHTML = `<ul>${errors.map(error => `<li>${escapeHtml(error)}</li>`).join('')}</ul>`;
+    elements.studentErrors.hidden = false;
+  }
+
+  function renderConstraintErrors(errors) {
+    if (!errors.length) {
+      elements.constraintErrors.hidden = true;
+      elements.constraintErrors.innerHTML = '';
+      return;
+    }
+
+    elements.constraintErrors.innerHTML = `<ul>${errors.map(error => `<li>${escapeHtml(error)}</li>`).join('')}</ul>`;
+    elements.constraintErrors.hidden = false;
+  }
+
+  function validateForSolve() {
+    const students = parseStudents();
+    const parsed = parseConstraints(students);
+    const studentErrors = getStudentGroupErrors(students);
+    const inputErrors = [...studentErrors, ...parsed.errors];
+    renderStudentErrors(studentErrors);
+    renderConstraintErrors(parsed.errors);
+
+    if (!students.length) {
+      showMessage('Añade al menos una persona.', 'error');
+      return null;
+    }
+
+    if (students.length > state.tables.length) {
+      showMessage(`Hay ${students.length} personas y solo ${state.tables.length} mesas. Añade al menos ${students.length - state.tables.length} mesa(s).`, 'error');
+      return null;
+    }
+
+    const tableIds = new Set(state.tables.map(table => table.id));
+    const missingTableIds = students
+      .map(student => student.id)
+      .filter(studentId => !tableIds.has(studentId));
+    if (missingTableIds.length) {
+      showMessage(`Falta(n) la(s) mesa(s) ${missingTableIds.join(', ')}. Cada persona debe conservar la mesa con su mismo número.`, 'error');
+      return null;
+    }
+
+    if (inputErrors.length) {
+      showMessage('Corrige las etiquetas de grupo o las restricciones marcadas antes de organizar.', 'error');
+      return null;
+    }
+
+    const contradictions = findContradictions(parsed.constraints);
+    if (contradictions.length) {
+      showMessage(`Aviso: ${contradictions.join(' ')}`, 'warning');
+    } else {
+      clearMessage();
+    }
+
+    return { students, constraints: parsed.constraints, contradictions };
+  }
+
+  async function organize() {
+    const valid = validateForSolve();
+    if (!valid) return;
+
+    clearAlternatives();
+    const wantAlternatives = alternativesEnabled();
+    const slotPositions = captureAssignmentSlots();
+    const progressToken = startCalculationProgress(wantAlternatives ? 'Generando alternativas…' : 'Buscando una buena distribución…');
+    elements.organizeBtn.disabled = true;
+    elements.randomizeBtn.disabled = true;
+    const oldText = elements.organizeBtn.textContent;
+    elements.organizeBtn.textContent = 'Organizando…';
+
+    // Da al navegador la oportunidad de pintar la barra antes de iniciar el cálculo.
+    await new Promise(requestAnimationFrame);
+
+    try {
+      const distanceMatrix = calculateDistanceMatrix();
+      const cooperativeConstraint = buildCooperativeABBCConstraint(valid.students);
+      const solverConstraints = cooperativeConstraint
+        ? [...valid.constraints, cooperativeConstraint]
+        : valid.constraints;
+      let solution;
+      let alternatives = [];
+
+      if (solverConstraints.length === 0) {
+        if (wantAlternatives) {
+          reportCalculationProgress(progressToken, 52, 'Generando tres distribuciones…');
+          const candidates = [];
+          const seen = new Set();
+          for (let attempt = 0; attempt < 24 && candidates.length < 3; attempt++) {
+            const assignment = generateRandomAssignment(valid.students.length, state.tables.length, getAssignmentLockInfo(valid.students.length));
+            const signature = assignmentSignature(assignment);
+            if (seen.has(signature)) continue;
+            seen.add(signature);
+            candidates.push({ assignment, score: 0, evaluated: 1, quality: null });
+          }
+          alternatives = candidates;
+          solution = alternatives[0];
+        } else {
+          reportCalculationProgress(progressToken, 70, 'Generando distribución…');
+          solution = {
+            assignment: generateRandomAssignment(valid.students.length, state.tables.length, getAssignmentLockInfo(valid.students.length)),
+            score: 0,
+            evaluated: 1
+          };
+        }
+      } else {
+        solution = await optimizeAssignment(
+          valid.students.length,
+          solverConstraints,
+          distanceMatrix,
+          ratio => reportCalculationProgress(
+            progressToken,
+            ratio * 96,
+            wantAlternatives
+              ? 'Buscando alternativas distintas…'
+              : (cooperativeConstraint ? 'Optimizando restricciones y equipos ABBC…' : 'Optimizando restricciones…')
+          ),
+          wantAlternatives ? { restarts: state.tables.length > 35 ? 8 : 10 } : {}
+        );
+        if (wantAlternatives) {
+          alternatives = selectDiverseAlternatives(solution.candidates || [solution], 3, valid.students.length)
+            .map(candidate => ({
+              ...candidate,
+              quality: solutionQuality(candidate, solverConstraints, distanceMatrix)
+            }));
+          solution = alternatives[0] || solution;
+        }
+      }
+
+      if (wantAlternatives && alternatives.length) {
+        setAlternatives(alternatives, slotPositions, {
+          mode: 'organized',
+          students: valid.students,
+          constraints: solverConstraints,
+          distanceMatrix,
+          contradictions: valid.contradictions
+        });
+        applyAlternative(0);
+        if (alternatives.length < 3) {
+          showMessage(`Se han encontrado ${alternatives.length} alternativa(s) suficientemente distinta(s).`, 'warning');
+        } else if (!valid.contradictions.length) {
+          showMessage('Se han generado 3 alternativas distintas. Selecciona A, B o C para compararlas.', 'success');
+        }
+      } else {
+        renderSolution(solution, solverConstraints, distanceMatrix);
+        renderConstraintSummary(valid.students, solverConstraints, solution, distanceMatrix, valid.contradictions);
+        applyPositionAssignment(solution.assignment, valid.students.length, slotPositions);
+        if (!valid.contradictions.length) showMessage('Organización calculada: cada persona conserva su mismo número de mesa.', 'success');
+      }
+
+      state.layoutActive = false;
+      state.lastSolution = null;
+      saveStateSoon();
+      finishCalculationProgress(progressToken, wantAlternatives ? 'Alternativas generadas' : 'Distribución completada');
+      scheduleScrollAfterProgress(progressToken);
+    } catch (error) {
+      finishCalculationProgress(progressToken, 'No se pudo completar');
+      throw error;
+    } finally {
+      elements.organizeBtn.textContent = oldText;
+      updateUIState();
+    }
+  }
+
+  function randomize() {
+    const students = parseStudents();
+    if (!students.length) {
+      showMessage('Añade al menos una persona.', 'error');
+      return;
+    }
+    if (students.length > state.tables.length) {
+      showMessage(`Hay ${students.length} personas y solo ${state.tables.length} mesas.`, 'error');
+      return;
+    }
+
+    const tableIds = new Set(state.tables.map(table => table.id));
+    const missingTableIds = students.map(student => student.id).filter(id => !tableIds.has(id));
+    if (missingTableIds.length) {
+      showMessage(`Falta(n) la(s) mesa(s) ${missingTableIds.join(', ')}. Cada persona debe conservar la mesa con su mismo número.`, 'error');
+      return;
+    }
+
+    clearAlternatives();
+    const wantAlternatives = alternativesEnabled();
+    const slotPositions = captureAssignmentSlots();
+    const progressToken = startCalculationProgress(wantAlternatives ? 'Generando alternativas aleatorias…' : 'Generando distribución aleatoria…');
+    reportCalculationProgress(progressToken, 28);
+
+    if (wantAlternatives) {
+      const candidates = [];
+      const seen = new Set();
+      for (let attempt = 0; attempt < 30 && candidates.length < 3; attempt++) {
+        const assignment = generateRandomAssignment(students.length, state.tables.length, getAssignmentLockInfo(students.length));
+        const signature = assignmentSignature(assignment);
+        if (seen.has(signature)) continue;
+        seen.add(signature);
+        candidates.push({ assignment, score: 0, evaluated: 1, quality: null });
+      }
+      setAlternatives(candidates, slotPositions, { mode: 'random', students });
+      if (candidates.length) applyAlternative(0);
+      showMessage(`${candidates.length} alternativa(s) aleatoria(s) generada(s).`, 'success');
+    } else {
+      const assignment = generateRandomAssignment(students.length, state.tables.length, getAssignmentLockInfo(students.length));
+      applyPositionAssignment(assignment, students.length, slotPositions);
+      hideSolution();
+      renderRandomOutput();
+      showMessage('Posiciones aleatorias aplicadas manteniendo cada pareja persona-mesa.', 'success');
+    }
+
+    state.layoutActive = false;
+    state.lastSolution = null;
+    saveStateSoon();
+    reportCalculationProgress(progressToken, 72);
+    finishCalculationProgress(progressToken, wantAlternatives ? 'Alternativas generadas' : 'Distribución completada');
+    scheduleScrollAfterProgress(progressToken);
+  }
+
+  function updateUIState() {
+    const students = parseStudents();
+    const parsed = parseConstraints(students);
+    const studentErrors = getStudentGroupErrors(students);
+    const inputErrors = [...studentErrors, ...parsed.errors];
+    const nonEmptyConstraintLines = elements.constraintsInput.value
+      .split(/\r?\n/)
+      .filter(line => {
+        const trimmed = line.trim();
+        return trimmed && !trimmed.startsWith('#');
+      }).length;
+
+    elements.studentCountBadge.textContent = String(students.length);
+    elements.constraintCountBadge.textContent = String(nonEmptyConstraintLines);
+    elements.metrics.innerHTML = `
+      <span>${state.tables.length} mesas</span>
+      <span>${students.length} personas</span>
+      <span>${nonEmptyConstraintLines} restricciones</span>
+    `;
+
+    const tableIds = new Set(state.tables.map(table => table.id));
+    const missingRequiredTable = students.some(student => !tableIds.has(student.id));
+    const insufficientTables = students.length > state.tables.length || students.length === 0 || missingRequiredTable;
+    elements.organizeBtn.disabled = insufficientTables || inputErrors.length > 0;
+    elements.randomizeBtn.disabled = insufficientTables;
+    elements.clearTablesBtn.disabled = state.tables.length === 0;
+    updateDeleteButton();
+    renderStudentErrors(studentErrors);
+    renderConstraintErrors(parsed.errors);
+  }
+
+  function syncHelpFrameTheme() {
+    if (!elements.helpFrame) return;
+    try {
+      const frameBody = elements.helpFrame.contentDocument?.body;
+      if (frameBody) frameBody.dataset.theme = state.theme;
+    } catch (_) {
+      // help.html reads the saved theme itself if direct frame access is unavailable.
+    }
+  }
+
+  function setBackgroundInert(inert) {
+    const targets = [document.querySelector('.info-bar'), document.querySelector('.app-shell'), document.querySelector('.site-footer')].filter(Boolean);
+    for (const target of targets) {
+      if ('inert' in target) target.inert = inert;
+      if (inert) target.setAttribute('aria-hidden', 'true');
+      else target.removeAttribute('aria-hidden');
+    }
+  }
+
+  function openHelpModal() {
+    if (!elements.helpModal || state.helpModalOpen) return;
+    state.helpModalOpen = true;
+    state.helpReturnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : elements.helpOpenBtn;
+    state.helpReturnFocus?.blur?.();
+
+    elements.helpModal.hidden = false;
+    document.body.classList.add('help-modal-open');
+    setBackgroundInert(true);
+
+    if (elements.helpFrame && !elements.helpFrame.getAttribute('src')) {
+      elements.helpFrame.setAttribute('src', elements.helpFrame.dataset.src || 'help.html?embedded=1');
+    } else {
+      try {
+        elements.helpFrame?.contentWindow?.scrollTo(0, 0);
+      } catch (_) {}
+    }
+
+    requestAnimationFrame(() => {
+      syncHelpFrameTheme();
+      elements.helpCloseBtn?.focus();
+    });
+  }
+
+  function closeHelpModal() {
+    if (!elements.helpModal || !state.helpModalOpen) return;
+    state.helpModalOpen = false;
+    elements.helpModal.hidden = true;
+    document.body.classList.remove('help-modal-open');
+    setBackgroundInert(false);
+
+    const focusTarget = state.helpReturnFocus && document.contains(state.helpReturnFocus)
+      ? state.helpReturnFocus
+      : elements.helpOpenBtn;
+    state.helpReturnFocus = null;
+    requestAnimationFrame(() => focusTarget?.focus());
+  }
+
+  function onHelpModalBackdropClick(event) {
+    if (event.target === elements.helpModal) closeHelpModal();
+  }
+
+  function onHelpModalKeyDown(event) {
+    if (!state.helpModalOpen) return;
+
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      event.stopPropagation();
+      closeHelpModal();
+      return;
+    }
+
+    if (event.key !== 'Tab') return;
+
+    const focusables = [elements.helpCloseBtn, elements.helpFrame].filter(
+      element => element && !element.hidden && !element.disabled
+    );
+    if (!focusables.length) {
+      event.preventDefault();
+      elements.helpModalDialog?.focus();
+      return;
+    }
+
+    const currentIndex = focusables.indexOf(document.activeElement);
+    if (event.shiftKey && currentIndex <= 0) {
+      event.preventDefault();
+      focusables[focusables.length - 1].focus();
+    } else if (!event.shiftKey && currentIndex === focusables.length - 1) {
+      event.preventDefault();
+      focusables[0].focus();
+    }
+  }
+
+  function setTheme(theme) {
+    const allowed = ['light', 'dark', 'blue', 'warm'];
+    state.theme = allowed.includes(theme) ? theme : 'light';
+    document.body.dataset.theme = state.theme;
+    elements.themeSelect.value = state.theme;
+    syncHelpFrameTheme();
+  }
+
+  function saveStateSoon() {
+    clearTimeout(state.saveTimer);
+    elements.saveStatus.textContent = 'Guardando…';
+    state.saveTimer = setTimeout(() => {
+      const payload = {
+        version: 3,
+        tables: state.tables,
+        tableWidth: state.tableWidth,
+        tableHeight: state.tableHeight,
+        theme: state.theme,
+        spaceLayout: state.spaceLayout,
+        layoutActive: state.layoutActive,
+        students: elements.studentsInput.value,
+        constraints: elements.constraintsInput.value,
+        lastSolution: state.lastSolution,
+        outputCollapsed: state.outputCollapsed,
+        cooperativeBlockPositions: state.cooperativeBlockPositions,
+        zones: state.zones,
+        examplePreset: state.examplePreset,
+        spaceName: state.spaceName
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+      elements.saveStatus.textContent = 'Guardado';
+      setTimeout(() => {
+        if (elements.saveStatus.textContent === 'Guardado') elements.saveStatus.textContent = 'Listo';
+      }, 1000);
+    }, 180);
+  }
+
+  function loadState() {
+    const raw = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_STORAGE_KEY);
+    if (!raw) return false;
+
+    try {
+      const saved = JSON.parse(raw);
+      if (!Array.isArray(saved.tables)) return false;
+
+      state.tables = saved.tables
+        .filter(table => Number.isFinite(table.id) && Number.isFinite(table.xNorm) && Number.isFinite(table.yNorm))
+        .map(table => ({
+          id: Number(table.id),
+          xNorm: clamp(Number(table.xNorm), 0, 1),
+          yNorm: clamp(Number(table.yNorm), 0, 1),
+          rotation: normalizeRotation(table.rotation),
+          locked: Boolean(table.locked)
+        }));
+
+      state.tableWidth = clamp(Number(saved.tableWidth) || INITIAL_TABLE_WIDTH, MIN_TABLE_WIDTH, MAX_TABLE_WIDTH);
+      state.tableHeight = clamp(Number(saved.tableHeight) || INITIAL_TABLE_HEIGHT, 36, 88);
+      state.lastSolution = null;
+      state.selectedTableId = null;
+      state.selectedTableIds.clear();
+      elements.studentsInput.value = numberStudentLines(typeof saved.students === 'string' ? saved.students : defaultStudentsText());
+      state.examplePreset = detectExamplePreset(elements.studentsInput.value);
+      if (elements.exampleSelect) elements.exampleSelect.value = state.examplePreset;
+      elements.constraintsInput.value = typeof saved.constraints === 'string' ? saved.constraints : '';
+      state.spaceName = typeof saved.spaceName === 'string' ? saved.spaceName : '';
+      if (elements.spaceNameInput) elements.spaceNameInput.value = state.spaceName;
+      updateSpaceNameDisplay();
+      setTheme(saved.theme || 'light');
+      state.spaceLayout = Object.prototype.hasOwnProperty.call(SPACE_LAYOUT_LABELS, saved.spaceLayout) ? saved.spaceLayout : DEFAULT_SPACE_LAYOUT;
+      state.layoutActive = state.spaceLayout === 'manual' ? false : (typeof saved.layoutActive === 'boolean' ? saved.layoutActive : false);
+      state.outputCollapsed = Boolean(saved.outputCollapsed);
+      state.zones = Array.isArray(saved.zones)
+        ? saved.zones.filter(zone => Number.isFinite(zone.id) && Number.isFinite(zone.xNorm) && Number.isFinite(zone.yNorm) && Number.isFinite(zone.widthNorm) && Number.isFinite(zone.heightNorm))
+            .map(zone => ({
+              id: Number(zone.id),
+              xNorm: clamp(Number(zone.xNorm), 0, 1),
+              yNorm: clamp(Number(zone.yNorm), 0, 1),
+              widthNorm: clamp(Number(zone.widthNorm), 0.01, 1),
+              heightNorm: clamp(Number(zone.heightNorm), 0.01, 1)
+            }))
+        : [];
+      state.selectedZoneId = null;
+      state.zoneMode = false;
+      state.zoneDraft = null;
+      state.zoneDragging = null;
+      state.cooperativeBlockPositions = Array.isArray(saved.cooperativeBlockPositions)
+        ? saved.cooperativeBlockPositions.map(block => Array.isArray(block)
+          ? block.filter(position => position && Number.isFinite(position.xNorm) && Number.isFinite(position.yNorm))
+              .map(position => ({ xNorm: clamp(Number(position.xNorm), 0, 1), yNorm: clamp(Number(position.yNorm), 0, 1) }))
+          : []).filter(block => block.length === 4)
+        : [];
+      if (elements.layoutSelect) elements.layoutSelect.value = state.spaceLayout;
+      return true;
+    } catch (error) {
+      console.warn('No se pudo restaurar UbicApp:', error);
+      return false;
+    }
+  }
+
+  function prepareDidacticInitialState() {
+    hideTableTooltip();
+    clearAlternatives();
+    makeInitialTables();
+    elements.studentsInput.value = cooperativeStudentsText();
+    state.examplePreset = 'cooperative';
+    if (elements.exampleSelect) elements.exampleSelect.value = state.examplePreset;
+    elements.constraintsInput.value = DIDACTIC_CONSTRAINTS_TEXT;
+    state.spaceName = '';
+    if (elements.spaceNameInput) elements.spaceNameInput.value = '';
+    if (elements.personSearchInput) elements.personSearchInput.value = '';
+    updateSpaceNameDisplay();
+    state.spaceLayout = DIDACTIC_SPACE_LAYOUT;
+    state.layoutActive = true;
+    state.outputCollapsed = false;
+    state.cooperativeBlockPositions = [];
+    state.zones = [];
+    state.selectedZoneId = null;
+    state.selectedTableId = null;
+    state.selectedTableIds.clear();
+    setZoneMode(false);
+    state.lastSolution = null;
+    if (elements.layoutSelect) elements.layoutSelect.value = DIDACTIC_SPACE_LAYOUT;
+    if (elements.generateAlternativesCheckbox) elements.generateAlternativesCheckbox.checked = true;
+    clearMessage();
+    hideSolution();
+    applySpaceLayout(DIDACTIC_SPACE_LAYOUT, { message: false, save: false, scroll: false });
+    updateOutputVisibility();
+    updateExampleSelect();
+    updateUIState();
+  }
+
+  function runDidacticInitialOrganize() {
+    void organize().catch(error => {
+      console.error('No se pudo organizar el ejemplo ABC:', error);
+      showMessage('No se pudo completar la organización del ejemplo ABC.', 'error');
+    });
+  }
+
+  function currentWorkspaceHasContent() {
+    return Boolean(
+      state.tables.length ||
+      state.zones.length ||
+      String(elements.studentsInput?.value || '').trim() ||
+      String(elements.constraintsInput?.value || '').trim() ||
+      String(state.spaceName || '').trim() ||
+      state.alternatives.length
+    );
+  }
+
+  function viewDidacticExample() {
+    if (
+      currentWorkspaceHasContent() &&
+      !window.confirm('¿Quieres cargar el ejemplo y sustituir el contenido actual?')
+    ) return;
+
+    cancelPendingPageTopScroll();
+    prepareDidacticInitialState();
+    saveStateSoon();
+    runDidacticInitialOrganize();
+  }
+
+  function prepareEmptyWorkspace(options = {}) {
+    cancelPendingPageTopScroll();
+    hideTableTooltip();
+    clearAlternatives({ uncheck: true });
+
+    state.tables = [];
+    state.tableWidth = INITIAL_TABLE_WIDTH;
+    state.tableHeight = INITIAL_TABLE_HEIGHT;
+    state.spaceLayout = DEFAULT_SPACE_LAYOUT;
+    state.layoutActive = false;
+    state.lastSolution = null;
+    state.selectedTableId = null;
+    state.selectedTableIds.clear();
+    state.cooperativeBlockPositions = [];
+    state.zones = [];
+    state.selectedZoneId = null;
+    state.zoneDraft = null;
+    state.zoneDragging = null;
+    state.outputCollapsed = false;
+    state.examplePreset = 'custom';
+    state.spaceName = '';
+
+    setZoneMode(false);
+
+    elements.studentsInput.value = '';
+    elements.constraintsInput.value = '';
+    if (elements.spaceNameInput) elements.spaceNameInput.value = '';
+    if (elements.personSearchInput) elements.personSearchInput.value = '';
+    if (elements.exampleSelect) elements.exampleSelect.value = 'custom';
+    if (elements.layoutSelect) elements.layoutSelect.value = DEFAULT_SPACE_LAYOUT;
+    if (elements.generateAlternativesCheckbox) elements.generateAlternativesCheckbox.checked = false;
+
+    updateSpaceNameDisplay();
+    clearMessage();
+    hideSolution();
+    resetOutput();
+    updateOutputVisibility();
+    renderTables();
+    updateExampleSelect();
+    updateUIState();
+    updateDeleteButton();
+
+    if (options.save) saveStateSoon();
+  }
+
+  function newWorkspace() {
+    if (!window.confirm('¿Quieres crear un nuevo espacio? Se eliminará la configuración actual.')) return;
+    localStorage.removeItem(STORAGE_KEY);
+    localStorage.removeItem(LEGACY_STORAGE_KEY);
+    prepareEmptyWorkspace({ save: true });
+  }
+
+  function onStudentsChanged() {
+    hideTableTooltip();
+    clearAlternatives();
+    state.lastSolution = null;
+    updateExampleSelect();
+    renderTables();
+    hideSolution();
+    updateUIState();
+    saveStateSoon();
+  }
+
+  function onConstraintsChanged() {
+    hideTableTooltip();
+    clearAlternatives();
+    state.lastSolution = null;
+    hideSolution();
+    updateUIState();
+    saveStateSoon();
+  }
+
+  function scrollToPeopleList() {
+    cancelPendingPageTopScroll();
+    elements.peoplePanel?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function scrollToWorkspace() {
+    cancelPendingPageTopScroll();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function hasEffectiveConstraints() {
+    return String(elements.constraintsInput?.value || '')
+      .split(/\r?\n/)
+      .some(line => {
+        const trimmed = line.trim();
+        return Boolean(trimmed && !trimmed.startsWith('#'));
+      });
+  }
+
+  async function applyLayoutFromSelector(layoutName) {
+    const layout = Object.prototype.hasOwnProperty.call(SPACE_LAYOUT_LABELS, layoutName)
+      ? layoutName
+      : DEFAULT_SPACE_LAYOUT;
+
+    if (layout === 'manual') {
+      applySpaceLayout(layout);
+      return;
+    }
+
+    const shouldOrganize = hasEffectiveConstraints();
+    applySpaceLayout(layout, { scroll: !shouldOrganize });
+
+    if (shouldOrganize) {
+      await organize();
+    }
+  }
+
+  function attachEvents() {
+    elements.addTableBtn.addEventListener('click', addTable);
+    elements.addTablesBtn.addEventListener('click', () => addTables(elements.tableCountInput.value));
+    elements.tableCountInput.addEventListener('keydown', event => {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        addTables(elements.tableCountInput.value);
+      }
+    });
+    elements.tableCountInput.addEventListener('change', () => {
+      const value = Math.floor(Number(elements.tableCountInput.value));
+      elements.tableCountInput.value = String(Number.isFinite(value) && value > 0 ? value : 1);
+    });
+    elements.deleteTableBtn.addEventListener('click', deleteSelectedTable);
+    elements.increaseSizeBtn.addEventListener('click', () => resizeTables(TABLE_SIZE_STEP));
+    elements.decreaseSizeBtn.addEventListener('click', () => resizeTables(-TABLE_SIZE_STEP));
+    elements.layoutSelect.addEventListener('change', event => {
+      void applyLayoutFromSelector(event.target.value);
+    });
+    elements.clearTablesBtn.addEventListener('click', clearTables);
+    elements.rotateTableBtn.addEventListener('click', rotateSelectedTable);
+    elements.lockTableBtn.addEventListener('click', toggleSelectedTableLock);
+    elements.addZoneBtn.addEventListener('click', activateZoneMode);
+    if (elements.spaceNameInput) elements.spaceNameInput.addEventListener('input', onSpaceNameChanged);
+    if (elements.personSearchInput) elements.personSearchInput.addEventListener('input', refreshPersonSearch);
+    if (elements.peopleListBtn) elements.peopleListBtn.addEventListener('click', scrollToPeopleList);
+    if (elements.viewExampleBtn) elements.viewExampleBtn.addEventListener('click', viewDidacticExample);
+    elements.toggleOutputBtn.addEventListener('click', toggleOutputVisibility);
+    elements.downloadPdfBtn.addEventListener('click', downloadClassroomPdf);
+    elements.organizeBtn.addEventListener('click', organize);
+    elements.randomizeBtn.addEventListener('click', randomize);
+    if (elements.generateAlternativesCheckbox) {
+      elements.generateAlternativesCheckbox.addEventListener('change', () => {
+        if (!elements.generateAlternativesCheckbox.checked) clearAlternatives();
+      });
+    }
+    elements.resetBtn.addEventListener('click', newWorkspace);
+    elements.themeSelect.addEventListener('change', event => {
+      setTheme(event.target.value);
+      saveStateSoon();
+    });
+    if (elements.exampleSelect) {
+      elements.exampleSelect.addEventListener('change', event => loadPeopleExample(event.target.value));
+    }
+    if (elements.clearPeopleBtn) elements.clearPeopleBtn.addEventListener('click', clearPeopleList);
+    if (elements.viewSpaceBtn) elements.viewSpaceBtn.addEventListener('click', scrollToWorkspace);
+    elements.studentsInput.addEventListener('input', onStudentsChanged);
+    elements.studentsInput.addEventListener('blur', renumberStudents);
+    elements.constraintsInput.addEventListener('input', onConstraintsChanged);
+    elements.classroom.addEventListener('pointerdown', onClassroomPointerDown);
+    elements.classroom.addEventListener('pointermove', onClassroomPointerMove);
+    elements.classroom.addEventListener('pointerup', onClassroomPointerUp);
+    elements.classroom.addEventListener('pointercancel', onClassroomPointerUp);
+    if (elements.helpOpenBtn) elements.helpOpenBtn.addEventListener('click', openHelpModal);
+    if (elements.helpOpenFooterBtn) elements.helpOpenFooterBtn.addEventListener('click', openHelpModal);
+    if (elements.helpCloseBtn) elements.helpCloseBtn.addEventListener('click', closeHelpModal);
+    if (elements.helpModal) elements.helpModal.addEventListener('click', onHelpModalBackdropClick);
+    if (elements.helpFrame) elements.helpFrame.addEventListener('load', syncHelpFrameTheme);
+    window.addEventListener('message', event => {
+      if (event.source === elements.helpFrame?.contentWindow && event.data?.type === 'roomplanner-help-close') closeHelpModal();
+    });
+    document.addEventListener('keydown', onHelpModalKeyDown, true);
+    document.addEventListener('keydown', onSelectionKeyDown);
+
+    const resizeObserver = new ResizeObserver(() => {
+      if (state.layoutActive) applySpaceLayout(state.spaceLayout, { message: false, save: false, scroll: false });
+      else renderTables();
+    });
+    resizeObserver.observe(elements.classroom);
+  }
+
+  function getVisitCounterNamespace() {
+    const hostname = String(window.location.hostname || '').trim().toLowerCase();
+    if (!hostname || hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '::1') return '';
+    return hostname.replace(/^www\./, '');
+  }
+
+  function hideVisitCounter() {
+    if (elements.visitCountSeparator) elements.visitCountSeparator.hidden = true;
+    if (elements.visitCount) {
+      elements.visitCount.hidden = true;
+      elements.visitCount.textContent = '';
+    }
+  }
+
+  async function updateVisitCounter() {
+    if (!elements.visitCount || !elements.visitCountSeparator) return;
+
+    const namespace = getVisitCounterNamespace();
+    if (!namespace || !/^https?:$/.test(window.location.protocol)) {
+      hideVisitCounter();
+      return;
+    }
+
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), VISIT_COUNTER_TIMEOUT_MS);
+
+    try {
+      const url = `${VISIT_COUNTER_BASE_URL}/hit/${encodeURIComponent(namespace)}/${encodeURIComponent(VISIT_COUNTER_KEY)}?t=${Date.now()}`;
+      const response = await fetch(url, {
+        method: 'GET',
+        mode: 'cors',
+        cache: 'no-store',
+        credentials: 'omit',
+        referrerPolicy: 'no-referrer',
+        signal: controller.signal
+      });
+      if (!response.ok) throw new Error(`Visit counter HTTP ${response.status}`);
+
+      const data = await response.json();
+      const value = Number(data?.value);
+      if (!Number.isFinite(value) || value < 0) throw new Error('Invalid visit counter value');
+
+      const formattedValue = String(Math.trunc(value)).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      elements.visitCount.textContent = formattedValue;
+      elements.visitCountSeparator.hidden = false;
+      elements.visitCount.hidden = false;
+    } catch (error) {
+      hideVisitCounter();
+    } finally {
+      window.clearTimeout(timeoutId);
+    }
+  }
+
+  function initialize() {
+    const loaded = loadState();
+    if (!loaded) {
+      prepareEmptyWorkspace({ save: false });
+    }
+
+    attachEvents();
+    void updateVisitCounter();
+    updateOutputVisibility();
+    resetOutput();
+    if (loaded) {
+      if (elements.layoutSelect) elements.layoutSelect.value = state.spaceLayout;
+      renderTables();
+    }
+    updateExampleSelect();
+    updateSpaceNameDisplay();
+    updateUIState();
+    startSplashScreen();
+  }
+
+
+  initialize();
+})();
