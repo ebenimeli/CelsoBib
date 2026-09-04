@@ -26,31 +26,6 @@
   add('izquierda','left','gauche','sinistra','links','esquerra','esquerra','ezkerrean','esquerda');
 
   add('Ayuda','Help','Aide','Aiuto','Hilfe','Ajuda','Ajuda','Laguntza','Axuda');
-  add('Menú principal','Main menu','Menu principal','Menu principale','Hauptmenü','Menú principal','Menú principal','Menu nagusia','Menú principal');
-  add('Archivo','File','Fichier','File','Datei','Fitxer','Fitxer','Fitxategia','Ficheiro');
-  add('Edición','Edit','Édition','Modifica','Bearbeiten','Edició','Edició','Edizioa','Edición');
-  add('Mesas','Desks','Tables','Banchi','Tische','Taules','Taules','Mahaiak','Mesas');
-  add('Organización','Organization','Organisation','Organizzazione','Organisation','Organització','Organització','Antolaketa','Organización');
-  add('Ver','View','Affichage','Visualizza','Ansicht','Veure','Visualització','Ikusi','Ver');
-  add('Nuevo proyecto','New project','Nouveau projet','Nuovo progetto','Neues Projekt','Nou projecte','Projecte nou','Proiektu berria','Novo proxecto');
-  add('Descargar PDF','Download PDF','Télécharger le PDF','Scarica PDF','PDF herunterladen','Descarregar PDF','Descarregar PDF','PDFa deskargatu','Descargar PDF');
-  add('Seleccionar todo','Select all','Tout sélectionner','Seleziona tutto','Alles auswählen','Seleccionar-ho tot','Selecciona-ho tot','Hautatu dena','Seleccionar todo');
-  add('Deseleccionar','Deselect','Désélectionner','Deseleziona','Auswahl aufheben','Desseleccionar','Desselecciona','Desautatu','Deseleccionar');
-  add('Añadir mesa','Add desk','Ajouter une table','Aggiungi banco','Tisch hinzufügen','Afegir taula','Afegeix taula','Mahaia gehitu','Engadir mesa');
-  add('Eliminar mesa','Delete desk','Supprimer la table','Elimina banco','Tisch löschen','Eliminar taula','Elimina taula','Mahaia ezabatu','Eliminar mesa');
-  add('Girar mesa','Rotate desk','Faire pivoter la table','Ruota banco','Tisch drehen','Girar taula','Gira taula','Mahaia biratu','Xirar mesa');
-  add('Aumentar tamaño','Increase size','Augmenter la taille','Aumenta dimensione','Größe erhöhen','Augmentar grandària','Augmenta la mida','Tamaina handitu','Aumentar tamaño');
-  add('Reducir tamaño','Decrease size','Réduire la taille','Riduci dimensione','Größe verringern','Reduir grandària','Redueix la mida','Tamaina txikitu','Reducir tamaño');
-  add('Zonas protegidas','Protected zones','Zones protégées','Zone protette','Geschützte Bereiche','Zones protegides','Zones protegides','Babestutako eremuak','Zonas protexidas');
-  add('Mostrar relaciones','Show relations','Afficher les relations','Mostra relazioni','Beziehungen anzeigen','Mostrar relacions','Mostra relacions','Harremanak erakutsi','Mostrar relacións');
-  add('Ocultar relaciones','Hide relations','Masquer les relations','Nascondi relazioni','Beziehungen ausblenden','Ocultar relacions','Amaga relacions','Harremanak ezkutatu','Ocultar relacións');
-  add('Buscar persona','Find person','Rechercher une personne','Cerca persona','Person suchen','Buscar persona','Cerca persona','Pertsona bilatu','Buscar persoa');
-  add('Restablecer vista','Reset view','Réinitialiser la vue','Reimposta vista','Ansicht zurücksetzen','Restablir vista','Restableix la vista','Ikuspegia berrezarri','Restablecer vista');
-  add('No existe una acción equivalente en esta versión','There is no equivalent action in this version','Il n’existe aucune action équivalente dans cette version','Non esiste un’azione equivalente in questa versione','In dieser Version gibt es keine entsprechende Aktion','No existeix una acció equivalent en esta versió','No hi ha cap acció equivalent en aquesta versió','Bertsio honetan ez dago ekintza baliokiderik','Non existe unha acción equivalente nesta versión');
-  add('Sintaxis de restricciones','Constraint syntax','Syntaxe des contraintes','Sintassi dei vincoli','Syntax der Einschränkungen','Sintaxi de restriccions','Sintaxi de restriccions','Murrizketen sintaxia','Sintaxe das restricións');
-  add('Acerca de UbicApp','About UbicApp','À propos d’UbicApp','Informazioni su UbicApp','Über UbicApp','Quant a UbicApp','Quant a UbicApp','UbicApp-i buruz','Acerca de UbicApp');
-  add('Versión 48','Version 48','Version 48','Versione 48','Version 48','Versió 48','Versió 48','48. bertsioa','Versión 48');
-  add('Cerrar','Close','Fermer','Chiudi','Schließen','Tancar','Tanca','Itxi','Pechar');
   add('Un organizador de espacios de estudio y de trabajo','A planner for study and work spaces','Un organisateur d’espaces d’étude et de travail','Un organizzatore di spazi di studio e di lavoro','Ein Planer für Lern- und Arbeitsräume','Un organitzador d’espais d’estudi i de treball','Un organitzador d’espais d’estudi i de treball','Ikasketa- eta lan-espazioen antolatzailea','Un organizador de espazos de estudo e traballo');
   add('Listo','Ready','Prêt','Pronto','Bereit','Preparat','Preparat','Prest','Listo');
   add('+ Mesa','+ Desk','+ Table','+ Banco','+ Tisch','+ Taula','+ Taula','+ Mahaia','+ Mesa');
@@ -74,10 +49,6 @@
   add('Añadir','Add','Ajouter','Aggiungi','Hinzufügen','Afegir','Afegir','Gehitu','Engadir');
   add('Deshacer','Undo','Annuler','Annulla','Rückgängig','Desfer','Desfer','Desegin','Desfacer');
   add('Rehacer','Redo','Rétablir','Ripristina','Wiederholen','Refer','Refer','Berregin','Refacer');
-  add('Guardar proyecto','Save project','Enregistrer le projet','Salva progetto','Projekt speichern','Guardar projecte','Desar projecte','Proiektua gorde','Gardar proxecto');
-  add('Importar proyecto','Import project','Importer le projet','Importa progetto','Projekt importieren','Importar projecte','Importar projecte','Proiektua inportatu','Importar proxecto');
-  add('Guardar proyecto en XML','Save project as XML','Enregistrer le projet en XML','Salva il progetto in XML','Projekt als XML speichern','Guardar projecte en XML','Desar projecte en XML','Proiektua XML gisa gorde','Gardar proxecto en XML');
-  add('Importar proyecto desde XML','Import project from XML','Importer le projet depuis XML','Importa il progetto da XML','Projekt aus XML importieren','Importar projecte des d’XML','Importar projecte des d’XML','Proiektua XMLtik inportatu','Importar proxecto desde XML');
   add('Descargar','Download','Télécharger','Scarica','Herunterladen','Descarregar','Descarregar','Deskargatu','Descargar');
   add('Paleta','Palette','Palette','Palette','Palette','Paleta','Paleta','Paleta','Paleta');
   add('Light','Light','Clair','Chiaro','Hell','Clar','Clar','Argia','Claro');
@@ -146,12 +117,6 @@
   // Frequently generated messages/statuses.
   add('Guardando…','Saving…','Enregistrement…','Salvataggio…','Speichern…','Guardant…','Desant…','Gordetzen…','Gardando…');
   add('Guardado','Saved','Enregistré','Salvato','Gespeichert','Guardat','Desat','Gordeta','Gardado');
-  add('Proyecto guardado en XML.','Project saved as XML.','Projet enregistré en XML.','Progetto salvato in XML.','Projekt als XML gespeichert.','Projecte guardat en XML.','Projecte desat en XML.','Proiektua XML gisa gorde da.','Proxecto gardado en XML.');
-  add('No se pudo guardar el proyecto.','The project could not be saved.','Impossible d’enregistrer le projet.','Impossibile salvare il progetto.','Das Projekt konnte nicht gespeichert werden.','No s’ha pogut guardar el projecte.','No s’ha pogut desar el projecte.','Ezin izan da proiektua gorde.','Non se puido gardar o proxecto.');
-  add('Proyecto importado correctamente.','Project imported successfully.','Projet importé correctement.','Progetto importato correttamente.','Projekt erfolgreich importiert.','Projecte importat correctament.','Projecte importat correctament.','Proiektua behar bezala inportatu da.','Proxecto importado correctamente.');
-  add('Archivo de proyecto no válido.','Invalid project file.','Fichier de projet non valide.','File di progetto non valido.','Ungültige Projektdatei.','Fitxer de projecte no vàlid.','Fitxer de projecte no vàlid.','Proiektu-fitxategia ez da baliozkoa.','Ficheiro de proxecto non válido.');
-  add('Formato de proyecto no compatible.','Unsupported project format.','Format de projet non pris en charge.','Formato di progetto non supportato.','Nicht unterstütztes Projektformat.','Format de projecte no compatible.','Format de projecte no compatible.','Proiektu-formatua ez da bateragarria.','Formato de proxecto non compatible.');
-  add('El proyecto actual será sustituido por el proyecto importado. ¿Deseas continuar?','The current project will be replaced by the imported project. Do you want to continue?','Le projet actuel sera remplacé par le projet importé. Voulez-vous continuer ?','Il progetto attuale verrà sostituito dal progetto importato. Vuoi continuare?','Das aktuelle Projekt wird durch das importierte Projekt ersetzt. Möchten Sie fortfahren?','El projecte actual serà substituït pel projecte importat. Vols continuar?','El projecte actual serà substituït pel projecte importat. Vols continuar?','Uneko proiektua inportatutako proiektuarekin ordeztuko da. Jarraitu nahi duzu?','O proxecto actual será substituído polo proxecto importado. Queres continuar?');
   add('Completado','Completed','Terminé','Completato','Abgeschlossen','Completat','Completat','Osatuta','Completado');
   add('Alternativas generadas','Alternatives generated','Alternatives générées','Alternative generate','Alternativen erstellt','Alternatives generades','Alternatives generades','Aukerak sortuta','Alternativas xeradas');
   add('Distribución completada','Layout completed','Disposition terminée','Distribuzione completata','Anordnung abgeschlossen','Distribució completada','Distribució completada','Banaketa osatuta','Distribución completada');
