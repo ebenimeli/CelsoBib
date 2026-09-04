@@ -11,7 +11,7 @@ description: "¿Qué estoy haciendo ahora?"
 
 Esta es una [_now page_](https://nownownow.com/about), y si tienes una web, deberías publicar una también.
 
-- ⛱️ Vacaciones. Tiempo de descanso, de desconexión y de recargar pilas.
+- 💼 Vuelta al trabajo. Vuelta al cole.
 - 🖋 Cuando tengo algún rato libre, escribo. He publicado la décima entrega de [_La ventana digital_](https://ebenimeli.substack.com/) con [un recorrido muy especial por Japón](https://ebenimeli.substack.com/p/un-codigo-ingenioso-una-mochila-japonesa). También he publicado algunas [notas al vuelo](https://notasalvuelo.substack.com/). Ahora escribo en [_El cuaderno de Ada_](https://elcuadernodeada.substack.com/) sobre tecnología educativa, competencia digital e inteligencia artificial.
 <!-- 📖 [Estoy leyendo](pages/read_now.html) _La tabla de Flandes_ de Arturo Pérez-Reverte.-->
 - 🌱 Sigo actualizando esta [_now page_](https://nownownow.com/about) que estás leyendo. [Escribí una nota](https://notasalvuelo.substack.com/publish/post/174006754) sobre esta iniciativa.
