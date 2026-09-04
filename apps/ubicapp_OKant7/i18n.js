@@ -49,7 +49,7 @@
   add('No existe una acción equivalente en esta versión','There is no equivalent action in this version','Il n’existe aucune action équivalente dans cette version','Non esiste un’azione equivalente in questa versione','In dieser Version gibt es keine entsprechende Aktion','No existeix una acció equivalent en esta versió','No hi ha cap acció equivalent en aquesta versió','Bertsio honetan ez dago ekintza baliokiderik','Non existe unha acción equivalente nesta versión');
   add('Sintaxis de restricciones','Constraint syntax','Syntaxe des contraintes','Sintassi dei vincoli','Syntax der Einschränkungen','Sintaxi de restriccions','Sintaxi de restriccions','Murrizketen sintaxia','Sintaxe das restricións');
   add('Acerca de UbicApp','About UbicApp','À propos d’UbicApp','Informazioni su UbicApp','Über UbicApp','Quant a UbicApp','Quant a UbicApp','UbicApp-i buruz','Acerca de UbicApp');
-  add('Versión 49','Version 49','Version 49','Versione 49','Version 49','Versió 49','Versió 49','49. bertsioa','Versión 49');
+  add('Versión 48','Version 48','Version 48','Versione 48','Version 48','Versió 48','Versió 48','48. bertsioa','Versión 48');
   add('Cerrar','Close','Fermer','Chiudi','Schließen','Tancar','Tanca','Itxi','Pechar');
   add('Un organizador de espacios de estudio y de trabajo','A planner for study and work spaces','Un organisateur d’espaces d’étude et de travail','Un organizzatore di spazi di studio e di lavoro','Ein Planer für Lern- und Arbeitsräume','Un organitzador d’espais d’estudi i de treball','Un organitzador d’espais d’estudi i de treball','Ikasketa- eta lan-espazioen antolatzailea','Un organizador de espazos de estudo e traballo');
   add('Listo','Ready','Prêt','Pronto','Bereit','Preparat','Preparat','Prest','Listo');

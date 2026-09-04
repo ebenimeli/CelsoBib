@@ -1,4 +1,4 @@
-# UbicApp · Versión 49
+# UbicApp · Versión 43
 
 Aplicación web estática para organizar parejas **persona-mesa** dentro de un espacio.
 
@@ -331,12 +331,3 @@ El mismo nombre se incorpora como encabezado centrado en la exportación **PDF A
 - Se forman primero todos los equipos completos y las mesas sobrantes se colocan después como un bloque compacto, sin eliminarlas ni forzar un equipo incompleto.
 - Si el tamaño solicitado no cabe físicamente en el canvas con las dimensiones actuales de las mesas, UbicApp conserva la geometría anterior y muestra un mensaje de validación.
 - **Organiza**, **Al azar**, alternativas A/B/C, zonas protegidas, mesas bloqueadas, PDF e internacionalización reutilizan la lógica existente.
-
-## Novedades de la versión 49
-
-- Revisión integral de UI/UX sin cambios en la lógica de la aplicación.
-- Barras de herramientas reorganizadas visualmente en grupos funcionales y con espaciado uniforme.
-- Menús, controles, estados de foco, paneles y elementos auxiliares armonizados bajo un mismo sistema visual.
-- Botones secundarios históricos normalizados para reducir ruido cromático y reforzar la jerarquía de **Organiza**.
-- Mejor adaptación responsive de barras y controles, sin scroll horizontal en los anchos comprobados.
-- Iconografía de historial, Guardar e Importar unificada mediante SVG y conservación de accesibilidad/i18n.
