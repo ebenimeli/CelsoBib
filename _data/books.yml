@@ -9,7 +9,7 @@
   pages: 412
   synopsis: "Un enigma del pasado y un misterio del presente se unen en un apasionante juego de trampas. A finales del siglo XV un viejo maestro flamenco introduce en uno de sus cuadros, en forma de partida de ajedrez, la clave de un secreto que pudo cambiar la historia de Europa. Cinco siglos después, una joven restauradora de arte, un anticuario homosexual y un excéntrico jugador de ajedrez unen sus fuerzas para tratar de resolver el enigma. La investigación les conducirá a través de una apasionante pesquisa en la que los movimientos del juego irán abriendo las puertas de un misterio que acabará por envolver a todos sus protagonistas. La tabla de Flandes es un apasionante juego de trampas e inversiones -pintura, música, literatura, historia, lógica matemática- que Arturo Pérez-Reverte encaja con diabólica destreza."
   cover: "tabla_flandes.jpg"
-  highlight: "yes"
+  #highlight: "no"
   #updated: "28 oct."
   rating: 
 
