@@ -4,42 +4,102 @@ title: ""
 description: "Rincón de lectura"
 ---
 
+<style>
+  .readprogress {
+    position: relative;
+    overflow: hidden;
+    height: 2.2rem;
+  }
+
+  .readprogress-fill {
+    height: 100%;
+    padding: 0;
+  }
+
+  .readprogress-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+</style>
+
 <h2>📖 Ahora, leyendo...</h2>
 
 <div class="book-list">
+
 {% for book in site.data.books %}
+
 {% if book.highlight %}
 {% if book.onpage %}
 {% if book.completed != 'pause' %}
 
     <h2 class="year">
-      <a alt="{{ book.description }}" class="book-title" href="{{ book.link }}">
+      <a
+        alt="{{ book.description }}"
+        class="book-title"
+        href="{{ book.link }}"
+      >
         <span class="book-title">{{ book.title }}</span>
-      </a><br/>
-    <span class="book-author">{{ book.author}}</span>
+      </a>
+      <br/>
+      <span class="book-author">{{ book.author }}</span>
     </h2>
 
-    {% if book.onpage %}
-    {% assign progress = book.onpage | times: 1.0 | divided_by:book.pages | times:100 | round: 0 | append: '%' %}
-    {% assign onpage = book.onpage | append: '/' | append: book.pages %}
+    {% assign progress = book.onpage
+      | times: 100.0
+      | divided_by: book.pages
+      | round: 1
+      | append: '%'
+    %}
 
-    <div class="w3-light-grey w3-round w3-small w3-center w3-border readprogress">
-      <div class="w3-container w3-round w3-blue" style="width: {{ progress }}">{{ onpage }} · {{book.updated}}</div>
+    {% assign onpage = book.onpage
+      | append: '/'
+      | append: book.pages
+    %}
+
+    <div class="w3-light-grey w3-round w3-small w3-border readprogress">
+
+      <div
+        class="readprogress-fill w3-blue"
+        style="width: {{ progress }};"
+      ></div>
+
+      <div class="readprogress-text">
+        {{ onpage }}{% if book.updated %} · {{ book.updated }}{% endif %}
+      </div>
+
     </div>
-    {% endif %}
+
     {% if book.synopsis %}
-    {% if book.cover %}
-      <a href="{{ book.link }}"><img src="assets/images/books/{{book.cover}}" class="book-cover"/></a>
+
+      {% if book.cover %}
+        <a href="{{ book.link }}">
+          <img
+            src="assets/images/books/{{ book.cover }}"
+            class="book-cover"
+          />
+        </a>
+      {% endif %}
+
+      <p class="book-synopsis">
+        &laquo;{{ book.synopsis }}&raquo;
+      </p>
+
     {% endif %}
-    <p class="book-synopsis">&laquo;{{ book.synopsis }}&raquo;</p>
-    {% endif %}
+
     {% if book.link %}
-    <p>🛒 <a href="{{ book.link }}">Comprar</a></p>
+      <p>🛒 <a href="{{ book.link }}">Comprar</a></p>
     {% endif %}
+
     <hr/>
+
 {% endif %}
 {% endif %}
 {% endif %}
 
 {% endfor %}
+
 </div>

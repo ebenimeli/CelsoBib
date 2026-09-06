@@ -1,3 +1,48 @@
+- title: "El aliento del lobo. La Stasi, el muro de Berlín y la vida de nosotros"
+  author: Amir Valle
+  link: https://amzn.to/4doYNOa
+  image:
+  description:
+  genre: [historia]
+  completed: 
+  onpage: 10
+  pages: 326
+  synopsis: "Este libro descorre los entretelones del escenario de represión y control de la Stasi, uno de los servicios de Inteligencia más efectivos del mundo, desde su fundación en Berlín Oriental en 1950 hasta su disolución en 1990, tras la caída del Muro de Berlín. En estas páginas se entrecruzan el análisis sobre la historia de la Stasi, las maquiavélicas trayectorias de los principales cabecillas e ideólogos políticos y militares gestores de esta estrategia de terror, y los dolorosos testimonios de las víctimas, con las vivencias de su autor, el escritor y periodista cubano Amir Valle, como víctima de la policía política de Cuba, órgano de represión adiestrado durante décadas por la Stasi. Se develan también las oscuras tramas de poder de la Stasi, junto a la siniestra KGB soviética, en su lucha por extender la égida del totalitarismo mediante operaciones de inteligencia y contrainteligencia a las dos Alemanias, al entonces llamado \"campo socialista\", a los satélites del poder de la URSS en otras regiones y hacia el resto de los \"enemigos capitalistas\". Una estrategia, que incluía alianzas con cualquier enemigo de Estados Unidos y Occidente, e incluso con renombrados grupos y personajes del terrorismo internacional. Las víctimas pertenecían precisamente a eso que la Stasi y el resto de los servicios de inteligencia de sistemas totalitarios en el mundo decían defender: el pueblo. Este libro también les da voz."
+  cover: "aliento_lobo.jpg"
+  highlight: "yes"
+  #updated: "28 oct."
+  rating:
+
+- title: La panadería de medianoche. Las vacaciones.
+  author: Noriko Onuma
+  link: https://amzn.to/4iQnBSJ
+  image:
+  description:
+  genre: [novela]
+  completed: 
+  onpage: 10
+  pages: 344
+  synopsis: "Cuando la ciudad apaga sus luces, la panadería de medianoche enciende el horno. El aroma del pan recién hecho impregna los callejones y atrae a quienes no pueden dormir: almas heridas y personas que huyen de algo… o de alguien. Tras el mostrador están Kurebayashi, el dueño de sonrisa serena; Hiroki, panadero con mucho carácter, y Nozomi, una joven que ha encontrado allí el refugio que nunca tuvo. Pero esta noche el aire huele distinto. El pasado llama a la puerta y trae secretos sin resolver. Y entre dulces deliciosos y tazas de té, incluso los corazones más obstinados empiezan a abrirse."
+  cover: "panaderia_medianoche_vacaciones.jpg"
+  #highlight: "no"
+  #updated: "28 oct."
+  rating: 
+
+- title: Demasiada felicidad
+  author: Alice Munro
+  link: https://amzn.to/4gDYmBN
+  image:
+  description:
+  genre: [novela]
+  completed: 
+  onpage: 10
+  pages: 344
+  synopsis: "Una joven madre recibe consuelo inesperado por la muerte de sus tres hijos, otra mujer reacciona de forma insólita ante la humillación a la que la somete un hombre; otros cuentos describen la crueldad de los niños y los huecos de soledad que se crean en el día a día de la vida de pareja. Como broche de oro, en el último cuento acompañamos a Sofi a Kovalevski, una matemática rusa que realmente vivió a mediados del siglo XIX, en su largo peregrinaje a través de Europa en busca de una universidad que admitiera a mujeres como profesoras, y viviremos con ella su historia de amor con un hombre que hizo lo que supo por decepcionarla. Anécdotas en apariencia banales se transforman en las manos de Munro en pura emoción, y su estilo muestra estas emociones sin dificultad, gracias a un talento excepcional que arrastra al lector dentro de las historias casi sin preámbulos."
+  cover: "demasiada_felicidad.jpg"
+  #highlight: "no"
+  #updated: "28 oct."
+  rating: 
+
 - title: La tabla de Flandes
   author: Arturo Pérez-Reverte
   link: https://amzn.to/4vqolRi
@@ -193,12 +238,12 @@ La información no es el principio activo de la verdad; tampoco una simple arma.
   description:
   genre: [novela]
   completed: next
-  onpage: 134
+  onpage: 50
   pages: 756
   synopsis: "26 de noviembre de 1504. La reina Isabel la Católica acaba de morir y ya se empiezan a escuchar las voces de la mayoría de los nobles de Castilla, que reclaman a Juana la Loca como su verdadera reina. Fernando de Aragón intenta llegar hasta donde sea necesario para impedir que su yerno, Felipe el Hermoso, le arrebate el gobierno de las tierras castellanas.
 Entretanto, la casa de Austria, mediante una política de pactos y enlaces matrimoniales, pugna por convertirse en la familia más poderosa de Europa. Todos los países de la cristiandad, papado incluido, se enredan en una serie de luchas por el poder en las que el sexo, la violencia y el crimen se utilizan como armas para conseguir sus fines políticos. En medio de todos esos conflictos, una familia de judíos conversos, los Losantos, luchará por sobrevivir a la Inquisición, aunque para ello tenga que renunciar a sus propias raíces.<br/>Los Austrias. El vuelo del águila es la gran novela de un tiempo y de un imperio que sentó las bases de un mundo nuevo: nuestro mundo."
   cover: "elvuelodelaguila.jpeg"
-  #highlight: "y"
+  highlight: "y"
 
 - title: "Breve historia de la literatura española"
   author: Alberto de Frutos Dávalos
@@ -236,6 +281,7 @@ Entretanto, la casa de Austria, mediante una política de pactos y enlaces matri
   synopsis: "Basado en el canal de Youtube Pero esto es otra historia.
 ¿Es aburrida la Historia? Eso depende de quién te la cuente. Con este libro te lo pasarás de lujo leyendo y adentrándote en la fascinante Antigüedad. Los hechos más importantes de este periodo reunidos en un único volumen lleno de curiosidades y anécdotas, y relatados en orden cronológico para que no te pierdas. Descubre a través de esta divertida lectura los misterios que esconden temas como el origen de la vida en la Tierra en el remoto mundo prehistórico, la fundación de la primera gran civilización en Sumeria, la construcción de las enormes pirámides del Antiguo Egipto, el colapso del Bronce por los Pueblos del Mar, el desarrollo de la democracia griega o la expansión de Roma por todo el Mediterráneo hasta la llegada de los temibles bárbaros germánicos."
   cover: "imperiosyespadazos.jpeg"
+  #highlight: "yes"
 
 - title: El cerebro bilingüe. La neurociencia del lenguaje
   author: Albert Costa
