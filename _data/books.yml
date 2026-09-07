@@ -1,3 +1,18 @@
+- title: "Los innovadores: Los genios que inventaron el futuro"
+  author: Walter Isaacson
+  link: https://amzn.to/3SMOzjO
+  image:
+  description:
+  genre: [informática]
+  completed: 
+  onpage: 10
+  pages: 560
+  synopsis: "En una era que busca fomentar la innovación, la creatividad y el trabajo en equipo, Los innovadores es la obra que mejor muestra cómo se producen. Tras su extraordinaria biografía de Steve Jobs, el nuevo libro de Walter Isaacson cuenta la fascinante historia de las personas que inventaron el ordenador e internet; Los innovadores está destinado a convertirse en la historia definitiva de la revolución digital y en una guía indispensable para entender cómo sucede realmente la innovación. ¿Qué talentos y habilidades permitieron a algunos inventores y empresarios convertir sus ideas visionarias en realidades disruptivas? ¿De dónde vinieron esos saltos creativos? ¿Por qué algunos triunfaron y otros fracasaron? En esta magistral saga, Isaacson arranca con Ada Lovelace, la hija de lord Byron, una pionera de la programación informática en la década de 1840. Además, presenta a las extraordinarias personas que crearon la revolución digital que nos rodea, gente como Vannevar Bush, Alan Turing, John von Neumann, J.C.R. Licklider, Doug Engelbart, Robert Noyce, Bill Gates, Steve Wozniak, Steve Jobs, Tim Berners-Lee o Larry Page. Esta es la historia de cómo funcionan sus cerebros y por qué han sido tan inventivos, pero también de cómo su capacidad para colaborar y dominar el arte del trabajo en equipo les hizo aún más creativos."
+  cover: "los_innovadores.jpg"
+  #highlight: "no"
+  #updated: "28 oct."
+  rating:
+
 - title: "El aliento del lobo. La Stasi, el muro de Berlín y la vida de nosotros"
   author: Amir Valle
   link: https://amzn.to/4doYNOa
@@ -5,7 +20,7 @@
   description:
   genre: [historia]
   completed: 
-  onpage: 10
+  onpage: 30
   pages: 326
   synopsis: "Este libro descorre los entretelones del escenario de represión y control de la Stasi, uno de los servicios de Inteligencia más efectivos del mundo, desde su fundación en Berlín Oriental en 1950 hasta su disolución en 1990, tras la caída del Muro de Berlín. En estas páginas se entrecruzan el análisis sobre la historia de la Stasi, las maquiavélicas trayectorias de los principales cabecillas e ideólogos políticos y militares gestores de esta estrategia de terror, y los dolorosos testimonios de las víctimas, con las vivencias de su autor, el escritor y periodista cubano Amir Valle, como víctima de la policía política de Cuba, órgano de represión adiestrado durante décadas por la Stasi. Se develan también las oscuras tramas de poder de la Stasi, junto a la siniestra KGB soviética, en su lucha por extender la égida del totalitarismo mediante operaciones de inteligencia y contrainteligencia a las dos Alemanias, al entonces llamado \"campo socialista\", a los satélites del poder de la URSS en otras regiones y hacia el resto de los \"enemigos capitalistas\". Una estrategia, que incluía alianzas con cualquier enemigo de Estados Unidos y Occidente, e incluso con renombrados grupos y personajes del terrorismo internacional. Las víctimas pertenecían precisamente a eso que la Stasi y el resto de los servicios de inteligencia de sistemas totalitarios en el mundo decían defender: el pueblo. Este libro también les da voz."
   cover: "aliento_lobo.jpg"
