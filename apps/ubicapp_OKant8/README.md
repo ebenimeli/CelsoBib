@@ -1,4 +1,4 @@
-# UbicApp · Versión 50
+# UbicApp · Versión 49
 
 Aplicación web estática para organizar parejas **persona-mesa** dentro de un espacio.
 
@@ -340,11 +340,3 @@ El mismo nombre se incorpora como encabezado centrado en la exportación **PDF A
 - Botones secundarios históricos normalizados para reducir ruido cromático y reforzar la jerarquía de **Organiza**.
 - Mejor adaptación responsive de barras y controles, sin scroll horizontal en los anchos comprobados.
 - Iconografía de historial, Guardar e Importar unificada mediante SVG y conservación de accesibilidad/i18n.
-
-## Novedades de la versión 50
-
-- La barra principal que comenzaba por **+ Mesa** se divide en dos barras de herramientas para mejorar el espacio y la legibilidad.
-- La primera agrupa la gestión y creación de mesas: añadir/eliminar, tamaño, vaciar, creación múltiple con filas/columnas y deshacer/rehacer.
-- La segunda agrupa esquema, proyecto, descarga, paleta y nuevo.
-- La barra de manipulación de mesas (**Girar mesa**, **Bloquear mesa**, **Alinear**, etc.) se conserva como tercera barra independiente.
-- No se modifica la lógica ni el comportamiento de las herramientas existentes.
