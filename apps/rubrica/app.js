@@ -1,1 +1,479 @@
-(function(_0xb20992,_0x5e8a66){const _0x3964fa=a0_0x54a7,_0x2ada2f=_0xb20992();while(!![]){try{const _0x434941=parseInt(_0x3964fa(0x2ae))/0x1+parseInt(_0x3964fa(0x2be))/0x2+parseInt(_0x3964fa(0x24a))/0x3+-parseInt(_0x3964fa(0x246))/0x4*(parseInt(_0x3964fa(0x22f))/0x5)+-parseInt(_0x3964fa(0x2d7))/0x6+parseInt(_0x3964fa(0x2a8))/0x7*(-parseInt(_0x3964fa(0x213))/0x8)+-parseInt(_0x3964fa(0x254))/0x9*(-parseInt(_0x3964fa(0x202))/0xa);if(_0x434941===_0x5e8a66)break;else _0x2ada2f['push'](_0x2ada2f['shift']());}catch(_0x468590){_0x2ada2f['push'](_0x2ada2f['shift']());}}}(a0_0x1040,0xde750),((()=>{'use strict';const _0x23ef43=a0_0x54a7;const _0xfb6ab4=_0x2c75e5=>document[_0x23ef43(0x1ee)](_0x2c75e5),_0x50cafe={'rubric':null,'selections':[],'student':''};let _0x1a52b5=!0x1;const _0x415757={'configSection':_0xfb6ab4(_0x23ef43(0x22b)),'configBody':_0xfb6ab4(_0x23ef43(0x21b)),'toggleConfig':_0xfb6ab4(_0x23ef43(0x2db)),'form':_0xfb6ab4(_0x23ef43(0x28c)),'activity':_0xfb6ab4('activityName'),'criteria':_0xfb6ab4(_0x23ef43(0x2a5)),'elements':_0xfb6ab4(_0x23ef43(0x2a6)),'levelCount':_0xfb6ab4('levelCount'),'levelsBody':_0xfb6ab4(_0x23ef43(0x2ba)),'configAlert':_0xfb6ab4(_0x23ef43(0x218)),'assessment':_0xfb6ab4(_0x23ef43(0x291)),'assessmentTitle':_0xfb6ab4(_0x23ef43(0x23c)),'student':_0xfb6ab4(_0x23ef43(0x231)),'itemsBody':_0xfb6ab4(_0x23ef43(0x271)),'summaryBody':_0xfb6ab4(_0x23ef43(0x290)),'itemsCount':_0xfb6ab4('itemsCount'),'progressText':_0xfb6ab4(_0x23ef43(0x1eb)),'progressBar':_0xfb6ab4(_0x23ef43(0x29a)),'progressFill':_0xfb6ab4(_0x23ef43(0x1f8)),'finalScore':_0xfb6ab4(_0x23ef43(0x2c1)),'finalDescription':_0xfb6ab4(_0x23ef43(0x229)),'finalState':_0xfb6ab4('finalState'),'summaryState':_0xfb6ab4('summaryState'),'splash':_0xfb6ab4('splashScreen'),'floatingGrade':_0xfb6ab4('floatingGrade'),'floatingScore':_0xfb6ab4(_0x23ef43(0x24f)),'floatingStatus':_0xfb6ab4(_0x23ef43(0x235))},_0x19091b=new Intl['Collator']('es',{'numeric':!0x0,'sensitivity':'base'}),_0x195aec=new Intl[(_0x23ef43(0x248))](_0x23ef43(0x237),{'minimumFractionDigits':0x2,'maximumFractionDigits':0x2});function _0x2b492d(_0x54343f){const _0x17c2da=_0x23ef43;return String(_0x54343f)[_0x17c2da(0x25d)]()[_0x17c2da(0x281)]('es');}function _0x2af9ba(_0xe5898f){const _0x541911=_0x23ef43;return/^[^\s,\/]+$/u[_0x541911(0x2dc)](_0xe5898f);}function _0x54ccd0(_0x29d415){const _0x25f87e=_0x23ef43,_0x3175fd=String(_0x29d415)[_0x25f87e(0x25d)]();if(!/^[+-]?(?:\d+(?:[.,]\d+)?|[.,]\d+)$/u[_0x25f87e(0x2dc)](_0x3175fd))return null;const _0x3d07b5=Number(_0x3175fd[_0x25f87e(0x2cd)](',','.'));return Number[_0x25f87e(0x2b6)](_0x3d07b5)?_0x3d07b5:null;}function _0x48931c(_0x42be86){return null==_0x42be86?'—':_0x195aec['format'](_0x42be86);}function _0x5d608f(_0x50d393){const _0x559aaa=_0x23ef43;return Number(_0x50d393)['toLocaleString'](_0x559aaa(0x237),{'maximumFractionDigits':0x6});}function _0x19f13b(){const _0xefc884=_0x23ef43;return!!_0x50cafe[_0xefc884(0x264)][_0xefc884(0x25d)]()||_0x50cafe[_0xefc884(0x2c5)][_0xefc884(0x29c)](_0x47bfd3=>null!==_0x47bfd3);}function _0x3b8d71(_0x116e1c){const _0x534a88=_0x23ef43;return 0x2===_0x116e1c?[{'label':'Sí','value':'10'},{'label':'No','value':'0'}]:0x3===_0x116e1c?[{'label':_0x534a88(0x260),'value':'10'},{'label':'Medio','value':'7'},{'label':_0x534a88(0x2d1),'value':'4'}]:0x4===_0x116e1c?[{'label':_0x534a88(0x2ad),'value':'10'},{'label':_0x534a88(0x233),'value':'8'},{'label':'Básico','value':'6'},{'label':'Insuficiente','value':'4'}]:0x5===_0x116e1c?[{'label':_0x534a88(0x2ad),'value':'10'},{'label':_0x534a88(0x228),'value':'8'},{'label':_0x534a88(0x265),'value':'6'},{'label':_0x534a88(0x226),'value':'4'},{'label':_0x534a88(0x222),'value':'0'}]:Array['from']({'length':_0x116e1c},(_0x311b06,_0x439042)=>({'label':_0x534a88(0x24e)+(_0x439042+0x1),'value':String(Math[_0x534a88(0x26f)](0x64*(0xa-0xa*_0x439042/(_0x116e1c-0x1)))/0x64)['replace']('.',',')}));}function _0x4e7394(){const _0x41dad3=_0x23ef43;return[..._0x415757[_0x41dad3(0x2ba)][_0x41dad3(0x1e1)]('tr')][_0x41dad3(0x20a)](_0x3d6541=>({'label':_0x3d6541[_0x41dad3(0x2c8)](_0x41dad3(0x24b))[_0x41dad3(0x272)],'value':_0x3d6541[_0x41dad3(0x2c8)](_0x41dad3(0x29d))[_0x41dad3(0x272)]}));}function _0x252ca4(_0x254381){const _0x1bd463=_0x23ef43;_0x415757['levelsBody'][_0x1bd463(0x2ac)](),_0x254381['forEach']((_0x27a763,_0x38a233)=>{const _0x5cf894=_0x1bd463,_0x47b32c=document[_0x5cf894(0x216)]('tr'),_0x294518=document[_0x5cf894(0x216)]('td'),_0x510404=document['createElement']('input');_0x510404[_0x5cf894(0x1e0)]=_0x5cf894(0x28a),_0x510404[_0x5cf894(0x25a)]=_0x5cf894(0x21f),_0x510404[_0x5cf894(0x272)]=_0x27a763[_0x5cf894(0x1e7)],_0x510404[_0x5cf894(0x268)]=0x64,_0x510404[_0x5cf894(0x2a1)](_0x5cf894(0x25c),_0x5cf894(0x1ff)+(_0x38a233+0x1));const _0x19a440=document[_0x5cf894(0x216)]('td'),_0x159c27=document[_0x5cf894(0x216)](_0x5cf894(0x2b9));_0x159c27[_0x5cf894(0x1e0)]=_0x5cf894(0x28a),_0x159c27[_0x5cf894(0x25a)]=_0x5cf894(0x282),_0x159c27[_0x5cf894(0x2b5)]=_0x5cf894(0x1f9),_0x159c27[_0x5cf894(0x272)]=_0x27a763[_0x5cf894(0x272)],_0x159c27[_0x5cf894(0x268)]=0xc,_0x159c27['setAttribute']('aria-label',_0x5cf894(0x267)+(_0x38a233+0x1)),_0x294518[_0x5cf894(0x2a2)](_0x510404),_0x19a440[_0x5cf894(0x2a2)](_0x159c27),_0x47b32c['append'](_0x294518,_0x19a440),_0x415757['levelsBody'][_0x5cf894(0x2a2)](_0x47b32c);});}function _0x4fbae1(_0x5e129d){const _0x324521=_0x23ef43;_0x415757[_0x324521(0x22b)][_0x324521(0x217)]['toggle'](_0x324521(0x25f),_0x5e129d),_0x415757['configBody']['hidden']=_0x5e129d,_0x415757[_0x324521(0x2db)]['setAttribute'](_0x324521(0x1e5),String(!_0x5e129d)),_0xfb6ab4(_0x324521(0x298))[_0x324521(0x2c3)]=_0x5e129d?'Mostrar\x20configuración':_0x324521(0x20d);}function _0x4a4c5d(_0x4e7c1b,_0x90ca28=!0x1){const _0x2f9b74=_0x23ef43;_0x415757['configAlert']['textContent']=_0x4e7c1b,_0x415757[_0x2f9b74(0x218)]['classList']['toggle'](_0x2f9b74(0x1df),_0x90ca28),_0x415757[_0x2f9b74(0x218)]['hidden']=!0x1;}function _0x59a243(){const _0x5b7cba=_0x23ef43;_0x415757['configAlert'][_0x5b7cba(0x26d)]=!0x0,_0x415757['configAlert'][_0x5b7cba(0x2c3)]='';}function _0x14b7fb(_0x2d8789){const _0x4bc103=_0x23ef43,_0x20d848={'activity':[_0x4bc103(0x2d6),_0x415757['activity']],'criteria':[_0x4bc103(0x1fb),_0x415757[_0x4bc103(0x27a)]],'elements':[_0x4bc103(0x2c6),_0x415757[_0x4bc103(0x27c)]],'levels':[_0x4bc103(0x1e2),_0x415757[_0x4bc103(0x26a)]]};for(const [_0x3ef611,[_0x1f91a8,_0x2b466f]]of Object[_0x4bc103(0x297)](_0x20d848)){const _0x23df81=(_0x2d8789[_0x3ef611]||[])[_0x4bc103(0x2bb)]('\x0a');_0xfb6ab4(_0x1f91a8)[_0x4bc103(0x2c3)]=_0x23df81,_0xfb6ab4(_0x1f91a8)[_0x4bc103(0x26d)]=!_0x23df81,_0x2b466f[_0x4bc103(0x2a1)]('aria-invalid',String(!!_0x23df81));}}function _0x4a0d3e(_0x30d42f,_0x559ce9,_0x10ac9b){const _0x137e2b=_0x23ef43;(_0x30d42f[_0x559ce9]||=[])[_0x137e2b(0x2a7)](_0x10ac9b);}function _0x4b6a44(){const _0x17f7e8=_0x23ef43,_0x23e698={},_0x41cf41=_0x415757['activity']['value'][_0x17f7e8(0x25d)]();_0x41cf41||_0x4a0d3e(_0x23e698,'activity',_0x17f7e8(0x256));const _0x3a6fd2=new Map();_0x415757['criteria'][_0x17f7e8(0x272)][_0x17f7e8(0x220)](/\r?\n/u)[_0x17f7e8(0x21d)]((_0x1c191b,_0x562af6)=>{const _0x16bebf=_0x17f7e8;if(!_0x1c191b[_0x16bebf(0x25d)]())return;const _0x26da99=_0x1c191b[_0x16bebf(0x220)]('/')['map'](_0x4db396=>_0x4db396[_0x16bebf(0x25d)]());if(_0x26da99[_0x16bebf(0x283)]>0x3||_0x26da99['length']<0x1||!_0x2af9ba(_0x26da99[0x0]))return void _0x4a0d3e(_0x23e698,_0x16bebf(0x27a),'Línea\x20'+(_0x562af6+0x1)+_0x16bebf(0x2c2));const _0x110cc3=_0x26da99[0x0],_0xef4089=_0x2b492d(_0x110cc3);if(_0x3a6fd2[_0x16bebf(0x294)](_0xef4089))return void _0x4a0d3e(_0x23e698,_0x16bebf(0x27a),'Línea\x20'+(_0x562af6+0x1)+_0x16bebf(0x2b1)+_0x110cc3+'»\x20está\x20duplicado.');let _0x439896='',_0x446f8f='';0x2===_0x26da99[_0x16bebf(0x283)]?null!==_0x54ccd0(_0x26da99[0x1])?_0x446f8f=_0x26da99[0x1]:_0x439896=_0x26da99[0x1]:0x3===_0x26da99[_0x16bebf(0x283)]&&(_0x439896=_0x26da99[0x1],_0x446f8f=_0x26da99[0x2]);const _0x292807=''===_0x446f8f?0x1:_0x54ccd0(_0x446f8f);null===_0x292807||_0x292807<=0x0?_0x4a0d3e(_0x23e698,'criteria',_0x16bebf(0x2a4)+(_0x562af6+0x1)+_0x16bebf(0x23d)):_0x3a6fd2['set'](_0xef4089,{'key':_0xef4089,'code':_0x110cc3,'description':_0x439896,'weight':_0x292807});});const _0x1acebe=[];_0x415757[_0x17f7e8(0x27c)][_0x17f7e8(0x272)][_0x17f7e8(0x220)](/\r?\n/u)['forEach']((_0x2d9861,_0x176dbe)=>{const _0x1458c4=_0x17f7e8;if(!_0x2d9861[_0x1458c4(0x25d)]())return;const _0xde8ef2=_0x2d9861['split']('/');if(0x2!==_0xde8ef2['length']||!_0xde8ef2[0x0]['trim']()||!_0xde8ef2[0x1][_0x1458c4(0x25d)]())return void _0x4a0d3e(_0x23e698,'elements',_0x1458c4(0x2a4)+(_0x176dbe+0x1)+_0x1458c4(0x215));const _0xd2593a=_0xde8ef2[0x0][_0x1458c4(0x25d)](),_0xdf16c4=_0xde8ef2[0x1][_0x1458c4(0x220)](',')['map'](_0xc48018=>_0xc48018[_0x1458c4(0x25d)]());if(_0xdf16c4[_0x1458c4(0x29c)](_0x2c6fce=>!_0x2af9ba(_0x2c6fce)))return void _0x4a0d3e(_0x23e698,'elements','Línea\x20'+(_0x176dbe+0x1)+':\x20comprueba\x20que\x20cada\x20código\x20esté\x20correctamente\x20escrito.');const _0x1d8550=[...new Set(_0xdf16c4['map'](_0x2b492d))];_0xdf16c4[_0x1458c4(0x21d)](_0x486a70=>{const _0xd05c46=_0x1458c4,_0x1f9cdb=_0x2b492d(_0x486a70);_0x3a6fd2['has'](_0x1f9cdb)||_0x3a6fd2[_0xd05c46(0x287)](_0x1f9cdb,{'key':_0x1f9cdb,'code':_0x486a70,'description':'','weight':0x1});}),_0x1acebe['push']({'label':_0xd2593a,'keys':_0x1d8550});}),0x0===_0x1acebe[_0x17f7e8(0x283)]&&_0x4a0d3e(_0x23e698,_0x17f7e8(0x27c),_0x17f7e8(0x1ef));const _0x4376ae=_0x4e7394()[_0x17f7e8(0x20a)]((_0x2ea202,_0x582525)=>{const _0x2453c3=_0x17f7e8,_0x7f1910=_0x2ea202[_0x2453c3(0x1e7)][_0x2453c3(0x25d)](),_0x4d17a5=_0x54ccd0(_0x2ea202['value']);return _0x7f1910||_0x4a0d3e(_0x23e698,_0x2453c3(0x286),_0x2453c3(0x24e)+(_0x582525+0x1)+_0x2453c3(0x2cb)),(null===_0x4d17a5||_0x4d17a5<0x0||_0x4d17a5>0xa)&&_0x4a0d3e(_0x23e698,'levels',_0x2453c3(0x24e)+(_0x582525+0x1)+':\x20introduce\x20una\x20puntuación\x20entre\x200\x20y\x2010.'),{'label':_0x7f1910,'value':_0x4d17a5};}),_0x51b90e=new Set();if(_0x4376ae[_0x17f7e8(0x21d)]((_0x16c295,_0x2992e0)=>{const _0x37b47f=_0x17f7e8,_0x57b3bf=_0x16c295[_0x37b47f(0x1e7)][_0x37b47f(0x28d)]('es');_0x16c295[_0x37b47f(0x1e7)]&&_0x51b90e['has'](_0x57b3bf)&&_0x4a0d3e(_0x23e698,'levels',_0x37b47f(0x24e)+(_0x2992e0+0x1)+_0x37b47f(0x1f7)+_0x16c295['label']+'»\x20está\x20repetida.'),_0x51b90e[_0x37b47f(0x230)](_0x57b3bf);}),Object['keys'](_0x23e698)['length'])return{'errors':_0x23e698};const _0x5b5bad=new Set(_0x1acebe[_0x17f7e8(0x2ca)](_0x231544=>_0x231544[_0x17f7e8(0x258)])),_0x1dd94b=[..._0x3a6fd2['values']()][_0x17f7e8(0x2a3)](_0x1e7e57=>_0x5b5bad[_0x17f7e8(0x294)](_0x1e7e57[_0x17f7e8(0x1e6)]))[_0x17f7e8(0x2af)]((_0x70cd93,_0x6f992a)=>_0x19091b[_0x17f7e8(0x224)](_0x70cd93['code'],_0x6f992a[_0x17f7e8(0x26c)])),_0x49ec9a=[..._0x3a6fd2[_0x17f7e8(0x289)]()][_0x17f7e8(0x2a3)](_0x36ce94=>!_0x5b5bad['has'](_0x36ce94[_0x17f7e8(0x1e6)]));return{'rubric':{'name':_0x41cf41,'criteria':_0x1dd94b,'items':_0x1acebe[_0x17f7e8(0x20a)](_0x3aa386=>({'label':_0x3aa386[_0x17f7e8(0x1e7)],'criteria':_0x3aa386[_0x17f7e8(0x258)][_0x17f7e8(0x20a)](_0x2bb4aa=>_0x3a6fd2[_0x17f7e8(0x211)](_0x2bb4aa)['code']),'keys':_0x3aa386[_0x17f7e8(0x258)]})),'levels':_0x4376ae},'unused':_0x49ec9a};}function _0x20767f(_0x5f13d0){const _0x592aed=_0x23ef43,_0x5cd256=document[_0x592aed(0x216)](_0x592aed(0x206));_0x5cd256['className']=_0x592aed(0x239),_0x5cd256['textContent']=_0x5f13d0['code'];const _0x50707e=_0x5f13d0['description']||_0x592aed(0x29f);_0x5cd256[_0x592aed(0x288)]=_0x5f13d0['code']+':\x20'+_0x50707e+'\x20·\x20Peso\x20'+_0x5d608f(_0x5f13d0[_0x592aed(0x238)]),_0x5cd256[_0x592aed(0x274)]=0x0,_0x5cd256['setAttribute']('aria-label',_0x5cd256[_0x592aed(0x288)]);const _0x25fcd4=function(_0x3d1a67){const _0x79f07=_0x592aed;let _0x2a4794=0x0;for(const _0x137596 of _0x3d1a67)_0x2a4794=0x1f*_0x2a4794+_0x137596[_0x79f07(0x249)](0x0)>>>0x0;const _0x567926=_0x2a4794%0x168;return{'background':_0x79f07(0x240)+_0x567926+'\x2064%\x2092%)','color':_0x79f07(0x240)+_0x567926+_0x79f07(0x2d2)};}(_0x5f13d0[_0x592aed(0x1e6)]);return _0x5cd256[_0x592aed(0x22d)]['backgroundColor']=_0x25fcd4[_0x592aed(0x1e3)],_0x5cd256[_0x592aed(0x22d)]['color']=_0x25fcd4[_0x592aed(0x296)],_0x5cd256;}function _0x471b2a(_0x4a07c7,_0x2080e3='',_0x1c0c3d=''){const _0xac0187=_0x23ef43,_0x3b2c6a=document['createElement']('td');return _0x2080e3&&(_0x3b2c6a[_0xac0187(0x25a)]=_0x2080e3),_0x1c0c3d&&(_0x3b2c6a[_0xac0187(0x2bf)][_0xac0187(0x1e7)]=_0x1c0c3d),null!=_0x4a07c7&&(_0x3b2c6a[_0xac0187(0x2c3)]=String(_0x4a07c7)),_0x3b2c6a;}function _0x5689e1(){const _0x454b20=_0x23ef43,_0x4124ce=_0x50cafe[_0x454b20(0x2aa)];if(!_0x4124ce)return null;const _0x4df7b9=_0x4124ce[_0x454b20(0x27b)][_0x454b20(0x20a)]((_0x434686,_0x38f5bf)=>null===_0x50cafe['selections'][_0x38f5bf]?null:_0x4124ce['levels'][_0x50cafe[_0x454b20(0x2c5)][_0x38f5bf]][_0x454b20(0x272)]),_0x37e91f=_0x4df7b9[_0x454b20(0x2a3)](_0x2043f7=>null!==_0x2043f7)[_0x454b20(0x283)],_0x5eb828=_0x4124ce[_0x454b20(0x27a)]['map'](_0x38a759=>{const _0x4b930e=_0x454b20,_0x161de1=_0x4124ce['items'][_0x4b930e(0x20a)]((_0x4cf524,_0x40a4a6)=>_0x4cf524['keys'][_0x4b930e(0x2a0)](_0x38a759[_0x4b930e(0x1e6)])?_0x4df7b9[_0x40a4a6]:void 0x0)['filter'](_0x3dec08=>void 0x0!==_0x3dec08),_0x564f1d=_0x161de1['filter'](_0x25a943=>null!==_0x25a943),_0x569e57=_0x564f1d['length']?_0x564f1d[_0x4b930e(0x219)]((_0x8a6573,_0x9aa5b6)=>_0x8a6573+_0x9aa5b6,0x0)/_0x564f1d[_0x4b930e(0x283)]:null;return{..._0x38a759,'grade':_0x569e57,'partial':_0x564f1d[_0x4b930e(0x283)]<_0x161de1[_0x4b930e(0x283)]};}),_0x793d33=_0x5eb828['filter'](_0x2668e9=>null!==_0x2668e9[_0x454b20(0x2d5)]),_0x51475e=_0x793d33[_0x454b20(0x219)]((_0x12ea0d,_0x3488ed)=>_0x12ea0d+_0x3488ed[_0x454b20(0x238)],0x0),_0x1a2084=_0x51475e>0x0?_0x793d33['reduce']((_0x3238a6,_0x2b612d)=>_0x3238a6+_0x2b612d[_0x454b20(0x2d5)]*_0x2b612d[_0x454b20(0x238)],0x0)/_0x51475e:null;return{'scores':_0x4df7b9,'criteria':_0x5eb828,'progress':_0x37e91f,'total':_0x4124ce[_0x454b20(0x27b)][_0x454b20(0x283)],'final':_0x1a2084,'incomplete':_0x37e91f<_0x4124ce[_0x454b20(0x27b)]['length']};}let _0x3edb48=0x0;function _0x4caaa1(){const _0x54b1aa=_0x23ef43;_0x415757[_0x54b1aa(0x241)][_0x54b1aa(0x26d)]||_0x3edb48||(_0x3edb48=requestAnimationFrame(()=>{_0x3edb48=0x0,(function(){const _0xf5aebf=a0_0x54a7;if(_0x415757['floatingGrade'][_0xf5aebf(0x26d)])return;const _0x23d5cd=innerWidth,_0xeb296b=innerHeight,_0x36150e=_0x23d5cd<=0x276?0xa:0x14,_0x143e56=_0x415757['floatingGrade']['offsetWidth'],_0x5ecbd7=_0x415757['floatingGrade'][_0xf5aebf(0x22a)],_0x2a24b3=[{'name':'bottom-right','x':_0x23d5cd-_0x36150e-_0x143e56,'y':_0xeb296b-_0x36150e-_0x5ecbd7},{'name':_0xf5aebf(0x208),'x':_0x36150e,'y':_0xeb296b-_0x36150e-_0x5ecbd7},{'name':'top-right','x':_0x23d5cd-_0x36150e-_0x143e56,'y':_0x36150e},{'name':'top-left','x':_0x36150e,'y':_0x36150e}],_0x3d531d=[],_0x3e4b6c=_0x581e47=>{const _0x494524=_0xf5aebf,_0x216f9a=_0x581e47[_0x494524(0x204)]();_0x216f9a[_0x494524(0x201)]>0x0&&_0x216f9a[_0x494524(0x292)]>0x0&&_0x216f9a['bottom']>0x0&&_0x216f9a[_0x494524(0x2ce)]<_0xeb296b&&_0x216f9a['right']>0x0&&_0x216f9a[_0x494524(0x2c7)]<_0x23d5cd&&_0x3d531d[_0x494524(0x2a7)](_0x216f9a);};[_0xf5aebf(0x25b),_0xf5aebf(0x20e),_0xf5aebf(0x2bc),_0xf5aebf(0x231)]['forEach'](_0x4c1b8e=>_0x3e4b6c(_0xfb6ab4(_0x4c1b8e)));for(const _0xb25522 of _0x415757[_0xf5aebf(0x271)]['rows']){const _0x48685d=_0xb25522['getBoundingClientRect']();if(!(_0x48685d['bottom']<0x0||_0x48685d[_0xf5aebf(0x2ce)]>_0xeb296b)){for(const _0x284b35 of _0xb25522[_0xf5aebf(0x1e1)](_0xf5aebf(0x251)))_0x3e4b6c(_0x284b35);}}for(const _0x184218 of _0x415757['summaryBody']['querySelectorAll'](_0xf5aebf(0x270)))_0x3e4b6c(_0x184218);_0x3e4b6c(_0x415757['finalScore']);let _0x3b57d1=_0x2a24b3[0x0],_0xee9f98=0x1/0x0;for(let _0x3fcfdf=0x0;_0x3fcfdf<_0x2a24b3['length'];_0x3fcfdf++){const _0x199b6b=_0x3d531d[_0xf5aebf(0x219)]((_0x14bd89,_0x255238)=>{const _0x3c6d3b=_0xf5aebf;return _0x14bd89+(_0x2d6f71=_0x2a24b3[_0x3fcfdf],_0x4cc8cf=_0x255238,Math[_0x3c6d3b(0x2b3)](0x0,Math[_0x3c6d3b(0x23e)](_0x2d6f71['x']+_0x143e56,_0x4cc8cf['right'])-Math['max'](_0x2d6f71['x'],_0x4cc8cf[_0x3c6d3b(0x2c7)]))*Math[_0x3c6d3b(0x2b3)](0x0,Math[_0x3c6d3b(0x23e)](_0x2d6f71['y']+_0x5ecbd7,_0x4cc8cf[_0x3c6d3b(0x28b)])-Math[_0x3c6d3b(0x2b3)](_0x2d6f71['y'],_0x4cc8cf['top'])));var _0x2d6f71,_0x4cc8cf;},0x0)+0xc*_0x3fcfdf;_0x199b6b<_0xee9f98&&(_0xee9f98=_0x199b6b,_0x3b57d1=_0x2a24b3[_0x3fcfdf]);}_0x415757[_0xf5aebf(0x241)][_0xf5aebf(0x2bf)][_0xf5aebf(0x29b)]=_0x3b57d1[_0xf5aebf(0x21e)];const _0x22b846=_0x415757[_0xf5aebf(0x207)][_0xf5aebf(0x2c8)](_0xf5aebf(0x1f5))['getBoundingClientRect']();document[_0xf5aebf(0x1ea)][_0xf5aebf(0x217)][_0xf5aebf(0x2b8)]('grade-at-heading',_0x23d5cd<=0x276&&'top-right'===_0x3b57d1[_0xf5aebf(0x21e)]&&_0x22b846['bottom']>0x0&&_0x22b846[_0xf5aebf(0x2ce)]<_0xeb296b);}());}));}function _0xc2a9cb(){const _0x210f48=_0x23ef43;if(!_0x50cafe[_0x210f48(0x2aa)])return;const _0x200eb8=_0x5689e1();_0x200eb8['scores'][_0x210f48(0x21d)]((_0x351f65,_0x59f59d)=>{const _0x58722b=_0x210f48,_0x43e898=_0x415757['itemsBody'][_0x58722b(0x2c8)]('[data-score-row=\x22'+_0x59f59d+'\x22]');_0x43e898&&(_0x43e898[_0x58722b(0x2c3)]=_0x48931c(_0x351f65),_0x43e898[_0x58722b(0x217)]['toggle'](_0x58722b(0x1e9),null===_0x351f65),_0x43e898[_0x58722b(0x288)]=null===_0x351f65?_0x58722b(0x223):'Puntuación\x20del\x20elemento');}),_0x415757[_0x210f48(0x1eb)][_0x210f48(0x2c3)]=_0x200eb8['progress']+_0x210f48(0x1f2)+_0x200eb8['total'];const _0x1dc6f4=_0x200eb8['total']?_0x200eb8[_0x210f48(0x20c)]/_0x200eb8['total']*0x64:0x0;_0x415757[_0x210f48(0x1f8)]['style']['width']=_0x1dc6f4+'%',_0x415757[_0x210f48(0x29a)]['setAttribute'](_0x210f48(0x250),String(_0x200eb8[_0x210f48(0x236)])),_0x415757[_0x210f48(0x29a)]['setAttribute'](_0x210f48(0x273),String(_0x200eb8[_0x210f48(0x20c)])),_0x415757[_0x210f48(0x29a)][_0x210f48(0x2a1)](_0x210f48(0x1f0),_0x200eb8[_0x210f48(0x20c)]+_0x210f48(0x1f2)+_0x200eb8['total']+'\x20elementos'),_0x415757[_0x210f48(0x290)]['replaceChildren'](),_0x200eb8['criteria'][_0x210f48(0x21d)](_0x57ceda=>{const _0x5cd480=_0x210f48,_0x17c1d0=document['createElement']('tr'),_0x1d1c67=_0x471b2a(null,'',_0x5cd480(0x2b4));_0x1d1c67[_0x5cd480(0x2a2)](_0x20767f(_0x57ceda));const _0x141e68=_0x471b2a(_0x57ceda['description']||'Sin\x20descripción',_0x5cd480(0x245),_0x5cd480(0x22e)),_0x511749=_0x471b2a(_0x5d608f(_0x57ceda[_0x5cd480(0x238)]),'weight-cell',_0x5cd480(0x1fd)),_0x232a4a=_0x471b2a(null,'row-score','Nota');if(_0x232a4a[_0x5cd480(0x2c3)]=null===_0x57ceda[_0x5cd480(0x2d5)]?'—':_0x48931c(_0x57ceda[_0x5cd480(0x2d5)]),_0x232a4a[_0x5cd480(0x217)][_0x5cd480(0x2b8)](_0x5cd480(0x1e9),null===_0x57ceda['grade']),null!==_0x57ceda[_0x5cd480(0x2d5)]&&_0x57ceda['partial']){const _0x252b8d=document['createElement'](_0x5cd480(0x206));_0x252b8d['className']=_0x5cd480(0x234),_0x252b8d['textContent']='Provisional',_0x232a4a[_0x5cd480(0x2a2)](_0x252b8d);}_0x17c1d0[_0x5cd480(0x277)](_0x1d1c67,_0x141e68,_0x511749,_0x232a4a),_0x415757['summaryBody'][_0x5cd480(0x2a2)](_0x17c1d0);}),_0x415757['summaryState'][_0x210f48(0x25a)]=_0x210f48(0x243),0x0===_0x200eb8['progress']?(_0x415757[_0x210f48(0x26b)][_0x210f48(0x2c3)]=_0x210f48(0x2b0),_0x415757[_0x210f48(0x26b)][_0x210f48(0x217)]['add']('empty')):_0x200eb8[_0x210f48(0x1fc)]?_0x415757['summaryState'][_0x210f48(0x2c3)]='Evaluación\x20provisional':(_0x415757[_0x210f48(0x26b)][_0x210f48(0x2c3)]='Evaluación\x20completa',_0x415757[_0x210f48(0x26b)]['classList']['add'](_0x210f48(0x1ed)));const _0x5b982c=_0x48931c(_0x200eb8[_0x210f48(0x2cf)]);_0x415757[_0x210f48(0x2c1)][_0x210f48(0x2c3)]=_0x5b982c,_0x415757[_0x210f48(0x24f)][_0x210f48(0x2c3)]=_0x5b982c,_0x415757[_0x210f48(0x235)][_0x210f48(0x26d)]=_0x200eb8[_0x210f48(0x20c)]===_0x200eb8[_0x210f48(0x236)],_0x415757[_0x210f48(0x235)]['textContent']=0x0===_0x200eb8[_0x210f48(0x20c)]?_0x210f48(0x2b0):'Provisional',_0x4caaa1(),0x0===_0x200eb8[_0x210f48(0x20c)]?(_0x415757[_0x210f48(0x205)][_0x210f48(0x2c3)]=_0x210f48(0x2b0),_0x415757[_0x210f48(0x229)][_0x210f48(0x2c3)]=_0x210f48(0x2bd)):_0x200eb8['incomplete']?(_0x415757['finalState']['textContent']=_0x210f48(0x232),_0x415757[_0x210f48(0x229)][_0x210f48(0x2c3)]=_0x210f48(0x23f)+(_0x200eb8['total']-_0x200eb8[_0x210f48(0x20c)])+'\x20'+(_0x200eb8[_0x210f48(0x236)]-_0x200eb8[_0x210f48(0x20c)]===0x1?_0x210f48(0x24d):'elementos\x20pendientes')+_0x210f48(0x214)):(_0x415757[_0x210f48(0x205)]['textContent']='Evaluación\x20completa',_0x415757[_0x210f48(0x229)][_0x210f48(0x2c3)]='Media\x20ponderada\x20de\x20los\x20criterios,\x20según\x20sus\x20pesos.');}function _0x4588f1(){const _0x22e4d0=_0x23ef43;_0x50cafe['rubric']&&(_0x19f13b()&&!window['confirm'](_0x22e4d0(0x28f))||(_0x50cafe['selections']=Array(_0x50cafe['rubric'][_0x22e4d0(0x27b)][_0x22e4d0(0x283)])[_0x22e4d0(0x25e)](null),_0x50cafe[_0x22e4d0(0x264)]='',_0x415757[_0x22e4d0(0x264)][_0x22e4d0(0x272)]='',_0x415757['itemsBody'][_0x22e4d0(0x1e1)](_0x22e4d0(0x1e4))['forEach'](_0x5e0087=>_0x5e0087['setAttribute'](_0x22e4d0(0x20f),_0x22e4d0(0x247))),_0xc2a9cb(),_0x415757[_0x22e4d0(0x264)]['focus']()));}function _0x4dfa73(_0x29da91){const _0x5bdf99=_0x23ef43;if(!_0x29da91||_0x5bdf99(0x2ab)!==_0x29da91['format']||0x1!==_0x29da91[_0x5bdf99(0x278)]||_0x5bdf99(0x22c)!=typeof _0x29da91['activity']||'string'!=typeof _0x29da91[_0x5bdf99(0x1ec)]||_0x5bdf99(0x22c)!=typeof _0x29da91['elementsText']||!Array[_0x5bdf99(0x253)](_0x29da91['levels'])||_0x29da91['levels'][_0x5bdf99(0x283)]<0x2||_0x29da91[_0x5bdf99(0x286)][_0x5bdf99(0x283)]>0xa||_0x29da91[_0x5bdf99(0x286)]['some'](_0x1ebeec=>!_0x1ebeec||_0x5bdf99(0x22c)!=typeof _0x1ebeec[_0x5bdf99(0x1e7)]||_0x5bdf99(0x22c)!=typeof _0x1ebeec['value']&&_0x5bdf99(0x295)!=typeof _0x1ebeec[_0x5bdf99(0x272)]))throw new Error(_0x5bdf99(0x2d8));return!((_0x415757['activity'][_0x5bdf99(0x272)][_0x5bdf99(0x25d)]()||_0x415757[_0x5bdf99(0x27c)]['value'][_0x5bdf99(0x25d)]()||_0x19f13b())&&!window[_0x5bdf99(0x1e8)](_0x5bdf99(0x27e))||(_0x415757['activity'][_0x5bdf99(0x272)]=_0x29da91['activity'][_0x5bdf99(0x203)](0x0,0xc8),_0x415757[_0x5bdf99(0x27a)]['value']=_0x29da91['criteriaText'],_0x415757['elements'][_0x5bdf99(0x272)]=_0x29da91['elementsText'],_0x415757[_0x5bdf99(0x26a)][_0x5bdf99(0x272)]=String(_0x29da91[_0x5bdf99(0x286)][_0x5bdf99(0x283)]),_0x252ca4(_0x29da91[_0x5bdf99(0x286)][_0x5bdf99(0x20a)](_0x45200d=>({'label':_0x45200d[_0x5bdf99(0x1e7)],'value':String(_0x45200d[_0x5bdf99(0x272)])}))),_0x1a52b5=!0x0,_0x14b7fb({}),_0x59a243(),_0x4fbae1(!0x1),_0x4a4c5d('Configuración\x20cargada.\x20Comprueba\x20los\x20datos\x20y\x20pulsa\x20«Usar\x20esta\x20rúbrica».',!0x0),_0x415757[_0x5bdf99(0x22b)][_0x5bdf99(0x21a)]({'behavior':_0x5bdf99(0x280),'block':'start'}),0x0));}const _0x3e6718={'format':_0x23ef43(0x2ab),'version':0x1,'activity':'A02.\x20Building\x20the\x20Main\x20Loop','criteriaText':'1.1\x20/\x20Presentación\x20y\x20entrega\x20del\x20trabajo\x20/\x201\x0a2.3\x20/\x20Desarrollo\x20de\x20programas\x20mediante\x20estructuras\x20de\x20control\x20/\x203\x0a2.4\x20/\x20Comprobación,\x20organización\x20y\x20depuración\x20/\x202','elementsText':'El\x20archivo\x20tiene\x20el\x20nombre\x20solicitado\x20/\x201.1\x0aLas\x20variables\x20están\x20correctamente\x20inicializadas\x20/\x202.3\x0aLa\x20variable\x20nflips\x20está\x20configurada\x20como\x20deslizador\x20/\x202.3\x0aEl\x20programa\x20ejecuta\x20un\x20bucle\x20correctamente\x20/\x202.3,\x202.4\x0aSe\x20actualiza\x20el\x20contador\x20correspondiente\x20a\x20cada\x20resultado\x20/\x202.3\x0aEl\x20código\x20está\x20organizado\x20y\x20es\x20fácil\x20de\x20seguir\x20/\x202.4','levels':_0x3b8d71(0x4)};window['addEventListener'](_0x23ef43(0x257),_0x4caaa1,{'passive':!0x0}),window[_0x23ef43(0x275)]('resize',_0x4caaa1),_0x415757[_0x23ef43(0x26a)][_0x23ef43(0x275)]('change',function(){const _0x1a6a1e=_0x23ef43,_0x52cccc=Number(_0x415757[_0x1a6a1e(0x26a)][_0x1a6a1e(0x272)]),_0x57949d=_0x4e7394(),_0x1196de=_0x3b8d71(_0x52cccc);if(_0x1a52b5){for(let _0x13bdb0=0x0;_0x13bdb0<Math[_0x1a6a1e(0x23e)](_0x57949d[_0x1a6a1e(0x283)],_0x52cccc);_0x13bdb0++)_0x1196de[_0x13bdb0]=_0x57949d[_0x13bdb0];}_0x252ca4(_0x1196de);}),_0x415757[_0x23ef43(0x2ba)][_0x23ef43(0x275)](_0x23ef43(0x2b9),()=>{_0x1a52b5=!0x0;}),_0x415757['toggleConfig'][_0x23ef43(0x275)](_0x23ef43(0x262),()=>_0x4fbae1(!_0x415757[_0x23ef43(0x21b)][_0x23ef43(0x26d)])),_0x415757[_0x23ef43(0x2c9)][_0x23ef43(0x275)](_0x23ef43(0x2b7),function(_0x236ed3){const _0x241b59=_0x23ef43;_0x236ed3&&_0x236ed3[_0x241b59(0x244)](),_0x59a243();const _0x394c5e=_0x4b6a44();if(_0x14b7fb(_0x394c5e[_0x241b59(0x1f4)]||{}),_0x394c5e['errors']){_0x4fbae1(!0x1);const _0x3bac85=Object[_0x241b59(0x258)](_0x394c5e[_0x241b59(0x1f4)])[0x0];return void{'activity':_0x415757['activity'],'criteria':_0x415757[_0x241b59(0x27a)],'elements':_0x415757[_0x241b59(0x27c)],'levels':_0x415757['levelCount']}[_0x3bac85][_0x241b59(0x209)]();}const _0x9631d3=_0x50cafe[_0x241b59(0x2aa)]&&JSON[_0x241b59(0x29e)](_0x50cafe[_0x241b59(0x2aa)])===JSON['stringify'](_0x394c5e['rubric']);_0x50cafe[_0x241b59(0x2aa)]&&!_0x9631d3&&_0x19f13b()&&!window['confirm'](_0x241b59(0x27d))||(_0x9631d3||(_0x50cafe[_0x241b59(0x2aa)]=_0x394c5e[_0x241b59(0x2aa)],_0x50cafe['selections']=Array(_0x394c5e[_0x241b59(0x2aa)][_0x241b59(0x27b)]['length'])[_0x241b59(0x25e)](null),_0x50cafe['student']='',_0x415757[_0x241b59(0x264)][_0x241b59(0x272)]='',(function(){const _0x24da6c=_0x241b59,_0x55a2a0=_0x50cafe[_0x24da6c(0x2aa)];if(!_0x55a2a0)return;_0x415757['assessmentTitle'][_0x24da6c(0x2c3)]=_0x55a2a0[_0x24da6c(0x21e)],_0x415757[_0x24da6c(0x2da)][_0x24da6c(0x2c3)]=_0x55a2a0[_0x24da6c(0x27b)]['length']+'\x20'+(0x1===_0x55a2a0[_0x24da6c(0x27b)]['length']?'elemento':'elementos'),_0x415757['itemsBody'][_0x24da6c(0x2ac)]();const _0x5d4ca2=new Map(_0x55a2a0[_0x24da6c(0x27a)][_0x24da6c(0x20a)](_0x583971=>[_0x583971['key'],_0x583971]));_0x55a2a0['items'][_0x24da6c(0x21d)]((_0x1d23a3,_0x5e4159)=>{const _0x486d66=_0x24da6c,_0x662eb3=document['createElement']('tr'),_0x43a891=_0x471b2a(_0x1d23a3['label'],'item-label'),_0x117cf7=_0x471b2a(null,'',_0x486d66(0x2d3)),_0x3aa211=document[_0x486d66(0x216)](_0x486d66(0x261));_0x3aa211['className']=_0x486d66(0x252),_0x1d23a3[_0x486d66(0x258)][_0x486d66(0x21d)](_0x57f6eb=>_0x3aa211['appendChild'](_0x20767f(_0x5d4ca2[_0x486d66(0x211)](_0x57f6eb)))),_0x117cf7[_0x486d66(0x2a2)](_0x3aa211);const _0x39bbfa=_0x471b2a(null,'',_0x486d66(0x242)),_0x149531=document['createElement'](_0x486d66(0x261));_0x149531[_0x486d66(0x25a)]='level-options',_0x149531[_0x486d66(0x2a1)](_0x486d66(0x259),_0x486d66(0x284)),_0x149531['setAttribute'](_0x486d66(0x25c),'Nivel\x20de\x20logro:\x20'+_0x1d23a3['label']),_0x55a2a0[_0x486d66(0x286)][_0x486d66(0x21d)]((_0x1d151e,_0xc71531)=>{const _0x50d326=_0x486d66,_0x4e1e9e=document[_0x50d326(0x216)]('button');_0x4e1e9e[_0x50d326(0x1e0)]=_0x50d326(0x2d0),_0x4e1e9e['className']=_0x50d326(0x266),_0x4e1e9e[_0x50d326(0x2bf)][_0x50d326(0x2cc)]=String(_0x5e4159),_0x4e1e9e[_0x50d326(0x2bf)][_0x50d326(0x263)]=String(_0xc71531),_0x4e1e9e['textContent']=_0x1d151e['label'],_0x4e1e9e[_0x50d326(0x288)]=_0x1d151e[_0x50d326(0x1e7)]+':\x20'+_0x48931c(_0x1d151e[_0x50d326(0x272)])+'.\x20Pulsa\x20de\x20nuevo\x20para\x20desmarcar.',_0x4e1e9e[_0x50d326(0x2a1)](_0x50d326(0x20f),String(_0x50cafe['selections'][_0x5e4159]===_0xc71531)),_0x4e1e9e['setAttribute']('aria-label',_0x1d151e[_0x50d326(0x1e7)]+',\x20'+_0x48931c(_0x1d151e['value'])+_0x50d326(0x255)),_0x149531[_0x50d326(0x2a2)](_0x4e1e9e);}),_0x39bbfa[_0x486d66(0x2a2)](_0x149531);const _0x23f93b=_0x471b2a('—',_0x486d66(0x28e),'Nota');_0x23f93b[_0x486d66(0x2bf)]['scoreRow']=String(_0x5e4159),_0x662eb3['append'](_0x43a891,_0x117cf7,_0x39bbfa,_0x23f93b),_0x415757['itemsBody']['appendChild'](_0x662eb3);}),_0xc2a9cb();}())),_0x415757[_0x241b59(0x207)][_0x241b59(0x26d)]=!0x1,_0x415757['floatingGrade'][_0x241b59(0x26d)]=!0x1,document[_0x241b59(0x1ea)][_0x241b59(0x217)][_0x241b59(0x230)]('has-active-assessment'),_0x4fbae1(!0x0),_0x4caaa1(),_0x394c5e[_0x241b59(0x1f6)][_0x241b59(0x283)]&&console[_0x241b59(0x221)](_0x241b59(0x293),_0x394c5e[_0x241b59(0x1f6)]['map'](_0x153393=>_0x153393['code'])['join'](',\x20')),_0x415757[_0x241b59(0x207)]['scrollIntoView']({'behavior':'smooth','block':_0x241b59(0x23b)}));}),_0x415757['itemsBody'][_0x23ef43(0x275)](_0x23ef43(0x262),function(_0xad38c9){const _0x72d192=_0x23ef43,_0x56f0de=_0xad38c9['target'][_0x72d192(0x2d9)](_0x72d192(0x212));if(!_0x56f0de||!_0x50cafe[_0x72d192(0x2aa)])return;const _0xf18ab1=Number(_0x56f0de[_0x72d192(0x2bf)]['row']),_0x51b49b=Number(_0x56f0de['dataset']['level']);_0x50cafe[_0x72d192(0x2c5)][_0xf18ab1]=_0x50cafe['selections'][_0xf18ab1]===_0x51b49b?null:_0x51b49b,_0x56f0de['parentElement'][_0x72d192(0x1e1)]('button[data-level]')[_0x72d192(0x21d)](_0x20a3ab=>_0x20a3ab[_0x72d192(0x2a1)](_0x72d192(0x20f),String(Number(_0x20a3ab[_0x72d192(0x2bf)][_0x72d192(0x263)])===_0x50cafe[_0x72d192(0x2c5)][_0xf18ab1]))),_0xc2a9cb();}),_0x415757[_0x23ef43(0x264)][_0x23ef43(0x275)]('input',()=>{const _0x392f11=_0x23ef43;_0x50cafe[_0x392f11(0x264)]=_0x415757[_0x392f11(0x264)]['value'];}),_0xfb6ab4('newStudent')[_0x23ef43(0x275)](_0x23ef43(0x262),_0x4588f1),_0xfb6ab4(_0x23ef43(0x20e))[_0x23ef43(0x275)](_0x23ef43(0x262),_0x4588f1),_0xfb6ab4(_0x23ef43(0x2bc))[_0x23ef43(0x275)](_0x23ef43(0x262),function(){const _0x3e10a2=_0x23ef43;if(_0x50cafe['rubric']&&window['RubricPDF'])try{const _0x5309ba=_0x5689e1();window[_0x3e10a2(0x1f1)][_0x3e10a2(0x26e)]({'activity':_0x50cafe['rubric'][_0x3e10a2(0x21e)],'student':_0x415757['student'][_0x3e10a2(0x272)],'rows':_0x50cafe[_0x3e10a2(0x2aa)][_0x3e10a2(0x27b)][_0x3e10a2(0x20a)]((_0x1bd3bf,_0x5de35b)=>({'element':_0x1bd3bf[_0x3e10a2(0x1e7)],'criteria':_0x1bd3bf[_0x3e10a2(0x27a)],'level':null===_0x50cafe[_0x3e10a2(0x2c5)][_0x5de35b]?null:_0x50cafe[_0x3e10a2(0x2aa)][_0x3e10a2(0x286)][_0x50cafe['selections'][_0x5de35b]]['label'],'score':_0x5309ba['scores'][_0x5de35b]})),'criteria':_0x5309ba[_0x3e10a2(0x27a)],'progress':_0x5309ba['progress'],'total':_0x5309ba[_0x3e10a2(0x236)],'final':_0x5309ba[_0x3e10a2(0x2cf)],'incomplete':_0x5309ba['incomplete']});}catch(_0x610b3c){console['error'](_0x610b3c),window[_0x3e10a2(0x2d4)](_0x3e10a2(0x227));}else window['alert']('No\x20se\x20ha\x20podido\x20preparar\x20el\x20generador\x20PDF.\x20Comprueba\x20que\x20el\x20proyecto\x20está\x20completo.');}),_0xfb6ab4('saveConfig')[_0x23ef43(0x275)](_0x23ef43(0x262),function(){const _0x21f24d=_0x23ef43,_0x33502f=_0x4b6a44();if(_0x14b7fb(_0x33502f['errors']||{}),_0x33502f[_0x21f24d(0x1f4)])return void _0x4a4c5d(_0x21f24d(0x200));const _0x4667b5={'format':'rubric-maker','version':0x1,'activity':_0x415757[_0x21f24d(0x2c4)][_0x21f24d(0x272)]['trim'](),'criteriaText':_0x415757[_0x21f24d(0x27a)][_0x21f24d(0x272)],'elementsText':_0x415757[_0x21f24d(0x27c)]['value'],'levels':_0x4e7394()},_0x10d1d9=_0x4667b5['activity']['normalize']('NFD')[_0x21f24d(0x2cd)](/[\u0300-\u036f]/g,'')[_0x21f24d(0x2cd)](/[^a-z0-9]+/gi,'-')['replace'](/^-+|-+$/g,'')[_0x21f24d(0x269)]()[_0x21f24d(0x203)](0x0,0x37)||'rubrica';!function(_0x2f13ed,_0x2454ee){const _0xacbf7=_0x21f24d,_0x577e3b=new Blob([_0x2f13ed],{'type':'application/json'}),_0x50021f=URL['createObjectURL'](_0x577e3b),_0x531279=document[_0xacbf7(0x216)]('a');_0x531279[_0xacbf7(0x23a)]=_0x50021f,_0x531279[_0xacbf7(0x26e)]=_0x2454ee,document[_0xacbf7(0x1ea)][_0xacbf7(0x2a2)](_0x531279),_0x531279[_0xacbf7(0x262)](),_0x531279[_0xacbf7(0x276)](),setTimeout(()=>URL[_0xacbf7(0x2a9)](_0x50021f),0x7530);}(JSON['stringify'](_0x4667b5,null,0x2),_0x10d1d9+'.json'),_0x4a4c5d(_0x21f24d(0x21c),!0x0);}),_0xfb6ab4(_0x23ef43(0x299))[_0x23ef43(0x275)]('click',()=>_0x4dfa73(_0x3e6718)),_0xfb6ab4(_0x23ef43(0x2c0))['addEventListener']('click',()=>_0xfb6ab4(_0x23ef43(0x20b))[_0x23ef43(0x262)]()),_0xfb6ab4(_0x23ef43(0x20b))[_0x23ef43(0x275)](_0x23ef43(0x1f3),async _0x5ddd97=>{const _0x2bd6a0=_0x23ef43,_0x22b746=_0x5ddd97[_0x2bd6a0(0x1fa)]['files']?.[0x0];if(_0x22b746)try{_0x4dfa73(JSON['parse'](await _0x22b746['text']()));}catch(_0x395883){_0x4a4c5d(_0x2bd6a0(0x285)+_0x395883[_0x2bd6a0(0x24c)]),_0x4fbae1(!0x1);}finally{_0x5ddd97['target']['value']='';}}),_0x252ca4(_0x3b8d71(0x4)),window[_0x23ef43(0x210)](()=>_0x415757['splash']['classList']['add'](_0x23ef43(0x279)),0xa8c),window['setTimeout'](function(){const _0x5eae00=_0x23ef43;_0x415757[_0x5eae00(0x1fe)][_0x5eae00(0x26d)]=!0x0,document['querySelector'](_0x5eae00(0x2b2))[_0x5eae00(0x225)]=!0x1,document['body']['classList']['remove'](_0x5eae00(0x27f));},0xbea);})()));function a0_0x54a7(_0x21645b,_0x2de5c9){_0x21645b=_0x21645b-0x1df;const _0x1040d3=a0_0x1040();let _0x54a7ad=_0x1040d3[_0x21645b];if(a0_0x54a7['QogrRb']===undefined){var _0x286cb2=function(_0x3185ef){const _0x3c189d='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0xfb6ab4='',_0x50cafe='';for(let _0x1a52b5=0x0,_0x415757,_0x19091b,_0x195aec=0x0;_0x19091b=_0x3185ef['charAt'](_0x195aec++);~_0x19091b&&(_0x415757=_0x1a52b5%0x4?_0x415757*0x40+_0x19091b:_0x19091b,_0x1a52b5++%0x4)?_0xfb6ab4+=String['fromCharCode'](0xff&_0x415757>>(-0x2*_0x1a52b5&0x6)):0x0){_0x19091b=_0x3c189d['indexOf'](_0x19091b);}for(let _0x2b492d=0x0,_0x2af9ba=_0xfb6ab4['length'];_0x2b492d<_0x2af9ba;_0x2b492d++){_0x50cafe+='%'+('00'+_0xfb6ab4['charCodeAt'](_0x2b492d)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x50cafe);};a0_0x54a7['AosKev']=_0x286cb2,a0_0x54a7['KLyvNH']={},a0_0x54a7['QogrRb']=!![];}const _0x23c196=_0x1040d3[0x0],_0x144547=_0x21645b+_0x23c196,_0x457678=a0_0x54a7['KLyvNH'][_0x144547];return!_0x457678?(_0x54a7ad=a0_0x54a7['AosKev'](_0x54a7ad),a0_0x54a7['KLyvNH'][_0x144547]=_0x54a7ad):_0x54a7ad=_0x457678,_0x54a7ad;}function a0_0x1040(){const _0x5226cc=['yNv0Dg9Uw2rHDgeTCM93xvTKyxrHlwXLDMvSxq','mJruqMHwsu4','lIbtB2XVign1zw50yw4GBg9ZignYAxrLCMLVCYbJB24GywXNDw5Hig5VDgeU','oIb1DgLSAxPHimkRzwXLBwvUDg8GlYbJW7nKAwDVlcbJW7nKAwDVWRSU','y3jLyxrLrwXLBwvUDa','y2XHC3nmAxn0','y29UzMLNqwXLCNq','CMvKDwnL','C2nYB2XSsw50B1zPzxC','y29UzMLNqM9KEq','u2uGAgeGzgvZy2fYz2fKBYbSysbJB25MAwD1CMfJACoZBIbKzsbSysbYW7PICMLJysbLBIbku09olG','zM9YrwfJAa','BMfTzq','Bgv2zwWTBgfIzwW','C3bSAxq','Aw5MBW','sw5Py2LHBa','rwXLBwvUDg8GCgvUzgLLBNrL','y29TCgfYzq','Aw5LCNq','rw4GChjVy2vZBW','tM8GC2uGAgeGCg9KAwrVigDLBMvYyxiGzwWGuerglIbszxzPC2eGBg9ZigrHDg9ZiguGAw50W6LUDgfSBYbKzsbUDwv2BY4','txv5igjPzw4','zMLUywXezxnJCMLWDgLVBG','B2zMC2v0sgvPz2H0','y29UzMLNu2vJDgLVBG','C3rYAw5N','C3r5Bgu','rgvZy3jPCgnPW7nU','nxDNwuTpsW','ywrK','C3r1zgvUDe5HBwu','tM90ysbWCM92AxnPB25HBa','tM90ywjSzq','DgLUEs1ZDgf0Dxm','zMXVyxrPBMDtDgf0Dxm','Dg90ywW','zxmTrvm','D2vPz2H0','y3jPDgvYAw9UlxbPBgW','AhjLzG','C3rHCNq','yxnZzxnZBwvUDfrPDgXL','oIbLBcbWzxnVigrLyMuGC2vYihvUig7dUM1LCM8GCg9ZAxrPDM8GkgnVBweGBYbWDw50BYbKzwnPBwfSks4','BwLU','uxvLzgfUia','AhnSka','zMXVyxrPBMDhCMfKzq','tML2zwWGzguGBg9NCM8','C3vTBwfYEs1ZDgf0Dxm','ChjLDMvUDerLzMf1Bhq','C3vTBwfYEs1KzxnJCMLWDgLVBG','nJeWntuYnezfEvrhsG','zMfSC2u','tNvTyMvYrM9YBwf0','y2HHCKnVzgvbDa','mJq3mZa1mevhr3jYAW','lMXLDMvSlwXHyMvS','BwvZC2fNzq','zwXLBwvUDg8GCgvUzgLLBNrL','tML2zwWG','zMXVyxrPBMDty29Yzq','yxjPys12ywX1zw1HEa','yNv0Dg9Ulc5YB3CTC2nVCMu','y3jPDgvYAw9UlxbPBgXZ','AxnbCNjHEq','mJGXn0PSBvnZvq','ihb1BNrVCW','sw50CM9KDwnLihvUig5VBwjYzsbWyxjHigXHigfJDgL2AwrHzc4','C2nYB2XS','A2v5CW','CM9Szq','y2XHC3noyw1L','BMv3u3r1zgvUDa','yxjPys1SywjLBa','DhjPBq','zMLSBa','AxmTy29SBgfWC2vK','qwX0BW','zgL2','y2XPy2S','Bgv2zwW','C3r1zgvUDa','qwrLy3vHzg8','Bgv2zwWTy2HVAwnL','uhvUDhvHy2NdS24GzgvSig5PDMvSia','Bwf4tgvUz3rO','Dg9mB3DLCKnHC2u','Bgv2zwXdB3vUDa','C3vTBwfYEvn0yxrL','y29Kzq','AgLKzgvU','zg93BMXVywq','CM91BMq','lNjVDY1Zy29Yzq','AxrLBxncB2r5','DMfSDwu','yxjPys12ywX1zw5VDW','DgfIsw5KzxG','ywrKrxzLBNrmAxn0zw5LCG','CMvTB3zL','yxbWzw5K','DMvYC2LVBG','AxmTBgvHDMLUzW','y3jPDgvYAwe','AxrLBxm','zwXLBwvUDhm','tgeGBNvLDMeGy29UzMLNDxjHy2NdS24GCMvPBMLJAwfYW6eGBgeGzxzHBhvHy2NdS24GzgvSigfSDw1UBYbHy3r1ywWUimk/uxvPzxjLCYbJB250Aw51yxi/','u2uGCMvLBxbSyxPHCSoHBIbSB3mGy2fTCg9ZigrLignVBMzPz3vYywnPW7nUigfJDhvHBgvZlIdcV0nVBNrPBNvHCJ8','C3bSyxnOlwfJDgL2zq','C21VB3rO','Dg9mB2nHBgvvChbLCKnHC2u','C2nVCMuTAw5WDxq','BgvUz3rO','z3jVDxa','tM8GC2uGAgeGCg9KAwrVigLTCg9YDgfYigvSigfYy2HPDM86ia','Bgv2zwXZ','C2v0','DgL0Bgu','DMfSDwvZ','Dgv4Da','yM90Dg9T','y29UzMLNrM9YBq','Dg9mB2nHBgvmB3DLCKnHC2u','CM93lxnJB3jLihbLBMrPBMCTC2nVCMu','u2uGyM9YCMfYW6fUigvSig5VBwjYzsb5igXHCYbJywXPzMLJywnPB25LCYbKzsbLC3rHigv2ywX1ywnPW7nUlIdcV1f1AwvYzxmGy2fSAwzPy2fYigeGB3rYBYbHBhvTBM8/','C3vTBwfYEujVzhK','yxnZzxnZBwvUDfnLy3rPB24','AgvPz2H0','q3jPDgvYAw9Zig5Vihv0AwXPEMfKB3m6','AgfZ','BNvTyMvY','y29SB3i','zw50CMLLCW','Dg9Nz2XLq29UzMLNtgfIzwW','Bg9Hzev4yw1WBgu','ChjVz3jLC3ncyxi','Cg9ZAxrPB24','C29Tzq','lNnJB3jLlwLUChv0','C3rYAw5NAwz5','u2LUigrLC2nYAxbJACoZBG','Aw5JBhvKzxm','C2v0qxr0CMLIDxrL','yxbWzw5Kq2HPBgq','zMLSDgvY','tmoTBMvHia','y3jPDgvYAwfjBNb1Da','zwXLBwvUDhnjBNb1Da','ChvZAa','mJC0nJa5m2frAuLQrW','CMv2B2TLt2jQzwn0vvjm','CNvICMLJ','CNvICMLJlw1HA2vY','CMvWBgfJzunOAwXKCMvU','rxHJzwXLBNrL','mtu3mZC5n1nlswPArG','C29YDa','u2LUignHBgLMAwnHCG','oIbLBcbJCML0zxjPBYdcQW','lMfWCc1ZAgvSBa','Bwf4','q3jPDgvYAw8','Aw5WDxrnB2rL','AxngAw5PDgu','C3vIBwL0','Dg9Nz2XL','Aw5WDxq','Bgv2zwXZqM9KEq','AM9PBG','zg93BMXVywrqrey','u2vSzwnJAw9Uysb1BIbUAxzLBcbWyxjHigvTCgv6yxiGysbJywXPzMLJyxiU','mJuWodqYngT1yLDwva','zgf0yxnLDa','Aw1WB3j0q29UzMLN','zMLUywXty29Yzq','oIb1DgLSAxPHimkRy8oZzgLNBYaVigrLC2nYAxbJACoZBIaVihbLC2/cUYWGy29UihvUigpdS2rPz28GC2LUigvZCgfJAw9ZlG','Dgv4DenVBNrLBNq','ywn0AxzPDhK','C2vSzwn0Aw9UCW','zwXLBwvUDhnfCNjVCG','BgvMDa','CxvLCNLtzwXLy3rVCG','zM9YBq','zMXHDe1HCa','oIbSysbLDgLXDwv0ysbUBYbWDwvKzsbLC3rHCIb2ywpdRweU','CM93','CMvWBgfJzq','Dg9W','zMLUywW','yNv0Dg9U','qMfQBW','idqYjsaYocuP','q3jPDgvYAw9Z','ywXLCNq','z3jHzgu','ywn0AxzPDhLfCNjVCG','mtK1mZi2neTxC2Hjua','rM9YBwf0BYbKzsbJB25MAwD1CMfJACoZBIbUBYbYzwnVBM9JAwrVlG','y2XVC2vZDa','AxrLBxndB3vUDa','Dg9Nz2XLq29UzMLN','DgvZDa','C3vJy2vZCW','DhLWzq','CxvLCNLtzwXLy3rVCKfSBa','Bgv2zwXZrxjYB3i','yMfJA2DYB3vUza','yNv0Dg9Uw2rHDgeTBgv2zwXD','yxjPys1LEhbHBMrLza','A2v5','BgfIzwW','y29UzMLYBq','CgvUzgLUzY1Zy29Yzq','yM9KEq','ChjVz3jLC3nuzxH0','y3jPDgvYAwfuzxH0','y29TCgXLDgu','z2v0rwXLBwvUDej5swq','qCoXywrLigfSig1LBM9ZihvUigvSzw1LBNrVigrLigv2ywX1ywnPW7nUlG','yxjPys12ywX1zxrLEhq','uNvICMLJuerg','igrLia','y2HHBMDL','zxjYB3jZ','lMfZC2vZC21LBNqTAgvHzgLUzW','Dw51C2vK','oIbSysbLDgLXDwv0ysdcQW','ChjVz3jLC3ngAwXS','zgvJAw1HBa','DgfYz2v0','y3jPDgvYAwffCNjVCG','Aw5JB21WBgv0zq','ugvZBW','C3bSyxnO','rxrPCxvLDgeGzgvSig5PDMvSia','q29YCMLNzsbSB3mGy2fTCg9ZihnLW7fHBgfKB3mGyw50zxmGzguGz3vHCMrHCIbSysbJB25MAwD1CMfJACoZBI4','D2LKDgG','ote5mevTr3bHsG','C2XPy2u','z2v0qM91BMrPBMDdBgLLBNrszwn0','zMLUywXtDgf0zq','C3bHBG','yxnZzxnZBwvUDa','yM90Dg9TlwXLzNq','zM9JDxm','BwfW','Aw1WB3j0rMLSzq','ChjVz3jLC3m','t2n1BhrHCG','BMv3u3r1zgvUDejVDhrVBq','yxjPys1WCMvZC2vK','C2v0vgLTzw91Da','z2v0'];a0_0x1040=function(){return _0x5226cc;};return a0_0x1040();}
+/** Rúbrica v1.1 — interfaz y motor de evaluación. Sin dependencias externas. */
+(() => {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  const state = { rubric: null, selections: [], student: '' };
+  let levelsCustomized = false;
+
+  const refs = {
+    configSection: $('configSection'), configBody: $('configBody'), toggleConfig: $('toggleConfig'),
+    form: $('configForm'), activity: $('activityName'), criteria: $('criteriaInput'), elements: $('elementsInput'),
+    levelCount: $('levelCount'), levelsBody: $('levelsBody'), configAlert: $('configAlert'),
+    assessment: $('assessmentSection'), assessmentTitle: $('assessmentTitle'), student: $('studentName'),
+    itemsBody: $('itemsBody'), summaryBody: $('summaryBody'), itemsCount: $('itemsCount'),
+    progressText: $('progressText'), progressBar: $('progressBar'), progressFill: $('progressFill'),
+    finalScore: $('finalScore'), finalDescription: $('finalDescription'), finalState: $('finalState'),
+    summaryState: $('summaryState'),
+    splash: $('splashScreen'), floatingGrade: $('floatingGrade'), floatingScore: $('floatingScore'), floatingStatus: $('floatingStatus')
+  };
+  const collator = new Intl.Collator('es', { numeric: true, sensitivity: 'base' });
+  const scoreFormat = new Intl.NumberFormat('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  function codeKey(code) { return String(code).trim().toLocaleUpperCase('es'); }
+  function isCode(code) { return /^[^\s,\/]+$/u.test(code); }
+  function parseDecimal(text) {
+    const str = String(text).trim();
+    if (!/^[+-]?(?:\d+(?:[.,]\d+)?|[.,]\d+)$/u.test(str)) return null;
+    const n = Number(str.replace(',', '.'));
+    return Number.isFinite(n) ? n : null;
+  }
+  function formatScore(n) { return n === null || n === undefined ? '—' : scoreFormat.format(n); }
+  // Compara siempre el valor real, nunca el resultado redondeado para pantalla.
+  function isFailingGrade(n) { return typeof n === 'number' && Number.isFinite(n) && n < 5; }
+  function renderGrade(cell, value) {
+    cell.replaceChildren();
+    if (isFailingGrade(value)) {
+      const badge = document.createElement('span');
+      badge.className = 'grade-fail';
+      badge.textContent = formatScore(value);
+      badge.setAttribute('aria-label', `Calificación insuficiente: ${formatScore(value)}`);
+      cell.appendChild(badge);
+    } else {
+      cell.textContent = formatScore(value);
+    }
+  }
+  function formatWeight(n) { return Number(n).toLocaleString('es-ES', { maximumFractionDigits: 6 }); }
+  function isAssessmentStarted() { return !!state.student.trim() || state.selections.some(v => v !== null); }
+
+  function defaultLevels(count) {
+    if (count === 2) return [{ label: 'Sí', value: '10' }, { label: 'No', value: '0' }];
+    if (count === 3) return [{ label: 'Alto', value: '10' }, { label: 'Medio', value: '7' }, { label: 'Bajo', value: '4' }];
+    if (count === 4) return [{ label: 'Excelente', value: '10' }, { label: 'Notable', value: '8' }, { label: 'Básico', value: '6' }, { label: 'Insuficiente', value: '4' }];
+    if (count === 5) return [{ label: 'Excelente', value: '10' }, { label: 'Muy bien', value: '8' }, { label: 'Adecuado', value: '6' }, { label: 'En proceso', value: '4' }, { label: 'Inicial', value: '0' }];
+    return Array.from({ length: count }, (_, i) => ({ label: `Nivel ${i + 1}`, value: String(Math.round((10 - 10 * i / (count - 1)) * 100) / 100).replace('.', ',') }));
+  }
+  function readLevelFields() {
+    return [...refs.levelsBody.querySelectorAll('tr')].map(row => ({
+      label: row.querySelector('.level-label').value,
+      value: row.querySelector('.score-input').value,
+      description: row.querySelector('.level-description').value
+    }));
+  }
+  function renderLevelFields(levels) {
+    refs.levelsBody.replaceChildren();
+    levels.forEach((level, idx) => {
+      const tr = document.createElement('tr');
+      const first = document.createElement('td');
+      const name = document.createElement('input');
+      name.type = 'text'; name.className = 'level-label'; name.value = level.label;
+      name.maxLength = 100; name.setAttribute('aria-label', `Etiqueta del nivel ${idx + 1}`);
+      const last = document.createElement('td');
+      const value = document.createElement('input');
+      value.type = 'text'; value.className = 'score-input'; value.inputMode = 'decimal';
+      value.value = level.value; value.maxLength = 12;
+      value.setAttribute('aria-label', `Puntuación del nivel ${idx + 1}`);
+      const details = document.createElement('td');
+      const description = document.createElement('textarea');
+      description.className = 'level-description'; description.rows = 2;
+      description.maxLength = 1000; description.value = level.description ?? '';
+      description.placeholder = 'Descripción opcional del nivel';
+      description.setAttribute('aria-label', `Descripción del nivel ${idx + 1}`);
+      details.appendChild(description);
+      first.appendChild(name);last.appendChild(value);tr.append(first,last,details);
+      refs.levelsBody.appendChild(tr);
+    });
+  }
+  function changeLevelCount() {
+    const n = Number(refs.levelCount.value);
+    const previous = readLevelFields();
+    const next = defaultLevels(n);
+    if(levelsCustomized) for(let i=0;i<Math.min(previous.length,n);i++)next[i]=previous[i];
+    renderLevelFields(next);
+  }
+  function setCollapsed(collapsed) {
+    refs.configSection.classList.toggle('is-collapsed', collapsed);
+    refs.configBody.hidden = collapsed;
+    refs.toggleConfig.setAttribute('aria-expanded', String(!collapsed));
+    $('toggleConfigLabel').textContent = collapsed ? 'Mostrar configuración' : 'Ocultar';
+  }
+  function showNotice(message, success=false) {
+    refs.configAlert.textContent=message;
+    refs.configAlert.classList.toggle('success',success);
+    refs.configAlert.hidden=false;
+  }
+  function hideNotice() { refs.configAlert.hidden=true; refs.configAlert.textContent=''; }
+  function showFieldErrors(errors) {
+    const fields = { activity: ['activityError',refs.activity], criteria: ['criteriaError',refs.criteria], elements: ['elementsError',refs.elements], levels: ['levelsError',refs.levelCount] };
+    for(const [k,[id,input]] of Object.entries(fields)) {
+      const message=(errors[k]||[]).join('\n');
+      $(id).textContent=message;
+      $(id).hidden=!message;
+      input.setAttribute('aria-invalid', String(!!message));
+    }
+  }
+  function clearErrors(){showFieldErrors({});hideNotice();}
+  function addError(errors,key,message){(errors[key] ||= []).push(message);}
+
+  function parseRubric() {
+    const errors={};
+    const name=refs.activity.value.trim();
+    if(!name)addError(errors,'activity','Introduce un nombre para la actividad.');
+    const criteria=new Map();
+    const rawCriteria=refs.criteria.value.split(/\r?\n/u);
+    rawCriteria.forEach((raw,i)=>{
+      if(!raw.trim())return;
+      const chunks=raw.split('/').map(s=>s.trim());
+      if(chunks.length>3||chunks.length<1||!isCode(chunks[0])){
+        addError(errors,'criteria',`Línea ${i+1}: utiliza «código / descripción / peso», con un código sin espacios.`);return;
+      }
+      const code=chunks[0],key=codeKey(code);
+      if(criteria.has(key)){addError(errors,'criteria',`Línea ${i+1}: el criterio «${code}» está duplicado.`);return;}
+      let description='',weightText='';
+      if(chunks.length===2){
+        if(parseDecimal(chunks[1])!==null)weightText=chunks[1];
+        else description=chunks[1];
+      } else if(chunks.length===3){description=chunks[1];weightText=chunks[2];}
+      const weight=weightText===''?1:parseDecimal(weightText);
+      if(weight===null || weight<=0){addError(errors,'criteria',`Línea ${i+1}: el peso debe ser un número positivo (coma o punto decimal).`);return;}
+      criteria.set(key,{key,code,description,weight});
+    });
+
+    const items=[];
+    refs.elements.value.split(/\r?\n/u).forEach((raw,i)=>{
+      if(!raw.trim())return;
+      const chunks=raw.split('/');
+      if(chunks.length!==2||!chunks[0].trim()||!chunks[1].trim()){
+        addError(errors,'elements',`Línea ${i+1}: utiliza «elemento / código, código».`);return;
+      }
+      const label=chunks[0].trim();
+      const rawCodes=chunks[1].split(',').map(s=>s.trim());
+      if(rawCodes.some(code=>!isCode(code))){addError(errors,'elements',`Línea ${i+1}: comprueba que cada código esté correctamente escrito.`);return;}
+      const keys=[...new Set(rawCodes.map(codeKey))];
+      rawCodes.forEach(code=>{
+        const key=codeKey(code);
+        if(!criteria.has(key))criteria.set(key,{key,code,description:'',weight:1});
+      });
+      items.push({label,keys});
+    });
+    if(items.length===0)addError(errors,'elements','Añade al menos un elemento de evaluación.');
+
+    const levels=readLevelFields().map((l,i)=>{
+      const label=l.label.trim(),value=parseDecimal(l.value),description=l.description.trim();
+      if(!label)addError(errors,'levels',`Nivel ${i+1}: la etiqueta no puede estar vacía.`);
+      if(value===null || value<0 || value>10)addError(errors,'levels',`Nivel ${i+1}: introduce una puntuación entre 0 y 10.`);
+      return {label,value,description};
+    });
+    const seen=new Set();
+    levels.forEach((l,i)=>{const key=l.label.toLocaleLowerCase('es');if(l.label&&seen.has(key))addError(errors,'levels',`Nivel ${i+1}: la etiqueta «${l.label}» está repetida.`);seen.add(key);});
+
+    if(Object.keys(errors).length)return {errors};
+    const used=new Set(items.flatMap(item=>item.keys));
+    const criteriaUsed=[...criteria.values()].filter(c=>used.has(c.key)).sort((a,b)=>collator.compare(a.code,b.code));
+    const unassigned=[...criteria.values()].filter(c=>!used.has(c.key));
+    const result={name,criteria:criteriaUsed,items:items.map(item=>({label:item.label,criteria:item.keys.map(key=>criteria.get(key).code),keys:item.keys})),levels};
+    return {rubric:result, unused:unassigned};
+  }
+  function showRubric(event){
+    if(event)event.preventDefault();
+    hideNotice();
+    const parsed=parseRubric();
+    showFieldErrors(parsed.errors||{});
+    if(parsed.errors){
+      setCollapsed(false);
+      const first=Object.keys(parsed.errors)[0];
+      ({activity:refs.activity,criteria:refs.criteria,elements:refs.elements,levels:refs.levelCount})[first].focus();return;
+    }
+    const same=state.rubric && JSON.stringify(state.rubric)===JSON.stringify(parsed.rubric);
+    if(state.rubric&&!same&&isAssessmentStarted()&&!window.confirm('La nueva configuración reiniciará la evaluación del alumno actual. ¿Quieres continuar?'))return;
+    if(!same){
+      state.rubric=parsed.rubric;
+      state.selections=Array(parsed.rubric.items.length).fill(null);
+      state.student='';refs.student.value='';
+      renderAssessment();
+    }
+    refs.assessment.hidden=false;
+    refs.floatingGrade.hidden=false;
+    document.body.classList.add('has-active-assessment');
+    setCollapsed(true);
+    scheduleFloatingPlacement();
+    if(parsed.unused.length){
+      // Las definiciones no utilizadas se omiten: no intervienen en ninguna nota.
+      console.info('Criterios no utilizados:',parsed.unused.map(c=>c.code).join(', '));
+    }
+    refs.assessment.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+
+  function criterionColor(code){
+    let hash=0;
+    for(const ch of code)hash=(hash*31+ch.charCodeAt(0))>>>0;
+    const hue=hash%360;
+    return {background:`hsl(${hue} 64% 92%)`,color:`hsl(${hue} 42% 28%)`};
+  }
+  function makePill(criterion){
+    const span=document.createElement('span');span.className='criterion-pill';
+    span.textContent=criterion.code;
+    const description=criterion.description||'Sin descripción';
+    span.title=`${criterion.code}: ${description} · Peso ${formatWeight(criterion.weight)}`;
+    span.tabIndex=0;
+    span.setAttribute('aria-label',span.title);
+    const color=criterionColor(criterion.key);
+    span.style.backgroundColor=color.background;span.style.color=color.color;
+    return span;
+  }
+  function makeCell(text,cl='',label=''){
+    const td=document.createElement('td');
+    if(cl)td.className=cl;
+    if(label)td.dataset.label=label;
+    if(text!==undefined&&text!==null)td.textContent=String(text);
+    return td;
+  }
+  function renderAssessment(){
+    const r=state.rubric;if(!r)return;
+    refs.assessmentTitle.textContent=r.name;
+    refs.itemsCount.textContent=`${r.items.length} ${r.items.length===1?'elemento':'elementos'}`;
+    refs.itemsBody.replaceChildren();
+    const byKey=new Map(r.criteria.map(c=>[c.key,c]));
+    r.items.forEach((item,rowIndex)=>{
+      const tr=document.createElement('tr');
+      const name=makeCell(item.label,'item-label');
+      const codes=makeCell(null,'','Criterios');
+      const pillGroup=document.createElement('div');pillGroup.className='criterion-pills';
+      item.keys.forEach(key=>pillGroup.appendChild(makePill(byKey.get(key))));
+      codes.appendChild(pillGroup);
+      const levelCell=makeCell(null,'','Nivel de logro');
+      const choices=document.createElement('div');choices.className='level-options';choices.setAttribute('role','group');choices.setAttribute('aria-label',`Nivel de logro: ${item.label}`);
+      r.levels.forEach((level,index)=>{
+        const b=document.createElement('button');b.type='button';b.className='level-choice';b.dataset.row=String(rowIndex);b.dataset.level=String(index);
+        b.textContent=level.label;
+        // Mismo tooltip nativo que los códigos de criterio; sin descripción, sin tooltip.
+        const levelDescription=(level.description||'').trim();
+        if(levelDescription)b.title=levelDescription;
+        b.setAttribute('aria-pressed',String(state.selections[rowIndex]===index));
+        b.setAttribute('aria-label',`${level.label}, ${formatScore(level.value)} puntos${levelDescription?`. ${levelDescription}`:''}`);
+        choices.appendChild(b);
+      });
+      levelCell.appendChild(choices);
+      const score=makeCell('—','row-score pending-score','Nota');score.dataset.scoreRow=String(rowIndex);
+      tr.append(name,codes,levelCell,score);refs.itemsBody.appendChild(tr);
+    });
+    updateGrades();
+  }
+  function calcGrades(){
+    const rubric=state.rubric;if(!rubric)return null;
+    const scores=rubric.items.map((_,i)=>state.selections[i]===null?null:rubric.levels[state.selections[i]].value);
+    const progress=scores.filter(score=>score!==null).length;
+    const criteria=rubric.criteria.map(c=>{
+      const relevant=rubric.items.map((item,i)=>item.keys.includes(c.key)?scores[i]:undefined).filter(v=>v!==undefined);
+      const graded=relevant.filter(v=>v!==null);
+      const grade=graded.length?graded.reduce((a,b)=>a+b,0)/graded.length:null;
+      return {...c,grade,partial:graded.length<relevant.length};
+    });
+    const assessed=criteria.filter(c=>c.grade!==null);
+    const totalWeight=assessed.reduce((sum,c)=>sum+c.weight,0);
+    const final=totalWeight>0?assessed.reduce((sum,c)=>sum+c.grade*c.weight,0)/totalWeight:null;
+    return {scores,criteria,progress,total:rubric.items.length,final,incomplete:progress<rubric.items.length};
+  }
+  // Escoge la esquina que menos interfiera con botones y notas visibles.
+  // Se evalúa la esquina inferior derecha en primer lugar, pero se evita
+  // cubrir acciones importantes (por ejemplo, Descargar informe PDF).
+  let placementFrame=0;
+  function scheduleFloatingPlacement(){
+    if(refs.floatingGrade.hidden || placementFrame)return;
+    placementFrame=requestAnimationFrame(()=>{placementFrame=0;placeFloatingGrade();});
+  }
+  function placeFloatingGrade(){
+    if(refs.floatingGrade.hidden)return;
+    const width=innerWidth,height=innerHeight,inset=width<=630?10:20;
+    const cw=refs.floatingGrade.offsetWidth,ch=refs.floatingGrade.offsetHeight;
+    const candidates=[
+      {name:'bottom-right',x:width-inset-cw,y:height-inset-ch},
+      {name:'bottom-left',x:inset,y:height-inset-ch},
+      {name:'top-right',x:width-inset-cw,y:inset},
+      {name:'top-left',x:inset,y:inset}
+    ];
+    const obstacles=[];
+    const check=(element)=>{
+      const r=element.getBoundingClientRect();
+      if(r.width>0&&r.height>0&&r.bottom>0&&r.top<height&&r.right>0&&r.left<width)obstacles.push(r);
+    };
+    ['newStudent','newStudentBottom','downloadPDF','downloadTemplatePDF','studentName'].forEach(id=>check($(id)));
+    for(const tr of refs.itemsBody.rows){
+      const r=tr.getBoundingClientRect();
+      if(r.bottom<0||r.top>height)continue;
+      for(const el of tr.querySelectorAll('button,.row-score'))check(el);
+    }
+    for(const el of refs.summaryBody.querySelectorAll('.row-score'))check(el);
+    check(refs.finalScore);
+    const overlap=(a,b)=>Math.max(0,Math.min(a.x+cw,b.right)-Math.max(a.x,b.left)) * Math.max(0,Math.min(a.y+ch,b.bottom)-Math.max(a.y,b.top));
+    let best=candidates[0],min=Infinity;
+    for(let i=0;i<candidates.length;i++){
+      // Pequeña preferencia por la esquina inferior derecha cuando haya empate.
+      const cost=obstacles.reduce((total,r)=>total+overlap(candidates[i],r),0)+i*12;
+      if(cost<min){min=cost;best=candidates[i];}
+    }
+    refs.floatingGrade.dataset.position=best.name;
+    const heading=refs.assessment.querySelector('.assessment-heading').getBoundingClientRect();
+    document.body.classList.toggle('grade-at-heading',width<=630 && best.name==='top-right' && heading.bottom>0 && heading.top<height);
+  }
+
+  function updateGrades(){
+    if(!state.rubric)return;
+    const computed=calcGrades();
+    computed.scores.forEach((score,i)=>{
+      const td=refs.itemsBody.querySelector(`[data-score-row="${i}"]`);
+      if(!td)return;
+      renderGrade(td,score);
+      td.classList.toggle('pending-score',score===null);
+      td.title=score===null?'Elemento pendiente':'Puntuación del elemento';
+    });
+    refs.progressText.textContent=`${computed.progress} de ${computed.total}`;
+    const pct=computed.total?computed.progress/computed.total*100:0;
+    refs.progressFill.style.width=`${pct}%`;
+    refs.progressBar.setAttribute('aria-valuemax',String(computed.total));
+    refs.progressBar.setAttribute('aria-valuenow',String(computed.progress));
+    refs.progressBar.setAttribute('aria-valuetext',`${computed.progress} de ${computed.total} elementos`);
+
+    refs.summaryBody.replaceChildren();
+    computed.criteria.forEach(c=>{
+      const tr=document.createElement('tr');
+      const code=makeCell(null,'','Criterio');code.appendChild(makePill(c));
+      const description=makeCell(c.description||'Sin descripción','summary-description','Descripción');
+      const weight=makeCell(formatWeight(c.weight),'weight-cell','Peso');
+      const score=makeCell(null,'row-score','Nota');
+      renderGrade(score,c.grade);
+      score.classList.toggle('pending-score',c.grade===null);
+      if(c.grade!==null && c.partial){const status=document.createElement('span');status.className='tiny-status';status.textContent='Provisional';score.appendChild(status);}
+      tr.append(code,description,weight,score);refs.summaryBody.appendChild(tr);
+    });
+    refs.summaryState.className='summary-status';
+    if(computed.progress===0){refs.summaryState.textContent='Sin calificar';refs.summaryState.classList.add('empty');}
+    else if(computed.incomplete)refs.summaryState.textContent='Evaluación provisional';
+    else{refs.summaryState.textContent='Evaluación completa';refs.summaryState.classList.add('complete');}
+    const displayedFinal=formatScore(computed.final);
+    refs.finalScore.textContent=displayedFinal;
+    refs.finalScore.classList.toggle('grade-fail',isFailingGrade(computed.final));
+    // Mismo cálculo y misma cadena formateada que en el resumen principal.
+    refs.floatingScore.textContent=displayedFinal;
+    refs.floatingScore.classList.toggle('grade-fail',isFailingGrade(computed.final));
+    refs.floatingStatus.hidden=computed.progress===computed.total;
+    refs.floatingStatus.textContent=computed.progress===0?'Sin calificar':'Provisional';
+    scheduleFloatingPlacement();
+    if(computed.progress===0){refs.finalState.textContent='Sin calificar';refs.finalDescription.textContent='Selecciona un nivel para empezar a calificar.';}
+    else if(computed.incomplete){refs.finalState.textContent='Nota provisional';refs.finalDescription.textContent=`Quedan ${computed.total-computed.progress} ${computed.total-computed.progress===1?'elemento pendiente':'elementos pendientes'}. Solo cuentan los criterios con alguna nota.`;}
+    else{refs.finalState.textContent='Evaluación completa';refs.finalDescription.textContent='Media ponderada de los criterios, según sus pesos.';}
+  }
+  function handleChoice(event){
+    const target=event.target.closest('button[data-row][data-level]');
+    if(!target||!state.rubric)return;
+    const row=Number(target.dataset.row),level=Number(target.dataset.level);
+    state.selections[row]=state.selections[row]===level?null:level;
+    const siblings=target.parentElement.querySelectorAll('button[data-level]');
+    siblings.forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.level)===state.selections[row])));
+    updateGrades();
+  }
+  function newStudent(){
+    if(!state.rubric)return;
+    if(isAssessmentStarted()&&!window.confirm('Se borrarán el nombre y las calificaciones de esta evaluación. ¿Quieres calificar a otro alumno?'))return;
+    state.selections=Array(state.rubric.items.length).fill(null);
+    state.student='';refs.student.value='';
+    refs.itemsBody.querySelectorAll('button[data-level]').forEach(b=>b.setAttribute('aria-pressed','false'));
+    updateGrades();
+    refs.student.focus();
+  }
+  function downloadTemplatePdf(){
+    // El botón está en Configuración: exporta los campos visibles, incluso antes de activar la rúbrica.
+    const parsed=parseRubric();
+    showFieldErrors(parsed.errors||{});
+    if(parsed.errors){
+      showNotice('Corrige los campos señalados antes de descargar la rúbrica vacía.');
+      setCollapsed(false);
+      const first=Object.keys(parsed.errors)[0];
+      ({activity:refs.activity,criteria:refs.criteria,elements:refs.elements,levels:refs.levelCount})[first].focus();
+      return;
+    }
+    if(!window.RubricPDF){window.alert('No se ha podido preparar el generador PDF. Comprueba que el proyecto está completo.');return;}
+    try{
+      // Solo configuración: nunca se accede al nombre ni a las notas de los alumnos.
+      window.RubricPDF.downloadTemplate(parsed.rubric);
+    }catch(error){console.error(error);window.alert('No se ha podido generar la rúbrica vacía. Revisa los datos e inténtalo de nuevo.');}
+  }
+  function downloadPdf(){
+    if(!state.rubric||!window.RubricPDF){window.alert('No se ha podido preparar el generador PDF. Comprueba que el proyecto está completo.');return;}
+    try{
+      const calc=calcGrades();
+      window.RubricPDF.download({
+        activity:state.rubric.name,
+        student:refs.student.value,
+        rows:state.rubric.items.map((item,i)=>({element:item.label,criteria:item.criteria,level:state.selections[i]===null?null:state.rubric.levels[state.selections[i]].label,score:calc.scores[i]})),
+        criteria:calc.criteria,progress:calc.progress,total:calc.total,final:calc.final,incomplete:calc.incomplete
+      });
+    }catch(error){console.error(error);window.alert('No se ha podido generar el PDF. Revisa los datos e inténtalo de nuevo.');}
+  }
+  function downloadJson(value,name,mime){
+    const blob=new Blob([value],{type:mime});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),30000);
+  }
+  function exportConfiguration(){
+    const parsed=parseRubric();showFieldErrors(parsed.errors||{});
+    if(parsed.errors){showNotice('Corrige los campos señalados antes de guardar la configuración.');return;}
+    const payload={format:'rubric-maker',version:1,activity:refs.activity.value.trim(),criteriaText:refs.criteria.value,elementsText:refs.elements.value,levels:readLevelFields()};
+    const slug=payload.activity.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/gi,'-').replace(/^-+|-+$/g,'').toLowerCase().slice(0,55)||'rubrica';
+    downloadJson(JSON.stringify(payload,null,2),`${slug}.json`,'application/json');
+    showNotice('Se ha descargado la configuración de la rúbrica en JSON.',true);
+  }
+  function loadConfiguration(payload){
+    if(!payload || payload.format!=='rubric-maker'||payload.version!==1 || typeof payload.activity!=='string' || typeof payload.criteriaText!=='string' || typeof payload.elementsText!=='string' || !Array.isArray(payload.levels) || payload.levels.length<2||payload.levels.length>10 || payload.levels.some(l=>!l||typeof l.label!=='string'||(typeof l.value!=='string'&&typeof l.value!=='number')||(l.description!==undefined&&typeof l.description!=='string'))){throw new Error('Formato de configuración no reconocido.');}
+    if((refs.activity.value.trim()||refs.elements.value.trim()||isAssessmentStarted())&&!window.confirm('Se reemplazarán los campos de configuración actuales. ¿Continuar?'))return false;
+    refs.activity.value=payload.activity.slice(0,200);
+    refs.criteria.value=payload.criteriaText;
+    refs.elements.value=payload.elementsText;
+    refs.levelCount.value=String(payload.levels.length);
+    renderLevelFields(payload.levels.map(l=>({label:l.label,value:String(l.value),description:l.description??''})));
+    levelsCustomized=true;
+    clearErrors();
+    setCollapsed(false);
+    showNotice('Configuración cargada. Comprueba los datos y pulsa «Usar esta rúbrica».',true);
+    refs.configSection.scrollIntoView({behavior:'smooth',block:'start'});
+    return true;
+  }
+  const example={format:'rubric-maker',version:1,activity:'A02. Building the Main Loop',criteriaText:'1.1 / Presentación y entrega del trabajo / 1\n2.3 / Desarrollo de programas mediante estructuras de control / 3\n2.4 / Comprobación, organización y depuración / 2',elementsText:'El archivo tiene el nombre solicitado / 1.1\nLas variables están correctamente inicializadas / 2.3\nLa variable nflips está configurada como deslizador / 2.3\nEl programa ejecuta un bucle correctamente / 2.3, 2.4\nSe actualiza el contador correspondiente a cada resultado / 2.3\nEl código está organizado y es fácil de seguir / 2.4',levels:defaultLevels(4)};
+
+  // Pantalla inicial ficticia (2,7 s + 0,3 s de transición suave).
+  function finishSplash(){
+    refs.splash.hidden=true;
+    document.querySelector('.app-shell').inert=false;
+    document.body.classList.remove('splash-active');
+  }
+  function startSplash(){
+    // Timeout independiente de una carga real: un fallo CSS no dejará la app bloqueada.
+    window.setTimeout(()=>refs.splash.classList.add('is-leaving'),2700);
+    window.setTimeout(finishSplash,3050);
+  }
+
+  // Eventos y arranque
+  window.addEventListener('scroll',scheduleFloatingPlacement,{passive:true});
+  window.addEventListener('resize',scheduleFloatingPlacement);
+  refs.levelCount.addEventListener('change',changeLevelCount);
+  refs.levelsBody.addEventListener('input',()=>{levelsCustomized=true;});
+  refs.toggleConfig.addEventListener('click',()=>setCollapsed(!refs.configBody.hidden));
+  refs.form.addEventListener('submit',showRubric);
+  refs.itemsBody.addEventListener('click',handleChoice);
+  refs.student.addEventListener('input',()=>{state.student=refs.student.value;});
+  $('newStudent').addEventListener('click',newStudent);
+  $('newStudentBottom').addEventListener('click',newStudent);
+  $('downloadPDF').addEventListener('click',downloadPdf);
+  $('downloadTemplatePDF').addEventListener('click',downloadTemplatePdf);
+  $('saveConfig').addEventListener('click',exportConfiguration);
+  $('loadExample').addEventListener('click',()=>loadConfiguration(example));
+  $('importConfig').addEventListener('click',()=>$('importFile').click());
+  $('importFile').addEventListener('change',async(event)=>{
+    const file=event.target.files?.[0];if(!file)return;
+    try{const payload=JSON.parse(await file.text());loadConfiguration(payload);}
+    catch(error){showNotice(`No se ha podido importar el archivo: ${error.message}`);setCollapsed(false);}
+    finally{event.target.value='';}
+  });
+  renderLevelFields(defaultLevels(4));
+  startSplash();
+})();

@@ -1,6 +1,21 @@
-# Rubrica v1.1
+# Rúbrica v1.1
+
+## Exportar una rúbrica vacía (PDF)
+
+- El botón **Descargar rúbrica vacía (PDF)** está en la configuración, inmediatamente a la izquierda de **Usar esta rúbrica**. Genera la plantilla directamente desde los campos actuales, incluso antes de activar la evaluación, sin nombres, resultados ni selecciones de alumnos.
+- Incluye la actividad, criterios de evaluación con descripción y peso, niveles de logro con puntuación y descripción, y una matriz de elementos con casillas sin marcar.
+- A4 vertical con 2-3 niveles y horizontal con 4-10 niveles; paginación automática y encabezados repetidos.
+- La descarga se construye **exclusivamente con la configuración**. No altera ni consulta las calificaciones en curso.
+- **Descargar informe PDF** continúa generando los informes individuales, ahora resaltando con un recuadro rojo las calificaciones reales inferiores a 5. La plantilla vacía no resalta puntuaciones de configuración.
+- El nombre visible de la aplicación, incluso en las cabeceras de los PDF, es **Rúbrica**.
 
 Aplicación web local para crear rúbricas, evaluar sucesivamente a distintos alumnos y descargar informes PDF.
+
+## Nuevas funciones: descripciones de niveles de logro
+
+- La tabla **Niveles de logro** dispone de una tercera columna **Descripción** (opcional).
+- Al pasar el cursor sobre un botón de nivel de logro en la rúbrica activa, se muestra su descripción con el mismo tooltip nativo que los códigos de criterio; los niveles sin descripción no muestran tooltip.
+- Las descripciones se guardan en el JSON de configuración y se restauran al importarlo. Las configuraciones antiguas sin descripciones siguen funcionando sin cambios de formato ni de versión.
 
 ## Ajuste visual de legibilidad
 
@@ -10,9 +25,9 @@ Aplicación web local para crear rúbricas, evaluar sucesivamente a distintos al
 
 ## Novedades de la versión 1.1
 
-- Nombre de la aplicación actualizado a **Rubrica**, con identificación de versión **1.1**.
+- Nombre de la aplicación actualizado a **Rúbrica**, con identificación de versión **1.1**.
 - Botón de configuración **Usar esta rúbrica**.
-- Pantalla de presentación de aproximadamente 3 segundos al abrir o recargar, con el nombre Rubrica y el autor **Enrique Benimeli**. No se requiere ninguna descarga.
+- Pantalla de presentación de aproximadamente 3 segundos al abrir o recargar, con el nombre Rúbrica y el autor **Enrique Benimeli**. No se requiere ninguna descarga.
 - Indicador flotante de **Calificación final**, preferentemente en la esquina inferior derecha: se recoloca cuando hay controles próximos, cambia en tiempo real, señala notas provisionales y vuelve a `— / 10` con **Calificar nuevo**. No reemplaza el resumen original.
 
 Los archivos JSON antiguos con `format: "rubric-maker"` y `version: 1` siguen siendo compatibles con esta versión. Esa etiqueta se mantiene como identificador técnico para evitar incompatibilidades.
@@ -49,6 +64,10 @@ El archivo tiene el nombre solicitado / 1.1
 
 Usa coma o punto para los valores decimales (por ejemplo, `2,5` o `2.5`). Los niveles de logro admiten notas entre 0 y 10. Si eliges dos niveles, la propuesta inicial será **Sí (10)** y **No (0)**.
 
+## Indicador de calificaciones insuficientes
+
+Las notas obtenidas inferiores a 5 sobre 10 aparecen con fondo rojo y esquinas redondeadas en los elementos, resúmenes, calificación final y nota flotante, así como en los informes PDF individuales. Se utiliza el valor numérico sin redondear: por ejemplo, 4,995 sigue siendo insuficiente aunque aparezca como 5,00. Los valores exactamente iguales a 5 o superiores, las ponderaciones, los porcentajes y las puntuaciones de configuración no se resaltan.
+
 ## Cómo se calculan las notas
 
 1. La nota de **cada criterio** es la media aritmética de las puntuaciones de sus elementos asociados que ya están calificados.
@@ -67,6 +86,8 @@ Las notas se calculan sin redondeos intermedios y se presentan con dos decimales
 La aplicación no envía información a Internet ni guarda datos personales del alumnado en servidores. **No hay un historial de alumnos**: descarga su PDF antes de pulsar «Calificar nuevo». Los cambios en una evaluación iniciada requieren confirmación antes de perder calificaciones.
 
 ## Informe PDF
+
+Existen dos exportaciones: informe individual y plantilla de rúbrica vacía. Ambas funcionan sin conexión.
 
 El PDF se genera en el navegador con un módulo independiente incluido en `vendor/pdf-export.js`. No descarga bibliotecas de terceros. Usa fuentes PDF estándar con codificación Windows-1252; se admiten los acentos, la eñe y los caracteres habituales del español. Los caracteres fuera de esta codificación (por ejemplo, emojis) se sustituyen por `?` en el PDF. Las tablas se paginan automáticamente, repiten encabezados y evitan cortar las filas, salvo filas excepcionalmente más largas que una página, que continúan en la siguiente.
 
