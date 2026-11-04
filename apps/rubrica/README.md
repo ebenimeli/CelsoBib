@@ -1,3 +1,10 @@
+## Nueva opción: Recomendar
+
+- En el encabezado, a la izquierda de «Funciona sin conexión», el botón azul **Recomendar** despliega dos enlaces con icono: **App** y **Ayuda**. El menú se cierra al pulsar de nuevo, hacer clic fuera o pulsar Escape.
+- **Configura las URL públicas** en las constantes `SHARE_LINKS` situadas al principio de `recommend.js` (`app` y `help`). El proyecto adjunto no incluye las direcciones finales. Mientras estén vacías, al seleccionar cada opción se mostrará un aviso informativo y no se abrirá ninguna dirección inventada.
+- Los enlaces configurados se abren en una nueva pestaña, sin acceso a `window.opener`.
+- El script de construcción `min.sh` incluye ahora `recommend.js` automáticamente al generar `dist/`.
+
 # Rúbrica v1.1
 
 ## Exportar una rúbrica vacía (PDF)
