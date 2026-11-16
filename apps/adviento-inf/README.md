@@ -2,7 +2,7 @@
 
 Calendario de Adviento interactivo para **Educación Infantil (3-5 años)**. Incluye 24 ventanitas, ilustraciones originales y una frase, una oración y un gesto sencillo para cada día. Está pensado para usar con el grupo desde una pizarra digital, pantalla o proyector.
 
-No necesita cuentas, bases de datos, servicios externos ni herramientas de compilación. Está construido con **HTML, CSS, JavaScript nativo y JSON**.
+No necesita cuentas, bases de datos ni herramientas de compilación. Está construido con **HTML, CSS, JavaScript nativo y JSON**. La descarga en PDF incorpora una única biblioteca externa, `html2canvas`, que se carga desde CDN solamente cuando se utiliza el botón de exportación. Para mantener las ilustraciones originales, la aplicación rasteriza temporalmente la imagen que ya muestra cada día antes de componer el PDF; no sustituye ni modifica los SVG de `assets/`.
 
 ## 1. Instalación y ejecución
 
@@ -128,6 +128,7 @@ calendario-adviento/
 ├── index.html          Interfaz y dos cuadros de presentación
 ├── styles.css          Diseño adaptable y animaciones
 ├── app.js              Fechas, 24 puertas, carga y validación del JSON
+├── pdf-export.js       Captura del modal y descarga PDF horizontal
 ├── config.js           Opciones: año, zona horaria, pruebas, animaciones
 ├── content.json        LOS TEXTOS DE LOS 24 DÍAS: principal archivo a editar
 ├── assets/
@@ -141,10 +142,10 @@ calendario-adviento/
 
 ## 8. Uso en el aula
 
-La propuesta de cada día está pensada para durar pocos minutos: **observad la ilustración, escuchad la frase, repetid juntos la oración y realizad el gesto del día**. El botón «Ver ilustración grande» facilita enseñar la escena en la pizarra digital.
+La propuesta de cada día está pensada para durar pocos minutos: **observad la ilustración, escuchad la frase, repetid juntos la oración y realizad el gesto del día**. El botón «Ver ilustración grande» facilita enseñar la escena en la pizarra digital. En cada día abierto también aparece **«Descargar PDF»**: guarda una diapositiva apaisada 16:9 (una sola página, 960 × 540 puntos, con una imagen de 2400 × 1350 píxeles) que conserva la ilustración, el título, la frase, la oración y el gesto, sin botones. El PDF se genera **íntegramente en el navegador**, sin subir el contenido a servidores. Antes de capturar la diapositiva, el navegador convierte en memoria la ilustración original ya cargada (SVG, PNG, JPEG o WebP) a un PNG de alta resolución; `html2canvas` recibe así la imagen renderizada por el propio navegador y no tiene que interpretar de nuevo los SVG. Si la ilustración original no está disponible, se muestra un error en vez de exportar por error la imagen alternativa. Para usar la exportación, el navegador debe poder descargar la biblioteca `html2canvas` desde CDN (se carga bajo demanda). El resto del calendario no depende de ella. Los archivos se guardan con nombres como `Adviento_Dia_01.pdf`. Se recomienda usar una versión actual de Chrome o Firefox para la exportación; algunos navegadores restringen las capturas HTML basadas en SVG, por lo que se utiliza la rasterización previa descrita.
 
 Los mensajes están redactados para Infantil y ponen en el centro la espera del nacimiento de Jesús. El contenido de la secuencia es intencionalmente sencillo y puede adaptarse a la programación pastoral de tu centro desde `content.json`.
 
 ---
 
-**Privacidad y accesibilidad:** no se recopilan datos personales, no hay métricas ni solicitudes a servicios externos. Las puertas se pueden usar con pantalla táctil, ratón y teclado; los cuadros de diálogo son accesibles y las imágenes disponen de descripciones alternativas. Las animaciones respetan la preferencia de movimiento reducido.
+**Privacidad y accesibilidad:** no se recopilan datos personales, no hay métricas ni se envían datos personales o contenidos a servidores. La descarga en PDF necesita una conexión a CDN para cargar `html2canvas`. Las puertas se pueden usar con pantalla táctil, ratón y teclado; los cuadros de diálogo son accesibles y las imágenes disponen de descripciones alternativas. Las animaciones respetan la preferencia de movimiento reducido.

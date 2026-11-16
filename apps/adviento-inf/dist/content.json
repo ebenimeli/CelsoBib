@@ -1,0 +1,220 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "title": "¡Empieza la espera!",
+      "message": "Preparamos el corazón para recibir a Jesús.",
+      "prayer": "Jesús, queremos esperarte con alegría.",
+      "action": "Hoy regalamos una sonrisa.",
+      "image": "assets/day01.svg",
+      "imageAlt": "Una niña sostiene un farol encendido bajo un cielo lleno de estrellas."
+    },
+    {
+      "day": 2,
+      "title": "Dios nos quiere",
+      "message": "El amor de Dios nos acompaña siempre.",
+      "prayer": "Gracias, Dios, por querernos tanto.",
+      "action": "Hoy decimos «te quiero» en casa.",
+      "image": "assets/day02.svg",
+      "imageAlt": "Una casa acogedora y una familia reunida bajo un gran corazón."
+    },
+    {
+      "day": 3,
+      "title": "Una noticia preciosa",
+      "message": "El ángel Gabriel trae una noticia a María.",
+      "prayer": "María, enséñanos a escuchar a Dios.",
+      "action": "Hoy escuchamos cuando alguien habla.",
+      "image": "assets/day03.svg",
+      "imageAlt": "El ángel Gabriel visita a María y le comunica una buena noticia."
+    },
+    {
+      "day": 4,
+      "title": "El sí de María",
+      "message": "María dice sí al plan de Dios.",
+      "prayer": "María, ayúdanos a decir sí al bien.",
+      "action": "Hoy ayudamos cuando nos lo piden.",
+      "image": "assets/day04.svg",
+      "imageAlt": "María, con las manos sobre el corazón, sonríe bajo una luz dorada."
+    },
+    {
+      "day": 5,
+      "title": "José confía en Dios",
+      "message": "José cuida de María con mucho cariño.",
+      "prayer": "Jesús, ayúdanos a cuidar a los demás.",
+      "action": "Hoy cuidamos nuestros materiales.",
+      "image": "assets/day05.svg",
+      "imageAlt": "José prepara con cuidado una pequeña cuna de madera."
+    },
+    {
+      "day": 6,
+      "title": "Una familia que se quiere",
+      "message": "María y José esperan juntos a Jesús.",
+      "prayer": "Dios, bendice a todas las familias.",
+      "action": "Hoy damos las gracias a nuestra familia.",
+      "image": "assets/day06.svg",
+      "imageAlt": "María y José aparecen juntos delante de una pequeña casa."
+    },
+    {
+      "day": 7,
+      "title": "Preparamos el camino",
+      "message": "Cada gesto bueno nos acerca a Jesús.",
+      "prayer": "Jesús, acompáñanos en nuestro camino.",
+      "action": "Hoy ordenamos algo entre todos.",
+      "image": "assets/day07.svg",
+      "imageAlt": "Un camino de piedras iluminadas conduce a una estrella brillante."
+    },
+    {
+      "day": 8,
+      "title": "María, llena de gracia",
+      "message": "Dios eligió a María para ser madre de Jesús.",
+      "prayer": "María, acompáñanos y cuídanos.",
+      "action": "Hoy llevamos una flor de papel a María.",
+      "image": "assets/day08.svg",
+      "imageAlt": "María entre flores blancas, con una luz suave a su alrededor."
+    },
+    {
+      "day": 9,
+      "title": "Compartir nos hace felices",
+      "message": "Jesús nos enseña a compartir con alegría.",
+      "prayer": "Jesús, danos un corazón generoso.",
+      "action": "Hoy compartimos un juguete.",
+      "image": "assets/day09.svg",
+      "imageAlt": "Dos niños comparten un osito de peluche sonriendo."
+    },
+    {
+      "day": 10,
+      "title": "Un poquito para ti",
+      "message": "Podemos compartir lo que tenemos.",
+      "prayer": "Jesús, ayúdanos a pensar en los demás.",
+      "action": "Hoy ofrecemos algo a un compañero.",
+      "image": "assets/day10.svg",
+      "imageAlt": "Dos niños comparten pan junto a una mesa de madera."
+    },
+    {
+      "day": 11,
+      "title": "Palabras que abrazan",
+      "message": "Las palabras bonitas alegran el corazón.",
+      "prayer": "Jesús, enséñanos a hablar con cariño.",
+      "action": "Hoy decimos algo bonito a un amigo.",
+      "image": "assets/day11.svg",
+      "imageAlt": "Dos amigos se saludan con cariño y pequeños corazones a su alrededor."
+    },
+    {
+      "day": 12,
+      "title": "¡Gracias, Señor!",
+      "message": "Damos gracias a Dios por cada regalo.",
+      "prayer": "Gracias, Jesús, por las personas que nos cuidan.",
+      "action": "Hoy decimos gracias tres veces.",
+      "image": "assets/day12.svg",
+      "imageAlt": "Una familia da gracias antes de compartir la comida."
+    },
+    {
+      "day": 13,
+      "title": "Una luz pequeñita",
+      "message": "Jesús nos invita a llevar luz y amor.",
+      "prayer": "Jesús, que nuestra bondad brille.",
+      "action": "Hoy ayudamos sin que nos lo pidan.",
+      "image": "assets/day13.svg",
+      "imageAlt": "Una vela encendida ilumina la noche y a dos niños cercanos."
+    },
+    {
+      "day": 14,
+      "title": "Hacemos las paces",
+      "message": "Jesús nos enseña a perdonar y querer.",
+      "prayer": "Jesús, danos un corazón lleno de paz.",
+      "action": "Hoy pedimos perdón si nos equivocamos.",
+      "image": "assets/day14.svg",
+      "imageAlt": "Dos niños se abrazan después de hacer las paces."
+    },
+    {
+      "day": 15,
+      "title": "Cuidamos como el pastor",
+      "message": "Un buen pastor cuida a sus ovejitas.",
+      "prayer": "Jesús, ayúdanos a cuidar con ternura.",
+      "action": "Hoy tratamos con cariño a los demás.",
+      "image": "assets/day15.svg",
+      "imageAlt": "Un pastor sonriente acompaña a dos ovejitas sobre una colina."
+    },
+    {
+      "day": 16,
+      "title": "Amor en cosas pequeñas",
+      "message": "Un gesto pequeño puede dar mucho amor.",
+      "prayer": "Jesús, haznos atentos a quien necesita ayuda.",
+      "action": "Hoy recogemos algo que se ha caído.",
+      "image": "assets/day16.svg",
+      "imageAlt": "Una niña ayuda a otro niño a recoger sus lápices del suelo."
+    },
+    {
+      "day": 17,
+      "title": "Camino de Belén",
+      "message": "María y José viajan hacia Belén.",
+      "prayer": "Jesús, acompaña a quienes están de viaje.",
+      "action": "Hoy caminamos juntos sin dejar a nadie atrás.",
+      "image": "assets/day17.svg",
+      "imageAlt": "María y José recorren un camino entre colinas hacia Belén."
+    },
+    {
+      "day": 18,
+      "title": "La estrella de la esperanza",
+      "message": "Una estrella nos recuerda que Jesús está cerca.",
+      "prayer": "Jesús, llena nuestra vida de esperanza.",
+      "action": "Hoy animamos a quien esté triste.",
+      "image": "assets/day18.svg",
+      "imageAlt": "Una estrella dorada muy brillante ilumina el cielo de Belén."
+    },
+    {
+      "day": 19,
+      "title": "Hacemos sitio a Jesús",
+      "message": "Preparamos un lugar especial para Jesús.",
+      "prayer": "Jesús, tienes un sitio en nuestro corazón.",
+      "action": "Hoy preparamos un rincón bonito en clase.",
+      "image": "assets/day19.svg",
+      "imageAlt": "Un pesebre vacío con paja limpia espera bajo una ventana iluminada."
+    },
+    {
+      "day": 20,
+      "title": "Una alegría para todos",
+      "message": "¡Dios nos regala una noticia maravillosa!",
+      "prayer": "Gracias, Jesús, por traer alegría al mundo.",
+      "action": "Hoy compartimos una buena noticia.",
+      "image": "assets/day20.svg",
+      "imageAlt": "Un ángel sonriente anuncia una gran alegría entre las estrellas."
+    },
+    {
+      "day": 21,
+      "title": "Los pastores escuchan",
+      "message": "Los pastores reciben la noticia de Jesús.",
+      "prayer": "Jesús, ayúdanos a escuchar con atención.",
+      "action": "Hoy escuchamos un cuento sin interrumpir.",
+      "image": "assets/day21.svg",
+      "imageAlt": "Un ángel aparece ante dos pastores y sus ovejitas de noche."
+    },
+    {
+      "day": 22,
+      "title": "Regalos del corazón",
+      "message": "El mejor regalo es dar cariño.",
+      "prayer": "Jesús, enséñanos a querer de verdad.",
+      "action": "Hoy hacemos un dibujo para alguien.",
+      "image": "assets/day22.svg",
+      "imageAlt": "Una niña entrega a un amigo un regalo hecho con mucho cariño."
+    },
+    {
+      "day": 23,
+      "title": "¡Belén está muy cerca!",
+      "message": "María y José buscan un lugar para descansar.",
+      "prayer": "Jesús, que nadie se sienta solo.",
+      "action": "Hoy invitamos a jugar a quien esté solo.",
+      "image": "assets/day23.svg",
+      "imageAlt": "María y José llegan a las casas iluminadas de Belén."
+    },
+    {
+      "day": 24,
+      "title": "¡Ya casi es Navidad!",
+      "message": "Esta noche celebramos el nacimiento de Jesús.",
+      "prayer": "Ven, Jesús, llena nuestros corazones de amor.",
+      "action": "Hoy damos un abrazo y deseamos feliz Navidad.",
+      "image": "assets/day24.svg",
+      "imageAlt": "María y José esperan junto al pesebre preparado bajo la estrella de Belén."
+    }
+  ]
+}
