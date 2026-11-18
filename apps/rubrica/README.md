@@ -1,3 +1,21 @@
+## Calificación rápida por niveles (selección general)
+
+- En **Rúbrica activa**, cada nivel de logro tiene un botón con flecha descendente en la cabecera de la tabla (o en una barra superior cuando se usa el móvil). Al pulsarlo, se asigna ese nivel a **todos** los elementos sin confirmación.
+- La selección general **no bloquea** las filas: puedes cambiar individualmente cualquier elemento a otro nivel o desmarcarlo (vuelve a pulsar su nivel seleccionado).
+- Si pulsas otro botón general, se sustituyen las selecciones anteriores de todas las filas, incluidas las excepciones individuales. Después, puedes volver a ajustar cada fila.
+- Las notas, los criterios, la calificación flotante, el progreso y los informes PDF/.txt utilizan el estado actualizado de cada elemento.
+- Con muchos niveles puede desplazarse horizontalmente la tabla en escritorio para mantener alineadas las columnas; en móvil se muestra un conjunto de botones adaptado al ancho disponible.
+- Esta entrega incluye la actualización funcional de `dist/`. Para aplicar la minificación y la ofuscación completas al código actualizado, ejecuta `bash min.sh` en tu Mac.
+
+## Copiar informe en texto plano (.txt)
+
+- Junto a **Descargar informe PDF**, el nuevo botón **.txt** copia al portapapeles un informe de la evaluación en texto plano, sin descargar ningún archivo.
+- El informe contiene la actividad, nombre del alumno (si existe), elementos con criterios y niveles seleccionados, resumen por criterios, pesos y nota final.
+- Los elementos o criterios aún no calificados aparecen como `Pendiente`. Las calificaciones parciales llevan la indicación `(provisional)`.
+- Se utilizan las mismas notas que en la interfaz y el PDF, con coma decimal y dos decimales. Para la copia se intenta la API moderna del portapapeles y, si falla (por ejemplo al abrir el HTML localmente), se prueba un método alternativo.
+- La confirmación aparece junto a los botones de exportación. El botón PDF conserva su funcionamiento.
+- **Carpeta `dist/`:** incluye esta función y puede ejecutarse directamente. Para volver a minificar y ofuscar todos los archivos de `dist/`, ejecuta `bash min.sh` con Node.js y las herramientas npm disponibles.
+
 ## Nueva opción: Recomendar
 
 - En el encabezado, a la izquierda de «Funciona sin conexión», el botón azul **Recomendar** despliega dos enlaces con icono: **App** y **Ayuda**. El menú se cierra al pulsar de nuevo, hacer clic fuera o pulsar Escape.
