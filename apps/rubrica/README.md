@@ -1,4 +1,4 @@
-# Rúbrica v1.2
+# Rúbrica v1.3
 
 Aplicación web local para diseñar rúbricas, evaluar criterios de forma ágil y generar informes PDF sin conexión, sin cuentas y sin enviar datos a servidores.
 
@@ -10,6 +10,14 @@ Aplicación web local para diseñar rúbricas, evaluar criterios de forma ágil 
 4. Pulsa **Usar esta rúbrica**, califica los elementos y descarga el informe PDF de cada alumno antes de pulsar **Calificar nuevo**.
 
 También puedes probar la nueva configuración con **Cargar ejemplo**.
+
+## Novedades de v1.3: modo oscuro y modo claro
+
+- Selector discreto de luna/sol en la esquina superior derecha, después de «Funciona sin conexión» en pantallas donde se muestra este indicador.
+- Modo claro original por defecto; modo oscuro completo para configuración, evaluación, descriptores, menús y ventanas informativas.
+- Cambio inmediato sin recargar ni perder calificaciones, y preferencia almacenada en `localStorage` (clave `rubrica-theme`). En navegadores que restringen el almacenamiento, el selector continúa funcionando durante la sesión.
+- Preferencia local independiente de los JSON. Los documentos PDF siguen generándose con el diseño claro original, independientemente del modo elegido.
+- Teclado, etiquetas accesibles, compatibilidad táctil y reducción de movimiento respetada.
 
 ## Novedades de v1.2: descriptores por elemento y nivel
 
@@ -72,6 +80,7 @@ rubrica/
 ├── index.html
 ├── styles.css
 ├── app.js
+├── theme.js
 ├── recommend.js
 ├── vendor/
 │   └── pdf-export.js
@@ -80,6 +89,8 @@ rubrica/
 │   ├── index.html
 │   ├── styles.css
 │   ├── app.js
+│   ├── theme.js
+├── theme.js
 │   ├── recommend.js
 │   └── vendor/pdf-export.js
 └── README.md
