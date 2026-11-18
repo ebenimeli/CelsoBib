@@ -1,131 +1,92 @@
-## Calificación rápida por niveles (selección general)
+# Rúbrica v1.2
 
-- En **Rúbrica activa**, cada nivel de logro tiene un botón con flecha descendente en la cabecera de la tabla (o en una barra superior cuando se usa el móvil). Al pulsarlo, se asigna ese nivel a **todos** los elementos sin confirmación.
-- La selección general **no bloquea** las filas: puedes cambiar individualmente cualquier elemento a otro nivel o desmarcarlo (vuelve a pulsar su nivel seleccionado).
-- Si pulsas otro botón general, se sustituyen las selecciones anteriores de todas las filas, incluidas las excepciones individuales. Después, puedes volver a ajustar cada fila.
-- Las notas, los criterios, la calificación flotante, el progreso y los informes PDF/.txt utilizan el estado actualizado de cada elemento.
-- Con muchos niveles puede desplazarse horizontalmente la tabla en escritorio para mantener alineadas las columnas; en móvil se muestra un conjunto de botones adaptado al ancho disponible.
-- Esta entrega incluye la actualización funcional de `dist/`. Para aplicar la minificación y la ofuscación completas al código actualizado, ejecuta `bash min.sh` en tu Mac.
+Aplicación web local para diseñar rúbricas, evaluar criterios de forma ágil y generar informes PDF sin conexión, sin cuentas y sin enviar datos a servidores.
 
-## Copiar informe en texto plano (.txt)
+## Abrir la aplicación
 
-- Junto a **Descargar informe PDF**, el nuevo botón **.txt** copia al portapapeles un informe de la evaluación en texto plano, sin descargar ningún archivo.
-- El informe contiene la actividad, nombre del alumno (si existe), elementos con criterios y niveles seleccionados, resumen por criterios, pesos y nota final.
-- Los elementos o criterios aún no calificados aparecen como `Pendiente`. Las calificaciones parciales llevan la indicación `(provisional)`.
-- Se utilizan las mismas notas que en la interfaz y el PDF, con coma decimal y dos decimales. Para la copia se intenta la API moderna del portapapeles y, si falla (por ejemplo al abrir el HTML localmente), se prueba un método alternativo.
-- La confirmación aparece junto a los botones de exportación. El botón PDF conserva su funcionamiento.
-- **Carpeta `dist/`:** incluye esta función y puede ejecutarse directamente. Para volver a minificar y ofuscar todos los archivos de `dist/`, ejecuta `bash min.sh` con Node.js y las herramientas npm disponibles.
+1. Descomprime el ZIP.
+2. Abre `rubrica/index.html` (o `rubrica/dist/index.html`) con un navegador actualizado: Chrome, Edge, Safari o Firefox.
+3. Define el nombre de la actividad, los criterios y elementos de evaluación y los niveles de logro.
+4. Pulsa **Usar esta rúbrica**, califica los elementos y descarga el informe PDF de cada alumno antes de pulsar **Calificar nuevo**.
 
-## Nueva opción: Recomendar
+También puedes probar la nueva configuración con **Cargar ejemplo**.
 
-- En el encabezado, a la izquierda de «Funciona sin conexión», el botón azul **Recomendar** despliega dos enlaces con icono: **App** y **Ayuda**. El menú se cierra al pulsar de nuevo, hacer clic fuera o pulsar Escape.
-- **Configura las URL públicas** en las constantes `SHARE_LINKS` situadas al principio de `recommend.js` (`app` y `help`). El proyecto adjunto no incluye las direcciones finales. Mientras estén vacías, al seleccionar cada opción se mostrará un aviso informativo y no se abrirá ninguna dirección inventada.
-- Los enlaces configurados se abren en una nueva pestaña, sin acceso a `window.opener`.
-- El script de construcción `min.sh` incluye ahora `recommend.js` automáticamente al generar `dist/`.
+## Novedades de v1.2: descriptores por elemento y nivel
 
-# Rúbrica v1.1
+- Los niveles de logro muestran, inicialmente, **solo la etiqueta y la puntuación**. Se configuran de 2 a 10 niveles, con valores entre 0 y 10.
+- **Detallar niveles de logro** abre una tabla editable: filas = elementos, columnas = niveles. Cada celda admite una descripción opcional. **Ocultar detalles** vuelve a contraer la tabla sin borrar el contenido.
+- Los descriptores acompañan a su elemento y nivel aunque se cambie el orden de las líneas de elementos o se utilicen las flechas para reordenar niveles. También se conservan al editar su etiqueta o puntuación.
+- En la **Rúbrica activa**, el descriptor específico aparece al pasar el cursor sobre un botón o al recibir foco con el teclado. En dispositivos táctiles se puede consultar mediante el pequeño icono de información. Los botones de calificación siguen seleccionándose mediante un clic.
+- El **informe PDF** y la **plantilla vacía PDF** incluyen, si hay descriptores, una sección de matriz analítica. Con muchos niveles, se distribuye en tablas de hasta cuatro columnas por grupo para evitar textos ilegibles. Si no hay descriptores, no se añade esta sección.
+- **Guardar rúbrica** e **Importar rúbrica** sustituyen las etiquetas «Guardar JSON» e «Importar JSON». Los archivos siguen siendo `.json`.
+- El ejemplo incluye tres elementos de programación, cuatro niveles de logro (*Excellent*, *Very good*, *Good* e *Insufficient*) y los doce descriptores correspondientes.
 
-## Exportar una rúbrica vacía (PDF)
+## Compatibilidad del JSON
 
-- El botón **Descargar rúbrica vacía (PDF)** está en la configuración, inmediatamente a la izquierda de **Usar esta rúbrica**. Genera la plantilla directamente desde los campos actuales, incluso antes de activar la evaluación, sin nombres, resultados ni selecciones de alumnos.
-- Incluye la actividad, criterios de evaluación con descripción y peso, niveles de logro con puntuación y descripción, y una matriz de elementos con casillas sin marcar.
-- A4 vertical con 2-3 niveles y horizontal con 4-10 niveles; paginación automática y encabezados repetidos.
-- La descarga se construye **exclusivamente con la configuración**. No altera ni consulta las calificaciones en curso.
-- **Descargar informe PDF** continúa generando los informes individuales, ahora resaltando con un recuadro rojo las calificaciones reales inferiores a 5. La plantilla vacía no resalta puntuaciones de configuración.
-- El nombre visible de la aplicación, incluso en las cabeceras de los PDF, es **Rúbrica**.
+El nuevo formato mantiene `format: "rubric-maker"` y utiliza `version: 2`. Incluye `levels` con identificadores estables, `items` con identificadores y las entradas `descriptors` asociadas a esos identificadores, además de los campos de configuración habituales.
 
-Aplicación web local para crear rúbricas, evaluar sucesivamente a distintos alumnos y descargar informes PDF.
+Se **siguen importando los archivos de la versión 1**. Si contenían una descripción general para un nivel, se convierte en un descriptor de ese nivel para cada elemento, para no perder esa información. Si no contenían descripciones, los descriptores permanecen vacíos y ocultos inicialmente.
 
-## Nuevas funciones: descripciones de niveles de logro
-
-- La tabla **Niveles de logro** dispone de una tercera columna **Descripción** (opcional).
-- Al pasar el cursor sobre un botón de nivel de logro en la rúbrica activa, se muestra su descripción con el mismo tooltip nativo que los códigos de criterio; los niveles sin descripción no muestran tooltip.
-- Las descripciones se guardan en el JSON de configuración y se restauran al importarlo. Las configuraciones antiguas sin descripciones siguen funcionando sin cambios de formato ni de versión.
-
-## Ajuste visual de legibilidad
-
-- Incrementados ligeramente los tamaños de letra de etiquetas, instrucciones, campos de texto, botones, tablas, estados y nota flotante.
-- Aplicada una escala tipográfica reutilizable mediante variables CSS y pequeños ajustes de altura y alineación.
-- Sin cambios en la lógica de evaluación, los cálculos, la exportación PDF ni el resto de funcionalidades. Se mantiene la versión 1.1.
-
-## Novedades de la versión 1.1
-
-- Nombre de la aplicación actualizado a **Rúbrica**, con identificación de versión **1.1**.
-- Botón de configuración **Usar esta rúbrica**.
-- Pantalla de presentación de aproximadamente 3 segundos al abrir o recargar, con el nombre Rúbrica y el autor **Enrique Benimeli**. No se requiere ninguna descarga.
-- Indicador flotante de **Calificación final**, preferentemente en la esquina inferior derecha: se recoloca cuando hay controles próximos, cambia en tiempo real, señala notas provisionales y vuelve a `— / 10` con **Calificar nuevo**. No reemplaza el resumen original.
-
-Los archivos JSON antiguos con `format: "rubric-maker"` y `version: 1` siguen siendo compatibles con esta versión. Esa etiqueta se mantiene como identificador técnico para evitar incompatibilidades.
-
-## Abrir
-
-1. Descomprime el archivo ZIP.
-2. Abre `index.html` con Chrome, Edge, Firefox o Safari actualizado. No necesitas instalación, servidor ni Internet.
-3. Introduce una actividad, los elementos que se calificarán y sus códigos de criterio. Opcionalmente, define las descripciones y los pesos.
-4. Configura entre 2 y 10 niveles de logro. Pulsa **Usar esta rúbrica**.
-5. Escribe el nombre del alumno (opcional), selecciona niveles y descarga el informe PDF. **Calificar nuevo** deja la rúbrica preparada para el siguiente alumno.
-
-Puedes pulsar **Cargar ejemplo** para probar inmediatamente el funcionamiento.
+Los JSON guardan **solo la configuración**: nunca el nombre ni las notas de alumnos.
 
 ## Formatos de entrada
 
-**Criterios** (opcionales): una línea por criterio, `código / descripción / peso`.
+**Criterios de evaluación**: una línea por criterio, `código / descripción / peso` (opcionales, peso por defecto 1).
 
 ```text
 1.1 / Presentación del trabajo / 1
-2.3 / Programa mediante estructuras de control / 3
-2.4 / Comprueba y depura el programa / 2
+2.3 / Programación de soluciones / 3
+2.4 / Comprobación y depuración / 2
 ```
 
-La descripción y el peso se pueden omitir. El peso por defecto es 1. Los códigos no definidos expresamente se crean al encontrar un elemento que los utiliza.
-
-**Elementos** (obligatorios): una línea por elemento, `descripción / código, código`.
+**Elementos a calificar**: una línea por elemento, `elemento / código, código`.
 
 ```text
-Inicializa las variables / 2.3
+Inicializa correctamente las variables / 2.3
 Organiza el código / 2.3, 2.4
 El archivo tiene el nombre solicitado / 1.1
 ```
 
-Usa coma o punto para los valores decimales (por ejemplo, `2,5` o `2.5`). Los niveles de logro admiten notas entre 0 y 10. Si eliges dos niveles, la propuesta inicial será **Sí (10)** y **No (0)**.
+Acepta coma o punto decimal. Si un elemento utiliza un código de criterio que no se haya definido expresamente, se crea con peso 1.
 
-## Indicador de calificaciones insuficientes
+## Evaluación y calificaciones
 
-Las notas obtenidas inferiores a 5 sobre 10 aparecen con fondo rojo y esquinas redondeadas en los elementos, resúmenes, calificación final y nota flotante, así como en los informes PDF individuales. Se utiliza el valor numérico sin redondear: por ejemplo, 4,995 sigue siendo insuficiente aunque aparezca como 5,00. Los valores exactamente iguales a 5 o superiores, las ponderaciones, los porcentajes y las puntuaciones de configuración no se resaltan.
+- La **nota de cada criterio** es la media de sus elementos ya calificados. Un elemento puede intervenir en varios criterios.
+- La **nota final** es la media ponderada de los criterios disponibles, según sus pesos.
+- Los elementos pendientes **no cuentan como cero** y el resultado se identifica como provisional.
+- Las calificaciones reales por debajo de 5 se resaltan visualmente.
+- Los botones **Asignar a todos** aplican un mismo nivel a todos los elementos; las filas siguen pudiendo corregirse individualmente.
+- El indicador flotante muestra la nota final actual y busca una zona de pantalla que no tape controles relevantes.
+- El botón **.txt** copia un informe de texto plano; **Descargar informe PDF** genera el informe en PDF.
 
-## Cómo se calculan las notas
+## Informes PDF
 
-1. La nota de **cada criterio** es la media aritmética de las puntuaciones de sus elementos asociados que ya están calificados.
-2. La nota **final de la actividad** es la media ponderada de las notas de los criterios disponibles, según el peso de cada criterio.
-3. Los elementos pendientes no son ceros. Mientras falten elementos, las notas se señalan como **provisionales**.
-4. Un mismo elemento puede contribuir a la nota de varios criterios cuando está asociado a varios códigos.
+El motor autónomo `vendor/pdf-export.js` permite generar tanto el **informe individual** como la **rúbrica vacía** sin bibliotecas externas ni conexión. La plantilla vacía no consulta notas ni nombres de alumnos.
 
-Las notas se calculan sin redondeos intermedios y se presentan con dos decimales.
+Se utilizan fuentes PDF estándar en codificación Windows-1252, con soporte para caracteres habituales del español y de otras lenguas occidentales. Otros símbolos, como muchos emojis, pueden aparecer como `?`. Los documentos paginan las tablas y repiten las cabeceras; las filas muy largas pueden continuar en la página siguiente.
 
-## Reutilizar una rúbrica
-
-- **Calificar nuevo** borra las calificaciones y el nombre del alumno actual, pero conserva íntegra la rúbrica.
-- **Guardar JSON** descarga la configuración (nunca contiene las notas de alumnos).
-- **Importar JSON** recupera una configuración guardada desde otro navegador u ordenador.
-
-La aplicación no envía información a Internet ni guarda datos personales del alumnado en servidores. **No hay un historial de alumnos**: descarga su PDF antes de pulsar «Calificar nuevo». Los cambios en una evaluación iniciada requieren confirmación antes de perder calificaciones.
-
-## Informe PDF
-
-Existen dos exportaciones: informe individual y plantilla de rúbrica vacía. Ambas funcionan sin conexión.
-
-El PDF se genera en el navegador con un módulo independiente incluido en `vendor/pdf-export.js`. No descarga bibliotecas de terceros. Usa fuentes PDF estándar con codificación Windows-1252; se admiten los acentos, la eñe y los caracteres habituales del español. Los caracteres fuera de esta codificación (por ejemplo, emojis) se sustituyen por `?` en el PDF. Las tablas se paginan automáticamente, repiten encabezados y evitan cortar las filas, salvo filas excepcionalmente más largas que una página, que continúan en la siguiente.
-
-## Archivos
+## Archivos y distribución
 
 ```text
-rubrica-v1.1/
-├── index.html           Estructura semántica de la página
-├── styles.css           Diseño adaptable y estilos
-├── app.js               Validaciones, interfaz, cálculo y archivos JSON
+rubrica/
+├── index.html
+├── styles.css
+├── app.js
+├── recommend.js
 ├── vendor/
-│   └── pdf-export.js    Generador PDF autónomo
-└── README.md            Instrucciones de uso
+│   └── pdf-export.js
+├── min.sh
+├── dist/                Copia de distribución funcional, lista para abrir
+│   ├── index.html
+│   ├── styles.css
+│   ├── app.js
+│   ├── recommend.js
+│   └── vendor/pdf-export.js
+└── README.md
 ```
 
-Todo el proyecto funciona con archivos locales y JavaScript nativo; no requiere instalación de paquetes ni compilación.
+**`dist/` se entrega funcional y sincronizada con el código fuente**, sin ofuscación previa. Si quieres una compilación minificada y ofuscada, ejecuta `bash min.sh` desde `rubrica/` en un equipo con Node.js; la primera ejecución necesita instalar las herramientas npm necesarias y puede requerir Internet. El código fuente no se modifica.
+
+El menú **Recomendar** puede configurarse mediante las URL de `recommend.js`. Si no se proporcionan URL públicas, informa de ello sin inventar direcciones.
+
+No hay historial automático de alumnos: descarga el PDF de cada evaluación antes de empezar otra. Los cálculos y los datos se procesan localmente en el navegador.
