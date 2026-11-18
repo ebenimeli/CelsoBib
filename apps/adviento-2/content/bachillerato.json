@@ -1,0 +1,220 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "title": "¿Qué estás esperando?",
+      "message": "La espera no tiene por qué ser un tiempo vacío. El Adviento invita a preguntarnos qué deseamos de verdad y qué estamos dispuestos a cambiar para acercarnos a ello. No todo lo urgente es importante.",
+      "prayer": "Señor, enséñame a distinguir el ruido de lo que merece mi vida.",
+      "action": "Escribe una esperanza que no se compre y un primer paso que dependa de ti.",
+      "image": "assets/illustrations/bachillerato/day-01.svg",
+      "imageAlt": "Ilustración conceptual: ¿qué estás esperando?"
+    },
+    {
+      "day": 2,
+      "title": "Antes de demostrar nada",
+      "message": "Entre notas, expectativas y comparaciones, podemos confundir lo que hacemos con lo que valemos. La dignidad no se obtiene por méritos: se reconoce y se protege, también en quien piensa distinto.",
+      "prayer": "Dios de la vida, que nunca mida a nadie solo por sus resultados.",
+      "action": "Reconoce hoy una capacidad o cualidad de alguien sin compararla con la de otros.",
+      "image": "assets/illustrations/bachillerato/day-02.svg",
+      "imageAlt": "Ilustración conceptual: antes de demostrar nada"
+    },
+    {
+      "day": 3,
+      "title": "Escuchar lo que importa",
+      "message": "María recibe una noticia que rompe sus planes. A veces una pregunta auténtica nos obliga a abandonar respuestas automáticas. La escucha profunda necesita tiempo, silencio y el valor de no tener todo resuelto.",
+      "prayer": "María, acompáñanos cuando escuchar resulte más difícil que responder.",
+      "action": "Reserva diez minutos sin pantalla para preguntarte qué necesitas escuchar.",
+      "image": "assets/illustrations/bachillerato/day-03.svg",
+      "imageAlt": "Ilustración conceptual: escuchar lo que importa"
+    },
+    {
+      "day": 4,
+      "title": "Un sí que tiene consecuencias",
+      "message": "Elegir libremente no consiste solo en multiplicar opciones. También supone asumir las consecuencias de nuestros compromisos. El sí de María recuerda que la libertad puede ponerse al servicio de algo mayor que uno mismo.",
+      "prayer": "Señor, dame una libertad capaz de sostener lo que elijo.",
+      "action": "Cumple hoy un compromiso pendiente aunque nadie vaya a felicitarte.",
+      "image": "assets/illustrations/bachillerato/day-04.svg",
+      "imageAlt": "Ilustración conceptual: un sí que tiene consecuencias"
+    },
+    {
+      "day": 5,
+      "title": "Cuidar sin aparecer",
+      "message": "José no ocupa el centro de la escena, pero su presencia cambia la historia. El cuidado discreto desafía una cultura que premia lo visible. ¿Quién sostiene tu vida sin recibir reconocimiento?",
+      "prayer": "Dios cercano, hazme atento a quienes cuidan en silencio.",
+      "action": "Agradece con concreción a alguien cuyo esfuerzo suele pasar inadvertido.",
+      "image": "assets/illustrations/bachillerato/day-05.svg",
+      "imageAlt": "Ilustración conceptual: cuidar sin aparecer"
+    },
+    {
+      "day": 6,
+      "title": "Pertenecer sin excluir",
+      "message": "Toda comunidad ofrece refugio, pero también puede levantar fronteras. Una identidad sólida no necesita humillar a quien es distinto. Belén nos invita a pensar qué clase de hogar construimos con nuestras decisiones.",
+      "prayer": "Jesús, ensancha nuestro sentido de pertenencia para que nadie quede fuera.",
+      "action": "Detecta una exclusión cotidiana y actúa para abrir un espacio real.",
+      "image": "assets/illustrations/bachillerato/day-06.svg",
+      "imageAlt": "Ilustración conceptual: pertenecer sin excluir"
+    },
+    {
+      "day": 7,
+      "title": "Mover las piedras del camino",
+      "message": "Preparar el camino, como invita el Adviento, no significa que todo vaya a ser fácil. Significa reconocer obstáculos y empezar a retirarlos: prejuicios, silencios, injusticias y comodidades que otros pagan.",
+      "prayer": "Señor, que mi esperanza se vuelva camino compartido.",
+      "action": "Elige una barrera concreta en tu entorno y da un paso para reducirla.",
+      "image": "assets/illustrations/bachillerato/day-07.svg",
+      "imageAlt": "Ilustración conceptual: mover las piedras del camino"
+    },
+    {
+      "day": 8,
+      "title": "La duda también pregunta",
+      "message": "Creer no exige fingir certezas absolutas. Las preguntas honestas pueden profundizar la fe y mostrar lo que todavía necesitamos comprender. María confía sin conocer el mapa completo.",
+      "prayer": "Dios de la búsqueda, acompaña también nuestras preguntas abiertas.",
+      "action": "Formula una pregunta importante que normalmente prefieres evitar.",
+      "image": "assets/illustrations/bachillerato/day-08.svg",
+      "imageAlt": "Ilustración conceptual: la duda también pregunta"
+    },
+    {
+      "day": 9,
+      "title": "Cuando compartir no basta",
+      "message": "La generosidad alivia necesidades concretas; la justicia nos pregunta por qué existen esas necesidades. El Adviento puede incomodarnos cuando nos invita a pasar de la buena intención a la responsabilidad colectiva.",
+      "prayer": "Señor, abre mis ojos a las causas del sufrimiento y no solo a sus síntomas.",
+      "action": "Investiga una iniciativa solidaria local y descubre cómo puedes colaborar.",
+      "image": "assets/illustrations/bachillerato/day-09.svg",
+      "imageAlt": "Ilustración conceptual: cuando compartir no basta"
+    },
+    {
+      "day": 10,
+      "title": "El valor de tu atención",
+      "message": "Nuestra atención se disputa cada segundo. Dar tiempo sin mirar otra pantalla es una forma de reconocer la dignidad del otro. No siempre falta tiempo: a veces falta presencia.",
+      "prayer": "Jesús, enséñame a estar verdaderamente allí donde estoy.",
+      "action": "Escucha hoy a alguien durante cinco minutos sin interrumpir ni consultar el móvil.",
+      "image": "assets/illustrations/bachillerato/day-10.svg",
+      "imageAlt": "Ilustración conceptual: el valor de tu atención"
+    },
+    {
+      "day": 11,
+      "title": "Las palabras dejan mundo",
+      "message": "Una frase puede abrir una posibilidad o cerrar una puerta. En una conversación o en redes, la libertad de expresión no nos libera de la responsabilidad por el daño que causamos.",
+      "prayer": "Señor, que mis palabras sean firmes sin perder humanidad.",
+      "action": "Antes de publicar o reenviar algo, revisa su verdad, su intención y su efecto.",
+      "image": "assets/illustrations/bachillerato/day-11.svg",
+      "imageAlt": "Ilustración conceptual: las palabras dejan mundo"
+    },
+    {
+      "day": 12,
+      "title": "Reconocer lo recibido",
+      "message": "Agradecer no es ignorar los problemas. Es reconocer que nadie llega solo hasta aquí. Detrás de nuestras oportunidades hay cuidados, trabajos y renuncias que quizá nunca hemos visto.",
+      "prayer": "Gracias, Dios, por las personas que hacen posible mi camino.",
+      "action": "Nombra tres ayudas concretas recibidas este año y expresa una gratitud.",
+      "image": "assets/illustrations/bachillerato/day-12.svg",
+      "imageAlt": "Ilustración conceptual: reconocer lo recibido"
+    },
+    {
+      "day": 13,
+      "title": "Luz sin espectáculo",
+      "message": "Una pequeña luz no elimina toda la oscuridad, pero cambia lo que podemos ver. La esperanza cristiana no necesita exhibirse: se hace creíble cuando alguien permanece, acompaña o defiende.",
+      "prayer": "Jesús, luz discreta, hazme constante donde es más difícil cuidar.",
+      "action": "Haz hoy algo bueno sin contárselo a nadie.",
+      "image": "assets/illustrations/bachillerato/day-13.svg",
+      "imageAlt": "Ilustración conceptual: luz sin espectáculo"
+    },
+    {
+      "day": 14,
+      "title": "Reparar en lugar de ganar",
+      "message": "Pedir perdón no borra automáticamente el daño. Reconciliarse exige reconocer lo ocurrido, escuchar a la otra persona y aceptar que reparar lleva tiempo. No es debilidad: es responsabilidad.",
+      "prayer": "Dios de la misericordia, dame valentía para reparar lo que he roto.",
+      "action": "Identifica un daño pequeño que puedas reparar hoy con hechos.",
+      "image": "assets/illustrations/bachillerato/day-14.svg",
+      "imageAlt": "Ilustración conceptual: reparar en lugar de ganar"
+    },
+    {
+      "day": 15,
+      "title": "Ver a quien no aparece",
+      "message": "Los pastores estaban lejos de los lugares de poder, pero son los primeros invitados a Belén. La Navidad trastoca nuestras jerarquías: quizá lo esencial comienza donde casi nadie mira.",
+      "prayer": "Jesús, recuérdame los nombres de quienes suelen quedar invisibles.",
+      "action": "Acércate sin paternalismo a alguien a quien normalmente ignoras.",
+      "image": "assets/illustrations/bachillerato/day-15.svg",
+      "imageAlt": "Ilustración conceptual: ver a quien no aparece"
+    },
+    {
+      "day": 16,
+      "title": "La coherencia cotidiana",
+      "message": "Nuestros valores no se prueban solo en grandes decisiones, sino en los gestos que repetimos cuando nadie mira. La ética empieza en la forma de tratar a quienes no pueden ofrecernos nada.",
+      "prayer": "Señor, une lo que digo, lo que elijo y lo que hago.",
+      "action": "Elige un hábito cotidiano y ajústalo hoy a un valor que defiendes.",
+      "image": "assets/illustrations/bachillerato/day-16.svg",
+      "imageAlt": "Ilustración conceptual: la coherencia cotidiana"
+    },
+    {
+      "day": 17,
+      "title": "Caminar sin certezas",
+      "message": "María y José avanzan hacia Belén sin controlar todas las circunstancias. También hoy hay personas obligadas a viajar sin seguridad ni elección. La empatía comienza cuando dejamos de simplificar sus historias.",
+      "prayer": "Dios peregrino, que nunca me acostumbre a la intemperie ajena.",
+      "action": "Escucha o lee un testimonio de desplazamiento humano de una fuente fiable.",
+      "image": "assets/illustrations/bachillerato/day-17.svg",
+      "imageAlt": "Ilustración conceptual: caminar sin certezas"
+    },
+    {
+      "day": 18,
+      "title": "Esperar contra la resignación",
+      "message": "La esperanza no consiste en afirmar que todo saldrá bien. Consiste en negarse a aceptar que la injusticia tenga la última palabra. Es una manera de permanecer activos sin negar el dolor.",
+      "prayer": "Señor de la esperanza, sostén mi compromiso cuando falten resultados.",
+      "action": "Escoge una dificultad real y concreta una acción posible, por pequeña que sea.",
+      "image": "assets/illustrations/bachillerato/day-18.svg",
+      "imageAlt": "Ilustración conceptual: esperar contra la resignación"
+    },
+    {
+      "day": 19,
+      "title": "Hacer sitio de verdad",
+      "message": "En Belén no había lugar disponible. La frase interpela a nuestras agendas, grupos y prioridades: ¿a quién dejamos en los márgenes cuando decimos que no tenemos espacio?",
+      "prayer": "Jesús, que mis puertas abiertas sean algo más que una frase.",
+      "action": "Dedica tiempo o espacio a una persona que habitualmente queda fuera.",
+      "image": "assets/illustrations/bachillerato/day-19.svg",
+      "imageAlt": "Ilustración conceptual: hacer sitio de verdad"
+    },
+    {
+      "day": 20,
+      "title": "Alegría sin máscaras",
+      "message": "No siempre podemos estar alegres. La alegría de la Navidad no exige negar la tristeza propia o ajena; propone una compañía que no huye de la fragilidad.",
+      "prayer": "Señor, ayúdame a acompañar sin exigir sonrisas.",
+      "action": "Pregunta con sinceridad cómo está alguien y acepta escuchar la respuesta.",
+      "image": "assets/illustrations/bachillerato/day-20.svg",
+      "imageAlt": "Ilustración conceptual: alegría sin máscaras"
+    },
+    {
+      "day": 21,
+      "title": "La sorpresa de lo pequeño",
+      "message": "Los pastores escuchan una noticia que no llega desde el centro del poder. El Evangelio invita a revisar nuestros criterios: a veces lo que transforma la vida viene de donde menos esperamos.",
+      "prayer": "Jesús, dame humildad para reconocer la verdad en voces inesperadas.",
+      "action": "Escucha con atención una opinión diferente sin preparar tu respuesta.",
+      "image": "assets/illustrations/bachillerato/day-21.svg",
+      "imageAlt": "Ilustración conceptual: la sorpresa de lo pequeño"
+    },
+    {
+      "day": 22,
+      "title": "Lo que no se compra",
+      "message": "La publicidad nos habla de regalos perfectos. Belén presenta otra lógica: cercanía, gratuidad, cuidado. Quizá el regalo más difícil sea ofrecer presencia sin exigir nada a cambio.",
+      "prayer": "Dios que te entregas, enséñame el valor de la gratuidad.",
+      "action": "Regala tiempo, escucha o una ayuda que no implique comprar nada.",
+      "image": "assets/illustrations/bachillerato/day-22.svg",
+      "imageAlt": "Ilustración conceptual: lo que no se compra"
+    },
+    {
+      "day": 23,
+      "title": "La víspera como balance",
+      "message": "Antes de llegar a Navidad, merece la pena mirar el camino recorrido. No para juzgarnos con dureza, sino para reconocer avances, decisiones pendientes y personas que nos han cambiado.",
+      "prayer": "Señor, que aprenda del camino sin quedarme atrapado en mis errores.",
+      "action": "Escribe qué has aprendido en este Adviento y qué quieres mantener después.",
+      "image": "assets/illustrations/bachillerato/day-23.svg",
+      "imageAlt": "Ilustración conceptual: la víspera como balance"
+    },
+    {
+      "day": 24,
+      "title": "Dios entra en la fragilidad",
+      "message": "La Navidad no celebra un poder que se impone, sino a un Dios que se acerca como un recién nacido vulnerable. La Encarnación cuestiona nuestra idea de grandeza y nos pregunta cómo tratamos la fragilidad.",
+      "prayer": "Jesús de Belén, haz que reconozca tu presencia en quien necesita cuidado.",
+      "action": "Celebra la Navidad con un gesto concreto de presencia junto a alguien.",
+      "image": "assets/illustrations/bachillerato/day-24.svg",
+      "imageAlt": "Ilustración conceptual: dios entra en la fragilidad"
+    }
+  ]
+}

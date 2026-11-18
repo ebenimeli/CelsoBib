@@ -1,0 +1,220 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "title": "La espera no es pasividad",
+      "message": "El Adviento nos invita a mirar cómo vivimos, no solo a contar los días que faltan para Navidad. ¿Qué merece realmente nuestra atención estas semanas?",
+      "prayer": "Jesús, ayúdanos a descubrir dónde hace falta nuestra presencia.",
+      "action": "Identifica un hábito que quieras cambiar y comienza hoy con un paso posible.",
+      "image": "assets/illustrations/eso-1-2/day-01.svg",
+      "imageAlt": "Ilustración de esperanza, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 2,
+      "title": "Vales más que una etiqueta",
+      "message": "Las comparaciones, las notas o los comentarios en redes no definen lo que somos. El amor de Dios habla de una dignidad que nadie puede quitarnos.",
+      "prayer": "Señor, que aprendamos a mirarnos con respeto, también a nosotros mismos.",
+      "action": "Evita hoy una comparación y reconoce una cualidad real de otra persona.",
+      "image": "assets/illustrations/eso-1-2/day-02.svg",
+      "imageAlt": "Ilustración de amor incondicional, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 3,
+      "title": "Escuchar más allá del ruido",
+      "message": "María supo detenerse y escuchar una llamada inesperada. Entre notificaciones y prisas, ¿dejamos espacio para escuchar lo importante?",
+      "prayer": "María, enséñanos a atender sin distraernos a quien nos habla.",
+      "action": "Mantén una conversación sin mirar el móvil ni interrumpir.",
+      "image": "assets/illustrations/eso-1-2/day-03.svg",
+      "imageAlt": "Ilustración de anunciación, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 4,
+      "title": "Decir sí también cuesta",
+      "message": "Decidir por uno mismo no siempre significa elegir lo más cómodo. María responde con valentía a algo que no controla del todo.",
+      "prayer": "Señor, danos criterio para elegir lo correcto, aunque cueste.",
+      "action": "No sigas una burla o exclusión, aunque el resto del grupo lo haga.",
+      "image": "assets/illustrations/eso-1-2/day-04.svg",
+      "imageAlt": "Ilustración de sí de María, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 5,
+      "title": "Compromiso sin focos",
+      "message": "José cuida y acompaña sin buscar protagonismo. Hay personas que sostienen nuestro día con gestos que apenas vemos.",
+      "prayer": "Jesús, enséñanos a ser fiables y a cuidar de verdad.",
+      "action": "Cumple un compromiso pendiente sin que tengan que recordártelo.",
+      "image": "assets/illustrations/eso-1-2/day-05.svg",
+      "imageAlt": "Ilustración de cuidado de José, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 6,
+      "title": "Pertenecer sin excluir",
+      "message": "Nos importa sentir que formamos parte de un grupo. Pero ¿quién paga el precio de nuestras bromas, códigos y conversaciones privadas?",
+      "prayer": "Señor, ayúdanos a construir grupos donde nadie tenga que fingir para encajar.",
+      "action": "Incluye con naturalidad a alguien con quien apenas te relacionas.",
+      "image": "assets/illustrations/eso-1-2/day-06.svg",
+      "imageAlt": "Ilustración de familia y acogida, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 7,
+      "title": "Retirar obstáculos",
+      "message": "En los caminos de nuestra convivencia encontramos prejuicios, silencios y malentendidos. Preparar el camino es tomar parte en la solución.",
+      "prayer": "Jesús, enséñanos a derribar barreras y tender puentes.",
+      "action": "Aclara un malentendido sin difundir rumores ni señalar culpables.",
+      "image": "assets/illustrations/eso-1-2/day-07.svg",
+      "imageAlt": "Ilustración de camino y decisiones, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 8,
+      "title": "Creer sin tenerlo todo claro",
+      "message": "La confianza de María no elimina las preguntas. Podemos vivir la fe y tomar decisiones importantes mientras seguimos buscando respuestas.",
+      "prayer": "María, acompaña nuestras preguntas y nuestros momentos de incertidumbre.",
+      "action": "Comparte una pregunta sincera y escucha distintas respuestas con respeto.",
+      "image": "assets/illustrations/eso-1-2/day-08.svg",
+      "imageAlt": "Ilustración de confianza de María, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 9,
+      "title": "Lo justo no siempre es lo fácil",
+      "message": "Compartir no es solo ceder un objeto: es revisar si todos tenemos las mismas oportunidades de participar y ser escuchados.",
+      "prayer": "Señor, haznos sensibles a la desigualdad que ocurre cerca de nosotros.",
+      "action": "Comprueba que todas las personas de tu equipo tienen voz en una decisión.",
+      "image": "assets/illustrations/eso-1-2/day-09.svg",
+      "imageAlt": "Ilustración de compartir, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 10,
+      "title": "Atención, el regalo invisible",
+      "message": "Nuestro tiempo es limitado y las pantallas compiten por él. Escuchar a alguien de verdad puede significar más que cualquier regalo.",
+      "prayer": "Jesús, ayúdanos a estar presentes y disponibles.",
+      "action": "Dedica un recreo a conversar con alguien sin distracciones digitales.",
+      "image": "assets/illustrations/eso-1-2/day-10.svg",
+      "imageAlt": "Ilustración de tiempo y atención, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 11,
+      "title": "Lo que escribes deja huella",
+      "message": "Una captura, un meme o un comentario pueden llegar más lejos de lo imaginado. La responsabilidad también existe detrás de una pantalla.",
+      "prayer": "Señor, cuida nuestras palabras y enséñanos a reparar su daño.",
+      "action": "Antes de enviar un mensaje, pregúntate si lo dirías mirándole a los ojos.",
+      "image": "assets/illustrations/eso-1-2/day-11.svg",
+      "imageAlt": "Ilustración de palabras amables, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 12,
+      "title": "Reconocer lo que otros hacen",
+      "message": "Es fácil fijarse en lo que falta y olvidar el trabajo que hay detrás de lo que disfrutamos. La gratitud nos hace más justos.",
+      "prayer": "Gracias, Dios, por quienes cuidan de nosotros sin hacer ruido.",
+      "action": "Agradece de forma concreta a alguien del centro su trabajo habitual.",
+      "image": "assets/illustrations/eso-1-2/day-12.svg",
+      "imageAlt": "Ilustración de gratitud, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 13,
+      "title": "Una luz no hace ruido",
+      "message": "No todas las personas que mejoran el mundo son famosas. La bondad cotidiana transforma ambientes sin convertirse en noticia.",
+      "prayer": "Jesús, que seamos luz sin buscar reconocimiento.",
+      "action": "Ayuda discretamente a resolver una dificultad de tu clase.",
+      "image": "assets/illustrations/eso-1-2/day-13.svg",
+      "imageAlt": "Ilustración de luz, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 14,
+      "title": "Pedir perdón sin excusas",
+      "message": "Decir «perdón» sirve de poco si después justificamos el daño. Reconciliarse empieza escuchando cómo se sintió la otra persona.",
+      "prayer": "Señor, danos humildad para reconocer lo que hemos hecho mal.",
+      "action": "Revisa un conflicto y piensa qué podrías reparar, no solo explicar.",
+      "image": "assets/illustrations/eso-1-2/day-14.svg",
+      "imageAlt": "Ilustración de perdón, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 15,
+      "title": "¿Quién falta en la foto?",
+      "message": "En los grupos siempre hay alguien más visible y alguien que queda al margen. El Evangelio nos invita a fijarnos en esa ausencia.",
+      "prayer": "Jesús, enséñanos a ver a las personas invisibilizadas.",
+      "action": "Acércate a alguien que suele quedarse fuera, sin convertirlo en espectáculo.",
+      "image": "assets/illustrations/eso-1-2/day-15.svg",
+      "imageAlt": "Ilustración de cuidado de vulnerables, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 16,
+      "title": "Ser coherente en lo pequeño",
+      "message": "Nuestros valores se demuestran en los detalles: cómo hablamos cuando alguien no está y cómo reaccionamos si nadie nos ve.",
+      "prayer": "Señor, ayúdanos a ser la misma persona delante y detrás de los demás.",
+      "action": "Evita una crítica a espaldas de alguien y cambia de conversación.",
+      "image": "assets/illustrations/eso-1-2/day-16.svg",
+      "imageAlt": "Ilustración de gestos cotidianos, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 17,
+      "title": "El viaje de otros",
+      "message": "María y José tuvieron que desplazarse en circunstancias difíciles. Hoy muchas familias viven viajes marcados por la incertidumbre y la necesidad.",
+      "prayer": "Dios, acompaña a quienes buscan un lugar seguro donde vivir.",
+      "action": "Busca una fuente fiable sobre personas refugiadas y comparte un dato respetuoso.",
+      "image": "assets/illustrations/eso-1-2/day-17.svg",
+      "imageAlt": "Ilustración de viaje a Belén, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 18,
+      "title": "Esperanza con los pies en el suelo",
+      "message": "Tener esperanza no es negar los problemas. Es creer que merece la pena actuar incluso cuando el resultado no está asegurado.",
+      "prayer": "Jesús, danos fuerza para seguir construyendo el bien.",
+      "action": "Transforma una queja habitual en una propuesta concreta de mejora.",
+      "image": "assets/illustrations/eso-1-2/day-18.svg",
+      "imageAlt": "Ilustración de estrella de esperanza, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 19,
+      "title": "Abrir espacio al diferente",
+      "message": "En Belén no sobraban comodidades ni lugares. ¿Cuántas veces cerramos nuestras puertas por prejuicios o por miedo a lo distinto?",
+      "prayer": "Señor, ensancha nuestras miradas y nuestra capacidad de acoger.",
+      "action": "Si escuchas un estereotipo, cuestiónalo con respeto y argumentos.",
+      "image": "assets/illustrations/eso-1-2/day-19.svg",
+      "imageAlt": "Ilustración de hospitalidad, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 20,
+      "title": "Alegrarse sin aparentar",
+      "message": "En redes parece que todo el mundo vive momentos perfectos. La alegría auténtica también permite reconocer los días difíciles.",
+      "prayer": "Jesús, que sepamos alegrarnos sin fingir y acompañar sin juzgar.",
+      "action": "Pregunta «¿cómo estás de verdad?» y escucha la respuesta.",
+      "image": "assets/illustrations/eso-1-2/day-20.svg",
+      "imageAlt": "Ilustración de alegría compartida, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 21,
+      "title": "Atreverse a escuchar",
+      "message": "Los pastores dejaron su rutina para responder a una noticia inesperada. Quizá lo importante exige detener el ruido y revisar prioridades.",
+      "prayer": "Señor, ayúdanos a escuchar antes de reaccionar.",
+      "action": "Apaga las notificaciones durante un rato y dedica tiempo a reflexionar.",
+      "image": "assets/illustrations/eso-1-2/day-21.svg",
+      "imageAlt": "Ilustración de anuncio a pastores, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 22,
+      "title": "Menos cosas, más sentido",
+      "message": "La presión por comprar y regalar puede vaciar la Navidad de significado. Hay regalos que no cuestan dinero y dejan recuerdos profundos.",
+      "prayer": "Jesús, enséñanos a dar con libertad y a recibir con gratitud.",
+      "action": "Prepara un gesto personal para alguien en lugar de comprar algo.",
+      "image": "assets/illustrations/eso-1-2/day-22.svg",
+      "imageAlt": "Ilustración de regalos del corazón, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 23,
+      "title": "Revisar el propio camino",
+      "message": "Antes de Navidad merece la pena preguntarnos qué hemos aprendido, a quién hemos cuidado y qué deberíamos mejorar.",
+      "prayer": "Señor, que la reflexión nos lleve a acciones sinceras.",
+      "action": "Anota una decisión buena del Adviento y una que aún tengas pendiente.",
+      "image": "assets/illustrations/eso-1-2/day-23.svg",
+      "imageAlt": "Ilustración de balance del camino, adaptada al nivel eso 1 2"
+    },
+    {
+      "day": 24,
+      "title": "Dios elige la cercanía",
+      "message": "Jesús nace en un lugar sencillo y lejos del poder. La Navidad plantea una pregunta incómoda: ¿a quién damos valor nosotros?",
+      "prayer": "Jesús, ayúdanos a reconocer tu presencia en quien necesita acogida.",
+      "action": "Elige un gesto de cercanía que mantendrás durante las vacaciones.",
+      "image": "assets/illustrations/eso-1-2/day-24.svg",
+      "imageAlt": "Ilustración de nacimiento de Jesús, adaptada al nivel eso 1 2"
+    }
+  ]
+}

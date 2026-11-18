@@ -1,0 +1,220 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "title": "Comienza un camino de esperanza",
+      "message": "El Adviento es un tiempo especial para preparar nuestro corazón. Cada día podemos dar un paso hacia Jesús con algo bueno.",
+      "prayer": "Jesús, acompáñanos durante estos días y enséñanos a esperar con alegría.",
+      "action": "Dibuja una estrella y escribe dentro un gesto amable que quieras hacer.",
+      "image": "assets/illustrations/primaria-1-3/day-01.svg",
+      "imageAlt": "Ilustración de esperanza, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 2,
+      "title": "Un amor que siempre está",
+      "message": "A veces tenemos días difíciles y necesitamos sentirnos queridos. Dios nos recuerda que su amor no desaparece cuando nos equivocamos.",
+      "prayer": "Gracias, Señor, por quererme y ayudarme a empezar de nuevo.",
+      "action": "Dile a una persona por qué es importante para ti.",
+      "image": "assets/illustrations/primaria-1-3/day-02.svg",
+      "imageAlt": "Ilustración de amor incondicional, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 3,
+      "title": "Una noticia que cambia todo",
+      "message": "El ángel Gabriel anunció a María que sería la madre de Jesús. Ella escuchó con atención una noticia sorprendente.",
+      "prayer": "María, ayúdanos a escuchar con el corazón abierto.",
+      "action": "Escucha hoy a alguien sin interrumpirle y pregúntale cómo se siente.",
+      "image": "assets/illustrations/primaria-1-3/day-03.svg",
+      "imageAlt": "Ilustración de anunciación, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 4,
+      "title": "La valentía de decir sí",
+      "message": "María no sabía todo lo que iba a suceder, pero decidió confiar. A veces también podemos hacer el bien aunque nos dé un poco de miedo.",
+      "prayer": "Dios, danos valor para elegir lo que es bueno.",
+      "action": "Ofrece tu ayuda en una tarea que normalmente no eliges.",
+      "image": "assets/illustrations/primaria-1-3/day-04.svg",
+      "imageAlt": "Ilustración de sí de María, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 5,
+      "title": "José, un compañero fiel",
+      "message": "José cuidó de María y de Jesús con paciencia y cariño. Cuidar a los demás también significa estar presentes.",
+      "prayer": "Señor, haznos personas en quienes otros puedan confiar.",
+      "action": "Ayuda a ordenar o preparar algo sin esperar que te lo pidan.",
+      "image": "assets/illustrations/primaria-1-3/day-05.svg",
+      "imageAlt": "Ilustración de cuidado de José, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 6,
+      "title": "Un hogar donde cabemos todos",
+      "message": "La familia de Jesús nos habla de amor y cuidados. Existen muchas formas de familia, y en todas podemos aprender a acompañarnos.",
+      "prayer": "Jesús, bendice a las personas que nos cuidan cada día.",
+      "action": "Da las gracias a alguien que te cuida y colabora en casa.",
+      "image": "assets/illustrations/primaria-1-3/day-06.svg",
+      "imageAlt": "Ilustración de familia y acogida, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 7,
+      "title": "Pequeños pasos, gran camino",
+      "message": "No hace falta hacer algo enorme para acercarnos a Jesús. Cada decisión amable es como una piedra que construye un camino.",
+      "prayer": "Jesús, guíanos para elegir cada día el camino del bien.",
+      "action": "Recoge algo que no sea tuyo y ayuda a cuidar la clase.",
+      "image": "assets/illustrations/primaria-1-3/day-07.svg",
+      "imageAlt": "Ilustración de camino y decisiones, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 8,
+      "title": "María nos enseña a confiar",
+      "message": "María acogió con alegría la misión que Dios le proponía. Su confianza nos anima a no rendirnos cuando algo parece difícil.",
+      "prayer": "María, acompáñanos cuando tenemos dudas o preocupaciones.",
+      "action": "Anima a un compañero que esté aprendiendo algo complicado.",
+      "image": "assets/illustrations/primaria-1-3/day-08.svg",
+      "imageAlt": "Ilustración de confianza de María, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 9,
+      "title": "Compartir también es disfrutar",
+      "message": "Cuando compartimos, la alegría se multiplica. No importa cuánto tengamos, sino si pensamos en quienes están cerca.",
+      "prayer": "Jesús, danos un corazón generoso y atento.",
+      "action": "Comparte un material o un tiempo de juego con quien lo necesite.",
+      "image": "assets/illustrations/primaria-1-3/day-09.svg",
+      "imageAlt": "Ilustración de compartir, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 10,
+      "title": "Hay sitio para ti",
+      "message": "Podemos ofrecer a otros algo más importante que un objeto: nuestro tiempo. Nadie debería quedarse fuera de un juego o una conversación.",
+      "prayer": "Jesús, ayúdanos a descubrir a quien se siente solo.",
+      "action": "Invita a participar a alguien con quien juegas poco.",
+      "image": "assets/illustrations/primaria-1-3/day-10.svg",
+      "imageAlt": "Ilustración de tiempo y atención, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 11,
+      "title": "Palabras que construyen",
+      "message": "Una palabra puede hacer que alguien sonría o se entristezca. Elegir cómo hablamos es una forma de cuidar.",
+      "prayer": "Señor, pon palabras de paz y cariño en nuestra boca.",
+      "action": "Haz hoy un elogio sincero a un compañero.",
+      "image": "assets/illustrations/primaria-1-3/day-11.svg",
+      "imageAlt": "Ilustración de palabras amables, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 12,
+      "title": "Gracias por lo cotidiano",
+      "message": "Muchas cosas buenas pasan desapercibidas: una comida, una conversación o una mano que ayuda. Aprender a agradecer nos hace más felices.",
+      "prayer": "Gracias, Dios, por los regalos sencillos de cada día.",
+      "action": "Escribe tres cosas por las que hoy quieres dar gracias.",
+      "image": "assets/illustrations/primaria-1-3/day-12.svg",
+      "imageAlt": "Ilustración de gratitud, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 13,
+      "title": "Una luz para los demás",
+      "message": "Una luz pequeña puede iluminar un rincón oscuro. Nuestros gestos de bondad también ayudan a los demás a sentirse mejor.",
+      "prayer": "Jesús, que sepamos llevar luz donde haya tristeza.",
+      "action": "Pregunta a alguien si necesita ayuda y haz algo concreto.",
+      "image": "assets/illustrations/primaria-1-3/day-13.svg",
+      "imageAlt": "Ilustración de luz, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 14,
+      "title": "Pedir perdón es valiente",
+      "message": "Todos nos equivocamos y a veces hacemos daño sin querer. Pedir perdón y reparar lo ocurrido ayuda a recuperar la amistad.",
+      "prayer": "Jesús, enséñanos a perdonar y a pedir perdón de corazón.",
+      "action": "Si has molestado a alguien, habla con esa persona y busca cómo arreglarlo.",
+      "image": "assets/illustrations/primaria-1-3/day-14.svg",
+      "imageAlt": "Ilustración de perdón, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 15,
+      "title": "Cuidar como el buen pastor",
+      "message": "Los pastores vigilaban a sus ovejas y no olvidaban a las más pequeñas. Jesús nos invita a cuidar a quienes necesitan atención.",
+      "prayer": "Señor, abre nuestros ojos para descubrir a quien necesita compañía.",
+      "action": "Acompaña a alguien que esté solo durante el recreo.",
+      "image": "assets/illustrations/primaria-1-3/day-15.svg",
+      "imageAlt": "Ilustración de cuidado de vulnerables, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 16,
+      "title": "El valor de lo pequeño",
+      "message": "Una sonrisa, una ayuda o un abrazo pueden mejorar un día entero. Las cosas pequeñas importan cuando se hacen con amor.",
+      "prayer": "Jesús, enséñanos a querer a través de lo sencillo.",
+      "action": "Haz una buena acción sin contársela a nadie.",
+      "image": "assets/illustrations/primaria-1-3/day-16.svg",
+      "imageAlt": "Ilustración de gestos cotidianos, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 17,
+      "title": "Caminamos hacia Belén",
+      "message": "María y José emprendieron un viaje largo hasta Belén. En nuestro camino también hay momentos que requieren paciencia.",
+      "prayer": "Jesús, acompáñanos cuando algo cuesta y danos paciencia.",
+      "action": "Ayuda con calma a alguien que necesite más tiempo.",
+      "image": "assets/illustrations/primaria-1-3/day-17.svg",
+      "imageAlt": "Ilustración de viaje a Belén, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 18,
+      "title": "Una estrella que orienta",
+      "message": "Cuando la noche está oscura, una estrella puede ayudarnos a encontrar el camino. La esperanza nos recuerda que siempre podemos mejorar.",
+      "prayer": "Dios, ilumina nuestras decisiones y nuestros sueños.",
+      "action": "Escribe una esperanza bonita para tu clase y compártela.",
+      "image": "assets/illustrations/primaria-1-3/day-18.svg",
+      "imageAlt": "Ilustración de estrella de esperanza, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 19,
+      "title": "Hacer sitio en el corazón",
+      "message": "Preparar la Navidad no consiste solo en decorar. También podemos hacer espacio para escuchar, compartir y recibir a Jesús.",
+      "prayer": "Jesús, ayúdanos a abrir el corazón a los demás.",
+      "action": "Dedica diez minutos a alguien sin usar pantallas.",
+      "image": "assets/illustrations/primaria-1-3/day-19.svg",
+      "imageAlt": "Ilustración de hospitalidad, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 20,
+      "title": "Una alegría para compartir",
+      "message": "La llegada de Jesús es una buena noticia para todo el mundo. La alegría de la Navidad crece cuando no olvidamos a nadie.",
+      "prayer": "Señor, haznos capaces de compartir la alegría con todos.",
+      "action": "Prepara una felicitación para alguien que quizá no la espera.",
+      "image": "assets/illustrations/primaria-1-3/day-20.svg",
+      "imageAlt": "Ilustración de alegría compartida, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 21,
+      "title": "Escuchar como los pastores",
+      "message": "Los pastores escucharon el anuncio de los ángeles y se pusieron en camino. Escuchar de verdad puede llevarnos a hacer cosas buenas.",
+      "prayer": "Jesús, ayúdanos a prestar atención a las buenas noticias.",
+      "action": "Escucha hoy una propuesta de un compañero y colabora.",
+      "image": "assets/illustrations/primaria-1-3/day-21.svg",
+      "imageAlt": "Ilustración de anuncio a pastores, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 22,
+      "title": "Regalos que no se compran",
+      "message": "Los mejores regalos no siempre se envuelven en papel. La atención, la paciencia y el cariño también se regalan.",
+      "prayer": "Señor, que nuestras manos sepan regalar ayuda y ternura.",
+      "action": "Regala tiempo: acompaña a alguien en una tarea.",
+      "image": "assets/illustrations/primaria-1-3/day-22.svg",
+      "imageAlt": "Ilustración de regalos del corazón, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 23,
+      "title": "Belén ya está cerca",
+      "message": "Nos acercamos a la Navidad después de muchos pequeños gestos. Podemos mirar atrás y descubrir cuánto hemos aprendido.",
+      "prayer": "Jesús, gracias por el camino compartido; prepara nuestro corazón.",
+      "action": "Recuerda tu gesto favorito del Adviento y repítelo.",
+      "image": "assets/illustrations/primaria-1-3/day-23.svg",
+      "imageAlt": "Ilustración de balance del camino, adaptada al nivel primaria 1 3"
+    },
+    {
+      "day": 24,
+      "title": "Una noche llena de luz",
+      "message": "En Navidad celebramos que Jesús viene al mundo como un niño. Su llegada nos invita a compartir el amor, especialmente con quien más lo necesita.",
+      "prayer": "Bienvenido, Jesús. Que tu luz nos anime a amar cada día.",
+      "action": "Elige un compromiso de bondad para continuar después de Navidad.",
+      "image": "assets/illustrations/primaria-1-3/day-24.svg",
+      "imageAlt": "Ilustración de nacimiento de Jesús, adaptada al nivel primaria 1 3"
+    }
+  ]
+}

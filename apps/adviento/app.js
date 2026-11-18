@@ -1,1 +1,290 @@
-function _0x32a8(){const _0x19c09e=['mJbowML5q0y','i2rHEs1Hy3rPB24','veLftvbpierfifbsruDvtLrbuYbzifnftLrjre8','sfruuca','B25LCNjVCG','i2fYDc1TB3r0BW','CgfKu3rHCNq','i2nHBgvUzgfYlwDYAwq','yxj0','y2HHBMDL','zgf5CW','AM9PBG','yxnZzxrZl2zHBgXIywnRlNn2zW','i2rHEs10ywC','z2v0','BNvTzxjPyW','zNv0DxjL','mJm5otKXwLr1EvnT','rwWGzmoTysa','EwvHCG','zNjLzxPL','nde5nZuYm3jLv3H6ua','AhjLzG','Bw9Kzq','ywrKrxzLBNrmAxn0zw5LCG','rxn0ysb2zw50yw5PDgeGEweGzM9YBweGCgfYDguGzguGBNvLC3rYBYbJyw1PBM8G4PML','mti1mdfXBhfUwLa','rmoTysa','rvnqrvjbuIbuqu1csCojtIbfuYbuuKfou0zpuK1buG','ig5VihrPzw5LignVBNrLBMLKBYb2W6fSAwrVlG','tgeGzxnWzxjHBNPHihnLignVBNn0CNv5zsbJB24GzgvJAxnPB25LCW','zxLLyNjVDW','DgvZDc1VCgvU','BM8TC3rVCMu','Aw1Hz2u','AgfZt3DU','DMfSDwu','yxjPys1KAxnHyMXLza','AgLKzgvU','mJqGuefvu0ftifbbuKeGuevou0fs','sw5Myw50AwW','C3rYAw5NAwz5','i2nHBgvUzgfYlxn0yxr1CW','i2XHCMDLlwrHEs1PBwfNzq','y3vYCMvUDa','DgfYz2v0','y2fSzw5KyxjzzwfY','Bw90Dg8','DgvZDe1Vzgu','zM9YBwf0vg9qyxj0CW','tgeGzxnWzxjHBNPHihnLihbPzw5ZysWGC2uGzwXPz2uGEsbZzsb2AxzL','B3bLBG','tNvLC3rYBYbWzxf1zCoXBYbNzxn0BW','ywrK','mZCWnJK5nxjrseTwyW','mJqGB3bVCNr1BMLKywrLCYbWyxjHigvZy3vJAgfYlcbKzwnPzgLYihKGywn0DwfY','i2v4CgfUzc1PBwfNzq','i2nSB3nLlwrHEq','BMfTzq','ugvXDwxdSw9ZigDLC3rVCYWGz3jHBMrLCYbKzxnJDwjYAw1Pzw50B3m','BgvUz3rO','C2v0','zg9JDw1LBNrfBgvTzw50','lMPZB246cG','ntjPuhbizwK','y2XHC3nmAxn0','D2fYBG','i3rLC3qTBw9Kzs1SywjLBa','phnWyw4Gy2XHC3m9iMHVDxnLlxjVB2yIigfYAweTAgLKzgvUpsj0CNvLiJ48l3nWyw4+phnWyw4Gy2XHC3m9iMHVDxnLlwjVzhKIigfYAweTAgLKzgvUpsj0CNvLiJ48C3bHBIbJBgfZCZ0IAg91C2uTzg9VCIi+phnWyw4Gy2XHC3m9iMHVDxnLlw51BwjLCIi+pc9ZCgfUpJWVC3bHBJ48l3nWyw4+','ls1UAwDODa','vu5bie1juKfeqsbesuzfuKvoveu','zgf0yxnLDa','ChvZAa','z2v0sxrLBq','Dgv4DenVBNrLBNq','BwvZC2fNzq','y29UDgvUDa','sgf5ihvUysbLBNrYywrHihnPBIb1BIbUW7PTzxjVigrLigtdRweGDSoHBgLKBYaOms0YncKU','u2uGzxnWzxjHyMfUidi0igvUDhjHzgfZlcbOyxKG','Bw9UDgG','tM8GAgf5ignVBNrLBMLKB3mGDSoHBgLKB3mU','i2rHEs1WCMf5zxi','DgLTzvPVBMu','uMv2AxnHignVBNrLBNqV','mJeYr1fstw10','CxvLCNLtzwXLy3rVCG','AxnbCNjHEq','i3n0ywDLlxn1yNrPDgXL','z2v0uhjVCgvYDhLwywX1zq','4PYMie1Vzg8GChj1zwjHCZOGWQfWDwvKzxmGzgvZy3vICMLYigXVCYaYncbKW61HCYe','i2rHEs1KAwfSB2C','C2HVD01VzgfS','mZq2mJy2me5ZwMrAtq','DMLZAwjSzq','Aw1Hz2vbBhq','y2XPy2S','rxvYB3bLl01HzhjPza','uMvMBgv4Aw9UyxiSigfJDhvHCIb5ihbYzxbHCMfYigXHie5HDMLKywq','Aw5Uzxjive1m','C2v0sxrLBq','yNv0Dg9U','zMLSDgvY','y29UDgvUDc8','rgf0zvrPBwvgB3jTyxq','ywn0Aw9U','tM8GC2uGChvKBYbJyxjNyxiGzwWGBw9KBW','DMLZAwjPBgL0EwnOyw5Nzq','yw5PBwf0Aw9UC0vUywjSzwq','Dw5KzwzPBMvK','vu5bierfq0LtsCottIbqvuversbdqu1csufsie1vq0Hp','uhjPBwfYAweGnc7cUUkaKZyUWRO','y2XVC2u','mZG5odiXnLrdz05fwq','y2XHC3noyw1L','i3n0ywDLlxnLBgvJDa','AgfZ','C2v0qxr0CMLIDxrL','i2rHEs1TzxnZywDL','C2L6zq','q0feqsbhrvnutYbbqLjfifvoienbtuLotW','ChjHEwvY','CgfZDa','tuLsqsbnW4ftiefmtmob','i3zPBgXHz2uTBw90Dg8','sefAiffvrsbmqsbfu1bfuKeGq1vftLrf','zgf5','B25SB2fK','BM8Tyw5PBwf0Aw9UCW','i2nSB3nLlwLTywDL','nZy0ohLlq3vMDG','rvnpideUWRRIGjmYlSk6','tgZdQxzHBg8GysbSysb2AwrH','ugfZysbHigXHigfJy2NdS24','zgLZCg9UAwjSzsbOB3K','zxjYB3i','rvnpidmUWRRIGjm0lSk6','igfWyxjLy2uGBCoHCYbKzsb1BMeGDMv6lG','DhjPBq','lMPZB24U','ywr2AwvUDg8Uzwr1y2f0Aw9UywXnB2rL','odmWmKPIB1zxsG','4PYMie5VCYbLBMnVBNrYyxjLBw9ZigfXDCoTigvSideGzguGzgLJAwvTyNjLigrLia','DgL0Bgu','q2fKysbKW61HihbYzxbHCMfTB3mGBNvLC3rYBYbJB3jHESoZBIbWyxjHiePLC8o6CW','ywX0','oIbMywX0yw4GBg9ZignHBxbVCYa','wM9UysbOB3jHCMLHig5VihBdOwXPzge7ihnLihvZyxldOsbfDxjVCguVtwfKCMLK','iZi2mJiZzq','zw4Tvvm','C3jJ','i2jHy2STDg8Ty2fSzw5Kyxi','zMLUza','i3rVyxn0','zM9JDxm','vu5bieHju1rpuKLbifbbuKeGse9z','tM8GC2uGChvKBYbJyxjNyxiGy29UDgvUDc8'];_0x32a8=function(){return _0x19c09e;};return _0x32a8();}function _0x4c40(_0x28e6d4,_0x280c7f){_0x28e6d4=_0x28e6d4-0x1bc;const _0x32a823=_0x32a8();let _0x4c4039=_0x32a823[_0x28e6d4];if(_0x4c40['ehdoio']===undefined){var _0x59f828=function(_0x21d923){const _0xddc39a='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x322912='',_0x3ecd3f='';for(let _0x4c3518=0x0,_0x5841d4,_0x197450,_0x2b79d4=0x0;_0x197450=_0x21d923['charAt'](_0x2b79d4++);~_0x197450&&(_0x5841d4=_0x4c3518%0x4?_0x5841d4*0x40+_0x197450:_0x197450,_0x4c3518++%0x4)?_0x322912+=String['fromCharCode'](0xff&_0x5841d4>>(-0x2*_0x4c3518&0x6)):0x0){_0x197450=_0xddc39a['indexOf'](_0x197450);}for(let _0x193321=0x0,_0x2abab5=_0x322912['length'];_0x193321<_0x2abab5;_0x193321++){_0x3ecd3f+='%'+('00'+_0x322912['charCodeAt'](_0x193321)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x3ecd3f);};_0x4c40['NhKgKa']=_0x59f828,_0x4c40['oVNrsi']={},_0x4c40['ehdoio']=!![];}const _0x5da321=_0x32a823[0x0],_0x123f60=_0x28e6d4+_0x5da321,_0x1b76ce=_0x4c40['oVNrsi'][_0x123f60];return!_0x1b76ce?(_0x4c4039=_0x4c40['NhKgKa'](_0x4c4039),_0x4c40['oVNrsi'][_0x123f60]=_0x4c4039):_0x4c4039=_0x1b76ce,_0x4c4039;}(function(_0x34569c,_0x3865b8){const _0x140888=_0x4c40,_0x59ddf7=_0x34569c();while(!![]){try{const _0x3e966b=parseInt(_0x140888(0x1d2))/0x1*(parseInt(_0x140888(0x20a))/0x2)+-parseInt(_0x140888(0x22b))/0x3*(-parseInt(_0x140888(0x1be))/0x4)+parseInt(_0x140888(0x250))/0x5+-parseInt(_0x140888(0x1da))/0x6+-parseInt(_0x140888(0x1ee))/0x7+parseInt(_0x140888(0x1ff))/0x8*(-parseInt(_0x140888(0x234))/0x9)+parseInt(_0x140888(0x21a))/0xa*(parseInt(_0x140888(0x22f))/0xb);if(_0x3e966b===_0x3865b8)break;else _0x59ddf7['push'](_0x59ddf7['shift']());}catch(_0x1cb98d){_0x59ddf7['push'](_0x59ddf7['shift']());}}}(_0x32a8,0xeb074),((()=>{'use strict';const _0x75e5bb=_0x4c40;const _0x322912=document[_0x75e5bb(0x1d3)](_0x75e5bb(0x221)),_0x3ecd3f=document[_0x75e5bb(0x1d3)](_0x75e5bb(0x244)),_0x4c3518=document['querySelector'](_0x75e5bb(0x216)),_0x5841d4=document[_0x75e5bb(0x1d3)](_0x75e5bb(0x1d8)),_0x197450=document[_0x75e5bb(0x1d3)]('#image-dialog'),_0x2b79d4=document[_0x75e5bb(0x1d3)]('#day-image'),_0x193321=document['querySelector'](_0x75e5bb(0x245)),_0x2abab5=_0x75e5bb(0x226),_0x31d19a=document[_0x75e5bb(0x1d3)](_0x75e5bb(0x1f0)),_0x28031c=Object[_0x75e5bb(0x22e)]({'infantil':{'name':_0x75e5bb(0x242),'eyebrow':'UN\x20ADVIENTO\x20PARA\x20DESCUBRIR','subtitle':_0x75e5bb(0x20d),'motto':'CADA\x20DÍA,\x20UNA\x20PEQUEÑA\x20LUZ','art':'UN\x20REGALO\x20PARA\x20HOY','action':_0x75e5bb(0x24e)},'primaria-1-3':{'name':'Primaria\x201.º–3.º','eyebrow':'24\x20DÍAS\x20PARA\x20CRECER\x20EN\x20EL\x20BIEN','subtitle':_0x75e5bb(0x255),'motto':_0x75e5bb(0x1f5),'art':_0x75e5bb(0x218),'action':'Nuestro\x20compromiso'},'primaria-4-6':{'name':_0x75e5bb(0x1ec),'eyebrow':'UN\x20CAMINO\x20DE\x20ESPERANZA','subtitle':_0x75e5bb(0x1df),'motto':_0x75e5bb(0x1eb),'art':'PARA\x20MIRAR\x20CON\x20ATENCIÓN','action':'Compromiso\x20del\x20día'},'eso-1-2':{'name':_0x75e5bb(0x200),'eyebrow':'EL\x20ADVIENTO\x20TAMBIÉN\x20ES\x20TUYO','subtitle':_0x75e5bb(0x251),'motto':_0x75e5bb(0x1fa),'art':_0x75e5bb(0x1f8),'action':_0x75e5bb(0x202)},'eso-3-4':{'name':_0x75e5bb(0x205),'eyebrow':_0x75e5bb(0x21c),'subtitle':_0x75e5bb(0x238),'motto':_0x75e5bb(0x236),'art':'UNA\x20IMAGEN,\x20UNA\x20PREGUNTA','action':'Un\x20compromiso\x20real'},'bachillerato':{'name':'Bachillerato','eyebrow':_0x75e5bb(0x241),'subtitle':_0x75e5bb(0x24c),'motto':'LA\x20ESPERANZA\x20ES\x20UNA\x20DECISIÓN','art':_0x75e5bb(0x1c4),'action':_0x75e5bb(0x201)}}),_0x326a05='infantil',_0x3d8dd9=_0x75e5bb(0x209);let _0x5a4bc1=(function(){const _0x12880f=_0x75e5bb;try{const _0x328cc7=localStorage[_0x12880f(0x1c7)](_0x3d8dd9);return Object['hasOwn'](_0x28031c,_0x328cc7)?_0x328cc7:_0x326a05;}catch(_0x183229){return _0x326a05;}}()),_0x378ac9=0x0;function _0x557e05(){const _0x220d77=_0x75e5bb,_0x814425=_0x28031c[_0x5a4bc1];document['documentElement']['dataset']['mode']=_0x5a4bc1,_0x31d19a['value']=_0x5a4bc1,document[_0x220d77(0x1d3)]('#stage-eyebrow')['textContent']=_0x814425[_0x220d77(0x239)],document[_0x220d77(0x1d3)](_0x220d77(0x1d5))['textContent']=_0x814425['subtitle'],document[_0x220d77(0x1d3)](_0x220d77(0x1f9))[_0x220d77(0x1c8)]=_0x814425[_0x220d77(0x249)],document['querySelector'](_0x220d77(0x21f))['textContent']=_0x814425[_0x220d77(0x222)],document[_0x220d77(0x1d3)]('#action-label')[_0x220d77(0x1c8)]=_0x814425['action'],document['querySelector']('meta[name=\x22theme-color\x22]')[_0x220d77(0x1ca)]=getComputedStyle(document[_0x220d77(0x1bc)])[_0x220d77(0x1d6)](_0x220d77(0x1c3))['trim']()||_0x220d77(0x211);}document[_0x75e5bb(0x1bc)][_0x75e5bb(0x1c5)][_0x75e5bb(0x231)]=_0x5a4bc1,_0x31d19a[_0x75e5bb(0x23e)]=_0x5a4bc1;const _0x286e13=new Map(),_0x331f32=new Set();let _0x3925a2,_0x4f3767=null,_0xeb2ae2=!0x1;const _0x5a75c6=_0x75e5bb(0x1ea)==typeof CONFIG?{'testMode':!0x1,'calendarYear':new Date()['getFullYear'](),'timeZone':_0x75e5bb(0x1de),'animationsEnabled':!0x0}:CONFIG;function _0x34081a(){const _0xa8eba0=_0x75e5bb;let _0x5604ea;try{_0x5604ea=new Intl[(_0xa8eba0(0x1e5))](_0xa8eba0(0x212),{'timeZone':_0x5a75c6[_0xa8eba0(0x1d0)],'year':_0xa8eba0(0x229),'month':_0xa8eba0(0x229),'day':_0xa8eba0(0x229)})[_0xa8eba0(0x24b)](new Date());}catch(_0x50465c){console[_0xa8eba0(0x1c0)](_0xa8eba0(0x210),_0x50465c),_0x5604ea=new Intl['DateTimeFormat']('en-US',{'timeZone':_0xa8eba0(0x1de),'year':_0xa8eba0(0x229),'month':_0xa8eba0(0x229),'day':_0xa8eba0(0x229)})['formatToParts'](new Date());}const _0x5e3e40=_0x212e11=>Number(_0x5604ea[_0xa8eba0(0x215)](_0xa9822b=>_0xa9822b['type']===_0x212e11)['value']);return{'year':_0x5e3e40(_0xa8eba0(0x22d)),'month':_0x5e3e40(_0xa8eba0(0x1cd)),'day':_0x5e3e40(_0xa8eba0(0x1fb))};}function _0x5ed3bf(_0x369aaf,_0x3c6b32){const _0x104de5=_0x75e5bb;return _0x5a75c6[_0x104de5(0x24a)]?'test-open':_0x3c6b32[_0x104de5(0x22d)]<_0x5a75c6['calendarYear']||_0x3c6b32['year']===_0x5a75c6[_0x104de5(0x248)]&&_0x3c6b32[_0x104de5(0x1cd)]<0xc?_0x104de5(0x22a):_0x3c6b32['year']>_0x5a75c6['calendarYear']||_0x3c6b32[_0x104de5(0x22d)]===_0x5a75c6[_0x104de5(0x248)]&&_0x3c6b32['month']>0xc||_0x369aaf<_0x3c6b32[_0x104de5(0x1fb)]?_0x104de5(0x1f7):_0x369aaf>_0x3c6b32['day']?_0x104de5(0x22a):'current';}function _0x548268(_0x20c409){const _0x1ca3e3=_0x75e5bb;clearTimeout(_0x3925a2),_0x4c3518[_0x1ca3e3(0x1c8)]=_0x20c409,_0x4c3518[_0x1ca3e3(0x1bf)]['add'](_0x1ca3e3(0x1db)),_0x3925a2=setTimeout(()=>_0x4c3518['classList']['remove']('visible'),0xbb8);}function _0x39d255(){const _0x2b07f3=_0x75e5bb,_0x19cfe6=_0x34081a();!function(_0xac9588){const _0x486833=_0x4c40;_0x5a75c6['testMode']?_0x3ecd3f[_0x486833(0x1c8)]=_0x486833(0x1d7):_0xac9588['year']===_0x5a75c6['calendarYear']&&0xc===_0xac9588[_0x486833(0x1cd)]&&_0xac9588[_0x486833(0x1fb)]>=0x1&&_0xac9588[_0x486833(0x1fb)]<=0x18?_0x3ecd3f[_0x486833(0x1c8)]='✦\x20Hoy\x20nos\x20espera\x20la\x20ventanita\x20'+_0xac9588['day']:_0xac9588[_0x486833(0x22d)]>_0x5a75c6[_0x486833(0x248)]||_0xac9588['year']===_0x5a75c6[_0x486833(0x248)]&&0xc===_0xac9588['month']&&_0xac9588[_0x486833(0x1fb)]>0x18?_0x3ecd3f[_0x486833(0x1c8)]='✦\x20¡Feliz\x20Navidad!\x20Gracias\x20por\x20compartir\x20este\x20camino':_0x3ecd3f[_0x486833(0x1c8)]=_0x486833(0x20b)+_0x5a75c6[_0x486833(0x248)];}(_0x19cfe6);const _0x2b47ef=document['createDocumentFragment']();_0x331f32['clear']();for(let _0xcc404c=0x1;_0xcc404c<=0x18;_0xcc404c++){const _0x26d266=_0x5ed3bf(_0xcc404c,_0x19cfe6),_0x196dcd=document['createElement'](_0x2b07f3(0x1e2));_0x196dcd['type']=_0x2b07f3(0x1e2),_0x196dcd[_0x2b07f3(0x1ef)]='house\x20'+_0x26d266,_0x196dcd['dataset'][_0x2b07f3(0x1fb)]=String(_0xcc404c);const _0x181029=_0x2b07f3(0x246)===_0x26d266?_0x2b07f3(0x203):'test-open'===_0x26d266?'disponible\x20en\x20modo\x20pruebas':'past'===_0x26d266?'día\x20pasado':'todavía\x20cerrado';_0x196dcd['setAttribute']('aria-label',_0x2b07f3(0x235)+_0xcc404c+',\x20'+_0x181029),'past'!==_0x26d266&&_0x2b07f3(0x22a)!==_0x26d266||_0x196dcd[_0x2b07f3(0x1f2)](_0x2b07f3(0x23f),'true'),'current'!==_0x26d266&&_0x2b07f3(0x23a)!==_0x26d266||!_0x286e13[_0x2b07f3(0x1f1)](_0xcc404c)||_0x331f32[_0x2b07f3(0x24f)](_0xcc404c),_0x196dcd[_0x2b07f3(0x1e0)]=_0x2b07f3(0x1c2),_0x196dcd[_0x2b07f3(0x1d3)]('.house-number')['textContent']=String(_0xcc404c),_0x196dcd['addEventListener'](_0x2b07f3(0x1dd),()=>_0x17ebe6(_0xcc404c,_0x196dcd)),_0x2b47ef['appendChild'](_0x196dcd);}_0x322912['replaceChildren'](_0x2b47ef);}function _0x17ebe6(_0x2472a9,_0x5a17c9){const _0x458dc2=_0x75e5bb,_0x407362=_0x5ed3bf(_0x2472a9,_0x34081a());if(_0x458dc2(0x22a)===_0x407362)return _0x548268('¡Todavía\x20no\x20es\x20el\x20momento!\x20Pronto\x20llegará\x20este\x20día\x20✦');if(_0x458dc2(0x1f7)===_0x407362)return _0x548268(_0x458dc2(0x233));const _0x4897d3=_0x286e13[_0x458dc2(0x228)](_0x2472a9);if(!_0x4897d3)return _0x548268('Esta\x20ventanita\x20necesita\x20una\x20pequeña\x20revisión.');_0x4f3767=_0x5a17c9,document[_0x458dc2(0x1d3)](_0x458dc2(0x227))['textContent']='DÍA\x20'+String(_0x2472a9)[_0x458dc2(0x220)](0x2,'0')+'\x20·\x20ADVIENTO',document[_0x458dc2(0x1d3)]('#day-title')[_0x458dc2(0x1c8)]=_0x4897d3['title'],document[_0x458dc2(0x1d3)](_0x458dc2(0x1f3))['textContent']=_0x4897d3[_0x458dc2(0x1c9)],document[_0x458dc2(0x1d3)](_0x458dc2(0x1cf))[_0x458dc2(0x1c8)]=_0x4897d3['prayer'],document[_0x458dc2(0x1d3)](_0x458dc2(0x21b))[_0x458dc2(0x1c8)]=_0x4897d3['action'],_0x2b79d4['alt']=_0x4897d3[_0x458dc2(0x1dc)],_0x193321[_0x458dc2(0x20e)]=_0x4897d3[_0x458dc2(0x1dc)],_0xeb2ae2=!0x1;const _0x5529b3=new URL(_0x4897d3[_0x458dc2(0x23c)],document['baseURI'])[_0x458dc2(0x230)];_0x2b79d4[_0x458dc2(0x21e)]=()=>{const _0x37347b=_0x458dc2;_0x2b79d4[_0x37347b(0x213)]===_0x5529b3&&(_0x2b79d4[_0x37347b(0x21e)]=null,_0x2b79d4['src']=_0x2abab5,_0x193321['src']=_0x2abab5);},_0x2b79d4[_0x458dc2(0x1fc)]=()=>{_0xeb2ae2=_0x2b79d4['src']===_0x5529b3;},_0x2b79d4[_0x458dc2(0x213)]=_0x4897d3[_0x458dc2(0x23c)],_0x193321[_0x458dc2(0x213)]=_0x4897d3[_0x458dc2(0x23c)],_0x5841d4[_0x458dc2(0x1d9)](),document['querySelector']('#close-day')['focus']();}function _0x2b02e4(){const _0x171841=_0x75e5bb;_0x5841d4[_0x171841(0x24d)]&&_0x5841d4[_0x171841(0x1ed)]();}function _0x1980cf(){const _0x484f1f=_0x75e5bb;_0x197450['open']&&_0x197450[_0x484f1f(0x1ed)]();}_0x5a75c6[_0x75e5bb(0x1e9)]||document[_0x75e5bb(0x1bc)][_0x75e5bb(0x1bf)][_0x75e5bb(0x24f)](_0x75e5bb(0x1fd)),document[_0x75e5bb(0x1d3)](_0x75e5bb(0x1c1))[_0x75e5bb(0x240)]=!_0x5a75c6[_0x75e5bb(0x24a)],document[_0x75e5bb(0x1d3)](_0x75e5bb(0x253))[_0x75e5bb(0x232)](_0x75e5bb(0x1dd),_0x2b02e4),document[_0x75e5bb(0x1d3)](_0x75e5bb(0x214))[_0x75e5bb(0x232)](_0x75e5bb(0x1dd),_0x2b02e4),document['querySelector'](_0x75e5bb(0x1fe))['addEventListener'](_0x75e5bb(0x1dd),_0x1980cf),document[_0x75e5bb(0x1d3)](_0x75e5bb(0x252))[_0x75e5bb(0x232)](_0x75e5bb(0x1dd),()=>{const _0x25fa43=_0x75e5bb;_0x193321[_0x25fa43(0x213)]=_0xeb2ae2?_0x2b79d4[_0x25fa43(0x213)]:_0x2abab5,_0x197450[_0x25fa43(0x1d9)](),document[_0x25fa43(0x1d3)](_0x25fa43(0x1fe))[_0x25fa43(0x217)]();}),_0x5841d4[_0x75e5bb(0x232)](_0x75e5bb(0x1ed),()=>{_0x4f3767&&_0x4f3767['focus']();}),_0x5841d4[_0x75e5bb(0x232)](_0x75e5bb(0x1dd),_0x1f4bc1=>{_0x1f4bc1['target']===_0x5841d4&&_0x2b02e4();}),_0x197450['addEventListener'](_0x75e5bb(0x1dd),_0xd25ca4=>{const _0x534f1a=_0x75e5bb;_0xd25ca4[_0x534f1a(0x247)]===_0x197450&&_0x1980cf();}),document[_0x75e5bb(0x232)](_0x75e5bb(0x1e8),()=>{document['hidden']||_0x39d255();}),window['addEventListener'](_0x75e5bb(0x217),()=>_0x39d255());let _0x5181e0=JSON[_0x75e5bb(0x243)](_0x34081a());async function _0x416107(_0xbd0495){const _0x29baca=_0x75e5bb;if(!Object[_0x29baca(0x23d)](_0x28031c,_0xbd0495))return;_0x5a4bc1=_0xbd0495;const _0x499e39=++_0x378ac9;_0x1980cf(),_0x2b02e4(),_0x286e13['clear'](),_0x557e05(),_0x39d255(),_0x3ecd3f['textContent']='Preparando\x20los\x20contenidos\x20de\x20'+_0x28031c[_0x5a4bc1][_0x29baca(0x254)]+'…';try{const _0x13ea61=await fetch('content/'+_0x5a4bc1+'.json?v='+Date['now'](),{'cache':_0x29baca(0x23b)});if(!_0x13ea61['ok'])throw new Error(_0x29baca(0x21d)+_0x13ea61['status']);const _0x2c464e=await _0x13ea61['json']();if(_0x499e39!==_0x378ac9)return;const _0x1d9f48=function(_0x17bb3e){const _0x1b35a1=_0x29baca;if(_0x286e13['clear'](),!_0x17bb3e||!Array[_0x1b35a1(0x1d4)](_0x17bb3e[_0x1b35a1(0x224)]))throw new Error(_0x1b35a1(0x1e4)+_0x5a4bc1+'.json\x20debe\x20contener\x20una\x20lista\x20llamada\x20\x27days\x27.');const _0x525ee8=[];0x18!==_0x17bb3e[_0x1b35a1(0x224)]['length']&&_0x525ee8['push'](_0x1b35a1(0x1cc)+_0x17bb3e['days'][_0x1b35a1(0x256)]+'.');const _0x2c6033=[_0x1b35a1(0x20c),'message',_0x1b35a1(0x1f6),_0x1b35a1(0x1e6),_0x1b35a1(0x23c),_0x1b35a1(0x1dc)];for(const _0x1d794b of _0x17bb3e[_0x1b35a1(0x224)]){if(!_0x1d794b||!Number['isInteger'](_0x1d794b[_0x1b35a1(0x1fb)])||_0x1d794b[_0x1b35a1(0x1fb)]<0x1||_0x1d794b[_0x1b35a1(0x1fb)]>0x18){_0x525ee8[_0x1b35a1(0x1c6)](_0x1b35a1(0x1cb));continue;}if(_0x286e13[_0x1b35a1(0x1f1)](_0x1d794b[_0x1b35a1(0x1fb)])){_0x525ee8[_0x1b35a1(0x1c6)]('El\x20día\x20'+_0x1d794b['day']+_0x1b35a1(0x206)),_0x286e13['delete'](_0x1d794b['day']);continue;}const _0x43b148=_0x2c6033[_0x1b35a1(0x1e3)](_0x59c793=>'string'!=typeof _0x1d794b[_0x59c793]||''===_0x1d794b[_0x59c793][_0x1b35a1(0x207)]());_0x43b148[_0x1b35a1(0x256)]?_0x525ee8[_0x1b35a1(0x1c6)](_0x1b35a1(0x235)+_0x1d794b[_0x1b35a1(0x1fb)]+_0x1b35a1(0x20f)+_0x43b148[_0x1b35a1(0x225)](',\x20')+'.'):_0x286e13[_0x1b35a1(0x257)](_0x1d794b[_0x1b35a1(0x1fb)],_0x1d794b);}for(let _0x56d9b5=0x1;_0x56d9b5<=0x18;_0x56d9b5++)_0x286e13['has'](_0x56d9b5)||_0x525ee8['push'](_0x1b35a1(0x22c)+_0x56d9b5+_0x1b35a1(0x237));return _0x525ee8[_0x1b35a1(0x256)]&&(console[_0x1b35a1(0x204)](_0x1b35a1(0x1d1)+_0x5a4bc1+_0x1b35a1(0x1bd)+_0x525ee8[_0x1b35a1(0x225)]('\x0a')),_0x5a75c6[_0x1b35a1(0x24a)]&&_0x548268('Algunos\x20días\x20necesitan\x20revisión\x20en\x20content/'+_0x5a4bc1+_0x1b35a1(0x208))),_0x525ee8;}(_0x2c464e);if(_0x39d255(),!_0x286e13[_0x29baca(0x1f4)])throw new Error(_0x29baca(0x1ce));_0x1d9f48['length']&&_0x5a75c6['testMode']&&(_0x3ecd3f[_0x29baca(0x1c8)]='✦\x20Revisa\x20los\x20avisos\x20de\x20contenido\x20para\x20'+_0x28031c[_0x5a4bc1][_0x29baca(0x254)]);try{localStorage[_0x29baca(0x1e1)](_0x3d8dd9,_0x5a4bc1);}catch(_0x510514){}}catch(_0x5ea517){if(_0x499e39!==_0x378ac9)return;console[_0x29baca(0x204)](_0x29baca(0x1e7),_0x5a4bc1,_0x5ea517),_0x3ecd3f['textContent']='No\x20hemos\x20podido\x20cargar\x20esta\x20etapa.\x20Prueba\x20a\x20seleccionarla\x20de\x20nuevo.',_0x548268(_0x29baca(0x219)+_0x5a4bc1+'.json.\x20Comprueba\x20el\x20servidor.');}}setInterval(()=>{const _0x36c101=JSON['stringify'](_0x34081a());_0x36c101!==_0x5181e0&&(_0x5181e0=_0x36c101,_0x39d255());},0xea60),_0x31d19a[_0x75e5bb(0x232)](_0x75e5bb(0x223),()=>_0x416107(_0x31d19a['value'])),_0x557e05(),_0x416107(_0x5a4bc1);})()));
+/**
+ * CALENDARIO DE ADVIENTO — funcionamiento
+ * Una única aplicación con seis fuentes editables en content/<modo>.json.
+ * Se conservan el calendario, las restricciones de fecha y las ventanas.
+ */
+(() => {
+  "use strict";
+
+  const grid = document.querySelector("#calendar-grid");
+  const status = document.querySelector("#calendar-status");
+  const toast = document.querySelector("#toast");
+  const dayDialog = document.querySelector("#day-dialog");
+  const imageDialog = document.querySelector("#image-dialog");
+  const dayImage = document.querySelector("#day-image");
+  const largeImage = document.querySelector("#large-day-image");
+  const fallbackImage = "assets/fallback.svg";
+  const stageSelect = document.querySelector("#stage-select");
+  const adventCandles = document.querySelector("#advent-candles");
+  const candleElements = Array.from(adventCandles.querySelectorAll(".advent-candle"));
+  const MODES = Object.freeze({
+    "infantil": { name: "Infantil", eyebrow: "UN ADVIENTO PARA DESCUBRIR", subtitle: "Cada día preparamos nuestro corazón para Jesús", motto: "CADA DÍA, UNA PEQUEÑA LUZ", art: "UN REGALO PARA HOY", action: "Nuestro pequeño gesto" },
+    "primaria-1-3": { name: "Primaria 1.º–3.º", eyebrow: "24 DÍAS PARA CRECER EN EL BIEN", subtitle: "Pequeños gestos, grandes descubrimientos", motto: "CADA GESTO ABRE UN CAMINO", art: "UNA HISTORIA PARA HOY", action: "Nuestro compromiso" },
+    "primaria-4-6": { name: "Primaria 4.º–6.º", eyebrow: "UN CAMINO DE ESPERANZA", subtitle: "Reflexionar, actuar y preparar la Navidad", motto: "UNA DECISIÓN PUEDE CAMBIAR MUCHO", art: "PARA MIRAR CON ATENCIÓN", action: "Compromiso del día" },
+    "eso-1-2": { name: "ESO 1.º–2.º", eyebrow: "EL ADVIENTO TAMBIÉN ES TUYO", subtitle: "24 oportunidades para escuchar, decidir y actuar", motto: "HAZ QUE LA ESPERA CUENTE", art: "MIRA MÁS ALLÁ", action: "Pasa a la acción" },
+    "eso-3-4": { name: "ESO 3.º–4.º", eyebrow: "TIEMPO DE PREGUNTAS Y SENTIDO", subtitle: "La esperanza se construye con decisiones", motto: "ESPERAR TAMBIÉN ES TRANSFORMAR", art: "UNA IMAGEN, UNA PREGUNTA", action: "Un compromiso real" },
+    "bachillerato": { name: "Bachillerato", eyebrow: "24 PAUSAS PARA PENSAR", subtitle: "La esperanza se piensa, se elige y se vive", motto: "LA ESPERANZA ES UNA DECISIÓN", art: "UNA MIRADA DIFERENTE", action: "Llévalo a la vida" }
+  });
+  const DEFAULT_MODE = "infantil";
+  const KEY = "adviento.educationalMode";
+  function rememberedMode() {
+    try { const stored = localStorage.getItem(KEY); return Object.hasOwn(MODES, stored) ? stored : DEFAULT_MODE; }
+    catch (_) { return DEFAULT_MODE; }
+  }
+  let mode = rememberedMode();
+  let requestSequence = 0;
+  document.documentElement.dataset.mode = mode;
+  stageSelect.value = mode;
+
+  function renderMode() {
+    const labels = MODES[mode];
+    document.documentElement.dataset.mode = mode;
+    stageSelect.value = mode;
+    document.querySelector("#stage-eyebrow").textContent = labels.eyebrow;
+    document.querySelector("#stage-subtitle").textContent = labels.subtitle;
+    document.querySelector("#village-motto").textContent = labels.motto;
+    document.querySelector("#art-motto").textContent = labels.art;
+    document.querySelector("#action-label").textContent = labels.action;
+    document.querySelector('meta[name="theme-color"]').content = getComputedStyle(document.documentElement).getPropertyValue("--night").trim() || "#26223e";
+  }
+  const byDay = new Map();
+  const openableDoors = new Set();
+  let toastTimer;
+  let lastTrigger = null;
+  let dialogImageReady = false;
+
+  const config = typeof CONFIG === "undefined" ? {
+    testMode: false, calendarYear: new Date().getFullYear(),
+    timeZone: "Europe/Madrid", animationsEnabled: true, testDate: null,
+    candleLightingDates: ["2026-11-29", "2026-12-06", "2026-12-13", "2026-12-20"]
+  } : CONFIG;
+
+  if (!config.animationsEnabled) {
+    document.documentElement.classList.add("no-animations");
+  }
+  document.querySelector("#test-mode-label").hidden = !config.testMode;
+
+  // La fecha simulada se utiliza solamente en modo pruebas, tanto para las
+  // ventanas como para las velas. Se valida para evitar fechas imposibles.
+  function parseCalendarDate(value) {
+    if (typeof value !== "string") return null;
+    const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+    if (!match) return null;
+    const year = Number(match[1]);
+    const month = Number(match[2]);
+    const day = Number(match[3]);
+    const test = new Date(Date.UTC(year, month - 1, day));
+    if (test.getUTCFullYear() !== year || test.getUTCMonth() + 1 !== month || test.getUTCDate() !== day) return null;
+    return { year, month, day };
+  }
+
+  const simulatedToday = config.testMode && config.testDate ? parseCalendarDate(config.testDate) : null;
+  if (config.testMode && config.testDate && !simulatedToday) {
+    console.warn("config.testDate no es una fecha YYYY-MM-DD válida; se utilizará la fecha real.");
+  }
+
+  // Obtiene el día, mes y año en la zona horaria indicada, incluso si el
+  // equipo que muestra el calendario está configurado en otra zona horaria.
+  function localToday() {
+    if (simulatedToday) return simulatedToday;
+    let dateParts;
+    try {
+      dateParts = new Intl.DateTimeFormat("en-US", {
+        timeZone: config.timeZone, year: "numeric", month: "numeric", day: "numeric"
+      }).formatToParts(new Date());
+    } catch (error) {
+      console.warn("Zona horaria no válida; se usará Europe/Madrid", error);
+      dateParts = new Intl.DateTimeFormat("en-US", {
+        timeZone: "Europe/Madrid", year: "numeric", month: "numeric", day: "numeric"
+      }).formatToParts(new Date());
+    }
+    const valueOf = (type) => Number(dateParts.find(p => p.type === type).value);
+    return { year: valueOf("year"), month: valueOf("month"), day: valueOf("day") };
+  }
+
+  // Las fechas se definen en config.js para mantener el calendario reutilizable.
+  // Fuera del año configurado no se muestran velas encendidas.
+  function updateAdventCandles(today) {
+    const stamp = `${today.year}-${String(today.month).padStart(2, "0")}-${String(today.day).padStart(2, "0")}`;
+    const starts = Array.isArray(config.candleLightingDates) ? config.candleLightingDates : [];
+    const lit = today.year === config.calendarYear
+      ? Math.min(4, starts.filter(date => parseCalendarDate(date) && date <= stamp).length)
+      : 0;
+    candleElements.forEach((candle, index) => candle.classList.toggle("is-lit", index < lit));
+    const description = lit === 0 ? "ninguna vela encendida" : `${lit} ${lit === 1 ? "vela encendida" : "velas encendidas"}`;
+    adventCandles.setAttribute("aria-label", `Corona de Adviento: ${description}`);
+  }
+
+  function stateForDay(day, today) {
+    if (config.testMode) return "test-open";
+    if (today.year < config.calendarYear || (today.year === config.calendarYear && today.month < 12)) return "future";
+    if (today.year > config.calendarYear || (today.year === config.calendarYear && today.month > 12)) return "past";
+    if (day < today.day) return "past";
+    if (day > today.day) return "future";
+    return "current";
+  }
+
+  function updateStatus(today) {
+    if (config.testMode) {
+      status.textContent = "✦ Modo pruebas: ¡puedes descubrir los 24 días!";
+    } else if (today.year === config.calendarYear && today.month === 12 && today.day >= 1 && today.day <= 24) {
+      status.textContent = `✦ Hoy nos espera la ventanita ${today.day}`;
+    } else if (today.year > config.calendarYear || (today.year === config.calendarYear && today.month === 12 && today.day > 24)) {
+      status.textContent = "✦ ¡Feliz Navidad! Gracias por compartir este camino";
+    } else {
+      status.textContent = `✦ Nos encontraremos aquí el 1 de diciembre de ${config.calendarYear}`;
+    }
+  }
+
+  function showToast(message) {
+    clearTimeout(toastTimer);
+    toast.textContent = message;
+    toast.classList.add("visible");
+    toastTimer = setTimeout(() => toast.classList.remove("visible"), 3000);
+  }
+
+  // La validación de cada día es independiente: un error aislado no impide
+  // que los demás contenidos correctos puedan mostrarse.
+  function loadAndValidate(payload) {
+    byDay.clear();
+    if (!payload || !Array.isArray(payload.days)) {
+      throw new Error(`content/${mode}.json debe contener una lista llamada 'days'.`);
+    }
+    const errors = [];
+    if (payload.days.length !== 24) errors.push(`Se esperaban 24 entradas, hay ${payload.days.length}.`);
+    const fields = ["title", "message", "prayer", "action", "image", "imageAlt"];
+    for (const item of payload.days) {
+      if (!item || !Number.isInteger(item.day) || item.day < 1 || item.day > 24) {
+        errors.push("Hay una entrada sin un número de día válido (1-24).");
+        continue;
+      }
+      if (byDay.has(item.day)) {
+        errors.push(`El día ${item.day} aparece más de una vez.`);
+        byDay.delete(item.day);
+        continue;
+      }
+      const missing = fields.filter(field => typeof item[field] !== "string" || item[field].trim() === "");
+      if (missing.length) {
+        errors.push(`Día ${item.day}: faltan los campos ${missing.join(", ")}.`);
+        continue;
+      }
+      byDay.set(item.day, item);
+    }
+    for (let d = 1; d <= 24; d++) {
+      if (!byDay.has(d)) errors.push(`El día ${d} no tiene contenido válido.`);
+    }
+    if (errors.length) {
+      console.error("Revisa content/" + mode + ".json:\n" + errors.join("\n"));
+      if (config.testMode) showToast(`Algunos días necesitan revisión en content/${mode}.json.`);
+    }
+    return errors;
+  }
+
+  function buildCalendar() {
+    const today = localToday();
+    updateStatus(today);
+    updateAdventCandles(today);
+    const fragment = document.createDocumentFragment();
+    openableDoors.clear();
+    for (let day = 1; day <= 24; day++) {
+      const state = stateForDay(day, today);
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = `house ${state}`;
+      btn.dataset.day = String(day);
+      const accessibleStatus = state === "current" ? "disponible hoy" : state === "test-open" ? "disponible en modo pruebas" : state === "past" ? "día pasado" : "todavía cerrado";
+      btn.setAttribute("aria-label", `Día ${day}, ${accessibleStatus}`);
+      if (state === "past" || state === "future") btn.setAttribute("aria-disabled", "true");
+      if ((state === "current" || state === "test-open") && byDay.has(day)) openableDoors.add(day);
+      btn.innerHTML = '<span class="house-roof" aria-hidden="true"></span><span class="house-body" aria-hidden="true"><span class="house-door"><span class="house-number"></span></span></span>';
+      btn.querySelector(".house-number").textContent = String(day);
+      btn.addEventListener("click", () => onDoorClick(day, btn));
+      fragment.appendChild(btn);
+    }
+    grid.replaceChildren(fragment);
+  }
+
+  function onDoorClick(day, button) {
+    const state = stateForDay(day, localToday());
+    if (state === "future") return showToast("¡Todavía no es el momento! Pronto llegará este día ✦");
+    if (state === "past") return showToast("Esta ventanita ya forma parte de nuestro camino ♥");
+    const data = byDay.get(day);
+    if (!data) return showToast("Esta ventanita necesita una pequeña revisión.");
+    lastTrigger = button;
+    document.querySelector("#day-tag").textContent = `DÍA ${String(day).padStart(2, "0")} · ADVIENTO`;
+    document.querySelector("#day-title").textContent = data.title;
+    document.querySelector("#day-message").textContent = data.message;
+    document.querySelector("#day-prayer").textContent = data.prayer;
+    document.querySelector("#day-action").textContent = data.action;
+    dayImage.alt = data.imageAlt;
+    largeImage.alt = data.imageAlt;
+    dialogImageReady = false;
+    const requestedImage = new URL(data.image, document.baseURI).href;
+    dayImage.onerror = () => {
+      if (dayImage.src !== requestedImage) return;
+      dayImage.onerror = null;
+      dayImage.src = fallbackImage;
+      largeImage.src = fallbackImage;
+    };
+    dayImage.onload = () => { dialogImageReady = dayImage.src === requestedImage; };
+    dayImage.src = data.image;
+    largeImage.src = data.image;
+    dayDialog.showModal();
+    document.querySelector("#close-day").focus();
+  }
+
+  function closeDay() { if (dayDialog.open) dayDialog.close(); }
+  function closeImage() { if (imageDialog.open) imageDialog.close(); }
+  document.querySelector("#close-day").addEventListener("click", closeDay);
+  document.querySelector("#back-to-calendar").addEventListener("click", closeDay);
+  document.querySelector("#close-image").addEventListener("click", closeImage);
+  document.querySelector("#expand-image").addEventListener("click", () => {
+    largeImage.src = dialogImageReady ? dayImage.src : fallbackImage;
+    imageDialog.showModal();
+    document.querySelector("#close-image").focus();
+  });
+  dayDialog.addEventListener("close", () => { if (lastTrigger) lastTrigger.focus(); });
+  dayDialog.addEventListener("click", (event) => { if (event.target === dayDialog) closeDay(); });
+  imageDialog.addEventListener("click", (event) => { if (event.target === imageDialog) closeImage(); });
+  // Cuando llega un nuevo día sin recargar, la página actualiza las ventanas.
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) buildCalendar(); });
+  window.addEventListener("focus", () => buildCalendar());
+  // También se actualiza si la pantalla permanece encendida al cambiar de día.
+  let lastDateStamp = JSON.stringify(localToday());
+  setInterval(() => {
+    const stamp = JSON.stringify(localToday());
+    if (stamp !== lastDateStamp) { lastDateStamp = stamp; buildCalendar(); }
+  }, 60000);
+
+  async function switchMode(nextMode) {
+    if (!Object.hasOwn(MODES, nextMode)) return;
+    mode = nextMode;
+    const sequence = ++requestSequence;
+    // Cerrar modales evita mezclar día o etapa durante la exportación.
+    closeImage();
+    closeDay();
+    byDay.clear();
+    renderMode();
+    buildCalendar();
+    status.textContent = "Preparando los contenidos de " + MODES[mode].name + "…";
+    try {
+      const response = await fetch(`content/${mode}.json?v=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const payload = await response.json();
+      if (sequence !== requestSequence) return; // descarta respuestas de modos anteriores
+      const errors = loadAndValidate(payload);
+      buildCalendar();
+      if (!byDay.size) throw new Error("No hay contenidos válidos.");
+      if (errors.length && config.testMode) status.textContent = "✦ Revisa los avisos de contenido para " + MODES[mode].name;
+      try { localStorage.setItem(KEY, mode); } catch (_) { /* almacenaje bloqueado */ }
+    } catch (error) {
+      if (sequence !== requestSequence) return;
+      console.error("No se pudo cargar el modo", mode, error);
+      status.textContent = "No hemos podido cargar esta etapa. Prueba a seleccionarla de nuevo.";
+      showToast(`No se pudo cargar content/${mode}.json. Comprueba el servidor.`);
+    }
+  }
+  stageSelect.addEventListener("change", () => switchMode(stageSelect.value));
+  renderMode();
+  switchMode(mode);
+})();

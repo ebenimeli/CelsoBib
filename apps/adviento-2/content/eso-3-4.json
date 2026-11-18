@@ -1,0 +1,220 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "title": "Esperar es tomar posición",
+      "message": "El Adviento propone una espera activa. En un mundo que corre, consumir y distraerse resulta fácil; detenerse a discernir qué merece nuestra vida es más exigente.",
+      "prayer": "Señor, abre nuestra mirada y convierte la esperanza en responsabilidad.",
+      "action": "Escribe una decisión concreta que acerque tus prioridades a tus valores.",
+      "image": "assets/illustrations/eso-3-4/day-01.svg",
+      "imageAlt": "Ilustración de esperanza, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 2,
+      "title": "La dignidad no se negocia",
+      "message": "La autoestima suele depender de aprobaciones visibles, rendimiento o apariencia. El amor incondicional de Dios cuestiona esa lógica: cada vida es valiosa antes de demostrar nada.",
+      "prayer": "Jesús, ayúdanos a reconocer la dignidad propia y ajena sin condiciones.",
+      "action": "Identifica una etiqueta que utilizas para juzgar y renuncia a repetirla.",
+      "image": "assets/illustrations/eso-3-4/day-02.svg",
+      "imageAlt": "Ilustración de amor incondicional, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 3,
+      "title": "Una voz entre tantas",
+      "message": "La anunciación plantea una escucha que transforma la vida. Reconocer una llamada auténtica exige distinguirla de las expectativas ajenas y del ruido constante.",
+      "prayer": "María, enséñanos a escuchar la conciencia con honestidad y libertad.",
+      "action": "Dedica cinco minutos sin pantallas a escribir qué te preocupa de verdad.",
+      "image": "assets/illustrations/eso-3-4/day-03.svg",
+      "imageAlt": "Ilustración de anunciación, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 4,
+      "title": "La libertad de comprometerse",
+      "message": "El sí de María no es resignación, sino una respuesta libre ante una responsabilidad que no controla. Toda decisión importante implica asumir incertidumbres.",
+      "prayer": "Dios, danos valor para elegir desde la conciencia, no desde el miedo.",
+      "action": "Toma postura ante una situación injusta, aunque no te reporte reconocimiento.",
+      "image": "assets/illustrations/eso-3-4/day-04.svg",
+      "imageAlt": "Ilustración de sí de María, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 5,
+      "title": "La grandeza de sostener",
+      "message": "José encarna una forma discreta de responsabilidad: acompañar, proteger y permanecer. En una cultura de visibilidad, el cuidado suele ser invisible.",
+      "prayer": "Señor, enséñanos a reconocer el trabajo de quienes sostienen nuestra vida.",
+      "action": "Asume sin anunciarlo una tarea de cuidado que otro realiza habitualmente.",
+      "image": "assets/illustrations/eso-3-4/day-05.svg",
+      "imageAlt": "Ilustración de cuidado de José, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 6,
+      "title": "La pertenencia y sus límites",
+      "message": "Necesitamos vínculos, pero un grupo puede convertirse en frontera cuando exige conformidad y excluye al diferente. Acoger implica revisar nuestras propias dinámicas.",
+      "prayer": "Jesús, que nuestra identidad nunca se construya contra otra persona.",
+      "action": "Observa qué voces faltan en tu grupo y abre espacio a una de ellas.",
+      "image": "assets/illustrations/eso-3-4/day-06.svg",
+      "imageAlt": "Ilustración de familia y acogida, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 7,
+      "title": "Construir puentes reales",
+      "message": "Preparar el camino no es solo una metáfora espiritual: también significa remover barreras de prejuicio, indiferencia y desigualdad.",
+      "prayer": "Dios, danos lucidez para reconocer las barreras que mantenemos.",
+      "action": "Identifica una barrera de participación en el centro y plantea una mejora viable.",
+      "image": "assets/illustrations/eso-3-4/day-07.svg",
+      "imageAlt": "Ilustración de camino y decisiones, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 8,
+      "title": "Fe que dialoga con la duda",
+      "message": "La respuesta de María no cancela sus preguntas. La fe madura puede convivir con la incertidumbre y el pensamiento crítico, sin buscar respuestas fáciles.",
+      "prayer": "María, acompaña una búsqueda sincera que no tenga miedo de preguntar.",
+      "action": "Formula una pregunta profunda sobre el sentido o la fe y dialoga sin imponer.",
+      "image": "assets/illustrations/eso-3-4/day-08.svg",
+      "imageAlt": "Ilustración de confianza de María, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 9,
+      "title": "Generosidad y justicia",
+      "message": "La caridad responde a una necesidad inmediata; la justicia pregunta por qué esa necesidad existe. Ambas dimensiones pueden complementarse.",
+      "prayer": "Jesús, que nuestra ayuda no olvide la dignidad ni las causas de la desigualdad.",
+      "action": "Investiga una iniciativa local que combine atención directa y cambio social.",
+      "image": "assets/illustrations/eso-3-4/day-09.svg",
+      "imageAlt": "Ilustración de compartir, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 10,
+      "title": "La economía de la atención",
+      "message": "Cada minuto entregado a una pantalla es un minuto no dedicado a algo distinto. Recuperar la atención es también un acto de libertad y de cuidado.",
+      "prayer": "Señor, ayúdanos a elegir a quién y a qué entregamos nuestro tiempo.",
+      "action": "Regala veinte minutos de escucha real, sin notificaciones ni multitarea.",
+      "image": "assets/illustrations/eso-3-4/day-10.svg",
+      "imageAlt": "Ilustración de tiempo y atención, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 11,
+      "title": "Responsabilidad en la palabra",
+      "message": "En entornos digitales, las palabras se multiplican y dejan rastro. Compartir una humillación es también participar en ella, aunque no la hayamos creado.",
+      "prayer": "Jesús, danos valentía para detener el daño y reparar cuando sea posible.",
+      "action": "Detén la circulación de un rumor o contenido hiriente sin reenviarlo.",
+      "image": "assets/illustrations/eso-3-4/day-11.svg",
+      "imageAlt": "Ilustración de palabras amables, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 12,
+      "title": "La gratitud como conciencia",
+      "message": "Reconocer lo recibido no exige ignorar los problemas. Implica comprender las redes de trabajo, cuidado y oportunidad que hacen posible nuestra vida.",
+      "prayer": "Gracias, Señor, por tantas personas cuyo esfuerzo permanece oculto.",
+      "action": "Agradece personalmente una contribución concreta que sueles dar por supuesta.",
+      "image": "assets/illustrations/eso-3-4/day-12.svg",
+      "imageAlt": "Ilustración de gratitud, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 13,
+      "title": "Ser luz donde cuesta",
+      "message": "La luz del Evangelio no evade la oscuridad: entra en ella. El compromiso ético aparece cuando actuamos ante el sufrimiento y la indiferencia.",
+      "prayer": "Jesús, que no nos acostumbremos a mirar hacia otro lado.",
+      "action": "Escoge un problema cercano y busca una acción pequeña pero verificable.",
+      "image": "assets/illustrations/eso-3-4/day-13.svg",
+      "imageAlt": "Ilustración de luz, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 14,
+      "title": "Reconciliación y reparación",
+      "message": "Pedir perdón no borra automáticamente las consecuencias. La reconciliación honesta requiere reconocer el daño, escuchar y asumir responsabilidad.",
+      "prayer": "Señor, danos humildad para reparar sin exigir que todo se olvide.",
+      "action": "Piensa en una situación pendiente y escribe qué reparación sería justa.",
+      "image": "assets/illustrations/eso-3-4/day-14.svg",
+      "imageAlt": "Ilustración de perdón, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 15,
+      "title": "El rostro del excluido",
+      "message": "Las personas vulnerables no son un concepto abstracto: tienen nombre, historia y derechos. Mirarlas con dignidad exige superar estereotipos y discursos fáciles.",
+      "prayer": "Jesús, enséñanos a reconocer a cada persona, nunca solo una etiqueta.",
+      "action": "Lee un testimonio en primera persona y evita hablar en nombre de otros.",
+      "image": "assets/illustrations/eso-3-4/day-15.svg",
+      "imageAlt": "Ilustración de cuidado de vulnerables, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 16,
+      "title": "La ética de lo cotidiano",
+      "message": "La coherencia no se mide únicamente en grandes discursos. Se construye en decisiones ordinarias, especialmente cuando nadie observa ni premia.",
+      "prayer": "Dios, que nuestras convicciones se conviertan en hábitos.",
+      "action": "Detecta una contradicción entre lo que defiendes y lo que haces; corrígela hoy.",
+      "image": "assets/illustrations/eso-3-4/day-16.svg",
+      "imageAlt": "Ilustración de gestos cotidianos, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 17,
+      "title": "Caminar sin un lugar seguro",
+      "message": "El viaje a Belén recuerda la vulnerabilidad de quien debe desplazarse. Las migraciones actuales nos enfrentan a preguntas sobre acogida, derechos y responsabilidad.",
+      "prayer": "Señor, acompaña a quienes atraviesan fronteras buscando seguridad.",
+      "action": "Contrasta dos fuentes sobre migración e identifica un prejuicio que debas revisar.",
+      "image": "assets/illustrations/eso-3-4/day-17.svg",
+      "imageAlt": "Ilustración de viaje a Belén, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 18,
+      "title": "Esperanza como resistencia",
+      "message": "Esperar no es imaginar que todo mejorará solo. La esperanza cristiana sostiene el esfuerzo colectivo incluso cuando el contexto es adverso.",
+      "prayer": "Jesús, mantén viva nuestra voluntad de construir justicia.",
+      "action": "Convierte una preocupación social en un compromiso concreto y sostenible.",
+      "image": "assets/illustrations/eso-3-4/day-18.svg",
+      "imageAlt": "Ilustración de estrella de esperanza, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 19,
+      "title": "¿Quién encuentra sitio?",
+      "message": "La escena de Belén nos interpela: no siempre hay espacio para el vulnerable. La hospitalidad comienza cuando cuestionamos quién queda fuera de nuestras decisiones.",
+      "prayer": "Señor, que nuestra comodidad no cierre las puertas a nadie.",
+      "action": "Analiza una norma informal de tu grupo que pueda excluir y propón cambiarla.",
+      "image": "assets/illustrations/eso-3-4/day-19.svg",
+      "imageAlt": "Ilustración de hospitalidad, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 20,
+      "title": "Una alegría que no excluye el dolor",
+      "message": "La celebración puede convivir con la tristeza, el duelo y la incertidumbre. La alegría profunda no exige aparentar: reconoce la posibilidad de acompañarse.",
+      "prayer": "Jesús, ayúdanos a acompañar sin frases vacías ni soluciones rápidas.",
+      "action": "Contacta a alguien que esté pasando por un momento difícil y ofrécele presencia.",
+      "image": "assets/illustrations/eso-3-4/day-20.svg",
+      "imageAlt": "Ilustración de alegría compartida, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 21,
+      "title": "Escuchar lo improbable",
+      "message": "Los pastores, situados lejos del prestigio social, reciben primero la noticia del nacimiento. El Evangelio descoloca nuestras jerarquías de importancia.",
+      "prayer": "Dios, enséñanos a escuchar también las voces que suelen quedar al margen.",
+      "action": "Busca una opinión razonada de alguien con una experiencia distinta a la tuya.",
+      "image": "assets/illustrations/eso-3-4/day-21.svg",
+      "imageAlt": "Ilustración de anuncio a pastores, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 22,
+      "title": "Regalarse, no exhibirse",
+      "message": "La lógica del consumo confunde el valor con el precio y el gesto con su exhibición. Un regalo auténtico responde al otro, no a nuestra imagen.",
+      "prayer": "Jesús, libéranos de dar para impresionar y enséñanos a hacerlo con amor.",
+      "action": "Ofrece una ayuda concreta y anónima, sin publicarla en redes.",
+      "image": "assets/illustrations/eso-3-4/day-22.svg",
+      "imageAlt": "Ilustración de regalos del corazón, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 23,
+      "title": "Evaluar para transformar",
+      "message": "Antes de la Navidad, revisar el camino permite distinguir buenas intenciones de cambios reales. ¿Qué ha mejorado en nuestra forma de relacionarnos?",
+      "prayer": "Señor, haznos conscientes de nuestras incoherencias y capaces de crecer.",
+      "action": "Escribe una evidencia de cambio y una responsabilidad pendiente para enero.",
+      "image": "assets/illustrations/eso-3-4/day-23.svg",
+      "imageAlt": "Ilustración de balance del camino, adaptada al nivel eso 3 4"
+    },
+    {
+      "day": 24,
+      "title": "La vulnerabilidad de Dios",
+      "message": "En el pesebre, Dios no se presenta desde el poder, sino desde la fragilidad de un recién nacido. La Navidad cuestiona qué entendemos por grandeza y a quién damos prioridad.",
+      "prayer": "Jesús, que tu nacimiento transforme nuestra mirada y nuestros compromisos.",
+      "action": "Define un compromiso realista de servicio para mantener después de Navidad.",
+      "image": "assets/illustrations/eso-3-4/day-24.svg",
+      "imageAlt": "Ilustración de nacimiento de Jesús, adaptada al nivel eso 3 4"
+    }
+  ]
+}

@@ -1,1 +1,278 @@
-function _0x3896(){const _0x1cc007=['i2rHEs10ywC','Dg9W','AhjLzG','C2v0qxr0CMLIDxrL','CqO5nJaGmcaWidu0mcaWidaGy20kl0LTmcbeBWPrcG','DMLZAwjSzq','pdWGl1r5CguGl0nHDgfSB2CGl1bHz2vZidiGmcbsid4+','Aw1WB3j0yw50','zM9YrwfJAa','ntuYndqYBgDnq0TJ','tM8GC2uGChvKBYbJyxjNyxiGBgeGyMLIBgLVDgvJysbKzsbLEhbVCNrHy2NdS24UienVBxbYDwvIysbSysbJB25LEgNdS24GysbjBNrLCM5LDc4','Dhj1zq','ndy4v3D5y0ru','Bwf0y2G','tM8GC2uGChvKBYbLEhbVCNrHCIbLBcbKW61HigeGuergoG','C3r5Bgu','y2XPy2S','C2v0uhjVCgvYDhK','CgfKu3rHCNq','id4+cNn0CMvHBqO','y2f0y2G','idaGB2jQcG','yxbWzw5K','yxjPys1IDxn5','nLP0rM9twq','y29TCgXLDgu','tgeGAwX1C3rYywnPW7nUig9YAwDPBMfSig5VigvZDmoHigrPC3bVBMLIBguU','z2v0uhjVCgvYDhLwywX1zq','y3jLyxrLrwXLBwvUDa','yxjYyxLcDwzMzxi','yNL0zuXLBMD0Aa','y2XHC3nmAxn0','tgeGyMLIBgLVDgvJysbKzsbLEhbVCNrHy2NdS24GBM8Gzxn0W6eGzgLZCg9UAwjSzs4','AhrTBdjJyw52yxm','CMvMzxjYzxjqB2XPy3K','CMvTB3zL','tM8GC2uGChvKBYbJB252zxj0AxiGBgeGzgLHCg9ZAxrPDMeGzw4GAw1Hz2vUlG','BwvZC2fNzq','idaWmdaWig4GcG','y3vYCMvUDfnYyW','cIuLru9gcG','Bg9Hza','odb4EvfQBeu','ChvZAa','qwr2AwvUDg9F','zgf0yxnLDa','CMvHzhK','AgvPz2H0','ncaWig9IAGO8pcaVvhLWzsaVwe9IAMvJDcaVu3vIDhLWzsaVsw1Hz2uGl1DPzhrOia','ic9izwLNAhqG','i2rHEs1PBwfNzq','zgL2','CxvLCNLtzwXLy3rVCG','lMrHEs1JB250zw50','zxjYB3i','Bw9Kzq','ntuZmZyXv1L6ELHr','EhjLzGOWidykmdaWmdaWmdaWmca2ntuZnsbMiaO','ywrKrxzLBNrmAxn0zw5LCG','zM9UDhm','y2XHC3noyw1L','w2LKxq','zhjHD0LTywDL','yMfZzvvssq','tM8GC2uGzw5JB250CSoZigXHigLSDxn0CMfJACoZBIbKzwWGzmoTys4','BMf0DxjHBeHLAwDODa','zgvJB2rL','AgvHza','mtqXmtG3nvzYwKzIsq','zg93BMXVywq','mZG1mJK0nvfQEhfwtq','tM8GC2uGChvKBYbJyxjNyxiGBgeGAwX1C3rYywnPW7nUig9YAwDPBMfSlG','BM8TCMvMzxjYzxi','pdWGl1r5CguGl1bHz2vZic9dB3vUDcaXic9lAwrZifSZidaGuL0GpJ4','sgeGy2fTyMLHzg8GBgeGzxrHCgeUifz1zwX2zsbHihnVBgLJAxrHCIbLBcbqreyU','uergigrLBcbKW61Hia','B3bLBG','Dg9cBg9I','Dgv4DenVBNrLBNq','CMvTB3zLqxr0CMLIDxrL','sgeGy2fTyMLHzg8GBgeGzxrHCgeGBYbLBcbKW61Higr1CMfUDguGBgeGzxHWB3j0ywnPW7nUlIbjBNtdQw50ywXVigrLig51zxzVlG','jvberI0XlJqkjufKDMvUDg8k','CxvLCNLtzwXLy3rVCKfSBa','rgvZy2fYz2fYifberG','C2nYAxb0','i3rVyxn0','CMvTB3zLrxzLBNrmAxn0zw5LCG','rwWGBMf2zwDHzg9Yig5VihbLCM1PDguGChjLCgfYyxiGBgeGAwX1C3rYywnPW7nUihbHCMeGzwWGuerglG','EI1PBMrLEa','ndrSq0LmCue','BMf0DxjHBfDPzhrO','zg9JDw1LBNrfBgvTzw50','ywrK','i2rVD25SB2fKlwrHEs1Wzgy','u2uGywDVDmoZigvSihrPzw1WBYbKzsbJyxjNysbKzsbSysbPBhvZDhjHy2NdS24U','mte1mJm0odbKChHMteu','ndi3u21LqvDf','C3jJ','CM91BMq','D2LKDgG','BM8Tyw5PBwf0Aw9UCW','mtqZmty5ENPAs2jc','zw5JB2rL','CMv2B2TLt2jQzwn0vvjm','mtC5mJC0vvb5DhPL','z2v0q29UDgv4Da','C2L6zq','DhjPBq','ic9dB2XVCLnWywnLic9ezxzPy2vsr0iGl0jPDhnqzxjdB21WB25LBNqGocaVrMLSDgvYic9eq1rezwnVzguGl0XLBMD0Aca','pdWGl0XLBMD0Aca','Aw1Hz2uVANbLzW','zNvUy3rPB24','zgLZywjSzwq','ihbYzxbHCMfKBYbWyxjHigrLC2nHCMDHCIdINky','y2XVBMvoB2rL','CgrMlwv4Cg9YDa'];_0x3896=function(){return _0x1cc007;};return _0x3896();}function _0x52ff(_0x51e2cc,_0x1abd85){_0x51e2cc=_0x51e2cc-0xa7;const _0x389663=_0x3896();let _0x52ffd3=_0x389663[_0x51e2cc];if(_0x52ff['mQquMf']===undefined){var _0xbeda5c=function(_0x32122f){const _0x40af88='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x34bd64='',_0x3db524='';for(let _0x5a58fb=0x0,_0x240904,_0x21cedf,_0x4e4c7d=0x0;_0x21cedf=_0x32122f['charAt'](_0x4e4c7d++);~_0x21cedf&&(_0x240904=_0x5a58fb%0x4?_0x240904*0x40+_0x21cedf:_0x21cedf,_0x5a58fb++%0x4)?_0x34bd64+=String['fromCharCode'](0xff&_0x240904>>(-0x2*_0x5a58fb&0x6)):0x0){_0x21cedf=_0x40af88['indexOf'](_0x21cedf);}for(let _0x473b26=0x0,_0x2c5719=_0x34bd64['length'];_0x473b26<_0x2c5719;_0x473b26++){_0x3db524+='%'+('00'+_0x34bd64['charCodeAt'](_0x473b26)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x3db524);};_0x52ff['upqCcL']=_0xbeda5c,_0x52ff['IRCOAU']={},_0x52ff['mQquMf']=!![];}const _0x3ba96e=_0x389663[0x0],_0x2dd5aa=_0x51e2cc+_0x3ba96e,_0xde5c63=_0x52ff['IRCOAU'][_0x2dd5aa];return!_0xde5c63?(_0x52ffd3=_0x52ff['upqCcL'](_0x52ffd3),_0x52ff['IRCOAU'][_0x2dd5aa]=_0x52ffd3):_0x52ffd3=_0xde5c63,_0x52ffd3;}(function(_0x412d70,_0x2db1df){const _0x40caa9=_0x52ff,_0x34943e=_0x412d70();while(!![]){try{const _0x4c72ae=parseInt(_0x40caa9(0xab))/0x1*(parseInt(_0x40caa9(0xff))/0x2)+-parseInt(_0x40caa9(0xd8))/0x3*(parseInt(_0x40caa9(0xcc))/0x4)+-parseInt(_0x40caa9(0xb9))/0x5+parseInt(_0x40caa9(0xdb))/0x6*(-parseInt(_0x40caa9(0xd3))/0x7)+-parseInt(_0x40caa9(0x111))/0x8*(-parseInt(_0x40caa9(0xb7))/0x9)+-parseInt(_0x40caa9(0xd2))/0xa+-parseInt(_0x40caa9(0xf0))/0xb*(-parseInt(_0x40caa9(0xf3))/0xc);if(_0x4c72ae===_0x2db1df)break;else _0x34943e['push'](_0x34943e['shift']());}catch(_0x2e51fe){_0x34943e['push'](_0x34943e['shift']());}}}(_0x3896,0xdfdf6),((()=>{'use strict';const _0x4ca72b=_0x52ff;const _0x34bd64=document[_0x4ca72b(0xa7)]('#day-dialog'),_0x3db524=document[_0x4ca72b(0xa7)](_0x4ca72b(0x119)),_0x5a58fb=document[_0x4ca72b(0xa7)]('#download-day-pdf');let _0x240904,_0x21cedf=!0x1;function _0x4e4c7d(_0x2c5719){const _0x53bba1=_0x4ca72b,_0x235aea=document[_0x53bba1(0xa7)](_0x53bba1(0xc8));clearTimeout(_0x240904),_0x235aea[_0x53bba1(0xc1)]=_0x2c5719,_0x235aea['classList']['add'](_0x53bba1(0xec)),_0x240904=setTimeout(()=>_0x235aea[_0x53bba1(0x106)][_0x53bba1(0x10a)]('visible'),0xfa0);}let _0x473b26=null;_0x5a58fb['addEventListener'](_0x4ca72b(0xf7),async function(){const _0x393115=_0x4ca72b;if(_0x21cedf||!_0x34bd64[_0x393115(0xbf)])return;const _0x282a60=document[_0x393115(0xa7)](_0x393115(0xd0)),_0xc4abe8=_0x282a60['querySelector']('span'),_0x5d7ca4=_0x34bd64[_0x393115(0xa7)](_0x393115(0xe7))['textContent'][_0x393115(0xf4)](/DÍA\s+(\d+)/);if(!_0x5d7ca4)return;const _0x9e9f59=Number(_0x5d7ca4[0x1]),_0x5ad1c5=document['documentElement']['dataset'][_0x393115(0xaa)]||'infantil';_0x21cedf=!0x0,_0x282a60[_0x393115(0xe3)]=!0x0,_0x282a60[_0x393115(0xea)](_0x393115(0xfe),_0x393115(0xf2)),_0xc4abe8['textContent']='Preparando\x20PDF…';try{document['fonts']&&document[_0x393115(0xae)][_0x393115(0x115)]&&await document['fonts'][_0x393115(0x115)];const _0x49dae1=await async function(_0x191124,_0x102540){const _0x330f71=_0x393115,_0x5d87dc=_0x3db524[_0x330f71(0xd4)],_0xebf2e3=await(async function(){const _0x6efa6b=_0x330f71;return _0x6efa6b(0xe2)==typeof window['html2canvas']?window[_0x6efa6b(0x108)]:_0x473b26||(_0x473b26=new Promise((_0x347de4,_0x2d74d5)=>{const _0x5a4c13=_0x6efa6b,_0x43052f=document['createElement'](_0x5a4c13(0xc7));_0x43052f['src']='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js',_0x43052f['crossOrigin']='anonymous',_0x43052f[_0x5a4c13(0x109)]=_0x5a4c13(0xbb);const _0x695bd6=setTimeout(()=>{const _0x2fc743=_0x5a4c13;_0x43052f[_0x2fc743(0x10a)](),_0x2d74d5(new Error(_0x2fc743(0xf1)));},0x3a98);_0x43052f['onload']=()=>{const _0x195e33=_0x5a4c13;clearTimeout(_0x695bd6),'function'==typeof window[_0x195e33(0x108)]?_0x347de4(window[_0x195e33(0x108)]):_0x2d74d5(new Error(_0x195e33(0x107)));},_0x43052f['onerror']=()=>{clearTimeout(_0x695bd6),_0x43052f['remove'](),_0x2d74d5(new Error('No\x20se\x20pudo\x20cargar\x20la\x20biblioteca\x20de\x20exportación.\x20Comprueba\x20la\x20conexión\x20a\x20Internet.'));},document[_0x5a4c13(0xb6)][_0x5a4c13(0xfd)](_0x43052f);})[_0x6efa6b(0xfb)](_0x4d74ee=>{throw _0x473b26=null,_0x4d74ee;}),_0x473b26);}());if(await async function(_0x2b08e6){const _0x54bbe7=_0x330f71;if(_0x3db524[_0x54bbe7(0x100)]||await new Promise((_0x4f09d2,_0x25b1b8)=>{const _0x9f7d4b=_0x54bbe7,_0x4b6250=()=>{const _0x38708f=_0x52ff;clearTimeout(_0x4fb427),_0x3db524[_0x38708f(0xc9)]('load',_0x391470),_0x3db524['removeEventListener'](_0x38708f(0xa9),_0x3edb72);},_0x391470=()=>{_0x4b6250(),_0x4f09d2();},_0x3edb72=()=>{const _0x224efd=_0x52ff;_0x4b6250(),_0x25b1b8(new Error(_0x224efd(0xba)));},_0x4fb427=setTimeout(()=>{const _0x228cde=_0x52ff;_0x4b6250(),_0x25b1b8(new Error(_0x228cde(0xd1)));},0x2710);_0x3db524[_0x9f7d4b(0xad)](_0x9f7d4b(0x110),_0x391470),_0x3db524['addEventListener'](_0x9f7d4b(0xa9),_0x3edb72);}),!_0x3db524[_0x54bbe7(0xcd)]||!_0x3db524[_0x54bbe7(0xb4)])throw new Error(_0x54bbe7(0x101));if(_0x54bbe7(0xe2)==typeof _0x3db524[_0x54bbe7(0xb5)]&&await _0x3db524['decode'](),_0x3db524[_0x54bbe7(0x10e)]!==_0x2b08e6)throw new Error('Ha\x20cambiado\x20el\x20día\x20seleccionado.\x20Vuelve\x20a\x20solicitar\x20el\x20PDF.');const _0x339093=new URL('assets/fallback.svg',document[_0x54bbe7(0xb2)])['href'];if(_0x3db524[_0x54bbe7(0x10e)]===_0x339093)throw new Error('No\x20se\x20puede\x20exportar:\x20falta\x20la\x20ilustración\x20original\x20de\x20este\x20día.');}(_0x5d87dc),document[_0x330f71(0xce)]['dataset']['mode']!==_0x102540)throw new Error(_0x330f71(0xbd));if(_0x34bd64['querySelector'](_0x330f71(0xe7))['textContent']!==_0x191124)throw new Error('Ha\x20cambiado\x20el\x20día\x20seleccionado.\x20Vuelve\x20a\x20solicitar\x20el\x20PDF.');const _0x55d348=(function(){const _0x1ca36d=_0x330f71,_0x230d56=_0x3db524['naturalWidth']/_0x3db524[_0x1ca36d(0xb4)],_0x58367a=0x708,_0x31d8be=Math['round'](_0x230d56>=0x1?_0x58367a:_0x58367a*_0x230d56),_0x315fd1=Math[_0x1ca36d(0xd5)](_0x230d56>=0x1?_0x58367a/_0x230d56:_0x58367a),_0x8b26ec=document[_0x1ca36d(0x103)]('canvas');_0x8b26ec['width']=_0x31d8be,_0x8b26ec['height']=_0x315fd1;const _0x5598b8=_0x8b26ec[_0x1ca36d(0xdc)]('2d');if(!_0x5598b8)throw new Error(_0x1ca36d(0xca));try{return _0x5598b8[_0x1ca36d(0xb1)](_0x3db524,0x0,0x0,_0x31d8be,_0x315fd1),_0x8b26ec['toDataURL']('image/png');}catch(_0x4d434c){throw new Error('No\x20se\x20pudo\x20incorporar\x20la\x20ilustración\x20original\x20al\x20PDF.\x20Comprueba\x20que\x20se\x20carga\x20desde\x20el\x20mismo\x20servidor.',{'cause':_0x4d434c});}}()),_0xf7d134=getComputedStyle(document[_0x330f71(0xce)])[_0x330f71(0x102)]('--pdf-paper')[_0x330f71(0xde)]()||'#fff9ee',_0x5e2be1=_0x34bd64['querySelector'](_0x330f71(0xa8))[_0x330f71(0xe5)](!0x0);_0x5e2be1[_0x330f71(0x106)]['add'](_0x330f71(0xe6)),_0x5e2be1[_0x330f71(0xc5)]('button,\x20.day-actions')[_0x330f71(0xef)](_0x2314a7=>_0x2314a7[_0x330f71(0x10a)]());const _0x5f33bd=_0x5e2be1[_0x330f71(0xa7)]('.day-art-panel\x20img');if(!_0x5f33bd)throw new Error(_0x330f71(0xb3));_0x5f33bd['src']=_0x55d348,_0x5e2be1[_0x330f71(0xc5)](_0x330f71(0xb0))[_0x330f71(0xef)](_0xafbba9=>_0xafbba9['removeAttribute']('id'));const _0x472380=document['createElement'](_0x330f71(0x11a));_0x472380[_0x330f71(0xaf)]='pdf-export-stage',_0x472380[_0x330f71(0xea)]('aria-hidden','true'),_0x472380['append'](_0x5e2be1);const _0x17ddca=document[_0x330f71(0x103)]('style');_0x17ddca['textContent']='\x0a\x20\x20\x20\x20.pdf-export-stage\x20{\x20position:\x20fixed\x20!important;\x20left:\x20-15000px\x20!important;\x20top:\x200\x20!important;\x20width:\x201200px\x20!important;\x20height:\x20675px\x20!important;\x20overflow:\x20hidden\x20!important;\x20z-index:\x20-1000\x20!important;\x20pointer-events:\x20none\x20!important;\x20}\x0a\x20\x20\x20\x20.pdf-export-stage\x20*,\x20.pdf-export-stage\x20*::before,\x20.pdf-export-stage\x20*::after\x20{\x20animation:\x20none\x20!important;\x20transition:\x20none\x20!important;\x20}\x0a\x20\x20\x20\x20.day-content.pdf-export\x20{\x20display:\x20grid\x20!important;\x20grid-template-columns:\x20minmax(0,\x201.18fr)\x20minmax(0,\x201fr)\x20!important;\x20width:\x201200px\x20!important;\x20height:\x20675px\x20!important;\x20min-height:\x20675px\x20!important;\x20overflow:\x20hidden\x20!important;\x20background:\x20var(--pdf-paper,\x20#fff9ee)\x20!important;\x20}\x0a\x20\x20\x20\x20.pdf-export\x20.day-art-panel\x20{\x20padding:\x2024px\x20!important;\x20}\x0a\x20\x20\x20\x20.pdf-export\x20.art-decoration\x20{\x20font-size:\x2012px\x20!important;\x20padding:\x204px\x200\x2016px\x20!important;\x20}\x0a\x20\x20\x20\x20.pdf-export\x20.day-art-panel\x20img\x20{\x20display:\x20block\x20!important;\x20width:\x20100%\x20!important;\x20height:\x20auto\x20!important;\x20max-height:\x20510px\x20!important;\x20object-fit:\x20contain\x20!important;\x20}\x0a\x20\x20\x20\x20.pdf-export\x20.day-text-panel\x20{\x20padding:\x2048px\x2046px\x2040px\x20!important;\x20}\x0a\x20\x20\x20\x20.pdf-export\x20.day-tag\x20{\x20font-size:\x2013px\x20!important;\x20}\x0a\x20\x20\x20\x20.pdf-export\x20.day-text-panel\x20h2\x20{\x20font-size:\x2043px\x20!important;\x20margin:\x209px\x200\x2011px\x20!important;\x20}\x0a\x20\x20\x20\x20.pdf-export\x20.day-message\x20{\x20font-size:\x2021px\x20!important;\x20margin:\x200\x200\x2016px\x20!important;\x20line-height:\x201.32\x20!important;\x20}\x0a\x20\x20\x20\x20.pdf-export\x20.activity\x20{\x20padding:\x2012px\x2015px\x20!important;\x20margin:\x200\x200\x2010px\x20!important;\x20}\x0a\x20\x20\x20\x20.pdf-export\x20.activity\x20h3\x20{\x20font-size:\x2014px\x20!important;\x20}\x0a\x20\x20\x20\x20.pdf-export\x20.activity\x20p\x20{\x20font-size:\x2017px\x20!important;\x20line-height:\x201.34\x20!important;\x20}\x0a\x20\x20\x20\x20.pdf-export\x20.day-actions,\x20.pdf-export\x20button\x20{\x20display:\x20none\x20!important;\x20}\x0a\x20\x20',document['head']['append'](_0x17ddca),document['body']['append'](_0x472380);try{return _0x330f71(0xe2)==typeof _0x5f33bd[_0x330f71(0xb5)]&&await _0x5f33bd['decode'](),await _0xebf2e3(_0x5e2be1,{'backgroundColor':_0xf7d134,'width':0x4b0,'height':0x2a3,'scale':0x2,'useCORS':!0x0,'logging':!0x1,'imageTimeout':0x2ee0,'scrollX':0x0,'scrollY':0x0,'windowWidth':0x4b0,'windowHeight':0x352,'onclone'(_0x120c97){const _0x13e79a=_0x330f71;_0x120c97[_0x13e79a(0xce)]['classList'][_0x13e79a(0xcf)](_0x13e79a(0xd7)),_0x120c97[_0x13e79a(0xce)][_0x13e79a(0x114)]['mode']=_0x102540;const _0x4c098c=_0x120c97['querySelector']('.pdf-export-stage');_0x4c098c&&(_0x4c098c[_0x13e79a(0xf6)][_0x13e79a(0xf8)]('left','0px',_0x13e79a(0xee)),_0x4c098c['style'][_0x13e79a(0xf8)](_0x13e79a(0xe8),'0px','important'),_0x4c098c[_0x13e79a(0xf6)]['setProperty'](_0x13e79a(0xcb),'1','important'));}});}finally{_0x472380[_0x330f71(0x10a)](),_0x17ddca['remove']();}}(_0x34bd64['querySelector'](_0x393115(0xe7))[_0x393115(0xc1)],_0x5ad1c5);if(document[_0x393115(0xce)][_0x393115(0x114)][_0x393115(0xaa)]!==_0x5ad1c5||!_0x34bd64[_0x393115(0xbf)])throw new Error(_0x393115(0xc3));const _0xf2ff7=await async function(_0x2ec6bd){const _0x553999=_0x393115,_0x5231fb=new Uint8Array(await(await function(_0x32116d){return new Promise((_0x570aab,_0x57a4b0)=>{const _0x42a832=_0x52ff;try{_0x32116d[_0x42a832(0xc0)](_0x2aec38=>{const _0x4212fd=_0x42a832;_0x2aec38&&_0x2aec38[_0x4212fd(0xdd)]>0x0?_0x570aab(_0x2aec38):_0x57a4b0(new Error(_0x4212fd(0x10b)));},_0x42a832(0xe1),0.95);}catch(_0x2072f6){_0x57a4b0(_0x2072f6);}});}(_0x2ec6bd))[_0x553999(0x104)]()),_0x28d872=[],_0x522ae6=[0x0];let _0x51c712=0x0;const _0x546071=new TextEncoder(),_0x289aca=_0x1b8fa0=>{const _0x143aeb=_0x553999;_0x28d872[_0x143aeb(0x112)](_0x1b8fa0),_0x51c712+=_0x1b8fa0[_0x143aeb(0x105)];},_0x1eba2c=_0x532219=>_0x289aca(_0x546071[_0x553999(0xd9)](_0x532219)),_0x348147=(_0x1f214c,_0x100ab0)=>{const _0x2dd2e0=_0x553999;_0x522ae6[_0x1f214c]=_0x51c712,_0x1eba2c(_0x1f214c+_0x2dd2e0(0xfc)+_0x100ab0+'\x0aendobj\x0a');};_0x1eba2c(_0x553999(0xc4)),_0x348147(0x1,_0x553999(0xed)),_0x348147(0x2,_0x553999(0xbc)),_0x348147(0x3,'<<\x20/Type\x20/Page\x20/Parent\x202\x200\x20R\x20/MediaBox\x20[0\x200\x20960\x20540]\x20/Resources\x20<<\x20/XObject\x20<<\x20/Im0\x204\x200\x20R\x20>>\x20>>\x20/Contents\x205\x200\x20R\x20>>'),_0x522ae6[0x4]=_0x51c712,_0x1eba2c(_0x553999(0x117)+_0x2ec6bd[_0x553999(0xd6)]+_0x553999(0x118)+_0x2ec6bd[_0x553999(0x116)]+_0x553999(0xdf)+_0x5231fb[_0x553999(0x105)]+'\x20>>\x0astream\x0a'),_0x289aca(_0x5231fb),_0x1eba2c('\x0aendstream\x0aendobj\x0a');const _0x50b32b=_0x553999(0xeb);_0x348147(0x5,_0x553999(0xe0)+_0x546071[_0x553999(0xd9)](_0x50b32b)[_0x553999(0x105)]+_0x553999(0xfa)+_0x50b32b+'endstream');const _0x4875ba=_0x51c712;_0x1eba2c(_0x553999(0xac));for(let _0x815335=0x1;_0x815335<=0x5;_0x815335++)_0x1eba2c(String(_0x522ae6[_0x815335])[_0x553999(0xf9)](0xa,'0')+_0x553999(0x10d));return _0x1eba2c('trailer\x0a<<\x20/Size\x206\x20/Root\x201\x200\x20R\x20>>\x0astartxref\x0a'+_0x4875ba+_0x553999(0x10f)),new Blob(_0x28d872,{'type':'application/pdf'});}(_0x49dae1),_0x31545a=document['createElement']('a'),_0x327ea1=URL['createObjectURL'](_0xf2ff7);_0x31545a[_0x393115(0xe9)]=_0x327ea1,_0x31545a[_0x393115(0xb8)]=_0x393115(0x113)+_0x5ad1c5['toUpperCase']()+'_Dia-'+String(_0x9e9f59)['padStart'](0x2,'0')+'.pdf',document['body'][_0x393115(0xfd)](_0x31545a),_0x31545a['click'](),_0x31545a[_0x393115(0x10a)](),setTimeout(()=>URL[_0x393115(0xda)](_0x327ea1),0xea60),_0x4e4c7d(_0x393115(0xbe)+_0x9e9f59+_0x393115(0xe4));}catch(_0x16ec4f){console['error'](_0x393115(0xf5),_0x16ec4f),_0x4e4c7d(_0x16ec4f[_0x393115(0x10c)]||'No\x20se\x20ha\x20podido\x20generar\x20el\x20PDF.');}finally{_0x21cedf=!0x1,_0x282a60[_0x393115(0xe3)]=!0x1,_0x282a60[_0x393115(0xc2)](_0x393115(0xfe)),_0xc4abe8['textContent']=_0x393115(0xc6);}});})()));
+/**
+ * Exportación a PDF de la ventana de cada día.
+ * Este módulo es independiente de app.js para mantener intacta la lógica del calendario.
+ * html2canvas se descarga bajo demanda y la composición final del PDF se hace aquí.
+ */
+(() => {
+  "use strict";
+
+  const dayDialog = document.querySelector("#day-dialog");
+  const dayImage = document.querySelector("#day-image");
+  const downloadButton = document.querySelector("#download-day-pdf");
+  let pdfExportInProgress = false;
+  let pdfToastTimer;
+
+  function showPdfToast(message) {
+    const toast = document.querySelector("#toast");
+    clearTimeout(pdfToastTimer);
+    toast.textContent = message;
+    toast.classList.add("visible");
+    pdfToastTimer = setTimeout(() => toast.classList.remove("visible"), 4000);
+  }
+
+  /**
+   * Exportación de la misma estructura HTML y estilos del modal.
+   * html2canvas solo se carga al solicitar una exportación; el calendario
+   * continúa funcionando sin conexión a ese servicio externo.
+   */
+  const PDF_WIDTH = 1200;
+  const PDF_HEIGHT = 675;
+  const PDF_SCALE = 2; // 2400 × 1350 píxeles
+  const PDF_STYLE = `
+    .pdf-export-stage { position: fixed !important; left: -15000px !important; top: 0 !important; width: 1200px !important; height: 675px !important; overflow: hidden !important; z-index: -1000 !important; pointer-events: none !important; }
+    .pdf-export-stage *, .pdf-export-stage *::before, .pdf-export-stage *::after { animation: none !important; transition: none !important; }
+    .day-content.pdf-export { display: grid !important; grid-template-columns: minmax(0, 1.18fr) minmax(0, 1fr) !important; width: 1200px !important; height: 675px !important; min-height: 675px !important; overflow: hidden !important; background: var(--pdf-paper, #fff9ee) !important; }
+    .pdf-export .day-art-panel { padding: 24px !important; }
+    .pdf-export .art-decoration { font-size: 12px !important; padding: 4px 0 16px !important; }
+    .pdf-export .day-art-panel img { display: block !important; width: 100% !important; height: auto !important; max-height: 510px !important; object-fit: contain !important; }
+    .pdf-export .day-text-panel { padding: 48px 46px 40px !important; }
+    .pdf-export .day-tag { font-size: 13px !important; }
+    .pdf-export .day-text-panel h2 { font-size: 43px !important; margin: 9px 0 11px !important; }
+    .pdf-export .day-message { font-size: 21px !important; margin: 0 0 16px !important; line-height: 1.32 !important; }
+    .pdf-export .activity { padding: 12px 15px !important; margin: 0 0 10px !important; }
+    .pdf-export .activity h3 { font-size: 14px !important; }
+    .pdf-export .activity p { font-size: 17px !important; line-height: 1.34 !important; }
+    .pdf-export .day-actions, .pdf-export button { display: none !important; }
+  `;
+
+  let html2canvasRequest = null;
+  async function ensureHtml2Canvas() {
+    if (typeof window.html2canvas === "function") return window.html2canvas;
+    if (html2canvasRequest) return html2canvasRequest;
+    html2canvasRequest = new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js";
+      script.crossOrigin = "anonymous";
+      script.referrerPolicy = "no-referrer";
+      const timer = setTimeout(() => {
+        script.remove();
+        reject(new Error("No se pudo cargar la biblioteca de exportación. Comprueba la conexión a Internet."));
+      }, 15000);
+      script.onload = () => {
+        clearTimeout(timer);
+        if (typeof window.html2canvas === "function") resolve(window.html2canvas);
+        else reject(new Error("La biblioteca de exportación no está disponible."));
+      };
+      script.onerror = () => {
+        clearTimeout(timer);
+        script.remove();
+        reject(new Error("No se pudo cargar la biblioteca de exportación. Comprueba la conexión a Internet."));
+      };
+      document.head.append(script);
+    }).catch(error => { html2canvasRequest = null; throw error; });
+    return html2canvasRequest;
+  }
+
+  /**
+   * Espera a la imagen realmente visible en el modal y verifica que no sea
+   * el recurso de emergencia. Nunca sustituimos la ilustración de un día.
+   */
+  async function waitForIllustration(expectedSource) {
+    if (!dayImage.complete) {
+      await new Promise((resolve, reject) => {
+        const cleanup = () => {
+          clearTimeout(timeout);
+          dayImage.removeEventListener("load", onLoad);
+          dayImage.removeEventListener("error", onError);
+        };
+        const onLoad = () => { cleanup(); resolve(); };
+        const onError = () => { cleanup(); reject(new Error("No se pudo cargar la ilustración original.")); };
+        const timeout = setTimeout(() => {
+          cleanup();
+          reject(new Error("Se agotó el tiempo de carga de la ilustración."));
+        }, 10000);
+        dayImage.addEventListener("load", onLoad);
+        dayImage.addEventListener("error", onError);
+      });
+    }
+    if (!dayImage.naturalWidth || !dayImage.naturalHeight) {
+      throw new Error("La ilustración original no está disponible.");
+    }
+    if (typeof dayImage.decode === "function") await dayImage.decode();
+    if (dayImage.currentSrc !== expectedSource) {
+      throw new Error("Ha cambiado el día seleccionado. Vuelve a solicitar el PDF.");
+    }
+    const fallbackUrl = new URL("assets/fallback.svg", document.baseURI).href;
+    if (dayImage.currentSrc === fallbackUrl) {
+      throw new Error("No se puede exportar: falta la ilustración original de este día.");
+    }
+  }
+
+  /**
+   * html2canvas puede omitir partes de los SVG con degradados, filtros y
+   * máscaras. El navegador ya renderiza correctamente el SVG del modal:
+   * aprovechamos ESE MISMO <img> para dibujarlo en un PNG sin crear una
+   * ilustración alternativa ni alterar ningún archivo de assets/.
+   *
+   * Se hace solo en memoria y solo para la copia destinada al PDF.
+   */
+  function rasterizeDisplayedIllustration() {
+    const ratio = dayImage.naturalWidth / dayImage.naturalHeight;
+    const maxSide = 1800;
+    const width = Math.round(ratio >= 1 ? maxSide : maxSide * ratio);
+    const height = Math.round(ratio >= 1 ? maxSide / ratio : maxSide);
+    const canvas = document.createElement("canvas");
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) throw new Error("El navegador no permite preparar la ilustración para el PDF.");
+    try {
+      ctx.drawImage(dayImage, 0, 0, width, height);
+      return canvas.toDataURL("image/png");
+    } catch (error) {
+      throw new Error("No se pudo incorporar la ilustración original al PDF. Comprueba que se carga desde el mismo servidor.", { cause: error });
+    }
+  }
+
+  async function renderDayToCanvas(expectedDayTag, expectedMode) {
+    // Capturar la referencia antes de la carga asíncrona de la biblioteca.
+    const originalSource = dayImage.src;
+    const html2canvas = await ensureHtml2Canvas();
+    await waitForIllustration(originalSource);
+    if (document.documentElement.dataset.mode !== expectedMode) {
+      throw new Error("Ha cambiado la etapa. Vuelve a solicitar el PDF.");
+    }
+    if (dayDialog.querySelector("#day-tag").textContent !== expectedDayTag) {
+      throw new Error("Ha cambiado el día seleccionado. Vuelve a solicitar el PDF.");
+    }
+    const originalPng = rasterizeDisplayedIllustration();
+    const pdfBackground = getComputedStyle(document.documentElement).getPropertyValue("--pdf-paper").trim() || "#fff9ee";
+
+    // Copia del DOM real: mismos títulos, textos, diseño e imagen original.
+    const content = dayDialog.querySelector(".day-content").cloneNode(true);
+    content.classList.add("pdf-export");
+    content.querySelectorAll("button, .day-actions").forEach(control => control.remove());
+    // Solo la copia para el PDF usa el PNG renderizado desde el SVG original.
+    const exportImage = content.querySelector(".day-art-panel img");
+    if (!exportImage) throw new Error("No se encontró la ilustración del día.");
+    exportImage.src = originalPng;
+    content.querySelectorAll("[id]").forEach(node => node.removeAttribute("id"));
+    const stage = document.createElement("div");
+    stage.className = "pdf-export-stage";
+    stage.setAttribute("aria-hidden", "true");
+    stage.append(content);
+    const styles = document.createElement("style");
+    styles.textContent = PDF_STYLE;
+    document.head.append(styles);
+    document.body.append(stage);
+    try {
+      // El PNG debe estar decodificado antes de clonar el documento para
+      // html2canvas; de lo contrario puede aparecer un panel vacío.
+      if (typeof exportImage.decode === "function") await exportImage.decode();
+      return await html2canvas(content, {
+        backgroundColor: pdfBackground, width: PDF_WIDTH, height: PDF_HEIGHT,
+        scale: PDF_SCALE, useCORS: true, logging: false,
+        imageTimeout: 12000, scrollX: 0, scrollY: 0,
+        windowWidth: PDF_WIDTH, windowHeight: 850,
+        onclone(doc) {
+          // Mueve únicamente la copia al origen del lienzo; la app real no cambia.
+          doc.documentElement.classList.add("no-animations");
+          doc.documentElement.dataset.mode = expectedMode;
+          const clonedStage = doc.querySelector(".pdf-export-stage");
+          if (clonedStage) {
+            clonedStage.style.setProperty("left", "0px", "important");
+            clonedStage.style.setProperty("top", "0px", "important");
+            clonedStage.style.setProperty("z-index", "1", "important");
+          }
+        }
+      });
+    } finally {
+      stage.remove();
+      styles.remove();
+    }
+  }
+
+  function canvasToJpeg(canvas) {
+    return new Promise((resolve, reject) => {
+      try {
+        canvas.toBlob(blob => {
+          if (blob && blob.size > 0) resolve(blob);
+          else reject(new Error("No se pudo convertir la diapositiva en imagen."));
+        }, "image/jpeg", 0.95);
+      } catch (error) {
+        reject(error);
+      }
+    });
+  }
+
+  async function makePdf(canvas) {
+    // PDF de una página con imagen JPEG incrustada, sin servicios ni dependencias.
+    const jpeg = new Uint8Array(await (await canvasToJpeg(canvas)).arrayBuffer());
+    const parts = [];
+    const offsets = [0];
+    let length = 0;
+    const encoder = new TextEncoder();
+    const append = bytes => { parts.push(bytes); length += bytes.byteLength; };
+    const write = text => append(encoder.encode(text));
+    const object = (number, body) => {
+      offsets[number] = length;
+      write(`${number} 0 obj\n${body}\nendobj\n`);
+    };
+    write("%PDF-1.4\n%Advento\n");
+    object(1, "<< /Type /Catalog /Pages 2 0 R >>");
+    object(2, "<< /Type /Pages /Count 1 /Kids [3 0 R] >>");
+    object(3, "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 960 540] /Resources << /XObject << /Im0 4 0 R >> >> /Contents 5 0 R >>");
+    offsets[4] = length;
+    write(`4 0 obj\n<< /Type /XObject /Subtype /Image /Width ${canvas.width} /Height ${canvas.height} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${jpeg.byteLength} >>\nstream\n`);
+    append(jpeg);
+    write("\nendstream\nendobj\n");
+    const draw = "q\n960 0 0 540 0 0 cm\n/Im0 Do\nQ\n";
+    object(5, `<< /Length ${encoder.encode(draw).byteLength} >>\nstream\n${draw}endstream`);
+    const xref = length;
+    write("xref\n0 6\n0000000000 65535 f \n");
+    for (let i = 1; i <= 5; i++) write(`${String(offsets[i]).padStart(10, "0")} 00000 n \n`);
+    write(`trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF\n`);
+    return new Blob(parts, { type: "application/pdf" });
+  }
+
+  async function exportCurrentDayPdf() {
+    if (pdfExportInProgress || !dayDialog.open) return;
+    const button = document.querySelector("#download-day-pdf");
+    const label = button.querySelector("span");
+    const match = dayDialog.querySelector("#day-tag").textContent.match(/DÍA\s+(\d+)/);
+    if (!match) return;
+    const day = Number(match[1]);
+    const modeAtStart = document.documentElement.dataset.mode || "infantil";
+    pdfExportInProgress = true;
+    button.disabled = true;
+    button.setAttribute("aria-busy", "true");
+    label.textContent = "Preparando PDF…";
+    try {
+      if (document.fonts && document.fonts.ready) await document.fonts.ready;
+      const canvas = await renderDayToCanvas(dayDialog.querySelector("#day-tag").textContent, modeAtStart);
+      if (document.documentElement.dataset.mode !== modeAtStart || !dayDialog.open) {
+        throw new Error("Ha cambiado la etapa o el día durante la exportación. Inténtalo de nuevo.");
+      }
+      const pdf = await makePdf(canvas);
+      const link = document.createElement("a");
+      const url = URL.createObjectURL(pdf);
+      link.href = url;
+      link.download = `Adviento_${modeAtStart.toUpperCase()}_Dia-${String(day).padStart(2, "0")}.pdf`;
+      document.body.append(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 60000);
+      showPdfToast(`PDF del día ${day} preparado para descargar ✦`);
+    } catch (error) {
+      console.error("No se pudo exportar el día a PDF:", error);
+      showPdfToast(error.message || "No se ha podido generar el PDF.");
+    } finally {
+      pdfExportInProgress = false;
+      button.disabled = false;
+      button.removeAttribute("aria-busy");
+      label.textContent = "Descargar PDF";
+    }
+  }
+
+  downloadButton.addEventListener("click", exportCurrentDayPdf);
+})();

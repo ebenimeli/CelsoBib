@@ -1,1 +1,656 @@
-.stage-picker{position:absolute;z-index:12;right:clamp(14px,2.7vw,46px);top:20px;display:flex;align-items:center;gap:9px;padding:7px 9px 7px 14px;border:1px solid rgba(255,245,231,.28);background:rgba(12,18,34,.27);border-radius:15px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 5px 20px rgba(11,17,29,.13)}.stage-picker label{font-size:11px;font-weight:700;color:#ffefd9;white-space:nowrap;letter-spacing:.02em}.stage-picker select{max-width:186px;min-height:34px;padding:5px 27px 5px 11px;font-size:12px;font-weight:700;color:#2a2944;background:#fffaf2;border:1px solid #e3d2b8;border-radius:9px;cursor:pointer}.stage-picker select:focus-visible{outline:3px solid #f8ca7a;outline-offset:2px}@media (max-width:940px){.stage-picker{position:relative;top:auto;right:auto;display:inline-flex;margin:-12px auto 18px}.hero{padding-top:28px}}@media (max-width:480px){.stage-picker{margin:-9px auto 15px;padding:5px 7px 5px 10px}.stage-picker label{font-size:10px}.stage-picker select{max-width:157px;font-size:11px;min-height:35px}}html[data-mode=primaria-1-3]{--night:#334657;--night-2:#476879;--gold:#f7c872;--ink:#3d4f50;--cream:#fff7e9;--pdf-paper:#fff7eb;--theme-sky-1:#4a7180;--theme-sky-2:#2f485a;--theme-hill-1:#48746b;--theme-hill-2:#335a5a;--theme-art-1:#f6ddc3;--theme-art-2:#e2eee5;--theme-title:#365d62;--theme-lead:#496b67;--theme-prayer:#e8edf3;--theme-prayer-text:#4c6076;--theme-action:#e6f1e7;--theme-action-text:#3e6c56}html[data-mode=primaria-4-6]{--night:#243e4a;--night-2:#365963;--gold:#e6bb79;--ink:#344850;--cream:#fbf5ed;--pdf-paper:#fbf4eb;--theme-sky-1:#416776;--theme-sky-2:#203f50;--theme-hill-1:#385968;--theme-hill-2:#274b50;--theme-art-1:#dde8e7;--theme-art-2:#eddbc8;--theme-title:#325866;--theme-lead:#4b6671;--theme-prayer:#e2eaf0;--theme-prayer-text:#43566b;--theme-action:#e8eee8;--theme-action-text:#436459}html[data-mode=eso-1-2]{--night:#202c44;--night-2:#334563;--gold:#eabb80;--ink:#37475b;--cream:#f8f4ed;--pdf-paper:#f6f3ef;--theme-sky-1:#374c6b;--theme-sky-2:#1d2942;--theme-hill-1:#324660;--theme-hill-2:#283b50;--theme-art-1:#c9dbe3;--theme-art-2:#e6d3bd;--theme-title:#32465c;--theme-lead:#465f73;--theme-prayer:#e9e9f1;--theme-prayer-text:#4e5871;--theme-action:#e1eae7;--theme-action-text:#42695f}html[data-mode=eso-3-4]{--night:#152836;--night-2:#263d4c;--gold:#d8b57e;--ink:#263847;--cream:#f7f3ec;--pdf-paper:#f5f0e8;--theme-sky-1:#283f4f;--theme-sky-2:#132633;--theme-hill-1:#304454;--theme-hill-2:#233a44;--theme-art-1:#d0d9db;--theme-art-2:#e9d9c4;--theme-title:#263d4a;--theme-lead:#475864;--theme-prayer:#e7e6ec;--theme-prayer-text:#4a5570;--theme-action:#e5eae7;--theme-action-text:#3f635a}html[data-mode]:not([data-mode=infantil]) .page-shell{background:radial-gradient(ellipse at 54% 12%,var(--theme-sky-1),var(--theme-sky-2) 81%)}html[data-mode]:not([data-mode=infantil]) .village{background:linear-gradient(180deg,rgba(236,233,212,.12),rgba(21,31,50,.24));border-color:rgba(232,231,216,.22)}html[data-mode]:not([data-mode=infantil]) .hills-back{background:var(--theme-hill-1)}html[data-mode]:not([data-mode=infantil]) .hills-front{background:var(--theme-hill-2)}html[data-mode]:not([data-mode=infantil]) .day-content{background:var(--pdf-paper)}html[data-mode]:not([data-mode=infantil]) .day-art-panel{background:linear-gradient(135deg,var(--theme-art-1),var(--theme-art-2))}html[data-mode]:not([data-mode=infantil]) .day-text-panel h2{color:var(--theme-title)}html[data-mode]:not([data-mode=infantil]) .day-message{color:var(--theme-lead)}html[data-mode]:not([data-mode=infantil]) .activity-prayer{background:var(--theme-prayer);color:var(--theme-prayer-text)}html[data-mode]:not([data-mode=infantil]) .activity-action{background:var(--theme-action);color:var(--theme-action-text)}html[data-mode]:not([data-mode=infantil]) .art-decoration{color:var(--theme-title)}html[data-mode]:not([data-mode=infantil]) .day-tag{color:var(--theme-lead)}html[data-mode]:not([data-mode=infantil]) .back-button{background:var(--theme-title);box-shadow:0 4px 0 #263544}html[data-mode]:not([data-mode=infantil]) .back-button:hover{filter:brightness(1.15)}html[data-mode]:not([data-mode=infantil]) .download-button{background:#fffef9;color:var(--theme-title)}html[data-mode]:not([data-mode=infantil]) .house.test-open .house-door{background:linear-gradient(130deg,#e5c996,#b7a277)}html[data-mode]:not([data-mode=infantil]) .house.test-open .house-number{color:#314354}html[data-mode]:not([data-mode=infantil]) .hero-subtitle{color:#e7eae6}html[data-mode=primaria-1-3] .house{--front:#c89c82;--roof:#628e8b}html[data-mode=primaria-1-3] .house:nth-child(5n+2){--front:#8baead;--roof:#55747e}html[data-mode=primaria-1-3] .house:nth-child(5n+3){--front:#dabb86;--roof:#947969}html[data-mode=primaria-1-3] .house:nth-child(5n+4){--front:#b7a1b0;--roof:#78718b}html[data-mode=primaria-1-3] .house:nth-child(5n+5){--front:#a9b58e;--roof:#617e6e}html[data-mode=primaria-1-3] .hero h1{font-weight:500}html[data-mode=primaria-1-3] .day-text-panel h2{font-weight:500}html[data-mode=eso-1-2] .house,html[data-mode=eso-3-4] .house,html[data-mode=primaria-4-6] .house{--front:#88a2a4;--roof:#4f6873}html[data-mode=primaria-4-6] .house-body{border-radius:4px;border-color:#283e49;box-shadow:1px 4px 0 #15253144}html[data-mode=primaria-4-6] .house-roof{clip-path:polygon(50% 8%,98% 80%,98% 100%,2% 100%,2% 80%)}html[data-mode=primaria-4-6] .house-door{border-radius:17px 17px 2px 2px}html[data-mode=primaria-4-6] .house:nth-child(5n+2){--front:#c4a08e;--roof:#777381}html[data-mode=primaria-4-6] .house:nth-child(5n+3){--front:#a5aa91;--roof:#677d79}html[data-mode=primaria-4-6] .house:nth-child(5n+4){--front:#a9a7b8;--roof:#707286}html[data-mode=primaria-4-6] .house:nth-child(5n+5){--front:#c5b084;--roof:#88836e}html[data-mode=eso-1-2] .house{--front:#59778a;--roof:#344c6a}html[data-mode=eso-1-2] .house:nth-child(5n+2){--front:#ab806f;--roof:#615771}html[data-mode=eso-1-2] .house:nth-child(5n+3){--front:#658779;--roof:#344c58}html[data-mode=eso-1-2] .house:nth-child(5n+4){--front:#79819f;--roof:#465576}html[data-mode=eso-1-2] .house:nth-child(5n+5){--front:#ac9674;--roof:#695a64}html[data-mode=eso-1-2] .house-roof{top:6%;height:28%;clip-path:polygon(50% 0,100% 100%,0 100%)}html[data-mode=eso-1-2] .house-body{border:2px solid #182c3c;border-radius:5px;width:83%;height:79%;box-shadow:0 5px 14px #09162660}html[data-mode=eso-1-2] .house-door{border-radius:9px 9px 2px 2px;border:2px solid #263d51}html[data-mode=eso-1-2] .day-text-panel h2{font-family:Georgia,serif}html[data-mode=eso-3-4] .starfield{opacity:.29}html[data-mode=eso-3-4] .village{border-radius:12px;box-shadow:none}html[data-mode=eso-3-4] .hills{opacity:.22}html[data-mode=eso-3-4] .sky-moon{width:62px;height:62px;opacity:.55}html[data-mode=eso-3-4] .little-church{opacity:.32}html[data-mode=eso-3-4] .house{--front:#6c8290;--roof:#304e5e}html[data-mode=eso-3-4] .house:nth-child(5n+2){--front:#91877e;--roof:#615867}html[data-mode=eso-3-4] .house:nth-child(5n+3){--front:#7d9185;--roof:#475b5b}html[data-mode=eso-3-4] .house:nth-child(5n+4){--front:#798397;--roof:#4e5a70}html[data-mode=eso-3-4] .house:nth-child(5n+5){--front:#a18c72;--roof:#70645d}html[data-mode=eso-3-4] .house-roof{top:16%;height:17%;clip-path:none;background:var(--roof);border-radius:3px 3px 0 0;left:9%;right:9%}html[data-mode=eso-3-4] .house-roof::after{display:none}html[data-mode=eso-3-4] .house-body{width:83%;height:80%;border:1px solid #9aadb566;border-radius:3px;box-shadow:0 8px 17px #09131d77}html[data-mode=eso-3-4] .house-door{height:84%;border:1px solid #e5c89a66;border-radius:2px;background:#1d3345}html[data-mode=eso-3-4] .house-body::after,html[data-mode=eso-3-4] .house-body::before{border:0;border-radius:2px;background:#e6c68e96}html[data-mode=eso-3-4] .hero-heading{margin-top:20px}html[data-mode=eso-3-4] .hero h1{font-weight:400;letter-spacing:-.07em}html[data-mode=eso-3-4] .hero-small{font-style:normal;font-size:clamp(19px,2.1vw,31px);letter-spacing:.035em}html[data-mode=eso-3-4] .activity{border-radius:7px}html[data-mode=eso-3-4] .day-text-panel h2{font-weight:400}html[data-mode=eso-3-4] .day-content{border-radius:4px}html[data-mode=eso-1-2] .day-message,html[data-mode=eso-3-4] .day-message,html[data-mode=primaria-4-6] .day-message{font-size:clamp(18px,1.63vw,23px);line-height:1.38;font-weight:650}html[data-mode=eso-1-2] .activity p,html[data-mode=eso-3-4] .activity p,html[data-mode=primaria-4-6] .activity p{font-size:clamp(15px,1.28vw,18px)}html[data-mode=eso-1-2] .day-text-panel,html[data-mode=eso-3-4] .day-text-panel{padding-top:clamp(30px,3vw,50px)}html[data-mode=eso-1-2] .day-text-panel h2,html[data-mode=eso-3-4] .day-text-panel h2{font-size:clamp(32px,3.2vw,45px)}@media (min-width:731px){html[data-mode=eso-1-2] .day-content,html[data-mode=eso-3-4] .day-content,html[data-mode=primaria-4-6] .day-content{min-height:min(700px,88vh)}}@media (max-width:730px){html[data-mode=eso-1-2] .day-message,html[data-mode=eso-3-4] .day-message,html[data-mode=primaria-4-6] .day-message{font-size:18px}html[data-mode=eso-1-2] .activity p,html[data-mode=eso-3-4] .activity p,html[data-mode=primaria-4-6] .activity p{font-size:15px}}html[data-mode=bachillerato]{--night:#141e25;--night-2:#273238;--gold:#d6b079;--ink:#26323a;--cream:#f2eee5;--pdf-paper:#f0eadf;--theme-sky-1:#293943;--theme-sky-2:#0f1c22;--theme-hill-1:#24343b;--theme-hill-2:#1d2c35;--theme-art-1:#1d3038;--theme-art-2:#0d1a24;--theme-title:#283139;--theme-lead:#3d4c52;--theme-prayer:#ece4d8;--theme-prayer-text:#3a4d50;--theme-action:#e7ebe3;--theme-action-text:#38524b}html[data-mode]:not([data-mode=infantil]) .hills,html[data-mode]:not([data-mode=infantil]) .house-body::after,html[data-mode]:not([data-mode=infantil]) .house-body::before,html[data-mode]:not([data-mode=infantil]) .house-door::after,html[data-mode]:not([data-mode=infantil]) .house-door::before,html[data-mode]:not([data-mode=infantil]) .house-roof,html[data-mode]:not([data-mode=infantil]) .little-church,html[data-mode]:not([data-mode=infantil]) .sky-moon{display:none}html[data-mode]:not([data-mode=infantil]) .house,html[data-mode]:not([data-mode=infantil]) .house:nth-child(n){height:116px;translate:none;transform:none;filter:none;padding:0;border:0;border-radius:var(--card-radius,12px);background:var(--card-bg,#fff);box-shadow:var(--card-shadow,0 6px 16px #0002);transition:transform .2s ease,box-shadow .2s ease}html[data-mode]:not([data-mode=infantil]) .house:hover{transform:translateY(-5px)}html[data-mode]:not([data-mode=infantil]) .house-body{position:static;inset:auto;width:100%;height:100%;padding:0;background:0 0;border:0;border-radius:inherit;box-shadow:none;display:block}html[data-mode]:not([data-mode=infantil]) .house-door{position:relative;width:100%;height:100%;border:0;border-radius:inherit;box-shadow:none;background:0 0;display:flex;justify-content:center;align-items:center;overflow:hidden}html[data-mode]:not([data-mode=infantil]) .house-number{font-size:clamp(32px,3.3vw,47px);font-weight:800;line-height:1;text-shadow:none;letter-spacing:-.06em;color:var(--card-number,#3d5162)}html[data-mode]:not([data-mode=infantil]) .house.current::after{content:'✦';right:8px;top:3px;font-size:17px}html[data-mode]:not([data-mode=infantil]) .house.future{opacity:.36}html[data-mode]:not([data-mode=infantil]) .house.past{opacity:.62}html[data-mode]:not([data-mode=infantil]) .house.test-open{opacity:1}html[data-mode]:not([data-mode=infantil]) .house.test-open .house-door{background:0 0}html[data-mode]:not([data-mode=infantil]) .house.test-open .house-number{color:var(--card-number,#3d5162);text-shadow:none}html[data-mode]:not([data-mode=infantil]) .village{min-height:0}html[data-mode]:not([data-mode=infantil]) .village-footer{margin-top:28px}html[data-mode]:not([data-mode=infantil]) .day-content{height:auto;min-height:660px}html[data-mode]:not([data-mode=infantil]) .day-text-panel{min-width:0}html[data-mode]:not([data-mode=infantil]) .activity-icon{display:none}html[data-mode]:not([data-mode=infantil]) .day-art-panel img{border-radius:var(--image-radius,8px);box-shadow:var(--image-shadow,none)}html[data-mode]:not([data-mode=infantil]) .activity{flex-direction:column;gap:3px}html[data-mode]:not([data-mode=infantil]) .activity h3{margin:0 0 7px}html[data-mode]:not([data-mode=infantil]) .activity p{font-weight:500}html[data-mode]:not([data-mode=infantil]) .day-actions{padding-top:12px}html[data-mode]:not([data-mode=infantil]) .back-button{box-shadow:none;border-radius:6px}html[data-mode]:not([data-mode=infantil]) .download-button{border-radius:6px}html[data-mode=primaria-1-3] .village{background:#f6ead1;border:8px solid #e6cd9c;border-radius:34px;box-shadow:0 20px 0 #1d343755,0 28px 50px #0003;max-width:1320px}html[data-mode=primaria-1-3] .village::before{content:'MI LIBRO DE ADVIENTO';display:block;color:#6f685c;font:800 15px Georgia,serif;letter-spacing:.16em;text-align:center;margin:-8px 0 22px}html[data-mode=primaria-1-3] .house{--card-radius:22px 9px 19px 9px;--card-bg:#fffbef;--card-shadow:0 6px 0 #d4bd92;--card-number:#477572}html[data-mode=primaria-1-3] .house:nth-child(4n+2){--card-bg:#f8e3d0;--card-number:#a45f50}html[data-mode=primaria-1-3] .house:nth-child(4n+3){--card-bg:#e0e8dc;--card-number:#52766a}html[data-mode=primaria-1-3] .house:nth-child(4n){--card-bg:#e3e2ed;--card-number:#6f6a92}html[data-mode=primaria-1-3] .house-door{border:2px dashed #b89a6e72}html[data-mode=primaria-1-3] .house-door::after{display:block!important;content:'✦';position:absolute;right:10px;bottom:7px;color:#bd9361;font-size:20px;background:0 0;width:auto;height:auto;box-shadow:none}html[data-mode=primaria-1-3] .house-number{font-family:Georgia,serif;font-weight:700}html[data-mode=primaria-1-3] .village-footer{color:#876e54}html[data-mode=primaria-1-3] .village-footer span{color:#b67852}html[data-mode=primaria-1-3] .day-dialog{border-radius:28px}html[data-mode=primaria-1-3] .day-content{grid-template-columns:52% 48%;background:#fff7e7}html[data-mode=primaria-1-3] .day-art-panel{background:linear-gradient(110deg,#f7d9ac,#f6e9cc);border-right:4px double #d4ad76;padding:38px}html[data-mode=primaria-1-3] .day-art-panel img{border:12px solid #fff8e8;box-shadow:0 11px 30px #b7866240;border-radius:26px 10px 24px 10px}html[data-mode=primaria-1-3] .art-decoration{font:700 12px Georgia,serif;color:#97744c}html[data-mode=primaria-1-3] .day-text-panel{padding:60px 39px 28px;background:#fff9ec}html[data-mode=primaria-1-3] .day-tag{color:#a36c49;letter-spacing:.1em}html[data-mode=primaria-1-3] .day-text-panel h2{font-family:Georgia,serif;font-size:clamp(32px,3.4vw,48px);color:#76513e}html[data-mode=primaria-1-3] .day-message{color:#6a5c55;font-size:clamp(19px,1.85vw,25px)}html[data-mode=primaria-1-3] .activity{border-radius:18px 8px 18px 8px;border-left:5px solid #b0bf98}html[data-mode=primaria-1-3] .activity-prayer{background:#f1e7f3;color:#6a536a}html[data-mode=primaria-1-3] .activity-action{background:#e6f0dc;color:#4c6b55}html[data-mode=primaria-4-6] .page-shell{background:linear-gradient(140deg,#2a5960,#264451 70%)}html[data-mode=primaria-4-6] .village{background:repeating-linear-gradient(0deg,#f5efe5 0 37px,#c9d8d633 38px 39px);border:3px solid #ddc8a2;border-radius:9px;max-width:1320px;box-shadow:12px 15px 0 #1b3540a8}html[data-mode=primaria-4-6] .house{--card-radius:4px;--card-bg:#fdfaf4;--card-shadow:4px 5px 0 #9fb2a9;--card-number:#385d60}html[data-mode=primaria-4-6] .house:nth-child(2n){--card-bg:#f2e4d2;--card-number:#7b5c53}html[data-mode=primaria-4-6] .house-door{border:1px solid #879b9b}html[data-mode=primaria-4-6] .house-door::after{content:'REGISTRO';display:block!important;position:absolute;left:9px;top:9px;font:800 9px 'Trebuchet MS',sans-serif;color:#7c928d;letter-spacing:.11em;width:auto;height:auto;background:0 0;box-shadow:none}html[data-mode=primaria-4-6] .house-number{font-family:Georgia,serif;font-weight:500}html[data-mode=primaria-4-6] .village-footer{color:#4f6764}html[data-mode=primaria-4-6] .day-dialog{border-radius:8px}html[data-mode=primaria-4-6] .day-content{grid-template-columns:57% 43%;background:#f4eee2}html[data-mode=primaria-4-6] .day-text-panel{grid-column:1;grid-row:1;order:1;background:repeating-linear-gradient(#f7f3e9 0 35px,#9fb8ba38 36px 37px);border-left:15px solid #d7ae74;padding:48px 46px 22px}html[data-mode=primaria-4-6] .day-art-panel{grid-column:2;grid-row:1;order:2;background:#d9e4dd;border-left:2px dashed #b1c4be;padding:48px 27px}html[data-mode=primaria-4-6] .day-art-panel img{border:10px solid #fff9ee;box-shadow:7px 10px 0 #809b9770;transform:rotate(1deg);border-radius:2px}html[data-mode=primaria-4-6] .day-text-panel h2{font:700 clamp(30px,3.2vw,45px) Georgia,serif;color:#315763}html[data-mode=primaria-4-6] .day-message{font-weight:600}html[data-mode=primaria-4-6] .activity{border:1px solid #bfcabc;border-radius:2px;background:#fffaf1}html[data-mode=primaria-4-6] .activity-action{border-left:7px solid #b68856}html[data-mode=primaria-4-6] .activity-prayer{border-left:7px solid #779ba1}html[data-mode=primaria-4-6] .activity h3{letter-spacing:.16em}html[data-mode=eso-1-2] .page-shell{background:linear-gradient(135deg,#19283d,#344b61)}html[data-mode=eso-1-2] .starfield{opacity:.12}html[data-mode=eso-1-2] .village{background:#172f42;border:3px solid #476273;border-radius:0;box-shadow:16px 16px 0 #0b1b29}html[data-mode=eso-1-2] .house{--card-radius:0;--card-bg:#e7b878;--card-number:#1a3045;--card-shadow:6px 6px 0 #0d1c2d}html[data-mode=eso-1-2] .house:nth-child(3n+2){--card-bg:#acc9c6}html[data-mode=eso-1-2] .house:nth-child(3n){--card-bg:#d9a5a2}html[data-mode=eso-1-2] .house-number{font-family:'Trebuchet MS',Arial,sans-serif;font-weight:900;font-size:clamp(40px,3.8vw,56px)}html[data-mode=eso-1-2] .house-door::after{display:block!important;content:'EDICIÓN / ADVIENTO';position:absolute;left:8px;bottom:9px;color:#35465b;font-size:8px;font-weight:900;letter-spacing:.15em;width:auto;height:auto;background:0 0;box-shadow:none}html[data-mode=eso-1-2] .day-dialog{border-radius:0}html[data-mode=eso-1-2] .day-content{grid-template-columns:58% 42%;background:#f6f2e9}html[data-mode=eso-1-2] .day-text-panel{grid-column:1;grid-row:1;order:1;border-top:16px solid #d39472;background:#f6f2e9;padding:39px 55px 24px}html[data-mode=eso-1-2] .day-art-panel{grid-column:2;grid-row:1;order:2;background:linear-gradient(160deg,#2c6473,#1b374f);padding:34px 22px}html[data-mode=eso-1-2] .art-decoration{color:#f8dbb1}html[data-mode=eso-1-2] .day-art-panel img{border:4px solid #fff6e9;box-shadow:-12px 13px 0 #dfaf8255;border-radius:0}html[data-mode=eso-1-2] .day-tag{color:#af5c4d;font-weight:900;letter-spacing:.23em}html[data-mode=eso-1-2] .day-text-panel h2{font:900 clamp(36px,3.8vw,51px)/1.05 'Trebuchet MS',sans-serif;letter-spacing:-.055em;color:#203c56;text-transform:uppercase}html[data-mode=eso-1-2] .day-message{font-size:clamp(18px,1.7vw,23px);font-weight:650;color:#405a65}html[data-mode=eso-1-2] .activity{border-radius:0;border-top:3px solid #c67e67;padding:10px 2px;background:0 0}html[data-mode=eso-1-2] .activity-prayer{border-color:#5b98a1}html[data-mode=eso-1-2] .activity h3{font-weight:900;letter-spacing:.13em}html[data-mode=eso-3-4] .page-shell{background:linear-gradient(145deg,#182b36,#12232d)}html[data-mode=eso-3-4] .village{border:1px solid #bdc6c344;background:#f0eee6;border-radius:3px;box-shadow:none}html[data-mode=eso-3-4] .house{--card-radius:0;--card-bg:#1e3c47;--card-number:#f2e7cf;--card-shadow:none}html[data-mode=eso-3-4] .house:nth-child(4n+2){--card-bg:#395257}html[data-mode=eso-3-4] .house:nth-child(4n+3){--card-bg:#46575b}html[data-mode=eso-3-4] .house:nth-child(4n){--card-bg:#2a414c}html[data-mode=eso-3-4] .house{outline:1px solid #9daea0a8;outline-offset:-7px}html[data-mode=eso-3-4] .house-number{font:400 clamp(35px,3.3vw,48px) Georgia,serif;letter-spacing:.03em}html[data-mode=eso-3-4] .village-footer{color:#4a6164}html[data-mode=eso-3-4] .day-dialog{border-radius:2px}html[data-mode=eso-3-4] .day-content{display:grid;grid-template-columns:1fr;grid-template-rows:235px minmax(0,1fr);min-height:660px;background:#f1f0e9}html[data-mode=eso-3-4] .day-art-panel{grid-column:1;grid-row:1;order:1;flex-direction:row;padding:12px 48px;background:linear-gradient(105deg,#142e3a,#2c4850);overflow:hidden;justify-content:center;gap:34px}html[data-mode=eso-3-4] .art-decoration{writing-mode:vertical-rl;color:#d5bd8f;letter-spacing:.15em;padding:5px}html[data-mode=eso-3-4] .day-art-panel img{width:auto;height:213px;max-height:213px;object-fit:contain;border-radius:0;box-shadow:none}html[data-mode=eso-3-4] .day-text-panel{grid-column:1;grid-row:2;order:2;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);grid-template-rows:23px auto 1fr auto;column-gap:24px;row-gap:3px;padding:26px 44px 15px;background:#f1f0e9;align-items:start}html[data-mode=eso-3-4] .day-tag{grid-column:1;grid-row:1;color:#8f7760;font-size:11px}html[data-mode=eso-3-4] .day-text-panel h2{grid-column:1;grid-row:2;font:400 clamp(29px,2.9vw,43px)/1.04 Georgia,serif;color:#223c48;margin:7px 0 13px}html[data-mode=eso-3-4] .day-message{grid-column:1;grid-row:3;font-size:19px;line-height:1.39;font-weight:500;margin:0;color:#53626a}html[data-mode=eso-3-4] .activity{grid-row:2/span 2;margin:0;padding:15px 12px;min-height:230px;border-radius:0;background:0 0;border-left:2px solid #b38b62}html[data-mode=eso-3-4] .activity-prayer{grid-column:2;color:#415768}html[data-mode=eso-3-4] .activity-action{grid-column:3;color:#395d56;border-color:#5d8d79}html[data-mode=eso-3-4] .activity h3{font-size:12px;letter-spacing:.12em;line-height:1.3}html[data-mode=eso-3-4] .activity p{font-size:16px;line-height:1.5}html[data-mode=eso-3-4] .day-actions{grid-column:1/-1;grid-row:4;padding:0;gap:10px}html[data-mode=eso-3-4] .back-button,html[data-mode=eso-3-4] .download-button{font-size:13px;padding:9px 13px}html[data-mode=bachillerato] .page-shell{background:linear-gradient(120deg,#101c23,#1e3037)}html[data-mode=bachillerato] .starfield{opacity:.1}html[data-mode=bachillerato] .hero h1{font-weight:400;font-size:clamp(73px,8vw,122px);font-family:Georgia,serif}html[data-mode=bachillerato] .hero-small{font-family:Georgia,serif;font-weight:400;font-style:italic;letter-spacing:.03em}html[data-mode=bachillerato] .village{background:0 0;border:0;border-top:1px solid #c6b18f72;border-bottom:1px solid #c6b18f72;border-radius:0;box-shadow:none;padding-top:42px;padding-bottom:38px}html[data-mode=bachillerato] .calendar-grid{grid-template-columns:repeat(8,minmax(0,1fr));gap:16px}html[data-mode=bachillerato] .house{--card-radius:0;--card-bg:transparent;--card-number:#d8c8af;--card-shadow:none;border-bottom:1px solid #b6a48188!important}html[data-mode=bachillerato] .house:nth-child(3n){--card-number:#b9b9b0}html[data-mode=bachillerato] .house-number{font:400 clamp(34px,3vw,46px) Georgia,serif;letter-spacing:-.07em}html[data-mode=bachillerato] .house-door::after{display:block!important;content:'—';color:#a68d6d;position:absolute;bottom:7px;right:8px;font-size:20px;width:auto;height:auto;background:0 0;box-shadow:none}html[data-mode=bachillerato] .village-footer{color:#bcb09d}html[data-mode=bachillerato] .day-dialog{border-radius:0;box-shadow:0 24px 75px #000a}html[data-mode=bachillerato] .day-content{grid-template-columns:59% 41%;background:#eee9df}html[data-mode=bachillerato] .day-text-panel{order:1;grid-column:1;grid-row:1;padding:48px 57px 22px;background:#f1ede4;border-top:7px solid #b68e59}html[data-mode=bachillerato] .day-art-panel{order:2;grid-column:2;grid-row:1;padding:30px 23px;background:linear-gradient(125deg,#253840,#0c1b24)}html[data-mode=bachillerato] .art-decoration{font:400 10px Georgia,serif;letter-spacing:.22em;color:#decaaa}html[data-mode=bachillerato] .day-art-panel img{border-radius:0;box-shadow:none;max-height:525px}html[data-mode=bachillerato] .day-tag{font:700 12px 'Trebuchet MS',sans-serif;letter-spacing:.19em;color:#9f7b58}html[data-mode=bachillerato] .day-text-panel h2{font:400 clamp(37px,3.5vw,50px)/1.05 Georgia,serif;color:#25353a;letter-spacing:-.04em;margin:14px 0 22px}html[data-mode=bachillerato] .day-message{font:400 clamp(19px,1.55vw,22px)/1.5 Georgia,serif;color:#425156;margin:0 0 21px}html[data-mode=bachillerato] .activity{margin:0 0 13px;padding:9px 0 4px;border:0;border-top:1px solid #b6a890;border-radius:0;background:0 0;color:#3d4c4e}html[data-mode=bachillerato] .activity h3{font-size:11px;letter-spacing:.22em;color:#9b7855;margin:0 0 5px}html[data-mode=bachillerato] .activity p{font:400 16px/1.37 Georgia,serif}html[data-mode=bachillerato] .day-actions{padding-top:1px}html[data-mode=bachillerato] .back-button{background:#283940;color:#f2e4ce}html[data-mode=bachillerato] .download-button{background:#eee6d9;color:#283940}html[data-mode]:not([data-mode=infantil]) .day-content.pdf-export{width:1200px!important;height:675px!important;min-height:675px!important;overflow:hidden!important}html[data-mode=eso-3-4] .day-content.pdf-export{grid-template-columns:1fr!important;grid-template-rows:230px 445px!important}html[data-mode=primaria-4-6] .day-content.pdf-export{grid-template-columns:57% 43%!important}html[data-mode=eso-1-2] .day-content.pdf-export{grid-template-columns:58% 42%!important}html[data-mode=bachillerato] .day-content.pdf-export{grid-template-columns:59% 41%!important}html[data-mode=primaria-1-3] .day-content.pdf-export{grid-template-columns:52% 48%!important}html[data-mode=eso-3-4] .pdf-export .day-text-panel{padding:25px 44px 18px!important;display:grid!important}html[data-mode=eso-3-4] .pdf-export .day-message{font-size:18px!important;line-height:1.35!important;margin:0!important}html[data-mode=eso-3-4] .pdf-export .day-content:not(.pdf-export) .day-text-panel h2{font-size:38px!important;margin:4px 0 9px!important}html[data-mode=eso-3-4] .pdf-export .activity{padding:15px 10px!important;margin:0!important}html[data-mode=eso-3-4] .pdf-export .activity p{font-size:16px!important}html[data-mode=eso-3-4] .pdf-export .day-art-panel{padding:10px 48px!important}html[data-mode=eso-3-4] .pdf-export .day-art-panel img{height:205px!important;max-height:205px!important;width:auto!important}html[data-mode=bachillerato] .pdf-export .day-text-panel{padding:40px 55px 22px!important}html[data-mode=bachillerato] .pdf-export .day-content:not(.pdf-export) .day-text-panel h2{font-size:43px!important;margin:10px 0 17px!important}html[data-mode=bachillerato] .pdf-export .day-message{font-size:19px!important;line-height:1.42!important;margin-bottom:15px!important}html[data-mode=bachillerato] .pdf-export .activity{padding:8px 0!important;margin:0 0 8px!important}html[data-mode=bachillerato] .pdf-export .activity p{font-size:15px!important;line-height:1.32!important}html[data-mode=bachillerato] .pdf-export .day-art-panel img{max-height:520px!important}html[data-mode=eso-1-2] .pdf-export .day-text-panel{padding:34px 55px 20px!important}html[data-mode=eso-1-2] .pdf-export .day-content:not(.pdf-export) .day-text-panel h2{font-size:43px!important}html[data-mode=eso-1-2] .pdf-export .day-message{font-size:20px!important;margin-bottom:16px!important}html[data-mode=primaria-4-6] .pdf-export .day-text-panel{padding:42px 46px 24px!important}html[data-mode=primaria-4-6] .pdf-export .day-message{font-size:20px!important;margin-bottom:15px!important}html[data-mode=primaria-1-3] .pdf-export .day-text-panel{padding:48px 39px 25px!important}html[data-mode=primaria-1-3] .pdf-export .day-message{font-size:21px!important;margin-bottom:16px!important}@media(max-width:1000px){html[data-mode]:not([data-mode=infantil]) .calendar-grid{grid-template-columns:repeat(6,minmax(0,1fr))}html[data-mode=bachillerato] .calendar-grid{grid-template-columns:repeat(6,minmax(0,1fr))}html[data-mode]:not([data-mode=infantil]) .house,html[data-mode]:not([data-mode=infantil]) .house:nth-child(n){height:110px}html[data-mode=eso-3-4] .day-text-panel{column-gap:14px;padding:22px 26px 15px}}@media(max-width:730px){html[data-mode]:not([data-mode=infantil]) .calendar-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}html[data-mode]:not([data-mode=infantil]) .house,html[data-mode]:not([data-mode=infantil]) .house:nth-child(n){height:clamp(79px,21vw,112px)}html[data-mode]:not([data-mode=infantil]) .house-number{font-size:clamp(26px,7vw,39px)}html[data-mode]:not([data-mode=infantil]) .village{padding:30px 19px}html[data-mode]:not([data-mode=infantil]) .day-content:not(.pdf-export){display:flex;flex-direction:column;min-height:0}html[data-mode]:not([data-mode=infantil]) .day-content:not(.pdf-export) .day-art-panel{order:1;padding:17px 24px;min-height:0;flex-direction:column;border-left:0;border-right:0}html[data-mode]:not([data-mode=infantil]) .day-content:not(.pdf-export) .day-art-panel img{height:auto;width:100%;max-height:225px;max-width:440px;transform:none}html[data-mode]:not([data-mode=infantil]) .day-content:not(.pdf-export) .day-text-panel{order:2;display:flex;flex-direction:column;padding:25px 25px 30px;border-left:0;min-height:0}html[data-mode]:not([data-mode=infantil]) .day-content:not(.pdf-export) .day-text-panel h2{font-size:clamp(27px,7vw,38px)}html[data-mode]:not([data-mode=infantil]) .day-content:not(.pdf-export) .day-message{font-size:17px;line-height:1.4}html[data-mode]:not([data-mode=infantil]) .day-content:not(.pdf-export) .activity{min-height:0;margin-bottom:10px}html[data-mode]:not([data-mode=infantil]) .day-content:not(.pdf-export) .activity p{font-size:15px}html[data-mode=eso-3-4] .day-content:not(.pdf-export) .day-art-panel{height:auto;gap:8px}html[data-mode=eso-3-4] .day-content:not(.pdf-export) .art-decoration{writing-mode:initial}html[data-mode=eso-3-4] .day-content:not(.pdf-export) .day-art-panel img{height:auto;max-height:220px}html[data-mode=eso-3-4] .day-content:not(.pdf-export) .day-text-panel{display:flex}html[data-mode=bachillerato] .day-content:not(.pdf-export) .day-text-panel{border-top:5px solid #b68e59}html[data-mode=primaria-4-6] .day-content:not(.pdf-export) .day-text-panel{background:#f7f3e9}}
+/**
+ * CINCO ETAPAS · Un solo calendario
+ * Edita los colores de cada etapa aquí. Los contenidos viven en content/*.json.
+ * El modo Infantil conserva la apariencia original.
+ */
+.hero-toolbar {
+  position: absolute; z-index: 12; top: 16px;
+  left: clamp(14px, 2.7vw, 46px); right: clamp(14px, 2.7vw, 46px);
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;
+  pointer-events: none;
+}
+.hero-toolbar > * { pointer-events: auto; }
+.stage-picker {
+  display: flex; align-items: center; gap: 9px;
+  padding: 7px 9px 7px 14px;
+  border: 1px solid rgba(255,245,231,.28);
+  background: rgba(12,18,34,.27); border-radius: 15px;
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 5px 20px rgba(11,17,29,.13);
+}
+.stage-picker label { font-size: 11px; font-weight: 700; color: #ffefd9; white-space: nowrap; letter-spacing: .02em; }
+.stage-picker select {
+  max-width: 186px; min-height: 34px; padding: 5px 27px 5px 11px;
+  font-size: 12px; font-weight: 700; color: #2a2944; background: #fffaf2;
+  border: 1px solid #e3d2b8; border-radius: 9px; cursor: pointer;
+}
+.stage-picker select:focus-visible { outline: 3px solid #f8ca7a; outline-offset: 2px; }
+@media (max-width: 940px) {
+  .hero-toolbar { position: relative; top: auto; left: auto; right: auto; margin: -12px 0 17px; }
+  .hero { padding-top: 28px; }
+}
+@media (max-width: 480px) {
+  .hero-toolbar { margin: -9px -7px 14px; gap: 6px; align-items: center; }
+  .stage-picker { padding: 5px 6px; }
+  /* La etiqueta sigue disponible para lectores de pantalla a través del select. */
+  .stage-picker label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .stage-picker select { max-width: 145px; font-size: 11px; min-height: 35px; }
+}
+
+/* Temas de Primaria y ESO: modifican la atmósfera, el calendario y las fichas. */
+html[data-mode="primaria-1-3"] {
+  --night: #334657; --night-2: #476879; --gold: #f7c872;
+  --ink: #3d4f50; --cream: #fff7e9; --pdf-paper: #fff7eb;
+  --theme-sky-1: #4a7180; --theme-sky-2: #2f485a;
+  --theme-hill-1: #48746b; --theme-hill-2: #335a5a;
+  --theme-art-1: #f6ddc3; --theme-art-2: #e2eee5;
+  --theme-title: #365d62; --theme-lead: #496b67;
+  --theme-prayer: #e8edf3; --theme-prayer-text: #4c6076;
+  --theme-action: #e6f1e7; --theme-action-text: #3e6c56;
+}
+html[data-mode="primaria-4-6"] {
+  --night: #243e4a; --night-2: #365963; --gold: #e6bb79;
+  --ink: #344850; --cream: #fbf5ed; --pdf-paper: #fbf4eb;
+  --theme-sky-1: #416776; --theme-sky-2: #203f50;
+  --theme-hill-1: #385968; --theme-hill-2: #274b50;
+  --theme-art-1: #dde8e7; --theme-art-2: #eddbc8;
+  --theme-title: #325866; --theme-lead: #4b6671;
+  --theme-prayer: #e2eaf0; --theme-prayer-text: #43566b;
+  --theme-action: #e8eee8; --theme-action-text: #436459;
+}
+html[data-mode="eso-1-2"] {
+  --night: #202c44; --night-2: #334563; --gold: #eabb80;
+  --ink: #37475b; --cream: #f8f4ed; --pdf-paper: #f6f3ef;
+  --theme-sky-1: #374c6b; --theme-sky-2: #1d2942;
+  --theme-hill-1: #324660; --theme-hill-2: #283b50;
+  --theme-art-1: #c9dbe3; --theme-art-2: #e6d3bd;
+  --theme-title: #32465c; --theme-lead: #465f73;
+  --theme-prayer: #e9e9f1; --theme-prayer-text: #4e5871;
+  --theme-action: #e1eae7; --theme-action-text: #42695f;
+}
+html[data-mode="eso-3-4"] {
+  --night: #152836; --night-2: #263d4c; --gold: #d8b57e;
+  --ink: #263847; --cream: #f7f3ec; --pdf-paper: #f5f0e8;
+  --theme-sky-1: #283f4f; --theme-sky-2: #132633;
+  --theme-hill-1: #304454; --theme-hill-2: #233a44;
+  --theme-art-1: #d0d9db; --theme-art-2: #e9d9c4;
+  --theme-title: #263d4a; --theme-lead: #475864;
+  --theme-prayer: #e7e6ec; --theme-prayer-text: #4a5570;
+  --theme-action: #e5eae7; --theme-action-text: #3f635a;
+}
+html[data-mode]:not([data-mode="infantil"]) .page-shell {
+  background: radial-gradient(ellipse at 54% 12%, var(--theme-sky-1),var(--theme-sky-2) 81%);
+}
+html[data-mode]:not([data-mode="infantil"]) .village {
+  background: linear-gradient(180deg, rgba(236,233,212,.12), rgba(21,31,50,.24));
+  border-color: rgba(232,231,216,.22);
+}
+html[data-mode]:not([data-mode="infantil"]) .hills-back { background: var(--theme-hill-1); }
+html[data-mode]:not([data-mode="infantil"]) .hills-front { background: var(--theme-hill-2); }
+html[data-mode]:not([data-mode="infantil"]) .day-content { background: var(--pdf-paper); }
+html[data-mode]:not([data-mode="infantil"]) .day-art-panel { background: linear-gradient(135deg,var(--theme-art-1),var(--theme-art-2)); }
+html[data-mode]:not([data-mode="infantil"]) .day-text-panel h2 { color: var(--theme-title); }
+html[data-mode]:not([data-mode="infantil"]) .day-message { color: var(--theme-lead); }
+html[data-mode]:not([data-mode="infantil"]) .activity-prayer { background: var(--theme-prayer); color: var(--theme-prayer-text); }
+html[data-mode]:not([data-mode="infantil"]) .activity-action { background: var(--theme-action); color: var(--theme-action-text); }
+html[data-mode]:not([data-mode="infantil"]) .art-decoration { color: var(--theme-title); }
+html[data-mode]:not([data-mode="infantil"]) .day-tag { color: var(--theme-lead); }
+html[data-mode]:not([data-mode="infantil"]) .back-button { background: var(--theme-title); box-shadow: 0 4px 0 #263544; }
+html[data-mode]:not([data-mode="infantil"]) .back-button:hover { filter: brightness(1.15); }
+html[data-mode]:not([data-mode="infantil"]) .download-button { background: #fffef9; color: var(--theme-title); }
+html[data-mode]:not([data-mode="infantil"]) .house.test-open .house-door { background: linear-gradient(130deg,#e5c996,#b7a277); }
+html[data-mode]:not([data-mode="infantil"]) .house.test-open .house-number { color: #314354; }
+html[data-mode]:not([data-mode="infantil"]) .hero-subtitle { color: #e7eae6; }
+
+/* Etapa primaria inferior: casas y formas conservan el juego, pero son más sobrias. */
+html[data-mode="primaria-1-3"] .house { --front: #c89c82; --roof: #628e8b; }
+html[data-mode="primaria-1-3"] .house:nth-child(5n + 2) { --front: #8baead; --roof: #55747e; }
+html[data-mode="primaria-1-3"] .house:nth-child(5n + 3) { --front: #dabb86; --roof: #947969; }
+html[data-mode="primaria-1-3"] .house:nth-child(5n + 4) { --front: #b7a1b0; --roof: #78718b; }
+html[data-mode="primaria-1-3"] .house:nth-child(5n + 5) { --front: #a9b58e; --roof: #617e6e; }
+html[data-mode="primaria-1-3"] .hero h1 { font-weight: 500; }
+html[data-mode="primaria-1-3"] .day-text-panel h2 { font-weight: 500; }
+
+/* Primaria superior: algo más editorial; menos relieve y casas más geométricas. */
+html[data-mode="primaria-4-6"] .house,
+html[data-mode="eso-1-2"] .house,
+html[data-mode="eso-3-4"] .house { --front: #88a2a4; --roof: #4f6873; }
+html[data-mode="primaria-4-6"] .house-body { border-radius: 4px; border-color: #283e49; box-shadow: 1px 4px 0 #15253144; }
+html[data-mode="primaria-4-6"] .house-roof { clip-path: polygon(50% 8%, 98% 80%, 98% 100%, 2% 100%, 2% 80%); }
+html[data-mode="primaria-4-6"] .house-door { border-radius: 17px 17px 2px 2px; }
+html[data-mode="primaria-4-6"] .house:nth-child(5n + 2) { --front: #c4a08e; --roof: #777381; }
+html[data-mode="primaria-4-6"] .house:nth-child(5n + 3) { --front: #a5aa91; --roof: #677d79; }
+html[data-mode="primaria-4-6"] .house:nth-child(5n + 4) { --front: #a9a7b8; --roof: #707286; }
+html[data-mode="primaria-4-6"] .house:nth-child(5n + 5) { --front: #c5b084; --roof: #88836e; }
+
+/* ESO 1-2: ventanas urbanas estilizadas conservando la estructura de 24 puertas. */
+html[data-mode="eso-1-2"] .house { --front: #59778a; --roof: #344c6a; }
+html[data-mode="eso-1-2"] .house:nth-child(5n + 2) { --front: #ab806f; --roof: #615771; }
+html[data-mode="eso-1-2"] .house:nth-child(5n + 3) { --front: #658779; --roof: #344c58; }
+html[data-mode="eso-1-2"] .house:nth-child(5n + 4) { --front: #79819f; --roof: #465576; }
+html[data-mode="eso-1-2"] .house:nth-child(5n + 5) { --front: #ac9674; --roof: #695a64; }
+html[data-mode="eso-1-2"] .house-roof { top: 6%; height: 28%; clip-path: polygon(50% 0,100% 100%,0 100%); }
+html[data-mode="eso-1-2"] .house-body { border: 2px solid #182c3c; border-radius: 5px; width: 83%; height: 79%; box-shadow: 0 5px 14px #09162660; }
+html[data-mode="eso-1-2"] .house-door { border-radius: 9px 9px 2px 2px; border: 2px solid #263d51; }
+html[data-mode="eso-1-2"] .day-text-panel h2 { font-family: Georgia, serif; }
+
+/* ESO 3-4: composición nocturna editorial, tejados convertidos en geometría abstracta. */
+html[data-mode="eso-3-4"] .starfield { opacity: .29; }
+html[data-mode="eso-3-4"] .village { border-radius: 12px; box-shadow: none; }
+html[data-mode="eso-3-4"] .hills { opacity: .22; }
+html[data-mode="eso-3-4"] .sky-moon { width: 62px; height: 62px; opacity: .55; }
+html[data-mode="eso-3-4"] .little-church { opacity: .32; }
+html[data-mode="eso-3-4"] .house { --front: #6c8290; --roof: #304e5e; }
+html[data-mode="eso-3-4"] .house:nth-child(5n + 2) { --front: #91877e; --roof: #615867; }
+html[data-mode="eso-3-4"] .house:nth-child(5n + 3) { --front: #7d9185; --roof: #475b5b; }
+html[data-mode="eso-3-4"] .house:nth-child(5n + 4) { --front: #798397; --roof: #4e5a70; }
+html[data-mode="eso-3-4"] .house:nth-child(5n + 5) { --front: #a18c72; --roof: #70645d; }
+html[data-mode="eso-3-4"] .house-roof { top: 16%; height: 17%; clip-path: none; background: var(--roof); border-radius: 3px 3px 0 0; left: 9%; right: 9%; }
+html[data-mode="eso-3-4"] .house-roof::after { display: none; }
+html[data-mode="eso-3-4"] .house-body { width: 83%; height: 80%; border: 1px solid #9aadb566; border-radius: 3px; box-shadow: 0 8px 17px #09131d77; }
+html[data-mode="eso-3-4"] .house-door { height: 84%; border: 1px solid #e5c89a66; border-radius: 2px; background: #1d3345; }
+html[data-mode="eso-3-4"] .house-body::before,
+html[data-mode="eso-3-4"] .house-body::after { border: 0; border-radius: 2px; background: #e6c68e96; }
+html[data-mode="eso-3-4"] .hero-heading { margin-top: 20px; }
+html[data-mode="eso-3-4"] .hero h1 { font-weight: 400; letter-spacing: -.07em; }
+html[data-mode="eso-3-4"] .hero-small { font-style: normal; font-size: clamp(19px,2.1vw,31px); letter-spacing: .035em; }
+html[data-mode="eso-3-4"] .activity { border-radius: 7px; }
+html[data-mode="eso-3-4"] .day-text-panel h2 { font-weight: 400; }
+html[data-mode="eso-3-4"] .day-content { border-radius: 4px; }
+
+/* Mayor extensión de textos adolescentes: tamaño legible, panel sin solapamientos. */
+html[data-mode="eso-1-2"] .day-message,
+html[data-mode="eso-3-4"] .day-message,
+html[data-mode="primaria-4-6"] .day-message { font-size: clamp(18px,1.63vw,23px); line-height: 1.38; font-weight: 650; }
+html[data-mode="eso-1-2"] .activity p,
+html[data-mode="eso-3-4"] .activity p,
+html[data-mode="primaria-4-6"] .activity p { font-size: clamp(15px,1.28vw,18px); }
+html[data-mode="eso-3-4"] .day-text-panel,
+html[data-mode="eso-1-2"] .day-text-panel { padding-top: clamp(30px,3vw,50px); }
+html[data-mode="eso-3-4"] .day-text-panel h2,
+html[data-mode="eso-1-2"] .day-text-panel h2 { font-size: clamp(32px,3.2vw,45px); }
+@media (min-width: 731px) {
+  html[data-mode="eso-1-2"] .day-content,
+  html[data-mode="eso-3-4"] .day-content,
+  html[data-mode="primaria-4-6"] .day-content { min-height: min(700px,88vh); }
+}
+@media (max-width: 730px) {
+  html[data-mode="eso-3-4"] .day-message,
+  html[data-mode="eso-1-2"] .day-message,
+  html[data-mode="primaria-4-6"] .day-message { font-size: 18px; }
+  html[data-mode="eso-3-4"] .activity p,
+  html[data-mode="eso-1-2"] .activity p,
+  html[data-mode="primaria-4-6"] .activity p { font-size: 15px; }
+}
+
+/* ========================================================================
+   DISEÑOS EDITORIALES POR ETAPA — 2026
+   Infantil no se toca: todas las reglas visuales comienzan con un modo
+   educativo distinto. Los mismos nodos y datos alimentan los seis diseños.
+   ======================================================================== */
+html[data-mode="bachillerato"] {
+  --night:#141e25;--night-2:#273238;--gold:#d6b079;--ink:#26323a;
+  --cream:#f2eee5;--pdf-paper:#f0eadf;--theme-sky-1:#293943;
+  --theme-sky-2:#0f1c22;--theme-hill-1:#24343b;--theme-hill-2:#1d2c35;
+  --theme-art-1:#1d3038;--theme-art-2:#0d1a24;
+  --theme-title:#283139;--theme-lead:#3d4c52;
+  --theme-prayer:#ece4d8;--theme-prayer-text:#3a4d50;
+  --theme-action:#e7ebe3;--theme-action-text:#38524b;
+}
+
+/* El calendario abandona por completo la silueta de casas en las etapas
+   posteriores. Se sustituyen por tarjetas de cinco familias geométricas. */
+html[data-mode]:not([data-mode="infantil"]) .hills,
+html[data-mode]:not([data-mode="infantil"]) .little-church,
+html[data-mode]:not([data-mode="infantil"]) .sky-moon,
+html[data-mode]:not([data-mode="infantil"]) .house-roof,
+html[data-mode]:not([data-mode="infantil"]) .house-body::before,
+html[data-mode]:not([data-mode="infantil"]) .house-body::after,
+html[data-mode]:not([data-mode="infantil"]) .house-door::before,
+html[data-mode]:not([data-mode="infantil"]) .house-door::after { display:none; }
+html[data-mode]:not([data-mode="infantil"]) .house,
+html[data-mode]:not([data-mode="infantil"]) .house:nth-child(n) {
+  height:116px;translate:none;transform:none;filter:none;
+  padding:0;border:0;border-radius:var(--card-radius,12px);
+  background:var(--card-bg,#fff);box-shadow:var(--card-shadow,0 6px 16px #0002);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+html[data-mode]:not([data-mode="infantil"]) .house:hover { transform:translateY(-5px); }
+html[data-mode]:not([data-mode="infantil"]) .house-body {
+  position:static;inset:auto;width:100%;height:100%;padding:0;background:transparent;
+  border:0;border-radius:inherit;box-shadow:none;display:block;
+}
+html[data-mode]:not([data-mode="infantil"]) .house-door {
+  position:relative;width:100%;height:100%;border:0;border-radius:inherit;
+  box-shadow:none;background:transparent;display:flex;justify-content:center;
+  align-items:center;overflow:hidden;
+}
+html[data-mode]:not([data-mode="infantil"]) .house-number {
+  font-size:clamp(32px,3.3vw,47px);font-weight:800;line-height:1;
+  text-shadow:none;letter-spacing:-.06em;color:var(--card-number,#3d5162);
+}
+html[data-mode]:not([data-mode="infantil"]) .house.current::after { content:'✦';right:8px;top:3px;font-size:17px; }
+html[data-mode]:not([data-mode="infantil"]) .house.future { opacity:.36; }
+html[data-mode]:not([data-mode="infantil"]) .house.past { opacity:.62; }
+html[data-mode]:not([data-mode="infantil"]) .house.test-open { opacity:1; }
+html[data-mode]:not([data-mode="infantil"]) .house.test-open .house-door { background:transparent; }
+html[data-mode]:not([data-mode="infantil"]) .house.test-open .house-number { color:var(--card-number,#3d5162);text-shadow:none; }
+html[data-mode]:not([data-mode="infantil"]) .village { min-height:0; }
+html[data-mode]:not([data-mode="infantil"]) .village-footer { margin-top:28px; }
+html[data-mode]:not([data-mode="infantil"]) .day-content { height:auto;min-height:660px; }
+html[data-mode]:not([data-mode="infantil"]) .day-text-panel { min-width:0; }
+html[data-mode]:not([data-mode="infantil"]) .activity-icon { display:none; }
+html[data-mode]:not([data-mode="infantil"]) .day-art-panel img {
+  border-radius:var(--image-radius,8px);box-shadow:var(--image-shadow,none);
+}
+html[data-mode]:not([data-mode="infantil"]) .activity { flex-direction:column;gap:3px; }
+html[data-mode]:not([data-mode="infantil"]) .activity h3 { margin:0 0 7px; }
+html[data-mode]:not([data-mode="infantil"]) .activity p { font-weight:500; }
+html[data-mode]:not([data-mode="infantil"]) .day-actions { padding-top:12px; }
+html[data-mode]:not([data-mode="infantil"]) .back-button { box-shadow:none;border-radius:6px; }
+html[data-mode]:not([data-mode="infantil"]) .download-button { border-radius:6px; }
+
+/* PRIMARIA 1–3 · Libro ilustrado: páginas, letras cálidas y marcapáginas. */
+html[data-mode="primaria-1-3"] .village {
+  background:#f6ead1;border:8px solid #e6cd9c;border-radius:34px;
+  box-shadow:0 20px 0 #1d343755,0 28px 50px #0003;max-width:1320px;
+}
+html[data-mode="primaria-1-3"] .village::before {
+  content:'MI LIBRO DE ADVIENTO';display:block;color:#6f685c;
+  font:800 15px Georgia,serif;letter-spacing:.16em;text-align:center;margin:-8px 0 22px;
+}
+html[data-mode="primaria-1-3"] .house {
+  --card-radius:22px 9px 19px 9px;--card-bg:#fffbef;
+  --card-shadow:0 6px 0 #d4bd92;--card-number:#477572;
+}
+html[data-mode="primaria-1-3"] .house:nth-child(4n+2) { --card-bg:#f8e3d0;--card-number:#a45f50; }
+html[data-mode="primaria-1-3"] .house:nth-child(4n+3) { --card-bg:#e0e8dc;--card-number:#52766a; }
+html[data-mode="primaria-1-3"] .house:nth-child(4n) { --card-bg:#e3e2ed;--card-number:#6f6a92; }
+html[data-mode="primaria-1-3"] .house-door { border:2px dashed #b89a6e72; }
+html[data-mode="primaria-1-3"] .house-number { font-family:Georgia,serif;font-weight:700; }
+html[data-mode="primaria-1-3"] .village-footer { color:#876e54; }
+html[data-mode="primaria-1-3"] .village-footer span { color:#b67852; }
+html[data-mode="primaria-1-3"] .day-dialog { border-radius:28px; }
+html[data-mode="primaria-1-3"] .day-content { grid-template-columns:52% 48%; background:#fff7e7; }
+html[data-mode="primaria-1-3"] .day-art-panel {
+  background:linear-gradient(110deg,#f7d9ac,#f6e9cc);
+  border-right:4px double #d4ad76;padding:38px;
+}
+html[data-mode="primaria-1-3"] .day-art-panel img {
+  border:12px solid #fff8e8;box-shadow:0 11px 30px #b7866240;
+  border-radius:26px 10px 24px 10px;
+}
+html[data-mode="primaria-1-3"] .art-decoration { font:700 12px Georgia,serif;color:#97744c; }
+html[data-mode="primaria-1-3"] .day-text-panel { padding:60px 39px 28px;background:#fff9ec; }
+html[data-mode="primaria-1-3"] .day-tag { color:#a36c49;letter-spacing:.1em; }
+html[data-mode="primaria-1-3"] .day-text-panel h2 { font-family:Georgia,serif;font-size:clamp(32px,3.4vw,48px);color:#76513e; }
+html[data-mode="primaria-1-3"] .day-message { color:#6a5c55;font-size:clamp(19px,1.85vw,25px); }
+html[data-mode="primaria-1-3"] .activity { border-radius:18px 8px 18px 8px;border-left:5px solid #b0bf98; }
+html[data-mode="primaria-1-3"] .activity-prayer { background:#f1e7f3;color:#6a536a; }
+html[data-mode="primaria-1-3"] .activity-action { background:#e6f0dc;color:#4c6b55; }
+
+/* PRIMARIA 4–6 · Cuaderno de campo y fichas, con ilustración a la derecha. */
+html[data-mode="primaria-4-6"] .page-shell {
+  background:linear-gradient(140deg,#2a5960,#264451 70%);
+}
+html[data-mode="primaria-4-6"] .village {
+  background:repeating-linear-gradient(0deg,#f5efe5 0 37px,#c9d8d633 38px 39px);
+  border:3px solid #ddc8a2;border-radius:9px;max-width:1320px;
+  box-shadow:12px 15px 0 #1b3540a8;
+}
+html[data-mode="primaria-4-6"] .house {
+  --card-radius:4px;--card-bg:#fdfaf4;
+  --card-shadow:4px 5px 0 #9fb2a9;--card-number:#385d60;
+}
+html[data-mode="primaria-4-6"] .house:nth-child(even) { --card-bg:#f2e4d2;--card-number:#7b5c53; }
+html[data-mode="primaria-4-6"] .house-door { border:1px solid #879b9b; }
+html[data-mode="primaria-4-6"] .house-number { font-family:Georgia,serif;font-weight:500; }
+html[data-mode="primaria-4-6"] .village-footer {color:#4f6764;}
+html[data-mode="primaria-4-6"] .day-dialog { border-radius:8px; }
+html[data-mode="primaria-4-6"] .day-content { grid-template-columns:57% 43%;background:#f4eee2; }
+html[data-mode="primaria-4-6"] .day-text-panel {
+  grid-column:1;grid-row:1;order:1;
+  background:repeating-linear-gradient(#f7f3e9 0 35px,#9fb8ba38 36px 37px);
+  border-left:15px solid #d7ae74;padding:48px 46px 22px;
+}
+html[data-mode="primaria-4-6"] .day-art-panel {
+  grid-column:2;grid-row:1;order:2;
+  background:#d9e4dd;border-left:2px dashed #b1c4be;padding:48px 27px;
+}
+html[data-mode="primaria-4-6"] .day-art-panel img { border:10px solid #fff9ee;box-shadow:7px 10px 0 #809b9770;transform:rotate(1deg);border-radius:2px; }
+html[data-mode="primaria-4-6"] .day-text-panel h2 { font:700 clamp(30px,3.2vw,45px) Georgia,serif;color:#315763; }
+html[data-mode="primaria-4-6"] .day-message { font-weight:600; }
+html[data-mode="primaria-4-6"] .activity { border:1px solid #bfcabc;border-radius:2px;background:#fffaf1; }
+html[data-mode="primaria-4-6"] .activity-action { border-left:7px solid #b68856; }
+html[data-mode="primaria-4-6"] .activity-prayer { border-left:7px solid #779ba1; }
+html[data-mode="primaria-4-6"] .activity h3 { letter-spacing:.16em; }
+
+/* ESO 1–2 · Portadas de revista: fuertes contrastes, recortes y composición. */
+html[data-mode="eso-1-2"] .page-shell { background:linear-gradient(135deg,#19283d,#344b61); }
+html[data-mode="eso-1-2"] .starfield { opacity:.12; }
+html[data-mode="eso-1-2"] .village {
+  background:#172f42;border:3px solid #476273;border-radius:0;
+  box-shadow:16px 16px 0 #0b1b29;
+}
+html[data-mode="eso-1-2"] .house {
+  --card-radius:0;--card-bg:#e7b878;--card-number:#1a3045;
+  --card-shadow:6px 6px 0 #0d1c2d;
+}
+html[data-mode="eso-1-2"] .house:nth-child(3n+2) { --card-bg:#acc9c6; }
+html[data-mode="eso-1-2"] .house:nth-child(3n) { --card-bg:#d9a5a2; }
+html[data-mode="eso-1-2"] .house-number {font-family:'Trebuchet MS',Arial,sans-serif;font-weight:900;font-size:clamp(40px,3.8vw,56px);}
+html[data-mode="eso-1-2"] .day-dialog { border-radius:0; }
+html[data-mode="eso-1-2"] .day-content { grid-template-columns:58% 42%;background:#f6f2e9; }
+html[data-mode="eso-1-2"] .day-text-panel {
+  grid-column:1;grid-row:1;order:1;border-top:16px solid #d39472;
+  background:#f6f2e9;padding:39px 55px 24px;
+}
+html[data-mode="eso-1-2"] .day-art-panel {
+  grid-column:2;grid-row:1;order:2;
+  background:linear-gradient(160deg,#2c6473,#1b374f);padding:34px 22px;
+}
+html[data-mode="eso-1-2"] .art-decoration {color:#f8dbb1;}
+html[data-mode="eso-1-2"] .day-art-panel img {border:4px solid #fff6e9;box-shadow:-12px 13px 0 #dfaf8255;border-radius:0;}
+html[data-mode="eso-1-2"] .day-tag {color:#af5c4d;font-weight:900;letter-spacing:.23em;}
+html[data-mode="eso-1-2"] .day-text-panel h2 {
+  font:900 clamp(36px,3.8vw,51px)/1.05 'Trebuchet MS',sans-serif;
+  letter-spacing:-.055em;color:#203c56;text-transform:uppercase;
+}
+html[data-mode="eso-1-2"] .day-message {font-size:clamp(18px,1.7vw,23px);font-weight:650;color:#405a65;}
+html[data-mode="eso-1-2"] .activity {border-radius:0;border-top:3px solid #c67e67;padding:10px 2px;background:none;}
+html[data-mode="eso-1-2"] .activity-prayer {border-color:#5b98a1;}
+html[data-mode="eso-1-2"] .activity h3 {font-weight:900;letter-spacing:.13em;}
+
+/* ESO 3–4 · Póster de reflexión: horizontal, imagen-banda y tres columnas. */
+html[data-mode="eso-3-4"] .page-shell {background:linear-gradient(145deg,#182b36,#12232d);}
+html[data-mode="eso-3-4"] .village {border:1px solid #bdc6c344;background:#f0eee6;border-radius:3px;box-shadow:none;}
+html[data-mode="eso-3-4"] .house {
+  --card-radius:0;--card-bg:#1e3c47;--card-number:#f2e7cf;
+  --card-shadow:none;
+}
+html[data-mode="eso-3-4"] .house:nth-child(4n+2) {--card-bg:#395257;}
+html[data-mode="eso-3-4"] .house:nth-child(4n+3) {--card-bg:#46575b;}
+html[data-mode="eso-3-4"] .house:nth-child(4n) {--card-bg:#2a414c;}
+html[data-mode="eso-3-4"] .house {outline:1px solid #9daea0a8;outline-offset:-7px;}
+html[data-mode="eso-3-4"] .house-number {font:400 clamp(35px,3.3vw,48px) Georgia,serif;letter-spacing:.03em;}
+html[data-mode="eso-3-4"] .village-footer {color:#4a6164;}
+html[data-mode="eso-3-4"] .day-dialog {border-radius:2px;}
+html[data-mode="eso-3-4"] .day-content {
+  display:grid;grid-template-columns:1fr;grid-template-rows:235px minmax(0,1fr);
+  min-height:660px;background:#f1f0e9;
+}
+html[data-mode="eso-3-4"] .day-art-panel {
+  grid-column:1;grid-row:1;order:1;flex-direction:row;
+  padding:12px 48px;background:linear-gradient(105deg,#142e3a,#2c4850);
+  overflow:hidden;justify-content:center;gap:34px;
+}
+html[data-mode="eso-3-4"] .art-decoration {writing-mode:vertical-rl;color:#d5bd8f;letter-spacing:.15em;padding:5px;}
+html[data-mode="eso-3-4"] .day-art-panel img {width:auto;height:213px;max-height:213px;object-fit:contain;border-radius:0;box-shadow:none;}
+html[data-mode="eso-3-4"] .day-text-panel {
+  grid-column:1;grid-row:2;order:2;display:grid;
+  grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);
+  grid-template-rows:23px auto 1fr auto;
+  column-gap:24px;row-gap:3px;padding:26px 44px 15px;
+  background:#f1f0e9;align-items:start;
+}
+html[data-mode="eso-3-4"] .day-tag {grid-column:1;grid-row:1;color:#8f7760;font-size:11px;}
+html[data-mode="eso-3-4"] .day-text-panel h2 {
+  grid-column:1;grid-row:2;font:400 clamp(29px,2.9vw,43px)/1.04 Georgia,serif;
+  color:#223c48;margin:7px 0 13px;
+}
+html[data-mode="eso-3-4"] .day-message {grid-column:1;grid-row:3;font-size:19px;line-height:1.39;font-weight:500;margin:0;color:#53626a;}
+html[data-mode="eso-3-4"] .activity {grid-row:2/span 2;margin:0;padding:15px 12px;min-height:230px;
+  border-radius:0;background:transparent;border-left:2px solid #b38b62;}
+html[data-mode="eso-3-4"] .activity-prayer {grid-column:2;color:#415768;}
+html[data-mode="eso-3-4"] .activity-action {grid-column:3;color:#395d56;border-color:#5d8d79;}
+html[data-mode="eso-3-4"] .activity h3 {font-size:12px;letter-spacing:.12em;line-height:1.3;}
+html[data-mode="eso-3-4"] .activity p {font-size:16px;line-height:1.5;}
+html[data-mode="eso-3-4"] .day-actions {grid-column:1/-1;grid-row:4;padding:0;gap:10px;}
+html[data-mode="eso-3-4"] .back-button,html[data-mode="eso-3-4"] .download-button {font-size:13px;padding:9px 13px;}
+
+/* BACHILLERATO · Galería/ensayo, composición inversa y líneas de lectura. */
+html[data-mode="bachillerato"] .page-shell {background:linear-gradient(120deg,#101c23,#1e3037);}
+html[data-mode="bachillerato"] .starfield {opacity:.10;}
+html[data-mode="bachillerato"] .hero h1 {font-weight:400;font-size:clamp(73px,8vw,122px);font-family:Georgia,serif;}
+html[data-mode="bachillerato"] .hero-small {font-family:Georgia,serif;font-weight:400;font-style:italic;letter-spacing:.03em;}
+html[data-mode="bachillerato"] .village {
+  background:transparent;border:0;border-top:1px solid #c6b18f72;
+  border-bottom:1px solid #c6b18f72;border-radius:0;box-shadow:none;
+  padding-top:42px;padding-bottom:38px;
+}
+html[data-mode="bachillerato"] .calendar-grid {grid-template-columns:repeat(8,minmax(0,1fr));gap:16px;}
+html[data-mode="bachillerato"] .house {
+  --card-radius:0;--card-bg:transparent;--card-number:#d8c8af;
+  --card-shadow:none;border-bottom:1px solid #b6a48188!important;
+}
+html[data-mode="bachillerato"] .house:nth-child(3n) {--card-number:#b9b9b0;}
+html[data-mode="bachillerato"] .house-number {font:400 clamp(34px,3vw,46px) Georgia,serif;letter-spacing:-.07em;}
+html[data-mode="bachillerato"] .village-footer {color:#bcb09d;}
+html[data-mode="bachillerato"] .day-dialog {border-radius:0;box-shadow:0 24px 75px #000a;}
+html[data-mode="bachillerato"] .day-content {grid-template-columns:59% 41%;background:#eee9df;}
+html[data-mode="bachillerato"] .day-text-panel {
+  order:1;grid-column:1;grid-row:1;
+  padding:48px 57px 22px;background:#f1ede4;
+  border-top:7px solid #b68e59;
+}
+html[data-mode="bachillerato"] .day-art-panel {
+  order:2;grid-column:2;grid-row:1;padding:30px 23px;
+  background:linear-gradient(125deg,#253840,#0c1b24);
+}
+html[data-mode="bachillerato"] .art-decoration {font:400 10px Georgia,serif;letter-spacing:.22em;color:#decaaa;}
+html[data-mode="bachillerato"] .day-art-panel img {border-radius:0;box-shadow:none;max-height:525px;}
+html[data-mode="bachillerato"] .day-tag {font:700 12px 'Trebuchet MS',sans-serif;letter-spacing:.19em;color:#9f7b58;}
+html[data-mode="bachillerato"] .day-text-panel h2 {
+  font:400 clamp(37px,3.5vw,50px)/1.05 Georgia,serif;
+  color:#25353a;letter-spacing:-.04em;margin:14px 0 22px;
+}
+html[data-mode="bachillerato"] .day-message {
+  font:400 clamp(19px,1.55vw,22px)/1.5 Georgia,serif;
+  color:#425156;margin:0 0 21px;
+}
+html[data-mode="bachillerato"] .activity {
+  margin:0 0 13px;padding:9px 0 4px;border:0;border-top:1px solid #b6a890;
+  border-radius:0;background:transparent;color:#3d4c4e;
+}
+html[data-mode="bachillerato"] .activity h3 {font-size:11px;letter-spacing:.22em;color:#9b7855;margin:0 0 5px;}
+html[data-mode="bachillerato"] .activity p {font:400 16px/1.37 Georgia,serif;}
+html[data-mode="bachillerato"] .day-actions {padding-top:1px;}
+html[data-mode="bachillerato"] .back-button {background:#283940;color:#f2e4ce;}
+html[data-mode="bachillerato"] .download-button {background:#eee6d9;color:#283940;}
+
+/* Captura PDF: usa los mismos componentes/plantillas, tamaño de diapositiva.
+   Sobrescribe solo los tamaños tipográficos y los márgenes necesarios. */
+html[data-mode]:not([data-mode="infantil"]) .day-content.pdf-export {
+  width:1200px!important;height:675px!important;min-height:675px!important;
+  overflow:hidden!important;
+}
+html[data-mode="eso-3-4"] .day-content.pdf-export {grid-template-columns:1fr!important;grid-template-rows:230px 445px!important;}
+html[data-mode="primaria-4-6"] .day-content.pdf-export {grid-template-columns:57% 43%!important;}
+html[data-mode="eso-1-2"] .day-content.pdf-export {grid-template-columns:58% 42%!important;}
+html[data-mode="bachillerato"] .day-content.pdf-export {grid-template-columns:59% 41%!important;}
+html[data-mode="primaria-1-3"] .day-content.pdf-export {grid-template-columns:52% 48%!important;}
+html[data-mode="eso-3-4"] .pdf-export .day-text-panel {padding:25px 44px 18px!important;display:grid!important;}
+html[data-mode="eso-3-4"] .pdf-export .day-message {font-size:18px!important;line-height:1.35!important;margin:0!important;}
+html[data-mode="eso-3-4"] .pdf-export .day-content:not(.pdf-export) .day-text-panel h2 {font-size:38px!important;margin:4px 0 9px!important;}
+html[data-mode="eso-3-4"] .pdf-export .activity {padding:15px 10px!important;margin:0!important;}
+html[data-mode="eso-3-4"] .pdf-export .activity p {font-size:16px!important;}
+html[data-mode="eso-3-4"] .pdf-export .day-art-panel {padding:10px 48px!important;}
+html[data-mode="eso-3-4"] .pdf-export .day-art-panel img {height:205px!important;max-height:205px!important;width:auto!important;}
+html[data-mode="bachillerato"] .pdf-export .day-text-panel {padding:40px 55px 22px!important;}
+html[data-mode="bachillerato"] .pdf-export .day-content:not(.pdf-export) .day-text-panel h2 {font-size:43px!important;margin:10px 0 17px!important;}
+html[data-mode="bachillerato"] .pdf-export .day-message {font-size:19px!important;line-height:1.42!important;margin-bottom:15px!important;}
+html[data-mode="bachillerato"] .pdf-export .activity {padding:8px 0!important;margin:0 0 8px!important;}
+html[data-mode="bachillerato"] .pdf-export .activity p {font-size:15px!important;line-height:1.32!important;}
+html[data-mode="bachillerato"] .pdf-export .day-art-panel img {max-height:520px!important;}
+html[data-mode="eso-1-2"] .pdf-export .day-text-panel {padding:34px 55px 20px!important;}
+html[data-mode="eso-1-2"] .pdf-export .day-content:not(.pdf-export) .day-text-panel h2 {font-size:43px!important;}
+html[data-mode="eso-1-2"] .pdf-export .day-message {font-size:20px!important;margin-bottom:16px!important;}
+html[data-mode="primaria-4-6"] .pdf-export .day-text-panel {padding:42px 46px 24px!important;}
+html[data-mode="primaria-4-6"] .pdf-export .day-message {font-size:20px!important;margin-bottom:15px!important;}
+html[data-mode="primaria-1-3"] .pdf-export .day-text-panel {padding:48px 39px 25px!important;}
+html[data-mode="primaria-1-3"] .pdf-export .day-message {font-size:21px!important;margin-bottom:16px!important;}
+
+@media(max-width:1000px) {
+  html[data-mode]:not([data-mode="infantil"]) .calendar-grid {grid-template-columns:repeat(6,minmax(0,1fr));}
+  html[data-mode="bachillerato"] .calendar-grid {grid-template-columns:repeat(6,minmax(0,1fr));}
+  html[data-mode]:not([data-mode="infantil"]) .house,html[data-mode]:not([data-mode="infantil"]) .house:nth-child(n) {height:110px;}
+  html[data-mode="eso-3-4"] .day-text-panel {column-gap:14px;padding:22px 26px 15px;}
+}
+@media(max-width:730px) {
+  html[data-mode]:not([data-mode="infantil"]) .calendar-grid {grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;}
+  html[data-mode]:not([data-mode="infantil"]) .house,html[data-mode]:not([data-mode="infantil"]) .house:nth-child(n) {height:clamp(79px,21vw,112px);}
+  html[data-mode]:not([data-mode="infantil"]) .house-number {font-size:clamp(26px,7vw,39px);}
+  html[data-mode]:not([data-mode="infantil"]) .village {padding:30px 19px;}
+  html[data-mode]:not([data-mode="infantil"]) .day-content:not(.pdf-export) {display:flex;flex-direction:column;min-height:0;}
+  html[data-mode]:not([data-mode="infantil"]) .day-content:not(.pdf-export) .day-art-panel {order:1;padding:17px 24px;min-height:0;flex-direction:column;border-left:0;border-right:0;}
+  html[data-mode]:not([data-mode="infantil"]) .day-content:not(.pdf-export) .day-art-panel img {height:auto;width:100%;max-height:225px;max-width:440px;transform:none;}
+  html[data-mode]:not([data-mode="infantil"]) .day-content:not(.pdf-export) .day-text-panel {
+    order:2;display:flex;flex-direction:column;padding:25px 25px 30px;
+    border-left:0;min-height:0;
+  }
+  html[data-mode]:not([data-mode="infantil"]) .day-content:not(.pdf-export) .day-text-panel h2 {font-size:clamp(27px,7vw,38px);}
+  html[data-mode]:not([data-mode="infantil"]) .day-content:not(.pdf-export) .day-message {font-size:17px;line-height:1.4;}
+  html[data-mode]:not([data-mode="infantil"]) .day-content:not(.pdf-export) .activity {min-height:0;margin-bottom:10px;}
+  html[data-mode]:not([data-mode="infantil"]) .day-content:not(.pdf-export) .activity p {font-size:15px;}
+  html[data-mode="eso-3-4"] .day-content:not(.pdf-export) .day-art-panel {height:auto;gap:8px;}
+  html[data-mode="eso-3-4"] .day-content:not(.pdf-export) .art-decoration {writing-mode:initial;}
+  html[data-mode="eso-3-4"] .day-content:not(.pdf-export) .day-art-panel img {height:auto;max-height:220px;}
+  html[data-mode="eso-3-4"] .day-content:not(.pdf-export) .day-text-panel {display:flex;}
+  html[data-mode="bachillerato"] .day-content:not(.pdf-export) .day-text-panel {border-top:5px solid #b68e59;}
+  html[data-mode="primaria-4-6"] .day-content:not(.pdf-export) .day-text-panel {background:#f7f3e9;}
+}
+
+/* Cuatro velas de la corona de Adviento, siempre visibles en la cabecera.
+   Se construyen únicamente con HTML/CSS: sin imágenes ni dependencias nuevas. */
+.advent-candles {
+  --candle-purple-light: #a899c7;
+  --candle-purple-dark: #745e99;
+  --candle-pink-light: #f3b7c7;
+  --candle-pink-dark: #c97594;
+  --wreath-leaf: #527b5c;
+  --wreath-deep: #365e50;
+  flex: 0 0 198px;
+  position: relative;
+  width: 198px; height: 116px;
+  border: 1px solid rgba(255,240,218,.20);
+  border-radius: 22px;
+  background: linear-gradient(150deg,rgba(252,236,220,.13),rgba(244,214,187,.04));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 8px 20px rgba(7,13,29,.10);
+}
+.advent-wreath { position: absolute; width: 198px; height: 112px; top: 1px; left: 0; }
+.wreath-ring {
+  position: absolute; z-index: 1; left: 10px; right: 10px; bottom: 9px; height: 48px;
+  border: 13px solid var(--wreath-leaf); border-radius: 50%;
+  box-shadow: 0 2px 2px #182d2d55, inset 0 3px 3px #162a2e4d;
+  transform: rotate(-2deg);
+}
+.wreath-ring::before {
+  content: ''; position: absolute; inset: -12px; border: 5px dotted #83a37a;
+  border-radius: 50%; transform: rotate(17deg); opacity: .8;
+}
+.wreath-ring::after {
+  content: ''; position: absolute; z-index: 5; left: 18px; bottom: 0;
+  width: 5px; height: 5px; border-radius: 50%; background: #e8a06e;
+  box-shadow: 11px 4px #e8a06e, 92px 6px #d98968, 110px 1px #e8a06e;
+}
+.advent-candle {
+  position: absolute; z-index: 3; bottom: 25px; width: 23px; height: 63px;
+  --wax-light: var(--candle-purple-light); --wax-dark: var(--candle-purple-dark);
+  filter: drop-shadow(1px 2px 2px rgba(14,24,24,.22));
+}
+.advent-candle:nth-of-type(2) { left: 34px; }
+.advent-candle:nth-of-type(3) { left: 70px; }
+.advent-candle:nth-of-type(4) { left: 106px; }
+.advent-candle:nth-of-type(5) { left: 142px; }
+.candle-rose { --wax-light: var(--candle-pink-light); --wax-dark: var(--candle-pink-dark); }
+.candle-wax {
+  /* Fijar el origen: sin left, el posicionamiento de un span absoluto depende del flujo inline. */
+  position: absolute; z-index: 2; left: 0; bottom: 0; width: 100%; height: 47px;
+  border-radius: 6px 6px 3px 3px;
+  border: 1px solid color-mix(in srgb, var(--wax-dark) 75%, #3b3144);
+  background: linear-gradient(90deg, var(--wax-dark), var(--wax-light) 34%, var(--wax-light) 63%, var(--wax-dark));
+  box-shadow: inset 2px 0 3px rgba(255,255,255,.32);
+}
+.candle-wax::before {
+  content: ''; position: absolute; top: -3px; left: 0; right: 0; height: 7px;
+  border-radius: 50%; background: var(--wax-light);
+  border: 1px solid rgba(255,255,255,.28);
+}
+.candle-wick {
+  /* La mecha se centra respecto a la propia vela, no a toda la corona. */
+  position: absolute; z-index: 1; bottom: 46px; left: 50%; width: 2px; height: 8px;
+  transform: translateX(-50%);
+  background: #493d40; border-radius: 1px;
+}
+.candle-flame {
+  /* Anclaje fijo: la animación del dibujo no modifica este centrado. */
+  position: absolute; z-index: 4; bottom: 54px; left: 50%; width: 10px; height: 16px;
+  opacity: 0; transform: translateX(-50%);
+}
+.candle-flame::before {
+  /* La base de la llama permanece en el centro de la mecha al oscilar. */
+  content: ''; position: absolute; inset: 0;
+  border-radius: 85% 15% 70% 40%;
+  background: radial-gradient(circle at 56% 72%, #fffde0 0 20%, #ffdc77 45%, #ff943d 85%);
+  box-shadow: 0 0 11px 3px rgba(255,189,90,.54);
+  transform: rotate(-25deg); transform-origin: 50% 100%;
+}
+.advent-candle.is-lit .candle-flame { opacity: 1; }
+.advent-candle.is-lit .candle-flame::before { animation: advent-flicker 2.4s ease-in-out infinite alternate; }
+.advent-candle.is-lit .candle-wax { box-shadow: inset 2px 0 3px rgba(255,255,255,.36), 0 0 12px rgba(255,196,104,.23); }
+@keyframes advent-flicker {
+  0%,100% { transform: rotate(-25deg) scale(.96,1); box-shadow: 0 0 10px 3px rgba(255,189,90,.40); }
+  50% { transform: rotate(-18deg) scale(1.06,1.07); box-shadow: 0 0 13px 5px rgba(255,189,90,.55); }
+}
+.wreath-front {
+  position: absolute; z-index: 4; bottom: 6px; left: 27px; right: 27px; height: 19px;
+  border-radius: 50%;
+  background: repeating-linear-gradient(118deg, var(--wreath-leaf) 0 6px, var(--wreath-deep) 6px 13px, #7b9c71 13px 17px);
+  clip-path: ellipse(50% 45% at 50% 50%);
+  opacity: .96;
+}
+
+/* Matices propios de cada etapa, sin duplicar el componente. */
+html[data-mode="primaria-1-3"] .advent-candles {
+  --candle-purple-light: #b1a1d3; --candle-pink-light: #f4b5c7;
+  --wreath-leaf: #709779; --wreath-deep: #4d806f;
+  border-radius: 30px 12px 27px 12px; background: #fff2db26;
+}
+html[data-mode="primaria-4-6"] .advent-candles {
+  --candle-purple-light: #a4a0bd; --candle-purple-dark: #6e638e;
+  --wreath-leaf: #5b7c75; --wreath-deep: #385c58;
+  border-radius: 6px; background: #f5efdf17; border-color: #d6c3a870;
+}
+html[data-mode="eso-1-2"] .advent-candles {
+  --candle-purple-light: #b2a1ce; --candle-purple-dark: #77608f;
+  --wreath-leaf: #497c79; --wreath-deep: #285956;
+  border-radius: 0; background: #112c3a8f; border: 2px solid #5c8190;
+}
+html[data-mode="eso-3-4"] .advent-candles {
+  --candle-purple-light: #a499af; --candle-purple-dark: #6a5c7c;
+  --candle-pink-light: #d6a0ae; --candle-pink-dark: #a76982;
+  --wreath-leaf: #547169; --wreath-deep: #2e4e4c;
+  border-radius: 3px; border-color: #9cafa855; background: #d4d2bf0c;
+}
+html[data-mode="bachillerato"] .advent-candles {
+  --candle-purple-light: #9b92a7; --candle-purple-dark: #5f536f;
+  --candle-pink-light: #d3a2aa; --candle-pink-dark: #a27481;
+  --wreath-leaf: #4a685e; --wreath-deep: #304f4d;
+  border-radius: 0; border: 0; border-bottom: 1px solid #c6b18f72;
+  box-shadow: none; background: transparent;
+}
+@media (max-width: 940px) {
+  .advent-candles { flex-basis: 162px; width: 162px; height: 97px; }
+  .advent-wreath { transform: scale(.8); transform-origin: top left; top: 2px; left: 1px; }
+}
+@media (max-width: 600px) {
+  .advent-candles { flex-basis: 132px; width: 132px; height: 83px; }
+  .advent-wreath { transform: scale(.65); top: 3px; }
+  .stage-picker { gap: 5px; padding: 5px 7px; }
+  .stage-picker label { font-size: 10px; }
+  .stage-picker select { max-width: 148px; }
+}
+@media (max-width: 480px) {
+  .advent-candles { flex-basis: 108px; width: 108px; height: 69px; }
+  .advent-wreath { transform: scale(.53); top: 3px; left: 1px; }
+}

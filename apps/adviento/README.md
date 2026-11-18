@@ -13,9 +13,9 @@ Una sola aplicación web de Adviento, con **seis etapas educativas**, **144 prop
 | ESO 3.º–4.º | `eso-3-4` | 14–16 años |
 | Bachillerato | `bachillerato` | 16–18 años |
 
-El selector discreto, ahora con la opción «Bachillerato», se encuentra arriba a la derecha (en móviles pasa a situarse sobre el título). El cambio no recarga la página: cambia los textos, los archivos SVG, los colores y las formas del calendario. La elección se guarda en `localStorage` mediante la clave `adviento.educationalMode`. La primera visita muestra **Infantil**.
+Las cuatro velas de Adviento se muestran arriba a la izquierda y el selector de etapa se mantiene arriba a la derecha; en pantallas pequeñas se adaptan juntos antes del título. El cambio no recarga la página: cambia los textos, los archivos SVG, los colores y las formas del calendario. La elección se guarda en `localStorage` mediante la clave `adviento.educationalMode`. La primera visita muestra **Infantil**.
 
-El modo Infantil mantiene **todos los textos, SVG y composición visual de la versión original**. Las demás etapas incluyen textos y dibujos propios, coordinados por tema pero ajustados a diferentes edades. Bachillerato añade contenidos originales sobre la interioridad, la libertad, la vocación, el sentido y el compromiso social.
+El modo Infantil mantiene **todos los textos, SVG y composición del calendario de la versión original**, con la única incorporación de las velas en la cabecera. Las demás etapas incluyen textos y dibujos propios, coordinados por tema pero ajustados a diferentes edades. Bachillerato añade contenidos originales sobre la interioridad, la libertad, la vocación, el sentido y el compromiso social.
 
 ## Estructura del proyecto
 
@@ -100,7 +100,10 @@ Abre `themes.css`. Hay seis bloques de variables `html[data-mode="..."]` con los
 Para cambiar los textos breves de la cabecera, de los lemas y del encabezado del compromiso de cada etapa, edita el objeto `MODES` situado al principio de `app.js`.
 
 
-## Diseños diferenciados (calendario y modal)
+## Ventanas con números y diseños diferenciados
+
+Todas las ventanas del calendario muestran únicamente los números del 1 al 24, sin etiquetas adicionales. Se mantienen las decoraciones, los bordes y los efectos de cada modo, así como el contenido completo del cuadro que se abre al pulsar una ventana.
+
 
 Las cinco etapas posteriores a Infantil **no son solo cambios de paleta**. Sus calendarios dejan de mostrar casas para adoptar tarjetas con geometrías específicas. Sus ventanas diarias utilizan cinco maquetaciones distintas:
 
@@ -119,11 +122,13 @@ Las ilustraciones posteriores a Infantil se han reemplazado por **24 escenas tem
 En `config.js`:
 
 - `testMode: true` abre los 24 días, independientemente de la fecha. **Está activado, como en el original. Cambia a `false` antes de publicarlo para uso diario.**
+- `testDate: null` mantiene la fecha real. Para probar el encendido, con `testMode: true` fija por ejemplo `"2026-12-13"` y recarga: la corona mostrará tres velas encendidas. Usa también `"2026-11-29"`, `"2026-12-06"` y `"2026-12-20"` para comprobar los cuatro estados. Si `testMode: false`, `testDate` se ignora.
 - `calendarYear: 2026` indica el año.
-- `timeZone: "Europe/Madrid"` fija la zona horaria de apertura.
-- `animationsEnabled: true` permite las animaciones.
+- `candleLightingDates` contiene las cuatro fechas de encendido, una por domingo. **Actualízalas al cambiar `calendarYear`**. En 2026: 29 de noviembre, 6, 13 y 20 de diciembre. La tercera vela es rosa; las otras tres, moradas. El encendido es acumulativo y el 1 de diciembre ya hay una vela encendida.
+- `timeZone: "Europe/Madrid"` fija la zona horaria de apertura y de encendido.
+- `animationsEnabled: true` permite las animaciones, incluidas las llamas (se respetan también las preferencias de movimiento reducido).
 
-Con `testMode: false` se conserva exactamente la lógica del proyecto original: durante diciembre solo se abre el día actual; los días anteriores y posteriores permanecen cerrados. Cambiar el nivel educativo **no modifica las fechas ni el desbloqueo**.
+Con `testMode: false` se conserva exactamente la lógica del proyecto original: durante diciembre solo se abre el día actual; los días anteriores y posteriores permanecen cerrados. La corona se actualiza al abrir la aplicación y cuando cambia la fecha (si la aplicación continúa abierta). Fuera del año configurado se muestra apagada. Cambiar el nivel educativo **no modifica las fechas ni el desbloqueo**.
 
 ## Descargar el PDF
 
@@ -144,7 +149,7 @@ chmod +x min.sh
 
 El script requiere Node.js y npm. La primera vez descarga `terser`, `javascript-obfuscator`, `clean-css` y `html-minifier-terser` a la caché del usuario, fuera del proyecto. Valida los **144 registros**, sus campos y la existencia de los **144 SVG** antes de reconstruir `dist/`. Después minimiza HTML y los dos CSS y minimiza/ofusca `app.js` y `pdf-export.js`. **Los seis JSON y `config.js` quedan editables en la distribución.** Los SVG también se conservan como archivos separados.
 
-Si no ejecutas `min.sh`, la carpeta `dist/` incluida en este ZIP contiene una copia funcional de los recursos con sus fuentes legibles, preparada para publicar; **no debe confundirse con la versión ofuscada** que genera el script.
+La carpeta `dist/` incluida en este ZIP contiene una copia funcional, con archivos fuente legibles, preparada para publicar; **no debe confundirse con la versión ofuscada** que genera `min.sh`. Tras cualquier cambio de código, ejecuta de nuevo `min.sh` para generar una distribución optimizada.
 
 ## Verificaciones y límites
 

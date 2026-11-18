@@ -1,0 +1,220 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "title": "Esperar también es actuar",
+      "message": "El Adviento no es quedarse quietos hasta que llegue la Navidad. Es una oportunidad para preguntarnos qué podemos cambiar en nuestra manera de tratar a los demás.",
+      "prayer": "Jesús, enséñanos a convertir la esperanza en acciones reales.",
+      "action": "Elige una situación de tu clase que puedas mejorar y da hoy el primer paso.",
+      "image": "assets/illustrations/primaria-4-6/day-01.svg",
+      "imageAlt": "Ilustración de esperanza, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 2,
+      "title": "Un amor que no depende de las notas",
+      "message": "A menudo sentimos que debemos hacerlo todo bien para ser valorados. El amor de Dios nos recuerda que nuestra dignidad no depende de los resultados.",
+      "prayer": "Señor, ayúdanos a reconocer el valor de cada persona.",
+      "action": "Anima a alguien que haya cometido un error, sin burlas ni comparaciones.",
+      "image": "assets/illustrations/primaria-4-6/day-02.svg",
+      "imageAlt": "Ilustración de amor incondicional, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 3,
+      "title": "Aprender a escuchar una llamada",
+      "message": "María recibe una noticia inesperada que cambia su vida. También nosotros podemos descubrir necesidades de los demás si prestamos atención.",
+      "prayer": "María, enséñanos a escuchar con sensibilidad y sin prisas.",
+      "action": "Pregunta a alguien qué le preocupa y escucha sin darle soluciones rápidas.",
+      "image": "assets/illustrations/primaria-4-6/day-03.svg",
+      "imageAlt": "Ilustración de anunciación, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 4,
+      "title": "Elegir el bien con valentía",
+      "message": "El sí de María nos recuerda que las decisiones importantes requieren confianza. A veces hacer lo correcto significa no seguir a la mayoría.",
+      "prayer": "Dios, danos libertad y valentía para actuar con conciencia.",
+      "action": "Defiende con respeto a alguien si escuchas un comentario injusto.",
+      "image": "assets/illustrations/primaria-4-6/day-04.svg",
+      "imageAlt": "Ilustración de sí de María, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 5,
+      "title": "Cuidar es estar presente",
+      "message": "José demuestra su amor con hechos, incluso cuando el futuro es incierto. Cuidar de alguien exige compromiso, paciencia y responsabilidad.",
+      "prayer": "Señor, enséñanos a demostrar el amor en lo cotidiano.",
+      "action": "Asume una responsabilidad de casa o clase hasta terminarla bien.",
+      "image": "assets/illustrations/primaria-4-6/day-05.svg",
+      "imageAlt": "Ilustración de cuidado de José, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 6,
+      "title": "Una comunidad que acoge",
+      "message": "La Sagrada Familia nos invita a pensar en cómo hacemos sentir a quienes nos rodean. Una comunidad se construye cuando cada persona encuentra su lugar.",
+      "prayer": "Jesús, que nadie se sienta extraño entre nosotros.",
+      "action": "Busca una manera concreta de integrar a alguien que suele quedar apartado.",
+      "image": "assets/illustrations/primaria-4-6/day-06.svg",
+      "imageAlt": "Ilustración de familia y acogida, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 7,
+      "title": "Construir caminos, no barreras",
+      "message": "Cada gesto puede facilitar o dificultar la vida de otras personas. Preparar el camino hacia Jesús significa también retirar las barreras que levantamos.",
+      "prayer": "Señor, muéstranos cómo hacer más fácil el camino de otros.",
+      "action": "Detecta una dificultad que tenga alguien y ofrece una ayuda respetuosa.",
+      "image": "assets/illustrations/primaria-4-6/day-07.svg",
+      "imageAlt": "Ilustración de camino y decisiones, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 8,
+      "title": "Confiar incluso con dudas",
+      "message": "María es ejemplo de confianza, no porque conociera todas las respuestas, sino porque fue capaz de ponerse en camino. Crecer implica aceptar cierta incertidumbre.",
+      "prayer": "María, acompáñanos cuando no tenemos todo claro.",
+      "action": "Intenta una tarea que sueles evitar por miedo a equivocarte.",
+      "image": "assets/illustrations/primaria-4-6/day-08.svg",
+      "imageAlt": "Ilustración de confianza de María, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 9,
+      "title": "Compartir con justicia",
+      "message": "Compartir no consiste solo en dar lo que nos sobra. También es reconocer que otros tienen necesidades y derechos que merecen atención.",
+      "prayer": "Jesús, enséñanos a compartir con generosidad y justicia.",
+      "action": "Propón una manera de repartir más justamente materiales o turnos.",
+      "image": "assets/illustrations/primaria-4-6/day-09.svg",
+      "imageAlt": "Ilustración de compartir, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 10,
+      "title": "Dar tiempo es dar importancia",
+      "message": "Es fácil decir que alguien nos importa, pero ¿le dedicamos atención real? El tiempo que ofrecemos habla de nuestras prioridades.",
+      "prayer": "Señor, ayúdanos a descubrir a quienes necesitan nuestra presencia.",
+      "action": "Reserva un rato de conversación sin móviles ni distracciones.",
+      "image": "assets/illustrations/primaria-4-6/day-10.svg",
+      "imageAlt": "Ilustración de tiempo y atención, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 11,
+      "title": "El peso de nuestras palabras",
+      "message": "En persona y en Internet, una frase puede dejar huella. Hablar con respeto implica pensar antes de escribir, reenviar o comentar.",
+      "prayer": "Jesús, danos palabras que construyan en lugar de herir.",
+      "action": "Revisa cómo hablas en los grupos y evita difundir un comentario dañino.",
+      "image": "assets/illustrations/primaria-4-6/day-11.svg",
+      "imageAlt": "Ilustración de palabras amables, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 12,
+      "title": "Agradecer sin dar nada por hecho",
+      "message": "Muchos de nuestros pequeños privilegios dependen del trabajo y el cuidado de otras personas. Reconocerlo nos hace más conscientes y responsables.",
+      "prayer": "Gracias, Señor, por las personas que sostienen nuestra vida cotidiana.",
+      "action": "Da las gracias con detalle a alguien cuyo esfuerzo pasa desapercibido.",
+      "image": "assets/illustrations/primaria-4-6/day-12.svg",
+      "imageAlt": "Ilustración de gratitud, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 13,
+      "title": "Ser luz sin buscar aplausos",
+      "message": "No necesitamos grandes escenarios para ayudar. La luz que compartimos se nota especialmente cuando nadie espera recibir un reconocimiento.",
+      "prayer": "Señor, haznos capaces de hacer el bien en silencio.",
+      "action": "Realiza una ayuda anónima para mejorar algún espacio común.",
+      "image": "assets/illustrations/primaria-4-6/day-13.svg",
+      "imageAlt": "Ilustración de luz, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 14,
+      "title": "Reparar importa más que ganar",
+      "message": "En un conflicto, tener la última palabra no siempre significa haber actuado bien. Pedir perdón implica comprender el daño e intentar repararlo.",
+      "prayer": "Jesús, ayúdanos a reconocer nuestros errores con humildad.",
+      "action": "Si tienes un conflicto pendiente, busca un momento sereno para dialogar.",
+      "image": "assets/illustrations/primaria-4-6/day-14.svg",
+      "imageAlt": "Ilustración de perdón, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 15,
+      "title": "Mirar a quienes quedan atrás",
+      "message": "El buen pastor no mide a las personas por su popularidad o éxito. Se preocupa especialmente por quien está en una situación vulnerable.",
+      "prayer": "Señor, enséñanos a no dejar a nadie atrás.",
+      "action": "Presta atención a quien suele estar solo y acércate sin paternalismo.",
+      "image": "assets/illustrations/primaria-4-6/day-15.svg",
+      "imageAlt": "Ilustración de cuidado de vulnerables, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 16,
+      "title": "La fuerza de lo cotidiano",
+      "message": "Las grandes transformaciones empiezan con hábitos pequeños y constantes. Un gesto aislado es bueno; una actitud mantenida puede cambiar el ambiente.",
+      "prayer": "Jesús, ayúdanos a perseverar en el bien.",
+      "action": "Escoge un gesto positivo para repetir durante toda la semana.",
+      "image": "assets/illustrations/primaria-4-6/day-16.svg",
+      "imageAlt": "Ilustración de gestos cotidianos, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 17,
+      "title": "El camino compartido",
+      "message": "María y José viajan a Belén con dificultades e incertidumbres. Su historia recuerda a tantas familias que se desplazan buscando seguridad.",
+      "prayer": "Dios, acompaña a quienes deben dejar su hogar.",
+      "action": "Infórmate sobre una causa de desplazamiento y comenta cómo ayudar.",
+      "image": "assets/illustrations/primaria-4-6/day-17.svg",
+      "imageAlt": "Ilustración de viaje a Belén, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 18,
+      "title": "No perder la esperanza",
+      "message": "La esperanza no garantiza que todo salga como deseamos. Nos ayuda a seguir trabajando por el bien incluso cuando aparecen obstáculos.",
+      "prayer": "Señor, fortalece nuestra esperanza cuando algo nos cuesta.",
+      "action": "Escribe una meta realista y una acción pequeña para acercarte a ella.",
+      "image": "assets/illustrations/primaria-4-6/day-18.svg",
+      "imageAlt": "Ilustración de estrella de esperanza, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 19,
+      "title": "¿A quién dejamos entrar?",
+      "message": "La historia de Belén nos invita a preguntarnos si nuestras puertas están abiertas a todos. A veces excluimos sin darnos cuenta con nuestros grupos y etiquetas.",
+      "prayer": "Jesús, ensancha nuestro corazón para recibir a los demás.",
+      "action": "Invita a participar en una actividad a alguien fuera de tu grupo habitual.",
+      "image": "assets/illustrations/primaria-4-6/day-19.svg",
+      "imageAlt": "Ilustración de hospitalidad, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 20,
+      "title": "Una alegría que incluye",
+      "message": "La alegría cristiana no consiste en fingir que no hay problemas. Es descubrir que podemos acompañarnos y encontrar motivos para avanzar juntos.",
+      "prayer": "Señor, que sepamos compartir la alegría sin olvidar a nadie.",
+      "action": "Escribe un mensaje de ánimo a alguien que lo esté pasando mal.",
+      "image": "assets/illustrations/primaria-4-6/day-20.svg",
+      "imageAlt": "Ilustración de alegría compartida, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 21,
+      "title": "Estar atentos a lo importante",
+      "message": "Los pastores percibieron una noticia extraordinaria en medio de su trabajo habitual. Quizá nosotros también necesitamos parar para escuchar lo esencial.",
+      "prayer": "Jesús, enséñanos a distinguir lo urgente de lo importante.",
+      "action": "Dedica cinco minutos de silencio a pensar qué merece tu atención.",
+      "image": "assets/illustrations/primaria-4-6/day-21.svg",
+      "imageAlt": "Ilustración de anuncio a pastores, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 22,
+      "title": "El valor de lo que entregamos",
+      "message": "La generosidad no se mide por el precio de un regalo. Se mide por el cuidado, el esfuerzo y el cariño con que pensamos en los demás.",
+      "prayer": "Señor, danos generosidad sin necesidad de aparentar.",
+      "action": "Prepara algo sencillo con tus manos para alegrar a otra persona.",
+      "image": "assets/illustrations/primaria-4-6/day-22.svg",
+      "imageAlt": "Ilustración de regalos del corazón, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 23,
+      "title": "Antes de llegar, mirar atrás",
+      "message": "El Adviento termina pronto: ¿qué decisiones te han ayudado a crecer? Mirar el camino recorrido nos permite agradecer y mejorar.",
+      "prayer": "Jesús, gracias por nuestras oportunidades de cambiar.",
+      "action": "Anota un gesto logrado y otro que quieras seguir practicando.",
+      "image": "assets/illustrations/primaria-4-6/day-23.svg",
+      "imageAlt": "Ilustración de balance del camino, adaptada al nivel primaria 4 6"
+    },
+    {
+      "day": 24,
+      "title": "Navidad: Dios se acerca",
+      "message": "En Jesús, Dios se hace cercano y vulnerable. Celebrar su nacimiento es una invitación a cuidar la dignidad de quienes más nos necesitan.",
+      "prayer": "Jesús, nace también en nuestras decisiones y en nuestra manera de vivir.",
+      "action": "Elige una acción solidaria concreta para realizar durante las vacaciones.",
+      "image": "assets/illustrations/primaria-4-6/day-24.svg",
+      "imageAlt": "Ilustración de nacimiento de Jesús, adaptada al nivel primaria 4 6"
+    }
+  ]
+}
